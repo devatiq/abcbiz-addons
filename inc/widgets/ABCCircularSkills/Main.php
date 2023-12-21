@@ -1,0 +1,221 @@
+<?php
+namespace Inc\Widgets\ABCCircularSkills;
+
+use Inc\Widgets\BaseWidget;
+use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+
+class Main extends BaseWidget
+{
+    // define protected variables...
+    protected $name = 'ABC-Elementor-ABCCircularSkills';
+    protected $title = 'ABC Circular Skill';
+    protected $icon = 'eicon-circle-o';
+    protected $categories = [
+        'abc-category'
+    ];
+
+    protected $keywords = [
+        'abc', 'skill',  'circular'
+    ];
+
+    public function get_script_depends()
+    {
+        return ['abc-jquery-appear', 'abc-circular-progress']; 
+    }
+
+    /**
+     * Register the widget controls.
+     *
+     * Adds different input fields to allow the user to change and customize the widget settings.
+     *
+     * @since 1.0.0
+     *
+     * @access protected
+     */
+    protected function register_controls()
+    {
+
+        $this->start_controls_section(
+            'abc_elementor_circl_skill_setting',
+            [
+                'label' => __('Circle Setting', 'ABCMAFTH'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        //circle skill text
+        $this->add_control(
+            'abc_elementor_circl_skill_text',
+            [
+                'label' => __('Heading', 'ABCMAFTH'),
+                'type' => Controls_Manager::TEXT,
+                'default' => __('Web Design', 'ABCMAFTH'),
+                'label_block' => true,
+            ]
+        );
+        //circle skill percentage
+        $this->add_control(
+            'abc_elementor_circl_skill_value',
+            [
+                'label' => __('Value', 'ABCMAFTH'),
+                'type' => Controls_Manager::NUMBER,
+                'default' => 50,
+                'min' => 0,
+                'max' => 100,
+                'step' => 1,
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+        //circle skill style
+        $this->start_controls_section(
+            'abc_elementor_circl_skill_style_setting',
+            [
+                'label' => __('Circle Style', 'ABCMAFTH'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        // circle size
+        $this->add_control(
+			'abc_elementor_circl_skill_size',
+			[
+				'label' => esc_html__( 'Circle Size', 'ABCMAFTH' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 100,
+						'max' => 500,
+						'step' => 10,
+					],
+				],
+				'default' => [
+					'size' => 180,
+				],
+
+			]
+		);
+
+        // circle heading typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'abc_elementor_circl_skill_heading_typography',
+                'label' => __('Heading Typography', 'ABCMAFTH'),
+                'selector' => '{{WRAPPER}} .abc-ele-skill-circle span',
+            ]
+        ); 
+        // circle heading color
+        $this->add_control(
+            'abc_elementor_circl_skill_heading_color',
+            [
+                'label' => __('Heading Color', 'ABCMAFTH'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#000',
+                'selectors' => [
+                    '{{WRAPPER}} .abc-ele-skill-circle span' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Value Position
+        // circle size
+        $this->add_control(
+			'abc_elementor_circl_skill_value_position',
+			[
+				'label' => esc_html__( 'Value Position Adjustment', 'ABCMAFTH' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['%'],
+				'range' => [
+					'%' => [
+						'min' => 5,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+                    'unit' => '%',
+					'size' => 35,
+				],
+
+                'selectors' => [
+                    '{{WRAPPER}} .abc-ele-skill-circle strong' => 'top: {{SIZE}}{{UNIT}}',
+                ],
+
+			]
+		);
+
+        // circle value typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'abc_elementor_circl_skill_value_typography',
+                'label' => __('Value Typography', 'ABCMAFTH'),
+                'selector' => '{{WRAPPER}} .abc-ele-skill-circle strong',
+            ]
+        );
+        // circle value color
+        $this->add_control(
+            'abc_elementor_circl_skill_value_color',
+            [
+                'label' => __('Value Color', 'ABCMAFTH'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#000',
+                'selectors' => [
+                    '{{WRAPPER}} .abc-ele-skill-circle strong' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .abc-ele-skill-circle strong i' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+        // circle empty fill color
+        $this->add_control(
+            'abc_elementor_circl_skill_empty_fill_color',
+            [
+                'label' => __('Empty Fill Color', 'ABCMAFTH'),
+                'type' => Controls_Manager::COLOR,
+                'default' => 'rgba(0, 0, 0, .3)',               
+            ]
+        );
+        // circle fill gradient color one
+        $this->add_control(
+            'abc_elementor_circl_skill_fill_gradient_color_one',
+            [
+                'label' => __('Gradient Color One', 'ABCMAFTH'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#e60a0a',               
+            ]
+        );
+        // circle fill gradient color two
+        $this->add_control(
+            'abc_elementor_circl_skill_fill_gradient_color_two',
+            [
+                'label' => __('Gradient Color Two', 'ABCMAFTH'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#d1de04',               
+            ]
+        );
+        // circle style section end
+        $this->end_controls_section();
+    }
+
+    /**
+     * Render the widget output on the frontend.
+     *
+     * Written in PHP and used to generate the final HTML.
+     *
+     * @since 1.0.0
+     *
+     * @access protected
+     */
+    protected function render()
+    {
+        //load render view to show widget output on frontend/website.
+        include 'RenderView.php';
+    }
+
+
+}
