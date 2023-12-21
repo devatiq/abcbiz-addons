@@ -1,5 +1,5 @@
 <?php
-namespace Include\Widgets;
+namespace Includes\Widgets;
 
 
 use Elementor\Widget_Base;
