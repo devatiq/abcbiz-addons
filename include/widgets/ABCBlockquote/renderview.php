@@ -3,9 +3,7 @@
  * Render View for ABC Post Ttitle Widget
  */
 
- if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
+ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $block_quote_text = $this->get_settings('abcbizpro_elementor_block_quote_text');
 
