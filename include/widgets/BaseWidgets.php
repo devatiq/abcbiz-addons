@@ -1,5 +1,5 @@
 <?php
-namespace Inc\Widgets;
+namespace Include\Widgets;
 
 
 use Elementor\Widget_Base;
@@ -24,7 +24,7 @@ class BaseWidget extends Widget_base
 
     public function get_title()
     {
-        return __($this->title, 'ABCMAFTH');
+        return __($this->title, 'abcbiz-multi');
     }
 
     public function get_icon()

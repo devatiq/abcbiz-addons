@@ -127,7 +127,7 @@ class ABCBizMultiElementorPack
 		define('ABCBIZELEMENTOR_FILE', __FILE__);
 		define('ABCBIZELEMENTOR_NAME', 'ABC Theme Elementor Package');
 		define('ABCBIZELEMENTOR_PATH', dirname(ABCBIZELEMENTOR_FILE));
-		define('ABCBIZELEMENTOR_INC', ABCBIZELEMENTOR_PATH . '/inc');
+		define('ABCBIZELEMENTOR_INC', ABCBIZELEMENTOR_PATH . '/include');
 		define('ABCBIZELEMENTOR_URL', plugins_url('', ABCBIZELEMENTOR_FILE));
 		define('ABCBIZELEMENTOR_ASSETS', ABCBIZELEMENTOR_URL . '/assets');
 	}
@@ -296,13 +296,13 @@ class ABCBizMultiElementorPack
 	public function autoload($class_name)
 	{
 		// Define the base namespace for your classes
-		$base_namespace = 'inc\\widgets\\';
+		$base_namespace = 'include\\widgets\\';
 
 		// Check if the class uses the base namespace
 		if (strpos($class_name, $base_namespace) === 0) {
 			// Convert namespace separators to directory separators
 			$relative_class_name = substr($class_name, strlen($base_namespace));
-			$file_path = ABCBIZELEMENTOR_PATH . '/inc/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
+			$file_path = ABCBIZELEMENTOR_PATH . '/include/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
 
 			if (file_exists($file_path)) {
 				require $file_path;
@@ -322,8 +322,8 @@ class ABCBizMultiElementorPack
 	{
 
 		// Include Widget configurations
-		require_once ABCBIZELEMENTOR_PATH . '/inc/widgets/BaseWidgets.php';
-		require_once ABCBIZELEMENTOR_PATH . '/inc/abcbiz-multi-widgets.php';
+		require_once ABCBIZELEMENTOR_PATH . '/include/widgets/BaseWidgets.php';
+		require_once ABCBIZELEMENTOR_PATH . '/include/abcbiz-multi-widgets.php';
 
 	}
 	

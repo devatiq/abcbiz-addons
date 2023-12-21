@@ -4,6 +4,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 // Register your widgets dynamically based on the class names.
 		$widgets = [
+
+			\include\widgets\ABCBlockquote\Main::class,
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,
@@ -30,7 +32,6 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			//\inc\widgets\ABCRelatedPost\Main::class,
 			//\inc\widgets\ABCCommentForm\Main::class,
 			//\inc\widgets\ABCSocialShare\Main::class,
-			//\inc\widgets\ABCBlockquote\Main::class,
 			//\inc\widgets\ABCSearchForm\Main::class,
 			//\inc\widgets\ABCRecentPost\Main::class,
 

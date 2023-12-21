@@ -7,14 +7,14 @@
     exit; // Exit if accessed directly.
 }
 
-$block_quote_text = $this->get_settings('abc_elementor_block_quote_text');
+$block_quote_text = $this->get_settings('abcbizpro_elementor_block_quote_text');
 
 ?>
 
 
-        <div class="abc-elementor-block-quote-area">
+        <div class="abcbiz-elementor-block-quote-area">
 
-        <div class="abc-quote-icon">
+        <div class="abcbiz-quote-icon">
         <svg version="1.1" id="fi_63848" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="193.004px" height="193.004px" viewBox="0 0 193.004 193.004" xml:space="preserve">
         <g><path d="M111.181,114.016c-6.679-34.395-38.188-50.026-70.345-43.935C44.523,50.783,62.59,35.004,74.33,20.336
 		c1.665-2.08,2.523-5.738,0-7.698C68.141,7.83,62.365,6.333,57.044,7.092c-0.369-1.01-1.346-1.763-2.615-1.364

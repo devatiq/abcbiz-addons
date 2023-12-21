@@ -1,0 +1,11 @@
+.elementor-editor-active #elementor-panel-categories{
+    display: flex;
+    flex-direction: column;
+}
+#elementor-panel-category-abcbiz-category {
+    order: -1;
+}
+
+#elementor-panel-category-abcbiz-wc-category {
+    order: -1;
+}

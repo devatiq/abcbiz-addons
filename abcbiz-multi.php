@@ -78,7 +78,7 @@ function abcbizpro_elementor_add_widget_categories($elements_manager)
 {
 
     $elements_manager->add_category(
-        'abc-category',
+        'abcbiz-category',
         [
             'title' => esc_html__('ABCBiz Multi Elements', 'abcbiz-multi'),
             'icon' => 'fa fa-plug',
@@ -92,7 +92,7 @@ function abcbizpro_elementor_add_widget_wc_categories($elements_manager)
 {
     if (is_plugin_active('woocommerce/woocommerce.php')) {
         $elements_manager->add_category(
-            'abc-wc-category',
+            'abcbiz-wc-category',
             [
                 'title' => esc_html__('ABCBiz WooCommerce', 'abcbiz-multi'),
                 'icon'  => 'eicon-woocommerce',

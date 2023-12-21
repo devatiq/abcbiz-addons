@@ -1,7 +1,7 @@
 <?php 
-namespace inc\widgets\ABCBlockquote;
+namespace Include\Widgets\ABCBlockquote;
 
-use Inc\Widgets\BaseWidget;
+use Include\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -13,11 +13,11 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-block-quote';
+		protected $name = 'abcbiz-block-quote';
 		protected $title = 'ABC Blockquote';
 		protected $icon = 'eicon-blockquote';
 		protected $categories = [
-			'abc-category'
+			'abcbiz-category'
 		];		
 		protected $keywords = [
 			'abc', 'quote', 'blockquote',
@@ -33,7 +33,7 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor_block-quote',
+			'abcbiz-elementor-block-quote',
 			[
 				'label' => esc_html__( 'Contents', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -42,7 +42,7 @@ class Main extends BaseWidget {
 
 		//Alignment
 		$this->add_responsive_control(
-			'abc_elementor_block_quote_align',
+			'abcbizpro_elementor_block_quote_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -62,14 +62,14 @@ class Main extends BaseWidget {
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-block-quote-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-block-quote-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
 
 
 		$this->add_control(
-			'abc_elementor_block_quote_text',
+			'abcbizpro_elementor_block_quote_text',
 			[
 				'label' => esc_html__( 'Quote Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
@@ -85,7 +85,7 @@ class Main extends BaseWidget {
         //Abc Blockquote style
 		
         $this->start_controls_section(
-            'abc_elementor_block_quote_style',
+            'abcbizpro_elementor_block_quote_style',
             [
                 'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -93,37 +93,37 @@ class Main extends BaseWidget {
         );
 
 		$this->add_control(
-			'abc_elementor_block_quote_icon_color',
+			'abcbizpro_elementor_block_quote_icon_color',
 			[
 				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#cccccc',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-block-quote-area .abc-quote-icon svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-block-quote-area .abcbiz-quote-icon svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);
 
 		$this->add_control(
-			'abc_elementor_block_quote_color',
+			'abcbizpro_elementor_block_quote_color',
 			[
 				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#053d58',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-block-quote-area blockquote' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-block-quote-area blockquote' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
 		$this->add_control(
-			'abc_elementor_block_quote_border_color',
+			'abcbizpro_elementor_block_quote_border_color',
 			[
 				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#59a818',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-block-quote-area blockquote' => 'border-left-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-block-quote-area blockquote' => 'border-left-color: {{VALUE}}',
 				],
 			]
 		);
@@ -131,9 +131,9 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abc_elementor_block_quote_typography',
+				'name' => 'abcbizpro_elementor_block_quote_typography',
 				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abc-elementor-block-quote-area blockquote',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-block-quote-area blockquote',
 			]
 		);
 
