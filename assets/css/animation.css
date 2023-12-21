@@ -1,0 +1,226 @@
+.ABCxAxisMove {
+    animation: ABCxAxisMove 5s linear infinite;
+}
+.ABCyAxisMove {
+    animation: ABCyAxisMove 9s linear infinite;
+}
+.ABCtriAngleMove {
+    animation: ABCtriAngleMove 5s linear infinite;
+}
+.ABCSpin {
+    animation: ABCSpin 7s alternate infinite;
+}
+.ABCRotationMove {
+        animation: ABCRotationMove 8s alternate infinite;
+}
+
+.ABCTilt {
+    animation: ABCTilt 1s alternate infinite;
+}
+
+.ABCTimeLineAnimate {
+    animation: ABCTilt 1s alternate infinite;
+}
+
+.ABCSpinMove {
+    animation: ABCSpinMove 8s alternate infinite;
+}
+
+.ABCclockSpin {
+    animation: ABCSpinMove 3s alternate infinite;
+}
+
+.ABCAntiClockSpin {
+    animation: ABCSpinMove 3s alternate infinite;
+}
+
+.ABCRotating {
+	webkit-animation: ABCRotating 6s linear infinite;
+    -moz-animation: ABCRotating 6s linear infinite;
+    -ms-animation: ABCRotating 6s linear infinite;
+    -o-animation: ABCRotating 6s linear infinite; 
+	animation: ABCRotating 6s linear infinite;
+}
+
+/*----------------------------------
+ * Keyframes Animation
+ * ---------------------------------*/
+
+@keyframes ABCRotating {
+	0% {
+		-ms-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+	100% {
+		-ms-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-webkit-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg);
+	}
+}
+
+@keyframes ABCTimeLineAnimate {
+    0% {
+        opacity: 0;
+        transform: rotate(0) translate(10px, 2px);
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: rotate(0deg) translate(38px, 1px);
+    }
+}
+
+    
+@keyframes ABCxAxisMove {
+    0% {
+        transform: translateX(-25px)
+    }
+
+    50% {
+        transform: translateX(0)
+    }
+
+    100% {
+        transform: translateX(-25px)
+    }
+}
+
+
+@keyframes ABCyAxisMove {
+    0% {
+        transform: translateY(-30px)
+    }
+
+    50% {
+        transform: translateY(0)
+    }
+
+    100% {
+        transform: translateY(-30px)
+    }
+}
+
+
+@keyframes ABCtriAngleMove {
+    0% {
+        transform: translate(-25px,25px)
+    }
+
+    33% {
+        transform: translate(-25px,-25px)
+    }
+
+    66% {
+        transform: translate(25px,-25px)
+    }
+
+    100% {
+        transform: translate(-25px,25px)
+    }
+}
+
+
+@keyframes ABCRotationMove {
+    0% {
+        transform: translate(-25px,0) rotate(0deg)
+    }
+
+    50% {
+        transform: translate(25px,25px) rotate(360deg)
+    }
+
+    100% {
+        transform: translate(0,-25px) rotate(0deg)
+    }
+}
+
+
+@keyframes ABCSpin {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+
+@keyframes ABCTilt {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    60% {
+        transform: rotate(0deg)
+    }
+
+    80% {
+        transform: rotate(-10deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+
+@keyframes ABCclockSpin {
+    0% {
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(0deg)
+    }
+}
+
+@keyframes ABCAntiClockSpin {
+    0% {
+        transform: translate(-50%,-50%) rotate(0deg)
+    }
+
+    100% {
+        transform: translate(-50%,-50%) rotate(360deg)
+    }
+}
+
+@keyframes ABCSpinMove {
+    0% {
+        transform: rotate(0deg)
+    }
+
+    50% {
+        transform: rotate(360deg)
+    }
+
+    100% {
+        transform: rotate(0deg)
+    }
+}
+
+
+@keyframes ABCRipple{
+	0% { transform: scale(1); }
+	20% { transform: scale(1.1); }
+	40% { transform: scale(1.2); }
+	50% { transform: scale(1.3); }
+	70% { transform: scale(1.2); }
+	90% { transform: scale(1.1); }
+	100% { transform: scale(1); }
+}
