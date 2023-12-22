@@ -35,7 +35,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_author_bio_setting',
             [
-                'label' => __('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -44,10 +44,10 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_author_bio_link_switch',
             [
-                'label' => __('View All Posts Link', 'abcbiz-multi'),
+                'label' => esc_html__('View All Posts Link', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'abcbiz-multi'),
-                'label_off' => __('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -60,7 +60,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_author_bio_style_section',
             [
-                'label' => __('Author Style', 'abcbiz-multi'),
+                'label' => esc_html__('Author Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -70,7 +70,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_author_bio_bg_color',
             [
-                'label' => __('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ececec',
                 'selectors' => [
@@ -83,7 +83,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_title_color',
             [
-                'label' => __('Title Color', 'abcbiz-multi'),
+                'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -97,7 +97,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_author_bio_typography',
-                'label' => __('Title Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-author-bio-title',
             ]
         );
@@ -106,7 +106,7 @@ class Main extends BaseWidget
                 $this->add_control(
                     'abcbiz_elementor_author_bio_text_color',
                     [
-                        'label' => __('Text Color', 'abcbiz-multi'),
+                        'label' => esc_html__('Text Color', 'abcbiz-multi'),
                         'type' => Controls_Manager::COLOR,
                         'default' => '#444444',
                         'selectors' => [
@@ -120,7 +120,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_author_bio_text_typography',
-                'label' => __('Text Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Text Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-authorright',
             ]
         );
@@ -129,7 +129,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_link_color',
             [
-                'label' => __('Link Color', 'abcbiz-multi'),
+                'label' => esc_html__('Link Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#0dbad1',
                 'selectors' => [
@@ -142,7 +142,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_link_hover_color',
             [
-                'label' => __('Link Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Link Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#02363d',
                 'selectors' => [

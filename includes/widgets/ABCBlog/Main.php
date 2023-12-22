@@ -32,7 +32,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_setting',
             [
-                'label' => __('Blog Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -54,10 +54,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_date_switch',
             [
-                'label' => __('Date', 'abcbiz-multi'),
+                'label' => esc_html__('Date', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'abcbiz-multi'),
-                'label_off' => __('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -67,10 +67,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_comment_switch',
             [
-                'label' => __('Comments', 'abcbiz-multi'),
+                'label' => esc_html__('Comments', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'abcbiz-multi'),
-                'label_off' => __('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -80,10 +80,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_read_more_switch',
             [
-                'label' => __('Read More', 'abcbiz-multi'),
+                'label' => esc_html__('Read More', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'abcbiz-multi'),
-                'label_off' => __('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -110,7 +110,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_content_style_section',
             [
-                'label' => __('Blog Style', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -119,7 +119,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_info_typography',
-                'label' => __('Meta Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-info a',
             ]
         );
@@ -127,7 +127,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_info_color',
             [
-                'label' => __('Meta Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-info a' => 'color: {{VALUE}};',
@@ -138,7 +138,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_info_icon_color',
             [
-                'label' => __('Meta Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-info i' => 'color: {{VALUE}};',
@@ -149,7 +149,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_blog_info_icon_size',
             [
-                'label' => __('Meta Icon Size', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Icon Size', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-info i' => 'font-size: {{SIZE}}{{UNIT}};',
@@ -161,7 +161,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_title_typography',
-                'label' => __('Title Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-title h2 a',
             ]
         );
@@ -169,7 +169,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_title_color',
             [
-                'label' => __('Title Color', 'abcbiz-multi'),
+                'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-title h2 a' => 'color: {{VALUE}};',
@@ -181,7 +181,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_read_more_typography',
-                'label' => __('Button Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Button Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-single-blog-button a',
             ]
         );
@@ -189,7 +189,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_read_more_color',
             [
-                'label' => __('Button Color', 'abcbiz-multi'),
+                'label' => esc_html__('Button Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-button a' => 'color: {{VALUE}};',
@@ -219,6 +219,4 @@ class Main extends BaseWidget
         //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
-
-
 }
