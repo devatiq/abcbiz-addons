@@ -42,9 +42,6 @@ function abcbizpro_elementor_enqueue()
     //register script for counter up
     wp_register_script('abc-counter-up', ABCBIZELEMENTOR_ASSETS . "/js/abc-counterup.js", array('jquery'), 1.0, true);
     wp_register_script('abc-wapoints', ABCBIZELEMENTOR_ASSETS . "/js/waypoints.min.js", array('jquery'), 1.0, true);
-
-    //register javascript functions
-    wp_register_script('abc-testimonial-scripts', ABCBIZELEMENTOR_ASSETS . "/js/functions.js", array('jquery'), 1.0, true);
     
   //  wp_register_script('abc-swiper-init', ABCBIZELEMENTOR_ASSETS . '/js/swiper-activation.js',['jquery'],'1.0.0',true );
     

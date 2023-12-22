@@ -44,7 +44,7 @@ class Main extends BaseWidget {
 
 		//Alignment
 		$this->add_responsive_control(
-			'abcbizpro_elementor_block_quote_align',
+			'abcbiz_elementor_block_quote_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -71,7 +71,7 @@ class Main extends BaseWidget {
 
 
 		$this->add_control(
-			'abcbizpro_elementor_block_quote_text',
+			'abcbiz_elementor_block_quote_text',
 			[
 				'label' => esc_html__( 'Quote Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
@@ -87,7 +87,7 @@ class Main extends BaseWidget {
         //Abc Blockquote style
 		
         $this->start_controls_section(
-            'abcbizpro_elementor_block_quote_style',
+            'abcbiz_elementor_block_quote_style',
             [
                 'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -95,7 +95,7 @@ class Main extends BaseWidget {
         );
 
 		$this->add_control(
-			'abcbizpro_elementor_block_quote_icon_color',
+			'abcbiz_elementor_block_quote_icon_color',
 			[
 				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
@@ -107,7 +107,7 @@ class Main extends BaseWidget {
 		);
 
 		$this->add_control(
-			'abcbizpro_elementor_block_quote_color',
+			'abcbiz_elementor_block_quote_color',
 			[
 				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
@@ -119,7 +119,7 @@ class Main extends BaseWidget {
 		);
 
 		$this->add_control(
-			'abcbizpro_elementor_block_quote_border_color',
+			'abcbiz_elementor_block_quote_border_color',
 			[
 				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
@@ -133,7 +133,7 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abcbizpro_elementor_block_quote_typography',
+				'name' => 'abcbiz_elementor_block_quote_typography',
 				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-block-quote-area blockquote',
 			]

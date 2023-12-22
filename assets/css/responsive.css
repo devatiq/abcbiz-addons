@@ -1,81 +1,42 @@
-/* Path: assets/css/responsive.css */
-
 /*---------------------------
     Responsive css for large screen    
 -----------------------------*/
 @media only screen and (max-width: 1500px) {
 
     /*------------------------
-    * Testimonial
-    --------------------------*/
-    .abc-testimonial-slider, .swiper.abc-testimonial-slider  {
-        padding-bottom: 65px;
-        margin-left: 10px !important;
-        margin-right: 10px !important;
-    }
-
-    .abc-testimonial-slider-nav-bar button.abc-testimonial-arrow.abc-testimonial-arrow-left {
-        left: 0;
-        top: unset;
-        bottom: 0;
-        right: 0px;
-        margin-right: 60px;
-    }
-
-    .abc-testimonial-slider-nav-bar button.abc-testimonial-arrow.abc-testimonial-arrow-right {
-        right: 0;
-        top: unset;
-        bottom: 0;
-        left: 0;
-        margin-left: 60px;
-    }
-
-    .abc-testimonial-slider-nav-bar {
-        overflow: hidden;
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-    .abc-testimonial-slider-nav-bar button.abc-testimonial-arrow {
-        position: unset;
-        margin-left: 0 !important;
-        margin-right: 0 !important;
-    }
-
-    /*------------------------
     * Blog
     --------------------------*/
-    .abc-ele-blogs {
+    .abcbiz-ele-blogs {
         /* flex-direction: column; */
         gap: 20px;
     }
 
-    .abc-ele-single-first {
+    .abcbiz-ele-single-first {
         flex-basis: 44%;
     }
 
-    .abc-ele-single-blog-rem-posts {
+    .abcbiz-ele-single-blog-rem-posts {
         gap: 25px;
     }
 
-    .abc-ele-single-blog-rem-posts .abc-ele-single-blog-thumbnail img {
+    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img {
         width: 100%;
         height: auto;
         object-fit: cover;
         min-height: 133px;
     }
 
-    .abc-ele-single-blog-content-area {
+    .abcbiz-ele-single-blog-content-area {
         width: 90%;
         padding: 10px 15px;
         position: unset;
     }
 
-    .abc-ele-single-blog-thumbnail {
+    .abcbiz-ele-single-blog-thumbnail {
         max-width: 140px;
     }
 
-    .abc-ele-single-blog-area:not(.abc-ele-single-first) {
+    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
         gap: 15px;
     }
 }
@@ -88,46 +49,46 @@
     /*------------------------
     * Blog
     --------------------------*/
-    .abc-ele-blogs {
+    .abcbiz-ele-blogs {
         flex-direction: column;
         gap: 40px;
     }
 
-    .abc-ele-single-blog-thumbnail img {
+    .abcbiz-ele-single-blog-thumbnail img {
         width: 100%;
     }
 
-    .abc-ele-single-first .abc-ele-single-blog-content-area {
+    .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area {
         width: 100%;
         margin-top: 10px;
         position: static;
     }
 
-    .abc-ele-single-blog-rem-posts {
+    .abcbiz-ele-single-blog-rem-posts {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         width: 100%;
     }
 
-    .abc-ele-single-blog-area:not(.abc-ele-single-first) {
+    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
         flex-direction: column;
     }
 
-    .abc-ele-single-blog-thumbnail {
+    .abcbiz-ele-single-blog-thumbnail {
         max-width: 100%;
     }
 
-    .abc-ele-single-blog-content-area {
+    .abcbiz-ele-single-blog-content-area {
         width: 100%;
         padding: 10px 15px;
     }
 
-    .abc-ele-blogs-area {
+    .abcbiz-ele-blogs-area {
         width: 90%;
         margin: 0 auto;
     }
 
-    .abc-ele-related-post ul {
+    .abcbiz-ele-related-post ul {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -152,30 +113,30 @@
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .abc-ele-team-image {
+    .abcbiz-ele-team-image {
         max-width: 100%;
     }
 
     /*------------------------
     * Pricing table
     --------------------------*/
-    .abc-ele-pricing-pack-name {
+    .abcbiz-ele-pricing-pack-name {
         min-height: 50px;
         width: 200px;
     }
 
-    .abc-ele-pricing-pack-preiod {
+    .abcbiz-ele-pricing-pack-preiod {
         top: 80px;
     }
 
-    .abc-ele-pricing-header-strock {
+    .abcbiz-ele-pricing-header-strock {
         margin-top: -102px;
     }
 
-    .abc-ele-pricing-table-footer a {
+    .abcbiz-ele-pricing-table-footer a {
         padding: 15px 29px;
     }
-    .abc-ele-pricing-table-type-standard .abc-ele-pricing-pack-preiod {        
+    .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {        
         padding-top: 20px;
         padding-bottom: 20px;
         margin-bottom: 20px;
@@ -183,19 +144,19 @@
     /*------------------------
     * Blog widget
     --------------------------*/
-    .abc-ele-blogs {
+    .abcbiz-ele-blogs {
         flex-direction: column;
     }
 
-    .abc-ele-single-first .abc-ele-single-blog-thumbnail img {
+    .abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img {
         width: 100%;
     }
 
-    .abc-ele-single-blog-content-area {
+    .abcbiz-ele-single-blog-content-area {
         width: 100%;
     }
 
-    .abc-ele-single-blog-rem-posts {
+    .abcbiz-ele-single-blog-rem-posts {
         grid-template-columns: repeat(1, 1fr);
     }
 
@@ -203,7 +164,7 @@
     * ABC Blog List
     * ---------------------------------------------*/
 
-    .abc-ele-blog-list-thumb {
+    .abcbiz-ele-blog-list-thumb {
         float: none;
         width: 100%;
         margin-right: 0;
@@ -227,23 +188,23 @@
  * ABC Author Bio
  * ---------------------------------------------*/
 
-    .abc-ele-author-bio {
+    .abcbiz-ele-author-bio {
         column-gap: 10px;
         flex-direction: column;
     }
 
-    .abc-ele-authorleft {
+    .abcbiz-ele-authorleft {
         width: 100%;
     }
 
-    .abc-ele-authorright {
+    .abcbiz-ele-authorright {
         width: 100%;
     }
 
     /*----------------------------------------------
     * ABC Related Post
     * ---------------------------------------------*/
-    .abc-ele-related-post ul li {
+    .abcbiz-ele-related-post ul li {
         flex-basis: 48%;
         margin-bottom: 20px;
     }
@@ -253,13 +214,13 @@
     ---------------------------*/
 
     /* Three column blog area */
-    .abc-ele-three-column-blog {
+    .abcbiz-ele-three-column-blog {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
 
     /* Four column blog area */
-    .abc-ele-four-column-blog {
+    .abcbiz-ele-four-column-blog {
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;
     }
@@ -294,55 +255,55 @@
     /*------------------------
     * Pricing table
     --------------------------*/
-    .abc-ele-pricing-table-footer a {
+    .abcbiz-ele-pricing-table-footer a {
         padding: 12px 20px;
         font-size: 14px;
     }
-    .abc-ele-pricing-table-type-standard .abc-ele-pricing-pack-preiod {        
+    .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {        
         padding-top: 20px;
         padding-bottom: 20px;
     }
-    .abc-ele-pricing-pack-preiod h3 {
+    .abcbiz-ele-pricing-pack-preiod h3 {
         font-size: 25px;
     }
 
     /*------------------------
     * Contact Form 7 widget
     --------------------------*/
-    .abc-ele-contact-field-row {
+    .abcbiz-ele-contact-field-row {
         gap: 0;
         flex-direction: column;
     }
 
-    #abc-ele-contact-field.abc-ele-contact-field p {
+    #abcbiz-ele-contact-field.abcbiz-ele-contact-field p {
         margin-bottom: 0;
     }
 
-    .abc-ele-contact-field {
+    .abcbiz-ele-contact-field {
         margin-bottom: 10px;
     }
 
-    #abc-ele-contact-field.abc-ele-contact-form-submit {
+    #abcbiz-ele-contact-field.abcbiz-ele-contact-form-submit {
         flex-basis: 0;
     }
 
     /*------------------------
     * Blog Fancy widget
     --------------------------*/
-    .abc-ele-single-blog-content-area {
+    .abcbiz-ele-single-blog-content-area {
         width: 100%;
         position: unset;
     }
 
-    .abc-ele-single-blog-area:not(.abc-ele-single-first) {
+    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
         flex-direction: column;
     }
 
-    .abc-ele-single-blog-thumbnail {
+    .abcbiz-ele-single-blog-thumbnail {
         max-width: 100%;
     }
 
-    .abc-ele-single-blog-rem-posts .abc-ele-single-blog-thumbnail img {
+    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img {
         height: auto;
     }
 
@@ -372,7 +333,7 @@
      /*-------------------------
     * Related Post
     ---------------------------*/
-    .abc-ele-related-post ul {
+    .abcbiz-ele-related-post ul {
         grid-template-columns: repeat(2, 1fr);
     }
 

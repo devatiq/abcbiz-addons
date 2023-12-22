@@ -1,25 +1,25 @@
 <?php
-
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /**
  * Render View file for ABC Blog.
  */
 $settings = $this->get_settings_for_display();
 
 // blog info switcher
-$abc_blog_date_switch = $settings['abc_elementor_blog_date_switch'] ? $settings['abc_elementor_blog_date_switch'] : '';
-$abc_blog_comment_switch = $settings['abc_elementor_blog_comment_switch'] ? $settings['abc_elementor_blog_comment_switch'] : '';
+$abcbiz_blog_date_switch = $settings['abcbiz_elementor_blog_date_switch'] ? $settings['abcbiz_elementor_blog_date_switch'] : '';
+$abcbiz_blog_comment_switch = $settings['abcbiz_elementor_blog_comment_switch'] ? $settings['abcbiz_elementor_blog_comment_switch'] : '';
 
 // blog readmore switcher
-$abc_blog_readmore_switch = $settings['abc_elementor_blog_read_more_switch'] ? $settings['abc_elementor_blog_read_more_switch'] : '';
+$abcbiz_blog_readmore_switch = $settings['abcbiz_elementor_blog_read_more_switch'] ? $settings['abcbiz_elementor_blog_read_more_switch'] : '';
 
 // "Read More Text" control
-$abc_read_more_text = $this->get_settings('abc_elementor_blog_read_more_text');
-$abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
+$abcbiz_read_more_text = $this->get_settings('abcbiz_elementor_blog_read_more_text');
+$abcbiz_selected_category_fancy = $settings['abcbiz_elementor_blog_category_fancy'];
 
 ?>
 <!-- Blog Area-->
-<div class="abc-ele-blogs-area">
-    <div class="abc-ele-blogs">
+<div class="abcbiz-ele-blogs-area">
+    <div class="abcbiz-ele-blogs">
 
         <?php
         // Query the first post of post type 'post'
@@ -30,8 +30,8 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
         );
 
          // specific category query
-         if ($abc_selected_category_fancy && $abc_selected_category_fancy !== 'all') {
-            $first_post_args['cat'] = $abc_selected_category_fancy;
+         if ($abcbiz_selected_category_fancy && $abcbiz_selected_category_fancy !== 'all') {
+            $first_post_args['cat'] = $abcbiz_selected_category_fancy;
         }
 
         $first_post_query = new WP_Query($first_post_args);
@@ -41,9 +41,9 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
         ?>
 
                 <!-- Single Blog Area for the first post -->
-                <div class="abc-ele-single-blog-area abc-ele-single-first">
+                <div class="abcbiz-ele-single-blog-area abcbiz-ele-single-first">
                     <!-- Thumbnail -->
-                    <div class="abc-ele-single-blog-thumbnail">
+                    <div class="abcbiz-ele-single-blog-thumbnail">
                         <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                             <?php
                             if (has_post_thumbnail()) {
@@ -55,19 +55,19 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
                         </a>
                     </div><!--/ Thumbnail -->
                     <!-- Content Area -->
-                    <div class="abc-ele-single-blog-content-area">
+                    <div class="abcbiz-ele-single-blog-content-area">
 
                         <!-- Blog info -->     
-                        <?php if ($abc_blog_date_switch == 'yes' || $abc_blog_comment_switch == 'yes') : ?>
-                            <div class="abc-ele-single-blog-info">
-                                <?php if($abc_blog_date_switch == 'yes' ) : ?>
-                                    <div class="abc-ele-single-blog-date">
+                        <?php if ($abcbiz_blog_date_switch == 'yes' || $abcbiz_blog_comment_switch == 'yes') : ?>
+                            <div class="abcbiz-ele-single-blog-info">
+                                <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>
+                                    <div class="abcbiz-ele-single-blog-date">
                                         <i class="eicon-calendar"></i>
                                         <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
                                     </div>
                                 <?php endif; ?>
-                                <?php if($abc_blog_comment_switch == 'yes' ) : ?>
-                                    <div class="abc-ele-single-blog-author">
+                                <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>
+                                    <div class="abcbiz-ele-single-blog-author">
                                         <i class="eicon-instagram-comments"></i>
                                         <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
                                     </div>
@@ -75,13 +75,13 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
                             </div><!--/ Blog info -->
                         <?php endif; ?> 
                         <!-- Blog Title -->
-                        <div class="abc-ele-single-blog-title">
+                        <div class="abcbiz-ele-single-blog-title">
                             <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html(wp_trim_words(get_the_title(), 10, NULL)); ?></a></h2>
                         </div><!--/ Blog Title -->
                         <!-- Blog Button -->
-                        <div class="abc-ele-single-blog-button">
-                            <?php if ($abc_blog_readmore_switch == 'yes') : ?>
-                                <a href="<?php the_permalink(); ?>"><?php echo esc_html($abc_read_more_text);?> <i class="eicon-arrow-right"></i></a>
+                        <div class="abcbiz-ele-single-blog-button">
+                            <?php if ($abcbiz_blog_readmore_switch == 'yes') : ?>
+                                <a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_read_more_text);?> <i class="eicon-arrow-right"></i></a>
                             <?php endif; ?>
                         </div><!--/ Blog Button -->
                     </div><!--/ Content Area -->
@@ -94,7 +94,7 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
         ?>
 
         <!-- Single 3 posts Blog Area -->
-        <div class="abc-ele-single-blog-rem-posts">
+        <div class="abcbiz-ele-single-blog-rem-posts">
 
             <?php
             // Query the next three posts of post type 'post'
@@ -106,8 +106,8 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
             );
 
              // specific category query
-           if ($abc_selected_category_fancy && $abc_selected_category_fancy !== 'all') {
-            $remaining_posts_args['cat'] = $abc_selected_category_fancy;
+           if ($abcbiz_selected_category_fancy && $abcbiz_selected_category_fancy !== 'all') {
+            $remaining_posts_args['cat'] = $abcbiz_selected_category_fancy;
         }
 
             $remaining_posts_query = new WP_Query($remaining_posts_args);
@@ -117,9 +117,9 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
             ?>
 
                     <!-- Single Blog Area for the remaining posts -->
-                    <div class="abc-ele-single-blog-area">
+                    <div class="abcbiz-ele-single-blog-area">
                         <!-- Thumbnail -->
-                        <div class="abc-ele-single-blog-thumbnail">
+                        <div class="abcbiz-ele-single-blog-thumbnail">
                             <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
                                 <?php
                                 if (has_post_thumbnail()) {
@@ -131,18 +131,18 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
                             </a>
                         </div><!--/ Thumbnail -->
                         <!-- Content Area -->
-                        <div class="abc-ele-single-blog-content-area">
+                        <div class="abcbiz-ele-single-blog-content-area">
                             <!-- Blog info -->
-                            <?php if ($abc_blog_date_switch == 'yes' || $abc_blog_comment_switch == 'yes') : ?>
-                                <div class="abc-ele-single-blog-info">
-                                    <?php if($abc_blog_date_switch == 'yes' ) : ?>                                      
-                                        <div class="abc-ele-single-blog-date">
+                            <?php if ($abcbiz_blog_date_switch == 'yes' || $abcbiz_blog_comment_switch == 'yes') : ?>
+                                <div class="abcbiz-ele-single-blog-info">
+                                    <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>                                      
+                                        <div class="abcbiz-ele-single-blog-date">
                                             <i class="eicon-calendar"></i>
                                             <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
                                         </div>
                                     <?php endif; ?>
-                                    <?php if($abc_blog_comment_switch == 'yes' ) : ?>
-                                        <div class="abc-ele-single-blog-author">
+                                    <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>
+                                        <div class="abcbiz-ele-single-blog-author">
                                             <i class="eicon-instagram-comments"></i>
                                             <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
                                         </div>
@@ -150,13 +150,13 @@ $abc_selected_category_fancy = $settings['abc_elementor_blog_category_fancy'];
                                 </div><!--/ Blog info -->
                             <?php endif; ?>                            
                             <!-- Blog Title -->
-                            <div class="abc-ele-single-blog-title">
+                            <div class="abcbiz-ele-single-blog-title">
                                 <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html(wp_trim_words(get_the_title(), 5, NULL)); ?></a></h2>
                             </div><!--/ Blog Title -->
                             <!-- Blog Button -->
-                            <div class="abc-ele-single-blog-button">
-                                <?php if ($abc_blog_readmore_switch == 'yes') : ?>
-                                    <a href="<?php the_permalink(); ?>"><?php echo esc_html($abc_read_more_text);?> <i class="eicon-arrow-right"></i></a>
+                            <div class="abcbiz-ele-single-blog-button">
+                                <?php if ($abcbiz_blog_readmore_switch == 'yes') : ?>
+                                    <a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_read_more_text);?> <i class="eicon-arrow-right"></i></a>
                                 <?php endif; ?>
                             </div><!--/ Blog Button -->
                         </div><!--/ Content Area -->

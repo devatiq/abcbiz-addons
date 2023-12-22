@@ -1,7 +1,9 @@
+<?php if (!defined('ABSPATH')) exit; // Exit if accessed directly
+?>
 <!-- Two column blog area -->
-<div class="abc-ele-two-column-blog-area">
+<div class="abcbiz-ele-two-column-blog-area">
 
-    <div class="abc-ele-two-column-blog"> <!-- start abc-ele-two-column-blog -->
+    <div class="abcbiz-ele-two-column-blog"> <!-- start abcbiz-ele-two-column-blog -->
         <?php
 
         $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
@@ -12,12 +14,12 @@
         $args = array(
             'post_type'      => 'post',
             'paged'          => $paged,
-            'posts_per_page' => $abc_number_of_posts,
+            'posts_per_page' => $abcbiz_number_of_posts,
         );
 
            // specific category query
-           if ($abc_selected_category && $abc_selected_category !== 'all') {
-            $args['cat'] = $abc_selected_category;
+           if ($abcbiz_selected_category && $abcbiz_selected_category !== 'all') {
+            $args['cat'] = $abcbiz_selected_category;
         }
 
         $query = new WP_Query($args);
@@ -28,20 +30,20 @@
 
             while ($query->have_posts()) : $query->the_post(); ?>
 
-                <div class="abc-ele-blog-item">
+                <div class="abcbiz-ele-blog-item">
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-                        <?php if (has_post_thumbnail() && $abc_img_switch === 'yes') : ?>
-                            <div class="abc-ele-blog-thumb">
+                        <?php if (has_post_thumbnail() && $abcbiz_img_switch === 'yes') : ?>
+                            <div class="abcbiz-ele-blog-thumb">
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                         <?php the_post_thumbnail('abcbiz_blog_grid_thumb'); ?>
                                     </a>
                                 </figure>
                             </div>
-                        <?php elseif ($abc_img_switch === 'yes') : ?>
-                            <div class="abc-ele-blog-thumb">
+                        <?php elseif ($abcbiz_img_switch === 'yes') : ?>
+                            <div class="abcbiz-ele-blog-thumb">
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                         <?php echo '<img src="' . ABCELEMENTOR_ASSETS . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
@@ -50,43 +52,43 @@
                             </div>
                         <?php endif; ?>
 
-                        <h3 class="abc-ele-blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        <div class="abc-ele-blog-meta">
-                            <?php if ($abc_date_switch === 'yes') : ?><span class="posted-on"><i class="fa fa-calendar" aria-hidden="true"></i> <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
-                            <?php if ($abc_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="fa fa-commenting" aria-hidden="true"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-multi'), esc_html__('1 Comment', 'abcbiz-multi'), esc_html__('% Comments', 'abcbiz-multi')); ?></a></span><?php endif; ?>
+                        <h3 class="abcbiz-ele-blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="abcbiz-ele-blog-meta">
+                            <?php if ($abcbiz_date_switch === 'yes') : ?><span class="posted-on"><i class="eicon-calendar"></i> <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
+                            <?php if ($abcbiz_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="eicon-instagram-comments"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-multi'), esc_html__('1 Comment', 'abcbiz-multi'), esc_html__('% Comments', 'abcbiz-multi')); ?></a></span><?php endif; ?>
                         </div>
 
-                        <?php if ($abc_excerpt_switch === 'yes') : ?>
+                        <?php if ($abcbiz_excerpt_switch === 'yes') : ?>
                             <!-- Blog excerpt -->
                             <?php
-                            $abc_post_id = get_the_ID();
-                            $abc_excerpt_content = get_post_meta($abc_post_id, 'abcbiz_excerpt_content', true);
-                            $abc_limited_excerpt = wp_trim_words($abc_excerpt_content, 35);
-                            if (!empty($abc_excerpt_content)) : ?>
-                                <div class="abc-ele-blog-excerpt">
-                                    <p><?php echo esc_html($abc_limited_excerpt); ?></p>
+                            $abcbiz_post_id = get_the_ID();
+                            $abcbiz_excerpt_content = get_post_meta($abcbiz_post_id, 'abcbiz_excerpt_content', true);
+                            $abcbiz_limited_excerpt = wp_trim_words($abcbiz_excerpt_content, 35);
+                            if (!empty($abcbiz_excerpt_content)) : ?>
+                                <div class="abcbiz-ele-blog-excerpt">
+                                    <p><?php echo esc_html($abcbiz_limited_excerpt); ?></p>
                                 </div>
                             <?php endif; ?>
                             <!-- Blog excerpt -->
                         <?php endif; ?>
 
-                        <?php if ($abc_read_more_switch === 'yes') : ?>
-                            <div class="abc-ele-blog-more"><a href="<?php the_permalink(); ?>"><?php echo esc_html($abc_grid_read_more_text); ?></a></div>
+                        <?php if ($abcbiz_read_more_switch === 'yes') : ?>
+                            <div class="abcbiz-ele-blog-more"><a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_grid_read_more_text); ?></a></div>
                         <?php endif; ?>
 
                     </article>
 
-                </div> <!-- end abc-ele-blog-item -->
+                </div> <!-- end abcbiz-ele-blog-item -->
 
             <?php
 
                 $post_count++;
 
             endwhile; ?>
-    </div> <!-- end abc-ele-two-column-blog -->
-    <?php if ($abc_pagination_switch === 'yes') : ?>
+    </div> <!-- end abcbiz-ele-two-column-blog -->
+    <?php if ($abcbiz_pagination_switch === 'yes') : ?>
         <div class="clearfix"></div>
-        <div class="abc-ele-pagination-container">
+        <div class="abcbiz-ele-pagination-container">
             <?php
                 $abcbig = 999999999;
                 echo paginate_links(array(

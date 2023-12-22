@@ -5,7 +5,7 @@
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-$block_quote_text = $this->get_settings('abcbizpro_elementor_block_quote_text');
+$abcbiz_block_quote_text = $this->get_settings('abcbiz_elementor_block_quote_text');
 
 ?>
 
@@ -38,6 +38,6 @@ $block_quote_text = $this->get_settings('abcbizpro_elementor_block_quote_text');
 		 M178.453,141.992c0.015-0.928,0-1.863-0.033-2.804c0.61-1.036,1.172-2.099,1.65-3.199
 		C179.678,138.09,179.107,140.07,178.453,141.992z"></path></g></svg>
 </div>
-            <blockquote><?php echo esc_html($block_quote_text); ?></blockquote>
+            <blockquote><?php echo esc_html($abcbiz_block_quote_text); ?></blockquote>
         </div><!-- end block quote area -->
  
