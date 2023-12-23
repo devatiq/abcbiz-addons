@@ -26,8 +26,7 @@ function abcbizpro_elementor_enqueue()
     wp_register_style('magnific-popup',  ABCBIZELEMENTOR_ASSETS . "/css/magnific-popup.css");
 
     //register style for animation
-    wp_register_style('abc-animation',  ABCBIZELEMENTOR_ASSETS . "/css/animation.css");
-
+    wp_register_style('abcbiz-animation',  ABCBIZELEMENTOR_ASSETS . "/css/animation.css");
 
     // enqueue style
     wp_enqueue_style('abcbiz-elementor-style',  ABCBIZELEMENTOR_ASSETS . "/css/style.css");
@@ -37,15 +36,11 @@ function abcbizpro_elementor_enqueue()
     wp_register_script('magnific-popup', ABCBIZELEMENTOR_ASSETS . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
 
     //register script for skillbar
-    wp_register_script('abc-jquery-appear', ABCBIZELEMENTOR_ASSETS . "/js/jquery.appear.js", array('jquery'), 1.0, true);
-    wp_register_script('abc-circular-progress', ABCBIZELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-jquery-appear', ABCBIZELEMENTOR_ASSETS . "/js/jquery.appear.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-circular-progress', ABCBIZELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), 1.0, true);
     //register script for counter up
-    wp_register_script('abc-counter-up', ABCBIZELEMENTOR_ASSETS . "/js/abc-counterup.js", array('jquery'), 1.0, true);
-    wp_register_script('abc-wapoints', ABCBIZELEMENTOR_ASSETS . "/js/waypoints.min.js", array('jquery'), 1.0, true);
-    
-  //  wp_register_script('abc-swiper-init', ABCBIZELEMENTOR_ASSETS . '/js/swiper-activation.js',['jquery'],'1.0.0',true );
-    
-    
+    wp_register_script('abcbiz-counter-up', ABCBIZELEMENTOR_ASSETS . "/js/abcbiz-counterup.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-wapoints', ABCBIZELEMENTOR_ASSETS . "/js/waypoints.min.js", array('jquery'), 1.0, true);
 
     // enqueue script
     wp_enqueue_script('abcbiz-elementor-custom', ABCBIZELEMENTOR_ASSETS . "/js/main.js", array('jquery'), false, true);

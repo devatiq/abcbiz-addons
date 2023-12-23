@@ -735,8 +735,6 @@ h4.abcbiz-ele-team-name a {
     transform: scale(1);
 }
 
-
-
 /*----------------------------------------------
  * Contact Form 7
  * ---------------------------------------------*/
@@ -1148,8 +1146,24 @@ h4.abcbiz-ele-team-name a {
  .abcbiz-shape-area .abcbiz-shape-image img {
     height: auto;
  }
+
+
+ /*-----------------------------
+ * ABC Comment Form
+ * ----------------------------*/
+ .abcbiz-ele-comment-form .reply a {
+    padding: 7px 12px;
+    border-radius: 4px;
+ }
+
+ .abcbiz-ele-comment-form .form-submit input[type="submit"] {
+    padding: 10px 20px;
+    border-radius: 4px;
+ }
+
+
 /*----------------------------------------------
- * Blog
+ * Blog Fancy
  * ---------------------------------------------*/
 
 .abcbiz-ele-blogs {

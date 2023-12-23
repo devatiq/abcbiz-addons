@@ -1,6 +1,6 @@
 jQuery(function ($) {
     'use strict';
-  
+  /*
     //Skill bar
     var ourskill = $('.abc-ele-skill-bar-area');
     ourskill.appear({ force_process: true });
@@ -16,6 +16,6 @@ jQuery(function ($) {
           $this.css('width', width + '%');
         }, 500);
       });
-    });
+    }); */
 
 });

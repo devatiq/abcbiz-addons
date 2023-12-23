@@ -1,18 +1,20 @@
 <?php
-namespace Inc\Widgets\ABCCircularSkills;
+namespace Includes\Widgets\ABCCircularSkills;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'ABC-Elementor-ABCCircularSkills';
+    protected $name = 'abcbiz-elementor-circular-skill';
     protected $title = 'ABC Circular Skill';
-    protected $icon = 'eicon-circle-o';
+    protected $icon = 'eicon-counter-circle';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     protected $keywords = [
@@ -21,7 +23,7 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['abc-jquery-appear', 'abc-circular-progress']; 
+        return ['abcbiz-jquery-appear', 'abcbiz-circular-progress']; 
     }
 
     /**
@@ -37,28 +39,28 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abc_elementor_circl_skill_setting',
+            'abcbiz_elementor_circl_skill_setting',
             [
-                'label' => __('Circle Setting', 'ABCMAFTH'),
+                'label' => esc_html__('Circle Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
         //circle skill text
         $this->add_control(
-            'abc_elementor_circl_skill_text',
+            'abcbiz_elementor_circl_skill_text',
             [
-                'label' => __('Heading', 'ABCMAFTH'),
+                'label' => esc_html__('Heading', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Web Design', 'ABCMAFTH'),
+                'default' => esc_html__('Web Design', 'abcbiz-multi'),
                 'label_block' => true,
             ]
         );
         //circle skill percentage
         $this->add_control(
-            'abc_elementor_circl_skill_value',
+            'abcbiz_elementor_circl_skill_value',
             [
-                'label' => __('Value', 'ABCMAFTH'),
+                'label' => esc_html__('Value', 'abcbiz-multi'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 50,
                 'min' => 0,
@@ -72,18 +74,18 @@ class Main extends BaseWidget
 
         //circle skill style
         $this->start_controls_section(
-            'abc_elementor_circl_skill_style_setting',
+            'abcbiz_elementor_circl_skill_style_setting',
             [
-                'label' => __('Circle Style', 'ABCMAFTH'),
+                'label' => esc_html__('Circle Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
         // circle size
         $this->add_control(
-			'abc_elementor_circl_skill_size',
+			'abcbiz_elementor_circl_skill_size',
 			[
-				'label' => esc_html__( 'Circle Size', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Circle Size', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -104,20 +106,20 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_circl_skill_heading_typography',
-                'label' => __('Heading Typography', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-ele-skill-circle span',
+                'name' => 'abcbiz_elementor_circl_skill_heading_typography',
+                'label' => esc_html__('Heading Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-skill-circle span',
             ]
         ); 
         // circle heading color
         $this->add_control(
-            'abc_elementor_circl_skill_heading_color',
+            'abcbiz_elementor_circl_skill_heading_color',
             [
-                'label' => __('Heading Color', 'ABCMAFTH'),
+                'label' => esc_html__('Heading Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-skill-circle span' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .abcbiz-ele-skill-circle span' => 'color: {{VALUE}}',
                 ],
             ]
         );
@@ -125,9 +127,9 @@ class Main extends BaseWidget
         //Value Position
         // circle size
         $this->add_control(
-			'abc_elementor_circl_skill_value_position',
+			'abcbiz_elementor_circl_skill_value_position',
 			[
-				'label' => esc_html__( 'Value Position Adjustment', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Value Position Adjustment', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['%'],
 				'range' => [
@@ -143,7 +145,7 @@ class Main extends BaseWidget
 				],
 
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-skill-circle strong' => 'top: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .abcbiz-ele-skill-circle strong' => 'top: {{SIZE}}{{UNIT}}',
                 ],
 
 			]
@@ -153,47 +155,47 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_circl_skill_value_typography',
-                'label' => __('Value Typography', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-ele-skill-circle strong',
+                'name' => 'abcbiz_elementor_circl_skill_value_typography',
+                'label' => esc_html__('Value Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-skill-circle strong',
             ]
         );
         // circle value color
         $this->add_control(
-            'abc_elementor_circl_skill_value_color',
+            'abcbiz_elementor_circl_skill_value_color',
             [
-                'label' => __('Value Color', 'ABCMAFTH'),
+                'label' => esc_html__('Value Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-skill-circle strong' => 'color: {{VALUE}}',
-                    '{{WRAPPER}} .abc-ele-skill-circle strong i' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .abcbiz-ele-skill-circle strong' => 'color: {{VALUE}}',
+                    '{{WRAPPER}} .abcbiz-ele-skill-circle strong i' => 'color: {{VALUE}}',
                 ],
             ]
         );
         // circle empty fill color
         $this->add_control(
-            'abc_elementor_circl_skill_empty_fill_color',
+            'abcbiz_elementor_circl_skill_empty_fill_color',
             [
-                'label' => __('Empty Fill Color', 'ABCMAFTH'),
+                'label' => esc_html__('Empty Fill Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => 'rgba(0, 0, 0, .3)',               
             ]
         );
         // circle fill gradient color one
         $this->add_control(
-            'abc_elementor_circl_skill_fill_gradient_color_one',
+            'abcbiz_elementor_circl_skill_fill_gradient_color_one',
             [
-                'label' => __('Gradient Color One', 'ABCMAFTH'),
+                'label' => esc_html__('Gradient Color One', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e60a0a',               
             ]
         );
         // circle fill gradient color two
         $this->add_control(
-            'abc_elementor_circl_skill_fill_gradient_color_two',
+            'abcbiz_elementor_circl_skill_fill_gradient_color_two',
             [
-                'label' => __('Gradient Color Two', 'ABCMAFTH'),
+                'label' => esc_html__('Gradient Color Two', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#d1de04',               
             ]
