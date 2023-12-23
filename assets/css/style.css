@@ -738,8 +738,78 @@ h4.abcbiz-ele-team-name a {
 
 
 /*----------------------------------------------
- * Contact Form
+ * Contact Form 7
  * ---------------------------------------------*/
+
+ .abcbiz-ele-contact-form-7-area label {
+    width: 100%;
+    line-height: 1.4;
+}
+
+.abcbiz-ele-contact-form-7-area p {
+    margin: 0;
+}
+
+.abcbiz-ele-contact-form-7-area input[type="radio"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.wpcf7-radio .wpcf7-list-item-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background-color: #f2f2f2;
+    border: 2px solid #cccccc;
+    vertical-align: middle;
+    transition: background-color 0.3s;
+}
+
+.abcbiz-ele-contact-form-7-area input[type="radio"]:checked + .wpcf7-list-item-label::before {
+    background-color: #4CAF50;
+}
+
+.abcbiz-ele-contact-form-7-area .wpcf7-radio label, .abcbiz-ele-contact-form-7-area .wpcf7-checkbox label{
+    cursor: pointer;
+    font-size: 20px !important;
+    line-height: 1.05 !important;
+    margin-bottom: 15px;
+}
+
+.abcbiz-ele-contact-form-7-area input[type="checkbox"] {
+    opacity: 0;
+    position: absolute;
+}
+
+.wpcf7-checkbox .wpcf7-list-item-label::before {
+    content: '';
+    display: inline-block;
+    width: 20px; 
+    height: 20px;
+    margin-right: 10px;
+    background-color: #f2f2f2;
+    border: 2px solid #cccccc;
+    vertical-align: middle;
+    transition: background-color 0.3s, border-color 0.3s;
+}
+
+.abcbiz-ele-contact-form-7-area input[type="checkbox"]:checked + .wpcf7-list-item-label::before {
+    background-color: #4CAF50;
+    content: '✔';
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    line-height: 20px;
+}
+
+.abcbiz-ele-contact-form-7-area select {
+    margin-bottom: 20px;
+}
+
+
 .abcbiz-ele-contact-field-row {
     display: flex;
     justify-items: center;
