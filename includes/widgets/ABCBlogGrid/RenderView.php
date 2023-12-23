@@ -14,6 +14,7 @@ $abcbiz_read_more_switch = $settings['abcbiz_elementor_blog_grid_read_more_switc
 $abcbiz_pagination_switch = $settings['abcbiz_elementor_blog_grid_pagination'];
 $abcbiz_grid_read_more_text = $settings['abcbiz_elementor_blog_grid_read_more_text'];
 $abcbiz_selected_category = $settings['abcbiz_elementor_blog_grid_category'];
+$abcbiz_excerpt_length_grid = $settings['abcbiz_elementor_blog_grid_excerpt_length'];
 
 ?>
 <!-- Blog grid Area-->

@@ -1,7 +1,9 @@
 <?php
-namespace inc\widgets\ABCBreadCrumb;
+namespace Includes\Widgets\ABCBreadCrumb;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -9,16 +11,15 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-bread-crumb';
+		protected $name = 'abcbiz-bread-crumb';
 		protected $title = 'ABC Breadcrumb';
 		protected $icon = 'eicon-post-navigation';
 		protected $categories = [
-			'abc-category'
+			'abcbiz-category'
 		];		
 		protected $keywords = [
 			'abc', 'bread', 'crumb', 'breadcrumb',
 		];
-
 
 	/**
 	 * Register list widget controls.
@@ -31,7 +32,7 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor-bread-crumb',
+			'abcbiz-elementor-bread-crumb',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -41,7 +42,7 @@ class Main extends BaseWidget {
 
 		//Alignment
 		$this->add_responsive_control(
-			'abc_elementor_bread_crumb_align',
+			'abcbiz_elementor_bread_crumb_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -61,7 +62,7 @@ class Main extends BaseWidget {
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-bread-crumb-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -72,7 +73,7 @@ class Main extends BaseWidget {
         //abc section title style
 		
         $this->start_controls_section(
-            'abc_elementor_bread_crumb_style',
+            'abcbiz_elementor_bread_crumb_style',
             [
                 'label' => esc_html__('Crumb Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -80,37 +81,37 @@ class Main extends BaseWidget {
         );
 
 		$this->add_control(
-			'abc_elementor_bread_crumb_text_color',
+			'abcbiz_elementor_bread_crumb_text_color',
 			[
 				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-bread-crumb-area' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area' => 'color: {{VALUE}}',
 				],
 			]
 		);
 		
 		$this->add_control(
-			'abc_elementor_bread_crumb_link_color',
+			'abcbiz_elementor_bread_crumb_link_color',
 			[
 				'label' => esc_html__( 'Link Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-bread-crumb-area a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area a' => 'color: {{VALUE}}',
 				],
 			]
 		);
 		
 		$this->add_control(
-			'abc_elementor_bread_crumb_link_hover_color',
+			'abcbiz_elementor_bread_crumb_link_hover_color',
 			[
 				'label' => esc_html__( 'Link Hover Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#5D5AED',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-bread-crumb-area a:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area a:hover' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -118,9 +119,9 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abc_elementor_bread_crumb_typography',
+				'name' => 'abcbiz_elementor_bread_crumb_typography',
 				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abc-elementor-bread-crumb-area',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-bread-crumb-area',
 			]
 		);
 

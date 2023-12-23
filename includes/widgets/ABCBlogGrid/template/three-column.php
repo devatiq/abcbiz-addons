@@ -58,17 +58,17 @@
                         </div>
 
                         <?php if ($abcbiz_excerpt_switch === 'yes') : ?>
-                            <!-- Blog excerpt -->
-                            <?php
-                            $abcbiz_post_id = get_the_ID();
-                            $abcbiz_excerpt_content = get_post_meta($abcbiz_post_id, 'abcbiz_excerpt_content', true);
-                            $abcbiz_limited_excerpt = wp_trim_words($abcbiz_excerpt_content, 25);
-                            if (!empty($abcbiz_excerpt_content)) : ?>
-                                <div class="abcbiz-ele-blog-excerpt">
-                                    <p><?php echo esc_html($abcbiz_limited_excerpt); ?></p>
-                                </div>
-                            <?php endif; ?>
-                            <!-- Blog excerpt -->
+                                <!-- Blog excerpt -->
+                                <?php
+                                $abcbiz_post_id = get_the_ID();
+                                $abcbiz_excerpt_content = get_post_meta($abcbiz_post_id, 'abcbiz_multi_excerpt_content', true);
+                                $abcbiz_limited_excerpt = wp_trim_words($abcbiz_excerpt_content, $abcbiz_excerpt_length_grid);
+                                if (!empty($abcbiz_excerpt_content)) : ?>
+                               <div class="abcbiz-ele-blog-list-excerpt">
+                               <p><?php echo esc_html($abcbiz_limited_excerpt); ?></p>
+                               </div>
+                           <?php endif; ?>
+                           <!-- /Blog excerpt -->
                         <?php endif; ?>
 
                         <?php if ($abcbiz_read_more_switch === 'yes') : ?>

@@ -101,24 +101,28 @@ class ABCBizMultiElementorPack
 		// Hook into WordPress after theme setup
 		add_action('after_setup_theme', array($this, 'abcbizpro_elementor_custom_thumbnail_size'));
 
+		// Add extranal file for extra functionality
+		$this->include_external_file();
+
 	}
 
 	// Register a custom thumbnail size
 	function abcbizpro_elementor_custom_thumbnail_size()
 	{
 		// Register a custom thumbnail size
-		add_image_size('abcbiz-elementor-post', 635, 542, true); // 635x542 pixels with hard cropping
-		add_image_size('abc-team-member-thumb', 292, 385, true); // 292x385 pixels with hard cropping for teammember
+		add_image_size('abcbiz-elementor-post', 635, 542, true);
+		add_image_size('abcbiz_blog_list_thumb', 600, 450, true);
+		add_image_size('abcbiz_blog_grid_thumb', 900, 600, true);
+	}
+
+	// Add extranal file for extra functionality
+	public function include_external_file()
+	{
+		require_once ABCBIZELEMENTOR_PATH . '/includes/admin/abcbiz-metabox.php';
 	}
 
 	/**
 	 * setConstants.
-	 * define default constants
-	 * @author   ABCTHEME
-	 * @since   v0.0.1
-	 * @version   v1.1.0   
-	 * @access   public
-	 * @return   void
 	 */
 
 	public function setConstants()

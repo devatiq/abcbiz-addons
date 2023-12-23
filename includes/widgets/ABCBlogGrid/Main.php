@@ -142,6 +142,22 @@ class Main extends BaseWidget
             ]
         );
 
+        //Excerpt leangth
+        $this->add_control(
+			'abcbiz_elementor_blog_grid_excerpt_length',
+			[
+				'label' => esc_html__( 'Excerpt Length', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::NUMBER,
+				'min' => 5,
+				'max' => 500,
+				'step' => 5,
+				'default' => 25,
+                'condition' => [
+                    'abcbiz_elementor_blog_grid_excerpt_switch' => 'yes'
+                ],
+			]
+		);
+
          //More Button
          $this->add_control(
             'abcbiz_elementor_blog_grid_read_more_switch',

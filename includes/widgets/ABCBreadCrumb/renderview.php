@@ -3,13 +3,10 @@
  * Render View for ABC Breadcrumb Widget
  */
 
-if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
+ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-if (!function_exists('abcmafth_breadcrumb')) {
-
-    function abcmafth_breadcrumb() {
+if (!function_exists('abcbiz_multi_breadcrumb')) {
+    function abcbiz_multi_breadcrumb() {
         // Define the home text and URL
         $home_text = 'Home';
         $home_url = home_url('/');
@@ -51,16 +48,13 @@ if (!function_exists('abcmafth_breadcrumb')) {
         }
     
         echo '</div>';
-    }
-    
-    
-    
+    } 
 
 }
 ?>
 
-<div class="abc-elementor-bread-crumb-area">
+<div class="abcbiz-elementor-bread-crumb-area">
     <?php 
     // Get the breadcrumb trail
-    echo abcmafth_breadcrumb(); ?>
+    echo abcbiz_multi_breadcrumb(); ?>
 </div><!-- end breadcrumb area -->

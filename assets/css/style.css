@@ -1608,7 +1608,7 @@ width: auto;
  * ---------------------------------------------*/
 .abcbiz-ele-blog-list-item {
     clear: both;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     display: inline-block;
     width: 100%;
 }
@@ -1635,7 +1635,7 @@ width: auto;
 }
 
 .abcbiz-ele-blog-list-title {
-    margin: 10px 0 7px 0;
+    margin: 0 0 7px 0;
     font-size: 18px;
     font-weight: bold;
 }
