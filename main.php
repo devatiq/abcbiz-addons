@@ -120,7 +120,7 @@ class ABCBizMultiElementorPack
 		define('AbcBizElementor_Path', dirname(AbcBizElementor_File));
 		define('AbcBizElementor_Inc', AbcBizElementor_Path . '/includes');
 		define('AbcBizElementor_URL', plugins_url('', AbcBizElementor_File));
-		define('AbcBizElementor_Assets', AbcBizElementor_URL . '/Assets');
+		define('AbcBizElementor_Assets', AbcBizElementor_URL . '/assets');
 	}
 
 	/**
