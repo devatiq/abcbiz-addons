@@ -2,10 +2,9 @@
 /**
  * Render View file for ABC Post Category Info.
  */
-
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
  
-$settings = $this->get_settings_for_display();
+$abcbiz_settings = $this->get_settings_for_display();
 ?>
 
 <!-- Post Category Area-->

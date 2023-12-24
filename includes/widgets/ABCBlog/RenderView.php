@@ -1,20 +1,21 @@
 <?php
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /**
  * Render View file for ABC Blog.
  */
-$settings = $this->get_settings_for_display();
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+$abcbiz_settings = $this->get_settings_for_display();
 
 // blog info switcher
-$abcbiz_blog_date_switch = $settings['abcbiz_elementor_blog_date_switch'] ? $settings['abcbiz_elementor_blog_date_switch'] : '';
-$abcbiz_blog_comment_switch = $settings['abcbiz_elementor_blog_comment_switch'] ? $settings['abcbiz_elementor_blog_comment_switch'] : '';
+$abcbiz_blog_date_switch = $abcbiz_settings['abcbiz_elementor_blog_date_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_date_switch'] : '';
+$abcbiz_blog_comment_switch = $abcbiz_settings['abcbiz_elementor_blog_comment_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_comment_switch'] : '';
 
 // blog readmore switcher
-$abcbiz_blog_readmore_switch = $settings['abcbiz_elementor_blog_read_more_switch'] ? $settings['abcbiz_elementor_blog_read_more_switch'] : '';
+$abcbiz_blog_readmore_switch = $abcbiz_settings['abcbiz_elementor_blog_read_more_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_read_more_switch'] : '';
 
 // "Read More Text" control
 $abcbiz_read_more_text = $this->get_settings('abcbiz_elementor_blog_read_more_text');
-$abcbiz_selected_category_fancy = $settings['abcbiz_elementor_blog_category_fancy'];
+$abcbiz_selected_category_fancy = $abcbiz_settings['abcbiz_elementor_blog_category_fancy'];
 
 ?>
 <!-- Blog Area-->
@@ -49,7 +50,7 @@ $abcbiz_selected_category_fancy = $settings['abcbiz_elementor_blog_category_fanc
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                             } else {
-                                echo '<img src="' . ABCELEMENTOR_ASSETS . '/img/blog/image-placeholder.jpg" alt="">';
+                                echo '<img src="' . AbcBizElementor_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
                             }
                             ?>
                         </a>
@@ -125,7 +126,7 @@ $abcbiz_selected_category_fancy = $settings['abcbiz_elementor_blog_category_fanc
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                                 } else {
-                                    echo '<img src="' . ABCELEMENTOR_ASSETS . '/img/blog/image-placeholder.jpg" alt="">';
+                                    echo '<img src="' . AbcBizElementor_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
                                 }
                                 ?>
                             </a>

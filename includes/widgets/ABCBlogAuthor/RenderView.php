@@ -1,13 +1,13 @@
 <?php
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
-
 /**
  * Render View file for ABC Author Bio.
  */
-$settings = $this->get_settings_for_display();
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+$abcbiz_settings = $this->get_settings_for_display();
 
 // post info switcher
-$abcbiz_author_show_link = $settings['abcbiz_elementor_author_bio_link_switch'] === 'yes';
+$abcbiz_author_show_link = $abcbiz_settings['abcbiz_elementor_author_bio_link_switch'] === 'yes';
 
 ?>
 

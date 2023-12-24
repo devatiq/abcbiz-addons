@@ -154,7 +154,6 @@ class Main extends BaseWidget
        
         $this->end_controls_section();
 
-
     }
 
     /**
@@ -168,6 +167,5 @@ class Main extends BaseWidget
         //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
-
 
 }

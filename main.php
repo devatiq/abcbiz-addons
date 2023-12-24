@@ -1,27 +1,14 @@
 <?php
 
-namespace ABCBIZELEMENTOR;
-
-/**
- * ABCBizMultiElementorPack.
- * Main plugin class that holds entire plugin.
- * @author  ABCTHEME
- * @since   v0.0.1
- * @version   v2.0.0
- */
+namespace AbcBizElementor;
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
-
-
 
 class ABCBizMultiElementorPack
 {
 	/**
-	 * Addon Version
-	 *
-	 * @since 1.0.0
-	 * @var string The addon version.
-	 */
+	 * plugin Version
+	 */ 
 
 	public $version = '1.0.0';
 
@@ -118,7 +105,7 @@ class ABCBizMultiElementorPack
 	// Add extranal file for extra functionality
 	public function include_external_file()
 	{
-		require_once ABCBIZELEMENTOR_PATH . '/includes/admin/abcbiz-metabox.php';
+		require_once AbcBizElementor_Path . '/includes/admin/abcbiz-metabox.php';
 	}
 
 	/**
@@ -127,13 +114,13 @@ class ABCBizMultiElementorPack
 
 	public function setConstants()
 	{
-		define('ABCBIZELEMENTOR_VERSION', $this->version);
-		define('ABCBIZELEMENTOR_FILE', __FILE__);
-		define('ABCBIZELEMENTOR_NAME', 'ABC Theme Elementor Package');
-		define('ABCBIZELEMENTOR_PATH', dirname(ABCBIZELEMENTOR_FILE));
-		define('ABCBIZELEMENTOR_INC', ABCBIZELEMENTOR_PATH . '/includes');
-		define('ABCBIZELEMENTOR_URL', plugins_url('', ABCBIZELEMENTOR_FILE));
-		define('ABCBIZELEMENTOR_ASSETS', ABCBIZELEMENTOR_URL . '/assets');
+		define('AbcBizElementor_Version', $this->version);
+		define('AbcBizElementor_File', __FILE__);
+		define('AbcBizElementor_Name', 'ABCBiz Multi Addons Pro For Elementor');
+		define('AbcBizElementor_Path', dirname(AbcBizElementor_File));
+		define('AbcBizElementor_Inc', AbcBizElementor_Path . '/includes');
+		define('AbcBizElementor_URL', plugins_url('', AbcBizElementor_File));
+		define('AbcBizElementor_Assets', AbcBizElementor_URL . '/Assets');
 	}
 
 	/**
@@ -185,7 +172,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin Name 2: Elementor */
 			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(ABCBIZELEMENTOR_NAME, 'abcbiz-multi') . '</strong>',
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-multi') . '</strong>'
 		);
 
@@ -208,7 +195,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(ABCBIZELEMENTOR_NAME, 'abcbiz-multi') . '</strong>',
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-multi') . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -232,7 +219,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(ABCBIZELEMENTOR_NAME, 'abcbiz-multi') . '</strong>',
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
 			'<strong>' . esc_html__('PHP', 'abcbiz-multi') . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
@@ -272,13 +259,13 @@ class ABCBizMultiElementorPack
 		// flush rewrite rules
 		flush_rewrite_rules();
 
-		$isInstalled = get_option('ABCThemeELEMENTOR_installed');
+		$isInstalled = get_option('AbcBizElementor_installed');
 
 		if (!$isInstalled) {
-			update_option('ABCThemeELEMENTOR_installed', time());
+			update_option('AbcBizElementor_installed', time());
 		}
 
-		update_option('ABCBIZELEMENTOR_Version', ABCBIZELEMENTOR_VERSION);
+		update_option('AbcBizElementor_Version', AbcBizElementor_Version);
 	}
 
 	/**
@@ -306,7 +293,7 @@ class ABCBizMultiElementorPack
 		if (strpos($class_name, $base_namespace) === 0) {
 			// Convert namespace separators to directory separators
 			$relative_class_name = substr($class_name, strlen($base_namespace));
-			$file_path = ABCBIZELEMENTOR_PATH . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
+			$file_path = AbcBizElementor_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
 
 			if (file_exists($file_path)) {
 				require $file_path;
@@ -326,8 +313,8 @@ class ABCBizMultiElementorPack
 	{
 
 		// Include Widget configurations
-		require_once ABCBIZELEMENTOR_PATH . '/includes/widgets/BaseWidgets.php';
-		require_once ABCBIZELEMENTOR_PATH . '/includes/abcbiz-multi-widgets.php';
+		require_once AbcBizElementor_Path . '/includes/widgets/BaseWidgets.php';
+		require_once AbcBizElementor_Path . '/includes/abcbiz-multi-widgets.php';
 
 	}
 	

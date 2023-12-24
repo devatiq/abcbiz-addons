@@ -43,7 +43,7 @@ class Main extends BaseWidget
         [
             'label' => esc_html__( 'Select Category', 'abcbiz-multi' ),
             'type' => \Elementor\Controls_Manager::SELECT2,
-            'options' => $this->get_blog_fancy_categories(),
+            'options' => $this->abcbiz_blog_fancy_categories(),
             'default' => 'all',
             'label_block' => true,
             'multiple' => false,
@@ -200,7 +200,7 @@ class Main extends BaseWidget
     }
 
     //get blog category
-    private function get_blog_fancy_categories() {
+    private function abcbiz_blog_fancy_categories() {
         $categories = get_categories();
         $options = [ 'all' => 'All Categories' ];
     

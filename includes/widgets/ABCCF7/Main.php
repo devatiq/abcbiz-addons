@@ -28,7 +28,7 @@ class Main extends BaseWidget
      *
      * @return array
      */
-    private function get_contact_form_shortcodes() {
+    private function abcbiz_contact_form_shortcodes() {
         $formlist = array();
         $forms_args = array( 'posts_per_page' => -1, 'post_type'=> 'wpcf7_contact_form' );
         $forms = get_posts( $forms_args );
@@ -68,7 +68,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Select Form', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
-                'options' => $this->get_contact_form_shortcodes(),
+                'options' => $this->abcbiz_contact_form_shortcodes(),
             ]
         );    
 

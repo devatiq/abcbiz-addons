@@ -19,35 +19,35 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 /**
  * Enqueue scripts and styles.
  */
-function abcbizpro_elementor_enqueue()
+function abcbiz_elementor_enqueue()
 {
 
     //register style for magnific-popup
-    wp_register_style('magnific-popup',  ABCBIZELEMENTOR_ASSETS . "/css/magnific-popup.css");
+    wp_register_style('magnific-popup',  AbcBizElementor_Assets . "/css/magnific-popup.css");
 
     //register style for animation
-    wp_register_style('abcbiz-animation',  ABCBIZELEMENTOR_ASSETS . "/css/animation.css");
+    wp_register_style('abcbiz-animation',  AbcBizElementor_Assets . "/css/animation.css");
 
     // enqueue style
-    wp_enqueue_style('abcbiz-elementor-style',  ABCBIZELEMENTOR_ASSETS . "/css/style.css");
-    wp_enqueue_style('abcbiz-elementor-responsive',  ABCBIZELEMENTOR_ASSETS . "/css/responsive.css");
+    wp_enqueue_style('abcbiz-elementor-style',  AbcBizElementor_Assets . "/css/style.css");
+    wp_enqueue_style('abcbiz-elementor-responsive',  AbcBizElementor_Assets . "/css/responsive.css");
 
     //register script for magnific-popup
-    wp_register_script('magnific-popup', ABCBIZELEMENTOR_ASSETS . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
+    wp_register_script('magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
 
     //register script for skillbar
-    wp_register_script('abcbiz-jquery-appear', ABCBIZELEMENTOR_ASSETS . "/js/jquery.appear.js", array('jquery'), 1.0, true);
-    wp_register_script('abcbiz-circular-progress', ABCBIZELEMENTOR_ASSETS . "/js/circular-progress.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-circular-progress', AbcBizElementor_Assets . "/js/circular-progress.js", array('jquery'), 1.0, true);
     //register script for counter up
-    wp_register_script('abcbiz-counter-up', ABCBIZELEMENTOR_ASSETS . "/js/abcbiz-counterup.js", array('jquery'), 1.0, true);
-    wp_register_script('abcbiz-wapoints', ABCBIZELEMENTOR_ASSETS . "/js/waypoints.min.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-counter-up', AbcBizElementor_Assets . "/js/abcbiz-counterup.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-wapoints', AbcBizElementor_Assets . "/js/waypoints.min.js", array('jquery'), 1.0, true);
 
     // enqueue script
-    wp_enqueue_script('abcbiz-elementor-custom', ABCBIZELEMENTOR_ASSETS . "/js/main.js", array('jquery'), false, true);
+    wp_enqueue_script('abcbiz-elementor-custom', AbcBizElementor_Assets . "/js/main.js", array('jquery'), false, true);
 }
-add_action('wp_enqueue_scripts', 'abcbizpro_elementor_enqueue');
+add_action('wp_enqueue_scripts', 'abcbiz_elementor_enqueue');
 
-function abcbizpro_elementor_plugin_general_init() {
+function abcbiz_elementor_plugin_general_init() {
    
             if (!class_exists('ABCBizMultiElementorPack', false)) {
                 // Load Main plugin class
@@ -56,17 +56,17 @@ function abcbizpro_elementor_plugin_general_init() {
                 /**
                  * Initiate the plugin class
                  */
-                \ABCBIZELEMENTOR\ABCBizMultiElementorPack::instance();
+                \AbcBizElementor\ABCBizMultiElementorPack::instance();
             }
 
             // Text domain register for translation
             load_plugin_textdomain('abcbiz-multi', false, dirname(plugin_basename(__FILE__)) . '/languages/');
 }
-add_action('plugins_loaded', 'abcbizpro_elementor_plugin_general_init');
+add_action('plugins_loaded', 'abcbiz_elementor_plugin_general_init');
 
 
 // ABCBiz Addons Custom Category
-function abcbizpro_elementor_add_widget_categories($elements_manager)
+function abcbiz_elementor_add_widget_categories($elements_manager)
 {
 
     $elements_manager->add_category(
@@ -77,10 +77,10 @@ function abcbizpro_elementor_add_widget_categories($elements_manager)
         ]
     );
 }
-add_action('elementor/elements/categories_registered', 'abcbizpro_elementor_add_widget_categories');
+add_action('elementor/elements/categories_registered', 'abcbiz_elementor_add_widget_categories');
 
 // ABCBiz Addons WooCommerce Custom Category
-function abcbizpro_elementor_add_widget_wc_categories($elements_manager)
+function abcbiz_elementor_add_widget_wc_categories($elements_manager)
 {
     if (is_plugin_active('woocommerce/woocommerce.php')) {
         $elements_manager->add_category(
@@ -92,11 +92,11 @@ function abcbizpro_elementor_add_widget_wc_categories($elements_manager)
         );
     }
 }
-add_action('elementor/elements/categories_registered', 'abcbizpro_elementor_add_widget_wc_categories');
+add_action('elementor/elements/categories_registered', 'abcbiz_elementor_add_widget_wc_categories');
 
 
 // enqueue admin style for elementor editor
 add_action('elementor/editor/before_enqueue_scripts', function () {
 
-    wp_enqueue_style('abcbiz-elementor-admin-style',  ABCBIZELEMENTOR_ASSETS . "/css/admin.css");
+    wp_enqueue_style('abcbiz-elementor-admin-style',  AbcBizElementor_Assets . "/css/admin.css");
 });

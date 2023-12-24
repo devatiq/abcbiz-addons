@@ -4,18 +4,18 @@
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-$settings = $this->get_settings_for_display();
+$abcbiz_settings = $this->get_settings_for_display();
 $abcbiz_number_of_posts = $this->get_settings('abcbiz_elementor_blog_list_post_number')['size'];
 
-$abcbiz_img_switch = $settings['abcbiz_elementor_blog_list_img_switch'];
-$abcbiz_date_switch = $settings['abcbiz_elementor_blog_list_date_switch'];
-$abcbiz_comment_switch = $settings['abcbiz_elementor_blog_list_comment_switch'];
-$abcbiz_excerpt_switch = $settings['abcbiz_elementor_blog_list_excerpt_switch'];
-$abcbiz_read_more_switch = $settings['abcbiz_elementor_blog_list_read_more_switch'];
-$abcbiz_pagination_switch = $settings['abcbiz_elementor_blog_list_pagination'];
-$abcbiz_list_read_more_text = $settings['abcbiz_elementor_blog_list_read_more_text'];
-$abcbiz_selected_category_list = $settings['abcbiz_elementor_blog_list_category'];
-$abcbiz_excerpt_length_list = $settings['abcbiz_elementor_blog_list_excerpt_length'];
+$abcbiz_img_switch = $abcbiz_settings['abcbiz_elementor_blog_list_img_switch'];
+$abcbiz_date_switch = $abcbiz_settings['abcbiz_elementor_blog_list_date_switch'];
+$abcbiz_comment_switch = $abcbiz_settings['abcbiz_elementor_blog_list_comment_switch'];
+$abcbiz_excerpt_switch = $abcbiz_settings['abcbiz_elementor_blog_list_excerpt_switch'];
+$abcbiz_read_more_switch = $abcbiz_settings['abcbiz_elementor_blog_list_read_more_switch'];
+$abcbiz_pagination_switch = $abcbiz_settings['abcbiz_elementor_blog_list_pagination'];
+$abcbiz_list_read_more_text = $abcbiz_settings['abcbiz_elementor_blog_list_read_more_text'];
+$abcbiz_selected_category_list = $abcbiz_settings['abcbiz_elementor_blog_list_category'];
+$abcbiz_excerpt_length_list = $abcbiz_settings['abcbiz_elementor_blog_list_excerpt_length'];
 ?>
 <!-- Blog List Area-->
 <div class="abcbiz-ele-blog-list-area">
@@ -61,7 +61,7 @@ $abcbiz_excerpt_length_list = $settings['abcbiz_elementor_blog_list_excerpt_leng
                             <div class="abcbiz-ele-blog-list-thumb">
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                        <?php echo '<img src="' . ABCELEMENTOR_ASSETS . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
+                                        <?php echo '<img src="' . AbcBizElementor_Assets . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
                                     </a>
                                 </figure>
                             </div>
