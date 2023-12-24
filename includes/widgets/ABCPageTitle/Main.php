@@ -1,7 +1,9 @@
 <?php 
-namespace inc\widgets\ABCPageTitle;
+namespace Includes\widgets\ABCPageTitle;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -13,17 +15,15 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-page-title';
+		protected $name = 'abcbiz-page-title';
 		protected $title = 'ABC Page Title';
 		protected $icon = 'eicon-archive-title';
 		protected $categories = [
-			'abc-category'
+			'abcbiz-category'
 		];		
 		protected $keywords = [
 			'abc', 'page', 'title', 'page title',
 		];
-
-
 	/**
 	 * Register list widget controls.
 	 *
@@ -35,9 +35,9 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor-page-title',
+			'abcbiz-elementor-page-title',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -45,18 +45,18 @@ class Main extends BaseWidget {
 
 		//Heading tag
         $this->add_control(
-            'abc_elementor_page_title_tag',
+            'abcbiz_elementor_page_title_tag',
             [
-                'label' => esc_html__('Heading Tag', 'ABCMAFTH'),
+                'label' => esc_html__('Heading Tag', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h1',
                 'options' => [
-                    'h1' => esc_html__('H1', 'ABCMAFTH'),
-                    'h2' => esc_html__('H2', 'ABCMAFTH'),
-                    'h3' => esc_html__('H3', 'ABCMAFTH'),
-                    'h4' => esc_html__('H4', 'ABCMAFTH'),
-                    'h5' => esc_html__('H5', 'ABCMAFTH'),
-                    'H6' => esc_html__('H6', 'ABCMAFTH'),
+                    'h1' => esc_html__('H1', 'abcbiz-multi'),
+                    'h2' => esc_html__('H2', 'abcbiz-multi'),
+                    'h3' => esc_html__('H3', 'abcbiz-multi'),
+                    'h4' => esc_html__('H4', 'abcbiz-multi'),
+                    'h5' => esc_html__('H5', 'abcbiz-multi'),
+                    'H6' => esc_html__('H6', 'abcbiz-multi'),
                 ],
             
             ]
@@ -64,27 +64,27 @@ class Main extends BaseWidget {
 
 		//Alignment
 		$this->add_responsive_control(
-			'abc_elementor_page_title_align',
+			'abcbiz_elementor_page_title_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-page-title-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-page-title-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -95,21 +95,21 @@ class Main extends BaseWidget {
         //Abc post title style
 		
         $this->start_controls_section(
-            'abc_elementor_page_title_style',
+            'abcbiz_elementor_page_title_style',
             [
-                'label' => esc_html__('Style', 'ABCMAFTH'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
 		$this->add_control(
-			'abc_elementor_page_title_color',
+			'abcbiz_elementor_page_title_color',
 			[
-				'label' => esc_html__( 'Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} .abc-page-title-tag' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-page-title-tag' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -117,9 +117,9 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abc_elementor_page_title_typography',
-				'label' => esc_html__( 'Typography', 'ABCMAFTH' ),
-				'selector' => '{{WRAPPER}} .abc-page-title-tag',
+				'name' => 'abcbiz_elementor_page_title_typography',
+				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-page-title-tag',
 			]
 		);
 
