@@ -17,6 +17,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			\includes\widgets\ABCCommentForm\Main::class,
 			\includes\widgets\ABCPostTitle\Main::class,
 			\includes\widgets\ABCPageTitle\Main::class,
+			\includes\widgets\ABCShape\Main::class,
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,

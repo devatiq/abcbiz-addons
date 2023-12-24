@@ -1,27 +1,28 @@
 <?php
-
 /**
  * Render View file for ABC Shape Widget.
  */
+ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-$id = $this->get_id(); //unique id for this widget
+$abcbiz_anim_id = $this->get_id(); //unique id for this widget
 
-$shape_type = $settings['abc_elementor_shape_type'] ?? 'default'; 
-$image_shape = isset($settings['abc_elementor_shape_image']['url']) ? $settings['abc_elementor_shape_image']['url'] : '';
+$abcbiz_shape_type = $settings['abcbiz_elementor_shape_type'] ?? 'default'; 
+$abcbiz_image_shape = isset($settings['abcbiz_elementor_shape_image']['url']) ? $settings['abcbiz_elementor_shape_image']['url'] : '';
+$abcbiz_shape_alt = $settings['abcbiz_elementor_shape_image_alt']; 
 
-$animation = 'none';
-if (isset($settings['abc_elementor_shape_animation']) && 'yes' == $settings['abc_elementor_shape_animation']) {
-    $animation = $settings['abc_elementor_shape_animation_effect'] ?? 'default_animation_effect';
+$abcbiz_animation = 'none';
+if (isset($settings['abcbiz_elementor_shape_animation']) && 'yes' == $settings['abcbiz_elementor_shape_animation']) {
+    $abcbiz_animation = $settings['abcbiz_elementor_shape_animation_effect'] ?? 'default_animation_effect';
 }
 
 ?>
 
-<div class="abc-shape-area">
-    <div class="abc-shape-<?php echo esc_attr($shape_type); if('image' != $shape_type) { echo ' abc-ele-shape'; } ?> <?php echo esc_attr($animation); ?>">
+<div class="abcbiz-shape-area">
+    <div class="abcbiz-shape-<?php echo esc_attr($abcbiz_shape_type); if('image' != $abcbiz_shape_type) { echo ' abcbiz-ele-shape'; } ?> <?php echo esc_attr($abcbiz_animation); ?>">
         <?php 
-            if('image' == $shape_type) {
-                echo '<img src="'.esc_url($image_shape).'" alt="abc shape"/>';
+            if('image' == $abcbiz_shape_type) {
+                echo '<img src="'.esc_url($abcbiz_image_shape).'" alt="'.esc_attr($abcbiz_shape_alt).'"/>';
             }
         ?>
     </div>

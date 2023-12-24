@@ -1,8 +1,9 @@
 <?php
+namespace Includes\Widgets\ABCShape;
 
-namespace Inc\Widgets\ABCShape;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Inc\Widgets\BaseWidget;
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Border;
@@ -11,16 +12,16 @@ use Elementor\Group_Control_Border;
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'ABC-Elementor-ABCShape';
+    protected $name = 'abcbiz-elementor-aminshape';
     protected $title = 'ABC Animated Shape';
     protected $icon = 'eicon-shape';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     public function get_style_depends()
     {
-        return ['abc-animation'];
+        return ['abcbiz-animation'];
     }
 
     /**
@@ -36,113 +37,126 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abc_elementor_shape_settings',
+            'abcbiz_elementor_shape_settings',
             [
-                'label' => __('Shape', 'ABCMAFTH'),
+                'label' => esc_html__('Shape', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
         //shape type
         $this->add_control(
-            'abc_elementor_shape_type',
+            'abcbiz_elementor_shape_type',
             [
-                'label' => esc_html__('Shape Type', 'ABCMAFTH'),
+                'label' => esc_html__('Shape Type', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'circle',
                 'options' => [
-                    'circle' => esc_html__('Circle', 'ABCMAFTH'),
-                    'square' => esc_html__('Square', 'ABCMAFTH'),
-                    'image' => esc_html__('Image', 'ABCMAFTH'),
+                    'circle' => esc_html__('Circle', 'abcbiz-multi'),
+                    'square' => esc_html__('Square', 'abcbiz-multi'),
+                    'image' => esc_html__('Image', 'abcbiz-multi'),
                 ],
             ]
         );
         //image shape
         $this->add_control(
-            'abc_elementor_shape_image',
+            'abcbiz_elementor_shape_image',
             [
-                'label' => esc_html__('Choose Image', 'ABCMAFTH'),
+                'label' => esc_html__('Choose Image', 'abcbiz-multi'),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
                 ],
                 
                 'condition' => [
-                    'abc_elementor_shape_type' => 'image',
+                    'abcbiz_elementor_shape_type' => 'image',
                 ],
             ]
         );
+
+         //image shape
+         $this->add_control(
+            'abcbiz_elementor_shape_image_alt',
+            [
+                'label' => esc_html__('Image Alt Text', 'abcbiz-multi'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'ABCBiz Image',
+                'condition' => [
+                    'abcbiz_elementor_shape_type' => 'image',
+                ],
+            ]
+        );
+
         //animation show/hide
         $this->add_control(
-            'abc_elementor_shape_animation',
+            'abcbiz_elementor_shape_animation',
             [
-                'label' => esc_html__('Animation', 'ABCMAFTH'),
+                'label' => esc_html__('Animation', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'ABCMAFTH'),
-                'label_off' => esc_html__('Hide', 'ABCMAFTH'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => '',
             ]
         );
         //select animation
         $this->add_control(
-            'abc_elementor_shape_animation_effect',
+            'abcbiz_elementor_shape_animation_effect',
             [
-                'label' => esc_html__('Animation Type', 'ABCMAFTH'),
+                'label' => esc_html__('Animation Type', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'ABCSpin',
                 'options' => [
-                    'ABCxAxisMove' => esc_html__('X-Axis Move', 'ABCMAFTH'),
-                    'ABCyAxisMove' => esc_html__('Y-Axis Move', 'ABCMAFTH'),
-                    'ABCtriAngleMove' => esc_html__('Triangle Move', 'ABCMAFTH'),
-                    'ABCSpin' => esc_html__('Spin', 'ABCMAFTH'),
-                    'ABCRotationMove' => esc_html__('Rotation Move', 'ABCMAFTH'),
-                    'ABCTilt' => esc_html__('Tilt', 'ABCMAFTH'),
-                    'ABCTimeLineAnimate' => esc_html__('Timeline Animate', 'ABCMAFTH'),
-                    'ABCSpinMove' => esc_html__('Spin Move', 'ABCMAFTH'),
-                    'ABCclockSpin' => esc_html__('Clockwise Spin', 'ABCMAFTH'),
-                    'ABCAntiClockSpin' => esc_html__('Anti-Clockwise Spin', 'ABCMAFTH'),
-                    'ABCRotating' => esc_html__('Rotating', 'ABCMAFTH'),
+                    'ABCxAxisMove' => esc_html__('X-Axis Move', 'abcbiz-multi'),
+                    'ABCyAxisMove' => esc_html__('Y-Axis Move', 'abcbiz-multi'),
+                    'ABCtriAngleMove' => esc_html__('Triangle Move', 'abcbiz-multi'),
+                    'ABCSpin' => esc_html__('Spin', 'abcbiz-multi'),
+                    'ABCRotationMove' => esc_html__('Rotation Move', 'abcbiz-multi'),
+                    'ABCTilt' => esc_html__('Tilt', 'abcbiz-multi'),
+                    'ABCTimeLineAnimate' => esc_html__('Timeline Animate', 'abcbiz-multi'),
+                    'ABCSpinMove' => esc_html__('Spin Move', 'abcbiz-multi'),
+                    'ABCclockSpin' => esc_html__('Clockwise Spin', 'abcbiz-multi'),
+                    'ABCAntiClockSpin' => esc_html__('Anti-Clockwise Spin', 'abcbiz-multi'),
+                    'ABCRotating' => esc_html__('Rotating', 'abcbiz-multi'),
                 ],
                 'condition' => [
-                    'abc_elementor_shape_animation' => 'yes',
+                    'abcbiz_elementor_shape_animation' => 'yes',
                 ],
             ]
         );
                 
-
         $this->end_controls_section();
 
         //abc shape style
         $this->start_controls_section(
-            'abc_elementor_shape_style',
+            'abcbiz_elementor_shape_style',
             [
-                'label' => __('Shape Style', 'ABCMAFTH'),
+                'label' => esc_html__('Shape Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'abc_elementor_shape_type!' => 'image',
+                    'abcbiz_elementor_shape_type!' => 'image',
                 ],
             ]
         );
 
         //shape border radius
         $this->add_responsive_control(
-            'abc_elementor_shape_border_radius',
+            'abcbiz_elementor_shape_border_radius',
             [
-                'label' => __('Border Radius', 'ABCMAFTH'),
+                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-shape-area .abc-ele-shape' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-shape-area .abcbiz-ele-shape' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
         //shape size
         $this->add_responsive_control(
-            'abc_elementor_shape_size',
+            'abcbiz_elementor_shape_size',
             [
-                'label' => __('Size', 'ABCMAFTH'),
+                'label' => esc_html__('Size', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -156,19 +170,19 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-shape-area .abc-ele-shape' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-shape-area .abcbiz-ele-shape' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
 
         //shape normal/hover tabs
-        $this->start_controls_tabs('abc_elementor_shape_style_tabs');
+        $this->start_controls_tabs('abcbiz_elementor_shape_style_tabs');
 
         //shape normal tab
         $this->start_controls_tab(
-            'abc_elementor_shape_style_normal_tab',
+            'abcbiz_elementor_shape_style_normal_tab',
             [
-                'label' => __('Normal', 'ABCMAFTH'),
+                'label' => esc_html__('Normal', 'abcbiz-multi'),
             ]
         );
 
@@ -176,10 +190,10 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_shape_background',
-                'label' => __('Background', 'ABCMAFTH'),
+                'name' => 'abcbiz_elementor_shape_background',
+                'label' => esc_html__('Background', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .abc-shape-area .abc-ele-shape',
+                'selector' => '{{WRAPPER}} .abcbiz-shape-area .abcbiz-ele-shape',
             ]
         );
 
@@ -187,8 +201,8 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name' => 'abc_elementor_shape_border',
-                'selector' => '{{WRAPPER}} .abc-shape-area .abc-ele-shape',
+                'name' => 'abcbiz_elementor_shape_border',
+                'selector' => '{{WRAPPER}} .abcbiz-shape-area .abcbiz-ele-shape',
             ]
         );
 
@@ -196,9 +210,9 @@ class Main extends BaseWidget
 
         //shape hover tab
         $this->start_controls_tab(
-            'abc_elementor_shape_style_hover_tab',
+            'abcbiz_elementor_shape_style_hover_tab',
             [
-                'label' => __('Hover', 'ABCMAFTH'),
+                'label' => esc_html__('Hover', 'abcbiz-multi'),
             ]
         );
 
@@ -206,51 +220,47 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_shape_hover_background',
-                'label' => __('Background', 'ABCMAFTH'),
+                'name' => 'abcbiz_elementor_shape_hover_background',
+                'label' => esc_html__('Background', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .abc-shape-area:hover .abc-ele-shape',
+                'selector' => '{{WRAPPER}} .abcbiz-shape-area:hover .abcbiz-ele-shape',
             ]
         );
 
         //shape hover border color
         $this->add_control(
-            'abc_elementor_shape_border_hover_color',
+            'abcbiz_elementor_shape_border_hover_color',
             [
-                'label' => __('Border Color', 'ABCMAFTH'),
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-shape-area:hover .abc-ele-shape' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-shape-area:hover .abcbiz-ele-shape' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
 
-
-
         $this->end_controls_tab();
-
         $this->end_controls_tabs();
-
 
         //end of shape style
         $this->end_controls_section();
 
         //abc shape image style
         $this->start_controls_section(
-            'abc_elementor_shape_image_style',
+            'abcbiz_elementor_shape_image_style',
             [
-                'label' => __('Image', 'ABCMAFTH'),
+                'label' => esc_html__('Image', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
-                    'abc_elementor_shape_type' => 'image',
+                    'abcbiz_elementor_shape_type' => 'image',
                 ]
             ]
         );
 
         $this->add_control(
-            'abc_elementor_shape_image_width',
+            'abcbiz_elementor_shape_image_width',
             [
-                'label' => __('Width', 'ABCMAFTH'),
+                'label' => esc_html__('Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -268,7 +278,7 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-shape-area .abc-shape-image img' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-shape-area .abcbiz-shape-image img' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -276,21 +286,21 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name' => 'abc_elementor_image_border',
-                'label' => __('Border', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-shape-area .abc-shape-image img',
+                'name' => 'abcbiz_elementor_image_border',
+                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-shape-area .abcbiz-shape-image img',
             ]
         );
 
         // Border Radius settings
         $this->add_control(
-            'abc_elementor_image_border_radius',
+            'abcbiz_elementor_image_border_radius',
             [
-                'label' => __('Border Radius', 'ABCMAFTH'),
+                'label' => __('Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-shape-area .abc-shape-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-shape-area .abcbiz-shape-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
