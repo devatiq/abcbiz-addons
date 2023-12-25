@@ -33,7 +33,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_recent_posts_setting',
             [
-                'label' => __('Post Setting', 'ABCMAFTH'),
+                'label' => __('Post Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,7 +42,7 @@ class Main extends BaseWidget
     $this->add_control(
         'abc_elementor_recent_posts_post_category',
         [
-            'label' => esc_html__( 'Select Category', 'ABCMAFTH' ),
+            'label' => esc_html__( 'Select Category', 'abcbiz-multi' ),
             'type' => \Elementor\Controls_Manager::SELECT2,
             'options' => $this->get_recent_post_categories(),
             'default' => 'all',
@@ -55,7 +55,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abc_elementor_recent_posts_post_number',
 			[
-				'label' => esc_html__( 'Number of Posts', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Number of Posts', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['number'],
 				'range' => [
@@ -76,10 +76,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_date_switch',
             [
-                'label' => __('Post Date', 'ABCMAFTH'),
+                'label' => __('Post Date', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => __('Show', 'abcbiz-multi'),
+                'label_off' => __('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -89,10 +89,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_comment_switch',
             [
-                'label' => __('Blog Comments', 'ABCMAFTH'),
+                'label' => __('Blog Comments', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => __('Show', 'abcbiz-multi'),
+                'label_off' => __('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -102,10 +102,10 @@ class Main extends BaseWidget
          $this->add_control(
             'abc_elementor_recent_posts_read_more_switch',
             [
-                'label' => __('More Button', 'ABCMAFTH'),
+                'label' => __('More Button', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => __('Show', 'abcbiz-multi'),
+                'label_off' => __('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -115,7 +115,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_read_more_text',
             [
-                'label' => __('More Button Text', 'ABCMAFTH'),
+                'label' => __('More Button Text', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'Read More',
                 'placeholder' => 'Enter read more text',
@@ -131,7 +131,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_recent_posts_title_style_section',
             [
-                'label' => __('Title Style', 'ABCMAFTH'),
+                'label' => __('Title Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -141,7 +141,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_recent_posts_title_typography',
-                'label' => __('Title Typography', 'ABCMAFTH'),
+                'label' => __('Title Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-ele-recent-post-title',
             ]
         );
@@ -153,7 +153,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abc_elementor_recent_posts_title_style_normal_tab',
 			[
-				'label' => esc_html__( 'Title Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
 			]
 		);
 
@@ -161,7 +161,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_title_color',
             [
-                'label' => __('Title Color', 'ABCMAFTH'),
+                'label' => __('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -175,7 +175,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abc_elementor_recent_posts_title_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
 			]
 		);
 
@@ -183,7 +183,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_title_hover_color',
             [
-                'label' => __('Title Hover Color', 'ABCMAFTH'),
+                'label' => __('Title Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
@@ -200,7 +200,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_recent_posts_meta_style_section',
             [
-                'label' => __('Meta Style', 'ABCMAFTH'),
+                'label' => __('Meta Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -210,7 +210,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_recent_posts_meta_typography',
-                'label' => __('Meta Typography', 'ABCMAFTH'),
+                'label' => __('Meta Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-ele-recent-post-meta',
             ]
         );
@@ -219,7 +219,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_meta_color',
             [
-                'label' => __('Meta Color', 'ABCMAFTH'),
+                'label' => __('Meta Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#666666',
                 'selectors' => [
@@ -234,7 +234,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_recent_posts_button_style_section',
             [
-                'label' => __('Read More Style', 'ABCMAFTH'),
+                'label' => __('Read More Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abc_elementor_recent_posts_read_more_switch' => 'yes'
@@ -247,7 +247,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_recent_posts_button_typography',
-                'label' => __('Read More Typography', 'ABCMAFTH'),
+                'label' => __('Read More Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-ele-recent-post-more',
             ]
         );
@@ -259,7 +259,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abc_elementor_recent_posts_button_style_normal_tab',
 			[
-				'label' => esc_html__( 'Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
 			]
 		);
 
@@ -267,7 +267,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_button_color',
             [
-                'label' => __('Read More Color', 'ABCMAFTH'),
+                'label' => __('Read More Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
@@ -282,7 +282,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abc_elementor_recent_posts_button_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
 			]
 		);
 
@@ -290,7 +290,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_recent_posts_button_hover_color',
             [
-                'label' => __('Read More Hover Color', 'ABCMAFTH'),
+                'label' => __('Read More Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3d3d3d',
                 'selectors' => [

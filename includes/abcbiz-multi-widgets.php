@@ -36,8 +36,13 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		}
 
 		  // Add other widgets that are always active
-		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCCounter\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCFeturedImg\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
@@ -45,16 +50,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			//\inc\widgets\ABCTestimonials\Main::class,
 			//\inc\widgets\ABCPricingTable\Main::class,
 			//\inc\widgets\ABCSkillBar\Main::class,
-			//\inc\widgets\ABCCounter\Main::class,
-			//\inc\widgets\ABCPopup\Main::class,
 			//\inc\widgets\ABCShape\Main::class,
 			//\inc\widgets\ABCSecTitle\Main::class,
-		    //\inc\widgets\ABCBreadCrumb\Main::class,
-			//\inc\widgets\ABCFeturedImg\Main::class,
-			//\inc\widgets\ABCPostInfo\Main::class,
 			//\inc\widgets\ABCTagInfo\Main::class,
 			//\inc\widgets\ABCRelatedPost\Main::class,
-
 			//\inc\widgets\ABCSocialShare\Main::class,
 			//\inc\widgets\ABCSearchForm\Main::class,
 			//\inc\widgets\ABCRecentPost\Main::class,

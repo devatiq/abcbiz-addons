@@ -1,8 +1,9 @@
 <?php
+namespace Includes\Widgets\ABCCounter;
 
-namespace Inc\Widgets\ABCCounter;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Inc\Widgets\BaseWidget;
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
@@ -12,11 +13,11 @@ class Main extends BaseWidget
 {
 
     // define protected variables...
-    protected $name = 'ABC-Elementor-ABCCounter';
-    protected $title = 'ABC Counter';
+    protected $name = 'abcbiz-elementor-counterup';
+    protected $title = 'ABC Counter Up';
     protected $icon = 'eicon-counter';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     protected $keywords = [
@@ -25,7 +26,7 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['abc-counter-up','abc-jquery-appear', 'abc-wapoints']; 
+        return ['abcbiz-counter-up','abcbiz-jquery-appear', 'abcbiz-wapoints']; 
     }
 
 
@@ -43,73 +44,73 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abc_elementor_counter_section',
+            'abcbiz_elementor_counter_section',
             [
-                'label' => __('Counter', 'ABCMAFTH'),
+                'label' => esc_html__('Counter', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]           
         );
         // counter title
         $this->add_control(
-            'abc_elementor_counter_title',
+            'abcbiz_elementor_counter_title',
             [
-                'label' => __('Title', 'ABCMAFTH'),
+                'label' => esc_html__('Title', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('Our Clients', 'ABCMAFTH'),
+                'default' => esc_html__('Our Clients', 'abcbiz-multi'),
                 'label_block' => true,
             ]           
         );
         // counter number
         $this->add_control(
-            'abc_elementor_counter_number',
+            'abcbiz_elementor_counter_number',
             [
-                'label' => __('Number', 'ABCMAFTH'),
+                'label' => esc_html__('Number', 'abcbiz-multi'),
                 'type' => Controls_Manager::NUMBER,
-                'default' => __('100', 'ABCMAFTH'),               
+                'default' => esc_html__('100', 'abcbiz-multi'),               
             ]
         );
         // counter icon
         $this->add_control(
-            'abc_elementor_counter_icon',
+            'abcbiz_elementor_counter_icon',
             [
-                'label' => __('Icon', 'ABCMAFTH'),
+                'label' => esc_html__('Icon', 'abcbiz-multi'),
                 'type' => Controls_Manager::ICONS,
             ]            
         );
         // counter suffix
         $this->add_control(
-            'abc_elementor_counter_suffix',
+            'abcbiz_elementor_counter_suffix',
             [
-                'label' => __('Suffix', 'ABCMAFTH'),
+                'label' => esc_html__('Suffix', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('+', 'ABCMAFTH'),
+                'default' => esc_html__('+', 'abcbiz-multi'),
                 'label_block' => true,
             ]            
         );    
         
         //Alignment
 		$this->add_responsive_control(
-			'abc_elementor_counter_icon_align',
+			'abcbiz_elementor_counter_icon_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-ele-countdown-wrap' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-ele-countdown-wrap' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -120,34 +121,34 @@ class Main extends BaseWidget
 
         // start of counter style section
         $this->start_controls_section(
-            'abc_elementor_counter_style_section',
+            'abcbiz_elementor_counter_style_section',
             [
-                'label' => __('Style', 'ABCMAFTH'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
         //counter box padding
         $this->add_responsive_control(
-            'abc_elementor_counter_box_padding',
+            'abcbiz_elementor_counter_box_padding',
             [
-                'label' => __('Box Padding', 'ABCMAFTH'),
+                'label' => esc_html__('Box Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
 
             ]
         );
         // counter title color
         $this->add_control(
-            'abc_elementor_counter_title_color',
+            'abcbiz_elementor_counter_title_color',
             [
-                'label' => __('Title Color', 'ABCMAFTH'),
+                'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-count-title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-count-title h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -155,21 +156,21 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_counter_title_typography',
-                'label' => __('Title Typography', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-ele-count-title h3',
+                'name' => 'abcbiz_elementor_counter_title_typography',
+                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-count-title h3',
             ]
         );
         // counter number color
         $this->add_control(
-            'abc_elementor_counter_number_color',
+            'abcbiz_elementor_counter_number_color',
             [
-                'label' => __('Number Color', 'ABCMAFTH'),
+                'label' => esc_html__('Number Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-counter .abccounter' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-counter-suffix' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-counter .abcbiz-counter' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-counter-suffix' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -177,29 +178,29 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_counter_number_typography',
-                'label' => __('Number Typography', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-ele-counter span.abccounter, {{WRAPPER}} .abc-ele-counter-suffix',
+                'name' => 'abcbiz_elementor_counter_number_typography',
+                'label' => esc_html__('Number Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-counter span.abcbiz-counter, {{WRAPPER}} .abcbiz-ele-counter-suffix',
             ]
         );
         // counter icon color
         $this->add_control(
-            'abc_elementor_counter_icon_color',
+            'abcbiz_elementor_counter_icon_color',
             [
-                'label' => __('Icon Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59A818',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );
         // counter icon size
         $this->add_responsive_control(
-            'abc_elementor_counter_icon_size',
+            'abcbiz_elementor_counter_icon_size',
             [
-                'label' => __('Icon Size', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Size', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -212,20 +213,20 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}}  .abc-ele-countdown-wrap span.abc-counter-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
-                    '{{WRAPPER}}  .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}}  .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
         // counter icon background color
         $this->add_control(
-            'abc_elementor_counter_icon_bg_color',
+            'abcbiz_elementor_counter_icon_bg_color',
             [
-                'label' => __('Icon Background Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i' => 'background-color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -233,48 +234,48 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name' => 'abc_elementor_counter_icon_border',
-                'selector' => '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i, {{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg',
+                'name' => 'abcbiz_elementor_counter_icon_border',
+                'selector' => '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i, {{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg',
             ]
         );
         // counter icon border radius
         $this->add_responsive_control(
-            'abc_elementor_counter_icon_border_radius',
+            'abcbiz_elementor_counter_icon_border_radius',
             [
-                'label' => __('Icon Border Radius', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
 
             ]
         );
         // counter icon padding
         $this->add_responsive_control(
-            'abc_elementor_counter_icon_padding',
+            'abcbiz_elementor_counter_icon_padding',
             [
-                'label' => __('Icon Padding', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
 
             ]
         );
         // counter icon margin
         $this->add_responsive_control(
-            'abc_elementor_counter_icon_margin',
+            'abcbiz_elementor_counter_icon_margin',
             [
-                'label' => __('Icon Margin', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Margin', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap span.abc-counter-icon svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon i' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap span.abcbiz-counter-icon svg' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
 
             ]
@@ -284,68 +285,68 @@ class Main extends BaseWidget
 
         // start of counter hover style section
         $this->start_controls_section(
-            'abc_elementor_counter_hover_style_section',
+            'abcbiz_elementor_counter_hover_style_section',
             [
-                'label' => __('Hover', 'ABCMAFTH'),
+                'label' => esc_html__('Hover', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
         // counter title hover color
         $this->add_control(
-            'abc_elementor_counter_title_hover_color',
+            'abcbiz_elementor_counter_title_hover_color',
             [
-                'label' => __('Title Color', 'ABCMAFTH'),
+                'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover .abc-ele-count-title h3' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover .abcbiz-ele-count-title h3' => 'color: {{VALUE}};',
                 ],
             ]
         );
         // counter number hover color
         $this->add_control(
-            'abc_elementor_counter_number_hover_color',
+            'abcbiz_elementor_counter_number_hover_color',
             [
-                'label' => __('Number Color', 'ABCMAFTH'),
+                'label' => esc_html__('Number Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover .abccounter' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover .abc-ele-counter-suffix' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover .abcbiz-counter' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover .abcbiz-ele-counter-suffix' => 'color: {{VALUE}};',
                 ],
             ]
         );
         // counter icon hover color
         $this->add_control(
-            'abc_elementor_counter_icon_hover_color',
+            'abcbiz_elementor_counter_icon_hover_color',
             [
-                'label' => __('Icon Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon svg' => 'fill: {{VALUE}};',
                 ],
             ]
         );
         // counter icon hover background color
         $this->add_control(
-            'abc_elementor_counter_icon_hover_bg_color',
+            'abcbiz_elementor_counter_icon_hover_bg_color',
             [
-                'label' => __('Icon Background Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon i' => 'background-color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon svg' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon i' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon svg' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
         // counter icon hover border color
         $this->add_control(
-            'abc_elementor_counter_icon_hover_border_color',
+            'abcbiz_elementor_counter_icon_hover_border_color',
             [
-                'label' => __('Icon Border Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon i' => 'border-color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-ele-countdown-wrap:hover span.abc-counter-icon svg' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon i' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-countdown-wrap:hover span.abcbiz-counter-icon svg' => 'border-color: {{VALUE}};',
                 ],
             ]
         );

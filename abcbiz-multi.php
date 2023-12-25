@@ -41,7 +41,7 @@ function abcbiz_elementor_enqueue()
 {
 
     //register style for magnific-popup
-    wp_register_style('magnific-popup',  AbcBizElementor_Assets . "/css/magnific-popup.css");
+    wp_register_style('abcbiz-popup-style',  AbcBizElementor_Assets . "/css/magnific-popup.css");
 
     //register style for animation
     wp_register_style('abcbiz-animation',  AbcBizElementor_Assets . "/css/animation.css");
@@ -51,7 +51,7 @@ function abcbiz_elementor_enqueue()
     wp_enqueue_style('abcbiz-elementor-responsive',  AbcBizElementor_Assets . "/css/responsive.css");
 
     //register script for magnific-popup
-    wp_register_script('magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
 
     //register script for skillbar
     wp_register_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), 1.0, true);

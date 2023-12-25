@@ -2,26 +2,21 @@
 /**
  * Render View for ABC Featured Image Widget
  */
+ if (!defined('ABSPATH')) exit; // Exit if accessed directly
+ ?>
 
- if (!defined('ABSPATH')) {
-    exit; // Exit if accessed directly.
-}
+<?php
+$abcbiz_post_id = get_the_ID();
+$abcbiz_image_url = get_the_post_thumbnail_url($abcbiz_post_id, 'full');
 
-// Get the current post ID
-$post_id = get_the_ID();
-
-// Get the featured image URL
-$image_url = get_the_post_thumbnail_url($post_id, 'full');
-
-// Check if the featured image exists
-if ($image_url) {
+if ($abcbiz_image_url) {
     ?>
-    <div class="abc-elementor-feat-img-area">
-        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title($post_id)); ?>">
+    <div class="abcbiz-elementor-feat-img-area">
+        <img src="<?php echo esc_url($abcbiz_image_url); ?>" alt="<?php echo esc_attr(get_the_title($abcbiz_post_id)); ?>">
     </div>
     <?php
 } else {
-    echo esc_html__('No featured image found', 'ABCMAFTH');
+    echo esc_html__('No featured image found', 'abcbiz-multi');
 }
 ?>
 

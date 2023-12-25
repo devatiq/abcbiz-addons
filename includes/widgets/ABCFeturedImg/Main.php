@@ -1,7 +1,9 @@
 <?php 
-namespace inc\widgets\ABCFeturedImg;
+namespace Includes\widgets\ABCFeturedImg;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -13,11 +15,11 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-featured-image';
+		protected $name = 'abcbiz-featured-image';
 		protected $title = 'ABC Featured Image';
 		protected $icon = 'eicon-image';
 		protected $categories = [
-			'abc-category'
+			'abcbiz-category'
 		];		
 		protected $keywords = [
 			'abc', 'featured', 'image', 'featured image',
@@ -35,9 +37,9 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor-fearture-img',
+			'abcbiz-elementor-fearture-img',
 			[
-				'label' => esc_html__( 'Image Alignment', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Image Alignment', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -46,25 +48,25 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abc_elementor_feat_img_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-feat-img-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-feat-img-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -74,18 +76,18 @@ class Main extends BaseWidget {
 
 		//Style Section
 		$this->start_controls_section(
-            'abc-elementor-fearture-img-style',
+            'abcbiz-elementor-fearture-img-style',
             [
-                'label' => esc_html__('Style', 'ABCMAFTH'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
 		//image Width
 		$this->add_responsive_control(
-            'abc-elementor-fearture-img-size',
+            'abcbiz-elementor-fearture-img-size',
             [
-                'label' => esc_html__('Image Width', 'ABCMAFTH'),
+                'label' => esc_html__('Image Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
                 'range' => [
@@ -100,7 +102,7 @@ class Main extends BaseWidget {
 					'size' => 100,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-feat-img-area img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-feat-img-area img' => 'width: {{SIZE}}{{UNIT}};',
 				],
             
             ]

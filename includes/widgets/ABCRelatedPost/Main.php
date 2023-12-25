@@ -34,7 +34,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_related_post_style_section',
             [
-                'label' => __('Related Post Style', 'ABCMAFTH'),
+                'label' => __('Related Post Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -44,7 +44,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abc_elementor_related_post_heading_color',
             [
-                'label' => __('Color', 'ABCMAFTH'),
+                'label' => __('Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -57,7 +57,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_related_post_heading_hover_color',
             [
-                'label' => __('Hover Color', 'ABCMAFTH'),
+                'label' => __('Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#04801d',
                 'selectors' => [
@@ -71,7 +71,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_related_post_heading_typography',
-                'label' => __('Typography', 'ABCMAFTH'),
+                'label' => __('Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-ele-related-post-heading',
             ]
         );

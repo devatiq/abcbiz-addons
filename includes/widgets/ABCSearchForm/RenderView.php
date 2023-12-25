@@ -5,8 +5,8 @@
 
 $settings = $this->get_settings_for_display();
 
-$abc_placeholder_text = ! empty($settings['abc_elementor_search_form_placeholder_text']) ? $settings['abc_elementor_search_form_placeholder_text'] : esc_html__('Search...', 'ABCMAFTH');
-$abc_submit_button_text = ! empty($settings['abc_elementor_search_form_btn_text']) ? $settings['abc_elementor_search_form_btn_text'] : esc_html__('Search', 'ABCMAFTH');
+$abc_placeholder_text = ! empty($settings['abc_elementor_search_form_placeholder_text']) ? $settings['abc_elementor_search_form_placeholder_text'] : esc_html__('Search...', 'abcbiz-multi');
+$abc_submit_button_text = ! empty($settings['abc_elementor_search_form_btn_text']) ? $settings['abc_elementor_search_form_btn_text'] : esc_html__('Search', 'abcbiz-multi');
 ?>
 
 <!-- Search Form Area-->

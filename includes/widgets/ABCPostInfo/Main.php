@@ -1,7 +1,9 @@
 <?php
-namespace Inc\Widgets\ABCPostInfo;
+namespace Includes\Widgets\ABCPostInfo;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
@@ -9,15 +11,15 @@ use Elementor\Group_Control_Border;
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'abc-post-info';
-    protected $title = 'ABC Post Info';
+    protected $name = 'abcbiz-post-info';
+    protected $title = 'ABC Post Meta Info';
     protected $icon = 'eicon-post-info';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     protected $keywords = [
-        'abc', 'post', 'info',
+        'abc', 'post', 'info', 'meta'
     ];
 
 
@@ -33,7 +35,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_post_info_setting',
             [
-                'label' => __('Post Info Setting', 'ABCMAFTH'),
+                'label' => esc_html__('Post Info Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,10 +44,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_info_date_switch',
             [
-                'label' => __('Date', 'ABCMAFTH'),
+                'label' => esc_html__('Date', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -55,10 +57,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_info_author_switch',
             [
-                'label' => __('Author', 'ABCMAFTH'),
+                'label' => esc_html__('Author', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -68,10 +70,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_info_comment_switch',
             [
-                'label' => __('Comments', 'ABCMAFTH'),
+                'label' => esc_html__('Comments', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -81,25 +83,25 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abc_elementor_post_info_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-ele-post-info' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-ele-post-info' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -111,7 +113,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_post_info_content_style_section',
             [
-                'label' => __('Blog Info Style', 'ABCMAFTH'),
+                'label' => esc_html__('Blog Info Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -120,19 +122,19 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_post_info_info_typography',
-                'label' => __('Typography', 'ABCMAFTH'),
-                'selector' => '{{WRAPPER}} .abc-ele-post-info',
+                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-post-info',
             ]
         );
         // blog info text color
         $this->add_control(
             'abc_elementor_post_info_info_color',
             [
-                'label' => __('Info Color', 'ABCMAFTH'),
+                'label' => esc_html__('Info Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#d6d6d6',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-post-info, .abc-ele-post-info a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-post-info, .abcbiz-ele-post-info a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -140,11 +142,11 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_info_info_icon_color',
             [
-                'label' => __('Icon Color', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#d6d6d6',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-post-info i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-post-info i' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -152,33 +154,24 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_elementor_post_info_info_icon_size',
             [
-                'label' => __('Icon Size', 'ABCMAFTH'),
+                'label' => esc_html__('Icon Size', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-post-info i' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-post-info i' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
        
-        $this->end_controls_section();
-
-
+       $this->end_controls_section();
     }
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
         //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
-
 
 }

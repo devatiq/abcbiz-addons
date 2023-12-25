@@ -37,7 +37,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abc-elementor-section-title-box',
 			[
-				'label' => esc_html__( 'Title Content', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Content', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -47,16 +47,16 @@ class Main extends BaseWidget {
         $this->add_control(
             'abc_elementor_sec_title_tag',
             [
-                'label' => esc_html__('Heading Tag', 'ABCMAFTH'),
+                'label' => esc_html__('Heading Tag', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h3',
                 'options' => [
-                    'h1' => esc_html__('H1', 'ABCMAFTH'),
-                    'h2' => esc_html__('H2', 'ABCMAFTH'),
-                    'h3' => esc_html__('H3', 'ABCMAFTH'),
-                    'h4' => esc_html__('H4', 'ABCMAFTH'),
-                    'h5' => esc_html__('H5', 'ABCMAFTH'),
-                    'H6' => esc_html__('H6', 'ABCMAFTH'),
+                    'h1' => esc_html__('H1', 'abcbiz-multi'),
+                    'h2' => esc_html__('H2', 'abcbiz-multi'),
+                    'h3' => esc_html__('H3', 'abcbiz-multi'),
+                    'h4' => esc_html__('H4', 'abcbiz-multi'),
+                    'h5' => esc_html__('H5', 'abcbiz-multi'),
+                    'H6' => esc_html__('H6', 'abcbiz-multi'),
                 ],
             
             ]
@@ -66,10 +66,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_sec_title_one',
 			[
-				'label' => esc_html__( 'Title Part 1', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 1', 'abcbiz-multi' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Responsive', 'ABCMAFTH' ),
-				'placeholder' => esc_html__( 'Type your section Title Firt Part', 'ABCMAFTH' ),
+				'default' => esc_html__( 'Responsive', 'abcbiz-multi' ),
+				'placeholder' => esc_html__( 'Type your section Title Firt Part', 'abcbiz-multi' ),
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
@@ -81,10 +81,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_sec_title_two',
 			[
-				'label' => esc_html__( 'Title Part 2', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 2', 'abcbiz-multi' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Design', 'ABCMAFTH' ),
-				'placeholder' => esc_html__( 'Type your section Title Second Part', 'ABCMAFTH' ),
+				'default' => esc_html__( 'Design', 'abcbiz-multi' ),
+				'placeholder' => esc_html__( 'Type your section Title Second Part', 'abcbiz-multi' ),
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
@@ -96,10 +96,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abc_elementor_sec_title_div',
             [
-                'label' => esc_html__('Bottom Divider', 'ABCMAFTH'),
+                'label' => esc_html__('Bottom Divider', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'ABCMAFTH'),
-                'label_off' => esc_html__('Hide', 'ABCMAFTH'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -110,7 +110,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
             'abc_elementor_sec_title_div_size',
             [
-                'label' => esc_html__('Divider Width', 'ABCMAFTH'),
+                'label' => esc_html__('Divider Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
                 'range' => [
@@ -138,7 +138,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
             'abc_elementor_sec_title_div_height',
             [
-                'label' => esc_html__('Divider Height', 'ABCMAFTH'),
+                'label' => esc_html__('Divider Height', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
                 'range' => [
@@ -166,7 +166,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
             'abc_elementor_sec_title_div_gap',
             [
-                'label' => esc_html__('Divider Gap', 'ABCMAFTH'),
+                'label' => esc_html__('Divider Gap', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
                 'range' => [
@@ -195,20 +195,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abc_elementor_sec_title_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -226,7 +226,7 @@ class Main extends BaseWidget {
         $this->start_controls_section(
             'abc_elementor_sec_title_style',
             [
-                'label' => esc_html__('Title Style', 'ABCMAFTH'),
+                'label' => esc_html__('Title Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -234,7 +234,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_sec_title_one_color',
 			[
-				'label' => esc_html__( 'Title Part 1 Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 1 Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#000000',
 				'selectors' => [
@@ -247,7 +247,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abc_elementor_sec_title_one_typography',
-				'label' => esc_html__( 'Title Part 1 Typography', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 1 Typography', 'abcbiz-multi' ),
 				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-one',
 			]
 		);
@@ -255,7 +255,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_sec_title_two_color',
 			[
-				'label' => esc_html__( 'Title Part 2 Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 2 Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#458f0c',
 				'selectors' => [
@@ -268,7 +268,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abc_elementor_sec_title_two_typography',
-				'label' => esc_html__( 'Title Part 2 Typography', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Title Part 2 Typography', 'abcbiz-multi' ),
 				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-two',
 			]
 		);
@@ -280,7 +280,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
             'abc_elementor_sec_title_div_bg_styly',
             [
-                'label' => esc_html__('Divider Background', 'ABCMAFTH'),
+                'label' => esc_html__('Divider Background', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'abc_elementor_sec_title_div' => 'yes',
@@ -292,7 +292,7 @@ class Main extends BaseWidget {
 			Group_Control_Background::get_type(),
 			[
 				'name' => 'abc_elementor_sec_div_bg_color',
-				'label' => esc_html__( 'Divider Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Divider Color', 'abcbiz-multi' ),
 				'types' => [ 'classic', 'gradient'],
 				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-divider',
 			]

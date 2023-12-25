@@ -11,7 +11,7 @@ use Elementor\Group_Control_Background;
 
 class Main extends BaseWidget
 {
-    // define protected variables...
+    // define protected variables..
     protected $name = 'abcbiz-comment-form';
     protected $title = 'ABC Comment Form';
     protected $icon = 'eicon-commenting-o';
