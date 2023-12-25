@@ -16,6 +16,24 @@ Elementor Pro tested up to: 3.18.0
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+function abcbiz_elementor_plugin_general_init() {
+    if (!class_exists('ABCBizMultiElementorPack', false)) {
+        // Load Main plugin class
+        require_once 'main.php';
+        /**
+         * Initiate the plugin class
+         */
+        \AbcBizElementor\ABCBizMultiElementorPack::instance();
+    }
+
+    // Text domain register for translation
+    load_plugin_textdomain('abcbiz-multi', false, dirname(plugin_basename(__FILE__)) . '/languages/');
+
+    //admin setting page
+    require_once AbcBizElementor_Admin . '/abcbiz-settings.php';
+}
+add_action('plugins_loaded', 'abcbiz_elementor_plugin_general_init');
+
 /**
  * Enqueue scripts and styles.
  */
@@ -47,28 +65,9 @@ function abcbiz_elementor_enqueue()
 }
 add_action('wp_enqueue_scripts', 'abcbiz_elementor_enqueue');
 
-function abcbiz_elementor_plugin_general_init() {
-   
-            if (!class_exists('ABCBizMultiElementorPack', false)) {
-                // Load Main plugin class
-                require_once 'main.php';
-
-                /**
-                 * Initiate the plugin class
-                 */
-                \AbcBizElementor\ABCBizMultiElementorPack::instance();
-            }
-
-            // Text domain register for translation
-            load_plugin_textdomain('abcbiz-multi', false, dirname(plugin_basename(__FILE__)) . '/languages/');
-}
-add_action('plugins_loaded', 'abcbiz_elementor_plugin_general_init');
-
-
 // ABCBiz Addons Custom Category
 function abcbiz_elementor_add_widget_categories($elements_manager)
 {
-
     $elements_manager->add_category(
         'abcbiz-category',
         [
@@ -98,5 +97,5 @@ add_action('elementor/elements/categories_registered', 'abcbiz_elementor_add_wid
 // enqueue admin style for elementor editor
 add_action('elementor/editor/before_enqueue_scripts', function () {
 
-    wp_enqueue_style('abcbiz-elementor-admin-style',  AbcBizElementor_Assets . "/css/admin.css");
+    wp_enqueue_style('abcbiz-elementor-admin-style',  AbcBizElementor_Assets . "/css/ele-editor.css");
 });

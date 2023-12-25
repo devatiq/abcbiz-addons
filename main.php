@@ -119,6 +119,7 @@ class ABCBizMultiElementorPack
 		define('AbcBizElementor_Name', 'ABCBiz Multi Addons Pro For Elementor');
 		define('AbcBizElementor_Path', dirname(AbcBizElementor_File));
 		define('AbcBizElementor_Inc', AbcBizElementor_Path . '/includes');
+		define('AbcBizElementor_Admin', AbcBizElementor_Inc . '/admin');
 		define('AbcBizElementor_URL', plugins_url('', AbcBizElementor_File));
 		define('AbcBizElementor_Assets', AbcBizElementor_URL . '/assets');
 	}
@@ -170,7 +171,6 @@ class ABCBizMultiElementorPack
 		}
 
 		$message = sprintf(
-			/* translators: 1: Plugin Name 2: Elementor */
 			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-multi'),
 			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-multi') . '</strong>'
@@ -228,31 +228,16 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * Initialize
-	 *
 	 * Load the addons functionality only after Elementor is initialized.
-	 *
-	 * Fired by `elementor/init` action hook.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function init()
 	{
-
 		add_action('elementor/widgets/register', [$this, 'register_widgets']);
 	}
-
-
 
 	/**
 	 * activate.
 	 * function that runs on plugin activation
-	 * @author   ABCTHEME
-	 * @since   v0.0.1
-	 * @version   v1.1.0   
-	 * @access   public
-	 * @return   void
 	 */
 	public function activate()
 	{
@@ -271,11 +256,6 @@ class ABCBizMultiElementorPack
 	/**
 	 * deactivate.
 	 * function that runs on plugin deactivation
-	 * @author   ABCTHEME
-	 * @since   v0.0.1
-	 * @version   v1.1.0   
-	 * @access   public
-	 * @return   void
 	 */
 	public function deactivate()
 	{
@@ -302,14 +282,8 @@ class ABCBizMultiElementorPack
 	}
 	/**
 	 * Register Widgets
-	 *
-	 * Load widgets files and register new Elementor widgets.
-	 *
-	 * Fired by `elementor/widgets/register` action hook.
-	 *
-	 * @param \Elementor\Widgets_Manager $widgets_manager Elementor widgets manager.
 	 */
-	public function register_widgets($widgets_manager)
+	public function register_widgets($abcbiz_widgets_manager)
 	{
 
 		// Include Widget configurations

@@ -1,0 +1,896 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ABCBiz Multi Addons Pro For Elementor\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-12-25 03:37+0000\n"
+"PO-Revision-Date: 2023-12-25 03:39+0000\n"
+"Last-Translator: \n"
+"Language-Team: English (United States)\n"
+"Language: en_US\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Loco-Version: 2.6.6; wp-6.4.2\n"
+"X-Domain: abcbiz-multi"
+
+#: main.php:174
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#. 1: Plugin name 2: Elementor 3: Required Elementor version
+#. 1: Plugin name 2: PHP 3: Required PHP version
+#: main.php:197 main.php:221
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCBlogGrid/template/four-column.php:58
+#: includes/widgets/ABCBlogGrid/template/two-column.php:58
+#: includes/widgets/ABCBlogGrid/template/three-column.php:57
+msgid "% Comments"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCBlogGrid/template/four-column.php:58
+#: includes/widgets/ABCBlogGrid/template/two-column.php:58
+#: includes/widgets/ABCBlogGrid/template/three-column.php:57
+msgid "1 Comment"
+msgstr ""
+
+#: includes/widgets/ABCBreadCrumb/renderview.php:47
+msgid "404 Not Found"
+msgstr ""
+
+#: includes/admin/abcbiz-metabox.php:10
+msgid "ABCBiz Blog Excerpt"
+msgstr ""
+
+#: includes/admin/abcbiz-settings.php:74
+msgid "ABCBiz Custom Settings"
+msgstr ""
+
+#. Name of the plugin
+msgid "ABCBiz Multi Addons Pro For Elementor"
+msgstr ""
+
+#: abcbiz-multi.php:74
+msgid "ABCBiz Multi Elements"
+msgstr ""
+
+#. Page title
+#: includes/admin/abcbiz-settings.php:9 includes/admin/abcbiz-settings.php:10
+msgid "ABCBiz Settings"
+msgstr ""
+
+#: abcbiz-multi.php:88
+msgid "ABCBiz WooCommerce"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/RenderView.php:22
+msgid "About Author"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:49
+#: includes/widgets/ABCBlogGrid/Main.php:432
+#: includes/widgets/ABCPageTitle/Main.php:40
+#: includes/widgets/ABCPageTitle/Main.php:69
+#: includes/widgets/ABCPostTitle/Main.php:41
+#: includes/widgets/ABCPostTitle/Main.php:70
+#: includes/widgets/ABCBreadCrumb/Main.php:37
+#: includes/widgets/ABCBreadCrumb/Main.php:47
+#: includes/widgets/ABCCatInfo/Main.php:46
+msgid "Alignment"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:94
+msgid "Animation"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:106
+msgid "Animation Type"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:119
+msgid "Anti-Clockwise Spin"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/Main.php:63
+msgid "Author Style"
+msgstr ""
+
+#. Page title
+#: includes/admin/abcbiz-settings.php:21 includes/admin/abcbiz-settings.php:22
+msgid "Available Widgets"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:194
+#: includes/widgets/ABCShape/Main.php:224
+msgid "Background"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:183
+#: includes/widgets/ABCCommentForm/Main.php:213
+#: includes/widgets/ABCCommentForm/Main.php:271
+#: includes/widgets/ABCCommentForm/Main.php:302
+#: includes/widgets/ABCBlogList/Main.php:450
+#: includes/widgets/ABCBlogGrid/Main.php:493
+#: includes/widgets/ABCBlogAuthor/Main.php:73
+#: includes/widgets/ABCCF7/Main.php:385
+msgid "Background Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:106
+#: includes/widgets/ABCBlogGrid/Main.php:123
+msgid "Blog Comments"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:93
+#: includes/widgets/ABCBlogGrid/Main.php:110
+msgid "Blog Date"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:119
+#: includes/widgets/ABCBlogGrid/Main.php:136
+msgid "Blog Excerpt"
+msgstr ""
+
+#: includes/widgets/ABCBlogGrid/Main.php:49
+msgid "Blog Layout"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:38
+#: includes/widgets/ABCBlogGrid/Main.php:40
+#: includes/widgets/ABCBlog/Main.php:35
+msgid "Blog Setting"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:113
+msgid "Blog Style"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:290 includes/widgets/ABCCF7/Main.php:149
+#: includes/widgets/ABCCF7/Main.php:284 includes/widgets/ABCCF7/Main.php:397
+msgid "Border"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:124
+#: includes/widgets/ABCShape/Main.php:234
+msgid "Border Color"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:146
+#: includes/widgets/ABCShape/Main.php:299 includes/widgets/ABCCF7/Main.php:157
+#: includes/widgets/ABCCF7/Main.php:292 includes/widgets/ABCCF7/Main.php:405
+msgid "Border Radius"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:355
+#: includes/widgets/ABCBlogGrid/Main.php:372
+#: includes/widgets/ABCBlog/Main.php:192
+msgid "Button Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:330
+#: includes/widgets/ABCBlogGrid/Main.php:347
+msgid "Button Style"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:343
+#: includes/widgets/ABCBlogGrid/Main.php:360
+#: includes/widgets/ABCBlog/Main.php:184
+msgid "Button Typography"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:75
+msgid "Category Style"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:58
+#: includes/widgets/ABCBlogGrid/Main.php:440
+#: includes/widgets/ABCPageTitle/Main.php:78
+#: includes/widgets/ABCPostTitle/Main.php:79
+#: includes/widgets/ABCBreadCrumb/Main.php:56
+#: includes/widgets/ABCCatInfo/Main.php:55
+msgid "Center"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:65
+msgid "Choose Image"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:55
+msgid "Circle"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:44
+msgid "Circle Setting"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:88
+msgid "Circle Size"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:79
+msgid "Circle Style"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:118
+msgid "Clockwise Spin"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:173
+#: includes/widgets/ABCCommentForm/Main.php:203
+#: includes/widgets/ABCCommentForm/Main.php:260
+#: includes/widgets/ABCCommentForm/Main.php:291
+#: includes/widgets/ABCBlogList/Main.php:363
+#: includes/widgets/ABCBlogGrid/Main.php:380
+#: includes/widgets/ABCPageTitle/Main.php:108
+#: includes/widgets/ABCPostTitle/Main.php:109
+msgid "Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:230
+msgid "Comment Button"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/template/comment-form.php:9
+msgid "Comment navigation"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:70
+msgid "Comments"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/template/comment-form.php:67
+msgid "Comments are closed."
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/template/comment-form.php:42
+#, php-format
+msgctxt "comments title"
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: includes/widgets/ABCCF7/Main.php:60
+msgid "Contact Form 7 Setting"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:40
+msgid "Contents"
+msgstr ""
+
+#: includes/widgets/ABCBreadCrumb/Main.php:78
+msgid "Crumb Style"
+msgstr ""
+
+#: includes/admin/abcbiz-settings.php:82
+msgid "Custom Field"
+msgstr ""
+
+#: includes/admin/abcbiz-settings.php:91
+msgid "Custom settings for the ABCBiz plugin."
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:57
+msgid "Date"
+msgstr ""
+
+#: main.php:176 main.php:199
+msgid "Elementor"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:180
+msgid "Empty Fill Color"
+msgstr ""
+
+#: includes/admin/abcbiz-metabox.php:53
+msgid "Enter Excerpt Content:"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:315
+#: includes/widgets/ABCBlogGrid/Main.php:332
+msgid "Excerpt Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:132
+#: includes/widgets/ABCBlogGrid/Main.php:149
+msgid "Excerpt Length"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:293
+#: includes/widgets/ABCBlogGrid/Main.php:310
+msgid "Excerpt Style"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:306
+#: includes/widgets/ABCBlogGrid/Main.php:323
+msgid "Excerpt Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:80
+#: includes/widgets/ABCBlogGrid/Main.php:97
+msgid "Featured Image"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:194
+msgid "Field Background Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:40
+msgid "Form Content Style"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:40
+msgid "Form not found"
+msgstr ""
+
+#: includes/widgets/ABCBlogGrid/Main.php:55
+msgid "Four Colum"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:189
+msgid "Gradient Color One"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:198
+msgid "Gradient Color Two"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:54
+#: includes/widgets/ABCPostTitle/Main.php:55
+msgid "H1"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:55
+#: includes/widgets/ABCPostTitle/Main.php:56
+msgid "H2"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:56
+#: includes/widgets/ABCPostTitle/Main.php:57
+msgid "H3"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:57
+#: includes/widgets/ABCPostTitle/Main.php:58
+msgid "H4"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:58
+#: includes/widgets/ABCPostTitle/Main.php:59
+msgid "H5"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:59
+#: includes/widgets/ABCPostTitle/Main.php:60
+msgid "H6"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:53
+msgid "Heading"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:118
+msgid "Heading Color"
+msgstr ""
+
+#: includes/widgets/ABCPageTitle/Main.php:50
+#: includes/widgets/ABCPostTitle/Main.php:51
+msgid "Heading Tag"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:110
+msgid "Heading Typography"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:125 includes/widgets/ABCCF7/Main.php:259
+msgid "Height"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:97
+#: includes/widgets/ABCBlogList/Main.php:83
+#: includes/widgets/ABCBlogList/Main.php:96
+#: includes/widgets/ABCBlogList/Main.php:109
+#: includes/widgets/ABCBlogList/Main.php:122
+#: includes/widgets/ABCBlogList/Main.php:151
+#: includes/widgets/ABCBlogList/Main.php:178
+#: includes/widgets/ABCBlogGrid/Main.php:100
+#: includes/widgets/ABCBlogGrid/Main.php:113
+#: includes/widgets/ABCBlogGrid/Main.php:126
+#: includes/widgets/ABCBlogGrid/Main.php:139
+#: includes/widgets/ABCBlogGrid/Main.php:168
+#: includes/widgets/ABCBlogGrid/Main.php:195
+#: includes/widgets/ABCBlog/Main.php:60 includes/widgets/ABCBlog/Main.php:73
+#: includes/widgets/ABCBlog/Main.php:86
+#: includes/widgets/ABCBlogAuthor/Main.php:50
+msgid "Hide"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:196
+#: includes/widgets/ABCCommentForm/Main.php:284
+#: includes/widgets/ABCShape/Main.php:215
+#: includes/widgets/ABCBlogList/Main.php:464
+#: includes/widgets/ABCBlogGrid/Main.php:507
+msgid "Hover"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:428
+msgid "Hover Background Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:439
+msgid "Hover Border Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:234
+#: includes/widgets/ABCBlogList/Main.php:378
+#: includes/widgets/ABCBlogList/Main.php:386
+#: includes/widgets/ABCBlogList/Main.php:472
+#: includes/widgets/ABCBlogList/Main.php:485
+#: includes/widgets/ABCBlogGrid/Main.php:251
+#: includes/widgets/ABCBlogGrid/Main.php:395
+#: includes/widgets/ABCBlogGrid/Main.php:403
+#: includes/widgets/ABCBlogGrid/Main.php:515
+#: includes/widgets/ABCBlogGrid/Main.php:528
+#: includes/widgets/ABCCatInfo/Main.php:106
+msgid "Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:417
+msgid "Hover Text Color"
+msgstr ""
+
+#. Author URI of the plugin
+msgid "http://www.supreox.com/"
+msgstr ""
+
+#. URI of the plugin
+msgid "https://abcplugin.com/abcbiz-multi-addons-for-elementor/"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:100
+msgid "Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:57 includes/widgets/ABCShape/Main.php:252
+msgid "Image"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:81
+msgid "Image Alt Text"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:116
+msgid "Input Fields"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:101
+msgid "Label Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:82
+msgid "Label Style"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:92
+msgid "Label Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCBlogGrid/template/four-column.php:58
+#: includes/widgets/ABCBlogGrid/template/two-column.php:58
+#: includes/widgets/ABCBlogGrid/template/three-column.php:57
+msgid "Leave a comment"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:54
+#: includes/widgets/ABCBlogGrid/Main.php:436
+#: includes/widgets/ABCPageTitle/Main.php:74
+#: includes/widgets/ABCPostTitle/Main.php:75
+#: includes/widgets/ABCBreadCrumb/Main.php:52
+#: includes/widgets/ABCCatInfo/Main.php:51
+msgid "Left"
+msgstr ""
+
+#: includes/widgets/ABCBreadCrumb/Main.php:98
+#: includes/widgets/ABCBlogAuthor/Main.php:132
+msgid "Link Color"
+msgstr ""
+
+#: includes/widgets/ABCBreadCrumb/Main.php:110
+#: includes/widgets/ABCBlogAuthor/Main.php:145
+msgid "Link Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:181 includes/widgets/ABCCF7/Main.php:316
+#: includes/widgets/ABCCF7/Main.php:362
+msgid "Margin"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:278
+#: includes/widgets/ABCBlogGrid/Main.php:295
+msgid "Meta Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:96
+msgid "Meta Data Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:110
+msgid "Meta Data Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:141
+msgid "Meta Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:152
+msgid "Meta Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:259
+#: includes/widgets/ABCBlogGrid/Main.php:276
+msgid "Meta Style"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:130
+msgid "Meta Text Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:269
+#: includes/widgets/ABCBlogGrid/Main.php:286
+#: includes/widgets/ABCBlog/Main.php:122
+msgid "Meta Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:148
+#: includes/widgets/ABCBlogGrid/Main.php:165
+msgid "More Button"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:161
+#: includes/widgets/ABCBlogGrid/Main.php:178
+msgid "More Button Text"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/template/comment-form.php:16
+msgid "Newer Comments"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/RenderView.php:119
+#: includes/widgets/ABCBlogGrid/template/four-column.php:103
+#: includes/widgets/ABCBlogGrid/template/two-column.php:106
+#: includes/widgets/ABCBlogGrid/template/three-column.php:103
+msgid "No Post Found"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:166
+#: includes/widgets/ABCCommentForm/Main.php:253
+#: includes/widgets/ABCShape/Main.php:185
+#: includes/widgets/ABCBlogList/Main.php:429
+#: includes/widgets/ABCBlogGrid/Main.php:472
+msgid "Normal"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:60
+#: includes/widgets/ABCBlogGrid/Main.php:77
+msgid "Number of Post"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/template/comment-form.php:12
+msgid "Older Comments"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:169 includes/widgets/ABCCF7/Main.php:304
+#: includes/widgets/ABCCF7/Main.php:350
+msgid "Padding"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:175
+#: includes/widgets/ABCBlogGrid/Main.php:192
+msgid "Pagination"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:404
+#: includes/widgets/ABCBlogGrid/Main.php:421
+msgid "Pagination Style"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:417
+#: includes/widgets/ABCBlogGrid/Main.php:460
+msgid "Pagination Typography"
+msgstr ""
+
+#: main.php:223
+msgid "PHP"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:224
+msgid "Placeholder Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:239
+msgid "Placeholder Typography"
+msgstr ""
+
+#: includes/widgets/ABCCF7/RenderView.php:22
+msgid "Please Select contact form."
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:76
+msgid "Quote Text"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:83 includes/widgets/ABCBlog/Main.php:98
+msgid "Read More"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:96
+msgid "Read More Text"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:144
+msgid "Reply Button"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:62
+#: includes/widgets/ABCBlogGrid/Main.php:444
+#: includes/widgets/ABCPageTitle/Main.php:82
+#: includes/widgets/ABCPostTitle/Main.php:83
+#: includes/widgets/ABCBreadCrumb/Main.php:60
+#: includes/widgets/ABCCatInfo/Main.php:59
+msgid "Right"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:120
+msgid "Rotating"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:114
+msgid "Rotation Move"
+msgstr ""
+
+#: includes/widgets/ABCBreadCrumb/renderview.php:44
+msgid "Search Results"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:47
+#: includes/widgets/ABCBlogGrid/Main.php:64
+#: includes/widgets/ABCBlog/Main.php:44
+msgid "Select Category"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:69
+msgid "Select Form"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:119
+msgid "Separator Color"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:37
+#: includes/widgets/ABCBlogAuthor/Main.php:38
+msgid "Setting"
+msgstr ""
+
+#: includes/admin/abcbiz-settings.php:33
+msgid "Settings"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:42
+msgid "Shape"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:134
+msgid "Shape Style"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:51
+msgid "Shape Type"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:96
+#: includes/widgets/ABCBlogList/Main.php:82
+#: includes/widgets/ABCBlogList/Main.php:95
+#: includes/widgets/ABCBlogList/Main.php:108
+#: includes/widgets/ABCBlogList/Main.php:121
+#: includes/widgets/ABCBlogList/Main.php:150
+#: includes/widgets/ABCBlogList/Main.php:177
+#: includes/widgets/ABCBlogGrid/Main.php:99
+#: includes/widgets/ABCBlogGrid/Main.php:112
+#: includes/widgets/ABCBlogGrid/Main.php:125
+#: includes/widgets/ABCBlogGrid/Main.php:138
+#: includes/widgets/ABCBlogGrid/Main.php:167
+#: includes/widgets/ABCBlogGrid/Main.php:194
+#: includes/widgets/ABCBlog/Main.php:59 includes/widgets/ABCBlog/Main.php:72
+#: includes/widgets/ABCBlog/Main.php:85
+#: includes/widgets/ABCBlogAuthor/Main.php:49
+msgid "Show"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:159
+msgid "Size"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:79
+msgid "Something is better than nothing!"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:113
+msgid "Spin"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:117
+msgid "Spin Move"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:56
+msgid "Square"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:92
+#: includes/widgets/ABCPageTitle/Main.php:100
+#: includes/widgets/ABCPostTitle/Main.php:101
+msgid "Style"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:332
+msgid "Submit Button"
+msgstr ""
+
+#. Author of the plugin
+msgid "SupreoX Limited"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:119
+#: includes/widgets/ABCBlockquote/Main.php:112
+#: includes/widgets/ABCBlogList/Main.php:437
+#: includes/widgets/ABCBlogGrid/Main.php:480
+#: includes/widgets/ABCBreadCrumb/Main.php:86
+#: includes/widgets/ABCCatInfo/Main.php:93
+#: includes/widgets/ABCBlogAuthor/Main.php:109
+#: includes/widgets/ABCCF7/Main.php:209 includes/widgets/ABCCF7/Main.php:374
+msgid "Text Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:133
+#: includes/widgets/ABCBlogAuthor/Main.php:123
+msgid "Text Typography"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:251
+msgid "Textarea"
+msgstr ""
+
+#. Description of the plugin
+msgid ""
+"The Elementor Custom Widgets plugin, a powerhouse tool designed to elevate "
+"your website's aesthetic and functionality. ABCBiz Multi Addons is packed "
+"with an array of gorgeous custom elements, each meticulously crafted to "
+"integrate seamlessly with your site's design."
+msgstr ""
+
+#: includes/widgets/ABCBlogGrid/Main.php:54
+msgid "Three Colum"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:115
+msgid "Tilt"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:116
+msgid "Timeline Animate"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:49
+#: includes/widgets/ABCBlogList/Main.php:212
+#: includes/widgets/ABCBlogList/Main.php:220
+#: includes/widgets/ABCBlogGrid/Main.php:229
+#: includes/widgets/ABCBlogGrid/Main.php:237
+#: includes/widgets/ABCBlog/Main.php:172
+#: includes/widgets/ABCBlogAuthor/Main.php:86
+msgid "Title Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:242
+#: includes/widgets/ABCBlogGrid/Main.php:259
+msgid "Title Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:190
+#: includes/widgets/ABCBlogGrid/Main.php:207
+msgid "Title Style"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:63
+#: includes/widgets/ABCBlogList/Main.php:200
+#: includes/widgets/ABCBlogGrid/Main.php:217
+#: includes/widgets/ABCBlog/Main.php:164
+#: includes/widgets/ABCBlogAuthor/Main.php:100
+msgid "Title Typography"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:112
+msgid "Triangle Move"
+msgstr ""
+
+#: includes/widgets/ABCBlogGrid/Main.php:53
+msgid "Two Colum"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:80
+msgid "Type blockquote text here"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:99
+msgid "Type read more text"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:154
+#: includes/widgets/ABCCommentForm/Main.php:240
+#: includes/widgets/ABCBlockquote/Main.php:137
+#: includes/widgets/ABCPageTitle/Main.php:121
+#: includes/widgets/ABCPostTitle/Main.php:122
+#: includes/widgets/ABCBreadCrumb/Main.php:123
+#: includes/widgets/ABCCatInfo/Main.php:84 includes/widgets/ABCCF7/Main.php:341
+msgid "Typography"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:73
+msgid "User Name Color"
+msgstr ""
+
+#: includes/widgets/ABCCommentForm/Main.php:87
+msgid "User Name Typography"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:63
+msgid "Value"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:167
+msgid "Value Color"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:132
+msgid "Value Position Adjustment"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:159
+msgid "Value Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/RenderView.php:23
+msgid "View all posts by"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/RenderView.php:23
+#, php-format
+msgid "View all posts in %s"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/Main.php:47
+msgid "View All Posts Link"
+msgstr ""
+
+#: includes/widgets/ABCCircularSkills/Main.php:55
+msgid "Web Design"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:263
+msgid "Width"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:110
+msgid "X-Axis Move"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:111
+msgid "Y-Axis Move"
+msgstr ""

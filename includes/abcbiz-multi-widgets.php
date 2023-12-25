@@ -1,23 +1,26 @@
 <?php
-
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-// Register your widgets dynamically based on the class names.
-		$widgets = [
+        $abcbiz_widgets = [];
 
-			\includes\widgets\ABCBlockquote\Main::class,
-			\includes\widgets\ABCBlog\Main::class,
-			\includes\widgets\ABCBlogAuthor\Main::class,
-			\includes\widgets\ABCBlogGrid\Main::class,
-			\includes\widgets\ABCBlogList\Main::class,
-			\includes\widgets\ABCBreadCrumb\Main::class,
-			\includes\widgets\ABCCatInfo\Main::class,
-			\includes\widgets\ABCCF7\Main::class,
-			\includes\widgets\ABCCircularSkills\Main::class,
-			\includes\widgets\ABCCommentForm\Main::class,
-			\includes\widgets\ABCPostTitle\Main::class,
-			\includes\widgets\ABCPageTitle\Main::class,
-			\includes\widgets\ABCShape\Main::class,
+		// Conditionally add widgets to the array based on the settings
+          if (get_option('abcbiz_widget_5') == 1) {
+          $abcbiz_widgets[] = \includes\widgets\ABCBlockquote\Main::class;
+           }
+
+		  // Add other widgets that are always active
+           $abcbiz_widgets[] = \includes\widgets\ABCBlog\Main::class;
+           $abcbiz_widgets[] = \includes\widgets\ABCBlogAuthor\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCBlogGrid\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCBlogList\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCBreadCrumb\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCCatInfo\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCCF7\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCCircularSkills\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCCommentForm\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,
@@ -43,8 +46,6 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			//\inc\widgets\WooCommerce\ABCProductImg\Main::class,
 			//\inc\widgets\WooCommerce\ABCProductSummery\Main::class,
 
-		];
-
-		foreach ($widgets as $widget_class) {
-			$widgets_manager->register(new $widget_class());
+		foreach ($abcbiz_widgets as $widget_class) {
+			$abcbiz_widgets_manager->register(new $widget_class());
 		}
