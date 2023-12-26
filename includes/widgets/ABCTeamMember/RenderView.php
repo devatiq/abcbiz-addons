@@ -2,16 +2,15 @@
 /**
  * Render View file for ABC Team Member Widget.
  */
-    $settings = $this->get_settings_for_display();
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-    // checked team member style
-    $team_member_style = $settings['abc_ele_teammember_style'];
+$abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_team_member_style = $abcbiz_settings['abcbiz_elementor_teammember_style'];
 
-    if ($team_member_style == 'style-one') {
-        require(ABCELEMENTOR_PATH . '/inc/widgets/ABCTeamMember/templates/style-one.php');
+    if ($abcbiz_team_member_style == 'style-one') {
+      require(AbcBizElementor_Path . '/includes/widgets/ABCTeamMember/templates/style-one.php');
     } else {
-        require(ABCELEMENTOR_PATH . '/inc/widgets/ABCTeamMember/templates/style-two.php');
+       require(AbcBizElementor_Path . '/includes/widgets/ABCTeamMember/templates/style-two.php');
     }
-
 
 ?>

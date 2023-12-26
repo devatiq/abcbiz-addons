@@ -100,6 +100,7 @@ class ABCBizMultiElementorPack
 		add_image_size('abcbiz-elementor-post', 635, 542, true);
 		add_image_size('abcbiz_blog_list_thumb', 600, 450, true);
 		add_image_size('abcbiz_blog_grid_thumb', 900, 600, true);
+		add_image_size('abcbiz_square_img', 800, 800, true);
 	}
 
 	// Add extranal file for extra functionality
