@@ -43,12 +43,12 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPricingTable\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,
 			//\inc\widgets\ABCTestimonials\Main::class,
-			//\inc\widgets\ABCPricingTable\Main::class,
 			//\inc\widgets\ABCSkillBar\Main::class,
 			//\inc\widgets\ABCShape\Main::class,
 			//\inc\widgets\ABCSecTitle\Main::class,
