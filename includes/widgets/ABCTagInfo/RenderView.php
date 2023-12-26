@@ -1,15 +1,16 @@
 <?php
-
 /**
  * Render View file for ABC Post Tags Info.
  */
-$settings = $this->get_settings_for_display();
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+$abcbiz_settings = $this->get_settings_for_display();
 
 ?>
 
 <!-- Post Tags Area-->
-<div class="abc-ele-post-tag-area">
-    <div class="abc-ele-post-tag">
+<div class="abcbiz-ele-post-tag-area">
+    <div class="abcbiz-ele-post-tag">
     
     <?php the_tags( '<ul><li>', '</li><li>', '</li></ul>' ); ?>
       
