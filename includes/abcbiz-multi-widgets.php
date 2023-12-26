@@ -50,16 +50,14 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCSecTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCSkillBar\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
 
-			//\inc\widgets\ABCIconBox\Main::class,
+
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,
 			//\inc\widgets\ABCTestimonials\Main::class,
-			//\inc\widgets\ABCShape\Main::class,
 			//\inc\widgets\ABCTagInfo\Main::class,
-			//\inc\widgets\ABCRelatedPost\Main::class,
-			//\inc\widgets\ABCSocialShare\Main::class,
-			//\inc\widgets\ABCSearchForm\Main::class,
+
 
 			//WooCommerce Widgets
 			//\inc\widgets\WooCommerce\ABCProductTitle\Main::class,

@@ -1811,6 +1811,11 @@ width: auto;
     display: inline-block;
     margin: 0 5px 5px 0;
     text-align: center;
+    position: relative;
+ }
+
+ .abcbiz-elementor-social-share-area ul li svg{
+    position: relative;
  }
 
  .abcbiz-elementor-social-share-area ul li a{ 

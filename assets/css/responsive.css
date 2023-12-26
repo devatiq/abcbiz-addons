@@ -232,6 +232,11 @@
 -----------------------------*/
 @media only screen and (max-width: 480px) {
 
+    /* Global */
+    .hide-on-mobile {
+        display: none !important;
+    }
+
     /*------------------------
     * Portfolio
     --------------------------*/
