@@ -39,27 +39,27 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_portfolio_setting',
             [
-                'label' => __('Portfolio Setting', 'ABCMAFTH'),
+                'label' => __('Portfolio Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
         $this->add_control(
             'abc_elementor_portfolio_number_of_show',
             [
-                'label' => __('Number of works to show', 'ABCMAFTH'),
+                'label' => __('Number of works to show', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '6',
                 'options' => [
-                    '3'  => __('3', 'ABCMAFTH'),
-                    '6' => __('6', 'ABCMAFTH'),
-                    '9' => __('9', 'ABCMAFTH'),
-                    '12' => __('12', 'ABCMAFTH'),
-                    '15' => __('15', 'ABCMAFTH'),
-                    '18' => __('18', 'ABCMAFTH'),
-                    '21' => __('21', 'ABCMAFTH'),
-                    '24' => __('24', 'ABCMAFTH'),
-                    '27' => __('27', 'ABCMAFTH'),
-                    '30' => __('30', 'ABCMAFTH')
+                    '3'  => __('3', 'abcbiz-multi'),
+                    '6' => __('6', 'abcbiz-multi'),
+                    '9' => __('9', 'abcbiz-multi'),
+                    '12' => __('12', 'abcbiz-multi'),
+                    '15' => __('15', 'abcbiz-multi'),
+                    '18' => __('18', 'abcbiz-multi'),
+                    '21' => __('21', 'abcbiz-multi'),
+                    '24' => __('24', 'abcbiz-multi'),
+                    '27' => __('27', 'abcbiz-multi'),
+                    '30' => __('30', 'abcbiz-multi')
                 ],
             ]
         );
@@ -67,12 +67,12 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_portfolio_display_filter',
             [
-                'label' => __('Display Filter?', 'ABCMAFTH'),
+                'label' => __('Display Filter?', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'yes',
                 'options' => [
-                    'yes'  => __('Yes', 'ABCMAFTH'),
-                    'nofilter' => __('No', 'ABCMAFTH')
+                    'yes'  => __('Yes', 'abcbiz-multi'),
+                    'nofilter' => __('No', 'abcbiz-multi')
                 ],
             ]
         );
@@ -80,9 +80,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_no_found_message',
             [
-                'label' => __('Empty Message', 'ABCMAFTH'),
+                'label' => __('Empty Message', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => __('No Portfolio Found!', 'ABCMAFTH'),
+                'default' => __('No Portfolio Found!', 'abcbiz-multi'),
                 'label_block' => true,
             ]
         );
@@ -96,7 +96,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_portfolio_filter_style',
             [
-                'label' => __('Filter Button', 'ABCMAFTH'),
+                'label' => __('Filter Button', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -104,19 +104,19 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_ele_portfolio_filter_alignment',
             [
-                'label' => __('Alignment', 'ABCMAFTH'),
+                'label' => __('Alignment', 'abcbiz-multi'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => __('Left', 'ABCMAFTH'),
+                        'title' => __('Left', 'abcbiz-multi'),
                         'icon' => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => __('Center', 'ABCMAFTH'),
+                        'title' => __('Center', 'abcbiz-multi'),
                         'icon' => 'fa fa-align-center',
                     ],
                     'right' => [
-                        'title' => __('Right', 'ABCMAFTH'),
+                        'title' => __('Right', 'abcbiz-multi'),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
@@ -130,7 +130,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_ele_portfolio_filter_margin',
             [
-                'label' => esc_html__('Margin', 'ABCMAFTH'),
+                'label' => esc_html__('Margin', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em', 'rem'],
                 'selectors' => [
@@ -151,7 +151,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_ele_portfolio_filter_padding',
             [
-                'label' => esc_html__('Filter Button Padding', 'ABCMAFTH'),
+                'label' => esc_html__('Filter Button Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em', 'rem'],
                 'selectors' => [
@@ -165,7 +165,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_ele_portfolio_filter_typography',
-                'label' => __('Typography', 'ABCMAFTH'),
+                'label' => __('Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} #portfolio-filter .abc-elementor-portfolio-single-filter a',
             ]
         );
@@ -176,7 +176,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_portfolio_filter_normal_tab',
             [
-                'label' => esc_html__('Normal', 'ABCMAFTH'),
+                'label' => esc_html__('Normal', 'abcbiz-multi'),
             ]
         );
 
@@ -184,7 +184,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_filter_btn_text_color',
             [
-                'label' => __('Text Color', 'ABCMAFTH'),
+                'label' => __('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -196,7 +196,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_filter_btn_bg_color',
             [
-                'label' => __('Background Color', 'ABCMAFTH'),
+                'label' => __('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}}  #portfolio-filter .abc-elementor-portfolio-single-filter a' => 'background-color: {{VALUE}};',
@@ -209,7 +209,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abc_ele_portfolio_filter_btn_border',
-                'label' => __('Border', 'ABCMAFTH'),
+                'label' => __('Border', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} #portfolio-filter .abc-elementor-portfolio-single-filter a',
             ]
         );
@@ -221,14 +221,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_portfolio_filter_hover_tab',
             [
-                'label' => esc_html__('Hover', 'ABCMAFTH'),
+                'label' => esc_html__('Hover', 'abcbiz-multi'),
             ]
         );
         // Portfolio Filter Button hover Text Color
         $this->add_control(
             'abc_ele_portfolio_filter_btn_hover_text_color',
             [
-                'label' => __('Text Color', 'ABCMAFTH'),
+                'label' => __('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -241,7 +241,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_filter_btn_hover_bg_color',
             [
-                'label' => __('Background Color', 'ABCMAFTH'),
+                'label' => __('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -254,7 +254,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_filter_btn_hover_border_color',
             [
-                'label' => __('Border Color', 'ABCMAFTH'),
+                'label' => __('Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -275,7 +275,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_portfolio_content_style',
             [
-                'label' => __('Content', 'ABCMAFTH'),
+                'label' => __('Content', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -285,7 +285,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_ele_portfolio_content_title_typography',
-                'label' => __('Title Typography', 'ABCMAFTH'),
+                'label' => __('Title Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-elementor-portfolio-left h3 a',
             ]
         );
@@ -293,7 +293,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_content_title_color',
             [
-                'label' => __('Title Color', 'ABCMAFTH'),
+                'label' => __('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#181818',
                 'selectors' => [
@@ -306,7 +306,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_ele_portfolio_terms_typography',
-                'label' => __('Category Typography', 'ABCMAFTH'),
+                'label' => __('Category Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-elementor-portfolio-left p',
             ]
         );
@@ -314,7 +314,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_terms_color',
             [
-                'label' => __('Category Color', 'ABCMAFTH'),
+                'label' => __('Category Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -326,7 +326,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_link_icon_color',
             [
-                'label' => __('Icon Color', 'ABCMAFTH'),
+                'label' => __('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -339,7 +339,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_link_icon_background_color',
             [
-                'label' => __('Icon Background Color', 'ABCMAFTH'),
+                'label' => __('Icon Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -352,7 +352,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_hover_icon_color',
             [
-                'label' => __('Icon Hover Color', 'ABCMAFTH'),
+                'label' => __('Icon Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-elementor-portfolio-link i:hover' => 'color: {{VALUE}};',
@@ -365,7 +365,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_hover_icon_background_color',
             [
-                'label' => __('Icon Hover Background Color', 'ABCMAFTH'),
+                'label' => __('Icon Hover Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FE4D05',
                 'selectors' => [
@@ -378,7 +378,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_portfolio_icon_size',
             [
-                'label' => __('Icon Size', 'ABCMAFTH'),
+                'label' => __('Icon Size', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [

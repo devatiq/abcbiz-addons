@@ -33,7 +33,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_post_tag_setting',
             [
-                'label' => __('Setting', 'ABCMAFTH'),
+                'label' => __('Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,20 +42,20 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abc_elementor_post_tag_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -72,7 +72,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_post_tag_style_section',
             [
-                'label' => __('Category Style', 'ABCMAFTH'),
+                'label' => __('Category Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -81,7 +81,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_elementor_post_tag_typography',
-                'label' => __('Typography', 'ABCMAFTH'),
+                'label' => __('Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-ele-post-tag',
             ]
         );
@@ -90,7 +90,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_tag_color',
             [
-                'label' => __('Text Color', 'ABCMAFTH'),
+                'label' => __('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -103,7 +103,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abc_elementor_post_tag_bg_color',
             [
-                'label' => __('Text Background Color', 'ABCMAFTH'),
+                'label' => __('Text Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e3e3e3',
                 'selectors' => [
@@ -116,7 +116,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_tag_hover_color',
             [
-                'label' => __('Hover Color', 'ABCMAFTH'),
+                'label' => __('Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e3e3e3',
                 'selectors' => [
@@ -129,7 +129,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_post_tag_hover_bg_color',
             [
-                'label' => __('Hover Background Color', 'ABCMAFTH'),
+                'label' => __('Hover Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [

@@ -1,7 +1,8 @@
 <?php 
-namespace inc\widgets\ABCSecTitle;
+namespace Includes\widgets\ABCSecTitle;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Inc\Widgets\BaseWidget;
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
@@ -13,11 +14,11 @@ use Elementor\Group_Control_Background;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-sec-title';
+		protected $name = 'abcbiz-sec-title';
 		protected $title = 'ABC Section Title';
 		protected $icon = 'eicon-post-title';
 		protected $categories = [
-			'abc-category'
+			'abcbiz-category'
 		];		
 		protected $keywords = [
 			'section','abc', 'title', 'dual title', 'section title', 'abc section title', 'abc dual title',
@@ -35,7 +36,7 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor-section-title-box',
+			'abcbiz-elementor-section-title-box',
 			[
 				'label' => esc_html__( 'Title Content', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -45,7 +46,7 @@ class Main extends BaseWidget {
 		//Heading tag
 
         $this->add_control(
-            'abc_elementor_sec_title_tag',
+            'abcbiz_elementor_sec_title_tag',
             [
                 'label' => esc_html__('Heading Tag', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
@@ -64,7 +65,7 @@ class Main extends BaseWidget {
 
 		//Title part one
 		$this->add_control(
-			'abc_elementor_sec_title_one',
+			'abcbiz_elementor_sec_title_one',
 			[
 				'label' => esc_html__( 'Title Part 1', 'abcbiz-multi' ),
 				'type' => Controls_Manager::TEXT,
@@ -79,7 +80,7 @@ class Main extends BaseWidget {
         
 		//Title part two
 		$this->add_control(
-			'abc_elementor_sec_title_two',
+			'abcbiz_elementor_sec_title_two',
 			[
 				'label' => esc_html__( 'Title Part 2', 'abcbiz-multi' ),
 				'type' => Controls_Manager::TEXT,
@@ -94,7 +95,7 @@ class Main extends BaseWidget {
         
 		//Divider show/hide
         $this->add_control(
-            'abc_elementor_sec_title_div',
+            'abcbiz_elementor_sec_title_div',
             [
                 'label' => esc_html__('Bottom Divider', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
@@ -108,7 +109,7 @@ class Main extends BaseWidget {
          
 		//Divider Width
 		$this->add_responsive_control(
-            'abc_elementor_sec_title_div_size',
+            'abcbiz_elementor_sec_title_div_size',
             [
                 'label' => esc_html__('Divider Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
@@ -125,10 +126,10 @@ class Main extends BaseWidget {
 					'size' => 120,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-sec-title-divider' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-sec-title-divider' => 'width: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'abc_elementor_sec_title_div' => 'yes',
+					'abcbiz_elementor_sec_title_div' => 'yes',
 				],
             
             ]
@@ -136,7 +137,7 @@ class Main extends BaseWidget {
 
 		//Divider height
 		$this->add_responsive_control(
-            'abc_elementor_sec_title_div_height',
+            'abcbiz_elementor_sec_title_div_height',
             [
                 'label' => esc_html__('Divider Height', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
@@ -153,10 +154,10 @@ class Main extends BaseWidget {
 					'size' => 3,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-sec-title-divider' => 'height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-sec-title-divider' => 'height: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'abc_elementor_sec_title_div' => 'yes',
+					'abcbiz_elementor_sec_title_div' => 'yes',
 				],
             
             ]
@@ -164,7 +165,7 @@ class Main extends BaseWidget {
 
 		//Divider Gap
 		$this->add_responsive_control(
-            'abc_elementor_sec_title_div_gap',
+            'abcbiz_elementor_sec_title_div_gap',
             [
                 'label' => esc_html__('Divider Gap', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
@@ -181,10 +182,10 @@ class Main extends BaseWidget {
 					'size' => -5,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-sec-title-divider' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-sec-title-divider' => 'top: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
-					'abc_elementor_sec_title_div' => 'yes',
+					'abcbiz_elementor_sec_title_div' => 'yes',
 				],
             
             ]
@@ -193,7 +194,7 @@ class Main extends BaseWidget {
 		//Title Alignment
 
 		$this->add_responsive_control(
-			'abc_elementor_sec_title_align',
+			'abcbiz_elementor_sec_title_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -213,7 +214,7 @@ class Main extends BaseWidget {
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-title-align' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-title-align' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -224,7 +225,7 @@ class Main extends BaseWidget {
         //abc section title style
 		
         $this->start_controls_section(
-            'abc_elementor_sec_title_style',
+            'abcbiz_elementor_sec_title_style',
             [
                 'label' => esc_html__('Title Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -232,13 +233,13 @@ class Main extends BaseWidget {
         );
 
 		$this->add_control(
-			'abc_elementor_sec_title_one_color',
+			'abcbiz_elementor_sec_title_one_color',
 			[
 				'label' => esc_html__( 'Title Part 1 Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#000000',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-sec-title-one' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-sec-title-one' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -246,20 +247,20 @@ class Main extends BaseWidget {
         $this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abc_elementor_sec_title_one_typography',
+				'name' => 'abcbiz_elementor_sec_title_one_typography',
 				'label' => esc_html__( 'Title Part 1 Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-one',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-sec-title-one',
 			]
 		);
 
 		$this->add_control(
-			'abc_elementor_sec_title_two_color',
+			'abcbiz_elementor_sec_title_two_color',
 			[
 				'label' => esc_html__( 'Title Part 2 Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#458f0c',
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-sec-title-two' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-sec-title-two' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -267,9 +268,9 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abc_elementor_sec_title_two_typography',
+				'name' => 'abcbiz_elementor_sec_title_two_typography',
 				'label' => esc_html__( 'Title Part 2 Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-two',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-sec-title-two',
 			]
 		);
 
@@ -278,12 +279,12 @@ class Main extends BaseWidget {
 
 
 		$this->start_controls_section(
-            'abc_elementor_sec_title_div_bg_styly',
+            'abcbiz_elementor_sec_title_div_bg_styly',
             [
                 'label' => esc_html__('Divider Background', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
-					'abc_elementor_sec_title_div' => 'yes',
+					'abcbiz_elementor_sec_title_div' => 'yes',
 				],
             ]
         );
@@ -291,10 +292,10 @@ class Main extends BaseWidget {
 		$this->add_group_control(
 			Group_Control_Background::get_type(),
 			[
-				'name' => 'abc_elementor_sec_div_bg_color',
+				'name' => 'abcbiz_elementor_sec_div_bg_color',
 				'label' => esc_html__( 'Divider Color', 'abcbiz-multi' ),
 				'types' => [ 'classic', 'gradient'],
-				'selector' => '{{WRAPPER}} .abc-elementor-sec-title-divider',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-sec-title-divider',
 			]
 		);
 
@@ -305,16 +306,9 @@ class Main extends BaseWidget {
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
 }

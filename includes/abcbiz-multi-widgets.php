@@ -47,15 +47,15 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCRecentPost\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCRelatedPost\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCSearchForm\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCSecTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCSkillBar\Main::class;
 
 			//\inc\widgets\ABCIconBox\Main::class,
 			//\inc\widgets\ABCWorkBox\Main::class,
 			//\inc\widgets\ABCTeamMember\Main::class,
 			//\inc\widgets\ABCTestimonials\Main::class,
-			//\inc\widgets\ABCSkillBar\Main::class,
 			//\inc\widgets\ABCShape\Main::class,
-			//\inc\widgets\ABCSecTitle\Main::class,
 			//\inc\widgets\ABCTagInfo\Main::class,
 			//\inc\widgets\ABCRelatedPost\Main::class,
 			//\inc\widgets\ABCSocialShare\Main::class,

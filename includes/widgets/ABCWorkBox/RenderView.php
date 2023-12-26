@@ -6,7 +6,7 @@
 $settings = $this->get_settings_for_display();
 
 //empty message
-$empty_message = $settings['abc_ele_portfolio_no_found_message'] ? $settings['abc_ele_portfolio_no_found_message'] : esc_html__('No Portfolio Found!', 'ABCMAFTH');
+$empty_message = $settings['abc_ele_portfolio_no_found_message'] ? $settings['abc_ele_portfolio_no_found_message'] : esc_html__('No Portfolio Found!', 'abcbiz-multi');
 
 ?>
 <!-- Portfolio Wrap Start-->
@@ -22,7 +22,7 @@ $empty_message = $settings['abc_ele_portfolio_no_found_message'] ? $settings['ab
         <!-- Portfolio Filter-->
         <ul id="portfolio-filter" class="abc-elementor-portfolio-filter <?php echo $settings['abc_elementor_portfolio_display_filter']; ?>">
             <?php
-            echo wp_kses_post(__('<li class="abc-elementor-portfolio-single-filter"><a class="active current" href="#all">All</a></li>', 'ABCMAFTH'));
+            echo wp_kses_post(__('<li class="abc-elementor-portfolio-single-filter"><a class="active current" href="#all">All</a></li>', 'abcbiz-multi'));
             if ($count > 0) {
 
                 foreach ($terms as $term) {

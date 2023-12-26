@@ -31,7 +31,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_teammember_setting',
             [
-                'label' => __('Team Setting', 'ABCMAFTH'),
+                'label' => __('Team Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -40,12 +40,12 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_style',
             [
-                'label' => __('Team Member Style', 'ABCMAFTH'),
+                'label' => __('Team Member Style', 'abcbiz-multi'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'style-one',
                 'options' => [
-                    'style-one' => __('Style One', 'ABCMAFTH'),
-                    'style-two' => __('Style Two', 'ABCMAFTH'),
+                    'style-one' => __('Style One', 'abcbiz-multi'),
+                    'style-two' => __('Style Two', 'abcbiz-multi'),
                 ],
             ]
         );
@@ -53,7 +53,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_per_page',
             [
-                'label' => __('Item Per Page', 'ABCMAFTH'),
+                'label' => __('Item Per Page', 'abcbiz-multi'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 4,
             ]
@@ -63,10 +63,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_elementor_teammember_display_social',
             [
-                'label' => __('Display Social Profile', 'ABCMAFTH'),
+                'label' => __('Display Social Profile', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Yes', 'ABCMAFTH'),
-                'label_off' => __('No', 'ABCMAFTH'),
+                'label_on' => __('Yes', 'abcbiz-multi'),
+                'label_off' => __('No', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -79,7 +79,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_teammember_style_setting',
             [
-                'label' => __('Style', 'ABCMAFTH'),
+                'label' => __('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -88,7 +88,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abc_ele_teammember_border',
-                'label' => __('Border', 'ABCMAFTH'),
+                'label' => __('Border', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abc-elementor-teammember-single-item-area, {{WRAPPER}} #abc-elementor-team-style-two-img.abc-elementor-team-img img',
             ]
         );
@@ -96,7 +96,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abc_ele_teammember_border_radius',
             [
-                'label' => __('Border Radius', 'ABCMAFTH'),
+                'label' => __('Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -111,7 +111,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_ele_teammember_name_typography',
-                'label' => __('Name Typography', 'ABCMAFTH'),
+                'label' => __('Name Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} h4.abc-ele-team-name a,  {{WRAPPER}}  #abc-elementor-team-name.abc-elementor-team-name h2',
             ]
         );
@@ -119,7 +119,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_name_color',
             [
-                'label' => __('Name Color', 'ABCMAFTH'),
+                'label' => __('Name Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} h4.abc-ele-team-name a' => 'color: {{VALUE}};',
@@ -133,7 +133,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abc_ele_teammember_designation_typography',
-                'label' => __('Designation Typography', 'ABCMAFTH'),
+                'label' => __('Designation Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} p.abc-ele-team-designation, {{WRAPPER}} .abc-elementor-team-designation p',
             ]
         );
@@ -141,7 +141,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_designation_color',
             [
-                'label' => __('Designation Color', 'ABCMAFTH'),
+                'label' => __('Designation Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} p.abc-ele-team-designation' => 'color: {{VALUE}};',
@@ -157,7 +157,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abc_elementor_teammember_social_style',
             [
-                'label' => __('Social Profile', 'ABCMAFTH'),
+                'label' => __('Social Profile', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abc_elementor_teammember_display_social' => 'yes',
@@ -168,7 +168,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_social_circle_bg_color',
             [
-                'label' => __('Circle BG Color', 'ABCMAFTH'),
+                'label' => __('Circle BG Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-team-social svg circle' => 'fill: {{VALUE}};',
@@ -182,7 +182,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_social_circle_icon_color',
             [
-                'label' => __('Circle Icon Color', 'ABCMAFTH'),
+                'label' => __('Circle Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-team-social svg path' => 'fill: {{VALUE}};',
@@ -197,7 +197,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_social_icons_bg_color',
             [
-                'label' => __('Icons BG Color', 'ABCMAFTH'),
+                'label' => __('Icons BG Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-team-social-overlay' => 'background-color: {{VALUE}};',
@@ -212,7 +212,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_ele_teammember_social_icon_color',
             [
-                'label' => __('Icon Color', 'ABCMAFTH'),
+                'label' => __('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abc-ele-team-social-overlay ul li a i' => 'color: {{VALUE}};',

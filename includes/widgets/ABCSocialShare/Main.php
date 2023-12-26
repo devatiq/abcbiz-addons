@@ -34,7 +34,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abc-elementor-social-share-content',
 			[
-				'label' => esc_html__( 'Social Share', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Social Share', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -43,20 +43,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abc_elementor_social_share_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -69,10 +69,10 @@ class Main extends BaseWidget {
 		$this->add_control(
             'abc_elementor_single_share_icon_show',
             [
-                'label' => __('Share icon at the beginning', 'ABCMAFTH'),
+                'label' => __('Share icon at the beginning', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => __('Show', 'ABCMAFTH'),
-                'label_off' => __('Hide', 'ABCMAFTH'),
+                'label_on' => __('Show', 'abcbiz-multi'),
+                'label_off' => __('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -87,7 +87,7 @@ class Main extends BaseWidget {
         $this->start_controls_section(
             'abc_elementor_social_share_style',
             [
-                'label' => esc_html__('Social Icon Style', 'ABCMAFTH'),
+                'label' => esc_html__('Social Icon Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -95,7 +95,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_social_share_single_icon_color',
 			[
-				'label' => esc_html__( 'Share Icon Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Share Icon Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#3d3d3d',
 				'selectors' => [
@@ -111,7 +111,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_social_share_icon_size',
 			[
-				'label' => esc_html__( 'Social Icons Size', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Social Icons Size', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -140,14 +140,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abc_elementor_social_share_icon_color_tab_normal',
 			[
-				'label' => esc_html__( 'Normal', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
 			]
 		);
 
 		$this->add_control(
 			'abc_elementor_social_share_icon_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -159,7 +159,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_social_share_icon_bg_color',
 			[
-				'label' => esc_html__( 'Icon Background Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Icon Background Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#59a818',
 				'selectors' => [
@@ -173,14 +173,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abc_elementor_social_share_icon_color_tab_hover',
 			[
-				'label' => esc_html__( 'Hover', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
 			]
 		);
 
 		$this->add_control(
 			'abc_elementor_social_share_icon_color_hover',
 			[
-				'label' => esc_html__( 'Icon Hover Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -192,7 +192,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abc_elementor_social_share_icon_bg_color_hover',
 			[
-				'label' => esc_html__( 'Icon Hover Background Color', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Icon Hover Background Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#3d3d3d',
 				'selectors' => [

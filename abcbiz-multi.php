@@ -53,9 +53,11 @@ function abcbiz_elementor_enqueue()
     //register script for magnific-popup
     wp_register_script('abcbiz-magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), 1.0, true);
 
-    //register script for skillbar
+    //register script for skill
     wp_register_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), 1.0, true);
     wp_register_script('abcbiz-circular-progress', AbcBizElementor_Assets . "/js/circular-progress.js", array('jquery'), 1.0, true);
+    wp_register_script('abcbiz-skill-bar', AbcBizElementor_Assets . "/js/skill-bar.js", array('jquery'), 1.0, true);
+    
     //register script for counter up
     wp_register_script('abcbiz-counter-up', AbcBizElementor_Assets . "/js/abcbiz-counterup.js", array('jquery'), 1.0, true);
     wp_register_script('abcbiz-wapoints', AbcBizElementor_Assets . "/js/waypoints.min.js", array('jquery'), 1.0, true);

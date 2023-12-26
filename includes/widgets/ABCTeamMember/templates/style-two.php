@@ -98,7 +98,7 @@ $settings = $this->get_settings_for_display();
         wp_reset_postdata();
         else : 
     ?>        
-        <li class="no-post-found"><?php esc_html_e('No Team Found', 'ABCMAFTH'); ?></li>
+        <li class="no-post-found"><?php esc_html_e('No Team Found', 'abcbiz-multi'); ?></li>
 
     <?php  endif; ?>
 
