@@ -2,18 +2,20 @@
 /**
  * Render View file for ABC Blog List.
  */
-$settings = $this->get_settings_for_display();
-$abc_recent_number_of_posts = $this->get_settings('abc_elementor_recent_posts_post_number')['size'];
-$abc_post_date_switch = $settings['abc_elementor_recent_posts_date_switch'];
-$abc_post_comment_switch = $settings['abc_elementor_recent_posts_comment_switch'];
-$abc_post_read_more_switch = $settings['abc_elementor_recent_posts_read_more_switch'];
-$abc_post_read_more_text = $settings['abc_elementor_recent_posts_read_more_text'];
-$abc_selected_post_categories = $settings['abc_elementor_recent_posts_post_category'];
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+$abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_recent_number_of_posts = $this->get_settings('abcbiz_elementor_recent_posts_post_number')['size'];
+$abcbiz_post_date_switch = $abcbiz_settings['abcbiz_elementor_recent_posts_date_switch'];
+$abcbiz_post_comment_switch = $abcbiz_settings['abcbiz_elementor_recent_posts_comment_switch'];
+$abcbiz_post_read_more_switch = $abcbiz_settings['abcbiz_elementor_recent_posts_read_more_switch'];
+$abcbiz_post_read_more_text = $abcbiz_settings['abcbiz_elementor_recent_posts_read_more_text'];
+$abcbiz_selected_post_categories = $abcbiz_settings['abcbiz_elementor_recent_posts_post_category'];
 ?>
 
 <!-- Recent Posts Area -->
-<div class="abc-ele-recent-post-area">
-    <div class="abc-ele-recent-post">
+<div class="abcbiz-ele-recent-post-area">
+    <div class="abcbiz-ele-recent-post">
 
         <?php
 
@@ -25,12 +27,12 @@ $abc_selected_post_categories = $settings['abc_elementor_recent_posts_post_categ
         $args = array(
             'post_type'      => 'post',
             'paged'          => $paged,
-            'posts_per_page' => $abc_recent_number_of_posts,
+            'posts_per_page' => $abcbiz_recent_number_of_posts,
         );
 
         // specific category query
-        if ($abc_selected_post_categories && $abc_selected_post_categories !== 'all') {
-            $args['cat'] = $abc_selected_post_categories;
+        if ($abcbiz_selected_post_categories && $abcbiz_selected_post_categories !== 'all') {
+            $args['cat'] = $abcbiz_selected_post_categories;
         }
 
         $query = new WP_Query($args);
@@ -39,24 +41,24 @@ $abc_selected_post_categories = $settings['abc_elementor_recent_posts_post_categ
 
             while ($query->have_posts()) : $query->the_post(); ?>
 
-                <div class="abc-ele-recent-post-item">
+                <div class="abcbiz-ele-recent-post-item">
 
                     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-                        <div class="abc-ele-recent-post-content">
-                            <h3 class="abc-ele-recent-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <div class="abc-ele-recent-post-meta">
-                                <?php if ($abc_post_date_switch === 'yes') : ?><span class="posted-on"><i class="fa fa-calendar" aria-hidden="true"></i> <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
-                                <?php if ($abc_post_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="fa fa-commenting" aria-hidden="true"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-multi'), esc_html__('1 Comment', 'abcbiz-multi'), esc_html__('% Comments', 'abcbiz-multi')); ?></a></span><?php endif; ?>
+                        <div class="abcbiz-ele-recent-post-content">
+                            <h3 class="abcbiz-ele-recent-post-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            <div class="abcbiz-ele-recent-post-meta">
+                                <?php if ($abcbiz_post_date_switch === 'yes') : ?><span class="posted-on"><i class="eicon-calendar"></i> <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
+                                <?php if ($abcbiz_post_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="eicon-instagram-comments"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-multi'), esc_html__('1 Comment', 'abcbiz-multi'), esc_html__('% Comments', 'abcbiz-multi')); ?></a></span><?php endif; ?>
                             </div>
 
-                            <?php if ($abc_post_read_more_switch === 'yes') : ?>
-                                <div class="abc-ele-recent-post-more"><a href="<?php the_permalink(); ?>"><?php echo esc_html($abc_post_read_more_text); ?></a></div>
+                            <?php if ($abcbiz_post_read_more_switch === 'yes') : ?>
+                                <div class="abcbiz-ele-recent-post-more"><a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_post_read_more_text); ?></a></div>
                             <?php endif; ?>
                         </div>
 
                     </article>
 
-                </div> <!-- end abc-ele-recent-post-item -->
+                </div> <!-- end abcbiz-ele-recent-post-item -->
 
             <?php endwhile; ?>
 

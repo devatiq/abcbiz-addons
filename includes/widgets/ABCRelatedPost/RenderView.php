@@ -2,15 +2,15 @@
 /**
  * Render View file for ABC Related Post.
  */
-$settings = $this->get_settings_for_display();
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+$abcbiz_settings = $this->get_settings_for_display();
 global $post; 
-
 ?>
 
 <!-- Related post Area-->
-<div class="abc-ele-related-post-area">
-    <div class="abc-ele-related-post">
+<div class="abcbiz-ele-related-post-area">
+    <div class="abcbiz-ele-related-post">
         <ul>
             <?php
             $orig_post = $post;
@@ -38,17 +38,17 @@ global $post;
             ?>
                             <li>
                                 <figure><a rel="external" href="<?php the_permalink() ?>" title="<?php the_title_attribute() ?>"><?php the_post_thumbnail('abcbiz_blog_grid_thumb'); ?></a></figure>
-                                <h4 class="abc-ele-related-post-heading"><a rel="external" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+                                <h4 class="abcbiz-ele-related-post-heading"><a rel="external" href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
                             </li>
             <?php
                         }
                     } else {
-                        echo '<li>No related posts found.</li>';
+                        echo '<li>' . esc_html__('No related posts found', 'abcbiz-multi') . '</li>';
                     }
                     wp_reset_query();
                 }
             } else {
-                echo '<li>No post available.</li>';
+                echo '<li>' . esc_html__('No post available.', 'abcbiz-multi') . '</li>';
             }
 
             $post = $orig_post;

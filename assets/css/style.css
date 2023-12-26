@@ -1861,6 +1861,7 @@ width: auto;
  * ---------------------------------------------*/
 .abcbiz-ele-search-form {
     overflow: hidden;
+    box-sizing: border-box;
 }
 
 .abcbiz-ele-search-form form { 
@@ -1869,22 +1870,24 @@ width: auto;
 
 .abcbiz-ele-search-form input[type="text"] {
     width: 70%; 
-    padding: 10px;
+    padding: 0 10px;
     border: 1px solid #053D58;
     box-sizing: border-box;
     float: left;
     outline: none !important;
     background: #fff;
     color: #3D3D3D;
+    height: 40px;
 }
 
 .abcbiz-ele-search-form input[type="submit"] {
-    width: 28%;
-    padding: 10px;
+    width: 29%;
+    padding: 0 10px;
     border: none;
     cursor: pointer;
     float: right;
     font-size: 13px;
+    height: 40px;
 }
 
 .abcbiz-ele-search-form input[type="submit"]:hover {

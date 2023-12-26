@@ -1,17 +1,20 @@
 <?php
-namespace Inc\Widgets\ABCSearchForm;
+namespace Includes\Widgets\ABCSearchForm;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
 
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'abc-search-form';
+    protected $name = 'abcbiz-search-form';
     protected $title = 'ABC Search Form';
     protected $icon = 'eicon-search-bold';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     protected $keywords = [
@@ -21,23 +24,20 @@ class Main extends BaseWidget
 
     /**
      * Register the widget controls.
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function register_controls()
     {
 
         $this->start_controls_section(
-            'abc_elementor_search_form_setting',
+            'abcbiz_elementor_search_form_setting',
             [
-                'label' => __('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
         $this->add_control(
-			'abc_elementor_search_form_placeholder_text',
+			'abcbiz_elementor_search_form_placeholder_text',
 			[
 				'label' => esc_html__( 'Placeholder Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -46,7 +46,7 @@ class Main extends BaseWidget
 		);
 
         $this->add_control(
-			'abc_elementor_search_form_btn_text',
+			'abcbiz_elementor_search_form_btn_text',
 			[
 				'label' => esc_html__( 'Button Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -58,27 +58,74 @@ class Main extends BaseWidget
 
         // blog info style section
         $this->start_controls_section(
-            'abc_elementor_search_form_style_section',
+            'abcbiz_elementor_search_form_style_section',
             [
-                'label' => __('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
 
+            //Button typography
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_elementor_search_btn_typography',
+                    'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+                    'selector' => '{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]',
+                ]
+            );
+
+            //Placeholder typography
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_elementor_search_placeholder_typography',
+                    'label' => esc_html__( 'Placeholder Typography', 'abcbiz-multi' ),
+                    'selector' => '{{WRAPPER}} .abcbiz-ele-search-form input[type="text"]::placeholder',
+                ]
+            );
+
+            //input height
+            $this->add_control(
+                'abcbiz_elementor_search_form_height',
+                [
+                    'label' => esc_html__( 'Form Height', 'abcbiz-multi' ),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => ['px'],
+                    'range' => [
+                        'px' => [
+                            'min' => 20,
+                            'max' => 100,
+                            'step' => 2,
+                        ],
+                    ],
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => 40,
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-ele-search-form input[type="text"], .abcbiz-ele-search-form input[type="submit"]' => 'height: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+    
+
             // Border color
           $this->add_control(
-            'abc_elementor_search_form_border_color',
+            'abcbiz_elementor_search_form_border_color',
             [
-                'label' => __('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#053D58',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-search-form input[type=text]' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-search-form input[type=text]' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
+
+        //Button Style
 		$this->add_control(
-			'abc_elementor_search_form_btn_style',
+			'abcbiz_elementor_search_form_btn_style',
 			[
 				'label' => esc_html__( 'Button Style', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
@@ -86,37 +133,37 @@ class Main extends BaseWidget
 			]
 		);
         $this->start_controls_tabs(
-			'abc_elementor_search_form_style_tabs'
+			'abcbiz_elementor_search_form_style_tabs'
 		);
 
 		$this->start_controls_tab(
-			'abc_elementor_search_form_style_normal_tab',
+			'abcbiz_elementor_search_form_style_normal_tab',
 			[
 				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
 			]
 		);
 
 		$this->add_control(
-			'abc_elementor_search_form_color',
+			'abcbiz_elementor_search_form_color',
 			[
 				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
                 'default' => '#ffffff',
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abc-ele-search-form input[type="submit"]' => 'color: {{VALUE}} !important;',
+					'{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]' => 'color: {{VALUE}} !important;',
 				],
 			]
 		);
 		
         // Button Background color
         $this->add_control(
-            'abc_elementor_search_form_btn_bg_color',
+            'abcbiz_elementor_search_form_btn_bg_color',
             [
-                'label' => __('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#053D58',
+                'default' => '#ad07b0',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-search-form input[type="submit"]' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -124,32 +171,32 @@ class Main extends BaseWidget
 		$this->end_controls_tab();
 
 		$this->start_controls_tab(
-			'abc_elementor_search_form_style_hover_tab',
+			'abcbiz_elementor_search_form_style_hover_tab',
 			[
 				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
 			]
 		);
 	
 		$this->add_control(
-			'abc_elementor_comment_form_reply_btn_hover_color',
+			'abcbiz_elementor_comment_form_reply_btn_hover_color',
 			[
 				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
                 'default' => '#ffffff',
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abc-ele-search-form input[type="submit"]:hover' => 'color: {{VALUE}}!important;',
+					'{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]:hover' => 'color: {{VALUE}}!important;',
 				],
 			]
 		);
 		
          $this->add_control(
-            'abc_elementor_search_form_btn_bg_hover_color',
+            'abcbiz_elementor_search_form_btn_bg_hover_color',
             [
-                'label' => __('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#053D58',
                 'selectors' => [
-                    '{{WRAPPER}} .abc-ele-search-form input[type="submit"]:hover' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]:hover' => 'background-color: {{VALUE}};',
                 ],
             ]
         ); 
@@ -162,13 +209,9 @@ class Main extends BaseWidget
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
 
