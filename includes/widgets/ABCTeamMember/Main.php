@@ -351,7 +351,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_teammember_name_one_typography',
                 'label' => esc_html__('Name Typography', 'abcbiz-multi'),
-                'selector' =>  '{{WRAPPER}} h4.abcbiz-ele-team-name a, h4.abcbiz-ele-team-name',
+                'selector' =>  '{{WRAPPER}} h4.abcbiz-ele-team-name a, {{WRAPPER}} h4.abcbiz-ele-team-name',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-one',
                     ],
@@ -364,7 +364,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_teammember_name_two_typography',
                 'label' => esc_html__('Name Typography', 'abcbiz-multi'),
-                'selector' => '{{WRAPPER}} h3.abcbiz-ele-team-name, h3.abcbiz-ele-team-name a',
+                'selector' => '{{WRAPPER}} h3.abcbiz-ele-team-name, {{WRAPPER}} h3.abcbiz-ele-team-name a',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-two',
                     ],
@@ -377,7 +377,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_teammember_name_three_typography',
                 'label' => esc_html__('Name Typography', 'abcbiz-multi'),
-                'selector' => '{{WRAPPER}} h3.abcbiz-style-three-team-name, h3.abcbiz-style-three-team-name a',
+                'selector' => '{{WRAPPER}} h3.abcbiz-style-three-team-name, {{WRAPPER}} h3.abcbiz-style-three-team-name a',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-three',
                     ],
@@ -492,7 +492,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_teammember_contact_typography',
                 'label' => esc_html__('Contact Info Typography', 'abcbiz-multi'),
-                'selector' => '{{WRAPPER}} .abcbiz-style-three-team-phone, .abcbiz-style-three-team-email',
+                'selector' => '{{WRAPPER}} .abcbiz-style-three-team-phone, {{WRAPPER}} .abcbiz-style-three-team-email',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
                 ],
@@ -518,7 +518,7 @@ class Main extends BaseWidget
 					'size' => 18,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-style-three-team-phone svg, .abcbiz-style-three-team-email svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-style-three-team-phone svg, {{WRAPPER}} .abcbiz-style-three-team-email svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -545,7 +545,7 @@ class Main extends BaseWidget
 					'size' => 3,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-style-three-team-phone svg, .abcbiz-style-three-team-email svg' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-style-three-team-phone svg, {{WRAPPER}} .abcbiz-style-three-team-email svg' => 'top: {{SIZE}}{{UNIT}};',
 				],
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -561,7 +561,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#555555',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-style-three-team-phone, .abcbiz-style-three-team-email' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-style-three-team-phone, {{WRAPPER}} .abcbiz-style-three-team-email' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -577,7 +577,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#555555',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-style-three-team-phone svg, .abcbiz-style-three-team-email svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-style-three-team-phone svg, {{WRAPPER}} .abcbiz-style-three-team-email svg' => 'fill: {{VALUE}};',
                 ],
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',

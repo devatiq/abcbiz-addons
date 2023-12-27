@@ -53,11 +53,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCTagInfo\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
-
-
-			//\inc\widgets\ABCWorkBox\Main::class,
-			//\inc\widgets\ABCTestimonials\Main::class,
-
+		   $abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
 
 			//WooCommerce Widgets
 			//\inc\widgets\WooCommerce\ABCProductTitle\Main::class,

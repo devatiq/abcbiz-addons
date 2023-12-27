@@ -100,13 +100,6 @@
 @media only screen and (max-width: 768px) {
 
     /*------------------------
-    * Portfolio
-    --------------------------*/
-    .abc-elementor-portfolio-content-area {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /*------------------------
     * Pricing table
     --------------------------*/
     .abcbiz-ele-pricing-pack-name {
@@ -224,19 +217,6 @@
     /* Global */
     .hide-on-mobile {
         display: none !important;
-    }
-
-    /*------------------------
-    * Portfolio
-    --------------------------*/
-    .abc-elementor-portfolio-content-area {
-        grid-template-columns: repeat(1, 1fr);
-    }
-
-    #portfolio-filter .abc-elementor-portfolio-single-filter a,
-    .abc-elementor-portfolio-single-filter a {
-        padding: 6px 10px;
-        font-size: 10px;
     }
 
     /*------------------------
