@@ -565,6 +565,78 @@ h3.abcbiz-ele-team-name a {
     transform: scale(1);
 }
 
+/*---------------------------
+ * Team Member Style Three
+-----------------------------*/
+
+.abcbiz-team-member-style-three-area {
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.17);
+    border-radius: 20px;
+    transition: box-shadow .4s;
+    box-sizing: border-box;
+}
+
+.abcbiz-team-member-style-three-area:hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+}
+
+.abcbiz-style-three-team-image img {
+    border-top-left-radius: 20px !important;
+    border-top-right-radius: 20px !important;
+}
+
+.abcbiz-style-three-team-contents {
+    box-sizing: border-box;
+    padding: 25px 20px;
+}
+
+h4.abcbiz-style-three-team-designation {
+    margin: 0 0 10px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+h3.abcbiz-style-three-team-name {
+    margin: 0 0 15px 0;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.abcbiz-style-three-team-ontact-info {
+    margin-bottom: 15px;
+}
+
+.abcbiz-style-three-team-phone, .abcbiz-style-three-team-email {
+    font-size: 16px;
+}
+
+.abcbiz-style-three-team-phone svg, .abcbiz-style-three-team-email svg{
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    position: relative;
+}
+
+.abcbiz-style-three-team-icons ul {
+    margin: 0 0 5px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.abcbiz-style-three-team-icons ul li{
+    display: inline-block;
+    margin: 0 7px 7px 0;
+}
+
+.abcbiz-style-three-team-button svg {
+    width: 20px;
+    height: 20px;
+    margin-left: 1px;
+    position: relative;
+}
+
 /*----------------------------------------------
  * Testimonial
  * ---------------------------------------------*/

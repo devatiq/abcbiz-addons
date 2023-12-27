@@ -399,5 +399,4 @@ class Main extends BaseWidget
         include 'RenderView.php';
     }
 
-
 }

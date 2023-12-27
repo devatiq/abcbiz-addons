@@ -5,6 +5,8 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_style_one_id = $this->get_id();
+
 $abcbiz_member_image = $abcbiz_settings['abcbiz_elementor_teammember_image'];
 $abcbiz_member_name = $abcbiz_settings['abcbiz_elementor_teammember_name'];
 $abcbiz_team_designation = $abcbiz_settings['abcbiz_elementor_teammember_designation'];
@@ -13,7 +15,7 @@ $abcbiz_member_image_dimension = $abcbiz_settings['abcbiz_elementor_teammember_i
 ?>
 
 <!-- Team Member Wrap Start -->
-<div class="abcbiz-elementor-team-member-area abcbiz-team-style-one">
+<div class="abcbiz-elementor-team-member-area abcbiz-team-style-one" id="abcbiz-team-member-<?php echo esc_attr($abcbiz_style_one_id); ?>">
 
     <!-- Team Member Single Item -->
     <div class="abcbiz-elementor-teammember-single-item-area">
