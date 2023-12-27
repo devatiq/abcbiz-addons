@@ -9,6 +9,7 @@ $abcbiz_member_image = $abcbiz_settings['abcbiz_elementor_teammember_image'];
 $abcbiz_member_name = $abcbiz_settings['abcbiz_elementor_teammember_name'];
 $abcbiz_team_designation = $abcbiz_settings['abcbiz_elementor_teammember_designation'];
 $abcbiz_member_link = $abcbiz_settings['abcbiz_elementor_teammember_link'];
+$abcbiz_member_image_dimension = $abcbiz_settings['abcbiz_elementor_teammember_image_dimension'];
 ?>
 
 <!-- Team Member Wrap Start -->
@@ -34,20 +35,22 @@ $abcbiz_member_link = $abcbiz_settings['abcbiz_elementor_teammember_link'];
 
             <!-- Team Member Image -->
             <div class="abcbiz-ele-team-image">
-                <?php
-                if (!empty($abcbiz_member_image['id'])) {
-                 $abcbiz_image_id = $abcbiz_member_image['id'];
-                 $abcbiz_image_size = 'abcbiz_square_img'; 
+            <?php
+             if (!empty($abcbiz_member_image['id'])) {
+             $abcbiz_image_id = $abcbiz_member_image['id'];
+             $abcbiz_image_dimension = $abcbiz_member_image_dimension;
 
-                 $image_array = wp_get_attachment_image_src($abcbiz_image_id, $abcbiz_image_size);
-                 $abcbiz_member_image_url = $image_array ? $image_array[0] : '';
-              }
+             $abcbiz_image_size = !empty($abcbiz_image_dimension) ? [$abcbiz_image_dimension['width'], $abcbiz_image_dimension['height']] : 'abcbiz_square_img';
+
+             $abcbiz_image_array = wp_get_attachment_image_src($abcbiz_image_id, $abcbiz_image_size);
+             $abcbiz_member_image_url = $abcbiz_image_array ? $abcbiz_image_array[0] : '';
+           }
 
             if (empty($abcbiz_member_image_url)) {
-              $abcbiz_member_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', AbcBizElementor_Path), '/') . '/assets/img/member-placeholder.jpg');
-             }
-              ?>
-              <img src="<?php echo esc_url($abcbiz_member_image_url); ?>" alt="<?php echo esc_html($abcbiz_member_name); ?>">
+            $abcbiz_member_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', AbcBizElementor_Path), '/') . '/assets/img/member-placeholder.jpg');
+           }
+          ?>
+           <img src="<?php echo esc_url($abcbiz_member_image_url); ?>" alt="<?php echo esc_html($abcbiz_member_name); ?>">
             </div><!-- /Team Member Image -->
 
             <!-- Team Member Content -->

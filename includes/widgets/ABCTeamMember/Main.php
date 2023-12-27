@@ -55,6 +55,20 @@ class Main extends BaseWidget
 			]
 		);
 
+        //Image dimension
+        $this->add_control(
+			'abcbiz_elementor_teammember_image_dimension',
+			[
+				'label' => esc_html__( 'Image Dimension', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
+				'description' => esc_html__( 'Crop the original image size to any custom size. Set custom width or height to keep the original size ratio.', 'abcbiz-multi' ),
+				'default' => [
+					'width' => '800',
+					'height' => '800',
+				],
+			]
+		);
+
          //Member Name
          $this->add_control(
 			'abcbiz_elementor_teammember_name',
