@@ -10,7 +10,6 @@ use Elementor\Group_Control_Typography;
 
 /**
  * Elementor List Widget.
- * @since 1.0.0
  */
 class Main extends BaseWidget {
 
@@ -28,9 +27,6 @@ class Main extends BaseWidget {
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
@@ -146,12 +142,9 @@ class Main extends BaseWidget {
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'renderview.php';
     }
 }

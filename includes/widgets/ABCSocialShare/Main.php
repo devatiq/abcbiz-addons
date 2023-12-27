@@ -10,7 +10,6 @@ use Elementor\Group_Control_Background;
 
 /**
  * Elementor List Widget.
- * @since 1.0.0
  */
 class Main extends BaseWidget {
 

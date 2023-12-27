@@ -170,7 +170,7 @@ class Main extends BaseWidget
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
+
         include 'RenderView.php';
     }
 

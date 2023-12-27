@@ -158,13 +158,10 @@ class Main extends BaseWidget
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
+
         include 'RenderView.php';
     }
 

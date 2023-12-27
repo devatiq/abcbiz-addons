@@ -26,12 +26,6 @@ class Main extends BaseWidget
 
     /**
      * Register the widget controls.
-     *
-     * Adds different input fields to allow the user to change and customize the widget settings.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function register_controls()
     {
@@ -310,16 +304,9 @@ class Main extends BaseWidget
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
 }

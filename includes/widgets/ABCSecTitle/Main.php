@@ -9,7 +9,6 @@ use Elementor\Group_Control_Background;
 
 /**
  * Elementor List Widget.
- * @since 1.0.0
  */
 class Main extends BaseWidget {
 
@@ -27,11 +26,6 @@ class Main extends BaseWidget {
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
