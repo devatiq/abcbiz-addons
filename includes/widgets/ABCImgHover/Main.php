@@ -1,5 +1,5 @@
 <?php
-namespace Includes\Widgets\ABCPortfolio;
+namespace Includes\Widgets\ABCImgHover;
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 use Includes\Widgets\BaseWidget;
@@ -10,14 +10,14 @@ use Elementor\Group_Control_Border;
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'abcbiz-elementor-portfolio';
-    protected $title = 'ABC Portfolio';
-    protected $icon = 'eicon-posts-grid';
+    protected $name = 'abcbiz-elementor-imghover';
+    protected $title = 'ABC Image Hover';
+    protected $icon = 'eicon-image-rollover';
     protected $categories = [
         'abcbiz-category'
     ];
     protected $keywords = [
-        'abc', 'work', 'portfolio',
+        'abc', 'image', 'hover',
     ];
 
     /**
@@ -27,16 +27,16 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abcbiz_elementor_portfolio_setting',
+            'abcbiz_elementor_imghover_setting',
             [
-                'label' => esc_html__('Portfolio Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Image Setting', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
-         //Portfolio Image
+         //Img Hover Image
          $this->add_control(
-			'abcbiz_elementor_portfolio_image',
+			'abcbiz_elementor_imghover_image',
 			[
 				'label' => esc_html__( 'Choose Image', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
@@ -45,7 +45,7 @@ class Main extends BaseWidget
 
         //Image dimension
         $this->add_control(
-			'abcbiz_elementor_portfolio_image_dimension',
+			'abcbiz_elementor_imghover_image_dimension',
 			[
 				'label' => esc_html__( 'Image Dimension', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
@@ -59,7 +59,7 @@ class Main extends BaseWidget
 
         //Title text
         $this->add_control(
-			'abcbiz_elementor_portfolio_title_text',
+			'abcbiz_elementor_imghover_title_text',
 			[
 				'label' => esc_html__( 'Title Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -70,7 +70,7 @@ class Main extends BaseWidget
       
         //Sub Title text
         $this->add_control(
-			'abcbiz_elementor_portfolio_sub_title_text',
+			'abcbiz_elementor_imghover_sub_title_text',
 			[
 				'label' => esc_html__( 'Sub Title Text', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
@@ -78,11 +78,11 @@ class Main extends BaseWidget
 			]
 		);
 
-        //Portfolio Link
+        //Img Hover Link
         $this->add_control(
-			'abcbiz_elementor_portfolio_link',
+			'abcbiz_elementor_imghover_link',
 			[
-				'label' => esc_html__( 'Portfolio Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Img Hover Link', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -98,7 +98,7 @@ class Main extends BaseWidget
 
           // start of team member style section
           $this->start_controls_section(
-            'abcbiz_elementor_portfolio_style_section',
+            'abcbiz_elementor_imghover_style_section',
             [
                 'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
@@ -107,7 +107,7 @@ class Main extends BaseWidget
         
          //Title top/bottom Position
          $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_title_top_post',
+			'abcbiz_elementor_imghover_title_top_post',
 			[
 				'label' => esc_html__( 'Title Top Position', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
@@ -124,14 +124,14 @@ class Main extends BaseWidget
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}} h3.abcbiz-portfolio-title' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} h3.abcbiz-img-hover-title' => 'top: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
          //Title left/right Position
          $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_title_left_post',
+			'abcbiz_elementor_imghover_title_left_post',
 			[
 				'label' => esc_html__( 'Title Left Position', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
@@ -148,14 +148,14 @@ class Main extends BaseWidget
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}} h3.abcbiz-portfolio-title' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} h3.abcbiz-img-hover-title' => 'left: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
          //Sub Title top/bottom Position
          $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_sub_title_top_post',
+			'abcbiz_elementor_imghover_sub_title_top_post',
 			[
 				'label' => esc_html__( 'Sub Title Top Position', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
@@ -172,14 +172,14 @@ class Main extends BaseWidget
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} p.abcbiz-img-hover-subtitle' => 'top: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
          //Sub Title left/right Position
          $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_sub_title_left_post',
+			'abcbiz_elementor_imghover_sub_title_left_post',
 			[
 				'label' => esc_html__( 'Sub Title Left Position', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
@@ -196,7 +196,7 @@ class Main extends BaseWidget
 					'size' => 0,
 				],
 				'selectors' => [
-					'{{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} p.abcbiz-img-hover-subtitle' => 'left: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -205,9 +205,9 @@ class Main extends BaseWidget
          $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abcbiz_elementor_portfolio_title_typography',
+                'name' => 'abcbiz_elementor_imghover_title_typography',
                 'label' => esc_html__('Title Typography', 'abcbiz-multi'),
-                'selector' =>  '{{WRAPPER}} h3.abcbiz-portfolio-title',
+                'selector' =>  '{{WRAPPER}} h3.abcbiz-img-hover-title',
             ]
         );
 
@@ -215,47 +215,47 @@ class Main extends BaseWidget
          $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abcbiz_elementor_portfolio_sub_title_typography',
+                'name' => 'abcbiz_elementor_imghover_sub_title_typography',
                 'label' => esc_html__('Sub Title Typography', 'abcbiz-multi'),
-                'selector' =>  '{{WRAPPER}} p.abcbiz-portfolio-subtitle',
+                'selector' =>  '{{WRAPPER}} p.abcbiz-img-hover-subtitle',
             ]
         );
 
         // Title color
         $this->add_control(
-            'abcbiz_elementor_portfolio_title_color',
+            'abcbiz_elementor_imghover_title_color',
             [
                 'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} h3.abcbiz-portfolio-title' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} h3.abcbiz-img-hover-title' => 'color: {{VALUE}};',
                 ],
             ]
         );
 
         // Sub Title color
         $this->add_control(
-            'abcbiz_elementor_portfolio_sub_title_color',
+            'abcbiz_elementor_imghover_sub_title_color',
             [
                 'label' => esc_html__('Sub Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#cccccc',
                 'selectors' => [
-                    '{{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} p.abcbiz-img-hover-subtitle' => 'color: {{VALUE}};',
                 ],
             ]
         ); 
 
         // Overflow color
         $this->add_control(
-            'abcbiz_elementor_portfolio_overflow_color',
+            'abcbiz_elementor_imghover_overflow_color',
             [
                 'label' => esc_html__('Overflow Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => 'rgba(0, 0, 0, 0.5)',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-portfolio-overlay' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-img-hover-overlay' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -264,14 +264,14 @@ class Main extends BaseWidget
         $this->add_group_control(
 			\Elementor\Group_Control_Border::get_type(),
 			[
-				'name' => 'abcbiz_elementor_portfolio_img_border',
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-portfolio-item img',
+				'name' => 'abcbiz_elementor_imghover_img_border',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-img-hover-item img',
 			]
 		);
 
         // Image Border Radius
         $this->add_control(
-			'abcbiz_elementor_portfolio_img_border_radius',
+			'abcbiz_elementor_imghover_img_border_radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
@@ -285,9 +285,9 @@ class Main extends BaseWidget
 					'isLinked' => true,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-portfolio-item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .abcbiz-portfolio-overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                    '{{WRAPPER}} .abcbiz-elementor-portfolio-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-img-hover-item img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-img-hover-overlay' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-elementor-img-hover-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);

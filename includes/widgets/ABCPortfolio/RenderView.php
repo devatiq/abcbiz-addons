@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Work Box Widget.
+ * Render View file for ABC Portfolio
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 

@@ -152,7 +152,7 @@
     width: 100%;
     height: auto;
     display: block;
-    transition: transform 0.3s ease;
+    transition: transform 0.4s ease;
 }
 
 .abcbiz-elementor-portfolio-item:hover img {
@@ -167,7 +167,7 @@
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.5);
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.4s ease;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -191,6 +191,66 @@
 }
 
 .abcbiz-portfolio-subtitle {
+    font-size: 1em;
+    color: #ccc;
+    position: relative;
+}
+
+/*----------------------------------------------
+ * Image Hover
+ * ---------------------------------------------*/
+.abcbiz-elementor-img-hover-area {
+    position: relative;
+}
+
+.abcbiz-elementor-img-hover-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.abcbiz-elementor-img-hover-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.abcbiz-elementor-img-hover-item:hover img {
+    transform: scale(1.1);
+}
+
+.abcbiz-img-hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+}
+
+.abcbiz-elementor-img-hover-item:hover .abcbiz-img-hover-overlay {
+    opacity: 1;
+}
+
+.abcbiz-img-hover-title,
+.abcbiz-img-hover-subtitle {
+    text-align: left;
+    color: #fff;
+    margin: 5px 0;
+}
+
+.abcbiz-img-hover-title {
+    font-size: 1.5em;
+    position: relative;
+}
+
+.abcbiz-img-hover-subtitle {
     font-size: 1em;
     color: #ccc;
     position: relative;

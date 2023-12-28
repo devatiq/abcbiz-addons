@@ -39,6 +39,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCCounter\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCFeturedImg\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCImgHover\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
