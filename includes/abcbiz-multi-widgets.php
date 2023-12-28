@@ -35,26 +35,81 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \includes\widgets\ABCCommentForm\Main::class;
 		}
 
-		  // Add other widgets that are always active
-		   $abcbiz_widgets[] = \includes\widgets\ABCCounter\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCFeturedImg\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCImgHover\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPricingTable\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCRecentPost\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCRelatedPost\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCSearchForm\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCSecTitle\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCSkillBar\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCTagInfo\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
+		if (get_option('abcbiz_counter_up_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCCounter\Main::class;
+		}
+
+		if (get_option('abcbiz_feat_img_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCFeturedImg\Main::class;
+		}
+
+		if (get_option('abcbiz_icon_box_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
+		}
+
+		if (get_option('abcbiz_img_hover_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCImgHover\Main::class;
+		}
+
+		if (get_option('abcbiz_page_title_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
+		}
+
+		if (get_option('abcbiz_abc_popup_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
+		}
+
+		if (get_option('abcbiz_portfolio_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
+		}
+
+		if (get_option('abcbiz_post_meta_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
+		}
+
+		if (get_option('abcbiz_post_title_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
+		}
+
+		if (get_option('abcbiz_pricing_table_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCPricingTable\Main::class;
+		}
+
+		if (get_option('abcbiz_recent_post_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCRecentPost\Main::class;
+		}
+
+		if (get_option('abcbiz_related_post_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCRelatedPost\Main::class;
+		}
+
+		if (get_option('abcbiz_search_form_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCSearchForm\Main::class;
+		}
+
+		if (get_option('abcbiz_sec_title_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCSecTitle\Main::class;
+		}
+
+		if (get_option('abcbiz_shape_anim_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
+		}
+
+		if (get_option('abcbiz_skill_bar_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCSkillBar\Main::class;
+		}
+
+		if (get_option('abcbiz_social_share_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
+		}
+
+		if (get_option('abcbiz_tag_info_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCTagInfo\Main::class;
+		}
+
+		if (get_option('abcbiz_team_member_widget_field') == 1) {
+			$abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
+		}
 
 			//WooCommerce Widgets
 			//\inc\widgets\WooCommerce\ABCProductTitle\Main::class,
