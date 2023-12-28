@@ -273,9 +273,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_portfolio_img_border',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => [ 'px' ],
+				'size_units' => [ 'px', '%' ],
 				'default' => [
 					'top' => 0,
 					'right' => 0,
