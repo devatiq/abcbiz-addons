@@ -41,6 +41,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
+		   $abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCPricingTable\Main::class;
@@ -53,7 +54,6 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		   $abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCTagInfo\Main::class;
 		   $abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
-		   $abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
 
 			//WooCommerce Widgets
 			//\inc\widgets\WooCommerce\ABCProductTitle\Main::class,
