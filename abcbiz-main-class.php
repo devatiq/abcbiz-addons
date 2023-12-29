@@ -14,39 +14,21 @@ class ABCBizMultiElementorPack
 
 	/**
 	 * Minimum Elementor Version
-	 *
-	 * @since 1.0.0
-	 * @var string Minimum Elementor version required to run the addon.
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '3.5.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.15.0';
 
 	/**
 	 * Minimum PHP Version
-	 *
-	 * @since 1.0.0
-	 * @var string Minimum PHP version required to run the addon.
 	 */
 	const MINIMUM_PHP_VERSION = '7.4';
 
 	/**
 	 * Instance
-	 *
-	 * @since 1.0.0
-	 * @access private
-	 * @static
-	 * @var \Elementor_Test_Addon\Plugin The single instance of the class.
 	 */
 	private static $_instance = null;
 
 	/**
-	 * Instance
-	 *
 	 * Ensures only one instance of the class is loaded or can be loaded.
-	 *
-	 * @since 1.0.0
-	 * @access public
-	 * @static
-	 * @return \Elementor_Test_Addon\Plugin An instance of the class.
 	 */
 	public static function instance()
 	{
@@ -56,16 +38,10 @@ class ABCBizMultiElementorPack
 		}
 		return self::$_instance;
 	}
-
-
+	
 	/**
-	 * Constructor
-	 *
 	 * Perform some compatibility checks to make sure basic requirements are meet.
 	 * If all compatibility checks pass, initialize the functionality.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function __construct()
 	{
@@ -116,22 +92,11 @@ class ABCBizMultiElementorPack
 	public function setConstants()
 	{
 		define('AbcBizElementor_Version', $this->version);
-		define('AbcBizElementor_File', __FILE__);
 		define('AbcBizElementor_Name', 'ABCBiz Multi Addons Pro For Elementor');
-		define('AbcBizElementor_Path', dirname(AbcBizElementor_File));
-		define('AbcBizElementor_Inc', AbcBizElementor_Path . '/includes');
-		define('AbcBizElementor_Admin', AbcBizElementor_Inc . '/admin');
-		define('AbcBizElementor_URL', plugins_url('', AbcBizElementor_File));
-		define('AbcBizElementor_Assets', AbcBizElementor_URL . '/assets');
 	}
 
 	/**
 	 * Compatibility Checks
-	 *
-	 * Checks whether the site meets the addon requirement.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function is_compatible()
 	{
@@ -158,12 +123,7 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * Admin notice
-	 *
 	 * Warning when the site doesn't have Elementor installed or activated.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function admin_notice_missing_main_plugin()
 	{
@@ -181,12 +141,7 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * Admin notice
-	 *
 	 * Warning when the site doesn't have a minimum required Elementor version.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function admin_notice_minimum_elementor_version()
 	{
@@ -205,12 +160,7 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * Admin notice
-	 *
 	 * Warning when the site doesn't have a minimum required PHP version.
-	 *
-	 * @since 1.0.0
-	 * @access public
 	 */
 	public function admin_notice_minimum_php_version()
 	{
@@ -237,7 +187,6 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * activate.
 	 * function that runs on plugin activation
 	 */
 	public function activate()
@@ -255,7 +204,6 @@ class ABCBizMultiElementorPack
 	}
 
 	/**
-	 * deactivate.
 	 * function that runs on plugin deactivation
 	 */
 	public function deactivate()
@@ -267,7 +215,7 @@ class ABCBizMultiElementorPack
 	// autoload files for load classes dynamically
 	public function autoload($class_name)
 	{
-		// Define the base namespace for your classes
+		// Define the base namespace for the classes
 		$base_namespace = 'includes\\widgets\\';
 
 		// Check if the class uses the base namespace
@@ -281,13 +229,12 @@ class ABCBizMultiElementorPack
 			}
 		}
 	}
+
 	/**
 	 * Register Widgets
 	 */
 	public function register_widgets($abcbiz_widgets_manager)
 	{
-
-		// Include Widget configurations
 		require_once AbcBizElementor_Path . '/includes/widgets/BaseWidgets.php';
 		require_once AbcBizElementor_Path . '/includes/abcbiz-multi-widgets.php';
 
