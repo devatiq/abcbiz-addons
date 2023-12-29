@@ -69,7 +69,7 @@ if (!function_exists('abcbiz_elementor_add_widget_categories')) {
             'abcbiz-category',
             [
                 'title' => esc_html__('ABCBiz Multi Elements', 'abcbiz-multi'),
-                'icon' => 'fa fa-plug',
+                'icon' => 'eicon-kit-plugins',
             ]
         );
     }
