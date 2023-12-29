@@ -1,7 +1,9 @@
 <?php 
-namespace inc\widgets\WooCommerce\ABCProductSummery;
+namespace Includes\widgets\WooCommerce\ABCProductSummery;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -13,11 +15,11 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-wc-product-summery';
+		protected $name = 'abcbiz-wc-product-summery';
 		protected $title = 'ABC Product Short Descriptio';
 		protected $icon = 'eicon-product-description';
 		protected $categories = [
-			'abc-wc-category'
+			'abcbiz-wc-category'
 		];		
 		protected $keywords = [
 			'abc', 'product', 'summery', 'short', 'description',
@@ -35,36 +37,36 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abc-elementor-product-summery',
+			'abcbiz_elementor_wc_product_summery',
 			[
-				'label' => esc_html__( 'Image Alignment', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Image Alignment', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		//Alignment
 		$this->add_responsive_control(
-			'abc_elementor_product_summery_align',
+			'abcbiz_elementor_wc_product_summery_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-product-summery-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-summery-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
@@ -74,18 +76,18 @@ class Main extends BaseWidget {
 
 		//Style Section
 		$this->start_controls_section(
-            'abc-elementor-product-summery-style',
+            'abcbiz_elementor_wc_product_summery_style',
             [
-                'label' => esc_html__('Style', 'ABCMAFTH'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
 		//image Width
 		$this->add_responsive_control(
-            'abc-elementor-product-summery-size',
+            'abcbiz_elementor_wc_product_summery_size',
             [
-                'label' => esc_html__('Image Width', 'ABCMAFTH'),
+                'label' => esc_html__('Image Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
                 'range' => [
@@ -100,7 +102,7 @@ class Main extends BaseWidget {
 					'size' => 100,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-product-summery-area img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-summery-area img' => 'width: {{SIZE}}{{UNIT}};',
 				],
             
             ]
@@ -110,12 +112,10 @@ class Main extends BaseWidget {
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
+
         include 'renderview.php';
     }
 }

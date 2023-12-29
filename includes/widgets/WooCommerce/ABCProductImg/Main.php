@@ -1,23 +1,22 @@
 <?php 
-namespace inc\widgets\WooCommerce\ABCProductImg;
+namespace Includes\widgets\WooCommerce\ABCProductImg;
 
-use Inc\Widgets\BaseWidget;
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
+use Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
 
-/**
- * Elementor List Widget.
- * @since 1.0.0
- */
+
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abc-wc-featured-image';
+		protected $name = 'abcbiz-wc-featured-image';
 		protected $title = 'ABC Product Image';
 		protected $icon = 'eicon-product-images';
 		protected $categories = [
-			'abc-wc-category'
+			'abcbiz-wc-category'
 		];		
 		protected $keywords = [
 			'abc', 'product', 'image', 'product image',
@@ -26,66 +25,59 @@ class Main extends BaseWidget {
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
-		//Template
 		$this->start_controls_section(
-			'abc-elementor-product-img',
+			'abcbiz_elementor_wc_product_img_setting',
 			[
-				'label' => esc_html__( 'Image Alignment', 'ABCMAFTH' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		//Alignment
 		$this->add_responsive_control(
-			'abc_elementor_product_img_align',
+			'abcbiz_elementor_wc_product_img_align',
 			[
-				'label' => esc_html__( 'Alignment', 'ABCMAFTH'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'ABCMAFTH' ),
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-product-img-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-product-img-area' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
 		
-
 		$this->end_controls_section();
 
 		//Style Section
 		$this->start_controls_section(
-            'abc-elementor-product-img-style',
+            'abcbiz_elementor_wc_product_img_style',
             [
-                'label' => esc_html__('Style', 'ABCMAFTH'),
+                'label' => esc_html__('Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
 		//image Width
 		$this->add_responsive_control(
-            'abc-elementor-product-img-size',
+            'abcbiz_elementor_wc_product_img_size',
             [
-                'label' => esc_html__('Image Width', 'ABCMAFTH'),
+                'label' => esc_html__('Image Width', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
                 'range' => [
@@ -100,22 +92,50 @@ class Main extends BaseWidget {
 					'size' => 100,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abc-elementor-product-img-area img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-product-img-area img' => 'width: {{SIZE}}{{UNIT}};',
 				],
             
             ]
         );
 
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_product_img_border',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-product-img-area img',
+			]
+		);
+
+		$this->add_control(
+			'abcbiz_elementor_wc_product_img_border_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%' ],
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => true,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-product-img-area img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
     }
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
-     */
+	 * */
+
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'renderview.php';
     }
 }

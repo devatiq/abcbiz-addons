@@ -1,4 +1,7 @@
 <?php
+/*
+Plugin Widgets
+*/
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
         $abcbiz_widgets = [];
@@ -111,10 +114,11 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
 		}
 
-			//WooCommerce Widgets
-			//\inc\widgets\WooCommerce\ABCProductTitle\Main::class,
-			//\inc\widgets\WooCommerce\ABCProductImg\Main::class,
-			//\inc\widgets\WooCommerce\ABCProductSummery\Main::class,
+		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
+
+		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-multi-wc-widgets.php';
+		
+		}
 
 		foreach ($abcbiz_widgets as $widget_class) {
 			$abcbiz_widgets_manager->register(new $widget_class());

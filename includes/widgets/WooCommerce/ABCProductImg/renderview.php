@@ -2,23 +2,20 @@
 /**
  * Render View for WooCommerce Product Image
  */
+ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
- if (!defined('ABSPATH')) {
-    exit;
-}
+$abcbiz_post_id = get_the_ID();
 
-$post_id = get_the_ID();
+$abcbiz_image_url = get_the_post_thumbnail_url($abcbiz_post_id, 'full');
 
-$image_url = get_the_post_thumbnail_url($post_id, 'full');
-
-if ($image_url) {
+if ($abcbiz_image_url) {
     ?>
-    <div class="abc-elementor-product-img-area">
-        <img src="<?php echo esc_url($image_url); ?>" alt="<?php echo esc_attr(get_the_title($post_id)); ?>">
+    <div class="abcbiz-elementor-product-img-area">
+        <img src="<?php echo esc_url($abcbiz_image_url); ?>" alt="<?php echo esc_attr(get_the_title($abcbiz_post_id)); ?>">
     </div>
     <?php
 } else {
-    echo esc_html__('No product image found', 'ABCMAFTH');
+    echo esc_html__('No product image found', 'abcbiz-multi');
 }
 ?>
 

@@ -45,6 +45,11 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_enqueue_style('abcbiz-animation', AbcBizElementor_Assets . "/css/animation.css");
         wp_enqueue_style('abcbiz-elementor-style', AbcBizElementor_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
+        // Check if WooCommerce plugin is active
+        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+            wp_enqueue_style('abcbiz-elementor-wc-style', AbcBizElementor_Assets . "/css/wc-style.css");
+        }
 
         wp_enqueue_script('abcbiz-magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
         wp_enqueue_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), '1.0', true);
