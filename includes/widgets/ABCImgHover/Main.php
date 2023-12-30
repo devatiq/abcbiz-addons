@@ -105,6 +105,30 @@ class Main extends BaseWidget
             ]
         );
         
+         //Image Width
+         $this->add_responsive_control(
+			'abcbiz_elementor_imghover_width',
+			[
+				'label' => esc_html__( 'Image Width', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px','%' ],
+				'range' => [
+					'px' => [
+						'min' => 100,
+						'max' => 1200,
+						'step' => 5,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 1000,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-img-hover-item img, {{WRAPPER}} .abcbiz-elementor-img-hover-item' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
          //Title top/bottom Position
          $this->add_responsive_control(
 			'abcbiz_elementor_imghover_title_top_post',

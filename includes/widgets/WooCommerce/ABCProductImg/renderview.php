@@ -1,22 +1,28 @@
 <?php
 /**
- * Render View for WooCommerce Product Image
+ * Render View for WooCommerce Product Image with Gallery and Zoom
  */
- if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+global $product;
 $abcbiz_post_id = get_the_ID();
 
-$abcbiz_image_url = get_the_post_thumbnail_url($abcbiz_post_id, 'full');
-
-if ($abcbiz_image_url) {
-    ?>
-    <div class="abcbiz-elementor-product-img-area">
-        <img src="<?php echo esc_url($abcbiz_image_url); ?>" alt="<?php echo esc_attr(get_the_title($abcbiz_post_id)); ?>">
-    </div>
-    <?php
+if (is_a($product, 'WC_Product')) {
+    wc_get_template_part('single-product/product-image');
 } else {
-    echo esc_html__('No product image found', 'abcbiz-multi');
+    echo esc_html__('This product does not exist', 'abcbiz-multi');
 }
+
+
+add_action( 'wp_enqueue_scripts', 'enqueue_woocommerce_scripts' );
+
+function enqueue_woocommerce_scripts() {
+    if ( is_product() || is_woocommerce() ) {
+        wp_enqueue_script( 'wc-single-product' );
+    }
+}
+
+
 ?>
 
 
