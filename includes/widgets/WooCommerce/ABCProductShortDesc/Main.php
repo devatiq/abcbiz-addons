@@ -1,5 +1,5 @@
 <?php 
-namespace Includes\widgets\WooCommerce\ABCProductSummery;
+namespace Includes\widgets\WooCommerce\ABCProductShortDesc;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -15,8 +15,8 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abcbiz-wc-product-summery';
-		protected $title = 'ABC Product Short Descriptio';
+		protected $name = 'abcbiz-wc-product-short-desc';
+		protected $title = 'ABC Product Short Description';
 		protected $icon = 'eicon-product-description';
 		protected $categories = [
 			'abcbiz-wc-category'
@@ -28,25 +28,20 @@ class Main extends BaseWidget {
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
 		$this->start_controls_section(
-			'abcbiz_elementor_wc_product_summery',
+			'abcbiz_elementor_wc_product_short_desc',
 			[
-				'label' => esc_html__( 'Image Alignment', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
 		//Alignment
 		$this->add_responsive_control(
-			'abcbiz_elementor_wc_product_summery_align',
+			'abcbiz_elementor_wc_product_short_desc_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -66,47 +61,34 @@ class Main extends BaseWidget {
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-summery-area' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-short-desc' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
-		
 
-		$this->end_controls_section();
-
-		//Style Section
-		$this->start_controls_section(
-            'abcbiz_elementor_wc_product_summery_style',
-            [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
-                'tab' => Controls_Manager::TAB_STYLE,
-            ]
-        );
-
-		//image Width
-		$this->add_responsive_control(
-            'abcbiz_elementor_wc_product_summery_size',
-            [
-                'label' => esc_html__('Image Width', 'abcbiz-multi'),
-                'type' => Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%'],
-                'range' => [
-					'px' => [
-						'min' => 10,
-						'max' => 1000,
-						'step' => 10,
-					],
-				],
-				'default' => [
-					'unit' => '%',
-					'size' => 100,
-				],
+		$this->add_control(
+			'abcbiz_elementor_wc_product_short_desc_color',
+			[
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#555555',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-summery-area img' => 'width: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-short-desc' => 'color: {{VALUE}}',
 				],
-            
-            ]
-        );
+			]
+		);
+
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_product_short_desc_typography',
+				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-short-desc',
+			]
+		);
+
+        $this->end_controls_section();
+		
 
     }
 
