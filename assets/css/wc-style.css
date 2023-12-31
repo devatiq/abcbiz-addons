@@ -92,6 +92,37 @@
    padding: 5px;
 }
 
+/*----------------------------------------------
+ *Product Meta: 
+ * ---------------------------------------------*/
+
+.abcbiz-product-sku, 
+.abcbiz-product-categories, 
+.abcbiz-product-tags {
+   display: flex;
+   justify-content: space-between;
+   margin-bottom: 5px;
+}
+
+.abcbiz-product-sku .label, 
+.abcbiz-product-categories .label, 
+.abcbiz-product-tags .label {
+   font-weight: bold;
+   flex-basis: 21%;
+   text-align: left;
+}
+
+.abcbiz-product-sku .value, 
+.abcbiz-product-categories .value, 
+.abcbiz-product-tags .value {
+   flex-basis: 79%;
+   text-align: left;
+}
+
+.abcbiz-meta-divider {
+   width: 70%;
+   height: 2px;
+}
 
 
 /*----------------------------------------------
