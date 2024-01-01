@@ -22,210 +22,211 @@ class Main extends BaseWidget {
 			'abcbiz-wc-category'
 		];		
 		protected $keywords = [
-			'abc', 'product', 'meta'
+			'abc', 'product', 'tabs'
 		];
-
 
 	/**
 	 * Register list widget controls.
 	 */
 	protected function register_controls() {
-		//Template
+
 		$this->start_controls_section(
-			'abcbiz_elementor_wc_product_tabs',
+			'abcbiz_elementor_wc_product_tabs_style',
 			[
-				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
+				'label' => esc_html__( 'Tabs Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
-		//SKU
-        $this->add_control(
-            'abcbiz_elementor_wc_product_tabs_sku_switch',
-            [
-                'label' => esc_html__('Display SKU?', 'abcbiz-multi'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-            ]
-        );
-
-		//Category
-        $this->add_control(
-            'abcbiz_elementor_wc_product_tabs_category_switch',
-            [
-                'label' => esc_html__('Display Category?', 'abcbiz-multi'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-            ]
-        );
-
-		//Tags
-        $this->add_control(
-            'abcbiz_elementor_wc_product_tabs_tags_switch',
-            [
-                'label' => esc_html__('Display Tags?', 'abcbiz-multi'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-            ]
-        );
-
-		//Divider
-        $this->add_control(
-            'abcbiz_elementor_wc_product_tabs_div_switch',
-            [
-                'label' => esc_html__('Display Divider?', 'abcbiz-multi'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-            ]
-        );
-
-		//SKU Color
+		//Notice
 		$this->add_control(
-			'abcbiz_elementor_wc_product_tabs_sku_color',
+			'abcbiz_wc_style_warning',
 			[
-				'label' => esc_html__( 'SKU Color', 'abcbiz-multi' ),
+				'type' => Controls_Manager::RAW_HTML,
+				'raw' => esc_html__("Sometimes, the appearance of this widget might be influenced by the theme and other plugins you're using. If you're having trouble with how it looks, a good first step is to try using a simpler theme and turning off any related plugins.", 'abcbiz-multi'),
+				'content_classes' => 'abcbiz-elementor-wc-product-tabs-info-message',
+			]
+		);
+
+		//Typoghraphy
+		$this->add_group_control(
+				Group_Control_Typography::get_type(),
+				[
+					'name' => 'abcbiz_elementor_wc_product_tabs_typography',
+					'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+					'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li a',
+				]
+			);
+
+		$this->start_controls_tabs(
+			'abcbiz_elementor_wc_product_tabs_style_tabs'
+		);
+
+		$this->start_controls_tab(
+			'abcbiz_elementor_wc_product_tabs_style_normal_tab',
+			[
+				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+			]
+		);
+
+		//Tabs Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_tabs_color',
+			[
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-sku' => 'color: {{VALUE}}',
-				],
-
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_sku_switch' => 'yes',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li a' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		//SKU typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'abcbiz_elementor_wc_product_tabs_sku_typography',
-				'label' => esc_html__( 'SKU Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-sku',
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_sku_switch' => 'yes',
-				],
-			]
-		);
-
-		//Category Color
+		//Background Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_tabs_cat_color',
+			'abcbiz_elementor_wc_product_tabs_bg_color',
 			[
-				'label' => esc_html__( 'Category Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#f5f5f5',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li a' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'abcbiz_elementor_wc_product_tabs_style_hover_tab',
+			[
+				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+			]
+		);
+
+		//Tabs Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_tabs_hover_color',
+			[
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-categories, {{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-categories a' => 'color: {{VALUE}}',
-				],
-
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_category_switch' => 'yes',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li:hover a' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		//Category typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'abcbiz_elementor_wc_product_tabs_cat_typography',
-				'label' => esc_html__( 'Category Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-categories',
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_category_switch' => 'yes',
-				],
-			]
-		);
-
-		//Tags Color
+		//Hover Background Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_tabs_tag_color',
+			'abcbiz_elementor_wc_product_tabs_bg_hover_color',
 			[
-				'label' => esc_html__( 'Tags Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#333333',
+				'default' => '#eeeeee',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-tags, {{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-tags a' => 'color: {{VALUE}}',
-				],
-
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_tags_switch' => 'yes',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li:hover a' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
 
-		//Tags typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		$this->end_controls_tab();
+
+		$this->start_controls_tab(
+			'abcbiz_elementor_wc_product_tabs_style_active_tab',
 			[
-				'name' => 'abcbiz_elementor_wc_product_tabs_tag_typography',
-				'label' => esc_html__( 'Tags Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-product-tags',
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_tags_switch' => 'yes',
-				],
+				'label' => esc_html__( 'Active', 'abcbiz-multi' ),
 			]
 		);
 
-		//Tags Color
+		//Tabs Active Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_tabs_div_color',
+			'abcbiz_elementor_wc_product_tabs_active_color',
 			[
-				'label' => esc_html__( 'Divider Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#e6e6e6',
+				'default' => '#000',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-tabs-divider' => 'background-color: {{VALUE}}',
-				],
-
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_div_switch' => 'yes',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li.active a' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
+		//Active Background Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_tabs_div_space',
+			'abcbiz_elementor_wc_product_tabs_bg_active_color',
 			[
-				'label' => esc_html__( 'Divider Space', 'abcbiz-multi' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => ['px'],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 50,
-						'step' => 1,
-					]
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 10,
-				],
+				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .abcbiz-tabs-divider' => 'margin-top: {{SIZE}}{{UNIT}}; margin-bottom: {{SIZE}}{{UNIT}};',
-				],
-
-				'condition' => [
-					'abcbiz_elementor_wc_product_tabs_div_switch' => 'yes',
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li.active a' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
+
+		$this->end_controls_tab();
+		$this->end_controls_tabs();
 
         $this->end_controls_section();
+
+
+		$this->start_controls_section(
+			'abcbiz_elementor_wc_product_tabs_panel_style',
+			[
+				'label' => esc_html__( 'Panel Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		//Title Typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_product_panel_title_typography',
+				'label' => esc_html__( 'Title Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel h2',
+			]
+		);
+
+		//Panel Title Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_tabs_panel_title_color',
+			[
+				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel h2' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Content Typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_product_panel_content_typography',
+				'label' => esc_html__( 'Content Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel',
+			]
+		);
+
+		//Content Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_tabs_panel_content_color',
+			[
+				'label' => esc_html__( 'Content Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+
+		$this->end_controls_section();
 		
 
     }

@@ -68,7 +68,61 @@
 }
 
 /*----------------------------------------------
- *Responsive Adjustments
+ *Product Tabs
+ * ---------------------------------------------*/
+ .abcbiz-elementor-wc-product-tabs .woocommerce-tabs {
+   display: block;
+}
+
+.abcbiz-elementor-wc-product-tabs ul.tabs {
+   display: flex;
+   list-style-type: none;
+   padding-left: 0;
+   border-bottom: 1px solid #ddd;
+   margin-bottom: 20px;
+}
+
+.abcbiz-elementor-wc-product-tabs ul.tabs li {
+   margin-right: 10px;
+}
+
+.abcbiz-elementor-wc-product-tabs ul.tabs li a {
+   display: block;
+   padding: 10px 15px;
+   background-color: #f5f5f5;
+   color: #333;
+   border: 1px solid #ddd;
+   border-bottom: none;
+   text-decoration: none;
+   border-radius: 4px;
+   transition: all 0.4s;
+}
+
+.abcbiz-elementor-wc-product-tabs ul.tabs li a:hover {
+   background-color: #eee;
+}
+
+.abcbiz-elementor-wc-product-tabs ul.tabs li.active a {
+   background-color: #fff;
+   color: #000;
+   border-color: #ddd;
+   border-bottom: 1px solid #fff;
+}
+
+.abcbiz-elementor-wc-product-tabs .panel {
+   border: 1px solid #ddd;
+   padding: 20px;
+   background-color: #fff;
+}
+
+.abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel h2 {
+   font-size: 25px;
+   line-height: 1.2;
+   font-weight: 600;
+}
+
+/*----------------------------------------------
+ *Product Price
  * ---------------------------------------------*/
 
 .abcbiz-elementor-wc-product-price .price {
@@ -93,7 +147,7 @@
 }
 
 /*----------------------------------------------
- *Product Meta: 
+ *Product Meta
  * ---------------------------------------------*/
 
 .abcbiz-product-sku, 
@@ -122,6 +176,21 @@
 .abcbiz-meta-divider {
    width: 70%;
    height: 2px;
+}
+
+/*----------------------------------------------
+ *Related Products
+ * ---------------------------------------------*/
+h2.abcbiz-wc-related-product-title {
+   margin: 0 0 15px 0;
+   font-size: 25px;
+   line-height: 1.2;
+}
+
+.abcbiz-wc-related-products-area h2.woocommerce-loop-product__title {
+   margin: 0!important;
+   line-height: 1.2;
+   padding: 5px 0 !important;
 }
 
 

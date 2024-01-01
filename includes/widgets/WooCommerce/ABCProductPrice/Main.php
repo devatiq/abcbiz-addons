@@ -35,7 +35,7 @@ class Main extends BaseWidget {
 			'abcbiz_elementor_wc_product_price',
 			[
 				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
+				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 

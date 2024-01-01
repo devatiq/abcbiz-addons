@@ -32,7 +32,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
         </div>
     <?php endif; ?>
 
-    <?php if ($abcbiz_show_divider && $abcbiz_show_category) : ?>
+    <?php if ($abcbiz_show_divider && $abcbiz_show_category && $abcbiz_show_sku) : ?>
     <div class="abcbiz-meta-divider"></div>
     <?php endif; ?>
 

@@ -83,6 +83,7 @@ class ABCBizMultiElementorPack
 	public function include_external_file()
 	{
 		require_once AbcBizElementor_Path . '/includes/admin/abcbiz-metabox.php';
+		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-widgets-functions.php';
 	}
 
 	/**

@@ -9,3 +9,14 @@
 #elementor-panel-category-abcbiz-wc-category {
     order: -1;
 }
+
+.abcbiz-elementor-wc-product-tabs-info-message {
+    background: #eee;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.4;
+    font-style: italic;
+    border-left: 3px solid blueviolet;
+    padding: 10px 5px;
+
+}
