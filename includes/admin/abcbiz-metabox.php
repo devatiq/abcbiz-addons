@@ -58,3 +58,63 @@ function abcbiz_multi_excerpt_metabox_content($post) {
 
     <?php
 }
+
+//WooCommerce Code
+if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
+    // Product Description Meta Box
+    function abcbiz_add_wc_product_meta_box() {
+        add_meta_box(
+            'abcbiz_wc_product_description',
+            'ABCBiz Product Description Tab',
+            'abcbiz_wc_product_meta_box_html',
+            'product',
+            'advanced',
+            'high'
+        );
+    }
+    add_action('add_meta_boxes', 'abcbiz_add_wc_product_meta_box', 5);
+
+    function abcbiz_wc_product_meta_box_html($post) {
+        echo '<p><strong>' . esc_html__('Note:', 'abcbiz-multi') . '</strong> ' . esc_html__('This area is specifically for ABCBiz Elementor Addons Products description tab contents.', 'abcbiz-multi') . '</p>';
+        $content = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
+        wp_editor(
+            htmlspecialchars_decode($content),
+            'abcbiz_wc_product_description_editor',
+            array(
+                'textarea_name' => 'abcbiz_wc_product_description',
+                'editor_height' => 200,
+                'media_buttons' => true
+            )
+        );
+    }
+
+    function abcbiz_save_postdata($post_id) {
+        if (array_key_exists('abcbiz_wc_product_description', $_POST)) {
+            update_post_meta(
+                $post_id,
+                '_abcbiz_wc_product_description',
+                wp_kses_post($_POST['abcbiz_wc_product_description'])
+            );
+        }
+    }
+    add_action('save_post', 'abcbiz_save_postdata');
+
+    // Overwrite Description Tabs
+    add_filter('woocommerce_product_tabs', 'abcbiz_override_description_tab', 98);
+    function abcbiz_override_description_tab($tabs) {
+        if (isset($tabs['description'])) {
+            $tabs['description']['callback'] = 'abcbiz_wc_product_description_tab_content';
+        }
+        return $tabs;
+    }
+
+    function abcbiz_wc_product_description_tab_content() {
+        global $post;
+        $abcbiz_wc_custom_description = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
+        if (empty($abcbiz_wc_custom_description)) {
+            echo '<p class="abcbiz-description-notice">' . esc_html__('Please add product description content for this tab using the description box in the page editor.', 'abcbiz-multi') . '</p>';
+        } else {
+            echo wp_kses_post(wpautop($abcbiz_wc_custom_description));
+        }
+    }
+}
