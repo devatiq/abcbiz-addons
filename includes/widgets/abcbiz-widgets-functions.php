@@ -16,11 +16,40 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
     function abcbiz_wc_product_description_tab_content() {
         global $post;
         $abcbiz_wc_custom_description = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
+    
         if (empty($abcbiz_wc_custom_description)) {
-            echo '<p class="abcbiz-description-notice">' . esc_html__('Please add product description content for this tab using the description box in the page editor.', 'abcbiz-multi') . '</p>';
+            // Get the edit post link
+            $edit_post_link = get_edit_post_link($post->ID);
+    
+            // Construct the message with the link
+            $message = sprintf(
+                wp_kses(
+                    __('Please add product description content for this tab using the description box in the <a href="%s">page editor</a>.', 'abcbiz-multi'),
+                    array( 'a' => array( 'href' => array() ) ) // Allow only 'a' tag with 'href' attribute
+                ),
+                esc_url($edit_post_link)
+            );
+    
+            echo '<p class="abcbiz-description-notice">' . $message . '</p>';
         } else {
             echo wp_kses_post(wpautop($abcbiz_wc_custom_description));
         }
     }
+    
 }
+
+ //cart fragments
+ function abcbiz_enqueue_cart_fragments() {
+    if ( function_exists( 'is_woocommerce' ) ) {
+        wp_enqueue_script( 'wc-cart-fragments' );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'abcbiz_enqueue_cart_fragments' );
+
+function abcbiz_get_cart_count() {
+    echo WC()->cart->get_cart_contents_count();
+    wp_die();
+}
+add_action('wp_ajax_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
+add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 

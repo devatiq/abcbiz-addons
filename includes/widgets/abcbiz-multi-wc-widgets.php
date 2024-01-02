@@ -6,6 +6,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
 $abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductAddToCart\Main::class;
+$abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductCartIcon\Main::class;
+$abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductCartPage\Main::class;
+$abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductCheckout\Main::class;
 $abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductImg\Main::class;
 $abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductMeta\Main::class;
 $abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductPrice\Main::class;
