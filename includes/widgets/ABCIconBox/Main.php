@@ -1,10 +1,10 @@
 <?php 
-namespace Includes\widgets\ABCIconBox;
+namespace ABCBiz\Includes\Widgets\ABCIconBox;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;

@@ -1,9 +1,9 @@
 <?php
-namespace Includes\Widgets\ABCTestimonials;
+namespace ABCBiz\Includes\Widgets\ABCTestimonials;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;

@@ -35,21 +35,15 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             echo wp_kses_post(wpautop($abcbiz_wc_custom_description));
         }
     }
-    
-}
 
- //cart fragments
- function abcbiz_enqueue_cart_fragments() {
-    if ( function_exists( 'is_woocommerce' ) ) {
-        wp_enqueue_script( 'wc-cart-fragments' );
-    }
-}
-add_action( 'wp_enqueue_scripts', 'abcbiz_enqueue_cart_fragments' );
-
+    //ajax cart icon count
 function abcbiz_get_cart_count() {
     echo WC()->cart->get_cart_contents_count();
     wp_die();
 }
 add_action('wp_ajax_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
+    
+}//end woocommerce code
+
 

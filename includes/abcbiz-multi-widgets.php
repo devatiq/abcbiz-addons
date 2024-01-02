@@ -4,114 +4,113 @@ Plugin Widgets
 */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-        $abcbiz_widgets = [];
+        $abcbiz_widgets = []; 
 
-		// Conditionally add widgets to the array based on the settings
           if (get_option('abcbiz_blockquote_widget_field') == 1) {
-          $abcbiz_widgets[] = \includes\widgets\ABCBlockquote\Main::class;
+          $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlockquote\Main::class;
         }
 		  if (get_option('abcbiz_blog_fancy_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCBlog\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlog\Main::class;
 		}
 		if (get_option('abcbiz_author_bio_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCBlogAuthor\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlogAuthor\Main::class;
 		}
 		if (get_option('abcbiz_blog_grid_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCBlogGrid\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlogGrid\Main::class;
 		}
 		if (get_option('abcbiz_blog_list_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCBlogList\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlogList\Main::class;
 		}
 		if (get_option('abcbiz_breadcrumb_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCBreadCrumb\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBreadCrumb\Main::class;
 		}
 		if (get_option('abcbiz_cat_list_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCCatInfo\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCatInfo\Main::class;
 		}
 		if (get_option('abcbiz_contact_form7_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCCF7\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCF7\Main::class;
 		}
 		if (get_option('abcbiz_circular_skill_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCCircularSkills\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCircularSkills\Main::class;
 		}
 		if (get_option('abcbiz_comment_form_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCCommentForm\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCommentForm\Main::class;
 		}
 
 		if (get_option('abcbiz_counter_up_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCCounter\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCounter\Main::class;
 		}
 
 		if (get_option('abcbiz_feat_img_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCFeturedImg\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFeturedImg\Main::class;
 		}
 
 		if (get_option('abcbiz_icon_box_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCIconBox\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCIconBox\Main::class;
 		}
 
 		if (get_option('abcbiz_img_hover_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCImgHover\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCImgHover\Main::class;
 		}
 
 		if (get_option('abcbiz_page_title_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPageTitle\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPageTitle\Main::class;
 		}
 
 		if (get_option('abcbiz_abc_popup_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPopup\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPopup\Main::class;
 		}
 
 		if (get_option('abcbiz_portfolio_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPortfolio\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPortfolio\Main::class;
 		}
 
 		if (get_option('abcbiz_post_meta_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPostInfo\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostInfo\Main::class;
 		}
 
 		if (get_option('abcbiz_post_title_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPostTitle\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostTitle\Main::class;
 		}
 
 		if (get_option('abcbiz_pricing_table_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCPricingTable\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPricingTable\Main::class;
 		}
 
 		if (get_option('abcbiz_recent_post_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCRecentPost\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCRecentPost\Main::class;
 		}
 
 		if (get_option('abcbiz_related_post_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCRelatedPost\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCRelatedPost\Main::class;
 		}
 
 		if (get_option('abcbiz_search_form_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCSearchForm\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSearchForm\Main::class;
 		}
 
 		if (get_option('abcbiz_sec_title_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCSecTitle\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSecTitle\Main::class;
 		}
 
 		if (get_option('abcbiz_shape_anim_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCShape\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCShape\Main::class;
 		}
 
 		if (get_option('abcbiz_skill_bar_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCSkillBar\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSkillBar\Main::class;
 		}
 
 		if (get_option('abcbiz_social_share_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCSocialShare\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSocialShare\Main::class;
 		}
 
 		if (get_option('abcbiz_tag_info_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCTagInfo\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTagInfo\Main::class;
 		}
 
 		if (get_option('abcbiz_team_member_widget_field') == 1) {
-			$abcbiz_widgets[] = \includes\widgets\ABCTeamMember\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTeamMember\Main::class;
 		}
 
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {

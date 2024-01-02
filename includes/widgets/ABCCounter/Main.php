@@ -1,9 +1,9 @@
 <?php
-namespace Includes\Widgets\ABCCounter;
+namespace ABCBiz\Includes\Widgets\ABCCounter;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
@@ -29,16 +29,8 @@ class Main extends BaseWidget
         return ['abcbiz-counter-up','abcbiz-jquery-appear', 'abcbiz-wapoints']; 
     }
 
-
-
     /**
      * Register the widget controls.
-     *
-     * Adds different input fields to allow the user to change and customize the widget settings.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function register_controls()
     {
@@ -357,17 +349,10 @@ class Main extends BaseWidget
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
 
     {
-        //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
 }

@@ -41,7 +41,6 @@ class ABCBizMultiElementorPack
 	
 	/**
 	 * Perform some compatibility checks to make sure basic requirements are meet.
-	 * If all compatibility checks pass, initialize the functionality.
 	 */
 	public function __construct()
 	{
@@ -214,22 +213,18 @@ class ABCBizMultiElementorPack
 	}
 
 	// autoload files for load classes dynamically
-	public function autoload($class_name)
-	{
-		// Define the base namespace for the classes
-		$base_namespace = 'includes\\widgets\\';
+	public function autoload($class_name) {
+         $base_namespace = 'ABCBiz\\Includes\\Widgets\\';
 
-		// Check if the class uses the base namespace
-		if (strpos($class_name, $base_namespace) === 0) {
-			// Convert namespace separators to directory separators
-			$relative_class_name = substr($class_name, strlen($base_namespace));
-			$file_path = AbcBizElementor_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
+        if (strpos($class_name, $base_namespace) === 0) {
+        $relative_class_name = substr($class_name, strlen($base_namespace));
+        $file_path = AbcBizElementor_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
 
-			if (file_exists($file_path)) {
-				require $file_path;
-			}
-		}
-	}
+        if (file_exists($file_path)) {
+            require $file_path;
+        }
+    }
+}
 
 	/**
 	 * Register Widgets

@@ -1,9 +1,9 @@
 <?php 
-namespace Includes\Widgets\ABCBlockquote;
+namespace ABCBiz\Includes\Widgets\ABCBlockquote;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;

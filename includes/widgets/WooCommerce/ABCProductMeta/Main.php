@@ -1,9 +1,9 @@
 <?php 
-namespace Includes\widgets\WooCommerce\ABCProductMeta;
+namespace ABCBiz\Includes\Widgets\WooCommerce\ABCProductMeta;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;

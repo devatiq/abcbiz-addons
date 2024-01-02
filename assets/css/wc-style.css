@@ -193,6 +193,35 @@ h2.abcbiz-wc-related-product-title {
    padding: 5px 0 !important;
 }
 
+/*----------------------------------------------
+ * Cart Icon
+ * ---------------------------------------------*/
+ .abcbiz-elementor-wc-cart-icon {
+   position: relative;
+   display: inline-block;
+}
+
+.abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents {
+   text-decoration: none;
+   color: #333;
+   display: flex;
+   align-items: center;
+}
+
+.abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .eicon-cart-solid {
+   font-size: 24px;
+   transition: all 0.4s;
+}
+
+.abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-left: 4px;
+   border-radius: 50%;
+   line-height: 1;
+   transition: all 0.4s;
+}
 
 /*----------------------------------------------
  *Responsive Adjustments

@@ -1,9 +1,9 @@
 <?php 
-namespace Includes\widgets\WooCommerce\ABCProductCartIcon;
+namespace ABCBiz\Includes\Widgets\WooCommerce\ABCProductCartIcon;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-use Includes\Widgets\BaseWidget;
+use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Typography;
@@ -25,6 +25,10 @@ class Main extends BaseWidget {
 			'abc', 'product', 'cart'
 		];
 
+		public function get_script_depends()
+		{
+			return ['abcbiz-cart-count-update']; 
+		}
 
 	/**
 	 * Register list widget controls.
@@ -39,82 +43,216 @@ class Main extends BaseWidget {
 			]
 		);
 
-		//Alignment
+		//Icon Size
 		$this->add_responsive_control(
-			'abcbiz_elementor_wc_product_cart_icon_align',
+			'abcbiz_elementor_wc_product_cart_icon_size',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
-				'type' => Controls_Manager::CHOOSE,
-				'default' => 'left',
-				'options' => [
-					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-left',
+				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 100,
+						'step' => 1,
 					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],				
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 24,
+				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price' => 'text-align: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .eicon-cart-solid' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
-		//Price Color regular
+		//Icon Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_cart_icon_regular_color',
+			'abcbiz_elementor_wc_product_cart_icon_color',
 			[
-				'label' => esc_html__( 'Price Regular Color', 'abcbiz-multi' ),
-				'type'  => Controls_Manager::COLOR,
-				'default' => '#999999',
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price del bdi, {{WRAPPER}} .abcbiz-elementor-wc-product-price .price bdi' => 'color: {{VALUE}}',
-				],
-			]
-		);
-
-		//Price regular typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
-			[
-				'name' => 'abcbiz_elementor_wc_product_cart_icon_regular_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price del bdi, {{WRAPPER}} .abcbiz-elementor-wc-product-price .price bdi',
-			]
-		);
-
-
-		//Price Color sales
-		$this->add_control(
-			'abcbiz_elementor_wc_product_cart_icon_sales_color',
-			[
-				'label' => esc_html__( 'Price Sales Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price ins bdi' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .eicon-cart-solid' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		//Price sales typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		//Icon Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_cart_icon_hov_color',
 			[
-				'name' => 'abcbiz_elementor_wc_product_cart_icon_sales_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price ins bdi',
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#873ff0',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon:hover .abcbiz-cart-contents .eicon-cart-solid' => 'color: {{VALUE}}',
+				],
 			]
 		);
 
+		//Counter
+        $this->add_control(
+            'abcbiz_elementor_wc_product_cart_count_switch',
+            [
+                'label' => esc_html__('Display Counter?', 'abcbiz-multi'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+
+		//Count BG Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_cart_count_bg_color',
+			[
+				'label' => esc_html__( 'Counter BG Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#873ff0',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'background-color: {{VALUE}}',
+				],
+				'condition' => [
+					'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+				],
+			]
+		);
+
+		//Count BG Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_cart_count_bg_hover_color',
+			[
+				'label' => esc_html__( 'Counter BG Hover Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#005ab4',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon:hover .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'background-color: {{VALUE}}',
+				],
+				'condition' => [
+					'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+				],
+			]
+		);
+
+		//Number Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_cart_count_color',
+			[
+				'label' => esc_html__( 'Number Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'color: {{VALUE}}',
+				],
+				'condition' => [
+					'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+				],
+			]
+		);
+
+		//Number Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_cart_count_hov_color',
+			[
+				'label' => esc_html__( 'Number Hover Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon:hover .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'color: {{VALUE}}',
+				],
+				'condition' => [
+					'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+				],
+			]
+		);
+
+		//Count Size
+		$this->add_responsive_control(
+				'abcbiz_elementor_wc_product_cart_count_size',
+				[
+					'label' => esc_html__( 'Counter Size', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::SLIDER,
+					'size_units' => [ 'px'],
+					'range' => [
+						'px' => [
+							'min' => 5,
+							'max' => 60,
+							'step' => 1,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 20,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					],
+					'condition' => [
+						'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+					],
+				]
+			);
+
+		//Count font Size
+		$this->add_responsive_control(
+				'abcbiz_elementor_wc_product_cart_count_font_size',
+				[
+					'label' => esc_html__( 'Number Font Size', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::SLIDER,
+					'size_units' => [ 'px'],
+					'range' => [
+						'px' => [
+							'min' => 8,
+							'max' => 40,
+							'step' => 1,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => 12,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'font-size: {{SIZE}}{{UNIT}};',
+					],
+					'condition' => [
+						'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+					],
+				]
+			);
+
+		//Counter position
+		$this->add_responsive_control(
+				'abcbiz_elementor_wc_product_cart_count_pos',
+				[
+					'label' => esc_html__( 'Counter Position', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::SLIDER,
+					'size_units' => [ 'px'],
+					'range' => [
+						'px' => [
+							'min' => -30,
+							'max' => 30,
+							'step' => 1,
+						],
+					],
+					'default' => [
+						'unit' => 'px',
+						'size' => -10,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .abcbiz-elementor-wc-cart-icon .abcbiz-cart-contents .abcbiz-cart-contents-count' => 'margin-top: {{SIZE}}{{UNIT}};',
+					],
+					'condition' => [
+						'abcbiz_elementor_wc_product_cart_count_switch' => 'yes',
+					],
+				]
+			);
+
         $this->end_controls_section();
-		
 
     }
 
