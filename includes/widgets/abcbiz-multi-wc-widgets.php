@@ -18,3 +18,4 @@ $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductRelated\Main:
 $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductShortDesc\Main::class;
 $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductTabs\Main::class;
 $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductTitle\Main::class;
+$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCWooBreadCrumb\Main::class;
