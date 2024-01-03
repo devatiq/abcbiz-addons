@@ -43,6 +43,39 @@ function abcbiz_get_cart_count() {
 }
 add_action('wp_ajax_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
+
+//Add to cart
+function abcbiz_ajax_add_to_cart_handler() {
+    if (!isset($_POST['abcbiz_cart_nonce']) || !wp_verify_nonce($_POST['abcbiz_cart_nonce'], 'abcbiz_add_to_cart_nonce')) {
+        wp_send_json_error(['message' => esc_html__('Nonce verification failed.', 'abcbiz-multi')]);
+        return;
+    }
+
+    if (!isset($_POST['product_id'])) {
+        wp_send_json_error(['message' => esc_html__('Product ID is missing.', 'abcbiz-multi')]);
+        return;
+    }
+
+    // Safely escape the product_id
+    $product_id = isset($_POST['product_id']) ? (int) esc_attr($_POST['product_id']) : 0;
+    // Safely escape the quantity, use sent quantity or default to 1
+    $quantity = isset($_POST['quantity']) ? (int) esc_attr($_POST['quantity']) : 1;
+
+    if (!wc_get_product($product_id)) {
+        wp_send_json_error(['message' => esc_html__('Invalid product.', 'abcbiz-multi')]);
+        return;
+    }
+
+    $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity);
+
+    if ($cart_item_key) {
+        wp_send_json_success(['message' => esc_html__('Product successfully added to cart.', 'abcbiz-multi')]);
+    } else {
+        wp_send_json_error(['message' => esc_html__('Failed to add the product to the cart.', 'abcbiz-multi')]);
+    }
+}
+add_action('wp_ajax_abcbiz_ajax_add_to_cart_handler', 'abcbiz_ajax_add_to_cart_handler');
+add_action('wp_ajax_nopriv_abcbiz_ajax_add_to_cart_handler', 'abcbiz_ajax_add_to_cart_handler');
     
 }//end woocommerce code
 

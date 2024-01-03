@@ -198,7 +198,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_blog_list_title_typography',
                 'label' => esc_html__('Title Typography', 'abcbiz-multi'),
-                'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-title',
+                'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-title, {{WRAPPER}} .abcbiz-ele-blog-list-title a',
             ]
         );
 

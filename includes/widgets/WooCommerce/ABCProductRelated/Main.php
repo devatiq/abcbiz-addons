@@ -357,11 +357,3 @@ class Main extends BaseWidget {
 }
 
 ?>
-<?php 
-function abcbiz_remove_related_products_title( $args ) {
-    $args['title'] = ''; // Set the title to an empty string
-    return $args;
-}
-add_filter( 'woocommerce_output_related_products_args', 'abcbiz_remove_related_products_title' );
-
-?>

@@ -4,7 +4,7 @@ WooCommerce Widgets
 */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-//$abcbiz_widgets[] = \includes\widgets\WooCommerce\ABCProductAddToCart\Main::class;
+$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductAddToCart\Main::class;
 if (get_option('abcbiz_wc_product_cart_icon_field') == 1) {
 $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCProductCartIcon\Main::class;
 }

@@ -47,12 +47,20 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
         // Check if WooCommerce plugin is active
         include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-        if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
-            wp_enqueue_style('abcbiz-elementor-wc-style', AbcBizElementor_Assets . "/css/wc-style.css");
-        }
-
+    if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
+        wp_enqueue_style('abcbiz-elementor-wc-style', AbcBizElementor_Assets . "/css/wc-style.css");
+        //cart icon counter
         wp_register_script('abcbiz-cart-count-update', AbcBizElementor_Assets . "/js/abcbiz-cart-update.js", array('jquery'), '1.0', true);
         wp_localize_script('abcbiz-cart-count-update', 'abcbizCartAjax', array('url' => admin_url('admin-ajax.php')));
+        //Add to cart
+        wp_register_script('abcbiz-add-to-cart', AbcBizElementor_Assets . "/js/abcbiz-add-to-cart.js", array('jquery'), 1.0, true);
+        $abcbiz_add_to_cart_nonce = wp_create_nonce('abcbiz_add_to_cart_nonce');
+        wp_localize_script('abcbiz-add-to-cart', 'acbbiz_add_to_cart', array(
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'abcbiz_add_to_cart_nonce' => $abcbiz_add_to_cart_nonce
+        ));
+    }
+
         wp_register_script('abcbiz-magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-circular-progress', AbcBizElementor_Assets . "/js/circular-progress.js", array('jquery'), '1.0', true);
