@@ -188,7 +188,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [

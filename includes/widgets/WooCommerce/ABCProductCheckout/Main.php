@@ -25,96 +25,399 @@ class Main extends BaseWidget {
 			'abc', 'woo', 'checkout'
 		];
 
-
-	/**
-	 * Register list widget controls.
-	 */
 	protected function register_controls() {
-		//Template
+
+		//Info Style
 		$this->start_controls_section(
-			'abcbiz_elementor_wc_product_cart_page',
+			'abcbiz_elementor_wc_product_checkout_page_info_style',
 			[
-				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Info Style', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
-		//Alignment
-		$this->add_responsive_control(
-			'abcbiz_elementor_wc_product_cart_page_align',
-			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
-				'type' => Controls_Manager::CHOOSE,
-				'default' => 'left',
-				'options' => [
-					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-left',
-					],
-					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-center',
-					],
-					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
-						'icon' => 'eicon-text-align-right',
-					],
-				],				
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price' => 'text-align: {{VALUE}}',
-				],
-			]
-		);
-
-		//Price Color regular
+		//Border Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_cart_page_regular_color',
+			'abcbiz_elementor_wc_product_checkout_page_info_border_color',
 			[
-				'label' => esc_html__( 'Price Regular Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#999999',
+				'default' => '#6f45ed',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price del bdi, {{WRAPPER}} .abcbiz-elementor-wc-product-price .price bdi' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info::before' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		//Price regular typoghraphy
-		$this->add_group_control(
-			Group_Control_Typography::get_type(),
+		//Background Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_checkout_page_info_bg_color',
 			[
-				'name' => 'abcbiz_elementor_wc_product_cart_page_regular_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price del bdi, {{WRAPPER}} .abcbiz-elementor-wc-product-price .price bdi',
+				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#f6f5f8',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info' => 'background-color: {{VALUE}}',
+				],
 			]
 		);
 
-
-		//Price Color sales
+		//Text Color
 		$this->add_control(
-			'abcbiz_elementor_wc_product_cart_page_sales_color',
+			'abcbiz_elementor_wc_product_checkout_page_info_text_color',
 			[
-				'label' => esc_html__( 'Price Sales Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-elementor-wc-product-price .price ins bdi' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info' => 'color: {{VALUE}}',
 				],
 			]
 		);
 
-		//Price sales typoghraphy
+		//Link Color
+		$this->add_control(
+			'abcbiz_elementor_wc_product_checkout_page_info_link_color',
+			[
+				'label' => esc_html__( 'Link Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info a' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//typoghraphy
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'abcbiz_elementor_wc_product_cart_page_sales_typography',
+				'name' => 'abcbiz_elementor_wc_product_checkout_page_info_text_typography',
 				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
-				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price ins bdi',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info',
 			]
 		);
 
         $this->end_controls_section();
-		
+
+		//Billing Style
+		$this->start_controls_section(
+			'abcbiz_elementor_wc_product_checkout_page_billing_style',
+			[
+				'label' => esc_html__( 'Billing Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		//heading typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_billing_heading_typography',
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields h3',
+			]
+		);
+
+		//Heading Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_billing_heading_color',
+			[
+				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields h3' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Label typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_billing_label_typography',
+				'label' => esc_html__( 'Label Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields label',
+			]
+		);
+
+		//Label Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_billing_label_color',
+			[
+				'label' => esc_html__( 'Label Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields label' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//spacing
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_billing_input_spacing',
+			[
+				'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px'],
+				'default' => [
+					'top' => 10,
+					'right' => 15,
+					'bottom' => 10,
+					'left' => 15,
+					'unit' => 'px',
+					'isLinked' => false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields input, {{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields select' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		//Border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_billing_input_spacing_border',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields input, .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields .select2-selection--single',
+			]
+		);
+
+		$this->end_controls_section();
+
+		//Order Review Style
+		$this->start_controls_section(
+			'abcbiz_elementor_wc_product_checkout_page_order_review_style',
+			[
+				'label' => esc_html__( 'Order Review Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		//heading typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_review_heading_typography',
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page h3#order_review_heading',
+			]
+		);
+
+		//Heading Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_review_heading_color',
+			[
+				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page h3#order_review_heading' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Data Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_review_data_color',
+			[
+				'label' => esc_html__( 'Data Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#333333',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-checkout-review-order table td, {{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-checkout-review-order table th' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Border Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_review_border_color',
+			[
+				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => 'rgba(0,0,0,.1)',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-checkout-review-order table table, {{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-checkout-review-order table td, {{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-checkout-review-order table th' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
+		//Order Button Style
+		$this->start_controls_section(
+			'abcbiz_elementor_wc_product_checkout_page_order_btn_style',
+			[
+				'label' => esc_html__( 'Order Button Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		//button typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_order_btn_typography',
+				'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt',
+			]
+		);
+
+		//Text Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_order_btn_color',
+			[
+				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//BG Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_order_btn_bg_color',
+			[
+				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Text Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_order_btn_hov_color',
+			[
+				'label' => esc_html__( 'Text Hover Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt:hover' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Text Hover BG Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_order_btn_hov_bg_color',
+			[
+				'label' => esc_html__( 'Hover BG Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#6A0AD5',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt:hover' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+			//button spacing
+			$this->add_control(
+				'abcbiz_elementor_wc_checkout_page_order_btn_spacing',
+				[
+					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px'],
+					'default' => [
+						'top' => 12,
+						'right' => 25,
+						'bottom' => 12,
+						'left' => 25,
+						'unit' => 'px',
+						'isLinked' => false,
+					],
+					'selectors' => [
+						'{{WRAPPER}}  .abcbiz-elementor-wc-checkout-page .place-order button.button.alt' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+
+			//border radius
+			$this->add_control(
+				'abcbiz_elementor_wc_checkout_page_order_btn_border_radius',
+				[
+					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px'],
+					'default' => [
+						'top' => 5,
+						'right' => 5,
+						'bottom' => 5,
+						'left' => 5,
+						'unit' => 'px',
+						'isLinked' => true,
+					],
+					'selectors' => [
+						'{{WRAPPER}}  .abcbiz-elementor-wc-checkout-page .place-order button.button.alt' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+				]
+			);
+
+		$this->end_controls_section();
+
+		//Additional Info Style
+		$this->start_controls_section(
+			'abcbiz_elementor_wc_product_checkout_page_add_info_style',
+			[
+				'label' => esc_html__( 'Additional Info Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+
+		//Additional Info typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_product_checkout_page_add_heading_typography',
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields h3',
+			]
+		);
+
+		//Additional Info Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_add_heading_color',
+			[
+				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields h3' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Additional label typoghraphy
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wc_checkout_page_add_label_typography',
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields label',
+			]
+		);
+
+		//Additional label Color
+		$this->add_control(
+			'abcbiz_elementor_wc_checkout_page_add_label_color',
+			[
+				'label' => esc_html__( 'Label Color', 'abcbiz-multi' ),
+				'type'  => Controls_Manager::COLOR,
+				'default' => '#1D56E6',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields label' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
 
     }
 
