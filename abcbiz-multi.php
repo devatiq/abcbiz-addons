@@ -43,6 +43,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
     function abcbiz_elementor_enqueue() {
         wp_register_style('abcbiz-popup-style', AbcBizElementor_Assets . "/css/magnific-popup.css");
         wp_register_style('abcbiz-animation', AbcBizElementor_Assets . "/css/shape-animation.css");
+        wp_register_style('abcbiz-wp-menu', AbcBizElementor_Assets . "/css/abc-wp-menu.css");
         wp_enqueue_style('abcbiz-elementor-style', AbcBizElementor_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
         // Check if WooCommerce plugin is active

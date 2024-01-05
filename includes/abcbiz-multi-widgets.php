@@ -113,6 +113,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTeamMember\Main::class;
 		}
 
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCWpMenu\Main::class;
+
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
 
 		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-multi-wc-widgets.php';
