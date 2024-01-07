@@ -43,7 +43,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
     function abcbiz_elementor_enqueue() {
         wp_register_style('abcbiz-popup-style', AbcBizElementor_Assets . "/css/magnific-popup.css");
         wp_register_style('abcbiz-animation', AbcBizElementor_Assets . "/css/shape-animation.css");
-        wp_register_style('abcbiz-wp-menu', AbcBizElementor_Assets . "/css/abc-wp-menu.css");
+        wp_register_style('abcbiz-wp-menu', AbcBizElementor_Assets . "/css/abcbiz-wp-menu.css");
         wp_enqueue_style('abcbiz-elementor-style', AbcBizElementor_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
 
@@ -73,8 +73,8 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
             'abcbiz_add_to_cart_nonce' => $abcbiz_add_to_cart_nonce
         ));
     }
-
         wp_register_script('abcbiz-magnific-popup', AbcBizElementor_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-wp-menu-js', AbcBizElementor_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-jquery-appear', AbcBizElementor_Assets . "/js/jquery.appear.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-circular-progress', AbcBizElementor_Assets . "/js/circular-progress.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-skill-bar', AbcBizElementor_Assets . "/js/skill-bar.js", array('jquery'), '1.0', true);

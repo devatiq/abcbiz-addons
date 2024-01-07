@@ -59,17 +59,22 @@
     top: 130%;
     left: 0;
     transition: all 0.5s ease;
-    border-top: 2px solid #f4502a;
+    border-top: 2px solid #813eee;
     display: block;
 }
 
 .abcbiz-wp-menu-container ul ul li {
-    background: #efeeef !important;
+    background: #efeeef;
     width: 100%;
     border-bottom: 1px solid #dadada;
     padding: 5px 0;
     display: flex;
     justify-content: space-between;
+}
+
+.abcbiz-wp-menu-container ul ul li:last-child {
+    border-bottom: 0;
+
 }
 
 .abcbiz-wp-menu-container > ul > li > a {
@@ -94,15 +99,12 @@
     letter-spacing: 1px;
     font-size: 11px;
     line-height: 1.5;
-}
-
-.abcbiz-wp-menu-container ul ul li:last-child>a {
-    padding: 5px 12px;
+    width: 100%;
 }
 
 .abcbiz-wp-menu-container ul ul li.hover,
 .abcbiz-wp-menu-container ul ul li:hover {
-    background: #efeeef !important;
+    background: #efeeef;
     position: relative;
 }
 
@@ -143,14 +145,105 @@
     display: block;
 }
 
-#responsive-menu {
+#abcbiz-responsive-menu, .abcbiz-mob-menu-icon-wrap {
     display: none;
     outline: none;
 }
 
-#mobilemenu,
-.sub-toggle,
-.mobsearchicon,
-.mobsearchform {
+#abcbiz-mobilemenu {
     display: none;
 }
+
+@media screen and (max-width: 950px) {
+
+    .abcbiz-wp-menu-container {
+        display: none;
+    }
+
+    .abcbiz-mob-menu-icon-wrap {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    #abcbiz-responsive-menu svg {
+        width: 32px; 
+        height: 32px;
+    }
+    
+    #abcbiz-responsive-menu {
+        display: inline-block;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+    
+    #abcbiz-mobilemenu {
+        display: none;
+        flex-direction: column;
+        left: 0;
+        position: absolute;
+        top: 100%;
+        width: 100%;
+        border-top: 2px solid #6146ec;
+        background: #fff;
+        z-index: 4572;
+    }
+    
+    #abcbiz-mobilemenu ul {
+        list-style: none;
+        margin: 0;
+        padding: 5px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    #abcbiz-mobilemenu ul li {
+        border-bottom: 1px solid #ededed;
+        margin-left: 0;
+        position: relative;
+        box-sizing: border-box;
+    }
+
+    #abcbiz-mobilemenu ul li:last-child {
+        border-bottom: 0;
+    }
+
+    #abcbiz-mobilemenu ul li a {
+        color: #333; 
+        font-size: 16px;
+        padding: 6px 15px;
+        text-transform: uppercase;
+        width: 100%;
+        display: inline-block;
+    }
+    #abcbiz-mobilemenu ul li ul li a {
+        color: #444; 
+        font-size: 14px; 
+        text-transform: none;
+    }
+    #abcbiz-mobilemenu ul.sub-menu {
+        position: static; 
+        opacity: 1; 
+        border: none; 
+        margin: 0; 
+        padding: 0; 
+        display: none; 
+        transition: none;
+    }
+    #abcbiz-mobilemenu .sub-toggle {
+        background: #6146ec; 
+        color: #ffffff; 
+        cursor: pointer; 
+        height: 30px; 
+        line-height: 30px; 
+        position: absolute; 
+        right: 15px; 
+        text-align: center; 
+        top: 3px; 
+        width: 30px; 
+        display: block;
+        font-size: 18px;
+    }
+
+}
+
+

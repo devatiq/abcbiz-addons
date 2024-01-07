@@ -1,4 +1,5 @@
 function ABCbizTestimonialSliderinitialize(uniqueId) {
+    'use strict';
 
     var slider = document.getElementById('abcbiz-testimonial-slider-' + uniqueId);
     var breakpoints = JSON.parse(slider.getAttribute('data-breakpoints'));

@@ -1,4 +1,5 @@
 jQuery(document).ready(function($) {
+    'use strict';
     $('body').on('click', '.abcbiz_add_to_cart', function(e) {
         e.preventDefault();
 
