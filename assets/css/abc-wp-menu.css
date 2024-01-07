@@ -1,23 +1,23 @@
 .abcbiz-wp-menu-container {
-    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 60px;
     background: transparent;
-    height: 80px;
-    line-height: 80px;
-    padding-top: 0;
     transition: all 0.5s ease;
 }
 
 .abcbiz-wp-menu-container ul {
+    display: flex;
     padding: 0;
-    margin: 0 auto;
-    float: right;
+    margin: 0;
     list-style: none;
 }
 
 .abcbiz-wp-menu-container ul li {
-    float: left;
-    zoom: 1;
     position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .abcbiz-wp-menu-container ul li:after {
@@ -40,30 +40,8 @@
     display: none;
 }
 
-.abcbiz-wp-menu-container ul li a {
-    display: block;
-    color: #222222;
-    padding: 0 17px;
-    font-size: 12px;
-    font-weight: 600;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    -webkit-transition: color 0.5s ease;
-    transition: color 0.5s ease;
-}
-
 .abcbiz-wp-menu-container ul li:last-child a {
     padding-right: 0;
-}
-
-.abcbiz-wp-menu-container ul li:hover>a {
-    color: #f4502a;
-}
-
-.abcbiz-wp-menu-container ul li.current-menu-item>a,
-.abcbiz-wp-menu-container ul li.current-menu-ancestor>a {
-    color: #f4502a;
 }
 
 .abcbiz-wp-menu-container ul li.hover,
@@ -80,27 +58,39 @@
     position: absolute;
     top: 130%;
     left: 0;
-    margin: 0;
-    padding: 0;
-    border-top: 2px solid #f4502a;
-    line-height: 22px !important;
-    -webkit-transition: all 0.5s ease;
     transition: all 0.5s ease;
+    border-top: 2px solid #f4502a;
+    display: block;
 }
 
 .abcbiz-wp-menu-container ul ul li {
     background: #efeeef !important;
-    float: left;
     width: 100%;
     border-bottom: 1px solid #dadada;
     padding: 5px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.abcbiz-wp-menu-container > ul > li > a {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    padding: 0 17px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.5s ease;
 }
 
 .abcbiz-wp-menu-container ul ul li a {
-    width: 194px;
-    display: inline-block;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
     padding: 5px 13px;
-    font-weight: normal !important;
+    font-weight: normal;
     letter-spacing: 1px;
     font-size: 11px;
     line-height: 1.5;
@@ -109,7 +99,6 @@
 .abcbiz-wp-menu-container ul ul li:last-child>a {
     padding: 5px 12px;
 }
-
 
 .abcbiz-wp-menu-container ul ul li.hover,
 .abcbiz-wp-menu-container ul ul li:hover {
@@ -135,39 +124,23 @@
     opacity: 1;
 }
 
-/* Style the container of the submenu icon */
-.abcbiz-wp-menu-container .abcbiz-submenu-icon {
-    display: inline-block; /* Aligns icon with the text */
-    vertical-align: middle; /* Centers the icon vertically */
+.abcbiz-wp-menu-container ul li .abcbiz-submenu-icon {
+    vertical-align: middle;
     margin-left: -10px;
     margin-right: 15px;
+    margin-top: 3px;
 }
 
-/* Style the SVG icon inside the submenu icon container */
-.abcbiz-wp-menu-container .abcbiz-submenu-icon svg {
+.abcbiz-wp-menu-container ul li .abcbiz-submenu-icon svg {
     width: 20px;
     height: 20px;
     display: block;
 }
 
-/* Align the submenu icon with the menu item */
-.abcbiz-wp-menu-container > ul > li > a {
-    position: relative;
-    display: inline-flex;
-    align-items: center;
-}
-
-.abcbiz-wp-menu-container li:hover>a:after {
-    color: #f4502a;
-}
-
-.abcbiz-wp-menu-container li.current-menu-item>a:after,
-.abcbiz-wp-menu-container li.current-menu-ancestor>a:after {
-    color: #f4502a;
-}
-
-.abcbiz-wp-menu-container li>a:only-child:after {
-    content: '';
+.abcbiz-wp-menu-container ul ul li .abcbiz-submenu-icon svg{
+    width: 16px !important;
+    height: 16px !important;
+    display: block;
 }
 
 #responsive-menu {

@@ -7,24 +7,26 @@ use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
+use Elementor\Utils;
+
 
 class Main extends BaseWidget
 {
 
     // define protected variables...
     protected $name = 'abcbiz-elementor-testimonial';
-    protected $title = 'ABC Testimonial';
+    protected $title = 'ABC Testimonial Carousel';
     protected $icon = 'eicon-testimonial-carousel';
     protected $categories = [
         'abcbiz-category'
     ];
     protected $keywords = [
-        'abc', 'testimonial', 'feedback', 'slider',
+        'abc', 'testimonial', 'carousel', 'slider',
     ];
 
     public function get_script_depends()
     {
-        return ['swiper', 'abcbiz-testimonial-scripts'];
+        return ['swiper', 'abcbiz-testimonial'];
     }
 
     public function get_style_depends()
@@ -59,6 +61,78 @@ class Main extends BaseWidget
                 ],
             ]
         );
+        // Initialize the repeater control
+        $repeater = new \Elementor\Repeater();
+        $repeater->add_control(
+			'testimonial_name',
+			[
+				'label' => esc_html__( 'Name', 'abcbiz-multi' ),
+				'type' => Controls_Manager::TEXT,
+				'default' => esc_html__( 'List Name' , 'abcbiz-multi' ),
+				'label_block' => true,
+			]
+		);       
+        $repeater->add_control(
+			'testimonial_feedback',
+			[
+				'label' => esc_html__( 'Description', 'abcbiz-multi' ),
+				'type' => Controls_Manager::TEXTAREA,
+				'default' => esc_html__( 'Enter feedback message here' , 'abcbiz-multi' ),
+				'label_block' => true,
+			]
+		);       
+        $repeater->add_control(
+			'testimonial_designation',
+			[                
+                'label' => esc_html__('Designation', 'abcbiz-multi'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('CEO of Company', 'abcbiz-multi'),
+                'dynamic' => ['active' => true],
+			]
+		);        
+        $repeater->add_control(
+			'testimonial_rating',
+			[  
+                'label' => esc_html__('Rating', 'abcbiz-multi'),
+                'type' => Controls_Manager::SELECT,
+                'default' => '5',
+                'options' => [
+                    '1' => esc_html__('1 Star', 'abcbiz-multi'),
+                    '2' => esc_html__('2 Stars', 'abcbiz-multi'),
+                    '3' => esc_html__('3 Stars', 'abcbiz-multi'),
+                    '4' => esc_html__('4 Stars', 'abcbiz-multi'),
+                    '5' => esc_html__('5 Stars', 'abcbiz-multi'),
+                ],
+			]
+		);       
+        $repeater->add_control(
+			'testimonial_client_image',
+			[                  
+                'label' => esc_html__('Client Image', 'abcbiz-multi'),
+                'type' => Controls_Manager::MEDIA,
+                'dynamic' => ['active' => true],   
+			]
+		);
+		$this->add_control(
+			'abcbiz_testimonial_repeater',
+			[
+				'label' => esc_html__( 'Testimonial Items', 'abcbiz-multi' ),
+				'type' => Controls_Manager::REPEATER,
+				'fields' => $repeater->get_controls(),
+				'default' => [
+					[
+						'testimonial_name' => esc_html__( 'Name #1', 'abcbiz-multi' ),						
+					],
+					[
+						'testimonial_name' => esc_html__( 'Name #2', 'abcbiz-multi' ),						
+					],
+                    [
+						'testimonial_name' => esc_html__( 'Name #3', 'abcbiz-multi' ),						
+					],
+				],
+				'title_field' => '{{{ testimonial_name }}}',
+			]
+		);
         // testimonial column for desktop
         $this->add_control(
             'abcbiz_ele_testimonial_column_desktop',
@@ -102,30 +176,7 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // total show items in the slideshow
-        $this->add_control(
-            'abcbiz_ele_testimonial_total_count',
-            [
-                'label' => esc_html__('Total Testimonials', 'abcbiz-multi'),
-                'type' => Controls_Manager::NUMBER,
-                'default' => 6,
-                'condition' => [
-                    'abcbiz_ele_testimonial_types' => 'slider',
-                ],
-            ]
-        );
-        //testimonial per page
-        $this->add_control(
-            'abcbiz_ele_testimonial_grid_per_page',
-            [
-                'label' => esc_html__('Testimonial Per Page', 'abcbiz-multi'),
-                'type' => Controls_Manager::NUMBER,
-                'default' => 6,
-                'condition' => [
-                    'abcbiz_ele_testimonial_types' => 'grid',
-                ],
-            ]
-        );
+
         // autoplay on/off
         $this->add_control(
             'abcbiz_ele_testimonial_autoplay',
@@ -195,22 +246,6 @@ class Main extends BaseWidget
             ]
         );
 
-        //pagination on/off switcher
-        $this->add_control(
-            'abcbiz_ele_testimonial_pagination',
-            [
-                'label' => esc_html__('Pagination', 'abcbiz-multi'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('On', 'abcbiz-multi'),
-                'label_off' => esc_html__('Off', 'abcbiz-multi'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-                'condition' => [
-                    'abcbiz_ele_testimonial_types' => 'grid',
-                ],
-            ]
-        );
-
 
         // end of Testimonial section
         $this->end_controls_section();
@@ -242,13 +277,13 @@ class Main extends BaseWidget
                 'selector' => '{{WRAPPER}} .abcbiz-testimonial-client-info h3',
             ]
         );
-        // testimonial title color
+        // testimonial name color
         $this->add_control(
             'abcbiz_ele_testimonial_title_color',
             [
                 'label' => esc_html__('Title Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#333333',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-client-info h3' => 'color: {{VALUE}}',
                 ],
@@ -290,7 +325,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Content Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#555555',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-content p' => 'color: {{VALUE}}',
                 ],
@@ -369,7 +404,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Quote Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#ffffff',
+                'default' => '#444444',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-quote i' => 'color: {{VALUE}}',
                     '{{WRAPPER}} .abcbiz-testimonial-quote svg path' => 'fill: {{VALUE}}',
@@ -385,7 +420,7 @@ class Main extends BaseWidget
                 'min' => 0.1,
                 'max' => 1,
                 'step' => 0.1,
-                'default' => 0.4,
+                'default' => 0.6,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-quote i' => 'opacity: {{SIZE}};',
                     '{{WRAPPER}} .abcbiz-testimonial-quote svg path' => 'fill-opacity: {{SIZE}};',
@@ -579,7 +614,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#59a818',
+                'default' => '#6247ed',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow svg' => 'background-color: {{VALUE}}',
                 ],
@@ -591,7 +626,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Hover BG Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#FFAB01',
+                'default' => '#374ae4',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow:hover svg' => 'background-color: {{VALUE}}',
                 ],
@@ -921,7 +956,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Active Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#448E08',
+                'default' => '#374ae4',
                 'selectors' => [
                     '{{WRAPPER}} .swiper-pagination.abcbiz-testimonial-slider-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background-color: {{VALUE}};',
                 ]

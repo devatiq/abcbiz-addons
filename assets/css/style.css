@@ -641,7 +641,7 @@ h3.abcbiz-style-three-team-name {
  * ---------------------------------------------*/
 
 .abcbiz-testimonial-single-item {
-    background-color: #181818;
+    background-color: #e6ebf2;
     padding: 30px;
     border-radius: 5px;
     position: relative;
@@ -721,11 +721,12 @@ h3.abcbiz-style-three-team-name {
 }
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow.abcbiz-testimonial-arrow-right {
     right: -60px;
+    outline: none;
 }
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow svg {
     width: 40px;
     height: 40px;
-    background-color: #59a818 ;
+    background-color: #6247ed;
     border-radius: 50%;
     fill: #fff;
     padding: 8px;
@@ -735,6 +736,7 @@ h3.abcbiz-style-three-team-name {
 }
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow.abcbiz-testimonial-arrow-left {
     left: -60px;
+    outline: none;
 }
 .abcbiz-testimonial-slider .abcbiz-testimonial-arrow.slick-disabled,
 .abcbiz-testimonial-slider .abcbiz-testimonial-arrow.slick-disabled

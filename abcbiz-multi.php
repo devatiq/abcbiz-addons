@@ -46,6 +46,18 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_style('abcbiz-wp-menu', AbcBizElementor_Assets . "/css/abc-wp-menu.css");
         wp_enqueue_style('abcbiz-elementor-style', AbcBizElementor_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
+
+        //register style for swiper slider
+        if (!wp_style_is('swiper')) {
+        wp_register_style('swiper',  AbcBizElementor_Assets . "/css/swiper-bundle.min.css");
+        }
+
+     //register swiper slider 
+        if (!wp_script_is('swiper')) {
+        wp_register_script('swiper', AbcBizElementor_Assets . "/js/swiper-bundle.min.js", array('jquery', 'elementor-frontend'), 1.0, true);
+        }
+        wp_register_script('abcbiz-testimonial', AbcBizElementor_Assets . "/js/abcbiz-testimonial.js", array('jquery'), false, true);
+
         // Check if WooCommerce plugin is active
         include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
     if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {

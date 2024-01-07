@@ -4,23 +4,11 @@
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-$settings = $this->get_settings_for_display();
-$unique_id = $this->get_id();
-//total testimonials count
-$testimonial_grid_per_page = $settings['abcbiz_ele_testimonial_grid_per_page'] ? $settings['abcbiz_ele_testimonial_grid_per_page'] : 6;
-$paged = get_query_var('paged') ? get_query_var('paged') : 1;
-if (is_front_page()) {
-    $paged = (get_query_var('page')) ? get_query_var('page') : 1;
-}
-// query testimonial post type
-$team_member_args = array(
-    'post_type' => 'testimonial',
-    'posts_per_page' => $testimonial_grid_per_page,
-    'order' => 'ASC',
-    'orderby' => 'menu_order',
-    'paged' => $paged,
-);
-$testimonial = new \WP_Query($team_member_args);
+$abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_unique_id = $this->get_id();
+
+// query testimonial from elementor settings
+$abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
 
 ?>
 
@@ -32,30 +20,34 @@ $testimonial = new \WP_Query($team_member_args);
         <div class="abcbiz-testimonial-slider abcbiz-testimonial-grids">
 
             <?php
-            if ($testimonial->have_posts()) :
-                while ($testimonial->have_posts()) :
-                    $testimonial->the_post();
+            if (!empty($abcbiz_repeater_testimonial)) :
+                foreach ($abcbiz_repeater_testimonial as $abcbiz_testimonial ) :      
+                    $testimonial_name = $abcbiz_testimonial['testimonial_name'];
+                    $testimonial_designation = $abcbiz_testimonial['testimonial_designation'];
+                    $testimonial_feedback = $abcbiz_testimonial['testimonial_feedback'];
+                    $testimonial_rating = $abcbiz_testimonial['testimonial_rating'];   
+                    $testimonial_img = $abcbiz_testimonial['testimonial_client_image'];   
 
-                    // get post meta value
-                    $designation = get_post_meta(get_the_ID(), '_testidesignation', true);
-                    $rating = get_post_meta(get_the_ID(), 'abcbiz_testimonial_rating', true);
             ?>
                     <!--Single Testimonial-->
                     <div class="abcbiz-testimonial-single-item">
                         <!--Header Part-->
                         <div class="abcbiz-testimonial-header">
-                            <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">
-                                <?php if (has_post_thumbnail()) :
-                                    the_post_thumbnail('full');
+                            <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">                                
+                                <?php if (!empty($testimonial_img['url'])) :                                                            
+                                    echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
                                 else :
                                 ?>
-                                    <img src="<?php echo ABCELEMENTOR_ASSETS; ?>/img/teammember/image-placeholder.jpg" alt="">
+                                    <img src="<?php echo AbcBizElementor_Assets; ?>/img/member-placeholder.jpg" alt="">
                                 <?php endif; ?>
                             </div>
                             <div class="abcbiz-testimonial-client-info">
-                                <h3><?php the_title(); ?></h3>
-                                <?php if (!empty($designation)) : ?>
-                                    <p><?php echo esc_html($designation); ?></p>
+                                <?php if(!empty($testimonial_name)) : ?>
+                                    <h3><?php echo esc_html($testimonial_name); ?></h3>
+                                <?php endif; ?>
+
+                                <?php if (!empty($testimonial_designation)) : ?>
+                                    <p><?php echo esc_html($testimonial_designation); ?></p>
                                 <?php endif; ?>
                             </div>
                         </div><!--/ Header Part-->
@@ -64,22 +56,25 @@ $testimonial = new \WP_Query($team_member_args);
                         <div class="abcbiz-testimonial-rating">
                             <?php
                             for ($i = 1; $i <= 5; $i++) {
-                                $star_class = ($i <= $rating) ? 'eicon-star' : ' ';
+                                $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
                                 echo "<i class='{$star_class}'></i>";
                             }
                             ?>
                         </div><!--/ Rating Part-->
+                        
+                        <?php if(!empty($testimonial_feedback)) : ?>
+                            <!--Content Part-->
+                            <div class="abcbiz-testimonial-content">
+                                <p><?php echo esc_html($testimonial_feedback); ?></p>
+                            </div><!--/ Content Part-->
+                        <?php endif; ?>
 
-                        <!--Content Part-->
-                        <div class="abcbiz-testimonial-content">
-                            <?php the_content(); ?>
-                        </div><!--/ Content Part-->
                         <!--Quote Part-->
                         <div class="abcbiz-testimonial-quote">
 
                             <?php
-                            if (!empty($settings['abcbiz_ele_testimonial_item_quote_icon']['library'])) :
-                                \Elementor\Icons_Manager::render_icon($settings['abcbiz_ele_testimonial_item_quote_icon'], ['aria-hidden' => 'true']);
+                            if (!empty($abcbiz_settings['abcbiz_ele_testimonial_item_quote_icon']['library'])) :
+                                \Elementor\Icons_Manager::render_icon($abcbiz_settings['abcbiz_ele_testimonial_item_quote_icon'], ['aria-hidden' => 'true']);
                             else :
                             ?>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="68" height="50" viewBox="0 0 68 50" fill="none">
@@ -96,23 +91,12 @@ $testimonial = new \WP_Query($team_member_args);
                     </div><!--/ Single Testimonial-->
 
             <?php
-                endwhile;
-                // Pagination
-                $pagination_args = array(
-                    'total' => $testimonial->max_num_pages,
-                    'current' => max(1, $paged),
-                );
+                endforeach;             
             ?>
             
             <?php
             endif;
-            wp_reset_postdata();
             ?>
         </div><!--/ Testimonial Slider -->
-        <?php if($settings['abcbiz_ele_testimonial_pagination'] == 'yes') : ?>
-            <div class="abcbiz-elementor-pagination abcbiz-blog-list-pagi">
-                <?php echo paginate_links($pagination_args); ?>
-            </div>
-        <?php endif; ?>
     </div>
 </div><!--/ End Testimonial Wrapper -->

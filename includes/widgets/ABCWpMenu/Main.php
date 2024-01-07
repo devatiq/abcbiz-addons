@@ -66,7 +66,219 @@ class Main extends BaseWidget {
             );
         }
 
+
+		//Alignment
+		$this->add_responsive_control(
+			'abcbiz_elementor_wp_menu_align',
+			[
+				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'type' => Controls_Manager::CHOOSE,
+				'default' => 'flex-end',
+				'options' => [
+					'flex-start'    => [
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'icon' => 'eicon-text-align-left',
+					],
+					'center'    => [
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'icon' => 'eicon-text-align-center',
+					],
+				
+					'flex-end' => [
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'icon' => 'eicon-text-align-right',
+					],
+				],				
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container' => 'justify-content: {{VALUE}}',
+				],
+			]
+		);
+
+		//Menu Height
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_height',
+			[
+				'label' => esc_html__( 'Menu Height', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 20,
+						'max' => 200,
+						'step' => 5,
+					],
+
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 60,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
         $this->end_controls_section();
+
+		//Style
+		$this->start_controls_section(
+			'abcbiz_elementor_wp_menu_style',
+			[
+				'label' => esc_html__( 'Menu Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		//typography
+		$this->add_group_control(
+			\Elementor\Group_Control_Typography::get_type(),
+			[
+				'name' => 'abcbiz_elementor_wp_menu_typography',
+				'selector' => '{{WRAPPER}} .abcbiz-wp-menu-container > ul > li > a',
+			]
+		);
+
+		//Text Color
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_color',
+			[
+				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#222222',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container > ul > li > a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li .abcbiz-submenu-icon svg' => 'fill: {{VALUE}}',
+				],
+			]
+		);
+
+		//Text Hover Color
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_hov_color',
+			[
+				'label' => esc_html__( 'Text Hover Color', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#0a78d1',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container > ul > li > a:hover' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li:hover .abcbiz-submenu-icon svg' => 'fill: {{VALUE}}',
+				],
+			]
+		);
+
+		//Text Active Color
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_active_color',
+			[
+				'label' => esc_html__( 'Text Active Color', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#6C36DF',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container > ul > li.current-menu-item > a, {{WRAPPER}} .abcbiz-wp-menu-container > ul > li.current_page_item > a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-wp-menu-container > ul > li.current-menu-item > a, {{WRAPPER}} .abcbiz-wp-menu-container > ul > li.current_page_ancestor > a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li.current_page_item .abcbiz-submenu-icon svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li.current_page_ancestor .abcbiz-submenu-icon svg' => 'fill: {{VALUE}}',
+				],
+			]
+		);
+
+		//Menu Spacing
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_item_spacing',
+			[
+				'label' => esc_html__( 'Menu Item Spacing', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 50,
+						'step' => 1,
+					],
+
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 17,
+				],
+				'selectors' => [
+					'.abcbiz-wp-menu-container > ul > li > a ' => 'padding-left: {{SIZE}}{{UNIT}}!important; padding-right: {{SIZE}}{{UNIT}}!important;',
+				],
+			]
+		);
+
+		//DropDown Icon Size
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_drop_down_icon_size',
+			[
+				'label' => esc_html__( 'Dropdown Icon Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 50,
+						'step' => 1,
+					],
+
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 20,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li .abcbiz-submenu-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//DropDown Icon Position
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_drop_down_icon_position',
+			[
+				'label' => esc_html__( 'Icon Position', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => -50,
+						'max' => 50,
+						'step' => 1,
+					],
+
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => -10,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li .abcbiz-submenu-icon' => 'margin-left: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//Separator Color
+		$this->add_control(
+			'abcbiz_elementor_wp_menu_separator_color',
+			[
+				'label' => esc_html__( 'Separator Color', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#c4c4c1',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-wp-menu-container ul li:after' => 'border-color: {{VALUE}}',
+				],
+			]
+		);
+
+
+	
+
+		$this->end_controls_section();
+
+
+
 	}
 
 

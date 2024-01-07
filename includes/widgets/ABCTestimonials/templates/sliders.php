@@ -4,31 +4,25 @@
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-$settings = $this->get_settings_for_display();
-$unique_id = $this->get_id();
-//total testimonials count
-$testimonial_total_count = $settings['abcbiz_ele_testimonial_total_count'] ? $settings['abcbiz_ele_testimonial_total_count'] : 4;
-// query testimonial post type
-$team_member_args = array(
-    'post_type' => 'testimonial',
-    'posts_per_page' => $testimonial_total_count,
-    'order' => 'ASC',
-    'orderby' => 'menu_order',
-);
-$testimonial = new \WP_Query($team_member_args);
+$abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_unique_id = $this->get_id();
+
+// query testimonial from elementor settings
+$abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
+
 
 // get all testimonial settings
-$testimonial_column = $settings['abcbiz_ele_testimonial_column_desktop'] ? $settings['abcbiz_ele_testimonial_column_desktop'] : 3;
-$testimonial_tab = $settings['abcbiz_ele_testimonial_column_tab'] ? $settings['abcbiz_ele_testimonial_column_tab'] : 1;
-$testimonial_mobile = $settings['abcbiz_ele_testimonial_column_mobile'] ? $settings['abcbiz_ele_testimonial_column_mobile'] : 1;
-$testimonial_autoplay = $settings['abcbiz_ele_testimonial_autoplay'] ? $settings['abcbiz_ele_testimonial_autoplay'] : 'false';
-$testimonial_arrow = $settings['abcbiz_ele_testimonial_slider_arrow'] ? $settings['abcbiz_ele_testimonial_slider_arrow'] : 'false';
-$autplay_delay = $settings['abcbiz_ele_testimonial_autoplay_delay'] ? $settings['abcbiz_ele_testimonial_autoplay_delay'] : 3000;
+$abcbiz_testimonial_column = $abcbiz_settings['abcbiz_ele_testimonial_column_desktop'] ? $abcbiz_settings['abcbiz_ele_testimonial_column_desktop'] : 3;
+$abcbiz_testimonial_tab = $abcbiz_settings['abcbiz_ele_testimonial_column_tab'] ? $abcbiz_settings['abcbiz_ele_testimonial_column_tab'] : 1;
+$abcbiz_testimonial_mobile = $abcbiz_settings['abcbiz_ele_testimonial_column_mobile'] ? $abcbiz_settings['abcbiz_ele_testimonial_column_mobile'] : 1;
+$abcbiz_testimonial_autoplay = $abcbiz_settings['abcbiz_ele_testimonial_autoplay'] ? $abcbiz_settings['abcbiz_ele_testimonial_autoplay'] : 'false';
+$abcbiz_testimonial_arrow = $abcbiz_settings['abcbiz_ele_testimonial_slider_arrow'] ? $abcbiz_settings['abcbiz_ele_testimonial_slider_arrow'] : 'false';
+$abcbiz_autplay_delay = $abcbiz_settings['abcbiz_ele_testimonial_autoplay_delay'] ? $abcbiz_settings['abcbiz_ele_testimonial_autoplay_delay'] : 3000;
 
 // Autoplay configuration
-if($testimonial_autoplay === 'true') {
+if($abcbiz_testimonial_autoplay === 'true') {
     $autoplay_config = [
-    'delay' => $autplay_delay,
+    'delay' => $abcbiz_autplay_delay,
     'disableOnInteraction' => false,
     ];
 }else {
@@ -36,15 +30,15 @@ if($testimonial_autoplay === 'true') {
 }
 
 $breakpoints = wp_json_encode([
-    '1000' => ['slidesPerView' => $testimonial_column, 'spaceBetween' => 30],
-    '600' => ['slidesPerView' => $testimonial_tab, 'spaceBetween' => 30],
-    '300' => ['slidesPerView' => $testimonial_mobile, 'spaceBetween' => 10],
+    '1000' => ['slidesPerView' => $abcbiz_testimonial_column, 'spaceBetween' => 30],
+    '600' => ['slidesPerView' => $abcbiz_testimonial_tab, 'spaceBetween' => 30],
+    '300' => ['slidesPerView' => $abcbiz_testimonial_mobile, 'spaceBetween' => 10],
 ]);
 ?>
 
 <script>
     document.addEventListener('DOMContentLoaded', function() {
-        ABCTestimonialSliderinitialize('<?php echo esc_js($unique_id); ?>');
+        ABCbizTestimonialSliderinitialize('<?php echo esc_js($abcbiz_unique_id); ?>');
     });
 </script>
 
@@ -55,37 +49,41 @@ $breakpoints = wp_json_encode([
 
         <!-- Testimonial Slider -->
         <div class="abcbiz-testimonial-slider swiper swiper-container"
-             id="abcbiz-testimonial-slider-<?php echo esc_attr($unique_id); ?>"
+             id="abcbiz-testimonial-slider-<?php echo esc_attr($abcbiz_unique_id); ?>"
              data-breakpoints='<?php echo $breakpoints; ?>'
-             data-next-el="#abcbiz-testi-nav-right<?php echo esc_attr($unique_id); ?>"
+             data-next-el="#abcbiz-testi-nav-right<?php echo esc_attr($abcbiz_unique_id); ?>"
              data-autoplay-config='<?php echo esc_attr(wp_json_encode($autoplay_config)); ?>'
-             data-prev-el="#abcbiz-testi-nav-left<?php echo esc_attr($unique_id); ?>">
+             data-prev-el="#abcbiz-testi-nav-left<?php echo esc_attr($abcbiz_unique_id); ?>">
             <div class="swiper-wrapper">
-                <?php
-                if ($testimonial->have_posts()) :
-                    while ($testimonial->have_posts()) :
-                        $testimonial->the_post();
+            <?php
+            if (!empty($abcbiz_repeater_testimonial)) :
+                foreach ($abcbiz_repeater_testimonial as $abcbiz_testimonial ) :      
+                    $testimonial_name = $abcbiz_testimonial['testimonial_name'];
+                    $testimonial_designation = $abcbiz_testimonial['testimonial_designation'];
+                    $testimonial_feedback = $abcbiz_testimonial['testimonial_feedback'];
+                    $testimonial_rating = $abcbiz_testimonial['testimonial_rating'];   
+                    $testimonial_img = $abcbiz_testimonial['testimonial_client_image'];   
 
-                        // get post meta value
-                        $designation = get_post_meta(get_the_ID(), '_testidesignation', true);
-                        $rating = get_post_meta(get_the_ID(), 'abcbiz_testimonial_rating', true);
-                ?>
+            ?>
                         <!--Single Testimonial-->
                         <div class="abcbiz-testimonial-single-item swiper-slide">
                             <!--Header Part-->
                             <div class="abcbiz-testimonial-header">
                                 <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">
-                                    <?php if (has_post_thumbnail()) :
-                                        the_post_thumbnail('full');
+                                    <?php if (!empty($testimonial_img['url'])) :                                                            
+                                        echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
                                     else :
                                     ?>
-                                        <img src="<?php echo ABCELEMENTOR_ASSETS; ?>/img/teammember/image-placeholder.jpg" alt="">
+                                        <img src="<?php echo AbcBizElementor_Assets; ?>/img/member-placeholder.jpg" alt="">
                                     <?php endif; ?>
                                 </div>
                                 <div class="abcbiz-testimonial-client-info">
-                                    <h3><?php the_title(); ?></h3>
-                                    <?php if (!empty($designation)) : ?>
-                                        <p><?php echo esc_html($designation); ?></p>
+                                    <?php if(!empty($testimonial_name)) : ?>
+                                        <h3><?php echo esc_html($testimonial_name); ?></h3>
+                                    <?php endif; ?>
+
+                                    <?php if (!empty($testimonial_designation)) : ?>
+                                        <p><?php echo esc_html($testimonial_designation); ?></p>
                                     <?php endif; ?>
                                 </div>
                             </div><!--/ Header Part-->
@@ -94,22 +92,25 @@ $breakpoints = wp_json_encode([
                             <div class="abcbiz-testimonial-rating">
                                 <?php
                                 for ($i = 1; $i <= 5; $i++) {
-                                    $star_class = ($i <= $rating) ? 'eicon-star' : ' ';
+                                    $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
                                     echo "<i class='{$star_class}'></i>";
                                 }
                                 ?>
                             </div><!--/ Rating Part-->
 
-                            <!--Content Part-->
-                            <div class="abcbiz-testimonial-content">
-                                <?php the_content(); ?>
-                            </div><!--/ Content Part-->
+                            <?php if(!empty($testimonial_feedback)) : ?>
+                                <!--Content Part-->
+                                <div class="abcbiz-testimonial-content">
+                                    <p><?php echo esc_html($testimonial_feedback); ?></p>
+                                </div><!--/ Content Part-->
+                            <?php endif; ?>
+
                             <!--Quote Part-->
                             <div class="abcbiz-testimonial-quote">
 
                                 <?php
-                                if (!empty($settings['abcbiz_ele_testimonial_item_quote_icon']['library'])) :
-                                    \Elementor\Icons_Manager::render_icon($settings['abcbiz_ele_testimonial_item_quote_icon'], ['aria-hidden' => 'true']);
+                                if (!empty($abcbiz_settings['abcbiz_ele_testimonial_item_quote_icon']['library'])) :
+                                    \Elementor\Icons_Manager::render_icon($abcbiz_settings['abcbiz_ele_testimonial_item_quote_icon'], ['aria-hidden' => 'true']);
                                 else :
                                 ?>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="68" height="50" viewBox="0 0 68 50" fill="none">
@@ -125,25 +126,24 @@ $breakpoints = wp_json_encode([
                             </div><!--Quote Part-->
                         </div><!--/ Single Testimonial-->
                 <?php
-                    endwhile;
+                    endforeach;
                 endif;
-                wp_reset_postdata();
                 ?>
             </div>
             <!-- Add Pagination -->
-            <?php if ('true' == $settings['abcbiz_ele_testimonial_slider_pagination']) : ?>
+            <?php if ('true' == $abcbiz_settings['abcbiz_ele_testimonial_slider_pagination']) : ?>
                 <div class="swiper-pagination abcbiz-testimonial-slider-pagination"></div>
             <?php endif; ?>
         </div><!--/ Testimonial Slider -->
         <?php
-        if ('true' == $settings['abcbiz_ele_testimonial_slider_arrow']) :
+        if ('true' == $abcbiz_settings['abcbiz_ele_testimonial_slider_arrow']) :
         ?>
             <div class="abcbiz-testimonial-slider-nav-bar abcbiz-test-nav-hide-in-mobile">
                 <!-- Add Navigation -->
-                <button type="button" class="abcbiz-testimonial-arrow abcbiz-testimonial-arrow-left" id="abcbiz-testi-nav-left<?php echo $unique_id; ?>"><svg id="fi_2985161" enable-background="new 0 0 128 128" height="512" viewBox="0 0 128 128" width="512" xmlns="http://www.w3.org/2000/svg">
+                <button type="button" class="abcbiz-testimonial-arrow abcbiz-testimonial-arrow-left" id="abcbiz-testi-nav-left<?php echo $abcbiz_unique_id; ?>"><svg id="fi_2985161" enable-background="new 0 0 128 128" height="512" viewBox="0 0 128 128" width="512" xmlns="http://www.w3.org/2000/svg">
                         <path id="Left_Arrow_4_" d="m84 108c-1.023 0-2.047-.391-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-37.172 37.172 37.172 37.172c1.563 1.563 1.563 4.094 0 5.656-.781.781-1.805 1.172-2.828 1.172z"></path>
                     </svg></button>
-                <button type="button" class="abcbiz-testimonial-arrow abcbiz-testimonial-arrow-right" id="abcbiz-testi-nav-right<?php echo $unique_id; ?>"><svg id="fi_2985162" enable-background="new 0 0 128 128" height="512" viewBox="0 0 128 128" width="512" xmlns="http://www.w3.org/2000/svg">
+                <button type="button" class="abcbiz-testimonial-arrow abcbiz-testimonial-arrow-right" id="abcbiz-testi-nav-right<?php echo $abcbiz_unique_id; ?>"><svg id="fi_2985162" enable-background="new 0 0 128 128" height="512" viewBox="0 0 128 128" width="512" xmlns="http://www.w3.org/2000/svg">
                         <path id="Left_Arrow_4_" d="m84 108c-1.023 0-2.047-.391-2.828-1.172l-40-40c-1.563-1.563-1.563-4.094 0-5.656l40-40c1.563-1.563 4.094-1.563 5.656 0s1.563 4.094 0 5.656l-37.172 37.172 37.172 37.172c1.563 1.563 1.563 4.094 0 5.656-.781.781-1.805 1.172-2.828 1.172z"></path>
                     </svg></button>
             </div>

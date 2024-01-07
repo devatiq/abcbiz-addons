@@ -34,12 +34,12 @@ class Main extends BaseWidget {
 	 * Register list widget controls.
 	 */
 	protected function register_controls() {
-		//Template
+
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_cart_icon',
 			[
 				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
-				'tab' => Controls_Manager::TAB_CONTENT,
+				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 
