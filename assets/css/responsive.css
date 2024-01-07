@@ -155,7 +155,7 @@
     /*------------------------
     * Testimonial
     --------------------------*/
-    .abc-testi-position {
+    .abcbiz-testi-position {
         position: unset !important;
     }
 
@@ -277,21 +277,21 @@
     /*-------------------------
     * Testimonial
     ---------------------------*/
-    .abc-testimonial-grids {
+    .abcbiz-testimonial-grids {
         grid-template-columns: repeat(1, 1fr);
     }
-    .abc-testimonial-slider-nav-bar.abc-test-nav-hide-in-mobile {
+    .abcbiz-testimonial-slider-nav-bar.abcbiz-test-nav-hide-in-mobile {
         display: none;
     }
 
     /*-------------------------
     * Tabs
     ---------------------------*/
-    .abc-var-tabs .e-n-tabs-heading>button[aria-selected="true"]:after {
+    .abcbiz-var-tabs .e-n-tabs-heading>button[aria-selected="true"]:after {
         display: none;
     }
 
-    .abc-single-icon-box-three-area {
+    .abcbiz-single-icon-box-three-area {
         align-items: flex-start;
         gap: 20px;
         flex-direction: column;

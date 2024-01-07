@@ -664,7 +664,6 @@ h3.abcbiz-style-three-team-name {
 
 .abcbiz-testimonial-client-info h3 {
     color: #ffff;
-    font-family: Roboto;
     font-size: 18px;
     font-weight: 600;
     line-height: 1.3em;
@@ -673,7 +672,6 @@ h3.abcbiz-style-three-team-name {
 
 .abcbiz-testimonial-client-info p {
     color: #448E08;
-    font-family: Roboto;
     font-size: 14px;
     font-weight: 400;
     line-height: 1.3em;
@@ -682,7 +680,6 @@ h3.abcbiz-style-three-team-name {
 
 .abcbiz-testimonial-content p {
     color: #FFF;
-    font-family: Roboto;
     font-size: 16px;
     font-weight: 400;
     line-height: 1.3rem;
@@ -712,7 +709,7 @@ h3.abcbiz-style-three-team-name {
     cursor: pointer;
     border: 0; 
     position: absolute;
-    top: 50%;
+    top: 40%;
     z-index: 1;
     background-color: transparent;
     display: flex;
@@ -761,8 +758,6 @@ h3.abcbiz-style-three-team-name {
 .swiper-pagination.abcbiz-testimonial-slider-pagination .swiper-pagination-bullet-active {
     background-color:#448E08;
 }
-
-
 
 /*---------------------------
 * Testimonial grids

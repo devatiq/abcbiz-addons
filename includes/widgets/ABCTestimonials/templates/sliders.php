@@ -10,7 +10,6 @@ $abcbiz_unique_id = $this->get_id();
 // query testimonial from elementor settings
 $abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
 
-
 // get all testimonial settings
 $abcbiz_testimonial_column = $abcbiz_settings['abcbiz_ele_testimonial_column_desktop'] ? $abcbiz_settings['abcbiz_ele_testimonial_column_desktop'] : 3;
 $abcbiz_testimonial_tab = $abcbiz_settings['abcbiz_ele_testimonial_column_tab'] ? $abcbiz_settings['abcbiz_ele_testimonial_column_tab'] : 1;
@@ -69,14 +68,18 @@ $breakpoints = wp_json_encode([
                         <div class="abcbiz-testimonial-single-item swiper-slide">
                             <!--Header Part-->
                             <div class="abcbiz-testimonial-header">
-                                <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">
-                                    <?php if (!empty($testimonial_img['url'])) :                                                            
-                                        echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
-                                    else :
-                                    ?>
-                                        <img src="<?php echo AbcBizElementor_Assets; ?>/img/member-placeholder.jpg" alt="">
-                                    <?php endif; ?>
-                                </div>
+                                <!--Client Image-->
+                                <?php if ('yes' == $abcbiz_settings['abcbiz_ele_testimonial_client_image_switch']) : ?> 
+                                    <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">
+                                        <?php if (!empty($testimonial_img['url'])) :                                                            
+                                            echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
+                                        else :
+                                        ?>
+                                            <img src="<?php echo AbcBizElementor_Assets; ?>/img/member-placeholder.jpg" alt="">
+                                        <?php endif; ?>
+                                    </div>
+                                <?php endif; ?><!--/ Client Image-->
+
                                 <div class="abcbiz-testimonial-client-info">
                                     <?php if(!empty($testimonial_name)) : ?>
                                         <h3><?php echo esc_html($testimonial_name); ?></h3>

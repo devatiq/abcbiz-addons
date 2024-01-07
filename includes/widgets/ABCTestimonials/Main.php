@@ -61,6 +61,17 @@ class Main extends BaseWidget
                 ],
             ]
         );
+        $this->add_control(
+            'abcbiz_ele_testimonial_client_image_switch',
+            [
+                'label' => esc_html__('Display Client Image', 'abcbiz-multi'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('On', 'abcbiz-multi'),
+                'label_off' => esc_html__('Off', 'abcbiz-multi'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
         // Initialize the repeater control
         $repeater = new \Elementor\Repeater();
         $repeater->add_control(
@@ -273,7 +284,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_testimonial_title_typography',
-                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Name Typography', 'abcbiz-multi'),
                 'selector' => '{{WRAPPER}} .abcbiz-testimonial-client-info h3',
             ]
         );
@@ -281,7 +292,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_title_color',
             [
-                'label' => esc_html__('Title Color', 'abcbiz-multi'),
+                'label' => esc_html__('Name Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -395,6 +406,51 @@ class Main extends BaseWidget
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-testimonial-quote i' => 'font-size: {{SIZE}}{{UNIT}};',
                     '{{WRAPPER}} .abcbiz-testimonial-quote svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        // testimonial quote icon top/bottom position
+        $this->add_responsive_control(
+            'abcbiz_ele_testimonial_quote_icon_tb_position',
+            [
+                'label' => esc_html__('Quote Icon Top Position', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => -100,
+                        'max' => 300,
+                    ],
+                    '%' => [
+                        'min' => -100,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-testimonial-quote' => 'top: {{SIZE}}{{UNIT}};',
+                ],                
+            ]
+        );
+
+        // testimonial quote icon left/right position
+        $this->add_responsive_control(
+            'abcbiz_ele_testimonial_quote_icon_lr_position',
+            [
+                'label' => esc_html__('Quote Icon Right Position', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => -100,
+                        'max' => 300,
+                    ],
+                    '%' => [
+                        'min' => -100,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-testimonial-quote' => 'right: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
