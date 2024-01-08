@@ -44,12 +44,45 @@ class Main extends BaseWidget {
 			]
 		);
 
+		//Type Selection
+		$this->add_control(
+			'abcbiz_elementor_flip_box_icon_img_selection',
+			[
+				'label' => esc_html__( 'Icon Type', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'none',
+				'options' => [
+					'none' => esc_html__( 'None', 'abcbiz-multi' ),
+					'icon'  => esc_html__( 'Icon', 'abcbiz-multi' ),
+					'image' => esc_html__( 'Image', 'abcbiz-multi' ),
+				],
+			]
+		);
+
 		//front icon
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_icon',
 			[
 				'label' => esc_html__( 'Choose Icon', 'abcbiz-multi' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
+				],
+			]
+		);
+
+		//Media
+		$this->add_control(
+			'abcbiz_elementor_flip_box_front_image',
+			[
+				'label' => esc_html__( 'Choose Image', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'image',
+				],			
 			]
 		);
 
@@ -307,6 +340,9 @@ class Main extends BaseWidget {
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-flip-box-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
+				],
 			]
 		);
 
@@ -320,10 +356,13 @@ class Main extends BaseWidget {
 					'selectors' => [
 						'{{WRAPPER}} .abcbiz-flip-box-icon svg, {{WRAPPER}} .abcbiz-flip-box-icon svg path' => 'fill: {{VALUE}}',
 					],
+					'condition' => [
+						'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
+					],
 				]
 			);
 
-			//front icon spacing
+		//front icon spacing
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_icon_spacing',
 			[
@@ -344,8 +383,90 @@ class Main extends BaseWidget {
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-flip-box-icon' => 'margin-bottom: {{SIZE}}{{UNIT}};',
 				],
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
+				],
 			]
 		);
+
+		//front image size
+		$this->add_responsive_control(
+			'abcbiz_elementor_flip_box_front_image_size',
+			[
+				'label' => esc_html__( 'Image Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 20,
+						'max' => 500,
+						'step' => 5,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 80,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-flip-box-image img' => 'width: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'image',
+				],
+			]
+		);
+
+		//front image spacing
+		$this->add_responsive_control(
+			'abcbiz_elementor_flip_box_front_image_spacing',
+			[
+				'label' => esc_html__( 'Image Bottom Space', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => -20,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 6,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-flip-box-image' => 'margin-bottom: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'abcbiz_elementor_flip_box_icon_img_selection' => 'image',
+				],
+			]
+		);
+
+		//Image Border radius
+		$this->add_control(
+				'abcbiz_elementor_flip_box_front_image_border_radius',
+				[
+					'label' => esc_html__( 'Image Border Radius', 'abcbiz-multi' ),
+					'type' => \Elementor\Controls_Manager::DIMENSIONS,
+					'size_units' => [ 'px' ],
+					'default' => [
+						'top' => 3,
+						'right' => 3,
+						'bottom' => 3,
+						'left' => 3,
+						'unit' => 'px',
+						'isLinked' => true,
+					],
+					'selectors' => [
+						'{{WRAPPER}} .abcbiz-flip-box-image img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					],
+					'condition' => [
+						'abcbiz_elementor_flip_box_icon_img_selection' => 'image',
+					],
+				]
+			);
+
 
 		//Heading typography
 		$this->add_group_control(
@@ -357,7 +478,7 @@ class Main extends BaseWidget {
 				]
 			);
 
-			//Heading Color
+		//Heading Color
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_heading_color',
 			[
