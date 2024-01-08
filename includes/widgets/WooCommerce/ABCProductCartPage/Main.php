@@ -225,6 +225,7 @@ class Main extends BaseWidget {
 				'default' => '#6f45ed',
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-wc-cart-page .woocommerce-cart-form thead' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-elementor-wc-cart-page .woocommerce-cart-form thead th' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
