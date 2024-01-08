@@ -397,6 +397,74 @@ class Main extends BaseWidget
 		$this->end_controls_tabs();
         $this->end_controls_section(); // end button style
 
+         // Image style section
+         $this->start_controls_section(
+            'abcbiz_elementor_blog_list_image_style_section',
+            [
+                'label' => esc_html__('Image Style', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'abcbiz_elementor_blog_list_img_switch' => 'yes'
+                ],
+            ]
+        );
+
+        	//Image Width
+		$this->add_responsive_control(
+            'abcbiz_elementor_blog_list_image_width',
+            [
+                'label' => esc_html__( 'Image Width', 'abcbiz-multi' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px'],
+                'range' => [
+                    'px' => [
+                        'min' => 50,
+                        'max' => 500,
+                        'step' => 5,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 200,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-thumb' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //Image Border
+        $this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz_elementor_blog_list_image_width_border',
+				'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-thumb figure img',
+			]
+		);
+
+        //Image Border Radius
+        $this->add_control(
+			'abcbiz_elementor_blog_list_image_width_border_radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => ['px'],
+				'default' => [
+					'top' => 3,
+					'right' => 3,
+					'bottom' => 3,
+					'left' => 3,
+					'unit' => 'px',
+					'isLinked' => true,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-blog-list-thumb figure img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->end_controls_section(); // end image style
+
          // Pagination style section
          $this->start_controls_section(
             'abcbiz_elementor_blog_list_pagination_style_section',

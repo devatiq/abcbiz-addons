@@ -106,7 +106,6 @@ class Main extends BaseWidget {
             ]
         );
 
-
 		//Count BG Color
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_count_bg_color',
