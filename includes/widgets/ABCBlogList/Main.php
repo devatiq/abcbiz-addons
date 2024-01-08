@@ -24,10 +24,6 @@ class Main extends BaseWidget
 
     /**
      * Register the widget controls.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function register_controls()
     {
@@ -579,10 +575,6 @@ class Main extends BaseWidget
 
     /**
      * Render the widget output on the frontend.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
     {
