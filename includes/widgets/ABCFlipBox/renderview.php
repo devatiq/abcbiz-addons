@@ -4,81 +4,56 @@
  */
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
+
  $abcbiz_settings = $this->get_settings_for_display();
+ 
+ $abcbiz_flip_front_icon = $abcbiz_settings['abcbiz_elementor_flip_box_front_icon'];
  $abcbiz_flip_front_title = $abcbiz_settings['abcbiz_elementor_flip_box_front_title'];
  $abcbiz_flip_front_desc = $abcbiz_settings['abcbiz_elementor_flip_box_front_desc'];
-?>
-
-<div class="abcbiz-elementor-flip-box-area">
-    <div class="flip-box">
-        <div class="flip-box-front">
-            <div class="flip-box-icon"><?php \Elementor\Icons_Manager::render_icon( $abcbiz_settings['abcbiz_elementor_flip_box_front_icon'], [ 'aria-hidden' => 'true' ] ); ?></div>
-            <h2><?php echo esc_html__($abcbiz_flip_front_title); ?></h2>
-            <p><?php echo esc_html__($abcbiz_flip_front_desc); ?></p>
-        </div>
-        <div class="flip-box-back">
-            <h3>Heading</h3>
-            <p>Back paragraph content goes here.</p>
-            <button>Click Me</button>
-        </div>
-    </div>
-</div>
-
-<style>
-	.abcbiz-elementor-flip-box-area {
-    perspective: 1000px;
-}
-
-.abcbiz-elementor-flip-box-area .flip-box-icon svg {
-	width: 50px;
-	height: 50px;
-}
-
-.abcbiz-elementor-flip-box-area .flip-box-icon svg, .abcbiz-elementor-flip-box-area .flip-box-icon svg path{
-	fill: red;
-
-}
-
-.flip-box {
-    background-color: transparent;
-    width: 100%;
-    height: 200px;
-    border: 1px solid #f1f1f1;
-    perspective: 1000px;
-    position: relative;
-}
-
-.flip-box-front, .flip-box-back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: transform 0.6s linear;
-}
-
-.flip-box-front {
-    background-color: #bbb;
-    color: black;
-}
-
-.flip-box-back {
-    background-color: #333;
-    color: white;
-    transform: rotateY(180deg);
-}
-
-.flip-box:hover .flip-box-front {
-    transform: rotateY(180deg);
-}
-
-.flip-box:hover .flip-box-back {
-    transform: rotateY(360deg);
-}
-
-</style>
+ $abcbiz_flip_back_title = $abcbiz_settings['abcbiz_elementor_flip_box_back_title'];
+ $abcbiz_flip_back_desc = $abcbiz_settings['abcbiz_elementor_flip_box_back_desc'];
+ $abcbiz_flip_back_btn_text = $abcbiz_settings['abcbiz_elementor_flip_box_back_btn'];
+ $abcbiz_flip_back_btn_link = $abcbiz_settings['abcbiz_elementor_flip_box_back_btn_link'];
+$abcbiz_flip_back_btn_link_url = $abcbiz_flip_back_btn_link['url'];
+$abcbiz_flip_back_btn_link_is_external = $abcbiz_flip_back_btn_link['is_external'] ? ' target="_blank"' : '';
+$abcbiz_flip_back_btn_link_nofollow = $abcbiz_flip_back_btn_link['nofollow'] ? ' rel="nofollow"' : '';
+$abcbiz_flip_direction = $abcbiz_settings['abcbiz_elementor_page_title_align'];
+$abcbiz_flip_direction_class = !empty($abcbiz_flip_direction) ? $abcbiz_flip_direction : 'abcbiz-right-flip';
+ ?>
+ 
+ <div class="abcbiz-elementor-flip-box-area <?php echo esc_attr($abcbiz_flip_direction_class); ?>">
+	 <div class="abcbiz-flip-box">
+		 <div class="abcbiz-flip-box-front">
+			 <?php if (!empty($abcbiz_flip_front_icon)) : ?>
+				 <div class="abcbiz-flip-box-icon">
+					 <?php \Elementor\Icons_Manager::render_icon($abcbiz_flip_front_icon, ['aria-hidden' => 'true']); ?>
+				 </div>
+			 <?php endif; ?>
+ 
+			 <?php if (!empty($abcbiz_flip_front_title)) : ?>
+				 <h2><?php echo esc_html__($abcbiz_flip_front_title); ?></h2>
+			 <?php endif; ?>
+ 
+			 <?php if (!empty($abcbiz_flip_front_desc)) : ?>
+				 <p class="abcbiz-front-description"><?php echo esc_html__($abcbiz_flip_front_desc); ?></p>
+			 <?php endif; ?>
+		 </div><!-- end front -->
+ 
+		 <div class="abcbiz-flip-box-back">
+			 <?php if (!empty($abcbiz_flip_back_title)) : ?>
+				 <h3><?php echo esc_html__($abcbiz_flip_back_title); ?></h3>
+			 <?php endif; ?>
+ 
+			 <?php if (!empty($abcbiz_flip_back_desc)) : ?>
+				 <p class="abcbiz-back-description"><?php echo esc_html__($abcbiz_flip_back_desc); ?></p>
+			 <?php endif; ?>
+ 
+			 <?php if (!empty($abcbiz_flip_back_btn_text)) : ?>
+				<div class="abcbiz-flip-back-btn">
+                <a href="<?php echo esc_url($abcbiz_flip_back_btn_link_url); ?>"<?php echo $abcbiz_flip_back_btn_link_is_external; ?><?php echo $abcbiz_flip_back_btn_link_nofollow; ?>>
+               <?php echo esc_html__($abcbiz_flip_back_btn_text); ?>
+               </a></div>
+            <?php endif; ?>
+		 </div><!-- end back -->
+	 </div>
+ </div><!-- end flip box area --> 
