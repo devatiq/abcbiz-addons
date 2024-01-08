@@ -339,6 +339,7 @@ class Main extends BaseWidget {
 				],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-flip-box-icon svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-flip-box-icon i' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
@@ -355,6 +356,7 @@ class Main extends BaseWidget {
 					'default' => '#2f3093',
 					'selectors' => [
 						'{{WRAPPER}} .abcbiz-flip-box-icon svg, {{WRAPPER}} .abcbiz-flip-box-icon svg path' => 'fill: {{VALUE}}',
+							'{{WRAPPER}} .abcbiz-flip-box-icon i' => 'color: {{VALUE}}',
 					],
 					'condition' => [
 						'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
