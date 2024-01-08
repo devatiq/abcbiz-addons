@@ -24,8 +24,6 @@ function abcbiz_widgets_page() {
             <div id="ABCBizWidgets" class="tabcontent">
                 <h3><?php echo esc_html__('ABCBiz Multi Widgets', 'abcbiz-multi');?></h3>
                 <div class="abcbiz-widgets-grid">
-                <?php require_once plugin_dir_path(__FILE__) . 'widgets-register-functions.php'; ?>
-                <?php require_once plugin_dir_path(__FILE__) . 'widgets-render-functions.php';?>
                 <?php abcbiz_blockquote_widget_field_render(); ?>
                 <?php abcbiz_blog_fancy_widget_field_render(); ?>
                 <?php abcbiz_author_bio_widget_field_render(); ?>
@@ -65,8 +63,6 @@ function abcbiz_widgets_page() {
                 <div id="WooCommerceWidgets" class="tabcontent">
                     <h3><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-multi');?></h3>
                     <div class="abcbiz-widgets-grid">
-                    <?php require_once plugin_dir_path(__FILE__) . 'wc-widgets-register-functions.php';?>
-                    <?php require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php'; ?>
                     <?php abcbiz_wc_add_to_cart_icon_field_render(); ?>
                     <?php abcbiz_wc_product_cart_icon_field_render(); ?>
                     <?php abcbiz_wc_cart_page_field_render(); ?>
@@ -87,6 +83,12 @@ function abcbiz_widgets_page() {
     </div>
     <?php 
 }
+
+require_once plugin_dir_path(__FILE__) . 'widgets-register-functions.php';
+require_once plugin_dir_path(__FILE__) . 'widgets-render-functions.php';
+require_once plugin_dir_path(__FILE__) . 'wc-widgets-register-functions.php';
+require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php';
+
 
 //callback function
 function abcbiz_available_widgets_section_callback() {
