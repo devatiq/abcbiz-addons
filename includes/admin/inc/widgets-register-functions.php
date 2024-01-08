@@ -10,6 +10,7 @@ function abcbiz_widgets_settings_init() {
     );
 
 // Register settings
+register_setting('abcbiz_widgets_menu', 'abcbiz_flip_box_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_blockquote_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_blog_fancy_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_author_bio_widget_field');
@@ -39,9 +40,14 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_skill_bar_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_social_share_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_tag_info_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_team_member_widget_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_testi_caro_widget_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_wp_menu_widget_field');
 
 // Set default values if not already set
-add_option('abcbiz_blockquote_widget_field', '1'); //1 is default on
+add_option('abcbiz_wp_menu_widget_field', '1');
+add_option('abcbiz_testi_caro_widget_field', '1');
+add_option('abcbiz_flip_box_widget_field', '1');
+add_option('abcbiz_blockquote_widget_field', '1');
 add_option('abcbiz_blog_fancy_widget_field', '1');
 add_option('abcbiz_author_bio_widget_field', '1');
 add_option('abcbiz_blog_grid_widget_field', '1');
@@ -72,12 +78,39 @@ add_option('abcbiz_tag_info_widget_field', '1');
 add_option('abcbiz_team_member_widget_field', '1');
 
 
+// WordPress Menu
+add_settings_field(
+    'abcbiz_wp_menu_widget_field',
+    esc_html__('WordPress Menu', 'abcbiz-multi'),
+    'abcbiz_wp_menu_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
+
+// testimonial slider
+add_settings_field(
+    'abcbiz_testi_caro_widget_field',
+    esc_html__('Testimonial Carousel', 'abcbiz-multi'),
+    'abcbiz_testi_caro_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
+
+// flip box
+add_settings_field(
+    'abcbiz_flip_box_widget_field',
+    esc_html__('Flip Box', 'abcbiz-multi'),
+    'abcbiz_flip_box_widget_field_render',
+    'abcbiz_widgets_menu', // Page slug where this field will be shown
+    'abcbiz_available_widgets_section'
+);
+
 // blockquote
 add_settings_field(
     'abcbiz_blockquote_widget_field',
     esc_html__('Blockquote', 'abcbiz-multi'),
     'abcbiz_blockquote_widget_field_render',
-    'abcbiz_widgets_menu', // Page slug where this field will be shown
+    'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
 );
 

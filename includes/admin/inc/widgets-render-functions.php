@@ -1,6 +1,72 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//WordPress Menu
+function abcbiz_wp_menu_widget_field_render() {
+    $option = get_option('abcbiz_wp_menu_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/wordpress-menu-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-wp-menu.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("WordPress Menu", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_wp_menu_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+//Testimonial Carousel
+function abcbiz_testi_caro_widget_field_render() {
+    $option = get_option('abcbiz_testi_caro_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/testimonial-carousel-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-testimonial-slider.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Testimonial Carousel", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_testi_caro_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+//Flip Box
+function abcbiz_flip_box_widget_field_render() {
+    $option = get_option('abcbiz_flip_box_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/flip-box-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-flip-box.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Flip Box", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_flip_box_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
 //Blockquote
 function abcbiz_blockquote_widget_field_render() {
     $option = get_option('abcbiz_blockquote_widget_field');

@@ -45,6 +45,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFeturedImg\Main::class;
 		}
 
+		if (get_option('abcbiz_flip_box_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFlipBox\Main::class;
+		}
+
 		if (get_option('abcbiz_icon_box_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCIconBox\Main::class;
 		}
@@ -113,15 +117,17 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTeamMember\Main::class;
 		}
 
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCWpMenu\Main::class;
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTestimonials\Main::class;
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFlipBox\Main::class;
-		
+		if (get_option('abcbiz_testi_caro_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTestimonials\Main::class;
+		}
 
+		if (get_option('abcbiz_wp_menu_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCWpMenu\Main::class;
+		}
+
+		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
-
 		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-multi-wc-widgets.php';
-		
 		}
 
 		foreach ($abcbiz_widgets as $widget_class) {

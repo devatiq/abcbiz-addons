@@ -1,6 +1,7 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+
 //Available Widget
 function abcbiz_widgets_page() {
     // Include the plugin.php file if it hasn't been already
@@ -9,11 +10,11 @@ function abcbiz_widgets_page() {
     }
     ?>
     <div class="wrap abcbiz-available-widget-wrap">
-        <h2><?php echo esc_html__('ABCBiz & WooCommerce Widgets', 'abcbiz-multi');?></h2>
+        <h2><?php echo esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-multi');?></h2>
         <div class="abcbiz-tabs">
-            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')">ABCBiz Widgets</button>
+            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('ABCBiz Widgets', 'abcbiz-multi');?></button>
             <?php if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ): ?>
-                <button class="tablink button button-secondary" onclick="openTab(event, 'WooCommerceWidgets')">WooCommerce Widgets</button>
+                <button class="tablink button button-secondary" onclick="openTab(event, 'WooCommerceWidgets')"><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-multi');?></button>
             <?php endif; ?>
         </div>
 
@@ -21,8 +22,10 @@ function abcbiz_widgets_page() {
             <?php settings_fields('abcbiz_widgets_menu'); ?>
 
             <div id="ABCBizWidgets" class="tabcontent">
-                <h3>ABCBiz Multi Widgets</h3>
+                <h3><?php echo esc_html__('ABCBiz Multi Widgets', 'abcbiz-multi');?></h3>
                 <div class="abcbiz-widgets-grid">
+                <?php require_once plugin_dir_path(__FILE__) . 'widgets-register-functions.php'; ?>
+                <?php require_once plugin_dir_path(__FILE__) . 'widgets-render-functions.php';?>
                 <?php abcbiz_blockquote_widget_field_render(); ?>
                 <?php abcbiz_blog_fancy_widget_field_render(); ?>
                 <?php abcbiz_author_bio_widget_field_render(); ?>
@@ -35,6 +38,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_comment_form_widget_field_render(); ?>
                 <?php abcbiz_counter_up_widget_field_render(); ?>
                 <?php abcbiz_feat_img_widget_field_render(); ?>
+                <?php abcbiz_flip_box_widget_field_render(); ?>
                 <?php abcbiz_icon_box_widget_field_render(); ?>
                 <?php abcbiz_img_hover_widget_field_render(); ?>
                 <?php abcbiz_page_title_widget_field_render(); ?>
@@ -52,32 +56,37 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_social_share_widget_field_render(); ?>
                 <?php abcbiz_tag_info_widget_field_render(); ?>
                 <?php abcbiz_team_member_widget_field_render(); ?>
+                <?php abcbiz_testi_caro_widget_field_render(); ?>
+                <?php abcbiz_wp_menu_widget_field_render(); ?>
                 </div>
             </div>
 
             <?php if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ): ?>
                 <div id="WooCommerceWidgets" class="tabcontent">
-                    <h3>WooCommerce Widgets</h3>
+                    <h3><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-multi');?></h3>
                     <div class="abcbiz-widgets-grid">
+                    <?php require_once plugin_dir_path(__FILE__) . 'wc-widgets-register-functions.php';?>
+                    <?php require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php'; ?>
+                    <?php abcbiz_wc_add_to_cart_icon_field_render(); ?>
                     <?php abcbiz_wc_product_cart_icon_field_render(); ?>
+                    <?php abcbiz_wc_cart_page_field_render(); ?>
+                    <?php abcbiz_wc_checkout_page_field_render(); ?>
+                    <?php abcbiz_wc_product_img_field_render(); ?>
+                    <?php abcbiz_wc_product_meta_field_render(); ?>
+                    <?php abcbiz_wc_product_price_field_render(); ?>
+                    <?php abcbiz_wc_product_related_field_render(); ?>
+                    <?php abcbiz_wc_product_short_desc_field_render(); ?>
+                    <?php abcbiz_wc_product_tabs_field_render(); ?>
                     <?php abcbiz_wc_product_title_field_render(); ?>
+                    <?php abcbiz_wc_product_bread_crumb_field_render(); ?>
                     </div>
                 </div>
+               
             <?php endif; ?>
         </form>
     </div>
     <?php 
 }
-
-// Require Widget Register File
-require_once plugin_dir_path(__FILE__) . 'widgets-register-functions.php';
-// Require Widget Render File
-require_once plugin_dir_path(__FILE__) . 'widgets-render-functions.php';
-
-// Require Widget Register File
-require_once plugin_dir_path(__FILE__) . 'wc-widgets-register-functions.php';
-// Require Widget Render File
-require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php';
 
 //callback function
 function abcbiz_available_widgets_section_callback() {
