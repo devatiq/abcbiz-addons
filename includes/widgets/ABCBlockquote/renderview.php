@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Post Ttitle Widget
+ * Render View for ABC Blockquote Widget
  */
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
