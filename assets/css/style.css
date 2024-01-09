@@ -1909,6 +1909,42 @@ width: auto;
     height: 40px;
  }
 
+ /*----------------------------------------------
+ * ABC Search Icon
+ * ---------------------------------------------*/
+ .abcbiz-ele-search-icon .abcbiz-search-icon-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    justify-content: flex-end;
+}
+
+.abcbiz-ele-search-icon .s {
+    width: 0;
+    padding: 0;
+    border: none;
+    transition: width 0.5s ease-out;
+    opacity: 0;
+    border: 1px solid #3f14db;
+    padding: 5px 10px;
+    outline: none;
+}
+
+.abcbiz-ele-search-icon .abcbiz-search-icon {
+    cursor: pointer;
+    padding: 2px;
+}
+
+.abcbiz-ele-search-icon .s.active {
+    width: 200px;
+    opacity: 1;
+}
+
+.abcbiz-search-icon svg {
+  width: 30px;
+  height: 30px;
+}
  
 /*----------------------------------------------
  * ABC Search Form
