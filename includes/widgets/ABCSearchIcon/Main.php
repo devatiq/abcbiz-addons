@@ -203,7 +203,7 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_elementor_search_icon_input_width',
                 [
-                    'label' => esc_html__( 'Field Height', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Field Width', 'abcbiz-multi' ),
                     'type' => \Elementor\Controls_Manager::SLIDER,
                     'size_units' => ['px'],
                     'range' => [
@@ -242,7 +242,7 @@ class Main extends BaseWidget
                         'size' => 5,
                     ],
                     'selectors' => [
-                        '{{WRAPPER}} .abcbiz-ele-search-icon .s' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}};',
+                        '{{WRAPPER}} .abcbiz-ele-search-icon .s.active' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}};',
                     ],
                 ]
             );
@@ -252,7 +252,7 @@ class Main extends BaseWidget
                 \Elementor\Group_Control_Border::get_type(),
                 [
                     'name' => 'abcbiz_elementor_search_icon_input_border',
-                    'selector' => '{{WRAPPER}} .abcbiz-ele-search-icon .s',
+                    'selector' => '{{WRAPPER}} .abcbiz-ele-search-icon .s.active',
                 ]
             );
 
