@@ -2079,6 +2079,73 @@ width: auto;
 .abcbiz-ele-search-form input[type="submit"]:hover {
     background-color: #054F6D;
 }
+
+/*----------------------------------------------
+ * ABC CTA
+ * ---------------------------------------------*/
+ .abcbiz-cta-area {
+    background-color: #F8FAFF;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+ }
+ 
+.abcbiz-cta-content-area .abcbiz-cta-heading {
+    text-align: center;
+ }
+
+.abcbiz-cta-content-area .abcbiz-cta-heading h2, .abcbiz-cta-content-area .abcbiz-cta-heading h4 {
+    color: #000000;
+    font-family: Roboto;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.abcbiz-cta-content-area .abcbiz-cta-heading h4 {
+    font-size: 30px;    
+}
+
+.abcbiz-cta-description {
+    text-align: center;
+}
+
+.abcbiz-cta-description p{
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.abcbiz-cta-button-area {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 25px;
+    align-items: center;
+}
+
+.abcbiz-cta-button-area .abcbiz-cta-button {
+    border-radius: 5px;
+    background-color: #302EFF;
+    color: #fff;
+    padding: 10px;
+    display: inline-flex;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    justify-content: center;
+    align-items: center;
+}
+
+.abcbiz-cta-button-area .abcbiz-cta-button:hover {
+    background-color: #333a42;
+    color: #ffffff;
+}
+
 /*----------------------------------------------
  * ABC Recent Posts
  * ---------------------------------------------*/
