@@ -1,6 +1,72 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//Contact Info
+function abcbiz_cta_widget_field_render() {
+    $option = get_option('abcbiz_cta_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/call-to-action-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-cta.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Call To Action- CTA", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_cta_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+//Contact Info
+function abcbiz_contact_info_widget_field_render() {
+    $option = get_option('abcbiz_contact_info_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/contact-and-social-info-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-contact-info.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Contact & Social Info", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_contact_info_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+//Search Icon
+function abcbiz_search_icon_widget_field_render() {
+    $option = get_option('abcbiz_search_icon_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/search-icon-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-search-icon.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Search Icon", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_search_icon_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
 //WordPress Menu
 function abcbiz_wp_menu_widget_field_render() {
     $option = get_option('abcbiz_wp_menu_widget_field');
@@ -13,7 +79,7 @@ function abcbiz_wp_menu_widget_field_render() {
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
                 </div>
             </a>
-        </div>
+        </div> 
         <h3><?php echo esc_html__("WordPress Menu", "abcbiz-multi"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_wp_menu_widget_field" value="1" <?php checked(1, $option, true); ?>>

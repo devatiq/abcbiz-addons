@@ -34,7 +34,9 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_contact_form7_widget_field_render(); ?>
                 <?php abcbiz_circular_skill_widget_field_render(); ?>
                 <?php abcbiz_comment_form_widget_field_render(); ?>
+                <?php abcbiz_contact_info_widget_field_render(); ?>
                 <?php abcbiz_counter_up_widget_field_render(); ?>
+                <?php abcbiz_cta_widget_field_render(); ?>
                 <?php abcbiz_feat_img_widget_field_render(); ?>
                 <?php abcbiz_flip_box_widget_field_render(); ?>
                 <?php abcbiz_icon_box_widget_field_render(); ?>
@@ -48,6 +50,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_recent_post_widget_field_render(); ?>
                 <?php abcbiz_related_post_widget_field_render(); ?>
                 <?php abcbiz_search_form_widget_field_render(); ?>
+                <?php abcbiz_search_icon_widget_field_render(); ?>
                 <?php abcbiz_sec_title_widget_field_render(); ?>
                 <?php abcbiz_shape_anim_widget_field_render(); ?>
                 <?php abcbiz_skill_bar_widget_field_render(); ?>

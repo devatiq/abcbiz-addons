@@ -36,9 +36,15 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if (get_option('abcbiz_comment_form_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCommentForm\Main::class;
 		}
+		if (get_option('abcbiz_contact_info_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCContactInfo\Main::class;
+		}
 
 		if (get_option('abcbiz_counter_up_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCounter\Main::class;
+		}
+		if (get_option('abcbiz_cta_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCTA\Main::class;
 		}
 
 		if (get_option('abcbiz_feat_img_widget_field') == 1) {
@@ -93,6 +99,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSearchForm\Main::class;
 		}
 
+		if (get_option('abcbiz_search_icon_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSearchIcon\Main::class;
+		}
+
 		if (get_option('abcbiz_sec_title_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSecTitle\Main::class;
 		}
@@ -124,10 +134,6 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if (get_option('abcbiz_wp_menu_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCWpMenu\Main::class;
 		}
-
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSearchIcon\Main::class;
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCContactInfo\Main::class;
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCTA\Main::class;
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
