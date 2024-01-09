@@ -126,12 +126,112 @@ class Main extends BaseWidget {
 
 		//Social Icon section
 		$this->start_controls_section(
-			'abcbiz_elementor_contact_social_cions_Settings',
+			'abcbiz_elementor_contact_social_icons_Settings',
 			[
 				'label' => esc_html__( 'Social Icons', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 				'condition' => [
 					'abcbiz_elementor_contact_social_icon_switch' => 'yes',
+				],
+			]
+		);
+
+		//Facebook
+		$this->add_control(
+			'abcbiz_elementor_contact_info_fb_url',
+			[
+				'label' => esc_html__( 'Facebook URL:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '#', 'abcbiz-multi' ),
+			]
+		);
+
+		//X
+		$this->add_control(
+			'abcbiz_elementor_contact_info_x_url',
+			[
+				'label' => esc_html__( 'Twitter/X:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '#', 'abcbiz-multi' ),
+			]
+		);
+
+		//Instagram
+		$this->add_control(
+			'abcbiz_elementor_contact_info_ins_url',
+			[
+				'label' => esc_html__( 'Instagram:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '#', 'abcbiz-multi' ),
+			]
+		);
+
+		//Linkedin
+		$this->add_control(
+			'abcbiz_elementor_contact_info_link_url',
+			[
+				'label' => esc_html__( 'Linkedin:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '#', 'abcbiz-multi' ),
+			]
+		);
+
+		//Pinterest
+		$this->add_control(
+			'abcbiz_elementor_contact_info_pin_url',
+			[
+				'label' => esc_html__( 'Pinterest:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		//Dribbble
+		$this->add_control(
+			'abcbiz_elementor_contact_info_drib_url',
+			[
+				'label' => esc_html__( 'Dribbble:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		//Behance
+		$this->add_control(
+			'abcbiz_elementor_contact_info_behan_url',
+			[
+				'label' => esc_html__( 'Behance:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		//TikTok
+		$this->add_control(
+			'abcbiz_elementor_contact_info_tikton_url',
+			[
+				'label' => esc_html__( 'TikTok:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+			]
+		);
+
+		//Youtube
+		$this->add_control(
+			'abcbiz_elementor_contact_info_yt_url',
+			[
+				'label' => esc_html__( 'Youtube:', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( '#', 'abcbiz-multi' ),
+			]
+		);
+
+		$this->end_controls_section();//end socian icons
+
+		//Contact Info Style
+		$this->start_controls_section(
+			'abcbiz_elementor_contact_info_style',
+			[
+				'label' => esc_html__( 'Contact Info Style', 'abcbiz-multi' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'abcbiz_elementor_contact_info_switch' => 'yes',
 				],
 			]
 		);
