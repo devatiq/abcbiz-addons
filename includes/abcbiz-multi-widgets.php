@@ -137,6 +137,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 		
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCDualButton\Main::class;
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBusinessHours\Main::class;
 		
 
 		//WooCommerce widgets

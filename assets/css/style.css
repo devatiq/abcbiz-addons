@@ -2325,3 +2325,48 @@ width: auto;
     justify-content: center;
     align-items: center;
 }
+
+
+/*----------------------------------------------
+ * ABC Working Hours
+ * ---------------------------------------------*/
+ .abcbiz-business-hours-area ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    -webkit-box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+    box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+    list-style: none;
+    border-radius: 0 0 10px 10px;
+    background: #fff;
+}
+.abcbiz-business-hours-area ul .abcbiz-business-hour-title {
+    display: flex;
+    align-items: center;    
+    border: 0;
+    background: #302EFF;
+    text-align: center;
+    border-radius: 5px 5px 0px 0px;
+    padding: 30px;
+    color:#fff;
+    font-size: 20px;
+}
+.abcbiz-business-hours-area ul li.abcbiz-business-hour-item {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0;    
+    text-align: center;
+    border-bottom: 1px solid #eaeaea;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.abcbiz-business-hours-area ul li.abcbiz-business-hour-item span {
+    color:#272727;
+    font-size: 15px;
+}
+.abcbiz-business-hours-area ul li.abcbiz-business-hour-item:last-child {
+    border-bottom: 0;
+}
