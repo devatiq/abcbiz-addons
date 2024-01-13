@@ -19,7 +19,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-account';
 		protected $title = 'ABC Woo My Account';
-		protected $icon = 'eicon-checkout';
+		protected $icon = 'eicon-my-account';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
