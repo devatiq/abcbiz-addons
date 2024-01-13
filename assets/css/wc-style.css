@@ -325,11 +325,97 @@ h2.abcbiz-wc-related-product-title {
    width: 80px !important;
 }
 
+
 /*----------------------------------------------
- *Checkout page
+ * Woo Account page
  * ---------------------------------------------*/
+ .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul{
+   display: flex;
+   flex-direction: column;
+   margin: 0;
+   padding: 0;
+   gap: 5px;
+   list-style: none;
+}
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a {
+   display: block;
+   padding: 10px 15px;
+   color: #000;
+   text-decoration: none;
+   border-radius: 3px;
+   transition: all 0.4s;
+   width: 100%;
+   background-color: #F8FAFF;
+}
 
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a:hover, .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation .woocommerce-MyAccount-navigation-link.is-active a {
+   background-color: #302EFF;
+   color: #fff;
+}
 
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content {
+   background-color: #F8FAFF;
+   color: #333;
+   border: 1px solid #d5d8dc;
+   padding: 15px 20px;
+   border-radius: 5px;
+}
+
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button {
+   font-size: 15px;
+   padding: 15px 20px;
+   border-radius: 5px;
+   color:#fff;
+   background-color: #302EFF;
+   margin-top: 10px;
+   text-transform: capitalize;
+}
+
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button:hover {
+   background-color: #000;
+   color: #fff;
+}
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="text"],.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="email"],.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="url"], .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="password"],.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="search"],.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content input[type="tel"] {   
+   padding: 12px 10px;
+   border: 1px solid #ccc;
+   border-radius: 3px;
+}
+.abcbiz-elementor-wc-account-page .woocommerce::before, .abcbiz-elementor-wc-account-page .woocommerce::after {
+   display: none !important;
+}
+.abcbiz-elementor-wc-account-page .woocommerce {
+   display: flex;
+   gap: 20px;
+}
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce {
+   flex-direction: column;
+}
+
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+   float: none !important;
+   display: flex;
+   flex-direction: column;
+}
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content {
+   float: none !important;
+}
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul {
+   flex-direction: row;
+   width: 100%;
+   flex-basis: 100%;
+}
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul li {
+   display: flex;
+}
+
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+   width: 100%;
+   flex-basis: 100%;
+}
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content {
+   width: 100%;
+   flex-basis: 100%;
+}
 
 /*----------------------------------------------
  *Responsive Adjustments
@@ -348,6 +434,20 @@ h2.abcbiz-wc-related-product-title {
    .abcbiz-elementor-wc-cart-page .woocommerce .cart-collaterals,
    .abcbiz-elementor-wc-cart-page .woocommerce .woocommerce-cart-form {
        grid-column: 1 / -1;
+   }
+   .abc-elementor-wc-account-page .woocommerce {
+      flex-direction: column;
+   }
+   .abc-ele-wc-my-account-vertical.abc-elementor-wc-account-page .woocommerce-MyAccount-navigation ul {
+      flex-direction: column;
+   }
+   .abc-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+      width: 100% !important;
+      flex-basis: 100% !important;
+   }
+   .abc-elementor-wc-account-page .woocommerce-MyAccount-content {
+      width: 100% !important;
+      flex-basis: 100% !important;
    }
 }
 
