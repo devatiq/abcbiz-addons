@@ -13,11 +13,11 @@ use Elementor\Group_Control_Border;
 class Main extends BaseWidget
 {
     // define protected variables...
-    protected $name = 'abc-abcdual-button';
+    protected $name = 'abcbiz-abcdual-button';
     protected $title = 'ABC Dual Button';
     protected $icon = 'eicon-dual-button';
     protected $categories = [
-        'abc-category'
+        'abcbiz-category'
     ];
 
     protected $keywords = [
@@ -32,45 +32,45 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
-            'abc_elementor_dual_button_setting',
+            'abcbiz_elementor_dual_button_setting',
             [
-                'label' => esc_html__('Contents', 'abcbiz-theme'),
+                'label' => esc_html__('Contents', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
 
         // Tabs
         $this->start_controls_tabs(
-			'abc_elementor_dual_button_tabs'
+			'abcbiz_elementor_dual_button_tabs'
 		);
 
         // Left Tab
         $this->start_controls_tab(
-            'abc_elementor_dual_button_left_tab',
+            'abcbiz_elementor_dual_button_left_tab',
             [
-                'label' => esc_html__('Left', 'abcbiz-theme'),
+                'label' => esc_html__('Left', 'abcbiz-multi'),
             ]
         );
 
         // Text field for Left Button
         $this->add_control(
-            'abc_elementor_dual_button_text_left',
+            'abcbiz_elementor_dual_button_text_left',
             [
-                'label' => esc_html__('Button Text', 'abcbiz-theme'),
+                'label' => esc_html__('Button Text', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Free Download', 'abcbiz-theme'),
-                'placeholder' => esc_html__('Enter button text', 'abcbiz-theme'),
+                'default' => esc_html__('Free Download', 'abcbiz-multi'),
+                'placeholder' => esc_html__('Enter button text', 'abcbiz-multi'),
                 'label_block' => true,
             ]
         );
 
         // URL field for Left Button
         $this->add_control(
-            'abc_elementor_dual_button_url_left',
+            'abcbiz_elementor_dual_button_url_left',
             [
-                'label' => esc_html__('Button URL', 'abcbiz-theme'),
+                'label' => esc_html__('Button URL', 'abcbiz-multi'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-theme'),
+                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-multi'),
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
@@ -83,12 +83,12 @@ class Main extends BaseWidget
 
         //switch for icon visibility
         $this->add_control(
-            'abc_elementor_dual_button_icon_left_switch',
+            'abcbiz_elementor_dual_button_icon_left_switch',
             [
-                'label' => esc_html__('Display Icon', 'abcbiz-theme'),
+                'label' => esc_html__('Display Icon', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-theme'),
-                'label_off' => esc_html__('Hide', 'abcbiz-theme'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'no',
                 'separator' => 'before',
@@ -97,30 +97,30 @@ class Main extends BaseWidget
 
         // Icon fields for Left Button
         $this->add_control(
-            'abc_elementor_dual_button_icon_left',
+            'abcbiz_elementor_dual_button_icon_left',
             [
-                'label' => esc_html__('Icon', 'abcbiz-theme'),
+                'label' => esc_html__('Icon', 'abcbiz-multi'),
                 'type' => Controls_Manager::ICONS,
                 'label_block' => true,     
                 'condition' => [
-                    'abc_elementor_dual_button_icon_left_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_left_switch' => 'yes',
                 ]         
             ]
         );
 
         // Choose field for icon position
         $this->add_control(
-            'abc_elementor_dual_button_left_icon_position',
+            'abcbiz_elementor_dual_button_left_icon_position',
             [
-                'label' => esc_html__('Icon Position', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Position', 'abcbiz-multi'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-theme'),
+                        'title' => esc_html__('Left', 'abcbiz-multi'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-theme'),
+                        'title' => esc_html__('Right', 'abcbiz-multi'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -128,7 +128,7 @@ class Main extends BaseWidget
                 'toggle' => true,
                 'label_block' => false,
                 'condition' => [
-                    'abc_elementor_dual_button_icon_left_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_left_switch' => 'yes',
                 ],
                 'separator' => 'before',
             ]
@@ -138,20 +138,20 @@ class Main extends BaseWidget
 
         // Middle Tab
         $this->start_controls_tab(
-            'abc_elementor_dual_button_middle_tab',
+            'abcbiz_elementor_dual_button_middle_tab',
             [
-                'label' => esc_html__('Middle', 'abcbiz-theme'),
+                'label' => esc_html__('Middle', 'abcbiz-multi'),
             ]
         );
 
         // Switch field for Middle Text visibility
         $this->add_control(
-            'abc_elementor_dual_button_middle_text_switch',
+            'abcbiz_elementor_dual_button_middle_text_switch',
             [
-                'label' => esc_html__('Display Middle Text', 'abcbiz-theme'),
+                'label' => esc_html__('Display Middle Text', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-theme'),
-                'label_off' => esc_html__('Hide', 'abcbiz-theme'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'yes',
                 'separator' => 'before',
@@ -160,15 +160,15 @@ class Main extends BaseWidget
 
         // Text field for Middle Text
         $this->add_control(
-            'abc_elementor_dual_button_text_middle',
+            'abcbiz_elementor_dual_button_text_middle',
             [
-                'label' => esc_html__('Middle Text', 'abcbiz-theme'),
+                'label' => esc_html__('Middle Text', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('OR', 'abcbiz-theme'),
-                'placeholder' => esc_html__('Enter middle text', 'abcbiz-theme'),
+                'default' => esc_html__('OR', 'abcbiz-multi'),
+                'placeholder' => esc_html__('Enter middle text', 'abcbiz-multi'),
                 'label_block' => true,
                 'condition' => [
-                    'abc_elementor_dual_button_middle_text_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_middle_text_switch' => 'yes',
                 ]
             ]
         );
@@ -177,31 +177,31 @@ class Main extends BaseWidget
 
         // Right Tab
         $this->start_controls_tab(
-            'abc_elementor_dual_button_right_tab',
+            'abcbiz_elementor_dual_button_right_tab',
             [
-                'label' => esc_html__('Right', 'abcbiz-theme'),
+                'label' => esc_html__('Right', 'abcbiz-multi'),
             ]
         );
 
         // Text field for Right Button
         $this->add_control(
-            'abc_elementor_dual_button_text_right',
+            'abcbiz_elementor_dual_button_text_right',
             [
-                'label' => esc_html__('Button Text', 'abcbiz-theme'),
+                'label' => esc_html__('Button Text', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Purchase Now', 'abcbiz-theme'),
-                'placeholder' => esc_html__('Enter button text', 'abcbiz-theme'),
+                'default' => esc_html__('Purchase Now', 'abcbiz-multi'),
+                'placeholder' => esc_html__('Enter button text', 'abcbiz-multi'),
                 'label_block' => true,
             ]
         );
 
         // URL field for Right Button
         $this->add_control(
-            'abc_elementor_dual_button_url_right',
+            'abcbiz_elementor_dual_button_url_right',
             [
-                'label' => esc_html__('Button URL', 'abcbiz-theme'),
+                'label' => esc_html__('Button URL', 'abcbiz-multi'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-theme'),
+                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-multi'),
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
@@ -214,12 +214,12 @@ class Main extends BaseWidget
 
         //switch for icon visibility
         $this->add_control(
-            'abc_elementor_dual_button_icon_right_switch',
+            'abcbiz_elementor_dual_button_icon_right_switch',
             [
-                'label' => esc_html__('Display Icon', 'abcbiz-theme'),
+                'label' => esc_html__('Display Icon', 'abcbiz-multi'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-theme'),
-                'label_off' => esc_html__('Hide', 'abcbiz-theme'),
+                'label_on' => esc_html__('Show', 'abcbiz-multi'),
+                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
                 'return_value' => 'yes',
                 'default' => 'no',
                 'separator' => 'before',
@@ -228,30 +228,30 @@ class Main extends BaseWidget
 
         // Icon fields for Right Button
         $this->add_control(
-            'abc_elementor_dual_button_icon_right',
+            'abcbiz_elementor_dual_button_icon_right',
             [
-                'label' => esc_html__('Icon', 'abcbiz-theme'),
+                'label' => esc_html__('Icon', 'abcbiz-multi'),
                 'type' => Controls_Manager::ICONS,
                 'label_block' => true,   
                 'condition' => [
-                    'abc_elementor_dual_button_icon_right_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_right_switch' => 'yes',
                 ]             
             ]
         );
 
             // Choose field for icon position
             $this->add_control(
-            'abc_elementor_dual_button_right_icon_position',
+            'abcbiz_elementor_dual_button_right_icon_position',
             [
-                'label' => esc_html__('Icon Position', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Position', 'abcbiz-multi'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-theme'),
+                        'title' => esc_html__('Left', 'abcbiz-multi'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-theme'),
+                        'title' => esc_html__('Right', 'abcbiz-multi'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -259,7 +259,7 @@ class Main extends BaseWidget
                 'toggle' => true,
                 'label_block' => false,
                 'condition' => [
-                    'abc_elementor_dual_button_icon_right_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_right_switch' => 'yes',
                 ],
                 'separator' => 'before',
             ]
@@ -274,17 +274,17 @@ class Main extends BaseWidget
 
        // Style section for Left Button
        $this->start_controls_section(
-           'abc_elementor_dual_button_style_left',
+           'abcbiz_elementor_dual_button_style_left',
            [
-               'label' => esc_html__('Left Button', 'abcbiz-theme'),
+               'label' => esc_html__('Left Button', 'abcbiz-multi'),
                'tab' => Controls_Manager::TAB_STYLE,
            ]
        );
        // Icon Size for Left Button
        $this->add_control(
-           'abc_elementor_dual_button_icon_size_left',
+           'abcbiz_elementor_dual_button_icon_size_left',
            [
-               'label' => esc_html__('Icon Size', 'abcbiz-theme'),
+               'label' => esc_html__('Icon Size', 'abcbiz-multi'),
                'type' => Controls_Manager::SLIDER,
                'range' => [
                    'px' => [
@@ -294,28 +294,28 @@ class Main extends BaseWidget
                    ],
                ],
                'selectors' => [
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one i' => 'font-size: {{SIZE}}{{UNIT}};',
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one i' => 'font-size: {{SIZE}}{{UNIT}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
                ],
                'condition' => [
-                   'abc_elementor_dual_button_icon_left_switch' => 'yes',
+                   'abcbiz_elementor_dual_button_icon_left_switch' => 'yes',
                ]
            ]
        );
 
        // Icon Color for Left Button
        $this->add_control(
-           'abc_elementor_dual_button_icon_color_left',
+           'abcbiz_elementor_dual_button_icon_color_left',
            [
-               'label' => esc_html__('Icon Color', 'abcbiz-theme'),
+               'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                'type' => Controls_Manager::COLOR,
                'default' => '#fff',
                'selectors' => [
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one i' => 'color: {{VALUE}};',
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one svg' => 'fill: {{VALUE}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one i' => 'color: {{VALUE}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one svg' => 'fill: {{VALUE}};',
                ],
                'condition' => [
-                   'abc_elementor_dual_button_icon_left_switch' => 'yes',
+                   'abcbiz_elementor_dual_button_icon_left_switch' => 'yes',
                ]
            ]
        );
@@ -323,29 +323,29 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_typography_left',
-                'label' => esc_html__('Typography', 'abcbiz-theme'),
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a',
+                'name' => 'abcbiz_elementor_dual_button_typography_left',
+                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a',
             ]
         );
 
         // Padding for Left Button
         $this->add_responsive_control(
-            'abc_elementor_dual_button_padding_left',
+            'abcbiz_elementor_dual_button_padding_left',
             [
-                'label' => esc_html__('Padding', 'abcbiz-theme'),
+                'label' => esc_html__('Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         // Gap for Dual Button between text and icon
         $this->add_responsive_control(
-            'abc_elementor_dual_button_left_icon_gap',
+            'abcbiz_elementor_dual_button_left_icon_gap',
             [
-                'label' => esc_html__('Button Gap', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Gap', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -360,10 +360,10 @@ class Main extends BaseWidget
                     ],
                 ],       
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
-                    'abc_elementor_dual_button_icon_left_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_left_switch' => 'yes',
                 ],
             ]
         );
@@ -371,43 +371,43 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_border_left',
-                'label' => esc_html__('Border', 'abcbiz-theme'),
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a',
+                'name' => 'abcbiz_elementor_dual_button_border_left',
+                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a',
             ]
         );
 
         // Border Radius for Left Button
         $this->add_responsive_control(
-            'abc_elementor_dual_button_border_radius_left',
+            'abcbiz_elementor_dual_button_border_radius_left',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-theme'),
+                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
         // Normal state tab for Left Button
-        $this->start_controls_tabs('abc_elementor_dual_button_normal_hover_tabs_left');
+        $this->start_controls_tabs('abcbiz_elementor_dual_button_normal_hover_tabs_left');
 
         $this->start_controls_tab(
-            'abc_elementor_dual_button_normal_tab_left',
+            'abcbiz_elementor_dual_button_normal_tab_left',
             [
-                'label' => esc_html__('Normal', 'abcbiz-theme'),
+                'label' => esc_html__('Normal', 'abcbiz-multi'),
             ]
         );
 
         // Text color for Left Button
         $this->add_control(
-            'abc_elementor_dual_button_text_color_left',
+            'abcbiz_elementor_dual_button_text_color_left',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-theme'),
+                'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -416,10 +416,10 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_background_left',
-                'label' => esc_html__('Background Color', 'abcbiz-theme'),
+                'name' => 'abcbiz_elementor_dual_button_background_left',
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a',
             ]
         );
 
@@ -428,20 +428,20 @@ class Main extends BaseWidget
 
         // Start Hover for Left Button
         $this->start_controls_tab(
-            'abc_elementor_dual_button_hover_tab_left',
+            'abcbiz_elementor_dual_button_hover_tab_left',
             [
-                'label' => esc_html__('Hover', 'abcbiz-theme'),
+                'label' => esc_html__('Hover', 'abcbiz-multi'),
             ]
         );
 
         // Hover text color for Left Button
         $this->add_control(
-            'abc_elementor_dual_button_hover_text_color_left',
+            'abcbiz_elementor_dual_button_hover_text_color_left',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-theme'),
+                'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a:hover ' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover ' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -450,37 +450,37 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_hover_background_left',
-                'label' => esc_html__('Background Color', 'abcbiz-theme'),
+                'name' => 'abcbiz_elementor_dual_button_hover_background_left',
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a:hover',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover',
             ]
         );
 
         //icon hover color
         $this->add_control(
-            'abc_elementor_dual_button_hover_icon_color_left',
+            'abcbiz_elementor_dual_button_hover_icon_color_left',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a:hover i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a:hover svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover svg' => 'fill: {{VALUE}};',
                 ],
                 'condition' => [
-                    'abc_elementor_dual_button_icon_left_switch' => 'yes'
+                    'abcbiz_elementor_dual_button_icon_left_switch' => 'yes'
                 ],
             ]
         );   
 
         //border color hover
         $this->add_control(
-            'abc_elementor_dual_button_hover_border_color_left',
+            'abcbiz_elementor_dual_button_hover_border_color_left',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-theme'),
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-one a:hover' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover' => 'border-color: {{VALUE}};',
                 ]
             ]
         );
@@ -494,22 +494,22 @@ class Main extends BaseWidget
 
        // Style section for Middle Text
        $this->start_controls_section(
-           'abc_elementor_dual_button_style_middle',
+           'abcbiz_elementor_dual_button_style_middle',
            [
-               'label' => esc_html__('Middle Text', 'abcbiz-theme'),
+               'label' => esc_html__('Middle Text', 'abcbiz-multi'),
                'tab' => Controls_Manager::TAB_STYLE,
            ]
        );
 
        // Text Color for Middle Text
        $this->add_control(
-           'abc_elementor_dual_button_text_color_middle',
+           'abcbiz_elementor_dual_button_text_color_middle',
            [
-               'label' => esc_html__('Text Color', 'abcbiz-theme'),
+               'label' => esc_html__('Text Color', 'abcbiz-multi'),
                'type' => Controls_Manager::COLOR,
                'default' => '#284162',
                'selectors' => [
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button-middle-text' => 'color: {{VALUE}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button-middle-text' => 'color: {{VALUE}};',
                ],
            ]
        );
@@ -518,8 +518,8 @@ class Main extends BaseWidget
        $this->add_group_control(
            Group_Control_Typography::get_type(),
            [
-               'name' => 'abc_elementor_dual_button_typography_middle',
-               'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button-middle-text',
+               'name' => 'abcbiz_elementor_dual_button_typography_middle',
+               'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button-middle-text',
            ]
        );
 
@@ -527,11 +527,11 @@ class Main extends BaseWidget
        $this->add_group_control(
            Group_Control_Background::get_type(),
            [
-               'name' => 'abc_elementor_dual_button_background_middle',
-               'label' => esc_html__('Background Color', 'abcbiz-theme'),               
+               'name' => 'abcbiz_elementor_dual_button_background_middle',
+               'label' => esc_html__('Background Color', 'abcbiz-multi'),               
                'types' => ['classic', 'gradient'],
                'exclude' => ['image'],
-               'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button-middle-text',
+               'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button-middle-text',
            ]
        );
 
@@ -539,8 +539,8 @@ class Main extends BaseWidget
        $this->add_group_control(
            Group_Control_Box_Shadow::get_type(),
            [
-               'name' => 'abc_elementor_dual_button_box_shadow_middle',
-               'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button-middle-text',
+               'name' => 'abcbiz_elementor_dual_button_box_shadow_middle',
+               'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button-middle-text',
            ]
        );
 
@@ -548,18 +548,18 @@ class Main extends BaseWidget
 
        // Style section for Right Button
        $this->start_controls_section(
-           'abc_elementor_dual_button_style_right',
+           'abcbiz_elementor_dual_button_style_right',
            [
-               'label' => esc_html__('Right Button', 'abcbiz-theme'),
+               'label' => esc_html__('Right Button', 'abcbiz-multi'),
                'tab' => Controls_Manager::TAB_STYLE,
            ]
        );
 
        // Icon Size for Right Button
        $this->add_control(
-           'abc_elementor_dual_button_icon_size_right',
+           'abcbiz_elementor_dual_button_icon_size_right',
            [
-               'label' => esc_html__('Icon Size', 'abcbiz-theme'),
+               'label' => esc_html__('Icon Size', 'abcbiz-multi'),
                'type' => Controls_Manager::SLIDER,
                'range' => [
                    'px' => [
@@ -569,27 +569,27 @@ class Main extends BaseWidget
                    ],
                ],
                'selectors' => [
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two i' => 'font-size: {{SIZE}}{{UNIT}};',
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two i' => 'font-size: {{SIZE}}{{UNIT}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
                ],
                'condition' => [
-                   'abc_elementor_dual_button_icon_right_switch' => 'yes'
+                   'abcbiz_elementor_dual_button_icon_right_switch' => 'yes'
                ]
            ]
        );
 
        // Icon Color for Right Button
        $this->add_control(
-           'abc_elementor_dual_button_icon_color_right',
+           'abcbiz_elementor_dual_button_icon_color_right',
            [
-               'label' => esc_html__('Icon Color', 'abcbiz-theme'),
+               'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                'type' => Controls_Manager::COLOR,
                'selectors' => [
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two i' => 'color: {{VALUE}};',
-                   '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two svg' => 'fill: {{VALUE}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two i' => 'color: {{VALUE}};',
+                   '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two svg' => 'fill: {{VALUE}};',
                ],
                'condition' => [
-                   'abc_elementor_dual_button_icon_right_switch' => 'yes'
+                   'abcbiz_elementor_dual_button_icon_right_switch' => 'yes'
                ]
            ]
        );
@@ -598,28 +598,28 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_typography_right',
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a',
+                'name' => 'abcbiz_elementor_dual_button_typography_right',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a',
             ]
         );
 
         // Padding for Right Button
         $this->add_responsive_control(
-            'abc_elementor_dual_button_padding_right',
+            'abcbiz_elementor_dual_button_padding_right',
             [
-                'label' => esc_html__('Padding', 'abcbiz-theme'),
+                'label' => esc_html__('Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         // Gap for Dual Button between text and icon
         $this->add_responsive_control(
-            'abc_elementor_dual_button_right_icon_gap',
+            'abcbiz_elementor_dual_button_right_icon_gap',
             [
-                'label' => esc_html__('Button Gap', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Gap', 'abcbiz-multi'),
                 'type' => Controls_Manager::SLIDER,
                 'range' => [
                     'px' => [
@@ -634,10 +634,10 @@ class Main extends BaseWidget
                     ],
                 ],       
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a' => 'gap: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a' => 'gap: {{SIZE}}{{UNIT}};',
                 ],
                 'condition' => [
-                    'abc_elementor_dual_button_icon_right_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_right_switch' => 'yes',
                 ],
             ]
         );
@@ -646,41 +646,41 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_border_right',
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a',
+                'name' => 'abcbiz_elementor_dual_button_border_right',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a',
             ]
         );
 
         // Border Radius for Right Button
         $this->add_responsive_control(
-            'abc_elementor_dual_button_border_radius_right',
+            'abcbiz_elementor_dual_button_border_radius_right',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-theme'),
+                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
         // Normal State Tab for Right Button
-        $this->start_controls_tabs('abc_elementor_dual_button_normal_hover_right');
+        $this->start_controls_tabs('abcbiz_elementor_dual_button_normal_hover_right');
 
         $this->start_controls_tab(
-            'abc_elementor_dual_button_normal_right',
+            'abcbiz_elementor_dual_button_normal_right',
             [
-                'label' => esc_html__('Normal', 'abcbiz-theme'),
+                'label' => esc_html__('Normal', 'abcbiz-multi'),
             ]
         );
 
         // Text Color for Right Button Normal State
         $this->add_control(
-            'abc_elementor_dual_button_text_color_right',
+            'abcbiz_elementor_dual_button_text_color_right',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-theme'),
+                'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -689,10 +689,10 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_background_right',
-                'label' => esc_html__('Background Color', 'abcbiz-theme'),
+                'name' => 'abcbiz_elementor_dual_button_background_right',
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a',
             ]
         );
 
@@ -700,20 +700,20 @@ class Main extends BaseWidget
 
         // Hover State Tab for Right Button
         $this->start_controls_tab(
-            'abc_elementor_dual_button_hover_right',
+            'abcbiz_elementor_dual_button_hover_right',
             [
-                'label' => esc_html__('Hover', 'abcbiz-theme'),
+                'label' => esc_html__('Hover', 'abcbiz-multi'),
             ]
         );
 
         // Text Color for Right Button Hover
         $this->add_control(
-            'abc_elementor_dual_button_text_color_hover_right',
+            'abcbiz_elementor_dual_button_text_color_hover_right',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-theme'),
+                'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -722,38 +722,38 @@ class Main extends BaseWidget
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
-                'name' => 'abc_elementor_dual_button_background_hover_right',
-                'label' => esc_html__('Background Color', 'abcbiz-theme'),
+                'name' => 'abcbiz_elementor_dual_button_background_hover_right',
+                'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'types' => ['classic', 'gradient'],
                 'exclude' => ['image'],
-                'selector' => '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a:hover',
+                'selector' => '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover',
             ]
         );
 
         // Icon Hover Color for Right Button
         $this->add_control(
-            'abc_elementor_dual_button_icon_color_hover_right',
+            'abcbiz_elementor_dual_button_icon_color_hover_right',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-theme'),
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a:hover i' => 'color: {{VALUE}};',
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a:hover svg' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover svg' => 'fill: {{VALUE}};',
                 ],
                 'condition' => [
-                    'abc_elementor_dual_button_icon_right_switch' => 'yes',
+                    'abcbiz_elementor_dual_button_icon_right_switch' => 'yes',
                 ]
             ]
         );
 
         //border hover color
         $this->add_control(
-            'abc_elementor_dual_button_border_color_hover_right',
+            'abcbiz_elementor_dual_button_border_color_hover_right',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-theme'),
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abc-dual-button-area .abc-dual-button.abc-dual-button-two a:hover' => 'border-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover' => 'border-color: {{VALUE}};',
                 ]
             ]
         );
