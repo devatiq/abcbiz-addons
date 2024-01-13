@@ -17,7 +17,7 @@ use Elementor\Group_Control_Background;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abcbiz-wc-checkout';
+		protected $name = 'abcbiz-wc-account';
 		protected $title = 'ABC Woo My Account';
 		protected $icon = 'eicon-checkout';
 		protected $categories = [
