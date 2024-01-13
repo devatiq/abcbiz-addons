@@ -2256,3 +2256,72 @@ width: auto;
     margin: 0;
     font-weight: 400;
 }
+
+
+/*----------------------------------------------
+ * ABC Dual Button
+ * ---------------------------------------------*/
+ .abcbiz-dual-button-area {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0px;
+}
+
+.abcbiz-dual-button {
+    position: relative;
+}
+
+.abcbiz-dual-button a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #fff;
+    font-size: 15px;
+    background-color: rgb(98, 71, 237);
+    padding: 15px 30px;
+}
+.abcbiz-dual-button-area .abcbiz-dual-button-one a{
+    background-color: #1e73be;
+    border-radius: 50px 0 0 50px; 
+}
+.abcbiz-dual-button-area .abcbiz-dual-button-one a:hover {
+    background-color: #302EFF;
+}
+.abcbiz-dual-button-area .abcbiz-dual-button-two a{  
+    border-radius: 0 50px 50px 0;    
+}
+.abcbiz-dual-button-area .abcbiz-dual-button-two a:hover {
+    background-color: #8224e3;
+}
+.abcbiz-dual-button-area .abcbiz-dual-button a svg {
+    width: 16px;
+    height: 16px;
+    fill: #fff;
+}
+
+.abcbiz-dual-button-middle-text {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: capitalize;
+    position: absolute;
+    right: -16px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    overflow: hidden;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 0 0 0 5px rgb(255 255 255 / 40%);
+    box-shadow: 0 0 0 5px rgb(255 255 255 / 40%);
+    color: #284162;
+    text-transform: uppercase;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
