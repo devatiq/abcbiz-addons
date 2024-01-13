@@ -329,6 +329,28 @@ h2.abcbiz-wc-related-product-title {
 /*----------------------------------------------
  * Woo Account page
  * ---------------------------------------------*/
+
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation {
+   float: none !important;
+   display: flex;
+   flex-direction: column;
+   flex-basis: 30%;
+}
+.abcbiz-elementor-wc-account-page .woocommerce::before, .abcbiz-elementor-wc-account-page .woocommerce::after {
+   display: none !important;
+}
+.abcbiz-elementor-wc-account-page .woocommerce {
+   display: flex;
+   gap: 20px;
+}
+.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce {
+   flex-direction: column;
+}
+
+.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content {
+   float: none !important;
+   flex-basis: 70%;
+}
  .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul{
    display: flex;
    flex-direction: column;
@@ -380,25 +402,7 @@ h2.abcbiz-wc-related-product-title {
    border: 1px solid #ccc;
    border-radius: 3px;
 }
-.abcbiz-elementor-wc-account-page .woocommerce::before, .abcbiz-elementor-wc-account-page .woocommerce::after {
-   display: none !important;
-}
-.abcbiz-elementor-wc-account-page .woocommerce {
-   display: flex;
-   gap: 20px;
-}
-.abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce {
-   flex-direction: column;
-}
 
-.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation {
-   float: none !important;
-   display: flex;
-   flex-direction: column;
-}
-.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content {
-   float: none !important;
-}
 .abcbiz-ele-wc-my-account-vertical.abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul {
    flex-direction: row;
    width: 100%;
