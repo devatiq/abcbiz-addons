@@ -13,8 +13,8 @@ function abcbiz_settings_page() {
                 <!-- Buttons -->
                 <div class="abcbiz-resource-buttons">
                     <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button button-secondary">Demo</a>
-                    <a href="https://abcplugin.com/" class="button button-secondary">Documentation</a>
-                    <a href="https://abcplugin.com/widgets/contact-us" class="button button-secondary">Support</a>
+                    <a href="https://abcplugin.com/" class="button button-secondary" target="_blank">Documentation</a>
+                    <a href="https://abcplugin.com/widgets/contact-us" target="_blank" class="button button-secondary">Support</a>
                 </div>
             </div>          
 
