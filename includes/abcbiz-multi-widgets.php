@@ -135,8 +135,12 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCWpMenu\Main::class;
 		}
 
+		if (get_option('abcbiz_dual_button_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCDualButton\Main::class;
+		}
+
 		
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCDualButton\Main::class;
+		
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBusinessHours\Main::class;
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCArchiveTitle\Main::class;
 		

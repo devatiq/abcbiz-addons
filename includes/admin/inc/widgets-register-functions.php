@@ -45,6 +45,8 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_wp_menu_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_search_icon_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_contact_info_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_cta_widget_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_dual_button_widget_field');
+
 
 // Set default values if not already set
 add_option('abcbiz_cta_widget_field', '1');
@@ -82,6 +84,7 @@ add_option('abcbiz_skill_bar_widget_field', '1');
 add_option('abcbiz_social_share_widget_field', '1');
 add_option('abcbiz_tag_info_widget_field', '1');
 add_option('abcbiz_team_member_widget_field', '1');
+add_option('abcbiz_dual_button_widget_field', '1');
 
 
 // WordPress Menu
@@ -370,6 +373,15 @@ add_settings_field(
     'abcbiz_team_member_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
+);
+
+// Add settings field for ABC Dual Button
+add_settings_field(
+    'abcbiz_dual_button_widget_field', 
+    esc_html__('ABC Dual Button', 'abcbiz-multi'), 
+    'abcbiz_dual_button_widget_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section' 
 );
 
 }
