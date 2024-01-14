@@ -777,7 +777,7 @@ function abcbiz_dual_button_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcplugin.com/widgets/abc-dual-button-elementor-widget/" target="_blank">
+            <a href="https://abcplugin.com/widgets/dual-button-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-dual-button.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
@@ -793,18 +793,17 @@ function abcbiz_dual_button_widget_field_render() {
     <?php
 }
 
-// Callback function for rendering the Business Hours field
+// Business Hours field
 function abcbiz_business_hours_field_render() {
     $option = get_option('abcbiz_business_hours_field');
     ?>
     <div class="abcbiz-widget-lists">
-        <div class="abcbiz-widget-image-overlay">
-            <!-- Replace with your link and image URL -->
-            <a href="https://yourpluginlink.com/business-hours-widget" target="_blank">
+        <div class="abcbiz-widget-image-overlay">           
+            <a href="https://abcplugin.com/widgets/business-hours-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-business-hours.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-clock"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-multi");?>
                     </span>
                 </div>
@@ -813,6 +812,32 @@ function abcbiz_business_hours_field_render() {
         <h3><?php echo esc_html__("Business Hours", "abcbiz-multi"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_business_hours_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Archive Title field
+function abcbiz_archive_title_field_render() {
+    $option = get_option('abcbiz_archive_title_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <!-- Replace with your link and image URL -->
+            <a href="https://yourpluginlink.com/archive-title-widget" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-archive-title.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-archive"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-multi");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Archive Title", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_archive_title_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
         </label>
     </div>

@@ -143,9 +143,11 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBusinessHours\Main::class;
 		}
 	
+		if (get_option('abcbiz_archive_title_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCArchiveTitle\Main::class;
+		}
 		
 		
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCArchiveTitle\Main::class;
 		
 
 		//WooCommerce widgets

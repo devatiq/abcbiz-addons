@@ -47,6 +47,8 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_contact_info_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_cta_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_dual_button_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_business_hours_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
+
 
 
 
@@ -88,6 +90,7 @@ add_option('abcbiz_tag_info_widget_field', '1');
 add_option('abcbiz_team_member_widget_field', '1');
 add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
+add_option('abcbiz_archive_title_field', '1');
 
 
 // WordPress Menu
@@ -392,6 +395,15 @@ add_settings_field(
     'abcbiz_business_hours_field',
     esc_html__('Business Hours', 'abcbiz-multi'),
     'abcbiz_business_hours_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Archive Title
+add_settings_field(
+    'abcbiz_archive_title_field',
+    esc_html__('Archive Title', 'abcbiz-multi'),
+    'abcbiz_archive_title_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );

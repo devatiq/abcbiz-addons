@@ -61,6 +61,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_wp_menu_widget_field_render(); ?>
                 <?php abcbiz_dual_button_widget_field_render(); ?>
                 <?php abcbiz_business_hours_field_render(); ?>
+                <?php abcbiz_archive_title_field_render(); ?>
                 </div>
             </div>
 
