@@ -406,6 +406,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a' => 'color: {{VALUE}};',
                 ],
@@ -440,6 +441,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-one a:hover ' => 'color: {{VALUE}};',
                 ],
@@ -679,6 +681,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a' => 'color: {{VALUE}};',
                 ],
@@ -712,6 +715,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-dual-button-area .abcbiz-dual-button.abcbiz-dual-button-two a:hover' => 'color: {{VALUE}};',
                 ],

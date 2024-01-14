@@ -2296,12 +2296,14 @@ width: auto;
 }
 .abcbiz-dual-button-area .abcbiz-dual-button-one a:hover {
     background-color: #302EFF;
+    color: #fff;
 }
 .abcbiz-dual-button-area .abcbiz-dual-button-two a{  
     border-radius: 0 50px 50px 0;    
 }
 .abcbiz-dual-button-area .abcbiz-dual-button-two a:hover {
     background-color: #8224e3;
+    color: #fff;
 }
 .abcbiz-dual-button-area .abcbiz-dual-button a svg {
     width: 16px;
