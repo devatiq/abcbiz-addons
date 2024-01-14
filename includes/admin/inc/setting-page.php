@@ -3,13 +3,28 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 //Setting page
 function abcbiz_settings_page() {
+    
+        // Ensure the function is available
+        if ( ! function_exists( 'get_plugin_data' ) ) {
+            require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+        }   
+      
+        $plugin_file_path = dirname( dirname( dirname( plugin_dir_path( __FILE__ ) ) ) ) . '/abcbiz-multi.php';   
+        if ( file_exists( $plugin_file_path ) ) {
+            $plugin_data = get_plugin_data( $plugin_file_path );
+            $plugin_name = $plugin_data['Name'];
+        } else {
+            $plugin_name = 'Plugin Name Not Found'; // Fallback name
+        }
+    
+
     ?>
     <div class="wrap">
        
         <div id="abcbiz-custom-header" class="abcbiz-custom-header">
             <!-- Banner -->
             <div class="abcbiz-banner-area">
-                <h1>Welcome to ABCBiz Addons Pro for Elementor</h1>
+                <h1>Welcome to <?php echo esc_html($plugin_name); ?></h1>
                 <!-- Buttons -->
                 <div class="abcbiz-resource-buttons">
                     <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button button-secondary">Demo</a>
