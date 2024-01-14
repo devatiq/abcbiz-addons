@@ -15,7 +15,6 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  width: 100%;
   border-radius: 5px;
   display: flex;
   align-items: flex-start;
@@ -29,8 +28,11 @@
   color: #fff;
   font-size: 3rem;
 }
-.abcbiz-banner-area .abcbiz-resource-buttons {
-
+.abcbiz-banner-area .abcbiz-banner-version {
+  margin: 0;
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
 }
 
 /* widget list */
@@ -194,11 +196,17 @@ input:checked + .abcbiz-slider:before {
     .abcbiz-widget-lists {
         flex: 0 0 calc(50% - 15px);
     }
+    .abcbiz-banner-area h1 {
+      font-size: 2rem;
+    }
 }
 
 @media (max-width: 480px) {
     .abcbiz-widget-lists {
         flex: 0 0 100%;
+    }
+    .abcbiz-banner-area h1 {
+      font-size: 1.5rem;
     }
 }
   
