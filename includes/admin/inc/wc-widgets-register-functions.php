@@ -22,6 +22,7 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_wc_product_short_desc_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_wc_product_tabs_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_wc_product_title_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_wc_product_bread_crumb_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_wc_my_account_field');
 
 // Set default values if not already set
 add_option('abcbiz_wc_add_to_cart_icon_field', '1');
@@ -36,6 +37,7 @@ add_option('abcbiz_wc_product_short_desc_field', '1');
 add_option('abcbiz_wc_product_tabs_field', '1');
 add_option('abcbiz_wc_product_title_field', '1');
 add_option('abcbiz_wc_product_bread_crumb_field', '1');
+add_option('abcbiz_wc_my_account_field', '1');
 
 
 // Product Bread Crumb
@@ -142,6 +144,15 @@ add_settings_field(
     'abcbiz_wc_product_cart_icon_field',
     esc_html__('Cart Icon', 'abcbiz-multi'),
     'abcbiz_wc_product_cart_icon_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for My Account
+add_settings_field(
+    'abcbiz_wc_my_account_field',
+    esc_html__('My Account', 'abcbiz-multi'),
+    'abcbiz_wc_my_account_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );

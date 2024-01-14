@@ -39,6 +39,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
  }
   if (get_option('abcbiz_wc_product_bread_crumb_field') == 1) {
     $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCWooBreadCrumb\Main::class;    
+ }  
+ 
+ if (get_option('abcbiz_wc_my_account_field') == 1) {
+   $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCWooAccount\Main::class;
  }
-
- $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\WooCommerce\ABCWooAccount\Main::class;

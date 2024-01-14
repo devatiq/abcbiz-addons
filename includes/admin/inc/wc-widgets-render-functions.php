@@ -264,3 +264,25 @@ function abcbiz_wc_product_title_field_render() {
     </div>
     <?php
 }
+
+// My Account
+function abcbiz_wc_my_account_field_render() {
+    $option = get_option('abcbiz_wc_my_account_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcplugin.com/widgets/woocommerce-my-account-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-my-account.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("My Account", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_wc_my_account_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}

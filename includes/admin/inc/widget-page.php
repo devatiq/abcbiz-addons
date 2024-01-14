@@ -78,6 +78,7 @@ function abcbiz_widgets_page() {
                     <?php abcbiz_wc_product_tabs_field_render(); ?>
                     <?php abcbiz_wc_product_title_field_render(); ?>
                     <?php abcbiz_wc_product_bread_crumb_field_render(); ?>
+                    <?php abcbiz_wc_my_account_field_render(); ?>
                     </div>
                 </div>
                
