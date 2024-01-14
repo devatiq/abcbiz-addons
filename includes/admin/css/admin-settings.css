@@ -5,6 +5,34 @@
   font-weight: 600;
 }
 
+/* Settings Page */
+/* .abcbiz-custom-header .abcbiz-banner-area img{
+  width: 100%;
+  border-radius: 3px;
+} */
+.abcbiz-banner-area {
+  background-image: url(../img/banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding: 30px 30px;
+  height: 400px;
+  gap: 20px;  
+}
+.abcbiz-banner-area h1 {
+  color: #fff;
+  font-size: 3rem;
+}
+.abcbiz-banner-area .abcbiz-resource-buttons {
+
+}
+
 /* widget list */
 
 .abcbiz-widgets-grid {

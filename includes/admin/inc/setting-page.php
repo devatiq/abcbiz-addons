@@ -5,9 +5,26 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_settings_page() {
     ?>
     <div class="wrap">
-        <h1>ABCBiz Settings</h1>
+       
+        <div id="abcbiz-custom-header" class="abcbiz-custom-header">
+            <!-- Banner -->
+            <div class="abcbiz-banner-area">
+                <h1>Welcome to ABCBiz Addons Pro for Elementor</h1>
+                <!-- Buttons -->
+                <div class="abcbiz-resource-buttons">
+                    <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button button-secondary">Demo</a>
+                    <a href="https://abcplugin.com/" class="button button-secondary">Documentation</a>
+                    <a href="https://abcplugin.com/widgets/contact-us" class="button button-secondary">Support</a>
+                </div>
+            </div>          
+
+        
+        </div>
+
+        <!-- Original Settings Form -->   
         <form method="post" action="options.php">
             <?php
+            settings_errors();
             settings_fields('abcbiz_settings_menu'); // Use the settings menu slug
             do_settings_sections('abcbiz_settings_menu'); // Use the settings menu slug
             submit_button();
@@ -16,6 +33,7 @@ function abcbiz_settings_page() {
     </div>
     <?php
 }
+
 
 function abcbiz_settings_init() {
     // Register a new setting for "ABCBiz Settings" page
