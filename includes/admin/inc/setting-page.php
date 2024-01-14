@@ -32,7 +32,7 @@ function abcbiz_settings_page() {
                 <div class="abcbiz-resource-buttons">
                     <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button button-secondary"><?php echo esc_html__("Demo", "abcbiz-multi"); ?></a>
                     <a href="https://abcplugin.com/" class="button button-secondary" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-multi"); ?></a>
-                    <a href="https://abcplugin.com/widgets/contact-us" target="_blank" class="button button-secondary"><?php echo esc_html__("Support", "abcbiz-multi"); ?></a>
+                    <a href="https://abcplugin.com/contact-us/" target="_blank" class="button button-secondary"><?php echo esc_html__("Support", "abcbiz-multi"); ?></a>
                 </div>
             </div>         
         </div>
