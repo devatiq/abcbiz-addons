@@ -121,3 +121,27 @@ add_action('elementor/elements/categories_registered', 'abcbiz_elementor_add_wid
 add_action('elementor/editor/before_enqueue_scripts', function () {
     wp_enqueue_style('abcbiz-elementor-admin-style', AbcBizElementor_Assets . "/css/ele-editor.css");
 });
+
+//Get Plugin Info
+function get_abcbiz_multi_plugin_info() {
+    // Ensure the function is available
+    if ( ! function_exists( 'get_plugin_data' ) ) {
+        require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
+    }   
+
+    $plugin_file_path = AbcBizElementor_Path . '/abcbiz-multi.php';   
+    if ( file_exists( $plugin_file_path ) ) {
+        $plugin_data = get_plugin_data( $plugin_file_path );
+        $plugin_info = [
+            'Name' => $plugin_data['Name'],
+            'Version' => $plugin_data['Version']
+        ];
+    } else {
+        $plugin_info = [
+            'Name' => esc_html__('Plugin Name Not Found', 'abcbiz-multi'),
+            'Version' => esc_html__('Plugin Version Not Found', 'abcbiz-multi')
+        ];
+    }
+
+    return $plugin_info;
+}

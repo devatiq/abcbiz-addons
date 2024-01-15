@@ -8,9 +8,11 @@ function abcbiz_widgets_page() {
     if ( ! function_exists( 'is_plugin_active' ) ) {
         require_once ABSPATH . 'wp-admin/includes/plugin.php';
     }
+    // Get the plugin data
+    $abcbiz_plugin_data = get_abcbiz_multi_plugin_info();
     ?>
     <div class="wrap abcbiz-available-widget-wrap">
-        <h2><?php echo esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-multi');?></h2>
+        <h2><?php echo esc_html($abcbiz_plugin_data['Name']); ?></h2>
         <div class="abcbiz-tabs">
             <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('ABCBiz Widgets', 'abcbiz-multi');?></button>
             <?php if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ): ?>
