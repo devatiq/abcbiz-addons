@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 //Setting page
-function abcbiz_settings_page() {
+function abcbiz_home_page() {
 
         // Ensure the function is available
         if ( ! function_exists( 'get_plugin_data' ) ) {

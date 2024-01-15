@@ -4,18 +4,18 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_add_admin_menu() {
     // Add a new top-level menu
     add_menu_page(
-        esc_html__('ABCBiz Settings', 'abcbiz-multi'),  // Page title
-        esc_html__('ABCBiz Settings', 'abcbiz-multi'),  // Menu title
+        esc_html__('ABCBiz Home', 'abcbiz-multi'),  // Page title
+        esc_html__('ABCBiz Home', 'abcbiz-multi'),  // Menu title
         'manage_options',                               // Capability
-        'abcbiz_settings_menu',                         // Menu slug
-        'abcbiz_settings_page',                         // Function to display the page
+        'abcbiz_home',                         // Menu slug
+        'abcbiz_home_page',                         // Function to display the page
         plugin_dir_url(__FILE__) . 'img/admin-icon.png',// Icon URL
         6                                               // Position
     );
 
     // Add a submenu page
     add_submenu_page(
-        'abcbiz_settings_menu', 
+        'abcbiz_home', 
         esc_html__('ABCBiz Available Widgets', 'abcbiz-multi'), // Page title
         esc_html__('Available Widgets', 'abcbiz-multi'), // Menu title
         'manage_options',                                // Capability
@@ -27,7 +27,7 @@ add_action('admin_menu', 'abcbiz_add_admin_menu');
 
 //Setting link
 function abcbiz_add_settings_link( $links ) {
-    $settings_link = '<a href="' . admin_url( 'admin.php?page=abcbiz_settings_menu' ) . '">' . esc_html__( 'Settings', 'abcbiz-multi' ) . '</a>';
+    $settings_link = '<a href="' . admin_url( 'admin.php?page=abcbiz_home' ) . '">' . esc_html__( 'Settings', 'abcbiz-multi' ) . '</a>';
     array_unshift( $links, $settings_link );
     return $links;
 }
