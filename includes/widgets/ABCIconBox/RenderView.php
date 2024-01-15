@@ -27,12 +27,20 @@ if ( ! empty( $abcbiz_settings['abcbiz_elementor_icon_box_button_link']['url'] )
                 <?php Icons_Manager::render_icon( $abcbiz_settings['abcbiz_elementor_icon_box_icon'], [ 'aria-hidden' => 'true' ] ); ?>
             </div>  <!--Icon-->       
         </div>
-        <div class="abcbiz-elementor-icon-box-content">
-            <h4 class="abcbiz-elementor-icon-box-title"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_title']); ?></h4>
-            <p class="abcbiz-elementor-icon-box-desc"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_desc']); ?></p>
-        </div>
-        <div class="abcbiz-elementor-icon-box-button">
-            <a <?php echo $this->get_render_attribute_string( 'abcbiz_elementor_icon_box_button_link' ); ?> class="abcbiz-elementor-button-link"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_button_text']); ?> <i class="eicon-arrow-right"></i></a>
-        </div>
+        <?php if(!empty($abcbiz_settings['abcbiz_elementor_icon_box_title']) || !empty($abcbiz_settings['abcbiz_elementor_icon_box_desc'])) : ?>
+            <div class="abcbiz-elementor-icon-box-content">
+                <?php if(!empty($abcbiz_settings['abcbiz_elementor_icon_box_title'])) : ?>
+                    <h4 class="abcbiz-elementor-icon-box-title"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_title']); ?></h4>
+                <?php endif; ?>
+                <?php if(!empty($abcbiz_settings['abcbiz_elementor_icon_box_desc'])) : ?>
+                    <p class="abcbiz-elementor-icon-box-desc"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_desc']); ?></p>
+                <?php endif; ?>
+            </div>
+        <?php endif; ?>
+        <?php if(!empty($abcbiz_settings['abcbiz_elementor_icon_box_button_text'])) : ?>
+            <div class="abcbiz-elementor-icon-box-button">
+                <a <?php echo $this->get_render_attribute_string( 'abcbiz_elementor_icon_box_button_link' ); ?> class="abcbiz-elementor-button-link"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_button_text']); ?> <i class="eicon-arrow-right"></i></a>
+            </div>
+        <?php endif; ?>
     </div>
 </div><!--/ Single Icon Box-->
