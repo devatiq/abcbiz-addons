@@ -135,19 +135,19 @@ function get_abcbiz_multi_plugin_info() {
         $plugin_info = [
             'Name' => $plugin_data['Name'],
             'Version' => $plugin_data['Version'],
-            'Author' => $plugin_data['Author'], // Added Author Name
-            'PluginURI' => $plugin_data['PluginURI'], // Added Plugin URI
-            'AuthorURI' => $plugin_data['AuthorURI'], // Added Author URI
-            'Description' => $plugin_data['Description'] // Added Description
+            'Author' => $plugin_data['Author'], 
+            'PluginURI' => $plugin_data['PluginURI'], 
+            'AuthorURI' => $plugin_data['AuthorURI'], 
+            'Description' => $plugin_data['Description'] 
         ];
     } else {
         $plugin_info = [
-            'Name' => esc_html__('Plugin Name Not Found', 'your-text-domain'),
-            'Version' => esc_html__('Plugin Version Not Found', 'your-text-domain'),
-            'Author' => esc_html__('Author Not Found', 'your-text-domain'),
-            'PluginURI' => esc_html__('Plugin URI Not Found', 'your-text-domain'),
-            'AuthorURI' => esc_html__('Author URI Not Found', 'your-text-domain'),
-            'Description' => esc_html__('Description Not Found', 'your-text-domain')
+            'Name' => esc_html__('Plugin Name Not Found', 'abcbiz-multi'),
+            'Version' => esc_html__('Plugin Version Not Found', 'abcbiz-multi'),
+            'Author' => esc_html__('Author Not Found', 'abcbiz-multi'),
+            'PluginURI' => esc_html__('Plugin URI Not Found', 'abcbiz-multi'),
+            'AuthorURI' => esc_html__('Author URI Not Found', 'abcbiz-multi'),
+            'Description' => esc_html__('Description Not Found', 'abcbiz-multi')
         ];
     }
 
