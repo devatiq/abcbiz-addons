@@ -134,12 +134,20 @@ function get_abcbiz_multi_plugin_info() {
         $plugin_data = get_plugin_data( $plugin_file_path );
         $plugin_info = [
             'Name' => $plugin_data['Name'],
-            'Version' => $plugin_data['Version']
+            'Version' => $plugin_data['Version'],
+            'Author' => $plugin_data['Author'], // Added Author Name
+            'PluginURI' => $plugin_data['PluginURI'], // Added Plugin URI
+            'AuthorURI' => $plugin_data['AuthorURI'], // Added Author URI
+            'Description' => $plugin_data['Description'] // Added Description
         ];
     } else {
         $plugin_info = [
-            'Name' => esc_html__('Plugin Name Not Found', 'abcbiz-multi'),
-            'Version' => esc_html__('Plugin Version Not Found', 'abcbiz-multi')
+            'Name' => esc_html__('Plugin Name Not Found', 'your-text-domain'),
+            'Version' => esc_html__('Plugin Version Not Found', 'your-text-domain'),
+            'Author' => esc_html__('Author Not Found', 'your-text-domain'),
+            'PluginURI' => esc_html__('Plugin URI Not Found', 'your-text-domain'),
+            'AuthorURI' => esc_html__('Author URI Not Found', 'your-text-domain'),
+            'Description' => esc_html__('Description Not Found', 'your-text-domain')
         ];
     }
 
