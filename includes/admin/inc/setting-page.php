@@ -20,7 +20,7 @@ function abcbiz_home_page() {
                                         
                     <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button"><?php echo esc_html__("Demo", "abcbiz-multi"); ?></a>
                     
-                    <a href="https://abcplugin.com/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-multi"); ?></a>
+                    <a href="https://abcplugin.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-multi"); ?></a>
                    
                     <a href="https://abcplugin.com/contact-us/" target="_blank" class="button"><?php echo esc_html__("Support", "abcbiz-multi"); ?></a>     
                     
