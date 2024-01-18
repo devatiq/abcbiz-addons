@@ -39,6 +39,15 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
+        //Author bio text
+        $this->add_control(
+            'abcbiz_elementor_author_bio_text',
+            [
+                'label' => esc_html__('Author Bio Text', 'abcbiz-multi'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('About Author', 'abcbiz-multi'),
+            ]
+        );
 
          //Author bio link
          $this->add_control(
