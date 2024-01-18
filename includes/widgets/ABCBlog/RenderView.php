@@ -17,6 +17,9 @@ $abcbiz_blog_readmore_switch = $abcbiz_settings['abcbiz_elementor_blog_read_more
 $abcbiz_read_more_text = $this->get_settings('abcbiz_elementor_blog_read_more_text');
 $abcbiz_selected_category_fancy = $abcbiz_settings['abcbiz_elementor_blog_category_fancy'];
 
+//post list count
+$abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_post_count'] ? $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_post_count'] : '3';
+
 ?>
 <!-- Blog Area-->
 <div class="abcbiz-ele-blogs-area">
@@ -101,7 +104,7 @@ $abcbiz_selected_category_fancy = $abcbiz_settings['abcbiz_elementor_blog_catego
             // Query the next three posts of post type 'post'
             $remaining_posts_args = array(
                 'post_type' => 'post',
-                'posts_per_page' => 3, // Number of posts to display
+                'posts_per_page' => $abcbiz_blog_list_count, // Number of posts to display
                 'offset' => 1, // Skip the first post
                 'ignore_sticky_posts' => 1 // skip the sticky post
             );
