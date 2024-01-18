@@ -108,6 +108,66 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
+        //blog gap
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_gap',
+            [
+                'label' => esc_html__('Gap', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'em', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 150,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 20,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blogs' => 'gap: {{SIZE}}{{UNIT}};',
+                ]
+            ],
+        );
+
+        //flex direction choose
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_flex_direction',
+            [
+                'label' => esc_html__('Flex Direction', 'abcbiz-multi'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'row' => [
+                        'title' => esc_html__('Row', 'abcbiz-multi'),
+                        'icon' => 'eicon-arrow-right',
+                    ],
+                    'column' => [
+                        'title' => esc_html__('Column', 'abcbiz-multi'),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                    'row-reverse' => [
+                        'title' => esc_html__('Row Reverse', 'abcbiz-multi'),
+                        'icon' => 'eicon-arrow-left',
+                    ],
+                    'column-reverse' => [
+                        'title' => esc_html__('Column Reverse', 'abcbiz-multi'),
+                        'icon' => 'eicon-arrow-up',
+                    ]
+                ],
+                'default' => 'row',
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blogs' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
+       
+
         //blog info typography
         $this->add_group_control(
             Group_Control_Typography::get_type(),
@@ -190,6 +250,174 @@ class Main extends BaseWidget
                 ],
             ]
         );
+
+        $this->end_controls_section(); // end: Section
+
+        // Start new section for Blog List Style settings
+        $this->start_controls_section(
+            'abcbiz_elementor_fancy_blog_list_style',
+            [
+                'label' => esc_html__('Blog List', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        // Padding control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_list_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Width control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_list_width',
+            [
+                'label' => esc_html__('Width', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['%', 'px', 'vw'],
+                'range' => [
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    'px' => [
+                        'min' => 0,
+                        'max' => 2000,
+                    ],
+                    'vw' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Top control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_list_top',
+            [
+                'label' => esc_html__('Top Position', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'vh'],
+                'range' => [
+                    'px' => [
+                        'min' => -1000,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    'vh' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Left control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_list_left',
+            [
+                'label' => esc_html__('Left Position', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'vw'],
+                'range' => [
+                    'px' => [
+                        'min' => -1000,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    'vw' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-content-area' => 'left: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Image width control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_image_width',
+            [
+                'label' => esc_html__('Thumbnail Width', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Image height control
+        $this->add_responsive_control(
+            'abcbiz_elementor_fancy_blog_image_height',
+            [
+                'label' => esc_html__('Thumbnail Height', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'vh'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    'vh' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // End section
+        $this->end_controls_section();
+
+        // Start section for featured post
+        $this->start_controls_section(
+            'abcbiz_elementor_fancy_featured_post_section',
+            [
+                'label' => esc_html__('Featured Post', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        
+
+        // End section for featured post
+        $this->end_controls_section();
 
     }
 
