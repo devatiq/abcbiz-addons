@@ -35,6 +35,9 @@
     .abcbiz-ele-single-blog-thumbnail {
         max-width: 140px;
     }
+    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
+        height: auto;
+    }
 
     .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
         gap: 15px;
@@ -76,6 +79,10 @@
 
     .abcbiz-ele-single-blog-thumbnail {
         max-width: 100%;
+       
+    }
+    .abcbiz-ele-single-blog-rem-posts  .abcbiz-ele-single-blog-thumbnail {
+        height: auto;
     }
 
     .abcbiz-ele-single-blog-content-area {
@@ -268,9 +275,11 @@
 
     .abcbiz-ele-single-blog-thumbnail {
         max-width: 100%;
+       
     }
+    
 
-    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img {
+    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img, .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
         height: auto;
     }
 

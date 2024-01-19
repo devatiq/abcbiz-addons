@@ -153,7 +153,6 @@ class Main extends BaseWidget
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
-                'default' => 'row',
                 'toggle' => true,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-blogs' => 'flex-direction: {{VALUE}};',
@@ -625,6 +624,7 @@ class Main extends BaseWidget
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img' => 'height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail' => 'height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );

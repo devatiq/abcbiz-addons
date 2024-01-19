@@ -1233,7 +1233,7 @@ h3.abcbiz-style-three-team-name {
 
 .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
     display: flex;
-    flex-basis: 100%;
+    /* flex-basis: 100%; */
 }
 
 .abcbiz-ele-single-blog-area {
@@ -1257,6 +1257,9 @@ h3.abcbiz-style-three-team-name {
     width: 100%;
     height: 176px;
     object-fit: cover;
+}
+.abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
+    height: 176px;
 }
 
 .abcbiz-ele-single-blog-content-area {
