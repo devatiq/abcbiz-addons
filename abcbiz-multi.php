@@ -153,3 +153,43 @@ function get_abcbiz_multi_plugin_info() {
 
     return $plugin_info;
 }
+
+// Hook to add a custom control to all Elementor widgets
+add_action( 'elementor/element/common/_section_style/after_section_end', function( $element, $args ) {
+    $element->start_controls_section(
+        'section_custom_wrapper_link',
+        [
+            'label' => __( 'Custom Wrapper Link', 'text-domain' ),
+            'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+        ]
+    );
+
+    $element->add_control(
+        'custom_wrapper_link',
+        [
+            'label' => __( 'Wrapper Link', 'text-domain' ),
+            'type' => \Elementor\Controls_Manager::URL,
+            'dynamic' => [
+                'active' => true,
+            ],
+            'placeholder' => __( 'https://your-link.com', 'text-domain' ),
+            'description' => __( 'Add a custom link to wrap this widget.', 'text-domain' ),
+        ]
+    );
+
+    $element->end_controls_section();
+}, 10, 2);
+
+add_action('elementor/frontend/widget/before_render', function ($element) {
+    /** @var \Elementor\Element_Base $element */
+    $settings = $element->get_settings_for_display();
+    if (!empty($settings['custom_wrapper_link']['url'])) {
+        $link_attributes = [
+            'class' => 'custom-elementor-widget-link',
+            'data-custom-link-url' => $settings['custom_wrapper_link']['url'],
+            'data-custom-link-target' => $settings['custom_wrapper_link']['is_external'] ? '_blank' : '_self'
+        ];
+
+        $element->add_render_attribute('_wrapper', $link_attributes);
+    }
+}, 10);
