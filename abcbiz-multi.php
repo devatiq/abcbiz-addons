@@ -154,26 +154,26 @@ function get_abcbiz_multi_plugin_info() {
     return $plugin_info;
 }
 
-// Hook to add a custom control to all Elementor widgets
-add_action( 'elementor/element/common/_section_style/after_section_end', function( $element, $args ) {
+add_action('elementor/element/common/_section_style/after_section_end', function($element, $args) {
     $element->start_controls_section(
-        'section_custom_wrapper_link',
+        'abcbiz_section_custom_wrapper_link',
         [
-            'label' => __( 'Custom Wrapper Link', 'text-domain' ),
+            'label' => __('Custom Wrapper Link', 'text-domain'),
             'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
         ]
     );
 
     $element->add_control(
-        'custom_wrapper_link',
+        'abcbiz_custom_wrapper_link',
         [
-            'label' => __( 'Wrapper Link', 'text-domain' ),
+            'label' => __('Wrapper Link', 'text-domain'),
             'type' => \Elementor\Controls_Manager::URL,
+            'options' => [ 'url', 'is_external'],
             'dynamic' => [
                 'active' => true,
             ],
-            'placeholder' => __( 'https://your-link.com', 'text-domain' ),
-            'description' => __( 'Add a custom link to wrap this widget.', 'text-domain' ),
+            'placeholder' => __('https://your-link.com', 'text-domain'),
+            'description' => __('Add a custom link to wrap this widget.', 'text-domain'),
         ]
     );
 
@@ -183,13 +183,15 @@ add_action( 'elementor/element/common/_section_style/after_section_end', functio
 add_action('elementor/frontend/widget/before_render', function ($element) {
     /** @var \Elementor\Element_Base $element */
     $settings = $element->get_settings_for_display();
-    if (!empty($settings['custom_wrapper_link']['url'])) {
-        $link_attributes = [
-            'class' => 'custom-elementor-widget-link',
-            'data-custom-link-url' => $settings['custom_wrapper_link']['url'],
-            'data-custom-link-target' => $settings['custom_wrapper_link']['is_external'] ? '_blank' : '_self'
-        ];
 
-        $element->add_render_attribute('_wrapper', $link_attributes);
+    if (!empty($settings['abcbiz_custom_wrapper_link']['url'])) {
+        $rel = $settings['abcbiz_custom_wrapper_link']['nofollow'] ? 'nofollow' : '';
+        $target = $settings['abcbiz_custom_wrapper_link']['is_external'] ? '_blank' : '_self';
+
+        $element->add_render_attribute('abcbiz_custom_wrapper_link', $settings['abcbiz_custom_wrapper_link']);
+        $element->add_render_attribute('_wrapper', [
+            'class' => 'abcbiz-custom-elementor-widget-link',
+            'onclick' => "event.stopPropagation(); window.open('".$settings['abcbiz_custom_wrapper_link']['url']."', '".$target."', '".$rel."')"
+        ]);
     }
 }, 10);
