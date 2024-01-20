@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-cart-page';
 		protected $title = 'ABC Cart Page';
-		protected $icon = 'eicon-woo-cart';
+		protected $icon = 'eicon-woo-cart abcbiz-multi-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		

@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-search-form';
     protected $title = 'ABC Search Form';
-    protected $icon = 'eicon-site-search';
+    protected $icon = 'eicon-site-search abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

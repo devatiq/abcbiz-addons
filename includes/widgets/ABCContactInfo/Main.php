@@ -15,7 +15,7 @@ class Main extends BaseWidget {
 
 		protected $name = 'abcbiz-contact-info';
 		protected $title = 'ABC Contact & Social Info';
-		protected $icon = 'eicon-social-icons';
+		protected $icon = 'eicon-social-icons abcbiz-multi-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		

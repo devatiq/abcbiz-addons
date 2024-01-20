@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-aminshape';
     protected $title = 'ABC Animated Shape';
-    protected $icon = 'eicon-shape';
+    protected $icon = 'eicon-shape abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

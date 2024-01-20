@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wp-menu';
 		protected $title = 'ABC WordPress Menu';
-		protected $icon = 'eicon-nav-menu';
+		protected $icon = 'eicon-nav-menu abcbiz-multi-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		

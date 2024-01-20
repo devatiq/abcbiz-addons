@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-pricingtable';
     protected $title = 'ABC Pricing Table';
-    protected $icon = 'eicon-price-table';
+    protected $icon = 'eicon-price-table abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

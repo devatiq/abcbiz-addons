@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-blogpost';
     protected $title = 'ABC Blog Posts Fancy';
-    protected $icon = 'eicon-posts-group';
+    protected $icon = 'eicon-posts-group abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

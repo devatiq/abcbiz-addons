@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-testimonial';
     protected $title = 'ABC Testimonial Carousel';
-    protected $icon = 'eicon-testimonial-carousel';
+    protected $icon = 'eicon-testimonial-carousel abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

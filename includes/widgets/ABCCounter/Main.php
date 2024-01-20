@@ -15,7 +15,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-counterup';
     protected $title = 'ABC Counter Up';
-    protected $icon = 'eicon-counter';
+    protected $icon = 'eicon-counter abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

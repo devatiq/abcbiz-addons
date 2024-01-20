@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-blog-list';
     protected $title = 'ABC Blog Posts List';
-    protected $icon = 'eicon-post-list';
+    protected $icon = 'eicon-post-list  abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

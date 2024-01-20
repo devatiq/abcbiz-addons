@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-cfs7';
     protected $title = 'ABC Contact Form 7 Style';
-    protected $icon = 'eicon-form-horizontal';
+    protected $icon = 'eicon-form-horizontal  abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

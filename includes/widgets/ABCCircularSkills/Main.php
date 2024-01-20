@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-circular-skill';
     protected $title = 'ABC Circular Skill';
-    protected $icon = 'eicon-counter-circle';
+    protected $icon = 'eicon-counter-circle  abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

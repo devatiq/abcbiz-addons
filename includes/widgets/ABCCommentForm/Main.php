@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables..
     protected $name = 'abcbiz-comment-form';
     protected $title = 'ABC Comment Form';
-    protected $icon = 'eicon-commenting-o';
+    protected $icon = 'eicon-commenting-o  abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

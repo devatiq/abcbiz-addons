@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-business-hours';
     protected $title = 'ABC Business Hours';
-    protected $icon = 'eicon-clock-o';
+    protected $icon = 'eicon-clock-o  abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];

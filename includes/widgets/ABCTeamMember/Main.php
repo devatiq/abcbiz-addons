@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-team-member';
     protected $title = 'ABC Team Member';
-    protected $icon = 'eicon-theme-builder';
+    protected $icon = 'eicon-theme-builder abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];
