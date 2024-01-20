@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 
     protected $name = 'abcbiz-archive-title';
     protected $title = 'ABC Archive Title';
-    protected $icon = 'eicon-archive-title';
+    protected $icon = 'eicon-archive-title abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];
