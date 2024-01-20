@@ -18,11 +18,11 @@ function abcbiz_home_page() {
                 <!-- Buttons -->
                 <div class="abcbiz-resource-buttons">                
                                         
-                    <a href="https://abcplugin.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button"><?php echo esc_html__("Demo", "abcbiz-multi"); ?></a>
+                    <a href="https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button"><?php echo esc_html__("Demo", "abcbiz-multi"); ?></a>
                     
-                    <a href="https://abcplugin.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-multi"); ?></a>
+                    <a href="https://abcbizaddons.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-multi"); ?></a>
                    
-                    <a href="https://abcplugin.com/contact-us/" target="_blank" class="button"><?php echo esc_html__("Support", "abcbiz-multi"); ?></a>     
+                    <a href="https://abcbizaddons.com/contact-us/" target="_blank" class="button"><?php echo esc_html__("Support", "abcbiz-multi"); ?></a>     
                     
                     <a href="<?php echo esc_url(admin_url( 'admin.php?page=abcbiz_widgets_menu' )); ?>" class="button"><?php echo esc_html__( 'Avilable Widgets', 'abcbiz-multi' ); ?><span class="dashicons dashicons-arrow-right-alt"></span></a>
                 </div>
