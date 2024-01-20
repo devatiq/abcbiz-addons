@@ -784,7 +784,7 @@ function abcbiz_dual_button_widget_field_render() {
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("ABC Dual Button", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Dual Button", "abcbiz-multi"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_dual_button_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -824,7 +824,7 @@ function abcbiz_archive_title_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://yourpluginlink.com/archive-title-widget" target="_blank">
+            <a href="https://abcbizaddons.com/widgets/archive-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-archive-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
