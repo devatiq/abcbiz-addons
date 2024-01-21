@@ -483,6 +483,48 @@ class Main extends BaseWidget
             ]
         );
 
+        // Spacing
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_list_pagination_spacing',
+            [
+                'label' => esc_html__('Spacing', 'abcbiz-multi'),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 250,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container' => 'margin-top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Padding fields
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_list_pagination_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => ['px'],
+                'default' => [
+                    'top' => 5,
+                    'right' => 10,
+                    'bottom' => 5,
+                    'left' => 10,
+                    'unit' => 'px',
+                    'isLinked' => true,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->start_controls_tabs(
 			'abcbiz_elementor_blog_list_pagination_style_tabs'
 		);
