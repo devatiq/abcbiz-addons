@@ -305,7 +305,18 @@ class Main extends BaseWidget {
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-
+		// Padding control
+		$this->add_responsive_control(
+		    'abcbiz_elementor_flip_box_front_padding',
+		    [
+		        'label' => esc_html__( 'Padding', 'abcbiz-multi' ),
+		        'type' => \Elementor\Controls_Manager::DIMENSIONS,
+		        'size_units' => [ 'px', '%', 'em' ],
+		        'selectors' => [
+		            '{{WRAPPER}} .abcbiz-flip-box-front' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+		        ],
+		    ]
+		);
 		//front background color
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_bg_color',
@@ -579,6 +590,18 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Back Style', 'abcbiz-multi' ),
 				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+		//Back Padding
+		$this->add_responsive_control(
+			'abcbiz_elementor_flip_box_back_padding',
+			[
+				'label' => esc_html__( 'Padding', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%', 'em' ],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-flip-box-back ' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
 			]
 		);
 
