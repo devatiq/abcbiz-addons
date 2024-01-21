@@ -42,7 +42,7 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
        // Loading wrapper link
         if (!class_exists('ABCBiz\Includes\global\ABCbiz_Wrapper_link')) {
             require_once AbcBizElementor_Inc . '/global/wrapper-link.php';
-            new \ABCBiz\Includes\global\ABCbiz_Wrapper_link(); // Correct instantiation
+            new \ABCBiz\Includes\global\ABCbiz_Wrapper_link(); 
         }
 
 

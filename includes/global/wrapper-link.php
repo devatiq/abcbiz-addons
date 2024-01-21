@@ -1,6 +1,9 @@
 <?php
 namespace ABCBiz\Includes\global;
 
+// If this file is called directly, abort!!!
+defined('ABSPATH') or die('This is not the place you deserve!');
+
 use Elementor\Element_Base;
 use Elementor\Controls_Manager;
 
