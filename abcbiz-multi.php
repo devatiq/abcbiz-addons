@@ -32,6 +32,12 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
             \AbcBizElementor\ABCBizMultiElementorPack::instance();
         }
 
+        //loading css transform
+        if (!class_exists('ABCBiz\Includes\global\CSS_Transform\CSS_Transform')) {
+            require_once 'includes/global/css-transform.php';
+            \ABCBiz\Includes\global\CSS_Transform\CSS_Transform::init();
+        }
+
         load_plugin_textdomain('abcbiz-multi', false, dirname(plugin_basename(AbcBizElementor_File)) . '/languages/');
         require_once AbcBizElementor_Admin . '/abcbiz-settings.php';
     }

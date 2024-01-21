@@ -2382,3 +2382,20 @@ width: auto;
 .abcbiz-business-hours-area ul li.abcbiz-business-hour-item:last-child {
     border-bottom: 0;
 }
+
+/*----------------------------------------------
+ * ABC CSS Transform
+ * ---------------------------------------------*/
+ .abcbiz-css-transform-yes {
+    transform: translateX(var(--abcbiz-tfx-translate-x, 0)) translateY(var(--abcbiz-tfx-translate-y, 0))
+               rotateX(var(--abcbiz-tfx-rotate-x, 0)) rotateY(var(--abcbiz-tfx-rotate-y, 0)) rotateZ(var(--abcbiz-tfx-rotate-z, 0))
+               scaleX(var(--abcbiz-tfx-scale-x, 1)) scaleY(var(--abcbiz-tfx-scale-y, 1))
+               skewX(var(--abcbiz-tfx-skew-x, 0)) skewY(var(--abcbiz-tfx-skew-y, 0));
+}
+
+.abcbiz-css-transform-yes:hover {
+    transform: translateX(var(--abcbiz-tfx-translate-x-hover, 0)) translateY(var(--abcbiz-tfx-translate-y-hover, 0))
+               rotateX(var(--abcbiz-tfx-rotate-x-hover, 0)) rotateY(var(--abcbiz-tfx-rotate-y-hover, 0)) rotateZ(var(--abcbiz-tfx-rotate-z-hover, 0))
+               scaleX(var(--abcbiz-tfx-scale-x-hover, 1)) scaleY(var(--abcbiz-tfx-scale-y-hover, 1))
+               skewX(var(--abcbiz-tfx-skew-x-hover, 0)) skewY(var(--abcbiz-tfx-skew-y-hover, 0));
+}
