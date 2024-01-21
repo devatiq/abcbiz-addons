@@ -313,7 +313,7 @@ class Main extends BaseWidget
                     'abcbiz_elementor_blog_grid_excerpt_switch' => 'yes'
                 ],
             ]
-        );
+        ); 
 
           //blog excerpt typography
           $this->add_group_control(
@@ -321,7 +321,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_blog_grid_excerpt_typography',
                 'label' => esc_html__('Excerpt Typography', 'abcbiz-multi'),
-                'selector' => '{{WRAPPER}} .abcbiz-ele-blog-excerpt',
+                'selector' => '{{WRAPPER}} .abcbiz-ele-blog-grid-excerpt',
             ]
         );
 
@@ -333,7 +333,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3d3d3d',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blog-excerpt, .abcbiz-ele-blog-excerpt a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-grid-excerpt p' => 'color: {{VALUE}};',
                 ],
             ]
         );

@@ -64,7 +64,7 @@
                                 $abcbiz_excerpt_content = get_post_meta($abcbiz_post_id, 'abcbiz_multi_excerpt_content', true);
                                 $abcbiz_limited_excerpt = wp_trim_words($abcbiz_excerpt_content, $abcbiz_excerpt_length_grid);
                                 if (!empty($abcbiz_excerpt_content)) : ?>
-                               <div class="abcbiz-ele-blog-list-excerpt">
+                               <div class="abcbiz-ele-blog-grid-excerpt">
                                <p><?php echo esc_html($abcbiz_limited_excerpt); ?></p>
                                </div>
                            <?php endif; ?>
