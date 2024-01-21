@@ -38,13 +38,27 @@ class Main extends BaseWidget
             ]
         );
 
+        //type
+        $this->add_control(
+			'abcbiz_elementor_post_cat_type',
+			[
+				'label' => esc_html__( 'Display Style', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'inline',
+				'options' => [
+					'inline' => esc_html__( 'Inline View', 'abcbiz-multi' ),
+					'list'  => esc_html__( 'List View', 'abcbiz-multi' ),
+				],
+			]
+		);
+
         //Alignment
 		$this->add_responsive_control(
 			'abcbiz_elementor_post_cat_align',
 			[
 				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
-				'default' => 'center',
+				'default' => 'left',
 				'options' => [
 					'left'    => [
 						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
@@ -75,6 +89,23 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
+
+        //icon switch
+        $this->add_control(
+			'abcbiz_elementor_post_cat_icon',
+			[
+				'label' => esc_html__( 'Display Icon?', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'label_on' => esc_html__( 'Yes', 'abcbiz-multi' ),
+				'label_off' => esc_html__( 'No', 'abcbiz-multi' ),
+				'return_value' => 'yes',
+				'default' => 'yes',
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'list'
+                ],
+			]
+		);
+
         //blog info typography
         $this->add_group_control(
             Group_Control_Typography::get_type(),
@@ -102,16 +133,16 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_cat_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Hover Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
-                'default' => '#444444',
+                'default' => '#c436f7',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-post-cat a:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
 
-        // text color
+        // sep color
         $this->add_control(
             'abcbiz_elementor_post_cat_sep_color',
             [
@@ -121,22 +152,154 @@ class Main extends BaseWidget
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-category-separator' => 'color: {{VALUE}};',
                 ],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'inline'
+                ],
             ]
         );
+
+        //Separator space
+        $this->add_responsive_control(
+			'abcbiz_elementor_post_cat_sep_space',
+			[
+				'label' => esc_html__( 'Separator Space', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 0,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-category-separator' => 'padding-left: {{SIZE}}{{UNIT}}; padding-right: {{SIZE}}{{UNIT}};',
+				],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'inline'
+                ],
+			]
+		);
+
+         // icon color
+         $this->add_control(
+            'abcbiz_elementor_post_cat_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#444444',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-post-cat.cat-list-view i.eicon-chevron-double-right' => 'color: {{VALUE}};',
+                ],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'list',
+                    'abcbiz_elementor_post_cat_icon' => 'yes'
+                ],
+            ]
+        );
+
+        //Icon Size
+        $this->add_responsive_control(
+			'abcbiz_elementor_post_cat_icon_size',
+			[
+				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 16,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-post-cat.cat-list-view i.eicon-chevron-double-right' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'list',
+                    'abcbiz_elementor_post_cat_icon' => 'yes'
+                ],
+			]
+		);
+
+        //Item space
+        $this->add_responsive_control(
+			'abcbiz_elementor_post_cat_item_space',
+			[
+				'label' => esc_html__( 'Item Space', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 5,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-post-cat.cat-list-view div.abcbiz-ele-category-item' => 'padding-top: {{SIZE}}{{UNIT}}; padding-bottom: {{SIZE}}{{UNIT}};',
+				],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'list',
+                    'abcbiz_elementor_post_cat_icon' => 'yes'
+                ],
+			]
+		);
+
+        //Icon space
+        $this->add_responsive_control(
+			'abcbiz_elementor_post_cat_icon_space',
+			[
+				'label' => esc_html__( 'Icon Space', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 50,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 7,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-post-cat.cat-list-view i' => 'margin-right: {{SIZE}}{{UNIT}};',
+				],
+                'condition' => [
+                    'abcbiz_elementor_post_cat_type' => 'list',
+                    'abcbiz_elementor_post_cat_icon' => 'yes'
+                ],
+			]
+		);
        
         $this->end_controls_section();
     }
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
-    {
-        //load render view to show widget output on frontend/website.
-        include 'RenderView.php';
+{
+    $display_style = $this->get_settings_for_display('abcbiz_elementor_post_cat_type');
+    if ($display_style === 'list') {
+        include 'list-view.php';
+    } else {
+        include 'inline-view.php';
     }
+}
 
 }

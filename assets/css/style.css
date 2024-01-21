@@ -637,6 +637,34 @@ h3.abcbiz-style-three-team-name {
 }
 
 /*----------------------------------------------
+ * Post Category List
+ * ---------------------------------------------*/
+.abcbiz-ele-post-cat.cat-list-view {
+    list-style-type: none;
+    padding: 0;
+}
+
+.abcbiz-ele-post-cat.cat-list-view div.abcbiz-ele-category-item {
+    padding: 5px 0;
+}
+
+.abcbiz-ele-post-cat.cat-list-view a {
+    display: inline;
+    text-decoration: none;
+    color: inherit;
+}
+
+.abcbiz-ele-post-cat.cat-list-view i {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+
+.abcbiz-ele-post-cat.cat-list-view i.eicon-chevron-double-right {
+    font-size: 16px;
+}
+
+/*----------------------------------------------
  * Testimonial
  * ---------------------------------------------*/
 
