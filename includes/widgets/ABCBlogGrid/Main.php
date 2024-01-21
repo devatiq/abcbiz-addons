@@ -469,6 +469,14 @@ class Main extends BaseWidget
                 'label' => esc_html__('Padding', 'abcbiz-multi'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
+                'default' => [
+                    'top' => 6,
+                    'right' => 10,
+                    'bottom' => 6,
+                    'left' => 10,
+                    'unit' => 'px',
+                    'isLinked' => true,
+                ],
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pagination-container a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     '{{WRAPPER}} .abcbiz-ele-pagination-container .current' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
