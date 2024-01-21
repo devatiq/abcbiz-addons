@@ -525,6 +525,38 @@ class Main extends BaseWidget
             ]
         );
 
+        // Border fields
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'abcbiz_elementor_blog_list_pagination_border',
+                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a,{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current',
+            ]
+        );
+
+        // Border Radius fields
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_list_pagination_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'default' => [
+                    'top' => 5,
+                    'right' => 5,
+                    'bottom' => 5,
+                    'left' => 5,
+                    'unit' => 'px',
+                    'isLinked' => true,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->start_controls_tabs(
 			'abcbiz_elementor_blog_list_pagination_style_tabs'
 		);
@@ -561,7 +593,6 @@ class Main extends BaseWidget
                 ],
             ]
         );
-
 		$this->end_controls_tab();
 
 		$this->start_controls_tab(
@@ -579,7 +610,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a:hover, .abcbiz-ele-blog-list-pagi-container .current' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a:hover,{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -592,11 +623,22 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a:hover, .abcbiz-ele-blog-list-pagi-container .current' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a:hover,{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
-
+        // Hover border color
+        $this->add_control(
+            'abcbiz_elementor_blog_list_pagi_border_hover_color',
+            [
+                'label' => esc_html__('Border Hover Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#333333',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a:hover, {{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current' => 'border-color: {{VALUE}};',
+                ],
+            ]
+        );
         $this->end_controls_tab();
 		$this->end_controls_tabs();
         $this->end_controls_section(); // end pagination style

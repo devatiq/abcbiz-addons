@@ -496,6 +496,29 @@ class Main extends BaseWidget
                 ],
             ]
         );
+        // Group border control for pagination
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'abcbiz_elementor_blog_grid_pagination_border',
+                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-pagination-container a,{{WRAPPER}} .abcbiz-ele-pagination-container .current',
+            ]
+        );
+
+        // Border radius control for pagination
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_grid_pagination_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container .current' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
 
         $this->start_controls_tabs(
 			'abcbiz_elementor_blog_grid_pagination_style_tabs'
@@ -565,6 +588,19 @@ class Main extends BaseWidget
                 'default' => '#59a818',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pagination-container a:hover, .abcbiz-ele-pagination-container .current' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // Hover border color
+        $this->add_control(
+            'abcbiz_elementor_blog_grid_pagi_text_hover_border_color',
+            [
+                'label' => esc_html__('Hover Border Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#59a818',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container a:hover, {{WRAPPER}} .abcbiz-ele-pagination-container .current' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
