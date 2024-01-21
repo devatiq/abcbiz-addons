@@ -72,6 +72,7 @@ p.abcbiz-back-description {
     border-radius: 4px;
     display: inline-block;
     transition: all 0.4s;
+    text-decoration: none;
 }
 
 .abcbiz-flip-back-btn a:hover { 
