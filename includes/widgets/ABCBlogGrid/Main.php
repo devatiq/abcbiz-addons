@@ -462,6 +462,33 @@ class Main extends BaseWidget
             ]
         );
 
+        // Pagination padding
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_grid_pagination_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container .current' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Pagination margin
+        $this->add_responsive_control(
+            'abcbiz_elementor_blog_grid_pagination_spacing',
+            [
+                'label' => esc_html__('Spacing', 'abcbiz-multi'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-pagination-container' => 'margin-top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
         $this->start_controls_tabs(
 			'abcbiz_elementor_blog_grid_pagination_style_tabs'
 		);
