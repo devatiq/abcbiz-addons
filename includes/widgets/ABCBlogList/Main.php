@@ -275,7 +275,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#666666',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blog-list-meta, .abcbiz-ele-blog-list-meta a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-meta, {{WRAPPER}} .abcbiz-ele-blog-list-meta a' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -312,7 +312,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3d3d3d',
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-ele-blog-list-excerpt, .abcbiz-ele-blog-list-excerpt a' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-ele-blog-list-excerpt p' => 'color: {{VALUE}};',
                 ],
             ]
         );
