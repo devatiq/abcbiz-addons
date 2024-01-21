@@ -19,7 +19,6 @@
     border: 1px solid #f1f1f1;
     perspective: 1000px;
     position: relative;
-    overflow: hidden;
 }
 
 .abcbiz-flip-box-front, .abcbiz-flip-box-back {
@@ -33,9 +32,7 @@
     flex-direction: column;
     padding: 10px;
     box-sizing: border-box;
-    transition: transform 0.6s linear;    
-    overflow: hidden;
-
+    transition: transform 0.6s linear;
 }
 
 .abcbiz-flip-box-front {
