@@ -10,8 +10,6 @@ use Elementor\Group_Control_Typography;
 
 class Main extends BaseWidget
 {
-
-    // define protected variables...
     protected $name = 'abcbiz-elementor-cfs7';
     protected $title = 'ABC Contact Form 7 Style';
     protected $icon = 'eicon-form-horizontal  abcbiz-multi-icon';
@@ -22,11 +20,13 @@ class Main extends BaseWidget
         'abc', 'form', 'contact', 'style', '7'
     ];
 
+    public function get_style_depends()
+    {
+        return ['abcbiz-form-7-style'];
+    }
+
     /**
      * Get Contact Form 7 Shortcodes
-     * Retrieves a list of Contact Form 7 shortcodes.
-     *
-     * @return array
      */
     private function abcbiz_contact_form_shortcodes() {
         $formlist = array();
@@ -44,12 +44,6 @@ class Main extends BaseWidget
 
     /**
      * Register the widget controls.
-     *
-     * Adds different input fields to allow the user to change and customize the widget settings.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function register_controls()
     {
@@ -62,7 +56,7 @@ class Main extends BaseWidget
             ]
         );
 
-        // Contact Form 7 Shortcode Dropdown
+        // form selection
         $this->add_control(
             'abcbiz_ele_contact_form_shortcode',
             [
@@ -75,7 +69,7 @@ class Main extends BaseWidget
         // end of Contact form section
         $this->end_controls_section();
 
-         // start of Contact Form input style section
+         // Label style section
          $this->start_controls_section(
             'abcbiz_elementor_cf7_label_style_setting',
             [
@@ -109,7 +103,7 @@ class Main extends BaseWidget
 
         $this->end_controls_section();  // end of label section
 
-        // start of Contact Form input style section
+        //input style section
         $this->start_controls_section(
             'abcbiz_elementor_cf7_input_style_setting',
             [
@@ -118,7 +112,7 @@ class Main extends BaseWidget
             ]
         );
 
-        // contact form 7 input field height
+        //input field height
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_height',
             [
@@ -141,7 +135,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 input field border
+
+        //input field border
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -150,7 +145,8 @@ class Main extends BaseWidget
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap input',
             ]
         );
-        // contact form 7 input field border radius
+
+        //input field border radius
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_border_radius',
             [
@@ -162,7 +158,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 input field padding
+
+        //input field padding
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_padding',
             [
@@ -174,7 +171,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 input field margin
+
+        //input field margin
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_margin',
             [
@@ -182,12 +180,12 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
-                    '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap input' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap input, {{WRAPPER}} .abcbiz-ele-contact-form-7-area select' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
 
-         // contact form 7 input field text color
+         // input field text color
          $this->add_control(
             'abcbiz_ele_cf7_input_text_bg_color',
             [
@@ -202,7 +200,7 @@ class Main extends BaseWidget
             ]
         );
 
-        // contact form 7 input field text color
+        // input field text color
         $this->add_control(
             'abcbiz_ele_cf7_input_text_color',
             [
@@ -217,7 +215,7 @@ class Main extends BaseWidget
             ]
         );
 
-        // contact form 7 input field text color
+        // Input field text color
         $this->add_control(
             'abcbiz_ele_cf7_input_text_placeholder_color',
             [
@@ -241,10 +239,10 @@ class Main extends BaseWidget
             ]
         );
 
-        // end of Contact Form input style section
+        // end input style section
         $this->end_controls_section();
 
-        //Contact Form textarea style section
+        //Textarea style section
         $this->start_controls_section(
             'abcbiz_elementor_cf7_textarea_style_setting',
             [
@@ -252,7 +250,8 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-        // contact form 7 textarea field height
+
+        // Textarea field height
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_height',
             [
@@ -276,7 +275,7 @@ class Main extends BaseWidget
             ]
         );
       
-        // contact form 7 textarea field border
+        // Textarea field border
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -285,7 +284,8 @@ class Main extends BaseWidget
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap textarea',
             ]
         );
-        // contact form 7 textarea field border radius
+
+        // Textarea field border radius
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_border_radius',
             [
@@ -297,7 +297,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 textarea field padding
+
+        //Textarea field padding
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_padding',
             [
@@ -309,7 +310,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 textarea field margin
+
+        //Textarea field margin
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_margin',
             [
@@ -322,10 +324,10 @@ class Main extends BaseWidget
             ]
         );
 
-        // end of Contact Form textarea style section
+        // End extarea style section
         $this->end_controls_section();
 
-        //Contact Form submit button style section
+        //Submit button style section
         $this->start_controls_section(
             'abcbiz_elementor_cf7_submit_button_style_setting',
             [
@@ -333,7 +335,8 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-        // contact form 7 submit button field typography
+
+        // Submit button field typography
         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
@@ -343,7 +346,7 @@ class Main extends BaseWidget
             ]
         );
 
-        // contact form 7 submit button field padding
+        // Submit button field padding
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_padding',
             [
@@ -355,7 +358,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 submit button field margin
+
+        // Submit button field margin
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_margin',
             [
@@ -367,29 +371,34 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 submit button field text color
+
+        // Submit button field text color
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_text_color',
             [
                 'label' => esc_html__('Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit' => 'color: {{VALUE}};',
                 ],
             ]
         );
-        // contact form 7 submit button field background color
+
+        // Submit button field background color
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_bg_color',
             [
                 'label' => esc_html__('Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#53a6d6',
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
-        // contact form 7 submit button field border
+
+        // Submit button field border
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -398,7 +407,8 @@ class Main extends BaseWidget
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit',
             ]
         );  
-        // contact form 7 submit button field border radius
+
+        // Submit button field border radius
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_border_radius',
             [
@@ -410,57 +420,268 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // contact form 7 submit button field hover text color
+
+        // Submit button field hover text color
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_text_color',
             [
                 'label' => esc_html__('Hover Text Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
-        // contact form 7 submit button field hover background color
+
+        // Submit button field hover background color
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_bg_color',
             [
                 'label' => esc_html__('Hover Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#b039f5',
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit:hover' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
-        // contact form 7 submit button field hover border color
+
+        // Submit button field hover border color
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_border_color',
             [
                 'label' => esc_html__('Hover Border Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#b039f5',
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit:hover' => 'border-color: {{VALUE}};',
                 ],
             ]
         );
 
-        // end of Contact Form submit button style section
+        // end button style section
+        $this->end_controls_section();
+
+        //Radio button style section
+        $this->start_controls_section(
+            'abcbiz_elementor_cf7_submit_radio_button_style_setting',
+            [
+                'label' => esc_html__('Radio Button', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'abcbiz_elementor_cf7_radio_label_typography',
+                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item-label',
+            ]
+        );
+
+        //radio size
+        $this->add_control(
+			'abcbiz_elementor_cf7_radio_button_size',
+			[
+				'label' => esc_html__( 'Radio Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 20,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item-label::before' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+        // Radio background color
+        $this->add_control(
+            'abcbiz_elementor_cf7_radio_button_bg_color',
+            [
+                'label' => esc_html__('Radio Background Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#f2f2f2',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item-label::before' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+         // Radio selected background color
+         $this->add_control(
+            'abcbiz_elementor_cf7_radio_button_bg_selected_color',
+            [
+                'label' => esc_html__('Selected Background Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#4246ec',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area input[type="radio"]:checked + .wpcf7-list-item-label::before' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+          // Radio Border color
+          $this->add_control(
+            'abcbiz_elementor_cf7_radio_button_border_color',
+            [
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#cccccc',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item-label::before' => 'border-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+         //Item Spacing
+         $this->add_control(
+			'abcbiz_elementor_cf7_radio_button_item_spacing',
+			[
+				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px'],
+				'default' => [
+					'top' => 0,
+					'right' => 15,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        // end radio button style section
+        $this->end_controls_section();
+
+        //checkbox style section
+        $this->start_controls_section(
+            'abcbiz_elementor_cf7_submit_checkbox_style_setting',
+            [
+                'label' => esc_html__('Checkbox Style', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'abcbiz_elementor_cf7_checkbox_label_typography',
+                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item-label',
+            ]
+        );
+
+        //checkbox size
+        $this->add_control(
+			'abcbiz_elementor_cf7_checkbox_size',
+			[
+				'label' => esc_html__( 'Checkbox Size', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 100,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 20,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item-label::before' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+        // checkbox background color
+        $this->add_control(
+            'abcbiz_elementor_cf7_checkbox_bg_color',
+            [
+                'label' => esc_html__('Checkbox Background Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#f2f2f2',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item-label::before' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+         // checkbox selected background color
+         $this->add_control(
+            'abcbiz_elementor_cf7_checkbox_bg_selected_color',
+            [
+                'label' => esc_html__('Selected Background Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#4246ec',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area input[type="checkbox"]:checked + .wpcf7-list-item-label::before' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+          // checkbox Border color
+          $this->add_control(
+            'abcbiz_elementor_cf7_checkbox_border_color',
+            [
+                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#cccccc',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item-label::before' => 'border-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+         //Item Spacing
+         $this->add_control(
+			'abcbiz_elementor_cf7_checkbox_item_spacing',
+			[
+				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px'],
+				'default' => [
+					'top' => 0,
+					'right' => 15,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => false,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+        // end checkbox style section
         $this->end_controls_section();
     }
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()
 
     {
-        //load render view to show widget output on frontend/website.
         include 'RenderView.php';
     }
 }
