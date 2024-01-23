@@ -86,7 +86,7 @@ class Main extends BaseWidget
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
-					'url' => 'https://abcplugin.com/abcbiz-multi-addons-for-elementor/',
+					'url' => 'https://abcbizaddons.com/widgets/image-hover-elementor-widget/',
 					'is_external' => true,
 					'nofollow' => false,
 				],
