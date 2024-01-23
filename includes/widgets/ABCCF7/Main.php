@@ -483,7 +483,7 @@ class Main extends BaseWidget
         );
 
         //radio size
-        $this->add_control(
+        $this->add_responsive_control(
 			'abcbiz_elementor_cf7_radio_button_size',
 			[
 				'label' => esc_html__( 'Radio Size', 'abcbiz-multi' ),
@@ -546,7 +546,7 @@ class Main extends BaseWidget
         );
 
          //Item Spacing
-         $this->add_control(
+         $this->add_responsive_control(
 			'abcbiz_elementor_cf7_radio_button_item_spacing',
 			[
 				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
@@ -589,7 +589,7 @@ class Main extends BaseWidget
         );
 
         //checkbox size
-        $this->add_control(
+        $this->add_responsive_control(
 			'abcbiz_elementor_cf7_checkbox_size',
 			[
 				'label' => esc_html__( 'Checkbox Size', 'abcbiz-multi' ),
@@ -652,7 +652,7 @@ class Main extends BaseWidget
         );
 
          //Item Spacing
-         $this->add_control(
+         $this->add_responsive_control(
 			'abcbiz_elementor_cf7_checkbox_item_spacing',
 			[
 				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
