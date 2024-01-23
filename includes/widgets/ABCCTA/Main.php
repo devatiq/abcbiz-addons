@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-cta';
     protected $title = 'ABC Call To Action';
-    protected $icon = 'eicon-image-rollover abcbiz-multi-icon';
+    protected $icon = 'eicon-call-to-action abcbiz-multi-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -23,6 +23,10 @@ class Main extends BaseWidget
         'abc', 'cta', 'call to action', 'call',
     ];
 
+    public function get_style_depends()
+    {
+        return ['abcbiz-cta-style'];
+    }
 
     /**
      * Register the widget controls.
@@ -54,7 +58,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Heading', 'abcbiz-multi'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Let\'s deliver the right solution for your', 'abcbiz-multi'),
+                'default' => esc_html__('Lets deliver the right solution for your', 'abcbiz-multi'),
                 'placeholder' => esc_html__('Type your heading here', 'abcbiz-multi'),
                 'label_block' => true,
             ]
@@ -411,7 +415,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_cta_style_section',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('CTA Box Style', 'abcbiz-multi'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -456,6 +460,7 @@ class Main extends BaseWidget
             ]
         );
 
+        //box border
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -475,8 +480,50 @@ class Main extends BaseWidget
                 ],
             ]
         );
-        // Sub Heading typography
-        $this->add_group_control(
+
+       
+        // Content Alignment Control
+        $this->add_control(
+            'abcbiz_cta_content_alignment',
+            [
+                'label' => esc_html__('Content Alignment', 'abcbiz-multi'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'abcbiz-multi'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'abcbiz-multi'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-cta-content-area .abcbiz-cta-heading' => 'text-align: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-cta-content-area .abcbiz-cta-description' => 'text-align: {{VALUE}};',
+                ],
+                'toggle' => true,
+            ]
+        );
+
+        //end box style tab
+        $this->end_controls_section();
+
+         // Heading style tab
+         $this->start_controls_section(
+            'abcbiz_cta_heading_style_section',
+            [
+                'label' => esc_html__('Heading Style', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+         // Sub Heading typography
+         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_cta_sub_heading_typography',
@@ -568,8 +615,20 @@ class Main extends BaseWidget
             ]
         );
 
-        // Description typography
-        $this->add_group_control(
+        //end heading style tab
+        $this->end_controls_section();
+
+        // Description style tab
+        $this->start_controls_section(
+            'abcbiz_cta_desc_style_section',
+            [
+                'label' => esc_html__('Description Style', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+         // Description typography
+         $this->add_group_control(
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_cta_description_typography',
@@ -616,37 +675,9 @@ class Main extends BaseWidget
                 ],
             ],
         );
-        // Content Alignment Control
-        $this->add_control(
-            'abcbiz_cta_content_alignment',
-            [
-                'label' => esc_html__('Content Alignment', 'abcbiz-multi'),
-                'type' => Controls_Manager::CHOOSE,
-                'options' => [
-                    'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-multi'),
-                        'icon' => 'eicon-text-align-left',
-                    ],
-                    'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
-                        'icon' => 'eicon-text-align-center',
-                    ],
-                    'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-multi'),
-                        'icon' => 'eicon-text-align-right',
-                    ],
-                ],
-                'selectors' => [
-                    '{{WRAPPER}} .abcbiz-cta-content-area .abcbiz-cta-heading' => 'text-align: {{VALUE}};',
-                    '{{WRAPPER}} .abcbiz-cta-content-area .abcbiz-cta-description' => 'text-align: {{VALUE}};',
-                ],
-                'toggle' => true,
-            ]
-        );
 
-        //end the style tab
+        //end description style tab
         $this->end_controls_section();
-
 
         // Button Style
         $this->start_controls_section(

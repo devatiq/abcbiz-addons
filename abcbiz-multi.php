@@ -60,6 +60,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_style('abcbiz-wp-menu', AbcBizElementor_Assets . "/css/abcbiz-wp-menu.css");
         wp_register_style('abcbiz-flip-box', AbcBizElementor_Assets . "/css/abcbiz-flip-box.css");
         wp_register_style('abcbiz-form-7-style', AbcBizElementor_Assets . "/css/contact-form-7-style.css");
+        wp_register_style('abcbiz-cta-style', AbcBizElementor_Assets . "/css/abcbiz-cta.css");
         wp_enqueue_style('abcbiz-elementor-style', AbcBizElementor_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', AbcBizElementor_Assets . "/css/responsive.css");
 
