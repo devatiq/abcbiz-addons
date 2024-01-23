@@ -104,6 +104,7 @@
     font-weight: 400;
     line-height: 1.3rem;
     margin-bottom: 20px;
+    outline: none;
 }
 
 .abcbiz-ele-contact-form-7-area input[type="submit"] {
@@ -112,6 +113,7 @@
     padding: 15px 25px;
     border-radius: 4px;
     border: 0;
+    outline: none;
 }
 
 .abcbiz-ele-contact-form-7-area p {
