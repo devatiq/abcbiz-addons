@@ -162,9 +162,9 @@ class Main extends BaseWidget
 			[
 				'label' => esc_html__( 'Title Horizontal Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
-				'default' => 'flex-start',
+				'default' => 'left',
 				'options' => [
-					'flex-start'    => [
+					'left'    => [
 						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
 						'icon' => 'eicon-h-align-left',
 					],
@@ -172,17 +172,16 @@ class Main extends BaseWidget
 						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
 						'icon' => 'eicon-align-center-h',
 					],
-					'flex-end' => [
+					'right' => [
 						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
 						'icon' => 'eicon-h-align-right',
 					],
 				],				
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-img-hover-overlay' => 'align-items: {{VALUE}}',
+					'{{WRAPPER}} h3.abcbiz-img-hover-title, {{WRAPPER}} p.abcbiz-img-hover-subtitle' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
-		
 
          // Title typography 
          $this->add_group_control(
