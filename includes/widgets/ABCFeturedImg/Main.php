@@ -6,10 +6,6 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 
-/**
- * Elementor List Widget.
- * @since 1.0.0
- */
 class Main extends BaseWidget {
 
 	    // define protected variables...
@@ -25,12 +21,7 @@ class Main extends BaseWidget {
 
 
 	/**
-	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
+	 * Register widget controls.
 	 */
 	protected function register_controls() {
 		//Template
@@ -69,7 +60,6 @@ class Main extends BaseWidget {
 			]
 		);
 		
-
 		$this->end_controls_section();
 
 		//Style Section
@@ -106,16 +96,45 @@ class Main extends BaseWidget {
             ]
         );
 
+		//image border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz-elementor-fearture-img-border',
+				'selector' => '{{WRAPPER}} .abcbiz-elementor-feat-img-area img',
+			]
+		);
+
+		//image border radius
+		$this->add_control(
+			'abcbiz-elementor-fearture-img-border-radius',
+			[
+				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'type' => \Elementor\Controls_Manager::DIMENSIONS,
+				'size_units' => [ 'px', '%'],
+				'default' => [
+					'top' => 0,
+					'right' => 0,
+					'bottom' => 0,
+					'left' => 0,
+					'unit' => 'px',
+					'isLinked' => true,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-elementor-feat-img-area img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();
+
     }
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
      */
     protected function render()
     {
-        //load render view to show widget output on frontend/website.
         include 'renderview.php';
     }
 }
