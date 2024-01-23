@@ -674,6 +674,67 @@ class Main extends BaseWidget
 
         // end checkbox style section
         $this->end_controls_section();
+
+        //response message style section
+        $this->start_controls_section(
+            'abcbiz_elementor_cf7_submit_response_sms_style',
+            [
+                'label' => esc_html__('Response Message', 'abcbiz-multi'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+          //label typography
+          $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'abcbiz_elementor_cf7_submit_response_sms_typography',
+                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-response-output',
+            ]
+        );
+
+        //text color
+        $this->add_control(
+            'abcbiz_elementor_cf7_submit_response_sms_color',
+            [
+                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#333333',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-response-output' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // error border color
+        $this->add_control(
+            'abcbiz_elementor_cf7_submit_response_sms_err_order_color',
+            [
+                'label' => esc_html__('Error Border Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffb900',
+                'selectors' => [
+                    '{{WRAPPER}} .wpcf7 form.invalid .wpcf7-response-output, {{WRAPPER}} .wpcf7 form.unaccepted .wpcf7-response-output, {{WRAPPER}} .wpcf7 form.payment-required .wpcf7-response-output' => 'border-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // success border color
+        $this->add_control(
+            'abcbiz_elementor_cf7_submit_response_sms_sent_border_color',
+            [
+                'label' => esc_html__('Success Border Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#46b450',
+                'selectors' => [
+                    '{{WRAPPER}} .wpcf7 form.sent .wpcf7-response-output' => 'border-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // end response message style section
+        $this->end_controls_section();
     }
 
     /**
