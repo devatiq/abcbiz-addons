@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
     padding: 10px;
     box-sizing: border-box;
     transition: transform 0.6s linear;
