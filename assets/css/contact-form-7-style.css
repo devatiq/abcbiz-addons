@@ -121,11 +121,12 @@
 }
 
 @media (max-width: 768px) {
-    .abcbiz-form-column-one-third {
+    .abcbiz-form-column-one-third, .abcbiz-form-column-one-fourth, .abcbiz-form-column-half {
         flex-basis: 100%;
     }
 
-    .abcbiz-form-column-one-fourth {
-        flex-basis: 45%;
+    .abcbiz-form-row {
+        gap:0;
     }
+
 }
