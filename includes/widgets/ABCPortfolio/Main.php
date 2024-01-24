@@ -120,8 +120,8 @@ class Main extends BaseWidget
 					],
 				],
 				'default' => [
-					'unit' => 'px',
-					'size' => 1000,
+					'unit' => '%',
+					'size' => 100,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-portfolio-item img, {{WRAPPER}} .abcbiz-elementor-portfolio-item' => 'width: {{SIZE}}{{UNIT}};',
@@ -129,98 +129,56 @@ class Main extends BaseWidget
 			]
 		);
         
-         //Title top/bottom Position
-         $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_title_top_post',
+         //Vertical Alignment
+		$this->add_responsive_control(
+			'abcbiz_elementor_imghover_vertical_align',
 			[
-				'label' => esc_html__( 'Title Top Position', 'abcbiz-multi' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => -500,
-						'max' => 500,
-						'step' => 2,
+				'label' => esc_html__( 'Title Vertical Alignment', 'abcbiz-multi'),
+				'type' => Controls_Manager::CHOOSE,
+				'default' => 'flex-end',
+				'options' => [
+					'flex-start'    => [
+						'title' => esc_html__( 'Top', 'abcbiz-multi' ),
+						'icon' => 'eicon-v-align-top',
 					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+					'center' => [
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'icon' => 'eicon-align-center-v',
+					],
+					'flex-end' => [
+						'title' => esc_html__( 'Bottom', 'abcbiz-multi' ),
+						'icon' => 'eicon-v-align-bottom',
+					],
+				],				
 				'selectors' => [
-					'{{WRAPPER}} h3.abcbiz-portfolio-title' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-portfolio-overlay' => 'justify-content: {{VALUE}}',
 				],
 			]
 		);
 
-         //Title left/right Position
-         $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_title_left_post',
+         //Horizontal Alignment
+		$this->add_responsive_control(
+			'abcbiz_elementor_imghover_horizontal_align',
 			[
-				'label' => esc_html__( 'Title Left Position', 'abcbiz-multi' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => -500,
-						'max' => 500,
-						'step' => 2,
+				'label' => esc_html__( 'Title Horizontal Alignment', 'abcbiz-multi'),
+				'type' => Controls_Manager::CHOOSE,
+				'default' => 'left',
+				'options' => [
+					'left'    => [
+						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'icon' => 'eicon-h-align-left',
 					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} h3.abcbiz-portfolio-title' => 'left: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-         //Sub Title top/bottom Position
-         $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_sub_title_top_post',
-			[
-				'label' => esc_html__( 'Sub Title Top Position', 'abcbiz-multi' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => -500,
-						'max' => 500,
-						'step' => 2,
+					'center' => [
+						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'icon' => 'eicon-align-center-h',
 					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
-				'selectors' => [
-					'{{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'top: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-         //Sub Title left/right Position
-         $this->add_responsive_control(
-			'abcbiz_elementor_portfolio_sub_title_left_post',
-			[
-				'label' => esc_html__( 'Sub Title Left Position', 'abcbiz-multi' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px' ],
-				'range' => [
-					'px' => [
-						'min' => -500,
-						'max' => 500,
-						'step' => 2,
+					'right' => [
+						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'icon' => 'eicon-h-align-right',
 					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 0,
-				],
+				],				
 				'selectors' => [
-					'{{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'left: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} h3.abcbiz-portfolio-title, {{WRAPPER}} p.abcbiz-portfolio-subtitle' => 'text-align: {{VALUE}}',
 				],
 			]
 		);
