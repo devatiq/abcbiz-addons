@@ -336,7 +336,7 @@ class Main extends BaseWidget
 
         // popup icon hover background    
         $this->add_control(
-            'abcbiz-elementor-popup-icon-background',
+            'abcbiz-elementor-popup-icon-hov-background',
             [
                 'label' => esc_html__('Icon Hover Background Color', 'abcbiz-multi'),
                 'type' => Controls_Manager::COLOR,
