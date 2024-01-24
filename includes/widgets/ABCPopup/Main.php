@@ -279,6 +279,8 @@ class Main extends BaseWidget
                 ],
             ]
         );
+
+        //icon color
         $this->add_control(
             'abcbiz_elementor_popup_icon_color',
             [
@@ -287,13 +289,15 @@ class Main extends BaseWidget
                 'default' => '#ffffff',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon i' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg' => 'fill: {{VALUE}};',
                     '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg path' => 'fill: {{VALUE}};',
                 ],
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'icon',
                 ],
             ]
-        );    
+        ); 
+           
         // popup icon background    
         $this->add_control(
             'abcbiz-elementor-popup-icon-background',
@@ -311,6 +315,43 @@ class Main extends BaseWidget
                 ],
             ]
         );
+
+        //icon hover color
+        $this->add_control(
+            'abcbiz_elementor_popup_icon_hov_color',
+            [
+                'label' => esc_html__('Icon Hover Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon i:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg:hover' => 'fill: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg:hover path' => 'fill: {{VALUE}};',
+                ],
+                'condition' => [
+                    'abcbiz_elementor_popup_content_type' => 'icon',
+                ],
+            ]
+        ); 
+
+        // popup icon hover background    
+        $this->add_control(
+            'abcbiz-elementor-popup-icon-background',
+            [
+                'label' => esc_html__('Icon Hover Background Color', 'abcbiz-multi'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#b437f5',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon i:hover' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg:hover' => 'fill: {{VALUE}};background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon svg:hover circle' => 'fill: {{VALUE}};',
+                ],
+                'condition' => [
+                    'abcbiz_elementor_popup_content_type' => 'icon',
+                ],
+            ]
+        );
+
         // popup icon border
         $this->add_group_control(
             Group_Control_Border::get_type(),
@@ -323,6 +364,7 @@ class Main extends BaseWidget
                 ],
             ]
         );
+
         // popup icon border radius
         $this->add_responsive_control(
             'abcbiz_elementor_popup_icon_border_radius',
