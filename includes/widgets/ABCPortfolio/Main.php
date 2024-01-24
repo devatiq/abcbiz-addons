@@ -131,7 +131,7 @@ class Main extends BaseWidget
         
          //Vertical Alignment
 		$this->add_responsive_control(
-			'abcbiz_elementor_imghover_vertical_align',
+			'abcbiz_elementor_portfolio_vertical_align',
 			[
 				'label' => esc_html__( 'Title Vertical Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
@@ -158,7 +158,7 @@ class Main extends BaseWidget
 
          //Horizontal Alignment
 		$this->add_responsive_control(
-			'abcbiz_elementor_imghover_horizontal_align',
+			'abcbiz_elementor_portfolio_horizontal_align',
 			[
 				'label' => esc_html__( 'Title Horizontal Alignment', 'abcbiz-multi'),
 				'type' => Controls_Manager::CHOOSE,
