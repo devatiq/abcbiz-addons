@@ -61,7 +61,7 @@ class ABCBizMultiElementorPack
 		register_deactivation_hook(__FILE__, [$this, 'deactivate']);
 
 		// Hook into WordPress after theme setup
-		add_action('after_setup_theme', array($this, 'abcbizpro_elementor_custom_thumbnail_size'));
+		add_action('after_setup_theme', array($this, 'abcbiz_elementor_custom_thumbnail_size'));
 
 		// Add extranal file for extra functionality
 		$this->include_external_file();
@@ -69,7 +69,7 @@ class ABCBizMultiElementorPack
 	}
 
 	// Register a custom thumbnail size
-	function abcbizpro_elementor_custom_thumbnail_size()
+	function abcbiz_elementor_custom_thumbnail_size()
 	{
 		// Register a custom thumbnail size
 		add_image_size('abcbiz-elementor-post', 635, 542, true);
@@ -92,7 +92,7 @@ class ABCBizMultiElementorPack
 	public function setConstants()
 	{
 		define('AbcBizElementor_Version', $this->version);
-		define('AbcBizElementor_Name', 'ABCBiz Multi Addons Pro For Elementor');
+		define('AbcBizElementor_Name', 'ABCBiz Multi Addons For Elementor');
 	}
 
 	/**
