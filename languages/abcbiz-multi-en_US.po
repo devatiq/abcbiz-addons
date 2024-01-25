@@ -1,9 +1,9 @@
 msgid ""
 msgstr ""
-"Project-Id-Version: ABCBiz Multi Addons Pro For Elementor\n"
+"Project-Id-Version: ABCBiz Multi Addons For Elementor\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-12-25 03:37+0000\n"
-"PO-Revision-Date: 2023-12-25 03:39+0000\n"
+"POT-Creation-Date: 2024-01-25 11:53+0000\n"
+"PO-Revision-Date: 2024-01-25 11:54+0000\n"
 "Last-Translator: \n"
 "Language-Team: English (United States)\n"
 "Language: en_US\n"
@@ -15,194 +15,867 @@ msgstr ""
 "X-Loco-Version: 2.6.6; wp-6.4.2\n"
 "X-Domain: abcbiz-multi"
 
-#: main.php:174
+#: abcbiz-main-class.php:135
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
 msgstr ""
 
 #. 1: Plugin name 2: Elementor 3: Required Elementor version
 #. 1: Plugin name 2: PHP 3: Required PHP version
-#: main.php:197 main.php:221
+#: abcbiz-main-class.php:153 abcbiz-main-class.php:172
 #, php-format
 msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
 msgstr ""
 
+#: includes/widgets/ABCContactInfo/Main.php:175
+#: includes/widgets/ABCContactInfo/Main.php:185
+#: includes/widgets/ABCContactInfo/Main.php:195
+#: includes/widgets/ABCContactInfo/Main.php:205
+#: includes/widgets/ABCContactInfo/Main.php:260
+#: includes/widgets/ABCTeamMember/Main.php:153
+#: includes/widgets/ABCTeamMember/Main.php:247
+#: includes/widgets/ABCTeamMember/Main.php:260
+#: includes/widgets/ABCTeamMember/Main.php:273
+#: includes/widgets/ABCTeamMember/Main.php:286
+#: includes/widgets/ABCTeamMember/Main.php:299
+#: includes/widgets/ABCTeamMember/Main.php:312
+msgid "#"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:77
+msgid "$499"
+msgstr ""
+
 #: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCRecentPost/RenderView.php:51
+#: includes/widgets/ABCPostInfo/RenderView.php:20
 #: includes/widgets/ABCBlogGrid/template/four-column.php:58
 #: includes/widgets/ABCBlogGrid/template/two-column.php:58
 #: includes/widgets/ABCBlogGrid/template/three-column.php:57
 msgid "% Comments"
 msgstr ""
 
+#: includes/widgets/ABCCounter/Main.php:78
+msgid "+"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:141
+#: includes/widgets/ABCTeamMember/Main.php:208
+msgid "+123 456 7890"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:86
+msgid "/Monthly"
+msgstr ""
+
 #: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCRecentPost/RenderView.php:51
+#: includes/widgets/ABCPostInfo/RenderView.php:20
 #: includes/widgets/ABCBlogGrid/template/four-column.php:58
 #: includes/widgets/ABCBlogGrid/template/two-column.php:58
 #: includes/widgets/ABCBlogGrid/template/three-column.php:57
 msgid "1 Comment"
 msgstr ""
 
+#: includes/widgets/ABCTestimonials/Main.php:111
+msgid "1 Star"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:61
+msgid "100"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:74
+#: includes/widgets/ABCBusinessHours/Main.php:112
+#: includes/widgets/ABCBusinessHours/Main.php:116
+msgid "10:00 - 19:00"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:131
+msgid "1234 Street Name, City, Zip Code, Country"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:112
+msgid "2 Stars"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:113
+msgid "3 Stars"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:114
+msgid "4 Stars"
+msgstr ""
+
 #: includes/widgets/ABCBreadCrumb/renderview.php:47
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/renderview.php:54
 msgid "404 Not Found"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:115
+msgid "5 Stars"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:222
+msgid "5GB Disk Space"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:136
+msgid "75"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:132
+msgid "80"
+msgstr ""
+
+#: includes/global/css-transform.php:20
+msgid "ABC CSS Transform"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:387
+msgid "ABC Dual Button"
+msgstr ""
+
+#: includes/global/wrapper-link.php:21
+msgid "ABC Wrapper Link"
+msgstr ""
+
+#: includes/admin/abcbiz-settings.php:19
+msgid "ABCBiz Available Widgets"
 msgstr ""
 
 #: includes/admin/abcbiz-metabox.php:10
 msgid "ABCBiz Blog Excerpt"
 msgstr ""
 
-#: includes/admin/abcbiz-settings.php:74
-msgid "ABCBiz Custom Settings"
+#. Page title
+#: includes/admin/abcbiz-settings.php:7 includes/admin/abcbiz-settings.php:8
+msgid "ABCBiz Home"
 msgstr ""
 
 #. Name of the plugin
-msgid "ABCBiz Multi Addons Pro For Elementor"
+msgid "ABCBiz Multi Addons For Elementor"
 msgstr ""
 
-#: abcbiz-multi.php:74
+#: abcbiz-multi.php:112
 msgid "ABCBiz Multi Elements"
 msgstr ""
 
-#. Page title
-#: includes/admin/abcbiz-settings.php:9 includes/admin/abcbiz-settings.php:10
-msgid "ABCBiz Settings"
+#: includes/admin/inc/widget-page.php:27
+msgid "ABCBiz Multi Widgets"
 msgstr ""
 
-#: abcbiz-multi.php:88
+#: includes/admin/inc/widget-page.php:17
+msgid "ABCBiz Widgets"
+msgstr ""
+
+#: abcbiz-multi.php:127
 msgid "ABCBiz WooCommerce"
 msgstr ""
 
-#: includes/widgets/ABCBlogAuthor/RenderView.php:22
+#: includes/widgets/ABCBlogAuthor/Main.php:48
 msgid "About Author"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:49
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:138
+msgid "Active"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:1013
+msgid "Active Color"
+msgstr ""
+
+#: includes/global/wrapper-link.php:36
+msgid "Add a custom link to wrap this widget."
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:136
+#: includes/admin/inc/wc-widgets-render-functions.php:215
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:360
+msgid "Add to cart"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:370
+msgid "Additional Info Style"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:128
+msgid "Address:"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:221 includes/widgets/ABCCTA/Main.php:250
+msgid "Align Items"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:87
+#: includes/widgets/ABCBlockquote/Main.php:44
+#: includes/widgets/ABCPopup/Main.php:168
+#: includes/widgets/ABCWpMenu/Main.php:79
 #: includes/widgets/ABCBlogGrid/Main.php:432
 #: includes/widgets/ABCPageTitle/Main.php:40
 #: includes/widgets/ABCPageTitle/Main.php:69
-#: includes/widgets/ABCPostTitle/Main.php:41
-#: includes/widgets/ABCPostTitle/Main.php:70
+#: includes/widgets/ABCTagInfo/Main.php:43
+#: includes/widgets/ABCSearchIcon/Main.php:58
+#: includes/widgets/ABCPostTitle/Main.php:40
+#: includes/widgets/ABCPostTitle/Main.php:69
+#: includes/widgets/ABCSecTitle/Main.php:193
 #: includes/widgets/ABCBreadCrumb/Main.php:37
 #: includes/widgets/ABCBreadCrumb/Main.php:47
-#: includes/widgets/ABCCatInfo/Main.php:46
+#: includes/widgets/ABCSocialShare/Main.php:44
+#: includes/widgets/ABCCatInfo/Main.php:59
+#: includes/widgets/ABCPostInfo/Main.php:86
+#: includes/widgets/ABCFeturedImg/Main.php:40
+#: includes/widgets/ABCCTA/Main.php:140
+#: includes/widgets/ABCTestimonials/Main.php:606
+#: includes/widgets/ABCTestimonials/Main.php:905
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:32
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:42
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:46
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:62
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:46
 msgid "Alignment"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:94
+#: includes/widgets/ABCTestimonials/Main.php:754
+msgid "Alignment for Normal Device"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:342
+#: includes/admin/inc/widgets-render-functions.php:677
+msgid "Animated Shape"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:88
 msgid "Animation"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:106
+#: includes/widgets/ABCShape/Main.php:100
 msgid "Animation Type"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:119
+#: includes/widgets/ABCShape/Main.php:113
 msgid "Anti-Clockwise Spin"
 msgstr ""
 
-#: includes/widgets/ABCBlogAuthor/Main.php:63
+#: includes/admin/inc/widgets-register-functions.php:405
+#: includes/admin/inc/widgets-render-functions.php:837
+msgid "Archive Title"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:233
+msgid "Arrow"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:477
+msgid "Arrow Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:635
+msgid "Arrows"
+msgstr ""
+
+#: includes/widgets/ABCPostInfo/Main.php:60
+msgid "Author"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:144
+#: includes/admin/inc/widgets-render-functions.php:193
+msgid "Author Bio"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/Main.php:46
+msgid "Author Bio Text"
+msgstr ""
+
+#: abcbiz-multi.php:163
+msgid "Author Not Found"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/Main.php:72
 msgid "Author Style"
 msgstr ""
 
+#: abcbiz-multi.php:165
+msgid "Author URI Not Found"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:195
+msgid "Autoplay"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:210
+msgid "Autoplay Delay"
+msgstr ""
+
 #. Page title
-#: includes/admin/abcbiz-settings.php:21 includes/admin/abcbiz-settings.php:22
+#. Section ID
+#: includes/admin/abcbiz-settings.php:20
+#: includes/admin/inc/wc-widgets-register-functions.php:7
+#: includes/admin/inc/widgets-register-functions.php:7
 msgid "Available Widgets"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:194
-#: includes/widgets/ABCShape/Main.php:224
+#: includes/admin/inc/setting-page.php:27
+msgid "Avilable Widgets"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:752
+msgid "Back Button Style"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:147
+msgid "Back Button Text"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:117
+msgid "Back Contents"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:136
+msgid "Back Description"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:139
+msgid "Back paragraph content goes here."
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:591
+msgid "Back Style"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:126
+msgid "Back Title"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:340
+#: includes/widgets/ABCPricingTable/Main.php:382
+#: includes/widgets/ABCPricingTable/Main.php:927
+#: includes/widgets/ABCShape/Main.php:188
+#: includes/widgets/ABCShape/Main.php:218
+#: includes/widgets/ABCBusinessHours/Main.php:174
+#: includes/widgets/ABCIconBox/Main.php:828
+#: includes/widgets/ABCIconBox/Main.php:857
+#: includes/widgets/ABCCTA/Main.php:903
 msgid "Background"
 msgstr ""
 
+#: includes/widgets/ABCPricingTable/Main.php:515
+#: includes/widgets/ABCPricingTable/Main.php:623
+#: includes/widgets/ABCPricingTable/Main.php:894
+#: includes/widgets/ABCPricingTable/Main.php:1260
+#: includes/widgets/ABCPricingTable/Main.php:1302
 #: includes/widgets/ABCCommentForm/Main.php:183
 #: includes/widgets/ABCCommentForm/Main.php:213
 #: includes/widgets/ABCCommentForm/Main.php:271
 #: includes/widgets/ABCCommentForm/Main.php:302
-#: includes/widgets/ABCBlogList/Main.php:450
-#: includes/widgets/ABCBlogGrid/Main.php:493
-#: includes/widgets/ABCBlogAuthor/Main.php:73
-#: includes/widgets/ABCCF7/Main.php:385
+#: includes/widgets/ABCBlogList/Main.php:588
+#: includes/widgets/ABCWpMenu/Main.php:368
+#: includes/widgets/ABCFlipBox/Main.php:324
+#: includes/widgets/ABCFlipBox/Main.php:612
+#: includes/widgets/ABCBlogGrid/Main.php:551
+#: includes/widgets/ABCDualButton/Main.php:421
+#: includes/widgets/ABCDualButton/Main.php:456
+#: includes/widgets/ABCDualButton/Main.php:533
+#: includes/widgets/ABCDualButton/Main.php:696
+#: includes/widgets/ABCDualButton/Main.php:730
+#: includes/widgets/ABCBlogAuthor/Main.php:82
+#: includes/widgets/ABCSearchForm/Main.php:162
+#: includes/widgets/ABCSearchForm/Main.php:195
+#: includes/widgets/ABCCF7/Main.php:392
+#: includes/widgets/ABCSkillBar/Main.php:288
+#: includes/widgets/ABCTestimonials/Main.php:528
+#: includes/widgets/ABCTestimonials/Main.php:671
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:232
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:336
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:59
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:57
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:89
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:124
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:159
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:74
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:249
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:282
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:347
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:623
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:655
 msgid "Background Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:106
+#: includes/widgets/ABCSkillBar/Main.php:182
+msgid "Bar Height"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:67
+msgid "Basic Plan"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:231
+msgid "Behance:"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:108
+msgid "Billing Style"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:126
+msgid "Blockquote"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:149
+msgid "Blockquote Widget"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:102
 #: includes/widgets/ABCBlogGrid/Main.php:123
+#: includes/widgets/ABCRecentPost/Main.php:94
 msgid "Blog Comments"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:93
+#: includes/widgets/ABCBlogList/Main.php:89
 #: includes/widgets/ABCBlogGrid/Main.php:110
 msgid "Blog Date"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:119
+#: includes/widgets/ABCBlogList/Main.php:115
 #: includes/widgets/ABCBlogGrid/Main.php:136
 msgid "Blog Excerpt"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:171
+msgid "Blog Fancy"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:153
+#: includes/admin/inc/widgets-render-functions.php:215
+msgid "Blog Grid"
+msgstr ""
+
+#: includes/widgets/ABCPostInfo/Main.php:116
+msgid "Blog Info Style"
 msgstr ""
 
 #: includes/widgets/ABCBlogGrid/Main.php:49
 msgid "Blog Layout"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:38
+#: includes/admin/inc/widgets-register-functions.php:162
+#: includes/admin/inc/widgets-register-functions.php:171
+#: includes/admin/inc/widgets-register-functions.php:180
+#: includes/admin/inc/widgets-render-functions.php:237
+#: includes/widgets/ABCBlog/Main.php:424
+msgid "Blog List"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:135
+msgid "Blog Post Fancy"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:34
 #: includes/widgets/ABCBlogGrid/Main.php:40
-#: includes/widgets/ABCBlog/Main.php:35
+#: includes/widgets/ABCBlog/Main.php:31
 msgid "Blog Setting"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:113
+#: includes/widgets/ABCBlog/Main.php:109
 msgid "Blog Style"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:290 includes/widgets/ABCCF7/Main.php:149
-#: includes/widgets/ABCCF7/Main.php:284 includes/widgets/ABCCF7/Main.php:397
+#: includes/widgets/ABCShape/Main.php:284
+#: includes/widgets/ABCBlogList/Main.php:533
+#: includes/widgets/ABCPopup/Main.php:360
+#: includes/widgets/ABCPopup/Main.php:485
+#: includes/widgets/ABCBusinessHours/Main.php:183
+#: includes/widgets/ABCBlogGrid/Main.php:504
+#: includes/widgets/ABCDualButton/Main.php:375
+#: includes/widgets/ABCIconBox/Main.php:786
+#: includes/widgets/ABCCF7/Main.php:144 includes/widgets/ABCCF7/Main.php:283
+#: includes/widgets/ABCCF7/Main.php:406
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:399
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:557
 msgid "Border"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:124
-#: includes/widgets/ABCShape/Main.php:234
+#: includes/widgets/ABCPricingTable/Main.php:448
+msgid "Border Bottom Width"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:390
+#: includes/widgets/ABCPricingTable/Main.php:474
+#: includes/widgets/ABCPricingTable/Main.php:608
+#: includes/widgets/ABCPricingTable/Main.php:1314
+#: includes/widgets/ABCBlockquote/Main.php:119
+#: includes/widgets/ABCShape/Main.php:228
+#: includes/widgets/ABCDualButton/Main.php:482
+#: includes/widgets/ABCDualButton/Main.php:757
+#: includes/widgets/ABCSearchForm/Main.php:117
+#: includes/widgets/ABCCTA/Main.php:848 includes/widgets/ABCCF7/Main.php:539
+#: includes/widgets/ABCCF7/Main.php:645
+#: includes/widgets/ABCTeamMember/Main.php:335
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:45
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:43
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:240
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:294
 msgid "Border Color"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:146
-#: includes/widgets/ABCShape/Main.php:299 includes/widgets/ABCCF7/Main.php:157
-#: includes/widgets/ABCCF7/Main.php:292 includes/widgets/ABCCF7/Main.php:405
+#: includes/widgets/ABCBlogList/Main.php:634
+msgid "Border Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:357
+#: includes/widgets/ABCPricingTable/Main.php:489
+#: includes/widgets/ABCPricingTable/Main.php:1144
+#: includes/widgets/ABCShape/Main.php:140
+#: includes/widgets/ABCShape/Main.php:293
+#: includes/widgets/ABCBlogList/Main.php:542
+#: includes/widgets/ABCPopup/Main.php:259
+#: includes/widgets/ABCPopup/Main.php:372
+#: includes/widgets/ABCPopup/Main.php:496
+#: includes/widgets/ABCBusinessHours/Main.php:191
+#: includes/widgets/ABCBusinessHours/Main.php:376
+#: includes/widgets/ABCImgHover/Main.php:258
+#: includes/widgets/ABCFlipBox/Main.php:280
+#: includes/widgets/ABCFlipBox/Main.php:567
+#: includes/widgets/ABCFlipBox/Main.php:728
+#: includes/widgets/ABCFlipBox/Main.php:793
+#: includes/widgets/ABCBlogGrid/Main.php:513
+#: includes/widgets/ABCTagInfo/Main.php:108
+#: includes/widgets/ABCSearchIcon/Main.php:263
+#: includes/widgets/ABCBlog/Main.php:311 includes/widgets/ABCBlog/Main.php:495
+#: includes/widgets/ABCDualButton/Main.php:384
+#: includes/widgets/ABCDualButton/Main.php:660
+#: includes/widgets/ABCIconBox/Main.php:240
+#: includes/widgets/ABCIconBox/Main.php:279
+#: includes/widgets/ABCIconBox/Main.php:498
+#: includes/widgets/ABCIconBox/Main.php:576
+#: includes/widgets/ABCIconBox/Main.php:792
+#: includes/widgets/ABCFeturedImg/Main.php:112
+#: includes/widgets/ABCCTA/Main.php:475 includes/widgets/ABCCTA/Main.php:759
+#: includes/widgets/ABCPortfolio/Main.php:258
+#: includes/widgets/ABCCF7/Main.php:153 includes/widgets/ABCCF7/Main.php:292
+#: includes/widgets/ABCCF7/Main.php:415
+#: includes/widgets/ABCTestimonials/Main.php:560
+#: includes/widgets/ABCTestimonials/Main.php:723
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:96
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:292
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:191
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:134
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:242
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:157
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:195
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:186
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:385
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:565
 msgid "Border Radius"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:355
+#: includes/widgets/ABCImgHover/Main.php:149
+#: includes/widgets/ABCFlipBox/Main.php:202
+#: includes/widgets/ABCPortfolio/Main.php:149
+msgid "Bottom"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:94
+msgid "Bottom Divider"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:761
+msgid "Bottom Specing"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:318
+#: includes/widgets/ABCBusinessHours/Main.php:130
+#: includes/widgets/ABCIconBox/Main.php:197
+msgid "Box"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:128
+msgid "Box back heading"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:439
+msgid "Box Background"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:259
+msgid "Box Background Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:468
+msgid "Box Border"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:95
+msgid "Box front heading"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:236
+msgid "Box Height"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:126
+msgid "Box Padding"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:213
+msgid "Box Width"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:259
+msgid "Breadcrumb"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:396
+#: includes/admin/inc/widgets-render-functions.php:812
+msgid "Business Hours"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:106
+msgid "Business Hours List"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:66
+#: includes/widgets/ABCPortfolio/Main.php:66
+msgid "Business Website Development"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:272
+#: includes/widgets/ABCPricingTable/Main.php:1114
+#: includes/widgets/ABCIconBox/Main.php:724
+#: includes/widgets/ABCCTA/Main.php:686
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:539
+msgid "Button"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:95
+msgid "Button 1 Link"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:84
+msgid "Button 1 Text"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:123
+msgid "Button 2 Link"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:111
+msgid "Button 2 Text"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:140
+msgid "Button Alignment"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:805
+msgid "Button Background"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:142
+msgid "Button BG Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:168
+msgid "Button BG Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:750
+msgid "Button Border"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:351
 #: includes/widgets/ABCBlogGrid/Main.php:372
-#: includes/widgets/ABCBlog/Main.php:192
+#: includes/widgets/ABCBlog/Main.php:239
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:129
 msgid "Button Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:330
+#: includes/widgets/ABCCTA/Main.php:308
+msgid "Button Direction"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:329
+msgid "Button Gap"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:155
+msgid "Button Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:305
+msgid "Button Icon"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:290
+#: includes/widgets/ABCFlipBox/Main.php:157
+#: includes/widgets/ABCIconBox/Main.php:126
+#: includes/widgets/ABCTeamMember/Main.php:245
+msgid "Button Link"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:168
+msgid "Button Size"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:814
+msgid "Button Spacing"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:326
 #: includes/widgets/ABCBlogGrid/Main.php:347
+#: includes/widgets/ABCSearchForm/Main.php:130
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:200
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:42
 msgid "Button Style"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:343
+#: includes/widgets/ABCPricingTable/Main.php:280
+#: includes/widgets/ABCDualButton/Main.php:59
+#: includes/widgets/ABCDualButton/Main.php:190
+#: includes/widgets/ABCSearchForm/Main.php:51
+#: includes/widgets/ABCIconBox/Main.php:109
+#: includes/widgets/ABCTeamMember/Main.php:232
+msgid "Button Text"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:339
+#: includes/widgets/ABCFlipBox/Main.php:762
 #: includes/widgets/ABCBlogGrid/Main.php:360
-#: includes/widgets/ABCBlog/Main.php:184
+#: includes/widgets/ABCBlog/Main.php:231
+#: includes/widgets/ABCSearchForm/Main.php:73
+#: includes/widgets/ABCCTA/Main.php:773
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:182
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:265
 msgid "Button Typography"
 msgstr ""
 
-#: includes/widgets/ABCCatInfo/Main.php:75
+#: includes/widgets/ABCDualButton/Main.php:71
+#: includes/widgets/ABCDualButton/Main.php:202
+msgid "Button URL"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1163
+msgid "Button Width"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:17
+msgid "Call To Action- CTA"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:145
+#: includes/admin/inc/wc-widgets-render-functions.php:237
+msgid "Cart Icon"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:127
+#: includes/admin/inc/wc-widgets-render-functions.php:193
+msgid "Cart Page"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:97
+msgid "Cart Total Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/renderview.php:42
+msgid "Categories"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:128
+msgid "Category Color"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:281
+msgid "Category List"
+msgstr ""
+
+#: includes/widgets/ABCTagInfo/Main.php:72
+#: includes/widgets/ABCCatInfo/Main.php:88
 msgid "Category Style"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:58
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:146
+msgid "Category Typography"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:96
+#: includes/widgets/ABCBlockquote/Main.php:53
+#: includes/widgets/ABCPopup/Main.php:176
+#: includes/widgets/ABCWpMenu/Main.php:88
+#: includes/widgets/ABCWpMenu/Main.php:492
+#: includes/widgets/ABCBusinessHours/Main.php:225
+#: includes/widgets/ABCBusinessHours/Main.php:419
+#: includes/widgets/ABCImgHover/Main.php:145
+#: includes/widgets/ABCImgHover/Main.php:172
 #: includes/widgets/ABCBlogGrid/Main.php:440
 #: includes/widgets/ABCPageTitle/Main.php:78
-#: includes/widgets/ABCPostTitle/Main.php:79
+#: includes/widgets/ABCTagInfo/Main.php:52
+#: includes/widgets/ABCSearchIcon/Main.php:67
+#: includes/widgets/ABCContactInfo/Main.php:93
+#: includes/widgets/ABCPostTitle/Main.php:78
+#: includes/widgets/ABCSecTitle/Main.php:202
 #: includes/widgets/ABCBreadCrumb/Main.php:56
-#: includes/widgets/ABCCatInfo/Main.php:55
+#: includes/widgets/ABCSocialShare/Main.php:53
+#: includes/widgets/ABCCatInfo/Main.php:68
+#: includes/widgets/ABCIconBox/Main.php:148
+#: includes/widgets/ABCPostInfo/Main.php:95
+#: includes/widgets/ABCFeturedImg/Main.php:49
+#: includes/widgets/ABCCTA/Main.php:188 includes/widgets/ABCCTA/Main.php:229
+#: includes/widgets/ABCCTA/Main.php:258 includes/widgets/ABCCTA/Main.php:497
+#: includes/widgets/ABCPortfolio/Main.php:145
+#: includes/widgets/ABCPortfolio/Main.php:172
+#: includes/widgets/ABCTestimonials/Main.php:614
+#: includes/widgets/ABCTestimonials/Main.php:772
+#: includes/widgets/ABCTestimonials/Main.php:913
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:51
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:55
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:71
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:66
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:55
 msgid "Center"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:65
+#: includes/widgets/ABCTeamMember/Main.php:116
+#: includes/widgets/ABCTestimonials/Main.php:100
+msgid "CEO of Company"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:619
+msgid "Checkbox Background Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:595
+msgid "Checkbox Size"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:576
+msgid "Checkbox Style"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:118
+#: includes/admin/inc/wc-widgets-render-functions.php:171
+msgid "Checkout Page"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:66
+msgid "Choose Icon"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:59
+#: includes/widgets/ABCImgHover/Main.php:41
+#: includes/widgets/ABCFlipBox/Main.php:78
+#: includes/widgets/ABCPortfolio/Main.php:41
 msgid "Choose Image"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:55
+#: includes/widgets/ABCIconBox/Main.php:47
+msgid "Choose Style"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:48
+msgid "Choose the type of the pricing table."
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:49
 msgid "Circle"
 msgstr ""
 
@@ -218,30 +891,90 @@ msgstr ""
 msgid "Circle Style"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:118
+#: includes/admin/inc/widgets-register-functions.php:198
+#: includes/admin/inc/widgets-render-functions.php:325
+msgid "Circular Skill"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:149
+msgid "Click Here"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:122
+msgid "Client Image"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:112
 msgid "Clockwise Spin"
 msgstr ""
 
+#: includes/widgets/ABCPricingTable/Main.php:883
+#: includes/widgets/ABCPricingTable/Main.php:916
+#: includes/widgets/ABCPricingTable/Main.php:997
+#: includes/widgets/ABCPricingTable/Main.php:1246
+#: includes/widgets/ABCPricingTable/Main.php:1289
 #: includes/widgets/ABCCommentForm/Main.php:173
 #: includes/widgets/ABCCommentForm/Main.php:203
 #: includes/widgets/ABCCommentForm/Main.php:260
 #: includes/widgets/ABCCommentForm/Main.php:291
-#: includes/widgets/ABCBlogList/Main.php:363
+#: includes/widgets/ABCBlogList/Main.php:359
+#: includes/widgets/ABCBusinessHours/Main.php:245
+#: includes/widgets/ABCBusinessHours/Main.php:309
+#: includes/widgets/ABCRelatedPost/Main.php:46
 #: includes/widgets/ABCBlogGrid/Main.php:380
 #: includes/widgets/ABCPageTitle/Main.php:108
-#: includes/widgets/ABCPostTitle/Main.php:109
+#: includes/widgets/ABCPostTitle/Main.php:108
+#: includes/widgets/ABCRecentPost/Main.php:264
+#: includes/widgets/ABCSearchForm/Main.php:149
+#: includes/widgets/ABCSearchForm/Main.php:183
+#: includes/widgets/ABCIconBox/Main.php:815
+#: includes/widgets/ABCIconBox/Main.php:844
+#: includes/widgets/ABCTestimonials/Main.php:505
+#: includes/widgets/ABCTestimonials/Main.php:647
+#: includes/widgets/ABCTestimonials/Main.php:1001
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:65
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:138
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:185
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:219
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:324
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:76
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:111
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:146
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:61
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:284
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:318
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:101
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:72
 msgid "Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:160
+msgid "Column"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:316
+msgid "Column (Vertical)"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:164
+msgid "Column Reverse"
 msgstr ""
 
 #: includes/widgets/ABCCommentForm/Main.php:230
 msgid "Comment Button"
 msgstr ""
 
+#: includes/admin/inc/widgets-register-functions.php:207
+#: includes/admin/inc/widgets-render-functions.php:347
+msgid "Comment Form"
+msgstr ""
+
 #: includes/widgets/ABCCommentForm/template/comment-form.php:9
 msgid "Comment navigation"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:70
+#: includes/widgets/ABCBlog/Main.php:66
+#: includes/widgets/ABCPostInfo/Main.php:73
 msgid "Comments"
 msgstr ""
 
@@ -257,73 +990,515 @@ msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
 msgstr[0] ""
 msgstr[1] ""
 
-#: includes/widgets/ABCCF7/Main.php:60
+#: includes/global/css-transform.php:137 includes/global/css-transform.php:253
+msgid "Compact"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:39
+msgid "Contact & Social Info"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:54
 msgid "Contact Form 7 Setting"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:40
+#: includes/admin/inc/widgets-register-functions.php:189
+#: includes/admin/inc/widgets-render-functions.php:303
+msgid "Contact Form 7 Style"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:576
+msgid "Contact Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:506
+msgid "Contact Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:44
+#: includes/widgets/ABCContactInfo/Main.php:116
+msgid "Contact Info"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:270
+msgid "Contact Info Style"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:494
+msgid "Contact Info Typography"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:560
+msgid "Contact Text Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:113
+msgid "Contact Us"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:37
+#: includes/widgets/ABCIconBox/Main.php:598
+msgid "Content"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:84
+#: includes/widgets/ABCCTA/Main.php:489
+msgid "Content Alignment"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:300 includes/widgets/ABCBlog/Main.php:459
+msgid "Content Background"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:337
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:219
+msgid "Content Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:148
+msgid "Content Direction"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:324
+msgid "Content Margin Top"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:286
+msgid "Content Padding"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:620
+msgid "Content Spacing"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:314
+msgid "Content Style"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:51
+msgid "Content Type"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:647
+#: includes/widgets/ABCTestimonials/Main.php:329
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:210
+msgid "Content Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:263
+msgid "Content Width"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:35
+#: includes/widgets/ABCBusinessHours/Main.php:38
+#: includes/widgets/ABCDualButton/Main.php:37
+#: includes/widgets/ABCCTA/Main.php:40
 msgid "Contents"
 msgstr ""
 
+#: includes/widgets/ABCCounter/Main.php:41
+msgid "Counter"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:113
+msgid "Counter BG Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:129
+msgid "Counter BG Hover Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:231
+msgid "Counter Position"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:177
+msgid "Counter Size"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:216
+#: includes/admin/inc/widgets-render-functions.php:369
+msgid "Counter Up"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:52
+#: includes/widgets/ABCPortfolio/Main.php:52
+#: includes/widgets/ABCTeamMember/Main.php:65
+msgid ""
+"Crop the original image size to any custom size. Set custom width or height "
+"to keep the original size ratio."
+msgstr ""
+
 #: includes/widgets/ABCBreadCrumb/Main.php:78
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:73
 msgid "Crumb Style"
 msgstr ""
 
-#: includes/admin/abcbiz-settings.php:82
-msgid "Custom Field"
+#: includes/widgets/ABCCTA/Main.php:418
+msgid "CTA Box Style"
 msgstr ""
 
-#: includes/admin/abcbiz-settings.php:91
-msgid "Custom settings for the ABCBiz plugin."
+#: includes/widgets/ABCPricingTable/Main.php:111
+msgid "Custom"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:57
+#: includes/widgets/ABCPricingTable/Main.php:122
+msgid "Custom Position Left"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:149
+msgid "Custom Position Top"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:227
+msgid "Data Color"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:53
+#: includes/widgets/ABCPostInfo/Main.php:47
 msgid "Date"
 msgstr ""
 
-#: main.php:176 main.php:199
+#: includes/widgets/ABCBusinessHours/Main.php:82
+msgid "Date Color"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:62
+msgid "Day"
+msgstr ""
+
+#: includes/admin/inc/setting-page.php:21
+msgid "Demos"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:95 includes/widgets/ABCCTA/Main.php:71
+#: includes/widgets/ABCTestimonials/Main.php:89
+msgid "Description"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:695
+msgid "Description Bottom Space"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:658
+msgid "Description Bottom Spacing"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:545
+#: includes/widgets/ABCFlipBox/Main.php:682
+#: includes/widgets/ABCCTA/Main.php:644
+msgid "Description Color"
+msgstr ""
+
+#: abcbiz-multi.php:166
+msgid "Description Not Found"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:625
+msgid "Description Style"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:536
+#: includes/widgets/ABCFlipBox/Main.php:673
+#: includes/widgets/ABCCTA/Main.php:635
+msgid "Description Typography"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:81
+msgid "Design"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:98
+msgid "Designation"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:462
+#: includes/widgets/ABCTestimonials/Main.php:316
+msgid "Designation Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:124
+msgid "Designation Text Position"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:424
+#: includes/widgets/ABCTeamMember/Main.php:437
+#: includes/widgets/ABCTeamMember/Main.php:450
+#: includes/widgets/ABCTestimonials/Main.php:308
+msgid "Designation Typography"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:151
+msgid "Desktop Column"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:454
+msgid "Disable Zoom Effect"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:59
+msgid "Display Category?"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:67
+msgid "Display Client Image"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:100
+msgid "Display Counter?"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:85
+msgid "Display Divider?"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:88
+#: includes/widgets/ABCDualButton/Main.php:219
+msgid "Display Icon"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:97
+msgid "Display Icon?"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:127
+msgid "Display Magnify icon?"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:151
+msgid "Display Middle Text"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:43
+msgid "Display Sales Flash?"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:46
+msgid "Display SKU?"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:165
+msgid "Display Social Profile"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:45
+msgid "Display Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:72
+msgid "Display Tags?"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:278
+msgid "Divider Background"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:290
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:188
+msgid "Divider Color"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:164
+msgid "Divider Gap"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:136
+msgid "Divider Height"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:204
+msgid "Divider Space"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:108
+msgid "Divider Width"
+msgstr ""
+
+#: includes/admin/inc/setting-page.php:23
+msgid "Documentation"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:222
+msgid "Dribbble:"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:221
+msgid "Dropdown Icon Size"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:787
+msgid "Dual Button"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:98
+msgid ""
+"Duis Aute Irure Dolor Reprehenderit In Voluptate Velit Esse Cillum Dolore "
+"Fugiat Nulla Pariatur"
+msgstr ""
+
+#: abcbiz-main-class.php:137 abcbiz-main-class.php:155
 msgid "Elementor"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:219
+msgid "Email Address"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:149
+msgid "Email:"
 msgstr ""
 
 #: includes/widgets/ABCCircularSkills/Main.php:180
 msgid "Empty Fill Color"
 msgstr ""
 
+#: includes/widgets/ABCSkillBar/Main.php:251
+msgid "Empty Prograss Color"
+msgstr ""
+
+#: includes/global/css-transform.php:28
+msgid "Enable"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:364
+msgid "Enable Ribbon"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:46
+msgid "Enable Tooltip"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:229
+#: includes/widgets/ABCBusinessHours/Main.php:423
+#: includes/widgets/ABCCTA/Main.php:192 includes/widgets/ABCCTA/Main.php:233
+#: includes/widgets/ABCCTA/Main.php:262
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:70
+msgid "End"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:62
+#: includes/widgets/ABCDualButton/Main.php:193
+msgid "Enter button text"
+msgstr ""
+
 #: includes/admin/abcbiz-metabox.php:53
 msgid "Enter Excerpt Content:"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:315
+#: includes/widgets/ABCTestimonials/Main.php:91
+msgid "Enter feedback message here"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:168
+msgid "Enter middle text"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:714
+msgid "Error Border Color"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:151
+msgid "example@example.com"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:311
 #: includes/widgets/ABCBlogGrid/Main.php:332
 msgid "Excerpt Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:132
+#: includes/widgets/ABCBlogList/Main.php:128
 #: includes/widgets/ABCBlogGrid/Main.php:149
 msgid "Excerpt Length"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:293
+#: includes/widgets/ABCBlogList/Main.php:289
 #: includes/widgets/ABCBlogGrid/Main.php:310
 msgid "Excerpt Style"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:306
+#: includes/widgets/ABCBlogList/Main.php:302
 #: includes/widgets/ABCBlogGrid/Main.php:323
 msgid "Excerpt Typography"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:80
+#: includes/widgets/ABCTeamMember/Main.php:258
+msgid "Facebook Link"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:173
+msgid "Facebook URL:"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:74
+msgid "Failed to add the product to the cart."
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:46
+msgid "Fancy"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:225
+#: includes/admin/inc/widgets-render-functions.php:391
+#: includes/widgets/ABCBlogList/Main.php:76
 #: includes/widgets/ABCBlogGrid/Main.php:97
 msgid "Featured Image"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:194
+#: includes/widgets/ABCBlog/Main.php:254
+msgid "Featured Post"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:946
+msgid "Features"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:250
+msgid "Features List"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:192
 msgid "Field Background Color"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:157
+msgid "Field BG Color"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:230
+msgid "Field Height"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:206
+msgid "Field Width"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:111
+msgid "Flash BG Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:95
+msgid "Flash Text Color"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:117
+#: includes/admin/inc/widgets-render-functions.php:127
+msgid "Flip Box"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:185
+msgid "Flipping Direction"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:197
+msgid "Font Size"
 msgstr ""
 
 #: includes/widgets/ABCCommentForm/Main.php:40
 msgid "Form Content Style"
+msgstr ""
+
+#: includes/widgets/ABCSearchForm/Main.php:92
+msgid "Form Height"
 msgstr ""
 
 #: includes/widgets/ABCCF7/Main.php:40
@@ -334,6 +1509,67 @@ msgstr ""
 msgid "Four Colum"
 msgstr ""
 
+#: includes/widgets/ABCDualButton/Main.php:61
+msgid "Free Download"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:42
+msgid "Front Contents"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:103
+msgid "Front Description"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:106
+msgid "Front paragraph content goes here."
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:304
+msgid "Front Style"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:93
+msgid "Front Title"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:179
+msgid "Gallery Image Style"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:117
+#: includes/widgets/ABCTestimonials/Main.php:584
+#: includes/widgets/ABCTestimonials/Main.php:790
+#: includes/widgets/ABCTestimonials/Main.php:955
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:98
+msgid "Gap"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1022
+msgid "Gap Between"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:279
+msgid "Gap Between Content/Button"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:469
+msgid "Gap Between Posts"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:90
+msgid "General Style"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:86
+msgid "Get Started"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:122
+#: includes/widgets/ABCPopup/Main.php:144
+msgid "Google Map"
+msgstr ""
+
 #: includes/widgets/ABCCircularSkills/Main.php:189
 msgid "Gradient Color One"
 msgstr ""
@@ -342,108 +1578,253 @@ msgstr ""
 msgid "Gradient Color Two"
 msgstr ""
 
+#: includes/widgets/ABCTestimonials/Main.php:59
+msgid "Grid"
+msgstr ""
+
 #: includes/widgets/ABCPageTitle/Main.php:54
-#: includes/widgets/ABCPostTitle/Main.php:55
+#: includes/widgets/ABCPostTitle/Main.php:54
+#: includes/widgets/ABCSecTitle/Main.php:49
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:47
 msgid "H1"
 msgstr ""
 
 #: includes/widgets/ABCPageTitle/Main.php:55
-#: includes/widgets/ABCPostTitle/Main.php:56
+#: includes/widgets/ABCPostTitle/Main.php:55
+#: includes/widgets/ABCSecTitle/Main.php:50
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:48
 msgid "H2"
 msgstr ""
 
 #: includes/widgets/ABCPageTitle/Main.php:56
-#: includes/widgets/ABCPostTitle/Main.php:57
+#: includes/widgets/ABCPostTitle/Main.php:56
+#: includes/widgets/ABCSecTitle/Main.php:51
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:49
 msgid "H3"
 msgstr ""
 
 #: includes/widgets/ABCPageTitle/Main.php:57
-#: includes/widgets/ABCPostTitle/Main.php:58
+#: includes/widgets/ABCPostTitle/Main.php:57
+#: includes/widgets/ABCSecTitle/Main.php:52
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:50
 msgid "H4"
 msgstr ""
 
 #: includes/widgets/ABCPageTitle/Main.php:58
-#: includes/widgets/ABCPostTitle/Main.php:59
+#: includes/widgets/ABCPostTitle/Main.php:58
+#: includes/widgets/ABCSecTitle/Main.php:53
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:51
 msgid "H5"
 msgstr ""
 
 #: includes/widgets/ABCPageTitle/Main.php:59
-#: includes/widgets/ABCPostTitle/Main.php:60
+#: includes/widgets/ABCPostTitle/Main.php:59
+#: includes/widgets/ABCSecTitle/Main.php:54
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:52
 msgid "H6"
 msgstr ""
 
+#: includes/widgets/ABCPricingTable/Main.php:410
+msgid "Header"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:223
+msgid "Header BG Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:237
+msgid "Header Text Color"
+msgstr ""
+
 #: includes/widgets/ABCCircularSkills/Main.php:53
+#: includes/widgets/ABCCTA/Main.php:59 includes/widgets/ABCSkillBar/Main.php:74
 msgid "Heading"
 msgstr ""
 
+#: includes/widgets/ABCFlipBox/Main.php:511
+#: includes/widgets/ABCFlipBox/Main.php:648
+msgid "Heading Bottom Space"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:597
+msgid "Heading Bottom Spacing"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:498
+#: includes/widgets/ABCFlipBox/Main.php:635
 #: includes/widgets/ABCCircularSkills/Main.php:118
+#: includes/widgets/ABCCTA/Main.php:584
+#: includes/widgets/ABCSkillBar/Main.php:210
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:127
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:214
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:389
 msgid "Heading Color"
 msgstr ""
 
+#: includes/widgets/ABCIconBox/Main.php:605
+msgid "Heading Spacing"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:520
+msgid "Heading Style"
+msgstr ""
+
 #: includes/widgets/ABCPageTitle/Main.php:50
-#: includes/widgets/ABCPostTitle/Main.php:51
+#: includes/widgets/ABCPostTitle/Main.php:50
+#: includes/widgets/ABCSecTitle/Main.php:45
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:43
 msgid "Heading Tag"
 msgstr ""
 
+#: includes/widgets/ABCFlipBox/Main.php:489
+#: includes/widgets/ABCFlipBox/Main.php:626
 #: includes/widgets/ABCCircularSkills/Main.php:110
+#: includes/widgets/ABCCTA/Main.php:575
+#: includes/widgets/ABCSkillBar/Main.php:202
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:118
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:205
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:380
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:403
 msgid "Heading Typography"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:125 includes/widgets/ABCCF7/Main.php:259
+#: includes/widgets/ABCPricingTable/Main.php:839
+#: includes/widgets/ABCCTA/Main.php:724 includes/widgets/ABCCF7/Main.php:119
+#: includes/widgets/ABCCF7/Main.php:258
 msgid "Height"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:97
-#: includes/widgets/ABCBlogList/Main.php:83
-#: includes/widgets/ABCBlogList/Main.php:96
-#: includes/widgets/ABCBlogList/Main.php:109
-#: includes/widgets/ABCBlogList/Main.php:122
-#: includes/widgets/ABCBlogList/Main.php:151
-#: includes/widgets/ABCBlogList/Main.php:178
+#: includes/widgets/ABCPricingTable/Main.php:192
+#: includes/widgets/ABCShape/Main.php:91
+#: includes/widgets/ABCBlogList/Main.php:79
+#: includes/widgets/ABCBlogList/Main.php:92
+#: includes/widgets/ABCBlogList/Main.php:105
+#: includes/widgets/ABCBlogList/Main.php:118
+#: includes/widgets/ABCBlogList/Main.php:147
+#: includes/widgets/ABCBlogList/Main.php:174
 #: includes/widgets/ABCBlogGrid/Main.php:100
 #: includes/widgets/ABCBlogGrid/Main.php:113
 #: includes/widgets/ABCBlogGrid/Main.php:126
 #: includes/widgets/ABCBlogGrid/Main.php:139
 #: includes/widgets/ABCBlogGrid/Main.php:168
 #: includes/widgets/ABCBlogGrid/Main.php:195
-#: includes/widgets/ABCBlog/Main.php:60 includes/widgets/ABCBlog/Main.php:73
-#: includes/widgets/ABCBlog/Main.php:86
-#: includes/widgets/ABCBlogAuthor/Main.php:50
+#: includes/widgets/ABCContactInfo/Main.php:47
+#: includes/widgets/ABCContactInfo/Main.php:60
+#: includes/widgets/ABCSecTitle/Main.php:97
+#: includes/widgets/ABCBlog/Main.php:56 includes/widgets/ABCBlog/Main.php:69
+#: includes/widgets/ABCBlog/Main.php:82
+#: includes/widgets/ABCDualButton/Main.php:91
+#: includes/widgets/ABCDualButton/Main.php:154
+#: includes/widgets/ABCDualButton/Main.php:222
+#: includes/widgets/ABCSocialShare/Main.php:73
+#: includes/widgets/ABCSocialShare/Main.php:85
+#: includes/widgets/ABCBlogAuthor/Main.php:59
+#: includes/widgets/ABCRecentPost/Main.php:84
+#: includes/widgets/ABCRecentPost/Main.php:97
+#: includes/widgets/ABCRecentPost/Main.php:110
+#: includes/widgets/ABCPostInfo/Main.php:50
+#: includes/widgets/ABCPostInfo/Main.php:63
+#: includes/widgets/ABCPostInfo/Main.php:76
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:46
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:130
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:103
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:49
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:62
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:75
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:88
 msgid "Hide"
 msgstr ""
 
+#: includes/widgets/ABCSocialShare/Main.php:82
+msgid "Hide Share icon on mobile?"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:47
+msgid "Horizontal"
+msgstr ""
+
+#: includes/global/css-transform.php:395
+#: includes/widgets/ABCPricingTable/Main.php:372
+#: includes/widgets/ABCPricingTable/Main.php:601
+#: includes/widgets/ABCPricingTable/Main.php:908
+#: includes/widgets/ABCPricingTable/Main.php:1282
+#: includes/widgets/ABCCounter/Main.php:282
 #: includes/widgets/ABCCommentForm/Main.php:196
 #: includes/widgets/ABCCommentForm/Main.php:284
-#: includes/widgets/ABCShape/Main.php:215
-#: includes/widgets/ABCBlogList/Main.php:464
-#: includes/widgets/ABCBlogGrid/Main.php:507
+#: includes/widgets/ABCShape/Main.php:209
+#: includes/widgets/ABCBlogList/Main.php:601
+#: includes/widgets/ABCBlogGrid/Main.php:565
+#: includes/widgets/ABCDualButton/Main.php:434
+#: includes/widgets/ABCDualButton/Main.php:708
+#: includes/widgets/ABCSocialShare/Main.php:338
+#: includes/widgets/ABCSearchForm/Main.php:176
+#: includes/widgets/ABCIconBox/Main.php:265
+#: includes/widgets/ABCIconBox/Main.php:515
+#: includes/widgets/ABCIconBox/Main.php:688
+#: includes/widgets/ABCIconBox/Main.php:837
+#: includes/widgets/ABCCTA/Main.php:818
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:103
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:263
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:637
 msgid "Hover"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:428
+#: includes/widgets/ABCCTA/Main.php:838
+msgid "Hover Background"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:395
+#: includes/widgets/ABCFlipBox/Main.php:848
+#: includes/widgets/ABCTagInfo/Main.php:169
+#: includes/widgets/ABCCF7/Main.php:441
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:258
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:100
 msgid "Hover Background Color"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:439
+#: includes/widgets/ABCTestimonials/Main.php:683
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:313
+msgid "Hover BG Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogGrid/Main.php:599
+#: includes/widgets/ABCCF7/Main.php:454
 msgid "Hover Border Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:234
-#: includes/widgets/ABCBlogList/Main.php:378
-#: includes/widgets/ABCBlogList/Main.php:386
-#: includes/widgets/ABCBlogList/Main.php:472
-#: includes/widgets/ABCBlogList/Main.php:485
+#: includes/widgets/ABCBlogList/Main.php:230
+#: includes/widgets/ABCBlogList/Main.php:374
+#: includes/widgets/ABCBlogList/Main.php:382
+#: includes/widgets/ABCBlogList/Main.php:609
+#: includes/widgets/ABCBlogList/Main.php:622
+#: includes/widgets/ABCRelatedPost/Main.php:59
 #: includes/widgets/ABCBlogGrid/Main.php:251
 #: includes/widgets/ABCBlogGrid/Main.php:395
 #: includes/widgets/ABCBlogGrid/Main.php:403
-#: includes/widgets/ABCBlogGrid/Main.php:515
-#: includes/widgets/ABCBlogGrid/Main.php:528
-#: includes/widgets/ABCCatInfo/Main.php:106
+#: includes/widgets/ABCBlogGrid/Main.php:573
+#: includes/widgets/ABCBlogGrid/Main.php:586
+#: includes/widgets/ABCTagInfo/Main.php:156
+#: includes/widgets/ABCRecentPost/Main.php:180
+#: includes/widgets/ABCRecentPost/Main.php:287
+#: includes/widgets/ABCTestimonials/Main.php:659
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:151
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:245
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:87
 msgid "Hover Color"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:417
+#: includes/widgets/ABCWpMenu/Main.php:408
+#: includes/widgets/ABCFlipBox/Main.php:835
+#: includes/widgets/ABCCF7/Main.php:428
 msgid "Hover Text Color"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:539
+msgid "Hover/Active BG Color"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:516
+msgid "Hover/Active Color"
 msgstr ""
 
 #. Author URI of the plugin
@@ -454,67 +1835,570 @@ msgstr ""
 msgid "https://abcplugin.com/abcbiz-multi-addons-for-elementor/"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:100
+#: includes/global/wrapper-link.php:35
+#: includes/widgets/ABCPricingTable/Main.php:292
+#: includes/widgets/ABCDualButton/Main.php:73
+#: includes/widgets/ABCDualButton/Main.php:204
+#: includes/widgets/ABCCTA/Main.php:97 includes/widgets/ABCCTA/Main.php:125
+msgid "https://your-link.com"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:230
+#: includes/widgets/ABCCounter/Main.php:68
+#: includes/widgets/ABCPopup/Main.php:56
+#: includes/widgets/ABCFlipBox/Main.php:56
+#: includes/widgets/ABCDualButton/Main.php:102
+#: includes/widgets/ABCDualButton/Main.php:233
+#: includes/widgets/ABCIconBox/Main.php:74
+#: includes/widgets/ABCIconBox/Main.php:316
+#: includes/widgets/ABCTestimonials/Main.php:224
+msgid "Icon"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:483
+msgid "Icon Alignment"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:217
+#: includes/widgets/ABCCounter/Main.php:325
+#: includes/widgets/ABCPopup/Main.php:305
+#: includes/widgets/ABCSocialShare/Main.php:324
+msgid "Icon Background Color"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:496
+msgid "Icon Background Size"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:433
+msgid "Icon BG Color"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:337
+msgid "Icon Border Color"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:237
+msgid "Icon Border Radius"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:382
+msgid "Icon Bottom Space"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:234
+#: includes/admin/inc/widgets-render-functions.php:413
+msgid "Icon Box"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:238
+#: includes/widgets/ABCPricingTable/Main.php:1009
+#: includes/widgets/ABCCounter/Main.php:182
+#: includes/widgets/ABCCounter/Main.php:313
+#: includes/widgets/ABCBlockquote/Main.php:95
+#: includes/widgets/ABCPopup/Main.php:287
+#: includes/widgets/ABCFlipBox/Main.php:365
+#: includes/widgets/ABCSearchIcon/Main.php:120
+#: includes/widgets/ABCContactInfo/Main.php:306
+#: includes/widgets/ABCContactInfo/Main.php:420
+#: includes/widgets/ABCDualButton/Main.php:310
+#: includes/widgets/ABCDualButton/Main.php:466
+#: includes/widgets/ABCDualButton/Main.php:587
+#: includes/widgets/ABCDualButton/Main.php:741
+#: includes/widgets/ABCSocialShare/Main.php:312
+#: includes/widgets/ABCCatInfo/Main.php:192
+#: includes/widgets/ABCIconBox/Main.php:459
+#: includes/widgets/ABCPostInfo/Main.php:145
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:74
 msgid "Icon Color"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:57 includes/widgets/ABCShape/Main.php:252
+#: includes/widgets/ABCContactInfo/Main.php:520
+#: includes/widgets/ABCDualButton/Main.php:348
+#: includes/widgets/ABCDualButton/Main.php:624
+msgid "Icon Gap"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:341
+#: includes/widgets/ABCSocialShare/Main.php:357
+msgid "Icon Hover Background Color"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:459
+msgid "Icon Hover BG Color"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:323
+#: includes/widgets/ABCWpMenu/Main.php:459
+#: includes/widgets/ABCSearchIcon/Main.php:133
+#: includes/widgets/ABCContactInfo/Main.php:446
+#: includes/widgets/ABCSocialShare/Main.php:345
+#: includes/widgets/ABCIconBox/Main.php:537
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:87
+msgid "Icon Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:265
+msgid "Icon Margin"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:474
+msgid "Icon Opacity"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:251
+#: includes/widgets/ABCPopup/Main.php:420
+#: includes/widgets/ABCIconBox/Main.php:419
+msgid "Icon Padding"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1088
+#: includes/widgets/ABCWpMenu/Main.php:246
+#: includes/widgets/ABCDualButton/Main.php:115
+#: includes/widgets/ABCDualButton/Main.php:246
+#: includes/widgets/ABCIconBox/Main.php:397
+#: includes/widgets/ABCTeamMember/Main.php:178
+#: includes/widgets/ABCTeamMember/Main.php:533
+msgid "Icon Position"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:62
+msgid "Icon Shape"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1043
+#: includes/widgets/ABCPricingTable/Main.php:1190
+#: includes/widgets/ABCCounter/Main.php:195
+#: includes/widgets/ABCPopup/Main.php:396
+#: includes/widgets/ABCFlipBox/Main.php:337
+#: includes/widgets/ABCSearchIcon/Main.php:96
+#: includes/widgets/ABCContactInfo/Main.php:282
+#: includes/widgets/ABCContactInfo/Main.php:472
+#: includes/widgets/ABCDualButton/Main.php:287
+#: includes/widgets/ABCDualButton/Main.php:564
+#: includes/widgets/ABCCatInfo/Main.php:209
+#: includes/widgets/ABCIconBox/Main.php:324
+#: includes/widgets/ABCPostInfo/Main.php:157
+#: includes/widgets/ABCTeamMember/Main.php:708
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:50
+msgid "Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1213
+#: includes/widgets/ABCCatInfo/Main.php:265
+msgid "Icon Space"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1065
+#: includes/widgets/ABCWpMenu/Main.php:537
+#: includes/widgets/ABCIconBox/Main.php:377
+#: includes/widgets/ABCIconBox/Main.php:749
+msgid "Icon Spacing"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:274
+#: includes/widgets/ABCSearchIcon/Main.php:87
+msgid "Icon Style"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:51
+msgid "Icon Type"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:277
+msgid "Icons background Size"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:51 includes/widgets/ABCShape/Main.php:246
+#: includes/widgets/ABCPopup/Main.php:57
+#: includes/widgets/ABCFlipBox/Main.php:57
 msgid "Image"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:81
+#: includes/widgets/ABCFeturedImg/Main.php:31
+msgid "Image Alignment"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:75 includes/widgets/ABCPopup/Main.php:103
 msgid "Image Alt Text"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:116
+#: includes/widgets/ABCFlipBox/Main.php:463
+#: includes/widgets/ABCBlog/Main.php:374
+msgid "Image Border Radius"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:436
+msgid "Image Bottom Space"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:50
+#: includes/widgets/ABCPortfolio/Main.php:50
+#: includes/widgets/ABCTeamMember/Main.php:63
+msgid "Image Dimension"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:351
+msgid "Image Height"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:243
+#: includes/admin/inc/widgets-render-functions.php:435
+msgid "Image Hover"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:32
+msgid "Image Setting"
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:409
+msgid "Image Size"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:400
+#: includes/widgets/ABCPopup/Main.php:443
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:80
+msgid "Image Style"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:412
+#: includes/widgets/ABCPopup/Main.php:456
+#: includes/widgets/ABCImgHover/Main.php:112
+#: includes/widgets/ABCBlog/Main.php:397
+#: includes/widgets/ABCFeturedImg/Main.php:78
+#: includes/widgets/ABCPortfolio/Main.php:112
+msgid "Image Width"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:85
+msgid "Img Hover Link"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:978
+msgid "Indent"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:809
+msgid "Indent for Largest Device"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:355
+msgid "Info Bottom Spacing"
+msgstr ""
+
+#: includes/widgets/ABCPostInfo/Main.php:133
+msgid "Info Color"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:379
+msgid "Info Right Spacing"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:34
+msgid "Info Style"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:75
+msgid "Inline"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:49
+msgid "Inline View"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:527
+msgid "Input Background"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:505
+msgid "Input Border"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:514
+msgid "Input Border Radius"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:492
+msgid "Input Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:110
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:420
 msgid "Input Fields"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:101
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:163
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:326
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:347
+msgid "Input Fields Spacing"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:474
+msgid "Input Gap"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:461
+msgid "Input Padding"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:452
+msgid "Input Typography"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:297
+msgid "Instagram Link"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:193
+msgid "Instagram:"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:65
+msgid "Invalid product."
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:641
+msgid "Item Separator Color"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:237
+msgid "Item Space"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:552 includes/widgets/ABCCF7/Main.php:658
+#: includes/widgets/ABCSkillBar/Main.php:156
+msgid "Item Spacing"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:179
+msgid "Justify Content"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:95
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:150
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:412
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:429
 msgid "Label Color"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:82
+#: includes/widgets/ABCCF7/Main.php:76
 msgid "Label Style"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:92
+#: includes/widgets/ABCCF7/Main.php:86 includes/widgets/ABCCF7/Main.php:480
+#: includes/widgets/ABCCF7/Main.php:586 includes/widgets/ABCCF7/Main.php:692
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:141
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:442
 msgid "Label Typography"
 msgstr ""
 
+#: includes/widgets/ABCBlog/Main.php:144
+msgid "Layout Direction"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:234
+msgid "Learn More"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:605
+msgid "Learn More Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:622
+msgid "Learn More Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:666
+msgid "Learn More Icon Position"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:639
+msgid "Learn More Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:593
+msgid "Learn More Typography"
+msgstr ""
+
 #: includes/widgets/ABCBlogList/RenderView.php:74
+#: includes/widgets/ABCRecentPost/RenderView.php:51
+#: includes/widgets/ABCPostInfo/RenderView.php:20
 #: includes/widgets/ABCBlogGrid/template/four-column.php:58
 #: includes/widgets/ABCBlogGrid/template/two-column.php:58
 #: includes/widgets/ABCBlogGrid/template/three-column.php:57
 msgid "Leave a comment"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:54
+#: includes/widgets/ABCPricingTable/Main.php:109
+#: includes/widgets/ABCCounter/Main.php:92
+#: includes/widgets/ABCBlockquote/Main.php:49
+#: includes/widgets/ABCPopup/Main.php:172
+#: includes/widgets/ABCWpMenu/Main.php:84
+#: includes/widgets/ABCWpMenu/Main.php:488
+#: includes/widgets/ABCImgHover/Main.php:168
+#: includes/widgets/ABCFlipBox/Main.php:190
 #: includes/widgets/ABCBlogGrid/Main.php:436
 #: includes/widgets/ABCPageTitle/Main.php:74
-#: includes/widgets/ABCPostTitle/Main.php:75
+#: includes/widgets/ABCTagInfo/Main.php:48
+#: includes/widgets/ABCSearchIcon/Main.php:63
+#: includes/widgets/ABCContactInfo/Main.php:89
+#: includes/widgets/ABCPostTitle/Main.php:74
+#: includes/widgets/ABCSecTitle/Main.php:198
 #: includes/widgets/ABCBreadCrumb/Main.php:52
-#: includes/widgets/ABCCatInfo/Main.php:51
+#: includes/widgets/ABCDualButton/Main.php:51
+#: includes/widgets/ABCDualButton/Main.php:119
+#: includes/widgets/ABCDualButton/Main.php:250
+#: includes/widgets/ABCSocialShare/Main.php:49
+#: includes/widgets/ABCCatInfo/Main.php:64
+#: includes/widgets/ABCIconBox/Main.php:144
+#: includes/widgets/ABCPostInfo/Main.php:91
+#: includes/widgets/ABCFeturedImg/Main.php:45
+#: includes/widgets/ABCCTA/Main.php:396 includes/widgets/ABCCTA/Main.php:493
+#: includes/widgets/ABCPortfolio/Main.php:168
+#: includes/widgets/ABCTestimonials/Main.php:610
+#: includes/widgets/ABCTestimonials/Main.php:768
+#: includes/widgets/ABCTestimonials/Main.php:909
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:47
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:51
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:67
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:51
 msgid "Left"
 msgstr ""
 
+#: includes/widgets/ABCTestimonials/Main.php:837
+msgid "Left Arrow Left Indent"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:818
+msgid "Left Arrow Top Indent"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:279
+msgid "Left Button"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:562
+msgid "Left Position"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:61
+msgid "Lets deliver the right solution for your"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:151
+msgid "Link"
+msgstr ""
+
 #: includes/widgets/ABCBreadCrumb/Main.php:98
-#: includes/widgets/ABCBlogAuthor/Main.php:132
+#: includes/widgets/ABCBlogAuthor/Main.php:141
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:93
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:83
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:335
 msgid "Link Color"
 msgstr ""
 
 #: includes/widgets/ABCBreadCrumb/Main.php:110
-#: includes/widgets/ABCBlogAuthor/Main.php:145
+#: includes/widgets/ABCBlogAuthor/Main.php:154
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:105
 msgid "Link Hover Color"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:181 includes/widgets/ABCCF7/Main.php:316
-#: includes/widgets/ABCCF7/Main.php:362
+#: includes/widgets/ABCTeamMember/Main.php:284
+msgid "Linkedin Link"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:203
+msgid "Linkedin:"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:387
+msgid "List Gap"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:300
+msgid "List Items"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:82
+msgid "List Name"
+msgstr ""
+
+#: includes/widgets/ABCCatInfo/Main.php:50
+msgid "List View"
+msgstr ""
+
+#: includes/global/css-transform.php:141 includes/global/css-transform.php:257
+msgid "Loose"
+msgstr ""
+
+#: includes/admin/inc/widget-page.php:104
+msgid "Manage available widgets here."
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:159
+#: includes/widgets/ABCBusinessHours/Main.php:285
+#: includes/widgets/ABCBusinessHours/Main.php:345
+#: includes/widgets/ABCCF7/Main.php:179 includes/widgets/ABCCF7/Main.php:318
+#: includes/widgets/ABCCF7/Main.php:366
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:372
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:591
 msgid "Margin"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:278
+#: includes/widgets/ABCTeamMember/Main.php:114
+msgid "Member Designation"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:54
+msgid "Member Image"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:77
+#: includes/widgets/ABCTeamMember/Main.php:79
+msgid "Member Name"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:39
+msgid "Member Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:141
+msgid "Menu Gap"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:107
+msgid "Menu Height"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:196
+#: includes/widgets/ABCWpMenu/Main.php:620
+msgid "Menu Item Spacing"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/renderview.php:24
+#: includes/widgets/ABCWpMenu/renderview.php:41
+msgid "Menu not selected or found."
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:134
+msgid "Menu Style"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:607
+msgid "Menu Text Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:571
+msgid "Menu Top Border Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:199
+msgid "Menu Width"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:274
 #: includes/widgets/ABCBlogGrid/Main.php:295
+#: includes/widgets/ABCRecentPost/Main.php:224
 msgid "Meta Color"
 msgstr ""
 
@@ -526,245 +2410,1571 @@ msgstr ""
 msgid "Meta Data Typography"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:141
+#: includes/widgets/ABCBlog/Main.php:188
 msgid "Meta Icon Color"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:152
+#: includes/widgets/ABCBlog/Main.php:199
 msgid "Meta Icon Size"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:259
+#: includes/widgets/ABCBlogList/Main.php:255
 #: includes/widgets/ABCBlogGrid/Main.php:276
+#: includes/widgets/ABCRecentPost/Main.php:205
 msgid "Meta Style"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:130
+#: includes/widgets/ABCBlog/Main.php:177
 msgid "Meta Text Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:269
+#: includes/widgets/ABCBlogList/Main.php:265
 #: includes/widgets/ABCBlogGrid/Main.php:286
-#: includes/widgets/ABCBlog/Main.php:122
+#: includes/widgets/ABCBlog/Main.php:169
+#: includes/widgets/ABCRecentPost/Main.php:215
 msgid "Meta Typography"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:148
+#: includes/widgets/ABCDualButton/Main.php:143
+msgid "Middle"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:165
+#: includes/widgets/ABCDualButton/Main.php:501
+msgid "Middle Text"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:598
+msgid "Mob Menu Typography"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:180
+msgid "Mobile Column"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:584
+msgid "Mobile Menu BG Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:474
+msgid "Mobile Menu Style"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:139
+msgid "Mobile:"
+msgstr ""
+
+#: includes/global/css-transform.php:133 includes/global/css-transform.php:249
+msgid "Mode"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:64
+msgid "Monday"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:144
 #: includes/widgets/ABCBlogGrid/Main.php:165
+#: includes/widgets/ABCRecentPost/Main.php:107
 msgid "More Button"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:161
+#: includes/widgets/ABCBlogList/Main.php:157
 #: includes/widgets/ABCBlogGrid/Main.php:178
+#: includes/widgets/ABCRecentPost/Main.php:120
 msgid "More Button Text"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:379
+msgid "Most popular"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:154
+#: includes/admin/inc/wc-widgets-render-functions.php:281
+msgid "My Account"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:809
+#: includes/widgets/ABCTestimonials/Main.php:80
+msgid "Name"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:135
+msgid "Name #1"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:138
+msgid "Name #2"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:141
+msgid "Name #3"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:392
+#: includes/widgets/ABCTestimonials/Main.php:295
+msgid "Name Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:407
+msgid "Name Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:87
+msgid "Name Text Position"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:353
+#: includes/widgets/ABCTeamMember/Main.php:366
+#: includes/widgets/ABCTeamMember/Main.php:379
+#: includes/widgets/ABCTestimonials/Main.php:287
+msgid "Name Typography"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:221
+msgid "name@siteaddress.com"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:558
+msgid "Nav Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:512
+msgid "Nav Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:763
+msgid "Navigation Bar Alignment"
 msgstr ""
 
 #: includes/widgets/ABCCommentForm/template/comment-form.php:16
 msgid "Newer Comments"
 msgstr ""
 
+#: includes/widgets/ABCPricingTable/Main.php:96
+#: includes/widgets/ABCCatInfo/Main.php:100
+#: includes/widgets/ABCCTA/Main.php:367 includes/widgets/ABCCTA/Main.php:457
+#: includes/widgets/ABCTeamMember/Main.php:168
+#: includes/widgets/ABCSkillBar/Main.php:49
+#: includes/widgets/ABCSkillBar/Main.php:62
+msgid "No"
+msgstr ""
+
+#: includes/widgets/ABCFeturedImg/renderview.php:19
+msgid "No featured image found"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:66
+msgid "No menus found"
+msgstr ""
+
+#: includes/widgets/ABCRelatedPost/RenderView.php:51
+msgid "No post available."
+msgstr ""
+
 #: includes/widgets/ABCBlogList/RenderView.php:119
+#: includes/widgets/ABCRecentPost/RenderView.php:67
 #: includes/widgets/ABCBlogGrid/template/four-column.php:103
 #: includes/widgets/ABCBlogGrid/template/two-column.php:106
 #: includes/widgets/ABCBlogGrid/template/three-column.php:103
 msgid "No Post Found"
 msgstr ""
 
+#: includes/widgets/ABCRelatedPost/RenderView.php:46
+msgid "No related posts found"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:50
+msgid "Nonce verification failed."
+msgstr ""
+
+#: includes/widgets/ABCFlipBox/Main.php:55
+msgid "None"
+msgstr ""
+
+#: includes/global/css-transform.php:48
+#: includes/widgets/ABCPricingTable/Main.php:330
+#: includes/widgets/ABCPricingTable/Main.php:508
+#: includes/widgets/ABCPricingTable/Main.php:875
+#: includes/widgets/ABCPricingTable/Main.php:1239
 #: includes/widgets/ABCCommentForm/Main.php:166
 #: includes/widgets/ABCCommentForm/Main.php:253
-#: includes/widgets/ABCShape/Main.php:185
-#: includes/widgets/ABCBlogList/Main.php:429
-#: includes/widgets/ABCBlogGrid/Main.php:472
+#: includes/widgets/ABCShape/Main.php:179
+#: includes/widgets/ABCBlogList/Main.php:567
+#: includes/widgets/ABCBlogGrid/Main.php:530
+#: includes/widgets/ABCDualButton/Main.php:399
+#: includes/widgets/ABCDualButton/Main.php:674
+#: includes/widgets/ABCSocialShare/Main.php:305
+#: includes/widgets/ABCSearchForm/Main.php:142
+#: includes/widgets/ABCIconBox/Main.php:226
+#: includes/widgets/ABCIconBox/Main.php:438
+#: includes/widgets/ABCIconBox/Main.php:659
+#: includes/widgets/ABCIconBox/Main.php:808
+#: includes/widgets/ABCCTA/Main.php:784
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:68
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:231
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:605
 msgid "Normal"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:60
+#: includes/admin/abcbiz-metabox.php:78
+msgid "Note:"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:36
+msgid "Notice Style"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:59
+msgid "Number"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:160
+#: includes/widgets/ABCCounter/Main.php:301
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:145
+msgid "Number Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:204
+msgid "Number Font Size"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:161
+msgid "Number Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:56
 #: includes/widgets/ABCBlogGrid/Main.php:77
 msgid "Number of Post"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:60
+msgid "Number of Posts"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:174
+msgid "Number Typography"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:70
+#: includes/widgets/ABCTestimonials/Main.php:198
+#: includes/widgets/ABCTestimonials/Main.php:236
+#: includes/widgets/ABCTestimonials/Main.php:251
+msgid "Off"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:335
+msgid "Offset Right"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:322
+msgid "Offset Top"
 msgstr ""
 
 #: includes/widgets/ABCCommentForm/template/comment-form.php:12
 msgid "Older Comments"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:169 includes/widgets/ABCCF7/Main.php:304
-#: includes/widgets/ABCCF7/Main.php:350
+#: includes/widgets/ABCTestimonials/Main.php:69
+#: includes/widgets/ABCTestimonials/Main.php:197
+#: includes/widgets/ABCTestimonials/Main.php:235
+#: includes/widgets/ABCTestimonials/Main.php:250
+msgid "On"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:73
+msgid ""
+"onsectetur adipiscing elit pellentesque habitant morbi tristique senectus. "
+"Vestibulum mattis\n"
+"                velit sed ullamcorper morbi. At erat  pellentesque."
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:167
+msgid "OR"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:255
+msgid "Order Button Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:195
+msgid "Order Review Style"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:51
+msgid "Our Clients"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:236
+#: includes/widgets/ABCPortfolio/Main.php:236
+msgid "Overflow Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:208
+msgid "Package Features"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:65
+msgid "Package Name"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:1131
+#: includes/widgets/ABCBlogList/Main.php:510
+#: includes/widgets/ABCPopup/Main.php:244
+#: includes/widgets/ABCBusinessHours/Main.php:147
+#: includes/widgets/ABCBusinessHours/Main.php:273
+#: includes/widgets/ABCBusinessHours/Main.php:332
+#: includes/widgets/ABCFlipBox/Main.php:312
+#: includes/widgets/ABCFlipBox/Main.php:599
+#: includes/widgets/ABCBlogGrid/Main.php:469
+#: includes/widgets/ABCBlog/Main.php:445
+#: includes/widgets/ABCDualButton/Main.php:336
+#: includes/widgets/ABCDualButton/Main.php:612
+#: includes/widgets/ABCIconBox/Main.php:204
+#: includes/widgets/ABCCTA/Main.php:426 includes/widgets/ABCCF7/Main.php:166
+#: includes/widgets/ABCCF7/Main.php:305 includes/widgets/ABCCF7/Main.php:353
+#: includes/widgets/ABCTestimonials/Main.php:572
+#: includes/widgets/ABCTestimonials/Main.php:742
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:174
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:359
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:578
 msgid "Padding"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:175
+#: includes/admin/inc/widgets-register-functions.php:252
+#: includes/admin/inc/widgets-render-functions.php:457
+msgid "Page Title"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:171
 #: includes/widgets/ABCBlogGrid/Main.php:192
+#: includes/widgets/ABCTestimonials/Main.php:248
+#: includes/widgets/ABCTestimonials/Main.php:493
+#: includes/widgets/ABCTestimonials/Main.php:894
 msgid "Pagination"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:404
+#: includes/widgets/ABCBlogList/Main.php:468
 #: includes/widgets/ABCBlogGrid/Main.php:421
 msgid "Pagination Style"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:417
+#: includes/widgets/ABCBlogList/Main.php:481
 #: includes/widgets/ABCBlogGrid/Main.php:460
 msgid "Pagination Typography"
 msgstr ""
 
-#: main.php:223
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:177
+msgid "Panel Style"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:84
+msgid "Period"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:555
+#: includes/widgets/ABCPricingTable/Main.php:661
+msgid "Period Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:428
+msgid "Period Typography"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:206
+msgid "Phone Number"
+msgstr ""
+
+#: abcbiz-main-class.php:174
 msgid "PHP"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:224
+#: includes/widgets/ABCContactInfo/Main.php:213
+msgid "Pinterest:"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:193
+#: includes/widgets/ABCCF7/Main.php:222
 msgid "Placeholder Color"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:239
+#: includes/widgets/ABCSearchIcon/Main.php:48
+#: includes/widgets/ABCSearchForm/Main.php:42
+msgid "Placeholder Text"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:184
+#: includes/widgets/ABCSearchForm/Main.php:83
+#: includes/widgets/ABCCF7/Main.php:237
 msgid "Placeholder Typography"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:27
+#, php-format
+msgid ""
+"Please add product description content for this tab using the description "
+"box in the <a href=\"%s\">page editor</a>."
 msgstr ""
 
 #: includes/widgets/ABCCF7/RenderView.php:22
 msgid "Please Select contact form."
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:76
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:354
+msgid "Please set a valid product"
+msgstr ""
+
+#: abcbiz-multi.php:161
+msgid "Plugin Name Not Found"
+msgstr ""
+
+#: abcbiz-multi.php:164
+msgid "Plugin URI Not Found"
+msgstr ""
+
+#: abcbiz-multi.php:162
+msgid "Plugin Version Not Found"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:261
+#: includes/admin/inc/widgets-render-functions.php:479
+#: includes/widgets/ABCPopup/Main.php:43
+msgid "Popup"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:77
+msgid "Popup Icon"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:88
+msgid "Popup Image"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:160
+msgid "Popup Style"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:65
+msgid "Popup Text"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:117
+msgid "Popup Type"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:130
+msgid "Popup Video"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:270
+#: includes/admin/inc/widgets-render-functions.php:501
+msgid "Portfolio"
+msgstr ""
+
+#: includes/widgets/ABCPortfolio/Main.php:85
+msgid "Portfolio Link"
+msgstr ""
+
+#: includes/widgets/ABCPortfolio/Main.php:32
+msgid "Portfolio Setting"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:432
+msgid "Post Count"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:81
+msgid "Post Date"
+msgstr ""
+
+#: includes/widgets/ABCPostInfo/Main.php:38
+msgid "Post Info Setting"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:279
+#: includes/admin/inc/widgets-render-functions.php:523
+msgid "Post Meta"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:38
+msgid "Post Setting"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:369
+#: includes/admin/inc/widgets-render-functions.php:743
+msgid "Post Tag Info"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:288
+#: includes/admin/inc/widgets-render-functions.php:545
+msgid "Post Title"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-render-functions.php:13
+#: includes/admin/inc/wc-widgets-render-functions.php:35
+#: includes/admin/inc/wc-widgets-render-functions.php:57
+#: includes/admin/inc/wc-widgets-render-functions.php:79
+#: includes/admin/inc/wc-widgets-render-functions.php:101
+#: includes/admin/inc/wc-widgets-render-functions.php:123
+#: includes/admin/inc/wc-widgets-render-functions.php:145
+#: includes/admin/inc/wc-widgets-render-functions.php:167
+#: includes/admin/inc/wc-widgets-render-functions.php:189
+#: includes/admin/inc/wc-widgets-render-functions.php:211
+#: includes/admin/inc/wc-widgets-render-functions.php:233
+#: includes/admin/inc/wc-widgets-render-functions.php:255
+#: includes/admin/inc/wc-widgets-render-functions.php:277
+#: includes/admin/inc/widgets-render-functions.php:13
+#: includes/admin/inc/widgets-render-functions.php:35
+#: includes/admin/inc/widgets-render-functions.php:57
+#: includes/admin/inc/widgets-render-functions.php:79
+#: includes/admin/inc/widgets-render-functions.php:101
+#: includes/admin/inc/widgets-render-functions.php:123
+#: includes/admin/inc/widgets-render-functions.php:145
+#: includes/admin/inc/widgets-render-functions.php:167
+#: includes/admin/inc/widgets-render-functions.php:189
+#: includes/admin/inc/widgets-render-functions.php:211
+#: includes/admin/inc/widgets-render-functions.php:233
+#: includes/admin/inc/widgets-render-functions.php:255
+#: includes/admin/inc/widgets-render-functions.php:277
+#: includes/admin/inc/widgets-render-functions.php:299
+#: includes/admin/inc/widgets-render-functions.php:321
+#: includes/admin/inc/widgets-render-functions.php:343
+#: includes/admin/inc/widgets-render-functions.php:365
+#: includes/admin/inc/widgets-render-functions.php:387
+#: includes/admin/inc/widgets-render-functions.php:409
+#: includes/admin/inc/widgets-render-functions.php:431
+#: includes/admin/inc/widgets-render-functions.php:453
+#: includes/admin/inc/widgets-render-functions.php:475
+#: includes/admin/inc/widgets-render-functions.php:497
+#: includes/admin/inc/widgets-render-functions.php:519
+#: includes/admin/inc/widgets-render-functions.php:541
+#: includes/admin/inc/widgets-render-functions.php:563
+#: includes/admin/inc/widgets-render-functions.php:585
+#: includes/admin/inc/widgets-render-functions.php:607
+#: includes/admin/inc/widgets-render-functions.php:629
+#: includes/admin/inc/widgets-render-functions.php:651
+#: includes/admin/inc/widgets-render-functions.php:673
+#: includes/admin/inc/widgets-render-functions.php:695
+#: includes/admin/inc/widgets-render-functions.php:717
+#: includes/admin/inc/widgets-render-functions.php:739
+#: includes/admin/inc/widgets-render-functions.php:761
+#: includes/admin/inc/widgets-render-functions.php:783
+#: includes/admin/inc/widgets-render-functions.php:807
+#: includes/admin/inc/widgets-render-functions.php:832
+msgid "Preview"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:75
+msgid "Price"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:544
+#: includes/widgets/ABCPricingTable/Main.php:650
+msgid "Price Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:73
+msgid "Price Regular Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:97
+msgid "Price Sales Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:166
+msgid "Price Style"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:419
+msgid "Price Typography"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:57
+msgid "Pricing Header"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:718
+msgid "Pricing Period Top"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:297
+#: includes/admin/inc/widgets-render-functions.php:567
+msgid "Pricing Table"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:46
+#: includes/admin/inc/wc-widgets-render-functions.php:17
+msgid "Product Bread Crumb"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:55
+msgid "Product ID is missing."
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:109
+#: includes/admin/inc/wc-widgets-render-functions.php:149
+msgid "Product Image"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:141
+msgid "Product Image Style"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:100
+#: includes/admin/inc/wc-widgets-render-functions.php:127
+msgid "Product Meta"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:91
+#: includes/admin/inc/wc-widgets-render-functions.php:105
+msgid "Product Price"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:73
+#: includes/admin/inc/wc-widgets-render-functions.php:61
+msgid "Product Short Description"
+msgstr ""
+
+#: includes/widgets/abcbiz-widgets-functions.php:72
+msgid "Product successfully added to cart."
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:64
+#: includes/admin/inc/wc-widgets-render-functions.php:39
+msgid "Product Tabs"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:55
+#: includes/admin/inc/wc-widgets-render-functions.php:259
+msgid "Product Title"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:119
+msgid "Product Title Style"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:95
+#: includes/widgets/ABCSkillBar/Main.php:263
+msgid "Progress Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:282
+#: includes/widgets/ABCDualButton/Main.php:192
+msgid "Purchase Now"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:155
+msgid "Quantity Input Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:164
+msgid "Quantity Input Width"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:461
+msgid "Quote Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:439
+msgid "Quote Icon Right Position"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:388
+msgid "Quote Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:416
+msgid "Quote Icon Top Position"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:71
 msgid "Quote Text"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:83 includes/widgets/ABCBlog/Main.php:98
+#: includes/widgets/ABCCF7/Main.php:513
+msgid "Radio Background Color"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:470
+msgid "Radio Button"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:489
+msgid "Radio Size"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:107
+msgid "Rating"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:79 includes/widgets/ABCBlog/Main.php:94
+#: includes/widgets/ABCIconBox/Main.php:111
 msgid "Read More"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:96
+#: includes/widgets/ABCRecentPost/Main.php:272
+msgid "Read More Color"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:295
+msgid "Read More Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:239
+msgid "Read More Style"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:92
 msgid "Read More Text"
+msgstr ""
+
+#: includes/widgets/ABCRecentPost/Main.php:252
+msgid "Read More Typography"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:306
+#: includes/admin/inc/widgets-render-functions.php:589
+msgid "Recent Posts"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:93
+#: includes/widgets/ABCPricingTable/Main.php:178
+msgid "Recommended"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:580
+#: includes/widgets/ABCPricingTable/Main.php:686
+msgid "Recommended Background Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:566
+#: includes/widgets/ABCPricingTable/Main.php:672
+msgid "Recommended Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:105
+msgid "Recommended Position"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:176
+msgid "Recommended Text"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:437
+msgid "Recommended Typography"
+msgstr ""
+
+#: includes/widgets/ABCRelatedPost/Main.php:36
+msgid "Related Post Style"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:315
+#: includes/admin/inc/widgets-render-functions.php:611
+msgid "Related Posts"
+msgstr ""
+
+#: includes/admin/inc/wc-widgets-register-functions.php:82
+#: includes/admin/inc/wc-widgets-render-functions.php:83
+msgid "Related Product"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:47
+msgid "Related Products"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:36
+msgid "Related Title"
 msgstr ""
 
 #: includes/widgets/ABCCommentForm/Main.php:144
 msgid "Reply Button"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:62
+#: includes/widgets/ABCCF7/Main.php:682
+msgid "Response Message"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:66
+msgid "Responsive"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:84
+msgid "Responsive Design"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:355
+msgid "Ribbon"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:392
+msgid "Ribbon Position"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:868
+msgid "Ribbon Style"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:377
+msgid "Ribbon Text"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:100
+#: includes/widgets/ABCBlockquote/Main.php:57
+#: includes/widgets/ABCPopup/Main.php:180
+#: includes/widgets/ABCWpMenu/Main.php:93
+#: includes/widgets/ABCWpMenu/Main.php:497
+#: includes/widgets/ABCImgHover/Main.php:176
+#: includes/widgets/ABCFlipBox/Main.php:194
 #: includes/widgets/ABCBlogGrid/Main.php:444
 #: includes/widgets/ABCPageTitle/Main.php:82
-#: includes/widgets/ABCPostTitle/Main.php:83
+#: includes/widgets/ABCTagInfo/Main.php:56
+#: includes/widgets/ABCSearchIcon/Main.php:71
+#: includes/widgets/ABCContactInfo/Main.php:97
+#: includes/widgets/ABCPostTitle/Main.php:82
+#: includes/widgets/ABCSecTitle/Main.php:206
 #: includes/widgets/ABCBreadCrumb/Main.php:60
-#: includes/widgets/ABCCatInfo/Main.php:59
+#: includes/widgets/ABCDualButton/Main.php:123
+#: includes/widgets/ABCDualButton/Main.php:182
+#: includes/widgets/ABCDualButton/Main.php:254
+#: includes/widgets/ABCSocialShare/Main.php:57
+#: includes/widgets/ABCCatInfo/Main.php:72
+#: includes/widgets/ABCIconBox/Main.php:152
+#: includes/widgets/ABCPostInfo/Main.php:99
+#: includes/widgets/ABCFeturedImg/Main.php:53
+#: includes/widgets/ABCCTA/Main.php:400 includes/widgets/ABCCTA/Main.php:501
+#: includes/widgets/ABCPortfolio/Main.php:176
+#: includes/widgets/ABCTestimonials/Main.php:618
+#: includes/widgets/ABCTestimonials/Main.php:776
+#: includes/widgets/ABCTestimonials/Main.php:917
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:55
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:59
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:75
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:59
 msgid "Right"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:120
-msgid "Rotating"
+#: includes/widgets/ABCTestimonials/Main.php:873
+msgid "Right Arrow Right Indent"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:855
+msgid "Right Arrow Top Indent"
+msgstr ""
+
+#: includes/widgets/ABCDualButton/Main.php:555
+msgid "Right Button"
+msgstr ""
+
+#: includes/global/css-transform.php:120 includes/global/css-transform.php:467
+msgid "Rotate"
+msgstr ""
+
+#: includes/global/css-transform.php:164 includes/global/css-transform.php:480
+msgid "Rotate X"
+msgstr ""
+
+#: includes/global/css-transform.php:187 includes/global/css-transform.php:502
+msgid "Rotate Y"
+msgstr ""
+
+#: includes/global/css-transform.php:210 includes/global/css-transform.php:524
+msgid "Rotate Z"
 msgstr ""
 
 #: includes/widgets/ABCShape/Main.php:114
+msgid "Rotating"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:108
 msgid "Rotation Move"
 msgstr ""
 
+#: includes/widgets/ABCBlog/Main.php:148 includes/widgets/ABCCTA/Main.php:152
+msgid "Row"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:312
+msgid "Row (Horizontal)"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:152 includes/widgets/ABCCTA/Main.php:156
+msgid "Row Reverse"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:56
+msgid "Sales Flash Size"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:315
+msgid "Sales Flash Style"
+msgstr ""
+
+#: includes/global/css-transform.php:235 includes/global/css-transform.php:549
+msgid "Scale"
+msgstr ""
+
+#: includes/global/css-transform.php:276 includes/global/css-transform.php:563
+msgid "Scale X"
+msgstr ""
+
+#: includes/global/css-transform.php:302 includes/global/css-transform.php:589
+msgid "Scale Y"
+msgstr ""
+
+#: includes/widgets/ABCSearchForm/Main.php:53
+#: includes/widgets/ABCSearchForm/RenderView.php:9
+msgid "Search"
+msgstr ""
+
+#: includes/widgets/ABCSearchIcon/Main.php:148
+msgid "Search Field Style"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:324
+#: includes/admin/inc/widgets-render-functions.php:633
+msgid "Search Form"
+msgstr ""
+
+#: includes/admin/inc/widgets-render-functions.php:61
+msgid "Search Icon"
+msgstr ""
+
 #: includes/widgets/ABCBreadCrumb/renderview.php:44
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/renderview.php:51
 msgid "Search Results"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:47
+#: includes/widgets/ABCSearchIcon/Main.php:50
+#: includes/widgets/ABCSearchIcon/RenderView.php:8
+#: includes/widgets/ABCSearchForm/Main.php:44
+#: includes/widgets/ABCSearchForm/RenderView.php:8
+msgid "Search..."
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:333
+#: includes/admin/inc/widgets-render-functions.php:655
+#: includes/widgets/ABCBusinessHours/Main.php:47
+#: includes/widgets/ABCBusinessHours/Main.php:207
+msgid "Section Title"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:43
 #: includes/widgets/ABCBlogGrid/Main.php:64
-#: includes/widgets/ABCBlog/Main.php:44
+#: includes/widgets/ABCBlog/Main.php:40
+#: includes/widgets/ABCRecentPost/Main.php:47
 msgid "Select Category"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:69
+#: includes/widgets/ABCCF7/Main.php:63
 msgid "Select Form"
 msgstr ""
 
-#: includes/widgets/ABCCatInfo/Main.php:119
+#: includes/widgets/ABCWpMenu/Main.php:56
+msgid "Select Menu"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:55
+msgid "Select Type"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:526 includes/widgets/ABCCF7/Main.php:632
+msgid "Selected Background Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:271
+#: includes/widgets/ABCCatInfo/Main.php:149
 msgid "Separator Color"
 msgstr ""
 
-#: includes/widgets/ABCCatInfo/Main.php:37
+#: includes/widgets/ABCCatInfo/Main.php:165
+msgid "Separator Space"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:437
+msgid "Set the number of posts to show"
+msgstr ""
+
+#: includes/widgets/ABCTagInfo/Main.php:34
+#: includes/widgets/ABCSearchIcon/Main.php:39
+#: includes/widgets/ABCCatInfo/Main.php:36
 #: includes/widgets/ABCBlogAuthor/Main.php:38
+#: includes/widgets/ABCSearchForm/Main.php:34
 msgid "Setting"
 msgstr ""
 
-#: includes/admin/abcbiz-settings.php:33
+#: includes/admin/abcbiz-settings.php:30 includes/widgets/ABCWpMenu/Main.php:45
+#: includes/widgets/ABCFlipBox/Main.php:176
+#: includes/widgets/ABCContactInfo/Main.php:35
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:33
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:36
 msgid "Settings"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:42
+#: includes/widgets/ABCPricingTable/Main.php:189
+#: includes/widgets/ABCShape/Main.php:36
 msgid "Shape"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:134
+#: includes/widgets/ABCPricingTable/Main.php:528
+#: includes/widgets/ABCPricingTable/Main.php:636
+#: includes/widgets/ABCIconBox/Main.php:444
+msgid "Shape Color"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:522
+msgid "Shape Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:352
+msgid "Shape Size"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:128
 msgid "Shape Style"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:51
+#: includes/widgets/ABCPricingTable/Main.php:780
+msgid "Shape Top"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:45
 msgid "Shape Type"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:96
-#: includes/widgets/ABCBlogList/Main.php:82
-#: includes/widgets/ABCBlogList/Main.php:95
-#: includes/widgets/ABCBlogList/Main.php:108
-#: includes/widgets/ABCBlogList/Main.php:121
-#: includes/widgets/ABCBlogList/Main.php:150
-#: includes/widgets/ABCBlogList/Main.php:177
+#: includes/widgets/ABCSocialShare/Main.php:70
+msgid "Share icon at the beginning"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:111
+#: includes/widgets/ABCTeamMember/Main.php:736
+msgid "Share Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:181
+msgid "Share Icon Gap"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:154
+msgid "Share Icon Position"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:127
+msgid "Share Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/RenderView.php:23
+msgid "Share on Facebook"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/RenderView.php:32
+msgid "Share on LinkedIn"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/RenderView.php:30
+msgid "Share on Pinterest"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/RenderView.php:34
+msgid "Share on Reddit"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/renderview.php:27
+msgid "Shop"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:191
+#: includes/widgets/ABCShape/Main.php:90
+#: includes/widgets/ABCBlogList/Main.php:78
+#: includes/widgets/ABCBlogList/Main.php:91
+#: includes/widgets/ABCBlogList/Main.php:104
+#: includes/widgets/ABCBlogList/Main.php:117
+#: includes/widgets/ABCBlogList/Main.php:146
+#: includes/widgets/ABCBlogList/Main.php:173
 #: includes/widgets/ABCBlogGrid/Main.php:99
 #: includes/widgets/ABCBlogGrid/Main.php:112
 #: includes/widgets/ABCBlogGrid/Main.php:125
 #: includes/widgets/ABCBlogGrid/Main.php:138
 #: includes/widgets/ABCBlogGrid/Main.php:167
 #: includes/widgets/ABCBlogGrid/Main.php:194
-#: includes/widgets/ABCBlog/Main.php:59 includes/widgets/ABCBlog/Main.php:72
-#: includes/widgets/ABCBlog/Main.php:85
-#: includes/widgets/ABCBlogAuthor/Main.php:49
+#: includes/widgets/ABCContactInfo/Main.php:46
+#: includes/widgets/ABCContactInfo/Main.php:59
+#: includes/widgets/ABCSecTitle/Main.php:96
+#: includes/widgets/ABCBlog/Main.php:55 includes/widgets/ABCBlog/Main.php:68
+#: includes/widgets/ABCBlog/Main.php:81
+#: includes/widgets/ABCDualButton/Main.php:90
+#: includes/widgets/ABCDualButton/Main.php:153
+#: includes/widgets/ABCDualButton/Main.php:221
+#: includes/widgets/ABCSocialShare/Main.php:72
+#: includes/widgets/ABCSocialShare/Main.php:84
+#: includes/widgets/ABCBlogAuthor/Main.php:58
+#: includes/widgets/ABCRecentPost/Main.php:83
+#: includes/widgets/ABCRecentPost/Main.php:96
+#: includes/widgets/ABCRecentPost/Main.php:109
+#: includes/widgets/ABCPostInfo/Main.php:49
+#: includes/widgets/ABCPostInfo/Main.php:62
+#: includes/widgets/ABCPostInfo/Main.php:75
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:45
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:129
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:102
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:48
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:61
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:74
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:87
 msgid "Show"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:159
+#: includes/widgets/ABCSkillBar/Main.php:59
+msgid "Show percentage value on right side."
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:58
+msgid "Show Value on Right?"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:153
+#: includes/widgets/ABCTestimonials/Main.php:695
+#: includes/widgets/ABCTestimonials/Main.php:932
 msgid "Size"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:79
+#: includes/global/css-transform.php:332 includes/global/css-transform.php:618
+msgid "Skew"
+msgstr ""
+
+#: includes/global/css-transform.php:346 includes/global/css-transform.php:632
+msgid "Skew X"
+msgstr ""
+
+#: includes/global/css-transform.php:368 includes/global/css-transform.php:654
+msgid "Skew Y"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:351
+#: includes/admin/inc/widgets-render-functions.php:699
+#: includes/widgets/ABCSkillBar/Main.php:126
+msgid "Skill Bar"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:77
+msgid "Skill Heading"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:37
+msgid "Skill Settings"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:148
+msgid "Skill Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/renderview.php:30
+msgid "SKU"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:98
+msgid "SKU Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:116
+msgid "SKU Typography"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:60
+msgid "Slider"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:765
+msgid "Social Icon Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:103
+msgid "Social Icon Style"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:57
+#: includes/widgets/ABCContactInfo/Main.php:161
+msgid "Social Icons"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:752
+msgid "Social Icons Color"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:254
+msgid "Social Icons Gap"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:231
+msgid "Social Icons Position"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/Main.php:208
+msgid "Social Icons Size"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:408
+msgid "Social Icons Style"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:696
+msgid "Social Profile"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:360
+#: includes/admin/inc/widgets-render-functions.php:721
+#: includes/widgets/ABCSocialShare/Main.php:35
+msgid "Social Share"
+msgstr ""
+
+#: includes/widgets/ABCBlockquote/Main.php:74
 msgid "Something is better than nothing!"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:113
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:46
+msgid ""
+"Sometimes, the appearance of this widget might be influenced by the theme "
+"and other plugins you're using. If you're having trouble with how it looks, "
+"a good first step is to try using a simpler theme and turning off any "
+"related plugins."
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:431
+#: includes/widgets/ABCCTA/Main.php:200
+msgid "Space Around"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:427
+#: includes/widgets/ABCCTA/Main.php:196
+msgid "Space Between"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:435
+#: includes/widgets/ABCCTA/Main.php:204
+msgid "Space Evenly"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:708
+#: includes/widgets/ABCBlogList/Main.php:490
+#: includes/widgets/ABCBlogGrid/Main.php:491
+#: includes/widgets/ABCIconBox/Main.php:734
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:271
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:113
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:221
+msgid "Spacing"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:107
 msgid "Spin"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:117
+#: includes/widgets/ABCShape/Main.php:111
 msgid "Spin Move"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:56
+#: includes/widgets/ABCShape/Main.php:50
 msgid "Square"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:92
+#: includes/widgets/ABCContactInfo/Main.php:74
+msgid "Stack"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:45
+msgid "Standard"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:376
+msgid "Star Color"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:349
+msgid "Star Size"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:221
+#: includes/widgets/ABCBusinessHours/Main.php:415
+#: includes/widgets/ABCCTA/Main.php:184 includes/widgets/ABCCTA/Main.php:225
+#: includes/widgets/ABCCTA/Main.php:254
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:62
+msgid "Start"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:265
+msgid "Stock Style"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:118
+#: includes/widgets/ABCBlockquote/Main.php:87
+#: includes/widgets/ABCImgHover/Main.php:103
 #: includes/widgets/ABCPageTitle/Main.php:100
-#: includes/widgets/ABCPostTitle/Main.php:101
+#: includes/widgets/ABCPostTitle/Main.php:100
+#: includes/widgets/ABCSearchForm/Main.php:63
+#: includes/widgets/ABCFeturedImg/Main.php:69
+#: includes/widgets/ABCPortfolio/Main.php:103
+#: includes/widgets/ABCTeamMember/Main.php:326
+#: includes/widgets/ABCTestimonials/Main.php:268
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:37
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:93
+#: includes/widgets/WooCommerce/ABCProductImg/Main.php:34
+#: includes/widgets/WooCommerce/ABCProductCartIcon/Main.php:41
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:37
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:37
 msgid "Style"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:332
+#: includes/widgets/ABCIconBox/Main.php:51
+#: includes/widgets/ABCTeamMember/Main.php:43
+msgid "Style One"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:43
+msgid "Style Orientation"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:53
+#: includes/widgets/ABCTeamMember/Main.php:45
+msgid "Style Three"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:52
+#: includes/widgets/ABCTeamMember/Main.php:44
+msgid "Style Two"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:70
+msgid "Style type"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:48
+msgid "Sub Heading"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:550
+msgid "Sub Heading Bottom Spacing"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:538
+msgid "Sub Heading Color"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:530
+msgid "Sub Heading Typography"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:446
+msgid "Sub Menu Icon Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:421
+msgid "Sub Menu Icon Size"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:330
+msgid "Sub Menu Item Spacing"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:286
+msgid "Sub Menu Style"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:296
+msgid "Sub Menu Typography"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:305
+msgid "Sub Menu Width"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:223
+#: includes/widgets/ABCPortfolio/Main.php:223
+msgid "Sub Title Color"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:75
+#: includes/widgets/ABCPortfolio/Main.php:75
+msgid "Sub Title Text"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:201
+#: includes/widgets/ABCPortfolio/Main.php:201
+msgid "Sub Title Typography"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:654
+msgid "Sub Toggle BG Color"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:692
+msgid "Sub Toggle Position"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:667
+msgid "Sub Toggle Size"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:334
 msgid "Submit Button"
+msgstr ""
+
+#: includes/widgets/ABCCF7/Main.php:727
+msgid "Success Border Color"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:76
+msgid "Suffix"
+msgstr ""
+
+#: includes/admin/inc/setting-page.php:25
+msgid "Support"
 msgstr ""
 
 #. Author of the plugin
 msgid "SupreoX Limited"
 msgstr ""
 
+#: includes/widgets/ABCTestimonials/Main.php:166
+msgid "Tab Column"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:250
+msgid "Table Border Color"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:214
+msgid "Table Form Style"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:33
+#: includes/widgets/ABCPricingTable/Main.php:41
+msgid "Table Type"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:58
+msgid "Tabs Align"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:36
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:124
+msgid "Tabs Style"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/renderview.php:54
+msgid "Tags"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:158
+msgid "Tags Color"
+msgstr ""
+
+#: includes/widgets/ABCTagInfo/Main.php:95
+msgid "Tags Margin"
+msgstr ""
+
+#: includes/widgets/ABCTagInfo/Main.php:82
+msgid "Tags Padding"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductMeta/Main.php:176
+msgid "Tags Typography"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:378
+#: includes/admin/inc/widgets-render-functions.php:765
+msgid "Team Member"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:30
+msgid "Team Setting"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:108
+#: includes/admin/inc/widgets-render-functions.php:105
+msgid "Testimonial Carousel"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:130
+msgid "Testimonial Items"
+msgstr ""
+
+#: includes/widgets/ABCTestimonials/Main.php:46
+msgid "Testimonial Setting"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:220
+#: includes/widgets/ABCPopup/Main.php:55
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:45
+msgid "Text"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:180
+msgid "Text Active Color"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:216
+#: includes/widgets/ABCBusinessHours/Main.php:410
+msgid "Text Alignment"
+msgstr ""
+
+#: includes/widgets/ABCTagInfo/Main.php:143
+msgid "Text Background Color"
+msgstr ""
+
 #: includes/widgets/ABCCommentForm/Main.php:119
-#: includes/widgets/ABCBlockquote/Main.php:112
-#: includes/widgets/ABCBlogList/Main.php:437
-#: includes/widgets/ABCBlogGrid/Main.php:480
+#: includes/widgets/ABCBlockquote/Main.php:107
+#: includes/widgets/ABCBlogList/Main.php:575
+#: includes/widgets/ABCPopup/Main.php:205
+#: includes/widgets/ABCWpMenu/Main.php:152
+#: includes/widgets/ABCWpMenu/Main.php:381
+#: includes/widgets/ABCFlipBox/Main.php:771
+#: includes/widgets/ABCBlogGrid/Main.php:538
+#: includes/widgets/ABCTagInfo/Main.php:130
+#: includes/widgets/ABCSearchIcon/Main.php:170
+#: includes/widgets/ABCContactInfo/Main.php:329
 #: includes/widgets/ABCBreadCrumb/Main.php:86
-#: includes/widgets/ABCCatInfo/Main.php:93
-#: includes/widgets/ABCBlogAuthor/Main.php:109
-#: includes/widgets/ABCCF7/Main.php:209 includes/widgets/ABCCF7/Main.php:374
+#: includes/widgets/ABCDualButton/Main.php:407
+#: includes/widgets/ABCDualButton/Main.php:442
+#: includes/widgets/ABCDualButton/Main.php:510
+#: includes/widgets/ABCDualButton/Main.php:682
+#: includes/widgets/ABCDualButton/Main.php:716
+#: includes/widgets/ABCCatInfo/Main.php:123
+#: includes/widgets/ABCBlogAuthor/Main.php:118
+#: includes/widgets/ABCIconBox/Main.php:675
+#: includes/widgets/ABCIconBox/Main.php:706
+#: includes/widgets/ABCCTA/Main.php:792 includes/widgets/ABCCTA/Main.php:825
+#: includes/widgets/ABCCTA/Main.php:880 includes/widgets/ABCCF7/Main.php:207
+#: includes/widgets/ABCCF7/Main.php:379 includes/widgets/ABCCF7/Main.php:701
+#: includes/widgets/ABCSkillBar/Main.php:301
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:81
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:72
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:70
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:274
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:287
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:238
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:270
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:323
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:612
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:644
 msgid "Text Color"
 msgstr ""
 
+#: includes/widgets/ABCWpMenu/Main.php:166
+#: includes/widgets/ABCContactInfo/Main.php:342
+#: includes/widgets/ABCCatInfo/Main.php:136
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:300
+msgid "Text Hover Color"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:194
+msgid "Text Style"
+msgstr ""
+
 #: includes/widgets/ABCCommentForm/Main.php:133
-#: includes/widgets/ABCBlogAuthor/Main.php:123
+#: includes/widgets/ABCContactInfo/Main.php:320
+#: includes/widgets/ABCBlogAuthor/Main.php:132
+#: includes/widgets/ABCIconBox/Main.php:766
 msgid "Text Typography"
 msgstr ""
 
-#: includes/widgets/ABCCF7/Main.php:251
+#: includes/widgets/ABCCF7/Main.php:249
 msgid "Textarea"
 msgstr ""
 
@@ -776,69 +3986,312 @@ msgid ""
 "integrate seamlessly with your site's design."
 msgstr ""
 
+#: includes/widgets/ABCWpMenu/Main.php:68
+msgid ""
+"There are no menus currently available. Please create a menu in WordPress."
+msgstr ""
+
+#: includes/admin/abcbiz-metabox.php:78
+msgid ""
+"This area is specifically for ABCBiz Elementor Addons Products description "
+"tab contents."
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductRelated/renderview.php:12
+#: includes/widgets/WooCommerce/ABCProductPrice/renderview.php:12
+#: includes/widgets/WooCommerce/ABCProductTabs/renderview.php:12
+#: includes/widgets/WooCommerce/ABCProductImg/renderview.php:14
+#: includes/widgets/WooCommerce/ABCProductMeta/renderview.php:12
+#: includes/widgets/WooCommerce/ABCProductShortDesc/renderview.php:12
+msgid "This product does not exist"
+msgstr ""
+
 #: includes/widgets/ABCBlogGrid/Main.php:54
 msgid "Three Colum"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:115
+#: includes/widgets/ABCBlog/Main.php:612
+msgid "Thumbnail Height"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:636
+msgid "Thumbnail Radius"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:589
+msgid "Thumbnail Width"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:240
+msgid "TikTok:"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:109
 msgid "Tilt"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:116
+#: includes/widgets/ABCBusinessHours/Main.php:72
+msgid "Time"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:94
+msgid "Time Color"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:110
 msgid "Timeline Animate"
 msgstr ""
 
+#: includes/widgets/ABCCounter/Main.php:49
+#: includes/widgets/ABCIconBox/Main.php:82
+msgid "Title"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:255
+#: includes/widgets/ABCBusinessHours/Main.php:111
+#: includes/widgets/ABCSkillBar/Main.php:131
+msgid "Title #1"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:258
+#: includes/widgets/ABCBusinessHours/Main.php:115
+#: includes/widgets/ABCSkillBar/Main.php:135
+msgid "Title #2"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:139
+#: includes/widgets/ABCCounter/Main.php:290
 #: includes/widgets/ABCCommentForm/Main.php:49
-#: includes/widgets/ABCBlogList/Main.php:212
-#: includes/widgets/ABCBlogList/Main.php:220
+#: includes/widgets/ABCBlogList/Main.php:208
+#: includes/widgets/ABCBlogList/Main.php:216
+#: includes/widgets/ABCImgHover/Main.php:210
 #: includes/widgets/ABCBlogGrid/Main.php:229
 #: includes/widgets/ABCBlogGrid/Main.php:237
-#: includes/widgets/ABCBlog/Main.php:172
-#: includes/widgets/ABCBlogAuthor/Main.php:86
+#: includes/widgets/ABCBlog/Main.php:219
+#: includes/widgets/ABCBlogAuthor/Main.php:95
+#: includes/widgets/ABCRecentPost/Main.php:158
+#: includes/widgets/ABCRecentPost/Main.php:166
+#: includes/widgets/ABCIconBox/Main.php:665
+#: includes/widgets/ABCIconBox/Main.php:694
+#: includes/widgets/ABCPortfolio/Main.php:210
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:116
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:196
 msgid "Title Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:242
+#: includes/widgets/ABCSecTitle/Main.php:35
+msgid "Title Content"
+msgstr ""
+
+#: includes/widgets/ABCImgHover/Main.php:163
+#: includes/widgets/ABCPortfolio/Main.php:163
+msgid "Title Horizontal Alignment"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:238
 #: includes/widgets/ABCBlogGrid/Main.php:259
+#: includes/widgets/ABCRecentPost/Main.php:188
 msgid "Title Hover Color"
 msgstr ""
 
-#: includes/widgets/ABCBlogList/Main.php:190
+#: includes/widgets/ABCSecTitle/Main.php:64
+msgid "Title Part 1"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:232
+msgid "Title Part 1 Color"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:245
+msgid "Title Part 1 Typography"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:79
+msgid "Title Part 2"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:253
+msgid "Title Part 2 Color"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:266
+msgid "Title Part 2 Typography"
+msgstr ""
+
+#: includes/widgets/ABCBlogList/Main.php:186
 #: includes/widgets/ABCBlogGrid/Main.php:207
+#: includes/widgets/ABCSecTitle/Main.php:224
+#: includes/widgets/ABCRecentPost/Main.php:136
 msgid "Title Style"
 msgstr ""
 
+#: includes/widgets/ABCImgHover/Main.php:64
+#: includes/widgets/ABCPortfolio/Main.php:64
+msgid "Title Text"
+msgstr ""
+
+#: includes/widgets/ABCCounter/Main.php:152
 #: includes/widgets/ABCCommentForm/Main.php:63
-#: includes/widgets/ABCBlogList/Main.php:200
+#: includes/widgets/ABCBlogList/Main.php:196
+#: includes/widgets/ABCImgHover/Main.php:191
 #: includes/widgets/ABCBlogGrid/Main.php:217
-#: includes/widgets/ABCBlog/Main.php:164
-#: includes/widgets/ABCBlogAuthor/Main.php:100
+#: includes/widgets/ABCBlog/Main.php:211
+#: includes/widgets/ABCBlogAuthor/Main.php:109
+#: includes/widgets/ABCRecentPost/Main.php:146
+#: includes/widgets/ABCIconBox/Main.php:637
+#: includes/widgets/ABCPortfolio/Main.php:191
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:107
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:187
 msgid "Title Typography"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:112
+#: includes/widgets/ABCImgHover/Main.php:136
+#: includes/widgets/ABCPortfolio/Main.php:136
+msgid "Title Vertical Alignment"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:277
+msgid "Tooltip"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:105
+msgid "Tooltip BG Color"
+msgstr ""
+
+#: includes/widgets/ABCSkillBar/Main.php:116
+msgid "Tooltip Text Color"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:110
+#: includes/widgets/ABCImgHover/Main.php:141
+#: includes/widgets/ABCFlipBox/Main.php:198
+#: includes/widgets/ABCPortfolio/Main.php:141
+msgid "Top"
+msgstr ""
+
+#: includes/widgets/ABCWpMenu/Main.php:355
+msgid "Top Border Color"
+msgstr ""
+
+#: includes/widgets/ABCBlog/Main.php:535
+msgid "Top Position"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:953
+msgid "Top Spacing"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:742
+msgid "Top Specing"
+msgstr ""
+
+#: includes/global/css-transform.php:59 includes/global/css-transform.php:406
+msgid "Translate"
+msgstr ""
+
+#: includes/global/css-transform.php:73 includes/global/css-transform.php:420
+msgid "Translate X"
+msgstr ""
+
+#: includes/global/css-transform.php:95 includes/global/css-transform.php:442
+msgid "Translate Y"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:106
 msgid "Triangle Move"
+msgstr ""
+
+#: includes/widgets/ABCSocialShare/RenderView.php:21
+msgid "Tweet This Post"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:271
+msgid "Twitter/X Link"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:183
+msgid "Twitter/X:"
 msgstr ""
 
 #: includes/widgets/ABCBlogGrid/Main.php:53
 msgid "Two Colum"
 msgstr ""
 
-#: includes/widgets/ABCBlockquote/Main.php:80
+#: includes/widgets/ABCBlockquote/Main.php:75
 msgid "Type blockquote text here"
 msgstr ""
 
-#: includes/widgets/ABCBlog/Main.php:99
+#: includes/widgets/ABCBlog/Main.php:95
 msgid "Type read more text"
 msgstr ""
 
+#: includes/widgets/ABCIconBox/Main.php:112 includes/widgets/ABCCTA/Main.php:87
+#: includes/widgets/ABCCTA/Main.php:114
+msgid "Type your button text here"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:99 includes/widgets/ABCCTA/Main.php:75
+msgid "Type your description here"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:62
+msgid "Type your heading here"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:380
+msgid "Type your ribbon text"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:67
+msgid "Type your section Title Firt Part"
+msgstr ""
+
+#: includes/widgets/ABCSecTitle/Main.php:82
+msgid "Type your section Title Second Part"
+msgstr ""
+
+#: includes/widgets/ABCCTA/Main.php:50
+msgid "Type your sub heading here"
+msgstr ""
+
+#: includes/widgets/ABCIconBox/Main.php:85
+msgid "Type your title here"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:862
+#: includes/widgets/ABCPricingTable/Main.php:989
+#: includes/widgets/ABCPricingTable/Main.php:1123
 #: includes/widgets/ABCCommentForm/Main.php:154
 #: includes/widgets/ABCCommentForm/Main.php:240
-#: includes/widgets/ABCBlockquote/Main.php:137
+#: includes/widgets/ABCBlockquote/Main.php:132
+#: includes/widgets/ABCPopup/Main.php:233
+#: includes/widgets/ABCRelatedPost/Main.php:73
 #: includes/widgets/ABCPageTitle/Main.php:121
-#: includes/widgets/ABCPostTitle/Main.php:122
+#: includes/widgets/ABCTagInfo/Main.php:121
+#: includes/widgets/ABCPostTitle/Main.php:121
 #: includes/widgets/ABCBreadCrumb/Main.php:123
-#: includes/widgets/ABCCatInfo/Main.php:84 includes/widgets/ABCCF7/Main.php:341
+#: includes/widgets/ABCDualButton/Main.php:327
+#: includes/widgets/ABCCatInfo/Main.php:114
+#: includes/widgets/ABCPostInfo/Main.php:125
+#: includes/widgets/ABCCF7/Main.php:344
+#: includes/widgets/ABCSkillBar/Main.php:314
+#: includes/widgets/ABCTestimonials/Main.php:552
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:56
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:129
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:176
+#: includes/widgets/WooCommerce/ABCProductRelated/Main.php:210
+#: includes/widgets/WooCommerce/ABCWooBreadCrumb/Main.php:118
+#: includes/widgets/WooCommerce/ABCProductCartPage/Main.php:86
+#: includes/widgets/WooCommerce/ABCProductCheckout/Main.php:97
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:87
+#: includes/widgets/WooCommerce/ABCProductPrice/Main.php:111
+#: includes/widgets/WooCommerce/ABCProductTabs/Main.php:56
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:52
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:275
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:309
+#: includes/widgets/WooCommerce/ABCProductTitle/Main.php:114
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:409
+#: includes/widgets/WooCommerce/ABCProductShortDesc/Main.php:85
 msgid "Typography"
 msgstr ""
 
@@ -851,10 +4304,12 @@ msgid "User Name Typography"
 msgstr ""
 
 #: includes/widgets/ABCCircularSkills/Main.php:63
+#: includes/widgets/ABCSkillBar/Main.php:84
 msgid "Value"
 msgstr ""
 
 #: includes/widgets/ABCCircularSkills/Main.php:167
+#: includes/widgets/ABCSkillBar/Main.php:235
 msgid "Value Color"
 msgstr ""
 
@@ -863,34 +4318,109 @@ msgid "Value Position Adjustment"
 msgstr ""
 
 #: includes/widgets/ABCCircularSkills/Main.php:159
+#: includes/widgets/ABCSkillBar/Main.php:223
 msgid "Value Typography"
 msgstr ""
 
-#: includes/widgets/ABCBlogAuthor/RenderView.php:23
+#: includes/widgets/WooCommerce/ABCProductAddToCart/Main.php:299
+msgid "Variation Price Style"
+msgstr ""
+
+#: includes/admin/inc/setting-page.php:17
+msgid "Version: "
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCWooAccount/Main.php:48
+msgid "Vertical"
+msgstr ""
+
+#: includes/widgets/ABCPopup/Main.php:121
+msgid "Video"
+msgstr ""
+
+#: includes/widgets/ABCBlogAuthor/RenderView.php:26
 msgid "View all posts by"
 msgstr ""
 
-#: includes/widgets/ABCCatInfo/RenderView.php:23
+#: includes/widgets/ABCCatInfo/inline-view.php:23
+#: includes/widgets/ABCCatInfo/list-view.php:25
 #, php-format
 msgid "View all posts in %s"
 msgstr ""
 
-#: includes/widgets/ABCBlogAuthor/Main.php:47
+#: includes/widgets/ABCBlogAuthor/Main.php:56
 msgid "View All Posts Link"
+msgstr ""
+
+#: includes/widgets/WooCommerce/ABCProductCartIcon/renderview.php:13
+msgid "View your shopping cart"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:249
+msgid "Vimeo:"
 msgstr ""
 
 #: includes/widgets/ABCCircularSkills/Main.php:55
 msgid "Web Design"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:263
+#: includes/widgets/ABCImgHover/Main.php:77
+#: includes/widgets/ABCPortfolio/Main.php:77
+msgid "Website Design"
+msgstr ""
+
+#: includes/admin/inc/setting-page.php:16
+msgid "Welcome to"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:817
+#: includes/widgets/ABCShape/Main.php:257 includes/widgets/ABCBlog/Main.php:508
+#: includes/widgets/ABCCTA/Main.php:694
 msgid "Width"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:110
+#: includes/admin/inc/widget-page.php:19 includes/admin/inc/widget-page.php:72
+msgid "WooCommerce Widgets"
+msgstr ""
+
+#: includes/admin/inc/widgets-register-functions.php:99
+#: includes/admin/inc/widgets-render-functions.php:83
+msgid "WordPress Menu"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:49
+msgid "Working Hours"
+msgstr ""
+
+#: includes/global/wrapper-link.php:29
+msgid "Wrapper Link"
+msgstr ""
+
+#: includes/widgets/ABCShape/Main.php:104
 msgid "X-Axis Move"
 msgstr ""
 
-#: includes/widgets/ABCShape/Main.php:111
+#: includes/widgets/ABCShape/Main.php:105
 msgid "Y-Axis Move"
+msgstr ""
+
+#: includes/widgets/ABCPricingTable/Main.php:95
+#: includes/widgets/ABCCatInfo/Main.php:99 includes/widgets/ABCCTA/Main.php:366
+#: includes/widgets/ABCCTA/Main.php:456
+#: includes/widgets/ABCTeamMember/Main.php:167
+#: includes/widgets/ABCSkillBar/Main.php:48
+#: includes/widgets/ABCSkillBar/Main.php:61
+msgid "Yes"
+msgstr ""
+
+#: includes/widgets/ABCBusinessHours/Main.php:50
+msgid "Your Title Here"
+msgstr ""
+
+#: includes/widgets/ABCTeamMember/Main.php:310
+msgid "Youtube Link"
+msgstr ""
+
+#: includes/widgets/ABCContactInfo/Main.php:258
+msgid "Youtube:"
 msgstr ""
