@@ -2,11 +2,11 @@
 Contributors: SupreoX Limited  
 Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4)  
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library\
-Requires at least: 6.0 
-Tested up to: 6.4.2 
+Requires at least: 6.0   
+Tested up to: 6.4.2   
 Stable tag: 1.0.0   
-Requires PHP: 7.4
-License: GPLv2 or later  
+Requires PHP: 7.4  
+License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Description
