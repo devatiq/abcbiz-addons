@@ -10,20 +10,55 @@ License: GPLv2 or later
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
 
 ## Description
-The Elementor Custom Widgets plugin, a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Multi Addons is packed with an array of gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design.
+The Elementor Custom Widgets plugin is a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Multi Addons is packed with an array of gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design.
 
 ### Key Features
 - 50+ custom addons for Elementor
-- Custom Blog Posts Addons
-- Icon Box addons with multiple styles
-- Custom Popup addons, popup anything
-- Popup with text, icon, images
-- Custom Pricing Table widget
-- Animated Shape Modules
-- Section Colored Title
-- Advanced styling settings option
-- Unlimited color and design possibilities
-- Responsive Design, Work with any theme
+- Call To Action - CTA
+- Advanced Circular Skill
+- Advanced Icon Box
+- Advanced Pricing Table
+- Animated Shape
+- Archive Title
+- Blockquote
+- Blog Posts Grid
+- Blog Posts List
+- Breadcrumb
+- Comment Form
+- Contact & Social Info
+- Contact Form 7 Style
+- Counter Up
+- Dual Button
+- Fancy Blog Posts
+- Featured Image
+- Flip Box
+- Image Hover
+- Page Title
+- Popup
+- Portfolio
+- Post Author Bio
+- Post Category List
+- Post Meta Info
+- Post Tag Info
+- Post Title
+- Recent Posts List
+- Related Posts
+- Search Form
+- Search Icon
+- Section Title
+- Skill Bar
+- Social Share
+- Team Member
+- Testimonial Carousel
+- WordPress Menu
+- My Account
+- Product Image
+- Product Meta
+- Product Pricing
+- Product Short Description
+- Product Tabs Data
+- Product Title
+- Related Product
 
 ## Frequently Asked Questions
 
