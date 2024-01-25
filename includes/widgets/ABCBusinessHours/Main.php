@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-business-hours';
     protected $title = 'ABC Business Hours';
-    protected $icon = 'eicon-clock-o  abcbiz-multi-icon';
+    protected $icon = 'eicon-clock-o  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -35,7 +35,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_setting',
             [
-                'label' => esc_html__('Contents', 'abcbiz-multi'),
+                'label' => esc_html__('Contents', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -44,10 +44,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_business_hours_section_title',
             [
-                'label' => esc_html__('Section Title', 'abcbiz-multi'),
+                'label' => esc_html__('Section Title', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Working Hours', 'abcbiz-multi'),
-                'placeholder' => esc_html__('Your Title Here', 'abcbiz-multi'),
+                'default' => esc_html__('Working Hours', 'abcbiz-addons'),
+                'placeholder' => esc_html__('Your Title Here', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -59,9 +59,9 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_business_hours_days',
             [
-                'label' => esc_html__('Day', 'abcbiz-multi'),
+                'label' => esc_html__('Day', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Monday', 'abcbiz-multi'),
+                'default' => esc_html__('Monday', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -69,9 +69,9 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_business_hours_time',
             [
-                'label' => esc_html__('Time', 'abcbiz-multi'),
+                'label' => esc_html__('Time', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('10:00 - 19:00', 'abcbiz-multi'),
+                'default' => esc_html__('10:00 - 19:00', 'abcbiz-addons'),
                 'show_label' => true,
             ]
         );
@@ -79,7 +79,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_business_hour_date_color',
             [
-                'label' => esc_html__('Date Color', 'abcbiz-multi'),
+                'label' => esc_html__('Date Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-business-hours-area {{CURRENT_ITEM}} span.abcbiz-business-hour-day' => 'color: {{VALUE}}'
@@ -91,7 +91,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_business_hour_time_color',
             [
-                'label' => esc_html__('Time Color', 'abcbiz-multi'),
+                'label' => esc_html__('Time Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-business-hours-area {{CURRENT_ITEM}} span.abcbiz-business-hour-time' => 'color: {{VALUE}}'
@@ -103,17 +103,17 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_business_hours_repeater',
             [
-                'label' => esc_html__('Business Hours List', 'abcbiz-multi'),
+                'label' => esc_html__('Business Hours List', 'abcbiz-addons'),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #1', 'abcbiz-multi'),
-                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-multi'),
+                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #1', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-addons'),
                     ],
                     [
-                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #2', 'abcbiz-multi'),
-                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-multi'),
+                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #2', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-addons'),
                     ],
                 ],
                 'title_field' => '{{{ abcbiz_elementor_business_hours_days }}}',
@@ -127,7 +127,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_box_style',
             [
-                'label' => esc_html__('Box', 'abcbiz-multi'),
+                'label' => esc_html__('Box', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -144,7 +144,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_box_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -156,7 +156,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_box_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -171,7 +171,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_business_hours_box_background',
                 'selector' => '{{WRAPPER}} .abcbiz-business-hours-area .abcbiz-business-hours ul',
-                'label' => esc_html__('Background', 'abcbiz-multi'),                
+                'label' => esc_html__('Background', 'abcbiz-addons'),                
             ]
         );
         //border
@@ -180,7 +180,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_business_hours_box_border',
                 'selector' => '{{WRAPPER}} .abcbiz-business-hours-area .abcbiz-business-hours ul',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
             ]
         );
         
@@ -188,7 +188,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_box_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -204,7 +204,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_title_style',
             [
-                'label' => esc_html__('Section Title', 'abcbiz-multi'),
+                'label' => esc_html__('Section Title', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -213,20 +213,20 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_title_text_justify',
             [
-                'label' => esc_html__('Text Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Text Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'label_block' => false,
                 'options' => [
                     'flex-start' => [
-                        'title' => esc_html__('Start', 'abcbiz-multi'),
+                        'title' => esc_html__('Start', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'flex-end' => [
-                        'title' => esc_html__('End', 'abcbiz-multi'),
+                        'title' => esc_html__('End', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-right',
                     ],
                 ],
@@ -242,7 +242,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_business_hours_title_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-business-hours-area .abcbiz-business-hour-title' => 'color: {{VALUE}};',
@@ -270,7 +270,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_title_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -282,7 +282,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_title_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -297,7 +297,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_list_style',
             [
-                'label' => esc_html__('List Items', 'abcbiz-multi'),
+                'label' => esc_html__('List Items', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -306,7 +306,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_business_hours_list_item_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000000',
                 'selectors' => [
@@ -329,7 +329,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_list_item_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -342,7 +342,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_list_item_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -373,7 +373,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_list_item_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-business-hours-area .abcbiz-business-hour-item' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -384,7 +384,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_list_gap',
             [
-                'label' => esc_html__('List Gap', 'abcbiz-multi'),
+                'label' => esc_html__('List Gap', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -407,32 +407,32 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_business_hours_text_justify',
             [
-                'label' => esc_html__('Text Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Text Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'label_block' => true,
                 'options' => [
                     'flex-start' => [
-                        'title' => esc_html__('Start', 'abcbiz-multi'),
+                        'title' => esc_html__('Start', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-center',
                     ],
                     'flex-end' => [
-                        'title' => esc_html__('End', 'abcbiz-multi'),
+                        'title' => esc_html__('End', 'abcbiz-addons'),
                         'icon' => 'eicon-h-align-right',
                     ],
                     'space-between' => [
-                        'title' => esc_html__('Space Between', 'abcbiz-multi'),
+                        'title' => esc_html__('Space Between', 'abcbiz-addons'),
                         'icon' => 'eicon-flex eicon-justify-space-between-h',
                     ],
                     'space-around' => [
-                        'title' => esc_html__('Space Around', 'abcbiz-multi'),
+                        'title' => esc_html__('Space Around', 'abcbiz-addons'),
                         'icon' => 'eicon-flex eicon-justify-space-around-h',
                     ],
                     'space-evenly' => [
-                        'title' => esc_html__('Space Evenly', 'abcbiz-multi'),
+                        'title' => esc_html__('Space Evenly', 'abcbiz-addons'),
                         'icon' => 'eicon-flex eicon-justify-space-evenly-h',
                     ],
                 ],

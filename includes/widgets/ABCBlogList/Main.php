@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-blog-list';
     protected $title = 'ABC Blog Posts List';
-    protected $icon = 'eicon-post-list  abcbiz-multi-icon';
+    protected $icon = 'eicon-post-list  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -31,7 +31,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_list_setting',
             [
-                'label' => esc_html__('Blog Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -40,7 +40,7 @@ class Main extends BaseWidget
     $this->add_control(
         'abcbiz_elementor_blog_list_category',
         [
-            'label' => esc_html__( 'Select Category', 'abcbiz-multi' ),
+            'label' => esc_html__( 'Select Category', 'abcbiz-addons' ),
             'type' => \Elementor\Controls_Manager::SELECT2,
             'options' => $this->abcbiz_blog_list_categories(),
             'default' => 'all',
@@ -53,7 +53,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_blog_list_post_number',
 			[
-				'label' => esc_html__( 'Number of Post', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Number of Post', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['custom'],
 				'range' => [
@@ -73,10 +73,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_img_switch',
             [
-                'label' => esc_html__('Featured Image', 'abcbiz-multi'),
+                'label' => esc_html__('Featured Image', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -86,10 +86,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_date_switch',
             [
-                'label' => esc_html__('Blog Date', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Date', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -99,10 +99,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_comment_switch',
             [
-                'label' => esc_html__('Blog Comments', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Comments', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -112,10 +112,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_excerpt_switch',
             [
-                'label' => esc_html__('Blog Excerpt', 'abcbiz-multi'),
+                'label' => esc_html__('Blog Excerpt', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -125,7 +125,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_blog_list_excerpt_length',
 			[
-				'label' => esc_html__( 'Excerpt Length', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Excerpt Length', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::NUMBER,
 				'min' => 5,
 				'max' => 500,
@@ -141,10 +141,10 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_blog_list_read_more_switch',
             [
-                'label' => esc_html__('More Button', 'abcbiz-multi'),
+                'label' => esc_html__('More Button', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -154,7 +154,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_read_more_text',
             [
-                'label' => esc_html__('More Button Text', 'abcbiz-multi'),
+                'label' => esc_html__('More Button Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'Read More',
                 'placeholder' => 'Enter read more text',
@@ -168,10 +168,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_pagination',
             [
-                'label' => esc_html__('Pagination', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -183,7 +183,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_list_title_style_section',
             [
-                'label' => esc_html__('Title Style', 'abcbiz-multi'),
+                'label' => esc_html__('Title Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -193,7 +193,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_title_typography',
-                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-title, {{WRAPPER}} .abcbiz-ele-blog-list-title a',
             ]
         );
@@ -205,7 +205,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_title_style_normal_tab',
 			[
-				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-addons' ),
 			]
 		);
 
@@ -213,7 +213,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_title_color',
             [
-                'label' => esc_html__('Title Color', 'abcbiz-multi'),
+                'label' => esc_html__('Title Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -227,7 +227,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_title_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Color', 'abcbiz-addons' ),
 			]
 		);
 
@@ -235,7 +235,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_title_hover_color',
             [
-                'label' => esc_html__('Title Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Title Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
@@ -252,7 +252,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_list_meta_style_section',
             [
-                'label' => esc_html__('Meta Style', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -262,7 +262,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_meta_typography',
-                'label' => esc_html__('Meta Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-meta',
             ]
         );
@@ -271,7 +271,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_meta_color',
             [
-                'label' => esc_html__('Meta Color', 'abcbiz-multi'),
+                'label' => esc_html__('Meta Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#666666',
                 'selectors' => [
@@ -286,7 +286,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_list_excerpt_style_section',
             [
-                'label' => esc_html__('Excerpt Style', 'abcbiz-multi'),
+                'label' => esc_html__('Excerpt Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_blog_list_excerpt_switch' => 'yes'
@@ -299,7 +299,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_excerpt_typography',
-                'label' => esc_html__('Excerpt Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Excerpt Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-excerpt',
             ]
         );
@@ -308,7 +308,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_excerpt_color',
             [
-                'label' => esc_html__('Excerpt Color', 'abcbiz-multi'),
+                'label' => esc_html__('Excerpt Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3d3d3d',
                 'selectors' => [
@@ -323,7 +323,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_blog_list_button_style_section',
             [
-                'label' => esc_html__('Button Style', 'abcbiz-multi'),
+                'label' => esc_html__('Button Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_blog_list_read_more_switch' => 'yes'
@@ -336,7 +336,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_button_typography',
-                'label' => esc_html__('Button Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Button Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-more',
             ]
         );
@@ -348,7 +348,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_button_style_normal_tab',
 			[
-				'label' => esc_html__( 'Button Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Color', 'abcbiz-addons' ),
 			]
 		);
 
@@ -356,7 +356,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_button_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
@@ -371,7 +371,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_button_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Color', 'abcbiz-addons' ),
 			]
 		);
 
@@ -379,7 +379,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_button_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3d3d3d',
                 'selectors' => [
@@ -397,7 +397,7 @@ class Main extends BaseWidget
          $this->start_controls_section(
             'abcbiz_elementor_blog_list_image_style_section',
             [
-                'label' => esc_html__('Image Style', 'abcbiz-multi'),
+                'label' => esc_html__('Image Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_blog_list_img_switch' => 'yes'
@@ -409,7 +409,7 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
             'abcbiz_elementor_blog_list_image_width',
             [
-                'label' => esc_html__( 'Image Width', 'abcbiz-multi' ),
+                'label' => esc_html__( 'Image Width', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px'],
                 'range' => [
@@ -442,7 +442,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_blog_list_image_width_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => ['px'],
 				'default' => [
@@ -465,7 +465,7 @@ class Main extends BaseWidget
          $this->start_controls_section(
             'abcbiz_elementor_blog_list_pagination_style_section',
             [
-                'label' => esc_html__('Pagination Style', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_blog_list_pagination' => 'yes'
@@ -478,7 +478,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_pagination_typography',
-                'label' => esc_html__('Pagination Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container',
             ]
         );
@@ -487,7 +487,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_blog_list_pagination_spacing',
             [
-                'label' => esc_html__('Spacing', 'abcbiz-multi'),
+                'label' => esc_html__('Spacing', 'abcbiz-addons'),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -507,7 +507,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_blog_list_pagination_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => ['px'],
                 'default' => [
@@ -530,7 +530,7 @@ class Main extends BaseWidget
             \Elementor\Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_elementor_blog_list_pagination_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container a,{{WRAPPER}} .abcbiz-ele-blog-list-pagi-container .current',
             ]
         );
@@ -539,7 +539,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_blog_list_pagination_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -564,7 +564,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_pagination_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
@@ -572,7 +572,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_pagi_text_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -585,7 +585,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_pagi_text_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#eeeeee',
                 'selectors' => [
@@ -598,7 +598,7 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_blog_list_pagination_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 
@@ -606,7 +606,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_pagi_text_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -619,7 +619,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_blog_list_pagi_text_hover_bg_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#59a818',
                 'selectors' => [
@@ -631,7 +631,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_blog_list_pagi_border_hover_color',
             [
-                'label' => esc_html__('Border Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [

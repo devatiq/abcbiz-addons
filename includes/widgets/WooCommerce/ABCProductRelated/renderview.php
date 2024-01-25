@@ -9,7 +9,7 @@ global $product;
 $product = wc_get_product(get_the_ID());
 
 if (!$product) {
-    echo esc_html__('This product does not exist', 'abcbiz-multi');
+    echo esc_html__('This product does not exist', 'abcbiz-addons');
     return;
 }
 

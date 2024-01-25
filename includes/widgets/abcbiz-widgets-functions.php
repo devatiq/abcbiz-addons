@@ -24,7 +24,7 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             // Construct the message with the link
             $message = sprintf(
                 wp_kses(
-                    __('Please add product description content for this tab using the description box in the <a href="%s">page editor</a>.', 'abcbiz-multi'),
+                    __('Please add product description content for this tab using the description box in the <a href="%s">page editor</a>.', 'abcbiz-addons'),
                     array( 'a' => array( 'href' => array() ) ) // Allow only 'a' tag with 'href' attribute
                 ),
                 esc_url($edit_post_link)
@@ -47,12 +47,12 @@ add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 //Add to cart
 function abcbiz_ajax_add_to_cart_handler() {
     if (!isset($_POST['abcbiz_cart_nonce']) || !wp_verify_nonce($_POST['abcbiz_cart_nonce'], 'abcbiz_add_to_cart_nonce')) {
-        wp_send_json_error(['message' => esc_html__('Nonce verification failed.', 'abcbiz-multi')]);
+        wp_send_json_error(['message' => esc_html__('Nonce verification failed.', 'abcbiz-addons')]);
         return;
     }
 
     if (!isset($_POST['product_id'])) {
-        wp_send_json_error(['message' => esc_html__('Product ID is missing.', 'abcbiz-multi')]);
+        wp_send_json_error(['message' => esc_html__('Product ID is missing.', 'abcbiz-addons')]);
         return;
     }
 
@@ -62,16 +62,16 @@ function abcbiz_ajax_add_to_cart_handler() {
     $quantity = isset($_POST['quantity']) ? (int) esc_attr($_POST['quantity']) : 1;
 
     if (!wc_get_product($product_id)) {
-        wp_send_json_error(['message' => esc_html__('Invalid product.', 'abcbiz-multi')]);
+        wp_send_json_error(['message' => esc_html__('Invalid product.', 'abcbiz-addons')]);
         return;
     }
 
     $cart_item_key = WC()->cart->add_to_cart($product_id, $quantity);
 
     if ($cart_item_key) {
-        wp_send_json_success(['message' => esc_html__('Product successfully added to cart.', 'abcbiz-multi')]);
+        wp_send_json_success(['message' => esc_html__('Product successfully added to cart.', 'abcbiz-addons')]);
     } else {
-        wp_send_json_error(['message' => esc_html__('Failed to add the product to the cart.', 'abcbiz-multi')]);
+        wp_send_json_error(['message' => esc_html__('Failed to add the product to the cart.', 'abcbiz-addons')]);
     }
 }
 add_action('wp_ajax_abcbiz_ajax_add_to_cart_handler', 'abcbiz_ajax_add_to_cart_handler');

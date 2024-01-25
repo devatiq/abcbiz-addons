@@ -24,7 +24,7 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
         // Shop link for single product page
         if (is_product()) {
             $shop_page_url = wc_get_page_permalink('shop');
-            echo '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'abcbiz-multi') . '</a>';
+            echo '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'abcbiz-addons') . '</a>';
             echo '<span class="separator">' . esc_html($separator) . '</span>';
         }
 
@@ -48,10 +48,10 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
             echo '<span class="current">' . esc_html(get_the_title()) . '</span>';
         } elseif (is_search()) {
             // Search results
-            echo '<span class="current">' . esc_html__('Search Results', 'abcbiz-multi') . '</span>';
+            echo '<span class="current">' . esc_html__('Search Results', 'abcbiz-addons') . '</span>';
         } elseif (is_404()) {
             // 404 page
-            echo '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-multi') . '</span>';
+            echo '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-addons') . '</span>';
         }
     
         echo '</div>';

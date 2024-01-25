@@ -9,7 +9,7 @@ global $product;
 $product = wc_get_product(get_the_ID());
 
 if (!$product) {
-    echo esc_html__('This product does not exist', 'abcbiz-multi');
+    echo esc_html__('This product does not exist', 'abcbiz-addons');
     return;
 }
 
@@ -27,7 +27,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
     <!-- Display SKU if enabled and available -->
     <?php if ($abcbiz_show_sku && $product->get_sku()) : ?>
         <div class="abcbiz-product-sku">
-            <span class="label"><?php esc_html_e('SKU', 'abcbiz-multi'); ?></span>
+            <span class="label"><?php esc_html_e('SKU', 'abcbiz-addons'); ?></span>
             <span class="value">: <?php echo esc_html($product->get_sku()); ?></span>
         </div>
     <?php endif; ?>
@@ -39,7 +39,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
     <!-- Display Categories if enabled and available -->
     <?php if ($abcbiz_show_category && wc_get_product_category_list($product->get_id())) : ?>
         <div class="abcbiz-product-categories">
-            <span class="label"><?php esc_html_e('Categories', 'abcbiz-multi'); ?></span>
+            <span class="label"><?php esc_html_e('Categories', 'abcbiz-addons'); ?></span>
             <span class="value">: <?php echo wc_get_product_category_list($product->get_id()); ?></span>
         </div>
     <?php endif; ?>
@@ -51,7 +51,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
     <!-- Display Tags if enabled and available -->
     <?php if ($abcbiz_show_tags && wc_get_product_tag_list($product->get_id())) : ?>
         <div class="abcbiz-product-tags">
-            <span class="label"><?php esc_html_e('Tags', 'abcbiz-multi'); ?></span>
+            <span class="label"><?php esc_html_e('Tags', 'abcbiz-addons'); ?></span>
             <span class="value">: <?php echo wc_get_product_tag_list($product->get_id()); ?></span>
         </div>
     <?php endif; ?>

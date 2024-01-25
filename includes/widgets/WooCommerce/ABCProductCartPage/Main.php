@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-cart-page';
 		protected $title = 'ABC Cart Page';
-		protected $icon = 'eicon-woo-cart abcbiz-multi-icon';
+		protected $icon = 'eicon-woo-cart abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -33,7 +33,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_cart_page_notice_style',
 			[
-				'label' => esc_html__( 'Notice Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Notice Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -42,7 +42,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_notice_border_color',
 			[
-				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#6f45ed',
 				'selectors' => [
@@ -56,7 +56,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_notice_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#f6f5f8',
 				'selectors' => [
@@ -69,7 +69,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_notice_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -83,7 +83,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_cart_page_notice_text_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-cart-page .woocommerce-message',
 			]
 		);
@@ -94,7 +94,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_cart_page_cart_total_style',
 			[
-				'label' => esc_html__( 'Cart Total Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Cart Total Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -104,7 +104,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_cart_page_cart_total_typography',
-				'label' => esc_html__( 'Title Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-cart-page .woocommerce .cart-collaterals .cart_totals h2',
 			]
 		);
@@ -113,7 +113,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_cart_total_color',
 			[
-				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -126,7 +126,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_color',
 			[
-				'label' => esc_html__( 'Button Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -139,7 +139,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_bg_color',
 			[
-				'label' => esc_html__( 'Button BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button BG Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#6f45ed',
 				'selectors' => [
@@ -152,7 +152,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_hov_color',
 			[
-				'label' => esc_html__( 'Button Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -165,7 +165,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_bg_hov_color',
 			[
-				'label' => esc_html__( 'Button BG Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button BG Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#2d4de5',
 				'selectors' => [
@@ -179,7 +179,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_cart_page_total_btn_typography',
-				'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-cart-page .woocommerce a.button.alt',
 			]
 		);
@@ -188,7 +188,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_total_btn_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -211,7 +211,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_cart_page_form_style',
 			[
-				'label' => esc_html__( 'Table Form Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Table Form Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -220,7 +220,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_form_header_bg_color',
 			[
-				'label' => esc_html__( 'Header BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Header BG Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#6f45ed',
 				'selectors' => [
@@ -234,7 +234,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_form_header_color',
 			[
-				'label' => esc_html__( 'Header Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Header Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -247,7 +247,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_cart_page_form_border_color',
 			[
-				'label' => esc_html__( 'Table Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Table Border Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => 'rgba(0,0,0,0.08)',
 				'selectors' => [

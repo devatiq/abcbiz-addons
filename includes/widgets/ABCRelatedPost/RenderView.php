@@ -43,12 +43,12 @@ global $post;
             <?php
                         }
                     } else {
-                        echo '<li>' . esc_html__('No related posts found', 'abcbiz-multi') . '</li>';
+                        echo '<li>' . esc_html__('No related posts found', 'abcbiz-addons') . '</li>';
                     }
                     wp_reset_query();
                 }
             } else {
-                echo '<li>' . esc_html__('No post available.', 'abcbiz-multi') . '</li>';
+                echo '<li>' . esc_html__('No post available.', 'abcbiz-addons') . '</li>';
             }
 
             $post = $orig_post;

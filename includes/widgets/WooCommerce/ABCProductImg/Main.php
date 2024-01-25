@@ -14,7 +14,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-featured-image';
 		protected $title = 'ABC Product Image';
-		protected $icon = 'eicon-product-images abcbiz-multi-icon';
+		protected $icon = 'eicon-product-images abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -31,7 +31,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
             'abcbiz_elementor_wc_product_img_style',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -40,10 +40,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_sales_switch',
             [
-                'label' => esc_html__('Display Sales Flash?', 'abcbiz-multi'),
+                'label' => esc_html__('Display Sales Flash?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -53,7 +53,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
             'abcbiz_elementor_wc_product_sales_size',
             [
-                'label' => esc_html__('Sales Flash Size', 'abcbiz-multi'),
+                'label' => esc_html__('Sales Flash Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
                 'range' => [
@@ -92,7 +92,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_sales_color',
 			[
-				'label' => esc_html__( 'Flash Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Flash Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -108,7 +108,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_sales_bg_color',
 			[
-				'label' => esc_html__( 'Flash BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Flash BG Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6841ef',
 				'selectors' => [
@@ -124,10 +124,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_zoom_icon_switch',
             [
-                'label' => esc_html__('Display Magnify icon?', 'abcbiz-multi'),
+                'label' => esc_html__('Display Magnify icon?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -138,7 +138,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
             'abcbiz_elementor_wc_product_img_single_style',
             [
-                'label' => esc_html__('Product Image Style', 'abcbiz-multi'),
+                'label' => esc_html__('Product Image Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -154,7 +154,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_img_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'default' => [
@@ -176,7 +176,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
             'abcbiz_elementor_wc_product_img_gallery_style',
             [
-                'label' => esc_html__('Gallery Image Style', 'abcbiz-multi'),
+                'label' => esc_html__('Gallery Image Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -192,7 +192,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_gal_img_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'default' => [

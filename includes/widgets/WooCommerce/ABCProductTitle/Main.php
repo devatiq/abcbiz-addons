@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-product-wc-title';
 		protected $title = 'ABC Product Title';
-		protected $icon = 'eicon-product-title abcbiz-multi-icon';
+		protected $icon = 'eicon-product-title abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -30,7 +30,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_product_wc_title',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -40,16 +40,16 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_product_wc_title_tag',
             [
-                'label' => esc_html__('Heading Tag', 'abcbiz-multi'),
+                'label' => esc_html__('Heading Tag', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'h1',
                 'options' => [
-                    'h1' => esc_html__('H1', 'abcbiz-multi'),
-                    'h2' => esc_html__('H2', 'abcbiz-multi'),
-                    'h3' => esc_html__('H3', 'abcbiz-multi'),
-                    'h4' => esc_html__('H4', 'abcbiz-multi'),
-                    'h5' => esc_html__('H5', 'abcbiz-multi'),
-                    'H6' => esc_html__('H6', 'abcbiz-multi'),
+                    'h1' => esc_html__('H1', 'abcbiz-addons'),
+                    'h2' => esc_html__('H2', 'abcbiz-addons'),
+                    'h3' => esc_html__('H3', 'abcbiz-addons'),
+                    'h4' => esc_html__('H4', 'abcbiz-addons'),
+                    'h5' => esc_html__('H5', 'abcbiz-addons'),
+                    'H6' => esc_html__('H6', 'abcbiz-addons'),
                 ],
             
             ]
@@ -59,20 +59,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_product_wc_title_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -90,7 +90,7 @@ class Main extends BaseWidget {
         $this->start_controls_section(
             'abcbiz_elementor_product_wc_title_style',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -98,7 +98,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_product_wc_title_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#999999',
 				'selectors' => [
@@ -111,7 +111,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_product_wc_title_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-product-wc-title-tag',
 			]
 		);

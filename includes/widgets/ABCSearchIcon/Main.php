@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-search-icon';
     protected $title = 'ABC Search Icon';
-    protected $icon = 'eicon-search abcbiz-multi-icon';
+    protected $icon = 'eicon-search abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -36,7 +36,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_search_icon_setting',
             [
-                'label' => esc_html__('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -45,9 +45,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_search_icon_placeholder_text',
 			[
-				'label' => esc_html__( 'Placeholder Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Placeholder Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Search...', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Search...', 'abcbiz-addons' ),
 			]
 		);
 
@@ -55,20 +55,20 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abcbiz_elementor_search_icon_alignment',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'flex-end',
 				'options' => [
 					'flex-start'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'flex-end' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -84,7 +84,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_search_icon_style_section',
             [
-                'label' => esc_html__('Icon Style', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -93,7 +93,7 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_elementor_search_icon_icon_size',
                 [
-                    'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
                     'type' => \Elementor\Controls_Manager::SLIDER,
                     'size_units' => ['px'],
                     'range' => [
@@ -117,7 +117,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_search_icon_icon_color',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#3f14db',
                 'selectors' => [
@@ -130,7 +130,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_search_icon_hov_icon_color',
             [
-                'label' => esc_html__('Icon Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#820bb5',
                 'selectors' => [
@@ -145,7 +145,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_search_icon_input_style_section',
             [
-                'label' => esc_html__('Search Field Style', 'abcbiz-multi'),
+                'label' => esc_html__('Search Field Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -154,7 +154,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_search_icon_input_bg_color',
             [
-                'label' => esc_html__('Field BG Color', 'abcbiz-multi'),
+                'label' => esc_html__('Field BG Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -167,7 +167,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_search_icon_input_text_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -181,7 +181,7 @@ class Main extends BaseWidget
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'abcbiz_elementor_search_placeholder_typography',
-                    'label' => esc_html__( 'Placeholder Typography', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Placeholder Typography', 'abcbiz-addons' ),
                     'selector' => '{{WRAPPER}} .abcbiz-ele-search-icon input[type="text"]::placeholder',
                 ]
             );
@@ -190,7 +190,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_search_icon_input_placeholder_color',
             [
-                'label' => esc_html__('Placeholder Color', 'abcbiz-multi'),
+                'label' => esc_html__('Placeholder Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -203,7 +203,7 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_elementor_search_icon_input_width',
                 [
-                    'label' => esc_html__( 'Field Width', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Field Width', 'abcbiz-addons' ),
                     'type' => \Elementor\Controls_Manager::SLIDER,
                     'size_units' => ['px'],
                     'range' => [
@@ -227,7 +227,7 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_elementor_search_icon_input_height',
                 [
-                    'label' => esc_html__( 'Field Height', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Field Height', 'abcbiz-addons' ),
                     'type' => \Elementor\Controls_Manager::SLIDER,
                     'size_units' => ['px'],
                     'range' => [
@@ -260,7 +260,7 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_elementor_search_icon_border_radius',
                 [
-                    'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
                     'type' => \Elementor\Controls_Manager::DIMENSIONS,
                     'size_units' => [ 'px', '%'],
                     'default' => [

@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-product-meta';
 		protected $title = 'ABC Product Meta';
-		protected $icon = 'eicon-product-meta abcbiz-multi-icon';
+		protected $icon = 'eicon-product-meta abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -34,7 +34,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_meta',
 			[
-				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -43,10 +43,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_meta_sku_switch',
             [
-                'label' => esc_html__('Display SKU?', 'abcbiz-multi'),
+                'label' => esc_html__('Display SKU?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -56,10 +56,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_meta_category_switch',
             [
-                'label' => esc_html__('Display Category?', 'abcbiz-multi'),
+                'label' => esc_html__('Display Category?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -69,10 +69,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_meta_tags_switch',
             [
-                'label' => esc_html__('Display Tags?', 'abcbiz-multi'),
+                'label' => esc_html__('Display Tags?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -82,10 +82,10 @@ class Main extends BaseWidget {
         $this->add_control(
             'abcbiz_elementor_wc_product_meta_div_switch',
             [
-                'label' => esc_html__('Display Divider?', 'abcbiz-multi'),
+                'label' => esc_html__('Display Divider?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -95,7 +95,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_meta_sku_color',
 			[
-				'label' => esc_html__( 'SKU Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'SKU Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -113,7 +113,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_meta_sku_typography',
-				'label' => esc_html__( 'SKU Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'SKU Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-meta .abcbiz-product-sku',
 				'condition' => [
 					'abcbiz_elementor_wc_product_meta_sku_switch' => 'yes',
@@ -125,7 +125,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_meta_cat_color',
 			[
-				'label' => esc_html__( 'Category Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Category Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -143,7 +143,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_meta_cat_typography',
-				'label' => esc_html__( 'Category Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Category Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-meta .abcbiz-product-categories',
 				'condition' => [
 					'abcbiz_elementor_wc_product_meta_category_switch' => 'yes',
@@ -155,7 +155,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_meta_tag_color',
 			[
-				'label' => esc_html__( 'Tags Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Tags Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -173,7 +173,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_meta_tag_typography',
-				'label' => esc_html__( 'Tags Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Tags Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-meta .abcbiz-product-tags',
 				'condition' => [
 					'abcbiz_elementor_wc_product_meta_tags_switch' => 'yes',
@@ -185,7 +185,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_meta_div_color',
 			[
-				'label' => esc_html__( 'Divider Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Divider Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#e6e6e6',
 				'selectors' => [
@@ -201,7 +201,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_meta_div_space',
 			[
-				'label' => esc_html__( 'Divider Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Divider Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [

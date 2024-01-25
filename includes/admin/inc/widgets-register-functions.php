@@ -4,7 +4,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_widgets_settings_init() {
     add_settings_section(
         'abcbiz_available_widgets_section',          // Section ID
-        esc_html__('Available Widgets', 'abcbiz-multi'), // Title
+        esc_html__('Available Widgets', 'abcbiz-addons'), // Title
         'abcbiz_available_widgets_section_callback', // Callback function
         'abcbiz_widgets_menu'                             // Page slug where this section will be shown
     );
@@ -96,7 +96,7 @@ add_option('abcbiz_archive_title_field', '1');
 // WordPress Menu
 add_settings_field(
     'abcbiz_wp_menu_widget_field',
-    esc_html__('WordPress Menu', 'abcbiz-multi'),
+    esc_html__('WordPress Menu', 'abcbiz-addons'),
     'abcbiz_wp_menu_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -105,7 +105,7 @@ add_settings_field(
 // testimonial slider
 add_settings_field(
     'abcbiz_testi_caro_widget_field',
-    esc_html__('Testimonial Carousel', 'abcbiz-multi'),
+    esc_html__('Testimonial Carousel', 'abcbiz-addons'),
     'abcbiz_testi_caro_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -114,7 +114,7 @@ add_settings_field(
 // flip box
 add_settings_field(
     'abcbiz_flip_box_widget_field',
-    esc_html__('Flip Box', 'abcbiz-multi'),
+    esc_html__('Flip Box', 'abcbiz-addons'),
     'abcbiz_flip_box_widget_field_render',
     'abcbiz_widgets_menu', // Page slug where this field will be shown
     'abcbiz_available_widgets_section'
@@ -123,7 +123,7 @@ add_settings_field(
 // blockquote
 add_settings_field(
     'abcbiz_blockquote_widget_field',
-    esc_html__('Blockquote', 'abcbiz-multi'),
+    esc_html__('Blockquote', 'abcbiz-addons'),
     'abcbiz_blockquote_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -132,7 +132,7 @@ add_settings_field(
  // blog fancy
  add_settings_field(
     'abcbiz_blog_fancy_widget_field',
-    esc_html__('Blog Post Fancy', 'abcbiz-multi'),
+    esc_html__('Blog Post Fancy', 'abcbiz-addons'),
     'abcbiz_blog_fancy_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -141,7 +141,7 @@ add_settings_field(
 // author bio
 add_settings_field(
     'abcbiz_author_bio_widget_field',
-    esc_html__('Author Bio', 'abcbiz-multi'),
+    esc_html__('Author Bio', 'abcbiz-addons'),
     'abcbiz_author_bio_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -150,7 +150,7 @@ add_settings_field(
 // Blog Grid
 add_settings_field(
     'abcbiz_blog_grid_widget_field',
-    esc_html__('Blog Grid', 'abcbiz-multi'),
+    esc_html__('Blog Grid', 'abcbiz-addons'),
     'abcbiz_blog_grid_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -159,7 +159,7 @@ add_settings_field(
 // Blog List
 add_settings_field(
     'abcbiz_blog_list_widget_field',
-    esc_html__('Blog List', 'abcbiz-multi'),
+    esc_html__('Blog List', 'abcbiz-addons'),
     'abcbiz_blog_list_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -168,7 +168,7 @@ add_settings_field(
 // breadcrumb
 add_settings_field(
     'abcbiz_breadcrumb_widget_field',
-    esc_html__('Blog List', 'abcbiz-multi'),
+    esc_html__('Blog List', 'abcbiz-addons'),
     'abcbiz_breadcrumb_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -177,7 +177,7 @@ add_settings_field(
 // Category List
 add_settings_field(
     'abcbiz_cat_list_widget_field',
-    esc_html__('Blog List', 'abcbiz-multi'),
+    esc_html__('Blog List', 'abcbiz-addons'),
     'abcbiz_cat_list_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -186,7 +186,7 @@ add_settings_field(
 // Contact Form 7 Style
 add_settings_field(
     'abcbiz_contact_form7_widget_field',
-    esc_html__('Contact Form 7 Style', 'abcbiz-multi'),
+    esc_html__('Contact Form 7 Style', 'abcbiz-addons'),
     'abcbiz_contact_form7_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -195,7 +195,7 @@ add_settings_field(
 // Circular Skill
 add_settings_field(
     'abcbiz_circular_skill_widget_field',
-    esc_html__('Circular Skill', 'abcbiz-multi'),
+    esc_html__('Circular Skill', 'abcbiz-addons'),
     'abcbiz_circular_skill_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -204,7 +204,7 @@ add_settings_field(
 // Comment Form
 add_settings_field(
     'abcbiz_comment_form_widget_field',
-    esc_html__('Comment Form', 'abcbiz-multi'),
+    esc_html__('Comment Form', 'abcbiz-addons'),
     'abcbiz_comment_form_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -213,7 +213,7 @@ add_settings_field(
 // Counter Up
 add_settings_field(
     'abcbiz_counter_up_widget_field',
-    esc_html__('Counter Up', 'abcbiz-multi'),
+    esc_html__('Counter Up', 'abcbiz-addons'),
     'abcbiz_counter_up_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -222,7 +222,7 @@ add_settings_field(
 // Featured Image
 add_settings_field(
     'abcbiz_feat_img_widget_field',
-    esc_html__('Featured Image', 'abcbiz-multi'),
+    esc_html__('Featured Image', 'abcbiz-addons'),
     'abcbiz_feat_img_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -231,7 +231,7 @@ add_settings_field(
 // Icon Box
 add_settings_field(
     'abcbiz_icon_box_widget_field',
-    esc_html__('Icon Box', 'abcbiz-multi'),
+    esc_html__('Icon Box', 'abcbiz-addons'),
     'abcbiz_icon_box_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -240,7 +240,7 @@ add_settings_field(
 // Image Hover
 add_settings_field(
     'abcbiz_img_hover_widget_field',
-    esc_html__('Image Hover', 'abcbiz-multi'),
+    esc_html__('Image Hover', 'abcbiz-addons'),
     'abcbiz_img_hover_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -249,7 +249,7 @@ add_settings_field(
 // Page Title
 add_settings_field(
     'abcbiz_page_title_widget_field',
-    esc_html__('Page Title', 'abcbiz-multi'),
+    esc_html__('Page Title', 'abcbiz-addons'),
     'abcbiz_page_title_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -258,7 +258,7 @@ add_settings_field(
 //Popup
 add_settings_field(
     'abcbiz_abc_popup_widget_field',
-    esc_html__('Popup', 'abcbiz-multi'),
+    esc_html__('Popup', 'abcbiz-addons'),
     'abcbiz_abc_popup_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -267,7 +267,7 @@ add_settings_field(
 //Portfolio
 add_settings_field(
     'abcbiz_portfolio_widget_field',
-    esc_html__('Portfolio', 'abcbiz-multi'),
+    esc_html__('Portfolio', 'abcbiz-addons'),
     'abcbiz_portfolio_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -276,7 +276,7 @@ add_settings_field(
 //Post Meta
 add_settings_field(
     'abcbiz_post_meta_widget_field',
-    esc_html__('Post Meta', 'abcbiz-multi'),
+    esc_html__('Post Meta', 'abcbiz-addons'),
     'abcbiz_post_meta_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -285,7 +285,7 @@ add_settings_field(
 //Post Title
 add_settings_field(
     'abcbiz_post_title_widget_field',
-    esc_html__('Post Title', 'abcbiz-multi'),
+    esc_html__('Post Title', 'abcbiz-addons'),
     'abcbiz_post_title_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -294,7 +294,7 @@ add_settings_field(
 //Pricing Table
 add_settings_field(
     'abcbiz_pricing_table_widget_field',
-    esc_html__('Pricing Table', 'abcbiz-multi'),
+    esc_html__('Pricing Table', 'abcbiz-addons'),
     'abcbiz_pricing_table_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -303,7 +303,7 @@ add_settings_field(
 //Recent Post
 add_settings_field(
     'abcbiz_recent_post_widget_field',
-    esc_html__('Recent Posts', 'abcbiz-multi'),
+    esc_html__('Recent Posts', 'abcbiz-addons'),
     'abcbiz_recent_post_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -312,7 +312,7 @@ add_settings_field(
 //Related Post
 add_settings_field(
     'abcbiz_related_post_widget_field',
-    esc_html__('Related Posts', 'abcbiz-multi'),
+    esc_html__('Related Posts', 'abcbiz-addons'),
     'abcbiz_related_post_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -321,7 +321,7 @@ add_settings_field(
 //Search Form
 add_settings_field(
     'abcbiz_search_form_widget_field',
-    esc_html__('Search Form', 'abcbiz-multi'),
+    esc_html__('Search Form', 'abcbiz-addons'),
     'abcbiz_search_form_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -330,7 +330,7 @@ add_settings_field(
 //Section Title
 add_settings_field(
     'abcbiz_sec_title_widget_field',
-    esc_html__('Section Title', 'abcbiz-multi'),
+    esc_html__('Section Title', 'abcbiz-addons'),
     'abcbiz_sec_title_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -339,7 +339,7 @@ add_settings_field(
 //Shape Animation
 add_settings_field(
     'abcbiz_shape_anim_widget_field',
-    esc_html__('Animated Shape', 'abcbiz-multi'),
+    esc_html__('Animated Shape', 'abcbiz-addons'),
     'abcbiz_shape_anim_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -348,7 +348,7 @@ add_settings_field(
 //Skill Bar
 add_settings_field(
     'abcbiz_skill_bar_widget_field',
-    esc_html__('Skill Bar', 'abcbiz-multi'),
+    esc_html__('Skill Bar', 'abcbiz-addons'),
     'abcbiz_skill_bar_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -357,7 +357,7 @@ add_settings_field(
 //Skill Bar
 add_settings_field(
     'abcbiz_social_share_widget_field',
-    esc_html__('Social Share', 'abcbiz-multi'),
+    esc_html__('Social Share', 'abcbiz-addons'),
     'abcbiz_social_share_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -366,7 +366,7 @@ add_settings_field(
 //Tag Info
 add_settings_field(
     'abcbiz_tag_info_widget_field',
-    esc_html__('Post Tag Info', 'abcbiz-multi'),
+    esc_html__('Post Tag Info', 'abcbiz-addons'),
     'abcbiz_tag_info_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -375,7 +375,7 @@ add_settings_field(
 //Team Member
 add_settings_field(
     'abcbiz_team_member_widget_field',
-    esc_html__('Team Member', 'abcbiz-multi'),
+    esc_html__('Team Member', 'abcbiz-addons'),
     'abcbiz_team_member_widget_field_render',
     'abcbiz_widgets_menu',
     'abcbiz_available_widgets_section'
@@ -384,7 +384,7 @@ add_settings_field(
 // Add settings field for ABC Dual Button
 add_settings_field(
     'abcbiz_dual_button_widget_field', 
-    esc_html__('ABC Dual Button', 'abcbiz-multi'), 
+    esc_html__('ABC Dual Button', 'abcbiz-addons'), 
     'abcbiz_dual_button_widget_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section' 
@@ -393,7 +393,7 @@ add_settings_field(
 // Add settings field for Business Hours
 add_settings_field(
     'abcbiz_business_hours_field',
-    esc_html__('Business Hours', 'abcbiz-multi'),
+    esc_html__('Business Hours', 'abcbiz-addons'),
     'abcbiz_business_hours_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
@@ -402,7 +402,7 @@ add_settings_field(
 // Add settings field for Archive Title
 add_settings_field(
     'abcbiz_archive_title_field',
-    esc_html__('Archive Title', 'abcbiz-multi'),
+    esc_html__('Archive Title', 'abcbiz-addons'),
     'abcbiz_archive_title_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'

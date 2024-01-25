@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-product-tabs';
 		protected $title = 'ABC Product Tabs';
-		protected $icon = 'eicon-product-tabs abcbiz-multi-icon';
+		protected $icon = 'eicon-product-tabs abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -33,7 +33,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_tabs_style',
 			[
-				'label' => esc_html__( 'Tabs Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Tabs Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -43,7 +43,7 @@ class Main extends BaseWidget {
 			'abcbiz_wc_style_warning',
 			[
 				'type' => Controls_Manager::RAW_HTML,
-				'raw' => esc_html__("Sometimes, the appearance of this widget might be influenced by the theme and other plugins you're using. If you're having trouble with how it looks, a good first step is to try using a simpler theme and turning off any related plugins.", 'abcbiz-multi'),
+				'raw' => esc_html__("Sometimes, the appearance of this widget might be influenced by the theme and other plugins you're using. If you're having trouble with how it looks, a good first step is to try using a simpler theme and turning off any related plugins.", 'abcbiz-addons'),
 				'content_classes' => 'abcbiz-elementor-wc-product-tabs-info-message',
 			]
 		);
@@ -53,7 +53,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_wc_product_tabs_typography',
-					'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs ul.tabs li a',
 				]
 			);
@@ -65,7 +65,7 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_wc_product_tabs_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
@@ -73,7 +73,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -86,7 +86,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#f5f5f5',
 				'selectors' => [
@@ -100,7 +100,7 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_wc_product_tabs_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 
@@ -108,7 +108,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_hover_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -121,7 +121,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_bg_hover_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#eeeeee',
 				'selectors' => [
@@ -135,7 +135,7 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_wc_product_tabs_style_active_tab',
 			[
-				'label' => esc_html__( 'Active', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Active', 'abcbiz-addons' ),
 			]
 		);
 
@@ -143,7 +143,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_active_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#000',
 				'selectors' => [
@@ -156,7 +156,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_bg_active_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -174,7 +174,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_tabs_panel_style',
 			[
-				'label' => esc_html__( 'Panel Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Panel Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -184,7 +184,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_panel_title_typography',
-				'label' => esc_html__( 'Title Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel h2',
 			]
 		);
@@ -193,7 +193,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_panel_title_color',
 			[
-				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -207,7 +207,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_panel_content_typography',
-				'label' => esc_html__( 'Content Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-tabs .woocommerce-Tabs-panel',
 			]
 		);
@@ -216,7 +216,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_tabs_panel_content_color',
 			[
-				'label' => esc_html__( 'Content Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [

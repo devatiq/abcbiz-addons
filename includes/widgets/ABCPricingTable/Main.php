@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-pricingtable';
     protected $title = 'ABC Pricing Table';
-    protected $icon = 'eicon-price-table abcbiz-multi-icon';
+    protected $icon = 'eicon-price-table abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -30,7 +30,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_type_section',
             [
-                'label' => esc_html__('Table Type', 'abcbiz-multi'),
+                'label' => esc_html__('Table Type', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -38,14 +38,14 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_type',
             [
-                'label' => esc_html__('Table Type', 'abcbiz-multi'),
+                'label' => esc_html__('Table Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'fancy',
                 'options' => [
-                    'standard' => esc_html__('Standard', 'abcbiz-multi'),
-                    'fancy' => esc_html__('Fancy', 'abcbiz-multi'),
+                    'standard' => esc_html__('Standard', 'abcbiz-addons'),
+                    'fancy' => esc_html__('Fancy', 'abcbiz-addons'),
                 ],
-                'description' => esc_html__('Choose the type of the pricing table.', 'abcbiz-multi'),
+                'description' => esc_html__('Choose the type of the pricing table.', 'abcbiz-addons'),
             ]
         );
         $this->end_controls_section();
@@ -54,7 +54,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_header_section',
             [
-                'label' => esc_html__('Pricing Header', 'abcbiz-multi'),
+                'label' => esc_html__('Pricing Header', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -62,9 +62,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_name',
             [
-                'label' => esc_html__('Package Name', 'abcbiz-multi'),
+                'label' => esc_html__('Package Name', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Basic Plan', 'abcbiz-multi'),
+                'default' => esc_html__('Basic Plan', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -72,28 +72,28 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_price',
             [
-                'label' => esc_html__('Price', 'abcbiz-multi'),
+                'label' => esc_html__('Price', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('$499', 'abcbiz-multi'),
+                'default' => esc_html__('$499', 'abcbiz-addons'),
             ]
         );
         // Pricing package Price period
         $this->add_control(
             'abcbiz_elementor_pricingTable_price_period',
             [
-                'label' => esc_html__('Period', 'abcbiz-multi'),
+                'label' => esc_html__('Period', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('/Monthly', 'abcbiz-multi'),
+                'default' => esc_html__('/Monthly', 'abcbiz-addons'),
             ]
         );
         // Pricing package Recommended
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended',
             [
-                'label' => esc_html__('Recommended', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'abcbiz-multi'),
-                'label_off' => esc_html__('No', 'abcbiz-multi'),
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'no',
             ]
@@ -102,13 +102,13 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_position',
             [
-                'label' => esc_html__('Recommended Position', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Position', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'top',
                 'options' => [
-                    'left' => esc_html__('Left', 'abcbiz-multi'),
-                    'top' => esc_html__('Top', 'abcbiz-multi'),
-                    'custom' => esc_html__('Custom', 'abcbiz-multi'),
+                    'left' => esc_html__('Left', 'abcbiz-addons'),
+                    'top' => esc_html__('Top', 'abcbiz-addons'),
+                    'custom' => esc_html__('Custom', 'abcbiz-addons'),
                 ],
                 'condition' => [
                     'abcbiz_elementor_pricingTable_recommended' => 'yes',
@@ -119,7 +119,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_recommended_custom_position_left',
             [
-                'label' => esc_html__('Custom Position Left', 'abcbiz-multi'),
+                'label' => esc_html__('Custom Position Left', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -146,7 +146,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_recommended_custom_position_top',
             [
-                'label' => esc_html__('Custom Position Top', 'abcbiz-multi'),
+                'label' => esc_html__('Custom Position Top', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -173,9 +173,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_text',
             [
-                'label' => esc_html__('Recommended Text', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Recommended', 'abcbiz-multi'),
+                'default' => esc_html__('Recommended', 'abcbiz-addons'),
                 'condition' => [
                     'abcbiz_elementor_pricingTable_recommended' => 'yes',
                 ],
@@ -186,10 +186,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_stock_shape',
             [
-                'label' => esc_html__('Shape', 'abcbiz-multi'),
+                'label' => esc_html__('Shape', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => '',
                 'condition' => [
@@ -205,7 +205,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_body_section',
             [
-                'label' => esc_html__('Package Features', 'abcbiz-multi'),
+                'label' => esc_html__('Package Features', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -217,9 +217,9 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_pricingTable_feature_text',
             [
-                'label' => esc_html__('Text', 'abcbiz-multi'),
+                'label' => esc_html__('Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'placeholder' => esc_html__('5GB Disk Space', 'abcbiz-multi'),
+                'placeholder' => esc_html__('5GB Disk Space', 'abcbiz-addons'),
                 'label_block' => true,
             ],
         );
@@ -227,7 +227,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_pricingTable_feature_icon',
             [
-                'label' => esc_html__('Icon', 'abcbiz-multi'),
+                'label' => esc_html__('Icon', 'abcbiz-addons'),
                 'type' => Controls_Manager::ICONS,
             ],
         );
@@ -235,7 +235,7 @@ class Main extends BaseWidget
         $repeater->add_control(
             'abcbiz_elementor_pricingTable_feature_icon_color',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-body ul {{CURRENT_ITEM}} i' => 'color: {{VALUE}}',
@@ -247,15 +247,15 @@ class Main extends BaseWidget
         $this->add_control(
             'abc_pricingTable_features_list',
             [
-                'label' => esc_html__('Features List', 'abcbiz-multi'),
+                'label' => esc_html__('Features List', 'abcbiz-addons'),
                 'type' => Controls_Manager::REPEATER,
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'abcbiz_elementor_pricingTable_feature_text' => esc_html__('Title #1', 'abcbiz-multi'),
+                        'abcbiz_elementor_pricingTable_feature_text' => esc_html__('Title #1', 'abcbiz-addons'),
                     ],
                     [
-                        'abcbiz_elementor_pricingTable_feature_text' => esc_html__('Title #2', 'abcbiz-multi'),
+                        'abcbiz_elementor_pricingTable_feature_text' => esc_html__('Title #2', 'abcbiz-addons'),
                     ],
                 ],
                 'title_field' => '{{{ abcbiz_elementor_pricingTable_feature_text }}}',
@@ -269,7 +269,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_footer_section',
             [
-                'label' => esc_html__('Button', 'abcbiz-multi'),
+                'label' => esc_html__('Button', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -277,9 +277,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_text',
             [
-                'label' => esc_html__('Button Text', 'abcbiz-multi'),
+                'label' => esc_html__('Button Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Purchase Now', 'abcbiz-multi'),
+                'default' => esc_html__('Purchase Now', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -287,9 +287,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_link',
             [
-                'label' => esc_html__('Button Link', 'abcbiz-multi'),
+                'label' => esc_html__('Button Link', 'abcbiz-addons'),
                 'type' => Controls_Manager::URL,
-                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-multi'),
+                'placeholder' => esc_html__('https://your-link.com', 'abcbiz-addons'),
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
@@ -302,7 +302,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_icon',
             [
-                'label' => esc_html__('Button Icon', 'abcbiz-multi'),
+                'label' => esc_html__('Button Icon', 'abcbiz-addons'),
                 'type' => Controls_Manager::ICONS,                
             ]
         );
@@ -315,7 +315,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_box_style_section',
             [
-                'label' => esc_html__('Box', 'abcbiz-multi'),
+                'label' => esc_html__('Box', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -327,7 +327,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abcbiz_elementor_pricingTable_tab_normal',
             [
-                'label' => esc_html__('Normal', 'abcbiz-multi'),
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
 
@@ -337,7 +337,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_pricingTable_box_bg',
                 'types' => ['classic', 'gradient'],
-                'label' => esc_html__('Background', 'abcbiz-multi'),
+                'label' => esc_html__('Background', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-table-area',
             ]
         );
@@ -354,7 +354,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_box_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -369,7 +369,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abcbiz_elementor_pricingTable_tab_hover',
             [
-                'label' => esc_html__('Hover', 'abcbiz-multi'),
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
             ]
         );
 
@@ -379,7 +379,7 @@ class Main extends BaseWidget
             [
                 'name' => 'abcbiz_elementor_pricingTable_box_hover_bg',
                 'types' => ['classic', 'gradient'],
-                'label' => esc_html__('Background', 'abcbiz-multi'),
+                'label' => esc_html__('Background', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover',
             ]
         );
@@ -387,7 +387,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_hover_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover' => 'border-color: {{VALUE}};',
@@ -407,7 +407,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_header_style_section',
             [
-                'label' => esc_html__('Header', 'abcbiz-multi'),
+                'label' => esc_html__('Header', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -416,7 +416,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_price_typography',
-                'label' => esc_html__('Price Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Price Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-pack-preiod h3',
             ]
         );
@@ -425,7 +425,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_price_period_typography',
-                'label' => esc_html__('Period Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Period Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-pack-preiod h3 sub',
             ]
         );
@@ -434,7 +434,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_recommended_typography',
-                'label' => esc_html__('Recommended Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-recommended span',
                 'condition' => [
                     'abcbiz_elementor_pricingTable_recommended' => 'yes',
@@ -445,7 +445,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_header_border_bottom',
             [
-                'label' => esc_html__('Border Bottom Width', 'abcbiz-multi'),
+                'label' => esc_html__('Border Bottom Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -471,7 +471,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FE4D05',
                 'selectors' => [
@@ -486,7 +486,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
@@ -505,14 +505,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_header_style_normal_tab',
             [
-                'label' => esc_html__('Normal', 'abcbiz-multi'),
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
         // header normal background color
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_normal_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -525,7 +525,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_normal_stroke_color',
             [
-                'label' => esc_html__('Shape Color', 'abcbiz-multi'),
+                'label' => esc_html__('Shape Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FD5009',
                 'selectors' => [
@@ -541,7 +541,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_price_color',
             [
-                'label' => esc_html__('Price Color', 'abcbiz-multi'),
+                'label' => esc_html__('Price Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-pack-preiod h3' => 'color: {{VALUE}};',
@@ -552,7 +552,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_price_period_color',
             [
-                'label' => esc_html__('Period Color', 'abcbiz-multi'),
+                'label' => esc_html__('Period Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-pack-preiod h3 sub' => 'color: {{VALUE}};',
@@ -563,7 +563,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_color',
             [
-                'label' => esc_html__('Recommended Color', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-recommended span' => 'color: {{VALUE}};',
@@ -577,7 +577,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_bg_color',
             [
-                'label' => esc_html__('Recommended Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-recommended span' => 'background-color: {{VALUE}};',
@@ -598,14 +598,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_header_style_hover_tab',
             [
-                'label' => esc_html__('Hover', 'abcbiz-multi'),
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
             ]
         );
         // hover Border color control for the pricing table header area
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_hover_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -620,7 +620,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_hover_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FE4D05',
                 'selectors' => [
@@ -633,7 +633,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_hover_stroke_color',
             [
-                'label' => esc_html__('Shape Color', 'abcbiz-multi'),
+                'label' => esc_html__('Shape Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-header-strock svg path' => 'fill: {{VALUE}};',
@@ -647,7 +647,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_price_hover_color',
             [
-                'label' => esc_html__('Price Color', 'abcbiz-multi'),
+                'label' => esc_html__('Price Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-pack-preiod h3' => 'color: {{VALUE}};',
@@ -658,7 +658,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_price_period_hover_color',
             [
-                'label' => esc_html__('Period Color', 'abcbiz-multi'),
+                'label' => esc_html__('Period Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-pack-preiod h3 sub' => 'color: {{VALUE}};',
@@ -669,7 +669,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_hover_color',
             [
-                'label' => esc_html__('Recommended Color', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-recommended span' => 'color: {{VALUE}};',
@@ -683,7 +683,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_recommended_hover_bg_color',
             [
-                'label' => esc_html__('Recommended Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Recommended Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-recommended span' => 'background-color: {{VALUE}};',
@@ -705,7 +705,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_header_spacing_heading',
             [
-                'label' => esc_html__('Spacing', 'abcbiz-multi'),
+                'label' => esc_html__('Spacing', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -715,7 +715,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_price_period_top_spacing',
             [
-                'label' => esc_html__('Pricing Period Top', 'abcbiz-multi'),
+                'label' => esc_html__('Pricing Period Top', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -739,7 +739,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_header_padding_top',
             [
-                'label' => esc_html__('Top Specing', 'abcbiz-multi'),
+                'label' => esc_html__('Top Specing', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],   
                 'default' => [
@@ -758,7 +758,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_header_padding_bottom',
             [
-                'label' => esc_html__('Bottom Specing', 'abcbiz-multi'),
+                'label' => esc_html__('Bottom Specing', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,                
                 'default' => [
                     'size' => 50,
@@ -777,7 +777,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_header_stock_shap_top_spacing',
             [
-                'label' => esc_html__('Shape Top', 'abcbiz-multi'),
+                'label' => esc_html__('Shape Top', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -806,7 +806,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_name_style_section',
             [
-                'label' => esc_html__('Name', 'abcbiz-multi'),
+                'label' => esc_html__('Name', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -814,7 +814,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_name_width',
             [
-                'label' => esc_html__('Width', 'abcbiz-multi'),
+                'label' => esc_html__('Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -836,7 +836,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_name_height',
             [
-                'label' => esc_html__('Height', 'abcbiz-multi'),
+                'label' => esc_html__('Height', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -859,7 +859,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_name_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-pack-name h3',
             ]
         );
@@ -872,7 +872,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_name_style_normal_tab',
             [
-                'label' => esc_html__('Normal', 'abcbiz-multi'),
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
 
@@ -880,7 +880,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_name_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-pack-name h3' => 'color: {{VALUE}};',
@@ -891,7 +891,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_name_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-pack-name' => 'background-color: {{VALUE}};',
@@ -905,7 +905,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_name_style_hover_tab',
             [
-                'label' => esc_html__('Hover', 'abcbiz-multi'),
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
             ]
         );
 
@@ -913,7 +913,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_name_hover_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-pack-name h3' => 'color: {{VALUE}};',
@@ -924,7 +924,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_name_hover_bg_color',
             [
-                'label' => esc_html__('Background', 'abcbiz-multi'),
+                'label' => esc_html__('Background', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-pack-name' => 'background-color: {{VALUE}};',
@@ -943,14 +943,14 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_body_style_section',
             [
-                'label' => esc_html__('Features', 'abcbiz-multi'),
+                'label' => esc_html__('Features', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
         $this->add_control(
             'abcbiz_elementor_pricingTable_top_content_spacing',
             [
-                'label' => esc_html__('Top Spacing', 'abcbiz-multi'),
+                'label' => esc_html__('Top Spacing', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%', 'em'],
                 'range' => [
@@ -986,7 +986,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_features_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-table-body ul li',
             ]
         );
@@ -994,7 +994,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_features_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#181818',
                 'selectors' => [
@@ -1006,7 +1006,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_features_icon_color',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -1019,7 +1019,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_features_list_spacing',
             [
-                'label' => esc_html__('Gap Between', 'abcbiz-multi'),
+                'label' => esc_html__('Gap Between', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -1040,7 +1040,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_feature_icon_size',
             [
-                'label' => esc_html__('Icon Size', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -1062,7 +1062,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_feature_icon_spacing',
             [
-                'label' => esc_html__('Icon Spacing', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Spacing', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -1085,7 +1085,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_feature_icon_position',
             [
-                'label' => esc_html__('Icon Position', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Position', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -1111,7 +1111,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_pricingTable_footer_style_section',
             [
-                'label' => esc_html__('Button', 'abcbiz-multi'),
+                'label' => esc_html__('Button', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -1120,7 +1120,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_pricingTable_button_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-pricing-table-footer a',
             ]
         );
@@ -1128,7 +1128,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_button_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -1141,7 +1141,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_button_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -1160,7 +1160,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_button_width',
             [
-                'label' => esc_html__('Button Width', 'abcbiz-multi'),
+                'label' => esc_html__('Button Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -1187,7 +1187,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_feature_btn_size',
             [
-                'label' => esc_html__('Icon Size', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -1210,7 +1210,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_pricingTable_button_icon_space',
             [
-                'label' => esc_html__('Icon Space', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Space', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -1236,14 +1236,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_button_style_normal_tab',
             [
-                'label' => esc_html__('Normal', 'abcbiz-multi'),
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
         // pacakge button normal color
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_normal_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -1257,7 +1257,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_normal_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -1279,14 +1279,14 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abc_ele_pricingTable_button_style_hover_tab',
             [
-                'label' => esc_html__('Hover', 'abcbiz-multi'),
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
             ]
         );
         // pacakge button hover color
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_hover_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-table-footer a' => 'color: {{VALUE}};',
@@ -1299,7 +1299,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_hover_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#FE4D05',
                 'selectors' => [
@@ -1311,7 +1311,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_pricingTable_button_hover_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-table-footer a' => 'border-color: {{VALUE}};',

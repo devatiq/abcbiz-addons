@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-product-price';
 		protected $title = 'ABC Product Price';
-		protected $icon = 'eicon-product-price abcbiz-multi-icon';
+		protected $icon = 'eicon-product-price abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -34,7 +34,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_price',
 			[
-				'label' => esc_html__( 'Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -43,20 +43,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wc_product_price_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -70,7 +70,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_price_regular_color',
 			[
-				'label' => esc_html__( 'Price Regular Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Price Regular Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#999999',
 				'selectors' => [
@@ -84,7 +84,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_price_regular_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price del bdi, {{WRAPPER}} .abcbiz-elementor-wc-product-price .price bdi',
 			]
 		);
@@ -94,7 +94,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_price_sales_color',
 			[
-				'label' => esc_html__( 'Price Sales Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Price Sales Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -108,7 +108,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_price_sales_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-product-price .price ins bdi',
 			]
 		);

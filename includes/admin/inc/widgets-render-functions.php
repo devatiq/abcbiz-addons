@@ -10,11 +10,11 @@ function abcbiz_cta_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/call-to-action-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-cta.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div> 
-        <h3><?php echo esc_html__("Call To Action- CTA", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Call To Action- CTA", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_cta_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -32,11 +32,11 @@ function abcbiz_contact_info_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/contact-and-social-info-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-contact-info.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div> 
-        <h3><?php echo esc_html__("Contact & Social Info", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Contact & Social Info", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_contact_info_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -54,11 +54,11 @@ function abcbiz_search_icon_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/search-icon-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-search-icon.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div> 
-        <h3><?php echo esc_html__("Search Icon", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Search Icon", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_search_icon_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -76,11 +76,11 @@ function abcbiz_wp_menu_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/wordpress-menu-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-wp-menu.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div> 
-        <h3><?php echo esc_html__("WordPress Menu", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("WordPress Menu", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_wp_menu_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -98,11 +98,11 @@ function abcbiz_testi_caro_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/testimonial-carousel-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-testimonial-slider.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Testimonial Carousel", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Testimonial Carousel", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_testi_caro_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -120,11 +120,11 @@ function abcbiz_flip_box_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/flip-box-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-flip-box.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Flip Box", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Flip Box", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_flip_box_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -142,11 +142,11 @@ function abcbiz_blockquote_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/blockquote-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-blockquoute.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Blockquote Widget", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Blockquote Widget", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_blockquote_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -164,11 +164,11 @@ function abcbiz_blog_fancy_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/fancy-blog-posts-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-blog-post-fancy.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Blog Fancy", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Blog Fancy", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_blog_fancy_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -186,11 +186,11 @@ function abcbiz_author_bio_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/post-author-bio-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-author-bio.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Author Bio", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Author Bio", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_author_bio_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -208,11 +208,11 @@ function abcbiz_blog_grid_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/blog-posts-grid-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-grid.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Blog Grid", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Blog Grid", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_blog_grid_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -230,11 +230,11 @@ function abcbiz_blog_list_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/simple-blog-posts-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-list.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Blog List", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Blog List", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_blog_list_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -252,11 +252,11 @@ function abcbiz_breadcrumb_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/custom-breadcrumb-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-breadcrumb.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Breadcrumb", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Breadcrumb", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_breadcrumb_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -274,11 +274,11 @@ function abcbiz_cat_list_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/post-category-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/post-categories.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Category List", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Category List", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_cat_list_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -296,11 +296,11 @@ function abcbiz_contact_form7_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/contact-form-7-style-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-contact-form-7-style.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Contact Form 7 Style", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Contact Form 7 Style", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_contact_form7_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -318,11 +318,11 @@ function abcbiz_circular_skill_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/advanced-circular-skill-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/circular-skill.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Circular Skill", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Circular Skill", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_circular_skill_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -340,11 +340,11 @@ function abcbiz_comment_form_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/comment-form-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-comments.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Comment Form", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Comment Form", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_comment_form_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -362,11 +362,11 @@ function abcbiz_counter_up_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/counter-up-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/counter-up.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Counter Up", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Counter Up", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_counter_up_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -384,11 +384,11 @@ function abcbiz_feat_img_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/featured-image-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/featured-image.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Featured Image", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Featured Image", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_feat_img_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -406,11 +406,11 @@ function abcbiz_icon_box_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/advanced-icon-box-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/icon-box.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Icon Box", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Icon Box", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_icon_box_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -428,11 +428,11 @@ function abcbiz_img_hover_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/image-hover-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-image-hover.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Image Hover", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Image Hover", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_img_hover_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -450,11 +450,11 @@ function abcbiz_page_title_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/page-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/page-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Page Title", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Page Title", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_page_title_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -472,11 +472,11 @@ function abcbiz_abc_popup_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/popup-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/popup.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Popup", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Popup", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_abc_popup_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -494,11 +494,11 @@ function abcbiz_portfolio_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/portfolio-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-portfolio.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Portfolio", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Portfolio", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_portfolio_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -516,11 +516,11 @@ function abcbiz_post_meta_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/post-meta-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/meta-info.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Post Meta", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Post Meta", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_post_meta_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -538,11 +538,11 @@ function abcbiz_post_title_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/post-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/post-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Post Title", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Post Title", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_post_title_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -560,11 +560,11 @@ function abcbiz_pricing_table_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/advanced-pricing-table-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-pricing-table.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Pricing Table", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Pricing Table", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_pricing_table_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -582,11 +582,11 @@ function abcbiz_recent_post_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/recent-posts-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-recent-posts.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Recent Posts", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Recent Posts", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_recent_post_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -604,11 +604,11 @@ function abcbiz_related_post_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/related-posts-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-related-post.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Related Posts", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Related Posts", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_related_post_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -626,11 +626,11 @@ function abcbiz_search_form_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/search-form-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-search-form.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Search Form", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Search Form", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_search_form_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -648,11 +648,11 @@ function abcbiz_sec_title_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/section-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-section-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Section Title", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Section Title", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_sec_title_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -670,11 +670,11 @@ function abcbiz_shape_anim_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/animated-shape-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/animated-shape.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Animated Shape", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Animated Shape", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_shape_anim_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -692,11 +692,11 @@ function abcbiz_skill_bar_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/skill-bar-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-skill-bar.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Skill Bar", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Skill Bar", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_skill_bar_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -714,11 +714,11 @@ function abcbiz_social_share_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/social-share-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-social-share.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Social Share", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Social Share", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_social_share_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -736,11 +736,11 @@ function abcbiz_tag_info_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/post-tag-info-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-tags.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Post Tag Info", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Post Tag Info", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_tag_info_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -758,11 +758,11 @@ function abcbiz_team_member_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/team-member-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-team-member.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Team Member", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Team Member", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_team_member_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -780,11 +780,11 @@ function abcbiz_dual_button_widget_field_render() {
             <a href="https://abcbizaddons.com/widgets/dual-button-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-dual-button.jpg'); ?>">
                 <div class="abcbiz-overlay">
-                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Dual Button", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Dual Button", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_dual_button_widget_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -804,12 +804,12 @@ function abcbiz_business_hours_field_render() {
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
                         <span class="dashicons dashicons-admin-links"></span>
-                        <?php echo esc_html__("Preview", "abcbiz-multi");?>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Business Hours", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Business Hours", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_business_hours_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
@@ -829,12 +829,12 @@ function abcbiz_archive_title_field_render() {
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
                         <span class="dashicons dashicons-archive"></span>
-                        <?php echo esc_html__("Preview", "abcbiz-multi");?>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Archive Title", "abcbiz-multi"); ?></h3>
+        <h3><?php echo esc_html__("Archive Title", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_archive_title_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>

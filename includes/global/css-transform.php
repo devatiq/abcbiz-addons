@@ -17,7 +17,7 @@ class CSS_Transform {
         $element->start_controls_section(
             'abcbiz_section_css_transform',
             [
-                'label' => __( 'ABC CSS Transform', 'abcbiz-multi' ),
+                'label' => __( 'ABC CSS Transform', 'abcbiz-addons' ),
                 'tab' => Controls_Manager::TAB_ADVANCED,
             ]
         );
@@ -25,7 +25,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx',
             [
-                'label' => __( 'Enable', 'abcbiz-multi' ),
+                'label' => __( 'Enable', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SWITCHER,
                 'return_value' => 'yes',
                 'prefix_class' => 'abcbiz-css-transform-',
@@ -45,7 +45,7 @@ class CSS_Transform {
         $element->start_controls_tab(
             '_tab_abcbiz_transform_normal',
             [
-                'label' => __( 'Normal', 'abcbiz-multi' ),
+                'label' => __( 'Normal', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_transform_fx' => 'yes',
                 ],
@@ -56,7 +56,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_translate_toggle',
             [
-                'label' => __( 'Translate', 'abcbiz-multi' ),
+                'label' => __( 'Translate', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -70,7 +70,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_translate_x',
             [
-                'label' => __( 'Translate X', 'abcbiz-multi' ),
+                'label' => __( 'Translate X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -92,7 +92,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_translate_y',
             [
-                'label' => __( 'Translate Y', 'abcbiz-multi' ),
+                'label' => __( 'Translate Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -117,7 +117,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_rotate_toggle',
             [
-                'label' => __( 'Rotate', 'abcbiz-multi' ),
+                'label' => __( 'Rotate', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'condition' => [
                     'abcbiz_transform_fx' => 'yes',
@@ -130,15 +130,15 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_rotate_mode',
             [
-                'label' => __( 'Mode', 'abcbiz-multi' ),
+                'label' => __( 'Mode', 'abcbiz-addons' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'compact' => [
-                        'title' => __( 'Compact', 'abcbiz-multi' ),
+                        'title' => __( 'Compact', 'abcbiz-addons' ),
                         'icon' => 'eicon-plus-circle',
                     ],
                     'loose' => [
-                        'title' => __( 'Loose', 'abcbiz-multi' ),
+                        'title' => __( 'Loose', 'abcbiz-addons' ),
                         'icon' => 'eicon-minus-circle',
                     ],
                 ],
@@ -161,7 +161,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_x',
             [
-                'label' => __( 'Rotate X', 'abcbiz-multi' ),
+                'label' => __( 'Rotate X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -184,7 +184,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_y',
             [
-                'label' => __( 'Rotate Y', 'abcbiz-multi' ),
+                'label' => __( 'Rotate Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -207,7 +207,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_z',
             [
-                'label' => __( 'Rotate Z', 'abcbiz-multi' ),
+                'label' => __( 'Rotate Z', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -232,7 +232,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_scale_toggle',
             [
-                'label' => __( 'Scale', 'abcbiz-multi' ),
+                'label' => __( 'Scale', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -246,15 +246,15 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_scale_mode',
             [
-                'label' => __( 'Mode', 'abcbiz-multi' ),
+                'label' => __( 'Mode', 'abcbiz-addons' ),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'compact' => [
-                        'title' => __( 'Compact', 'abcbiz-multi' ),
+                        'title' => __( 'Compact', 'abcbiz-addons' ),
                         'icon' => 'eicon-plus-circle',
                     ],
                     'loose' => [
-                        'title' => __( 'Loose', 'abcbiz-multi' ),
+                        'title' => __( 'Loose', 'abcbiz-addons' ),
                         'icon' => 'eicon-minus-circle',
                     ],
                 ],
@@ -273,7 +273,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_scale_x',
             [
-                'label' => __( 'Scale X', 'abcbiz-multi' ),
+                'label' => __( 'Scale X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -299,7 +299,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_scale_y',
             [
-                'label' => __( 'Scale Y', 'abcbiz-multi' ),
+                'label' => __( 'Scale Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -329,7 +329,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_skew_toggle',
             [
-                'label' => __( 'Skew', 'abcbiz-multi' ),
+                'label' => __( 'Skew', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -343,7 +343,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_skew_x',
             [
-                'label' => __( 'Skew X', 'abcbiz-multi' ),
+                'label' => __( 'Skew X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -365,7 +365,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_skew_y',
             [
-                'label' => __( 'Skew Y', 'abcbiz-multi' ),
+                'label' => __( 'Skew Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -392,7 +392,7 @@ class CSS_Transform {
         $element->start_controls_tab(
             'abcbiz_tab_abcbiz_transform_hover',
             [
-                'label' => __( 'Hover', 'abcbiz-multi' ),
+                'label' => __( 'Hover', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_transform_fx' => 'yes',
                 ],
@@ -403,7 +403,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_translate_toggle_hover',
             [
-                'label' => __( 'Translate', 'abcbiz-multi' ),
+                'label' => __( 'Translate', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -417,7 +417,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_translate_x_hover',
             [
-                'label' => __( 'Translate X', 'abcbiz-multi' ),
+                'label' => __( 'Translate X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -439,7 +439,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_translate_y_hover',
             [
-                'label' => __( 'Translate Y', 'abcbiz-multi' ),
+                'label' => __( 'Translate Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'range' => [
@@ -464,7 +464,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_rotate_toggle_hover',
             [
-                'label' => __( 'Rotate', 'abcbiz-multi' ),
+                'label' => __( 'Rotate', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'condition' => [
                     'abcbiz_transform_fx' => 'yes',
@@ -477,7 +477,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_x_hover',
             [
-                'label' => __( 'Rotate X', 'abcbiz-multi' ),
+                'label' => __( 'Rotate X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -499,7 +499,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_y_hover',
             [
-                'label' => __( 'Rotate Y', 'abcbiz-multi' ),
+                'label' => __( 'Rotate Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -521,7 +521,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_rotate_z_hover',
             [
-                'label' => __( 'Rotate Z', 'abcbiz-multi' ),
+                'label' => __( 'Rotate Z', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -546,7 +546,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_scale_toggle_hover',
             [
-                'label' => __( 'Scale', 'abcbiz-multi' ),
+                'label' => __( 'Scale', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -560,7 +560,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_scale_x_hover',
             [
-                'label' => __( 'Scale X', 'abcbiz-multi' ),
+                'label' => __( 'Scale X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -586,7 +586,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_scale_y_hover',
             [
-                'label' => __( 'Scale Y', 'abcbiz-multi' ),
+                'label' => __( 'Scale Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px'],
                 'default' => [
@@ -615,7 +615,7 @@ class CSS_Transform {
         $element->add_control(
             'abcbiz_transform_fx_skew_toggle_hover',
             [
-                'label' => __( 'Skew', 'abcbiz-multi' ),
+                'label' => __( 'Skew', 'abcbiz-addons' ),
                 'type' => Controls_Manager::POPOVER_TOGGLE,
                 'return_value' => 'yes',
                 'condition' => [
@@ -629,7 +629,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_skew_x_hover',
             [
-                'label' => __( 'Skew X', 'abcbiz-multi' ),
+                'label' => __( 'Skew X', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [
@@ -651,7 +651,7 @@ class CSS_Transform {
         $element->add_responsive_control(
             'abcbiz_transform_fx_skew_y_hover',
             [
-                'label' => __( 'Skew Y', 'abcbiz-multi' ),
+                'label' => __( 'Skew Y', 'abcbiz-addons' ),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['deg'],
                 'range' => [

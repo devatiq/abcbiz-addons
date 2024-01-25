@@ -13,7 +13,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-product-bread-crumb';
 		protected $title = 'ABC Product Breadcrumb';
-		protected $icon = 'eicon-product-breadcrumbs abcbiz-multi-icon';
+		protected $icon = 'eicon-product-breadcrumbs abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -29,7 +29,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz-elementor-product-bread-crumb',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -39,20 +39,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_wc_elementor_product_bread_crumb_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -70,7 +70,7 @@ class Main extends BaseWidget {
         $this->start_controls_section(
             'abcbiz_wc_elementor_product_bread_crumb_style',
             [
-                'label' => esc_html__('Crumb Style', 'abcbiz-multi'),
+                'label' => esc_html__('Crumb Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -78,7 +78,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_wc_elementor_product_bread_crumb_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -90,7 +90,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_wc_elementor_product_bread_crumb_link_color',
 			[
-				'label' => esc_html__( 'Link Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Link Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -102,7 +102,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_wc_elementor_product_bread_crumb_link_hover_color',
 			[
-				'label' => esc_html__( 'Link Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Link Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#5D5AED',
 				'selectors' => [
@@ -115,7 +115,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_wc_elementor_product_bread_crumb_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area',
 			]
 		);

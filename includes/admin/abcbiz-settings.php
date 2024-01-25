@@ -4,8 +4,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_add_admin_menu() {
     // Add a new top-level menu
     add_menu_page(
-        esc_html__('ABCBiz Home', 'abcbiz-multi'),  // Page title
-        esc_html__('ABCBiz Home', 'abcbiz-multi'),  // Menu title
+        esc_html__('ABCBiz Home', 'abcbiz-addons'),  // Page title
+        esc_html__('ABCBiz Home', 'abcbiz-addons'),  // Menu title
         'manage_options',                               // Capability
         'abcbiz_home',                         // Menu slug
         'abcbiz_home_page',                         // Function to display the page
@@ -16,8 +16,8 @@ function abcbiz_add_admin_menu() {
     // Add a submenu page
     add_submenu_page(
         'abcbiz_home', 
-        esc_html__('ABCBiz Available Widgets', 'abcbiz-multi'), // Page title
-        esc_html__('Available Widgets', 'abcbiz-multi'), // Menu title
+        esc_html__('ABCBiz Available Widgets', 'abcbiz-addons'), // Page title
+        esc_html__('Available Widgets', 'abcbiz-addons'), // Menu title
         'manage_options',                                // Capability
         'abcbiz_widgets_menu',                                // Menu slug
         'abcbiz_widgets_page'                            // Function to display the page
@@ -27,11 +27,11 @@ add_action('admin_menu', 'abcbiz_add_admin_menu');
 
 //Setting link
 function abcbiz_add_settings_link( $links ) {
-    $settings_link = '<a href="' . admin_url( 'admin.php?page=abcbiz_home' ) . '">' . esc_html__( 'Settings', 'abcbiz-multi' ) . '</a>';
+    $settings_link = '<a href="' . admin_url( 'admin.php?page=abcbiz_home' ) . '">' . esc_html__( 'Settings', 'abcbiz-addons' ) . '</a>';
     array_unshift( $links, $settings_link );
     return $links;
 }
-add_filter( 'plugin_action_links_abcbiz-multi-addons-pro-for-elementor/abcbiz-multi.php', 'abcbiz_add_settings_link' );
+add_filter( 'plugin_action_links_abcbiz-addons-addons-pro-for-elementor/abcbiz-addons.php', 'abcbiz_add_settings_link' );
 
 // Require setting page
 require_once plugin_dir_path(__FILE__) . 'inc/setting-page.php';

@@ -7,7 +7,7 @@ add_action('add_meta_boxes', 'abcbiz_multi_add_excerpt_metabox');
 function abcbiz_multi_add_excerpt_metabox() {
     add_meta_box(
         'abcbiz_multi_excerpt_metabox',
-        esc_html__('ABCBiz Blog Excerpt', 'abcbiz-multi'),
+        esc_html__('ABCBiz Blog Excerpt', 'abcbiz-addons'),
         'abcbiz_multi_excerpt_metabox_content',
         'post', 
         'normal', 
@@ -50,7 +50,7 @@ function abcbiz_multi_excerpt_metabox_content($post) {
     $excerpt_content = get_post_meta($post->ID, 'abcbiz_multi_excerpt_content', true);
     ?>
 
-    <label for="abcbiz_multi_excerpt_content"><?php esc_html_e('Enter Excerpt Content:', 'abcbiz-multi'); ?></label>
+    <label for="abcbiz_multi_excerpt_content"><?php esc_html_e('Enter Excerpt Content:', 'abcbiz-addons'); ?></label>
     
     <textarea name="abcbiz_multi_excerpt_content" id="abcbiz_multi_excerpt_content" rows="5" style="width:100%;">
         <?php echo esc_textarea($excerpt_content); ?>
@@ -75,7 +75,7 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
     add_action('add_meta_boxes', 'abcbiz_add_wc_product_meta_box', 5);
 
     function abcbiz_wc_product_meta_box_html($post) {
-        echo '<p><strong>' . esc_html__('Note:', 'abcbiz-multi') . '</strong> ' . esc_html__('This area is specifically for ABCBiz Elementor Addons Products description tab contents.', 'abcbiz-multi') . '</p>';
+        echo '<p><strong>' . esc_html__('Note:', 'abcbiz-addons') . '</strong> ' . esc_html__('This area is specifically for ABCBiz Elementor Addons Products description tab contents.', 'abcbiz-addons') . '</p>';
         $content = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
         wp_editor(
             htmlspecialchars_decode($content),

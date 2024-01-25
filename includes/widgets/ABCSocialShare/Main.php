@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-social-share';
 		protected $title = 'ABC Social Share';
-		protected $icon = 'eicon-share abcbiz-multi-icon';
+		protected $icon = 'eicon-share abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -32,7 +32,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz-elementor-social-share-content',
 			[
-				'label' => esc_html__( 'Social Share', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Share', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -41,20 +41,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_social_share_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -67,10 +67,10 @@ class Main extends BaseWidget {
 		$this->add_control(
             'abcbiz_elementor_single_share_icon_show',
             [
-                'label' => esc_html__('Share icon at the beginning', 'abcbiz-multi'),
+                'label' => esc_html__('Share icon at the beginning', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -79,10 +79,10 @@ class Main extends BaseWidget {
 		$this->add_control(
             'abcbiz_elementor_single_share_icon_mob_show',
             [
-                'label' => esc_html__('Hide Share icon on mobile?', 'abcbiz-multi'),
+                'label' => esc_html__('Hide Share icon on mobile?', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'label_off',
 				'condition' => [
@@ -100,7 +100,7 @@ class Main extends BaseWidget {
         $this->start_controls_section(
             'abcbiz_elementor_social_share_style',
             [
-                'label' => esc_html__('Social Icon Style', 'abcbiz-multi'),
+                'label' => esc_html__('Social Icon Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -108,7 +108,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_social_share_single_icon_color',
 			[
-				'label' => esc_html__( 'Share Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Share Icon Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#3d3d3d',
 				'selectors' => [
@@ -124,7 +124,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_single_share_icon_size',
 			[
-				'label' => esc_html__( 'Share Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Share Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -151,7 +151,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_single_share_icon_position',
 			[
-				'label' => esc_html__( 'Share Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Share Icon Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -178,7 +178,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_single_share_icon_gap',
 			[
-				'label' => esc_html__( 'Share Icon Gap', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Share Icon Gap', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -205,7 +205,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_social_share_icon_size',
 			[
-				'label' => esc_html__( 'Social Icons Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -228,7 +228,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_social_share_icon_position',
 			[
-				'label' => esc_html__( 'Social Icons Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -251,7 +251,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_social_icons_gap',
 			[
-				'label' => esc_html__( 'Social Icons Gap', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons Gap', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -274,7 +274,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_social_share_icon_bg_size',
 			[
-				'label' => esc_html__( 'Icons background Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icons background Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -302,14 +302,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_social_share_icon_color_tab_normal',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'abcbiz_elementor_social_share_icon_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -321,7 +321,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_social_share_icon_bg_color',
 			[
-				'label' => esc_html__( 'Icon Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#59a818',
 				'selectors' => [
@@ -335,14 +335,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_social_share_icon_color_tab_hover',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'abcbiz_elementor_social_share_icon_color_hover',
 			[
-				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -354,7 +354,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_social_share_icon_bg_color_hover',
 			[
-				'label' => esc_html__( 'Icon Hover Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#3d3d3d',
 				'selectors' => [

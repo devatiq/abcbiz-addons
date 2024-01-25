@@ -1,14 +1,14 @@
 <?php
 /*
 Plugin Name: ABCBiz Multi Addons For Elementor
-Plugin URI: https://abcplugin.com/abcbiz-multi-addons-for-elementor/
+Plugin URI: https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/
 Description: The Elementor Custom Widgets plugin, a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Multi Addons is packed with an array of gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design.
 Version: 1.0.0
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: abcbiz-multi
+Text Domain: abcbiz-addons
 Domain Path: /languages
 Elementor tested up to: 3.18.0
 Elementor Pro tested up to: 3.18.0
@@ -46,7 +46,7 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         }
 
 
-        load_plugin_textdomain('abcbiz-multi', false, dirname(plugin_basename(AbcBizElementor_File)) . '/languages/');
+        load_plugin_textdomain('abcbiz-addons', false, dirname(plugin_basename(AbcBizElementor_File)) . '/languages/');
         require_once AbcBizElementor_Admin . '/abcbiz-settings.php';
     }
 }
@@ -109,7 +109,7 @@ if (!function_exists('abcbiz_elementor_add_widget_categories')) {
         $elements_manager->add_category(
             'abcbiz-category',
             [
-                'title' => esc_html__('ABCBiz Multi Elements', 'abcbiz-multi'),
+                'title' => esc_html__('ABCBiz Multi Elements', 'abcbiz-addons'),
                 'icon' => 'eicon-kit-plugins',
             ]
         );
@@ -124,7 +124,7 @@ if (!function_exists('abcbiz_elementor_add_widget_wc_categories')) {
             $elements_manager->add_category(
                 'abcbiz-wc-category',
                 [
-                    'title' => esc_html__('ABCBiz WooCommerce', 'abcbiz-multi'),
+                    'title' => esc_html__('ABCBiz WooCommerce', 'abcbiz-addons'),
                     'icon' => 'eicon-woocommerce',
                 ]
             );
@@ -145,7 +145,7 @@ function get_abcbiz_multi_plugin_info() {
         require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
     }   
 
-    $plugin_file_path = AbcBizElementor_Path . '/abcbiz-multi.php';   
+    $plugin_file_path = AbcBizElementor_Path . '/abcbiz-addons.php';   
     if ( file_exists( $plugin_file_path ) ) {
         $plugin_data = get_plugin_data( $plugin_file_path );
         $plugin_info = [
@@ -158,12 +158,12 @@ function get_abcbiz_multi_plugin_info() {
         ];
     } else {
         $plugin_info = [
-            'Name' => esc_html__('Plugin Name Not Found', 'abcbiz-multi'),
-            'Version' => esc_html__('Plugin Version Not Found', 'abcbiz-multi'),
-            'Author' => esc_html__('Author Not Found', 'abcbiz-multi'),
-            'PluginURI' => esc_html__('Plugin URI Not Found', 'abcbiz-multi'),
-            'AuthorURI' => esc_html__('Author URI Not Found', 'abcbiz-multi'),
-            'Description' => esc_html__('Description Not Found', 'abcbiz-multi')
+            'Name' => esc_html__('Plugin Name Not Found', 'abcbiz-addons'),
+            'Version' => esc_html__('Plugin Version Not Found', 'abcbiz-addons'),
+            'Author' => esc_html__('Author Not Found', 'abcbiz-addons'),
+            'PluginURI' => esc_html__('Plugin URI Not Found', 'abcbiz-addons'),
+            'AuthorURI' => esc_html__('Author URI Not Found', 'abcbiz-addons'),
+            'Description' => esc_html__('Description Not Found', 'abcbiz-addons')
         ];
     }
 

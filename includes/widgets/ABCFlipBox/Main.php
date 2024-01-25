@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-flip-box';
 		protected $title = 'ABC Flip Box';
-		protected $icon = 'eicon-flip-box abcbiz-multi-icon';
+		protected $icon = 'eicon-flip-box abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -39,7 +39,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_flip_box_front_contents',
 			[
-				'label' => esc_html__( 'Front Contents', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Front Contents', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -48,13 +48,13 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_icon_img_selection',
 			[
-				'label' => esc_html__( 'Icon Type', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Type', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'none',
 				'options' => [
-					'none' => esc_html__( 'None', 'abcbiz-multi' ),
-					'icon'  => esc_html__( 'Icon', 'abcbiz-multi' ),
-					'image' => esc_html__( 'Image', 'abcbiz-multi' ),
+					'none' => esc_html__( 'None', 'abcbiz-addons' ),
+					'icon'  => esc_html__( 'Icon', 'abcbiz-addons' ),
+					'image' => esc_html__( 'Image', 'abcbiz-addons' ),
 				],
 			]
 		);
@@ -63,7 +63,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_icon',
 			[
-				'label' => esc_html__( 'Choose Icon', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Choose Icon', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
 				'condition' => [
 					'abcbiz_elementor_flip_box_icon_img_selection' => 'icon',
@@ -75,7 +75,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Choose Image', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -90,9 +90,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_title',
 			[
-				'label' => esc_html__( 'Front Title', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Front Title', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Box front heading', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Box front heading', 'abcbiz-addons' ),
 			]
 		);
 
@@ -100,10 +100,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_desc',
 			[
-				'label' => esc_html__( 'Front Description', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Front Description', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 6,
-				'default' => esc_html__( 'Front paragraph content goes here.', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Front paragraph content goes here.', 'abcbiz-addons' ),
 			]
 		);
 
@@ -114,7 +114,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_flip_box_back_contents',
 			[
-				'label' => esc_html__( 'Back Contents', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Back Contents', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -123,9 +123,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_title',
 			[
-				'label' => esc_html__( 'Back Title', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Back Title', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Box back heading', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Box back heading', 'abcbiz-addons' ),
 			]
 		);
 
@@ -133,10 +133,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_desc',
 			[
-				'label' => esc_html__( 'Back Description', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Back Description', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 6,
-				'default' => esc_html__( 'Back paragraph content goes here.', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Back paragraph content goes here.', 'abcbiz-addons' ),
 			]
 		);
 
@@ -144,9 +144,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn',
 			[
-				'label' => esc_html__( 'Back Button Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Back Button Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Click Here', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Click Here', 'abcbiz-addons' ),
 			]
 		);
 
@@ -154,7 +154,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_link',
 			[
-				'label' => esc_html__( 'Button Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -173,7 +173,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_flip_box_settings',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -182,24 +182,24 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_page_title_align',
 			[
-				'label' => esc_html__( 'Flipping Direction', 'abcbiz-multi'),
+				'label' => esc_html__( 'Flipping Direction', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'abcbiz-right-flip',
 				'options' => [
 					'abcbiz-left-flip'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-h-align-left',
 					],
 					'abcbiz-right-flip' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-h-align-right',
 					],
 					'abcbiz-top-flip' => [
-						'title' => esc_html__( 'Top', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Top', 'abcbiz-addons' ),
 						'icon' => 'eicon-v-align-top',
 					],
 					'abcbiz-bottom-flip' => [
-						'title' => esc_html__( 'Bottom', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Bottom', 'abcbiz-addons' ),
 						'icon' => 'eicon-v-align-bottom',
 					],
 				],				
@@ -210,7 +210,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_width',
 			[
-				'label' => esc_html__( 'Box Width', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Box Width', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -233,7 +233,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_height',
 			[
-				'label' => esc_html__( 'Box Height', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Box Height', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -256,7 +256,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_bg_color',
 			[
-				'label' => esc_html__( 'Box Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Box Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-flip-box' => 'background-color: {{VALUE}}',
@@ -277,7 +277,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'default' => [
@@ -301,7 +301,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_flip_box_front_style',
 			[
-				'label' => esc_html__( 'Front Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Front Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -309,7 +309,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_flip_box_front_padding',
 		    [
-		        'label' => esc_html__( 'Padding', 'abcbiz-multi' ),
+		        'label' => esc_html__( 'Padding', 'abcbiz-addons' ),
 		        'type' => \Elementor\Controls_Manager::DIMENSIONS,
 		        'size_units' => [ 'px', '%', 'em' ],
 		        'selectors' => [
@@ -321,7 +321,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ededed',
 				'selectors' => [
@@ -334,7 +334,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -362,7 +362,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 				'abcbiz_elementor_flip_box_front_icon_color',
 				[
-					'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 					'type'  => Controls_Manager::COLOR,
 					'default' => '#2f3093',
 					'selectors' => [
@@ -379,7 +379,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_icon_spacing',
 			[
-				'label' => esc_html__( 'Icon Bottom Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Bottom Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -406,7 +406,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_image_size',
 			[
-				'label' => esc_html__( 'Image Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Image Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -433,7 +433,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_image_spacing',
 			[
-				'label' => esc_html__( 'Image Bottom Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Image Bottom Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -460,7 +460,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 				'abcbiz_elementor_flip_box_front_image_border_radius',
 				[
-					'label' => esc_html__( 'Image Border Radius', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Image Border Radius', 'abcbiz-addons' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px' ],
 					'default' => [
@@ -486,7 +486,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_flip_box_front_heading_typography',
-					'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} .abcbiz-flip-box-front h2',
 				]
 			);
@@ -495,7 +495,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_heading_color',
 			[
-				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#2f3093',
 				'selectors' => [
@@ -508,7 +508,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_front_heading_spacing',
 			[
-				'label' => esc_html__( 'Heading Bottom Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Bottom Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -533,7 +533,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_flip_box_front_desc_typography',
-					'label' => esc_html__( 'Description Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Description Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} p.abcbiz-front-description',
 				]
 			);
@@ -542,7 +542,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_desc_color',
 			[
-				'label' => esc_html__( 'Description Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Description Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -564,7 +564,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_front_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'default' => [
@@ -588,7 +588,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_flip_box_back_style',
 			[
-				'label' => esc_html__( 'Back Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Back Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -596,7 +596,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_back_padding',
 			[
-				'label' => esc_html__( 'Padding', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Padding', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em' ],
 				'selectors' => [
@@ -609,7 +609,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#2f3093',
 				'selectors' => [
@@ -623,7 +623,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_flip_box_back_heading_typography',
-					'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} .abcbiz-flip-box-back h3',
 				]
 			);
@@ -632,7 +632,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_heading_color',
 			[
-				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -645,7 +645,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_back_heading_spacing',
 			[
-				'label' => esc_html__( 'Heading Bottom Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Bottom Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -670,7 +670,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_flip_box_back_desc_typography',
-					'label' => esc_html__( 'Description Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Description Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} p.abcbiz-back-description',
 				]
 			);
@@ -679,7 +679,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_desc_color',
 			[
-				'label' => esc_html__( 'Description Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Description Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -692,7 +692,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_flip_box_back_desc_spacing',
 			[
-				'label' => esc_html__( 'Description Bottom Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Description Bottom Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -725,7 +725,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'default' => [
@@ -749,7 +749,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 				'abcbiz_elementor_flip_box_back_btn_style',
 				[
-					'label' => esc_html__( 'Back Button Style', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Back Button Style', 'abcbiz-addons' ),
 					'tab' => Controls_Manager::TAB_STYLE,
 				]
 			);
@@ -759,7 +759,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_flip_box_back_btn_typography',
-				'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-flip-back-btn a',
 			]
 		);
@@ -768,7 +768,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -790,7 +790,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'default' => [
@@ -811,7 +811,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_spacing',
 			[
-				'label' => esc_html__( 'Button Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px' ],
 				'default' => [
@@ -832,7 +832,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_text_hov_color',
 			[
-				'label' => esc_html__( 'Hover Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -845,7 +845,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_flip_box_back_btn_bg_hov_color',
 			[
-				'label' => esc_html__( 'Hover Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#633396',
 				'selectors' => [

@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-checkout';
 		protected $title = 'ABC Checkout Page';
-		protected $icon = 'eicon-checkout abcbiz-multi-icon';
+		protected $icon = 'eicon-checkout abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -31,7 +31,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_checkout_page_info_style',
 			[
-				'label' => esc_html__( 'Info Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Info Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -40,7 +40,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_checkout_page_info_border_color',
 			[
-				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#6f45ed',
 				'selectors' => [
@@ -54,7 +54,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_checkout_page_info_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#f6f5f8',
 				'selectors' => [
@@ -67,7 +67,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_checkout_page_info_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -80,7 +80,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_checkout_page_info_link_color',
 			[
-				'label' => esc_html__( 'Link Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Link Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -94,7 +94,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_checkout_page_info_text_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-info',
 			]
 		);
@@ -105,7 +105,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_checkout_page_billing_style',
 			[
-				'label' => esc_html__( 'Billing Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Billing Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -115,7 +115,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_checkout_page_billing_heading_typography',
-				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields h3',
 			]
 		);
@@ -124,7 +124,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_billing_heading_color',
 			[
-				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -138,7 +138,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_checkout_page_billing_label_typography',
-				'label' => esc_html__( 'Label Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Label Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-billing-fields label',
 			]
 		);
@@ -147,7 +147,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_billing_label_color',
 			[
-				'label' => esc_html__( 'Label Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Label Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -160,7 +160,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_billing_input_spacing',
 			[
-				'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -192,7 +192,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_checkout_page_order_review_style',
 			[
-				'label' => esc_html__( 'Order Review Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Order Review Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -202,7 +202,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_checkout_page_review_heading_typography',
-				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page h3#order_review_heading',
 			]
 		);
@@ -211,7 +211,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_review_heading_color',
 			[
-				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -224,7 +224,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_review_data_color',
 			[
-				'label' => esc_html__( 'Data Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Data Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -237,7 +237,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_review_border_color',
 			[
-				'label' => esc_html__( 'Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => 'rgba(0,0,0,.1)',
 				'selectors' => [
@@ -252,7 +252,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_checkout_page_order_btn_style',
 			[
-				'label' => esc_html__( 'Order Button Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Order Button Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -262,7 +262,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_checkout_page_order_btn_typography',
-				'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .place-order button.button.alt',
 			]
 		);
@@ -271,7 +271,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_order_btn_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_order_btn_bg_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -297,7 +297,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_order_btn_hov_color',
 			[
-				'label' => esc_html__( 'Text Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -310,7 +310,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_order_btn_hov_bg_color',
 			[
-				'label' => esc_html__( 'Hover BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover BG Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#6A0AD5',
 				'selectors' => [
@@ -323,7 +323,7 @@ class Main extends BaseWidget {
 			$this->add_control(
 				'abcbiz_elementor_wc_checkout_page_order_btn_spacing',
 				[
-					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-addons' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px'],
 					'default' => [
@@ -344,7 +344,7 @@ class Main extends BaseWidget {
 			$this->add_control(
 				'abcbiz_elementor_wc_checkout_page_order_btn_border_radius',
 				[
-					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Input Fields Spacing', 'abcbiz-addons' ),
 					'type' => \Elementor\Controls_Manager::DIMENSIONS,
 					'size_units' => [ 'px'],
 					'default' => [
@@ -367,7 +367,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_checkout_page_add_info_style',
 			[
-				'label' => esc_html__( 'Additional Info Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Additional Info Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -377,7 +377,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_checkout_page_add_heading_typography',
-				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields h3',
 			]
 		);
@@ -386,7 +386,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_add_heading_color',
 			[
-				'label' => esc_html__( 'Heading Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [
@@ -400,7 +400,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_checkout_page_add_label_typography',
-				'label' => esc_html__( 'Heading Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-checkout-page .woocommerce-additional-fields label',
 			]
 		);
@@ -409,7 +409,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_checkout_page_add_label_color',
 			[
-				'label' => esc_html__( 'Label Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Label Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#1D56E6',
 				'selectors' => [

@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-related-post';
     protected $title = 'ABC Related Post';
-    protected $icon = 'eicon-product-related abcbiz-multi-icon';
+    protected $icon = 'eicon-product-related abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -33,7 +33,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_related_post_style_section',
             [
-                'label' => esc_html__('Related Post Style', 'abcbiz-multi'),
+                'label' => esc_html__('Related Post Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -43,7 +43,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_related_post_heading_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -56,7 +56,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_related_post_heading_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#04801d',
                 'selectors' => [
@@ -70,7 +70,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_related_post_heading_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-related-post-heading',
             ]
         );

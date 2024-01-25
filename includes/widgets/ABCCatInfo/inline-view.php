@@ -20,7 +20,7 @@ $count = count($categories);
 
 if ( ! empty( $categories ) ) {
     foreach( $categories as $index => $category ) {
-        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( __( 'View all posts in %s', 'abcbiz-multi' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>';
+        $output .= '<a href="' . esc_url( get_category_link( $category->term_id ) ) . '" title="' . esc_attr( sprintf( __( 'View all posts in %s', 'abcbiz-addons' ), $category->name ) ) . '">' . esc_html( $category->name ) . '</a>';
         
         // Add separator if not the last iteration
         if ($index < $count - 1) {

@@ -146,13 +146,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if (get_option('abcbiz_archive_title_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCArchiveTitle\Main::class;
 		}
-		
-		
-		
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
-		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-multi-wc-widgets.php';
+		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-addons-wc-widgets.php';
 		}
 
 		foreach ($abcbiz_widgets as $widget_class) {

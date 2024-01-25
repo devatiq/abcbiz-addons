@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-cat-info';
     protected $title = 'ABC Post Category';
-    protected $icon = 'eicon-apps  abcbiz-multi-icon';
+    protected $icon = 'eicon-apps  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -33,7 +33,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_post_cat_setting',
             [
-                'label' => esc_html__('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,12 +42,12 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_post_cat_type',
 			[
-				'label' => esc_html__( 'Display Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Display Style', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'inline',
 				'options' => [
-					'inline' => esc_html__( 'Inline View', 'abcbiz-multi' ),
-					'list'  => esc_html__( 'List View', 'abcbiz-multi' ),
+					'inline' => esc_html__( 'Inline View', 'abcbiz-addons' ),
+					'list'  => esc_html__( 'List View', 'abcbiz-addons' ),
 				],
 			]
 		);
@@ -56,20 +56,20 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abcbiz_elementor_post_cat_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'left',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -85,7 +85,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_post_cat_style_section',
             [
-                'label' => esc_html__('Category Style', 'abcbiz-multi'),
+                'label' => esc_html__('Category Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -94,10 +94,10 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_post_cat_icon',
 			[
-				'label' => esc_html__( 'Display Icon?', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Display Icon?', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Yes', 'abcbiz-multi' ),
-				'label_off' => esc_html__( 'No', 'abcbiz-multi' ),
+				'label_on' => esc_html__( 'Yes', 'abcbiz-addons' ),
+				'label_off' => esc_html__( 'No', 'abcbiz-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
                 'condition' => [
@@ -111,7 +111,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_post_cat_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-post-cat',
             ]
         );
@@ -120,7 +120,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_cat_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -133,7 +133,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_cat_hover_color',
             [
-                'label' => esc_html__('Text Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#c436f7',
                 'selectors' => [
@@ -146,7 +146,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_cat_sep_color',
             [
-                'label' => esc_html__('Separator Color', 'abcbiz-multi'),
+                'label' => esc_html__('Separator Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -162,7 +162,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_post_cat_sep_space',
 			[
-				'label' => esc_html__( 'Separator Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Separator Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -189,7 +189,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_post_cat_icon_color',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -206,7 +206,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_post_cat_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -234,7 +234,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_post_cat_item_space',
 			[
-				'label' => esc_html__( 'Item Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Item Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -262,7 +262,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_post_cat_icon_space',
 			[
-				'label' => esc_html__( 'Icon Space', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [

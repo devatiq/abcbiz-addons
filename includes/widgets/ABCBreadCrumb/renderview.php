@@ -41,10 +41,10 @@ if (!function_exists('abcbiz_multi_breadcrumb')) {
             echo '<span class="current">' . esc_html(get_the_title()) . '</span>';
         } elseif (is_search()) {
             // Search results
-            echo '<span class="current">' . esc_html__('Search Results', 'abcbiz-multi') . '</span>';
+            echo '<span class="current">' . esc_html__('Search Results', 'abcbiz-addons') . '</span>';
         } elseif (is_404()) {
             // 404 page
-            echo '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-multi') . '</span>';
+            echo '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-addons') . '</span>';
         }
     
         echo '</div>';

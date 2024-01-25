@@ -55,7 +55,7 @@
                         <h3 class="abcbiz-ele-blog-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         <div class="abcbiz-ele-blog-meta">
                             <?php if ($abcbiz_date_switch === 'yes') : ?><span class="posted-on"><i class="eicon-calendar"></i> <?php the_time(get_option('date_format')); ?></span><?php endif; ?>
-                            <?php if ($abcbiz_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="eicon-instagram-comments"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-multi'), esc_html__('1 Comment', 'abcbiz-multi'), esc_html__('% Comments', 'abcbiz-multi')); ?></a></span><?php endif; ?>
+                            <?php if ($abcbiz_comment_switch === 'yes') : ?><span class="comment-link"><a href="<?php comments_link(); ?>"><i class="eicon-instagram-comments"></i> <?php comments_number(esc_html__('Leave a comment', 'abcbiz-addons'), esc_html__('1 Comment', 'abcbiz-addons'), esc_html__('% Comments', 'abcbiz-addons')); ?></a></span><?php endif; ?>
                         </div>
 
                         <?php if ($abcbiz_excerpt_switch === 'yes') : ?>
@@ -100,7 +100,7 @@
 
         <?php else : ?>
             <div class="clearfix"></div>
-            <h3 class="post-title"><?php esc_html_e('No Post Found', 'abcbiz-multi'); ?></h3>
+            <h3 class="post-title"><?php esc_html_e('No Post Found', 'abcbiz-addons'); ?></h3>
         <?php
             wp_reset_postdata();
         endif; ?>

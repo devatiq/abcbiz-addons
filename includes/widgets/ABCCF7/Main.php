@@ -12,7 +12,7 @@ class Main extends BaseWidget
 {
     protected $name = 'abcbiz-elementor-cfs7';
     protected $title = 'ABC Contact Form 7 Style';
-    protected $icon = 'eicon-form-horizontal  abcbiz-multi-icon';
+    protected $icon = 'eicon-form-horizontal  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -37,7 +37,7 @@ class Main extends BaseWidget
                 $formlist[$form->ID] = $form->post_title;
             }
         }else{
-            $formlist['0'] = esc_html__('Form not found', 'abcbiz-multi');
+            $formlist['0'] = esc_html__('Form not found', 'abcbiz-addons');
         }
         return $formlist;
     }
@@ -51,7 +51,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_contact_form_setting',
             [
-                'label' => esc_html__('Contact Form 7 Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Contact Form 7 Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -60,7 +60,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_contact_form_shortcode',
             [
-                'label' => esc_html__('Select Form', 'abcbiz-multi'),
+                'label' => esc_html__('Select Form', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'options' => $this->abcbiz_contact_form_shortcodes(),
             ]
@@ -73,7 +73,7 @@ class Main extends BaseWidget
          $this->start_controls_section(
             'abcbiz_elementor_cf7_label_style_setting',
             [
-                'label' => esc_html__('Label Style', 'abcbiz-multi'),
+                'label' => esc_html__('Label Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -83,7 +83,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_cf7_label_typography',
-                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area label',
             ]
         );
@@ -92,7 +92,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_label_typography',
             [
-                'label' => esc_html__('Label Color', 'abcbiz-multi'),
+                'label' => esc_html__('Label Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -107,7 +107,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_input_style_setting',
             [
-                'label' => esc_html__('Input Fields', 'abcbiz-multi'),
+                'label' => esc_html__('Input Fields', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -116,7 +116,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_height',
             [
-                'label' => esc_html__('Height', 'abcbiz-multi'),
+                'label' => esc_html__('Height', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -141,7 +141,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_ele_cf7_input_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap input',
             ]
         );
@@ -150,7 +150,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -163,7 +163,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -176,7 +176,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_input_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -189,7 +189,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_ele_cf7_input_text_bg_color',
             [
-                'label' => esc_html__('Field Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Field Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#f1f1f1',
                 'selectors' => [
@@ -204,7 +204,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_input_text_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -219,7 +219,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_input_text_placeholder_color',
             [
-                'label' => esc_html__('Placeholder Color', 'abcbiz-multi'),
+                'label' => esc_html__('Placeholder Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -234,7 +234,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_cf7_input_text_placeholder_typography',
-                'label' => esc_html__('Placeholder Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Placeholder Typography', 'abcbiz-addons'),
                 'selector' =>'{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap input::placeholder, {{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap textarea::placeholder',
             ]
         );
@@ -246,7 +246,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_textarea_style_setting',
             [
-                'label' => esc_html__('Textarea', 'abcbiz-multi'),
+                'label' => esc_html__('Textarea', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -255,7 +255,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_height',
             [
-                'label' => esc_html__('Height', 'abcbiz-multi'),
+                'label' => esc_html__('Height', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -280,7 +280,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_ele_cf7_textarea_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper .wpcf7-form-control-wrap textarea',
             ]
         );
@@ -289,7 +289,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -302,7 +302,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -315,7 +315,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_textarea_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -331,7 +331,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_submit_button_style_setting',
             [
-                'label' => esc_html__('Submit Button', 'abcbiz-multi'),
+                'label' => esc_html__('Submit Button', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -341,7 +341,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_cf7_submit_button_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit',
             ]
         );
@@ -350,7 +350,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -363,7 +363,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_margin',
             [
-                'label' => esc_html__('Margin', 'abcbiz-multi'),
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', 'em', '%'],
                 'selectors' => [
@@ -376,7 +376,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_text_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -389,7 +389,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#53a6d6',
                 'selectors' => [
@@ -403,7 +403,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_ele_cf7_submit_button_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} #abcbiz-ele-contact-form-wrapper input[type="submit"].wpcf7-form-control.wpcf7-submit',
             ]
         );  
@@ -412,7 +412,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_cf7_submit_button_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -425,7 +425,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_text_color',
             [
-                'label' => esc_html__('Hover Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -438,7 +438,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_bg_color',
             [
-                'label' => esc_html__('Hover Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#b039f5',
                 'selectors' => [
@@ -451,7 +451,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_cf7_submit_button_hover_border_color',
             [
-                'label' => esc_html__('Hover Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#b039f5',
                 'selectors' => [
@@ -467,7 +467,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_submit_radio_button_style_setting',
             [
-                'label' => esc_html__('Radio Button', 'abcbiz-multi'),
+                'label' => esc_html__('Radio Button', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -477,7 +477,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_cf7_radio_label_typography',
-                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-radio .wpcf7-list-item-label',
             ]
         );
@@ -486,7 +486,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_cf7_radio_button_size',
 			[
-				'label' => esc_html__( 'Radio Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Radio Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -510,7 +510,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_radio_button_bg_color',
             [
-                'label' => esc_html__('Radio Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Radio Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#f2f2f2',
                 'selectors' => [
@@ -523,7 +523,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_cf7_radio_button_bg_selected_color',
             [
-                'label' => esc_html__('Selected Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Selected Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#4246ec',
                 'selectors' => [
@@ -536,7 +536,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_cf7_radio_button_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#cccccc',
                 'selectors' => [
@@ -549,7 +549,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_cf7_radio_button_item_spacing',
 			[
-				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Item Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -573,7 +573,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_submit_checkbox_style_setting',
             [
-                'label' => esc_html__('Checkbox Style', 'abcbiz-multi'),
+                'label' => esc_html__('Checkbox Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -583,7 +583,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_cf7_checkbox_label_typography',
-                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-checkbox .wpcf7-list-item-label',
             ]
         );
@@ -592,7 +592,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_cf7_checkbox_size',
 			[
-				'label' => esc_html__( 'Checkbox Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Checkbox Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -616,7 +616,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_checkbox_bg_color',
             [
-                'label' => esc_html__('Checkbox Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Checkbox Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#f2f2f2',
                 'selectors' => [
@@ -629,7 +629,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_cf7_checkbox_bg_selected_color',
             [
-                'label' => esc_html__('Selected Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Selected Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#4246ec',
                 'selectors' => [
@@ -642,7 +642,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_cf7_checkbox_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#cccccc',
                 'selectors' => [
@@ -655,7 +655,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_cf7_checkbox_item_spacing',
 			[
-				'label' => esc_html__( 'Item Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Item Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -679,7 +679,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_cf7_submit_response_sms_style',
             [
-                'label' => esc_html__('Response Message', 'abcbiz-multi'),
+                'label' => esc_html__('Response Message', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -689,7 +689,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_cf7_submit_response_sms_typography',
-                'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-contact-form-7-area .wpcf7-response-output',
             ]
         );
@@ -698,7 +698,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_submit_response_sms_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -711,7 +711,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_submit_response_sms_err_order_color',
             [
-                'label' => esc_html__('Error Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Error Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffb900',
                 'selectors' => [
@@ -724,7 +724,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_cf7_submit_response_sms_sent_border_color',
             [
-                'label' => esc_html__('Success Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Success Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#46b450',
                 'selectors' => [

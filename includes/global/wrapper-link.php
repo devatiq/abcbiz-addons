@@ -18,7 +18,7 @@ class ABCbiz_Wrapper_link {
         $element->start_controls_section(
             'abcbiz_section_custom_wrapper_link',
             [
-                'label' => __('ABC Wrapper Link', 'abcbiz-multi'),
+                'label' => __('ABC Wrapper Link', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -26,14 +26,14 @@ class ABCbiz_Wrapper_link {
         $element->add_control(
             'abcbiz_custom_wrapper_link',
             [
-                'label' => __('Wrapper Link', 'abcbiz-multi'),
+                'label' => __('Wrapper Link', 'abcbiz-addons'),
                 'type' => Controls_Manager::URL,
                 'options' => [ 'url', 'is_external'],
                 'dynamic' => [
                     'active' => true,
                 ],
-                'placeholder' => __('https://your-link.com', 'abcbiz-multi'),
-                'description' => __('Add a custom link to wrap this widget.', 'abcbiz-multi'),
+                'placeholder' => __('https://your-link.com', 'abcbiz-addons'),
+                'description' => __('Add a custom link to wrap this widget.', 'abcbiz-addons'),
             ]
         );
 

@@ -19,7 +19,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-account';
 		protected $title = 'ABC Woo My Account';
-		protected $icon = 'eicon-my-account abcbiz-multi-icon';
+		protected $icon = 'eicon-my-account abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -33,19 +33,19 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_account_content',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_style_orientation',
 		    [
-		        'label' => esc_html__('Style Orientation', 'abcbiz-multi'),
+		        'label' => esc_html__('Style Orientation', 'abcbiz-addons'),
 		        'type' => Controls_Manager::SELECT,
 		        'default' => 'horizontal',
 		        'options' => [
-		            'horizontal' => esc_html__('Horizontal', 'abcbiz-multi'),
-		            'vertical' => esc_html__('Vertical', 'abcbiz-multi'),
+		            'horizontal' => esc_html__('Horizontal', 'abcbiz-addons'),
+		            'vertical' => esc_html__('Vertical', 'abcbiz-addons'),
 		        ],
 		        'separator' => 'before',
 		    ]
@@ -55,19 +55,19 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_align_items_icon',
 		    [
-		        'label' => esc_html__('Tabs Align', 'abcbiz-multi'),
+		        'label' => esc_html__('Tabs Align', 'abcbiz-addons'),
 		        'type' => Controls_Manager::CHOOSE,
 		        'options' => [
 		            'flex-start' => [
-		                'title' => esc_html__('Start', 'abcbiz-multi'),
+		                'title' => esc_html__('Start', 'abcbiz-addons'),
 		                'icon' => 'eicon-h-align-left',
 		            ],
 		            'center' => [
-		                'title' => esc_html__('Center', 'abcbiz-multi'),
+		                'title' => esc_html__('Center', 'abcbiz-addons'),
 		                'icon' => 'eicon-h-align-center',
 		            ],
 		            'flex-end' => [
-		                'title' => esc_html__('End', 'abcbiz-multi'),
+		                'title' => esc_html__('End', 'abcbiz-addons'),
 		                'icon' => 'eicon-h-align-right',
 		            ],
 		        ],
@@ -87,7 +87,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 		    'abcbiz_elementor_wc_account_general_style',
 		    [
-		        'label' => esc_html__( 'General Style', 'abcbiz-multi' ),
+		        'label' => esc_html__( 'General Style', 'abcbiz-addons' ),
 		        'tab' => Controls_Manager::TAB_STYLE,
 		    ]
 		);
@@ -95,7 +95,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_gap',
 		    [
-		        'label' => esc_html__( 'Gap', 'abcbiz-multi' ),
+		        'label' => esc_html__( 'Gap', 'abcbiz-addons' ),
 		        'type' => Controls_Manager::SLIDER,
 		        'size_units' => [ 'px', '%' ],
 		        'range' => [
@@ -121,7 +121,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 		    'abcbiz_elementor_wc_account_tab_style',
 		    [
-		        'label' => esc_html__('Tabs Style', 'abcbiz-multi'),
+		        'label' => esc_html__('Tabs Style', 'abcbiz-addons'),
 		        'tab' => Controls_Manager::TAB_STYLE,
 		    ]
 		);
@@ -138,7 +138,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_menu_item_gap',
 		    [
-		        'label' => esc_html__('Menu Gap', 'abcbiz-multi'),
+		        'label' => esc_html__('Menu Gap', 'abcbiz-addons'),
 		        'type' => Controls_Manager::SLIDER,
 		        'size_units' => ['px', '%'],
 		        'range' => [
@@ -171,7 +171,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_tab_padding',
 		    [
-		        'label' => esc_html__('Padding', 'abcbiz-multi'),
+		        'label' => esc_html__('Padding', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', 'em', '%'],
 		        'selectors' => [
@@ -183,7 +183,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_tab_border_radius',
 		    [
-		        'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+		        'label' => esc_html__('Border Radius', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%'],
 		        'selectors' => [
@@ -196,7 +196,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_menu_width',
 		    [
-		        'label' => esc_html__('Menu Width', 'abcbiz-multi'),
+		        'label' => esc_html__('Menu Width', 'abcbiz-addons'),
 		        'type' => Controls_Manager::SLIDER,
 		        'size_units' => ['px', 'em', '%'],
 		        'range' => [
@@ -228,14 +228,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 		    'abcbiz_elementor_wc_account_tab_normal',
 		    [
-		        'label' => esc_html__('Normal', 'abcbiz-multi'),
+		        'label' => esc_html__('Normal', 'abcbiz-addons'),
 		    ]
 		);
 
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_tab_text_color',
 		    [
-		        'label' => esc_html__('Text Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Text Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a' => 'color: {{VALUE}};',
@@ -246,7 +246,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_tab_background_color',
 		    [
-		        'label' => esc_html__('Background Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Background Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a' => 'background-color: {{VALUE}};',
@@ -260,14 +260,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 		    'abcbiz_elementor_wc_account_tab_hover',
 		    [
-		        'label' => esc_html__('Hover', 'abcbiz-multi'),
+		        'label' => esc_html__('Hover', 'abcbiz-addons'),
 		    ]
 		);
 
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_tab_hover_text_color',
 		    [
-		        'label' => esc_html__('Text Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Text Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a:hover' => 'color: {{VALUE}};',
@@ -279,7 +279,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_tab_hover_background_color',
 		    [
-		        'label' => esc_html__('Background Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Background Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a:hover' => 'background-color: {{VALUE}};',
@@ -291,7 +291,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_tab_hover_border_color',
 		    [
-		        'label' => esc_html__('Border Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Border Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-navigation ul a:hover' => 'border-color: {{VALUE}};',
@@ -311,7 +311,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 		    'abcbiz_elementor_wc_account_content_section',
 		    [
-		        'label' => esc_html__('Content Style', 'abcbiz-multi'),
+		        'label' => esc_html__('Content Style', 'abcbiz-addons'),
 		        'tab' => Controls_Manager::TAB_STYLE,
 		    ]
 		);
@@ -320,7 +320,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_text_color',
 		    [
-		        'label' => esc_html__('Text Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Text Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content' => 'color: {{VALUE}};',
@@ -332,7 +332,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_link_color',
 		    [
-		        'label' => esc_html__('Link Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Link Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content a' => 'color: {{VALUE}};',
@@ -344,7 +344,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_background_color',
 		    [
-		        'label' => esc_html__('Background Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Background Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content' => 'background-color: {{VALUE}};',
@@ -356,7 +356,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_padding',
 		    [
-		        'label' => esc_html__('Padding', 'abcbiz-multi'),
+		        'label' => esc_html__('Padding', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%', 'em'],
 		        'selectors' => [
@@ -369,7 +369,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_margin',
 		    [
-		        'label' => esc_html__('Margin', 'abcbiz-multi'),
+		        'label' => esc_html__('Margin', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%', 'em'],
 		        'selectors' => [
@@ -382,7 +382,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_content_border_radius',
 		    [
-		        'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+		        'label' => esc_html__('Border Radius', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%'],
 		        'selectors' => [
@@ -396,7 +396,7 @@ class Main extends BaseWidget {
 		    Group_Control_Border::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_content_border',
-		        'label' => esc_html__('Border', 'abcbiz-multi'),
+		        'label' => esc_html__('Border', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content',
 		    ]
 		);
@@ -406,7 +406,7 @@ class Main extends BaseWidget {
 		    Group_Control_Typography::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_content_typography',
-		        'label' => esc_html__('Typography', 'abcbiz-multi'),
+		        'label' => esc_html__('Typography', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content',
 		    ]
 		);
@@ -417,7 +417,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 		    'abcbiz_elementor_wc_account_input_fields_style',
 		    [
-		        'label' => esc_html__('Input Fields', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Fields', 'abcbiz-addons'),
 		        'tab' => Controls_Manager::TAB_STYLE,
 		    ]
 		);
@@ -426,7 +426,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_label_color',
 		    [
-		        'label' => esc_html__('Label Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Label Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row label' => 'color: {{VALUE}};',
@@ -439,7 +439,7 @@ class Main extends BaseWidget {
 		    Group_Control_Typography::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_label_typography',
-		        'label' => esc_html__('Label Typography', 'abcbiz-multi'),
+		        'label' => esc_html__('Label Typography', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row label',
 		    ]
 		);
@@ -449,7 +449,7 @@ class Main extends BaseWidget {
 		    Group_Control_Typography::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_input_typography',
-		        'label' => esc_html__('Input Typography', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Typography', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row input.input-text, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row select, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row textarea',
 		    ]
 		);
@@ -458,7 +458,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_input_padding',
 		    [
-		        'label' => esc_html__('Input Padding', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Padding', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', 'em', '%'],
 		        'selectors' => [
@@ -471,7 +471,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_input_gap',
 		    [
-		        'label' => esc_html__('Input Gap', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Gap', 'abcbiz-addons'),
 		        'type' => Controls_Manager::SLIDER,
 		        'range' => [
 		            'px' => [
@@ -489,7 +489,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 		    'abcbiz_elementor_wc_account_input_color',
 		    [
-		        'label' => esc_html__('Input Color', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Color', 'abcbiz-addons'),
 		        'type' => Controls_Manager::COLOR,
 		        'selectors' => [
 		            '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row input.input-text, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row select, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row textarea' => 'color: {{VALUE}};',
@@ -502,7 +502,7 @@ class Main extends BaseWidget {
 		    Group_Control_Border::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_input_border',
-		        'label' => esc_html__('Input Border', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Border', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row input.input-text, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row select, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row textarea',
 		    ]
 		);
@@ -511,7 +511,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_input_border_radius',
 		    [
-		        'label' => esc_html__('Input Border Radius', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Border Radius', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%'],
 		        'selectors' => [
@@ -524,7 +524,7 @@ class Main extends BaseWidget {
 		    Group_Control_Background::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_input_background',
-		        'label' => esc_html__('Input Background', 'abcbiz-multi'),
+		        'label' => esc_html__('Input Background', 'abcbiz-addons'),
 		        'types' => ['classic'],
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row input.input-text, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row select, {{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce .woocommerce-MyAccount-content .form-row textarea',
 		    ]
@@ -536,7 +536,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_account_button_style',
 			[
-				'label' => esc_html__( 'Button', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -554,7 +554,7 @@ class Main extends BaseWidget {
 		    Group_Control_Border::get_type(),
 		    [
 		        'name' => 'abcbiz_elementor_wc_account_button_border',
-		        'label' => esc_html__('Border', 'abcbiz-multi'),
+		        'label' => esc_html__('Border', 'abcbiz-addons'),
 		        'selector' => '{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button',
 		    ]
 		);
@@ -562,7 +562,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_button_border_radius',
 		    [
-		        'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+		        'label' => esc_html__('Border Radius', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', '%'],
 		        'selectors' => [
@@ -575,7 +575,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_button_padding',
 		    [
-		        'label' => esc_html__('Padding', 'abcbiz-multi'),
+		        'label' => esc_html__('Padding', 'abcbiz-addons'),
 		        'type' => Controls_Manager::DIMENSIONS,
 		        'size_units' => ['px', 'em', '%'],
 		        'selectors' => [
@@ -588,7 +588,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 		    'abcbiz_elementor_wc_account_button_margin',
 			[
-				'label' => esc_html__('Margin', 'abcbiz-multi'),
+				'label' => esc_html__('Margin', 'abcbiz-addons'),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => ['px', 'em', '%'],
 				'selectors' => [
@@ -602,14 +602,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_wc_account_button_normal',
 			[
-				'label' => esc_html__('Normal', 'abcbiz-multi'),
+				'label' => esc_html__('Normal', 'abcbiz-addons'),
 			]
 		);
 		// Button Text Color
 		$this->add_control(
 			'abcbiz_elementor_wc_account_button_text_color_normal',
 			[
-				'label' => esc_html__('Text Color', 'abcbiz-multi'),
+				'label' => esc_html__('Text Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button' => 'color: {{VALUE}};',
@@ -620,7 +620,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_account_button_bg_color_normal',
 			[
-				'label' => esc_html__('Background Color', 'abcbiz-multi'),
+				'label' => esc_html__('Background Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button' => 'background-color: {{VALUE}};',
@@ -634,14 +634,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_wc_account_button_hover',
 			[
-				'label' => esc_html__('Hover', 'abcbiz-multi'),
+				'label' => esc_html__('Hover', 'abcbiz-addons'),
 			]
 		);
 		// Button hover Text Color
 		$this->add_control(
 			'abcbiz_elementor_wc_account_button_text_color_hover',
 			[
-				'label' => esc_html__('Text Color', 'abcbiz-multi'),
+				'label' => esc_html__('Text Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button:hover' => 'color: {{VALUE}};',
@@ -652,7 +652,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_account_button_bg_color_hover',
 			[
-				'label' => esc_html__('Background Color', 'abcbiz-multi'),
+				'label' => esc_html__('Background Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-wc-account-page .woocommerce-MyAccount-content .button:hover' => 'background-color: {{VALUE}};',

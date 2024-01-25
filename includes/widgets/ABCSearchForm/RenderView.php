@@ -5,8 +5,8 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $abcbiz_settings = $this->get_settings_for_display();
-$abcbiz_placeholder_text = ! empty($abcbiz_settings['abcbiz_elementor_search_form_placeholder_text']) ? $abcbiz_settings['abcbiz_elementor_search_form_placeholder_text'] : esc_html__('Search...', 'abcbiz-multi');
-$abcbiz_submit_button_text = ! empty($abcbiz_settings['abcbiz_elementor_search_form_btn_text']) ? $abcbiz_settings['abcbiz_elementor_search_form_btn_text'] : esc_html__('Search', 'abcbiz-multi');
+$abcbiz_placeholder_text = ! empty($abcbiz_settings['abcbiz_elementor_search_form_placeholder_text']) ? $abcbiz_settings['abcbiz_elementor_search_form_placeholder_text'] : esc_html__('Search...', 'abcbiz-addons');
+$abcbiz_submit_button_text = ! empty($abcbiz_settings['abcbiz_elementor_search_form_btn_text']) ? $abcbiz_settings['abcbiz_elementor_search_form_btn_text'] : esc_html__('Search', 'abcbiz-addons');
 ?>
 
 <!-- Search Form Area-->

@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-search-form';
     protected $title = 'ABC Search Form';
-    protected $icon = 'eicon-site-search abcbiz-multi-icon';
+    protected $icon = 'eicon-site-search abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -31,7 +31,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_search_form_setting',
             [
-                'label' => esc_html__('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -39,18 +39,18 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_search_form_placeholder_text',
 			[
-				'label' => esc_html__( 'Placeholder Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Placeholder Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Search...', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Search...', 'abcbiz-addons' ),
 			]
 		);
 
         $this->add_control(
 			'abcbiz_elementor_search_form_btn_text',
 			[
-				'label' => esc_html__( 'Button Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Search', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Search', 'abcbiz-addons' ),
 			]
 		);
 
@@ -60,7 +60,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_search_form_style_section',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -70,7 +70,7 @@ class Main extends BaseWidget
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'abcbiz_elementor_search_btn_typography',
-                    'label' => esc_html__( 'Button Typography', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Button Typography', 'abcbiz-addons' ),
                     'selector' => '{{WRAPPER}} .abcbiz-ele-search-form input[type="submit"]',
                 ]
             );
@@ -80,7 +80,7 @@ class Main extends BaseWidget
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'abcbiz_elementor_search_placeholder_typography',
-                    'label' => esc_html__( 'Placeholder Typography', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Placeholder Typography', 'abcbiz-addons' ),
                     'selector' => '{{WRAPPER}} .abcbiz-ele-search-form input[type="text"]::placeholder',
                 ]
             );
@@ -89,7 +89,7 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_elementor_search_form_height',
                 [
-                    'label' => esc_html__( 'Form Height', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'Form Height', 'abcbiz-addons' ),
                     'type' => \Elementor\Controls_Manager::SLIDER,
                     'size_units' => ['px'],
                     'range' => [
@@ -114,7 +114,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_search_form_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#053D58',
                 'selectors' => [
@@ -127,7 +127,7 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_elementor_search_form_btn_style',
 			[
-				'label' => esc_html__( 'Button Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Style', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::HEADING,
 				'separator' => 'before',
 			]
@@ -139,14 +139,14 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_search_form_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'abcbiz_elementor_search_form_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
                 'default' => '#ffffff',
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
@@ -159,7 +159,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_search_form_btn_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ad07b0',
                 'selectors' => [
@@ -173,14 +173,14 @@ class Main extends BaseWidget
 		$this->start_controls_tab(
 			'abcbiz_elementor_search_form_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 	
 		$this->add_control(
 			'abcbiz_elementor_comment_form_reply_btn_hover_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
                 'default' => '#ffffff',
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
@@ -192,7 +192,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_search_form_btn_bg_hover_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#053D58',
                 'selectors' => [

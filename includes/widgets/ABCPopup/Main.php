@@ -17,7 +17,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-popup';
     protected $title = 'ABC Popup';
-    protected $icon = 'eicon-lightbox-expand abcbiz-multi-icon';
+    protected $icon = 'eicon-lightbox-expand abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -40,7 +40,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_popup_section',
             [
-                'label' => esc_html__('Popup', 'abcbiz-multi'),
+                'label' => esc_html__('Popup', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -48,13 +48,13 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_content_type',
             [
-                'label' => esc_html__('Content Type', 'abcbiz-multi'),
+                'label' => esc_html__('Content Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'text',
                 'options' => [
-                    'text'  => esc_html__('Text', 'abcbiz-multi'),
-                    'icon' => esc_html__('Icon', 'abcbiz-multi'),
-                    'image' => esc_html__('Image', 'abcbiz-multi'),
+                    'text'  => esc_html__('Text', 'abcbiz-addons'),
+                    'icon' => esc_html__('Icon', 'abcbiz-addons'),
+                    'image' => esc_html__('Image', 'abcbiz-addons'),
                 ],
             ]
         );
@@ -62,7 +62,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_text',
             [
-                'label' => esc_html__('Popup Text', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXTAREA,
                 'default' => 'Popup Text',
                 'condition' => [
@@ -74,7 +74,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_icon',
             [
-                'label' => esc_html__('Popup Icon', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Icon', 'abcbiz-addons'),
                 'type' => Controls_Manager::ICONS,                                             
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'icon',
@@ -85,7 +85,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_image',
             [
-                'label' => esc_html__('Popup Image', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Image', 'abcbiz-addons'),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => Utils::get_placeholder_image_src(),
@@ -100,7 +100,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_popup_img_alt_text',
             [
-                'label' => esc_html__('Image Alt Text', 'abcbiz-multi'),
+                'label' => esc_html__('Image Alt Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'ABC Popup',
                 'condition' => [
@@ -114,12 +114,12 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_type',
             [
-                'label' => esc_html__('Popup Type', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'video',
                 'options' => [
-                    'video' => esc_html__('Video', 'abcbiz-multi'),
-                    'gmap' => esc_html__('Google Map', 'abcbiz-multi'),
+                    'video' => esc_html__('Video', 'abcbiz-addons'),
+                    'gmap' => esc_html__('Google Map', 'abcbiz-addons'),
                 ],
             ]
         );
@@ -127,7 +127,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_video',
             [
-                'label' => esc_html__('Popup Video', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Video', 'abcbiz-addons'),
                 'type' => Controls_Manager::URL,
                 'default' => [
                     'url' => 'https://www.youtube.com/watch?v=qtNnAJOGCcw',
@@ -141,7 +141,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_gmap',
             [
-                'label' => esc_html__('Google Map', 'abcbiz-multi'),
+                'label' => esc_html__('Google Map', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXTAREA,
                 'default' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618057.6387792374!2d-86.44980745076629!3d27.678376067544153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4daec28b478b666b%3A0x40d7d670f849f542!2sSupreoX%20Limited%20USA!5e0!3m2!1sen!2sbd!4v1699363617377!5m2!1sen!2sbd',          
                 'condition' => [
@@ -157,7 +157,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_popup_style_section',
             [
-                'label' => esc_html__('Popup Style', 'abcbiz-multi'),
+                'label' => esc_html__('Popup Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -165,19 +165,19 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_alignment',
             [
-                'label' => esc_html__('Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-multi'),
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-multi'),
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -191,7 +191,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_text_style',
             [
-                'label' => esc_html__('Text Style', 'abcbiz-multi'),
+                'label' => esc_html__('Text Style', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -202,7 +202,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_text_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-text' => 'color: {{VALUE}};',
@@ -230,7 +230,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_popup_text_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-text',
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'text',
@@ -241,7 +241,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_text_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -256,7 +256,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_text_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -271,7 +271,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_icon_style',
             [
-                'label' => esc_html__('Icon Style', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Style', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -284,7 +284,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_icon_color',
             [
-                'label' => esc_html__('Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -302,7 +302,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz-elementor-popup-icon-background',
             [
-                'label' => esc_html__('Icon Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -320,7 +320,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_icon_hov_color',
             [
-                'label' => esc_html__('Icon Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -338,7 +338,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz-elementor-popup-icon-hov-background',
             [
-                'label' => esc_html__('Icon Hover Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Hover Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#b437f5',
                 'selectors' => [
@@ -357,7 +357,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_elementor_popup_icon_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon',
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'icon',
@@ -369,7 +369,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_icon_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -393,7 +393,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_icon_size',
             [
-                'label' => esc_html__('Icon Size', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'default' => [
                     'size' => 80,
@@ -417,7 +417,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_icon_padding',
             [
-                'label' => esc_html__('Icon Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -440,7 +440,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_image_style',
             [
-                'label' => esc_html__('Image Style', 'abcbiz-multi'),
+                'label' => esc_html__('Image Style', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
                 'condition' => [
@@ -453,7 +453,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
             'abcbiz_elementor_popup_image_width',
             [
-                'label' => esc_html__('Image Width', 'abcbiz-multi'),
+                'label' => esc_html__('Image Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -482,7 +482,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_elementor_popup_image_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-image img',
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'image',
@@ -493,7 +493,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_popup_image_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [

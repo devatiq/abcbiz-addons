@@ -16,7 +16,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wp-menu';
 		protected $title = 'ABC WordPress Menu';
-		protected $icon = 'eicon-nav-menu abcbiz-multi-icon';
+		protected $icon = 'eicon-nav-menu abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -42,7 +42,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wp_menu_settings',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -53,7 +53,7 @@ class Main extends BaseWidget {
             $this->add_control(
                 'abcbiz_elementor_wp_menu_selection',
                 [
-                    'label' => esc_html__('Select Menu', 'abcbiz-multi'),
+                    'label' => esc_html__('Select Menu', 'abcbiz-addons'),
                     'type' => Controls_Manager::SELECT,
                     'options' => $abcbiz_available_menus,
                     'default' => array_key_first($abcbiz_available_menus),
@@ -63,9 +63,9 @@ class Main extends BaseWidget {
             $this->add_control(
                 'no_menus_message',
                 [
-                    'label' => esc_html__( 'No menus found', 'abcbiz-multi' ),
+                    'label' => esc_html__( 'No menus found', 'abcbiz-addons' ),
                     'type' => Controls_Manager::RAW_HTML,
-                    'raw' => esc_html__( 'There are no menus currently available. Please create a menu in WordPress.', 'abcbiz-multi' ),
+                    'raw' => esc_html__( 'There are no menus currently available. Please create a menu in WordPress.', 'abcbiz-addons' ),
                     'separator' => 'after',
                 ]
             );
@@ -76,21 +76,21 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'flex-end',
 				'options' => [
 					'flex-start'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center'    => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 				
 					'flex-end' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -104,7 +104,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_height',
 			[
-				'label' => esc_html__( 'Menu Height', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Height', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -131,7 +131,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wp_menu_style',
 			[
-				'label' => esc_html__( 'Menu Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -149,7 +149,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#222222',
 				'selectors' => [
@@ -163,7 +163,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_hov_color',
 			[
-				'label' => esc_html__( 'Text Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Hover Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#0a78d1',
 				'selectors' => [
@@ -177,7 +177,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_active_color',
 			[
-				'label' => esc_html__( 'Text Active Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Active Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6C36DF',
 				'selectors' => [
@@ -193,7 +193,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_item_spacing',
 			[
-				'label' => esc_html__( 'Menu Item Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Item Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -218,7 +218,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_drop_down_icon_size',
 			[
-				'label' => esc_html__( 'Dropdown Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Dropdown Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -243,7 +243,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_drop_down_icon_position',
 			[
-				'label' => esc_html__( 'Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -268,7 +268,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_separator_color',
 			[
-				'label' => esc_html__( 'Separator Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Separator Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#c4c4c1',
 				'selectors' => [
@@ -283,7 +283,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wp_menu_sub_menu_style',
 			[
-				'label' => esc_html__( 'Sub Menu Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -293,7 +293,7 @@ class Main extends BaseWidget {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wp_sub_menu_typography',
-				'label' => esc_html__( 'Sub Menu Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-wp-menu-container ul ul li a',
 			]
 		);
@@ -302,7 +302,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_sub_menu_width',
 			[
-				'label' => esc_html__( 'Sub Menu Width', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Width', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -327,7 +327,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_sub_menu_item_spacing',
 			[
-				'label' => esc_html__( 'Sub Menu Item Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Item Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -352,7 +352,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_sub_menu_top_border_color',
 			[
-				'label' => esc_html__( 'Top Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Top Border Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#813eee',
 				'selectors' => [
@@ -365,7 +365,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_drop_down_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#efeeef',
 				'selectors' => [
@@ -378,7 +378,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_drop_down_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#222222',
 				'selectors' => [
@@ -392,7 +392,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_drop_down_bg_hover_color',
 			[
-				'label' => esc_html__( 'Hover Background Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Background Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ede4ed',
 				'selectors' => [
@@ -405,7 +405,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_drop_down_text_hov_color',
 			[
-				'label' => esc_html__( 'Hover Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#222222',
 				'selectors' => [
@@ -418,7 +418,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_sub_menu_icon_size',
 			[
-				'label' => esc_html__( 'Sub Menu Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -443,7 +443,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_sub_menu_icon_color',
 			[
-				'label' => esc_html__( 'Sub Menu Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Menu Icon Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#222222',
 				'selectors' => [
@@ -456,7 +456,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_sub_menu_icon_hov_color',
 			[
-				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#222222',
 				'selectors' => [
@@ -471,7 +471,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wp_menu_mob_style',
 			[
-				'label' => esc_html__( 'Mobile Menu Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Mobile Menu Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -480,21 +480,21 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_ham_icon_align',
 			[
-				'label' => esc_html__( 'Icon Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Icon Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'flex-end',
 				'options' => [
 					'flex-start'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center'    => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 				
 					'flex-end' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -509,7 +509,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_mob_nav_icon_size',
 			[
-				'label' => esc_html__( 'Nav Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Nav Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -534,7 +534,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_mob_nav_icon_position',
 			[
-				'label' => esc_html__( 'Icon Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -555,7 +555,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_nav_icon_color',
 			[
-				'label' => esc_html__( 'Nav Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Nav Icon Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
@@ -568,7 +568,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_top_border_color',
 			[
-				'label' => esc_html__( 'Menu Top Border Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Top Border Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
@@ -581,7 +581,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_menu_bg_color',
 			[
-				'label' => esc_html__( 'Mobile Menu BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Mobile Menu BG Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -595,7 +595,7 @@ class Main extends BaseWidget {
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wp_menu_mob_typography',
-				'label' => esc_html__( 'Mob Menu Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Mob Menu Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} #abcbiz-mobilemenu ul li a',
 			]
 		);
@@ -604,7 +604,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_text_color',
 			[
-				'label' => esc_html__( 'Menu Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -617,7 +617,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_mob_item_spacing',
 			[
-				'label' => esc_html__( 'Menu Item Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Menu Item Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -638,7 +638,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_item_border_color',
 			[
-				'label' => esc_html__( 'Item Separator Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Item Separator Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ededed',
 				'selectors' => [
@@ -651,7 +651,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wp_menu_mob_sub_toggle_color',
 			[
-				'label' => esc_html__( 'Sub Toggle BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Toggle BG Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
@@ -664,7 +664,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_mob_sub_toggle_size',
 			[
-				'label' => esc_html__( 'Sub Toggle Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Toggle Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -689,7 +689,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_wp_menu_mob_sub_toggle_position',
 			[
-				'label' => esc_html__( 'Sub Toggle Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Sub Toggle Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [

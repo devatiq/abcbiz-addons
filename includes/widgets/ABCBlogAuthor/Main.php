@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-blog-author';
     protected $title = 'ABC Author Bio';
-    protected $icon = 'eicon-user-circle-o  abcbiz-multi-icon';
+    protected $icon = 'eicon-user-circle-o  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -35,7 +35,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_author_bio_setting',
             [
-                'label' => esc_html__('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -43,9 +43,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_text',
             [
-                'label' => esc_html__('Author Bio Text', 'abcbiz-multi'),
+                'label' => esc_html__('Author Bio Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('About Author', 'abcbiz-multi'),
+                'default' => esc_html__('About Author', 'abcbiz-addons'),
             ]
         );
 
@@ -53,10 +53,10 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_author_bio_link_switch',
             [
-                'label' => esc_html__('View All Posts Link', 'abcbiz-multi'),
+                'label' => esc_html__('View All Posts Link', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -69,7 +69,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_author_bio_style_section',
             [
-                'label' => esc_html__('Author Style', 'abcbiz-multi'),
+                'label' => esc_html__('Author Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
             );
@@ -79,7 +79,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_author_bio_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ececec',
                 'selectors' => [
@@ -92,7 +92,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_title_color',
             [
-                'label' => esc_html__('Title Color', 'abcbiz-multi'),
+                'label' => esc_html__('Title Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -106,7 +106,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_author_bio_typography',
-                'label' => esc_html__('Title Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abc-author-bio-title',
             ]
         );
@@ -115,7 +115,7 @@ class Main extends BaseWidget
                 $this->add_control(
                     'abcbiz_elementor_author_bio_text_color',
                     [
-                        'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                        'label' => esc_html__('Text Color', 'abcbiz-addons'),
                         'type' => Controls_Manager::COLOR,
                         'default' => '#444444',
                         'selectors' => [
@@ -129,7 +129,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_author_bio_text_typography',
-                'label' => esc_html__('Text Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Text Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-authorright',
             ]
         );
@@ -138,7 +138,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_link_color',
             [
-                'label' => esc_html__('Link Color', 'abcbiz-multi'),
+                'label' => esc_html__('Link Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#0dbad1',
                 'selectors' => [
@@ -151,7 +151,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_author_bio_link_hover_color',
             [
-                'label' => esc_html__('Link Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Link Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#02363d',
                 'selectors' => [

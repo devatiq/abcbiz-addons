@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-tag-info';
     protected $title = 'ABC Post Tags';
-    protected $icon = 'eicon-tags abcbiz-multi-icon';
+    protected $icon = 'eicon-tags abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -31,7 +31,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_post_tag_setting',
             [
-                'label' => esc_html__('Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -40,20 +40,20 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abcbiz_elementor_post_tag_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -69,7 +69,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_post_tag_style_section',
             [
-                'label' => esc_html__('Category Style', 'abcbiz-multi'),
+                'label' => esc_html__('Category Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -79,7 +79,7 @@ class Main extends BaseWidget
 			'abcbiz_elementor_post_tag_padding',
 			[
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'label' => esc_html__( 'Tags Padding', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Tags Padding', 'abcbiz-addons' ),
 				'size_units' => ['px'],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-ele-post-tag ul li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -92,7 +92,7 @@ class Main extends BaseWidget
 			'abcbiz_elementor_post_tag_margin',
 			[
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'label' => esc_html__( 'Tags Margin', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Tags Margin', 'abcbiz-addons' ),
 				'size_units' => ['px'],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-ele-post-tag ul li' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -105,7 +105,7 @@ class Main extends BaseWidget
 			'abcbiz_elementor_post_tag_border_radius',
 			[
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'size_units' => ['px'],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-ele-post-tag ul li a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -118,7 +118,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_post_tag_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-post-tag',
             ]
         );
@@ -127,7 +127,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_tag_color',
             [
-                'label' => esc_html__('Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -140,7 +140,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_post_tag_bg_color',
             [
-                'label' => esc_html__('Text Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Text Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e3e3e3',
                 'selectors' => [
@@ -153,7 +153,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_tag_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e3e3e3',
                 'selectors' => [
@@ -166,7 +166,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_post_tag_hover_bg_color',
             [
-                'label' => esc_html__('Hover Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [

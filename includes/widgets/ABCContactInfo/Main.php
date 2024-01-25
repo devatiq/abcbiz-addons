@@ -15,7 +15,7 @@ class Main extends BaseWidget {
 
 		protected $name = 'abcbiz-contact-info';
 		protected $title = 'ABC Contact & Social Info';
-		protected $icon = 'eicon-social-icons abcbiz-multi-icon';
+		protected $icon = 'eicon-social-icons abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -32,7 +32,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_contact_switch_Settings',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -41,10 +41,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_switch',
 			[
-				'label' => esc_html__( 'Contact Info', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Contact Info', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Show', 'abcbiz-multi' ),
-				'label_off' => esc_html__( 'Hide', 'abcbiz-multi' ),
+				'label_on' => esc_html__( 'Show', 'abcbiz-addons' ),
+				'label_off' => esc_html__( 'Hide', 'abcbiz-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -54,10 +54,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_social_icon_switch',
 			[
-				'label' => esc_html__( 'Social Icons', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Show', 'abcbiz-multi' ),
-				'label_off' => esc_html__( 'Hide', 'abcbiz-multi' ),
+				'label_on' => esc_html__( 'Show', 'abcbiz-addons' ),
+				'label_off' => esc_html__( 'Hide', 'abcbiz-addons' ),
 				'return_value' => 'yes',
 				'default' => 'yes',
 			]
@@ -67,12 +67,12 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_style_type',
 			[
-				'label' => esc_html__( 'Style type', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Style type', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SELECT,
 				'default' => 'stack',
 				'options' => [
-					'stack' => esc_html__( 'Stack', 'abcbiz-multi' ),
-					'inline'  => esc_html__( 'Inline', 'abcbiz-multi' ),
+					'stack' => esc_html__( 'Stack', 'abcbiz-addons' ),
+					'inline'  => esc_html__( 'Inline', 'abcbiz-addons' ),
 				],
 			]
 		);
@@ -81,20 +81,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 				'abcbiz_elementor_contact_info_inline_align',
 				[
-					'label' => esc_html__( 'Content Alignment', 'abcbiz-multi'),
+					'label' => esc_html__( 'Content Alignment', 'abcbiz-addons'),
 					'type' => Controls_Manager::CHOOSE,
 					'default' => 'flex-start',
 					'options' => [
 						'flex-start'    => [
-							'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+							'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 							'icon' => 'eicon-text-align-left',
 						],
 						'center' => [
-							'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+							'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 							'icon' => 'eicon-text-align-center',
 						],
 						'flex-end' => [
-							'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+							'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 							'icon' => 'eicon-text-align-right',
 						],
 					],				
@@ -113,7 +113,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_contact_info_Settings',
 			[
-				'label' => esc_html__( 'Contact Info', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Contact Info', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 				'condition' => [
 					'abcbiz_elementor_contact_info_switch' => 'yes',
@@ -125,10 +125,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_address',
 			[
-				'label' => esc_html__( 'Address:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Address:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 5,
-				'default' => esc_html__( '1234 Street Name, City, Zip Code, Country', 'abcbiz-multi' ),
+				'default' => esc_html__( '1234 Street Name, City, Zip Code, Country', 'abcbiz-addons' ),
 			]
 		);
 
@@ -136,9 +136,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_mobile',
 			[
-				'label' => esc_html__( 'Mobile:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Mobile:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '+123 456 7890', 'abcbiz-multi' ),
+				'default' => esc_html__( '+123 456 7890', 'abcbiz-addons' ),
 			]
 		);
 
@@ -146,9 +146,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_email',
 			[
-				'label' => esc_html__( 'Email:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Email:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'example@example.com', 'abcbiz-multi' ),
+				'default' => esc_html__( 'example@example.com', 'abcbiz-addons' ),
 			]
 		);
 
@@ -158,7 +158,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_contact_social_icons_Settings',
 			[
-				'label' => esc_html__( 'Social Icons', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 				'condition' => [
 					'abcbiz_elementor_contact_social_icon_switch' => 'yes',
@@ -170,9 +170,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_fb_url',
 			[
-				'label' => esc_html__( 'Facebook URL:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Facebook URL:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
 			]
 		);
 
@@ -180,9 +180,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_x_url',
 			[
-				'label' => esc_html__( 'Twitter/X:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Twitter/X:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
 			]
 		);
 
@@ -190,9 +190,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_ins_url',
 			[
-				'label' => esc_html__( 'Instagram:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Instagram:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
 			]
 		);
 
@@ -200,9 +200,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_link_url',
 			[
-				'label' => esc_html__( 'Linkedin:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Linkedin:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
 			]
 		);
 
@@ -210,7 +210,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_pin_url',
 			[
-				'label' => esc_html__( 'Pinterest:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Pinterest:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -219,7 +219,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_drib_url',
 			[
-				'label' => esc_html__( 'Dribbble:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Dribbble:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -228,7 +228,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_behan_url',
 			[
-				'label' => esc_html__( 'Behance:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Behance:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -237,7 +237,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_tikton_url',
 			[
-				'label' => esc_html__( 'TikTok:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'TikTok:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -246,7 +246,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_vimeo_url',
 			[
-				'label' => esc_html__( 'Vimeo:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Vimeo:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
 			]
 		);
@@ -255,9 +255,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_yt_url',
 			[
-				'label' => esc_html__( 'Youtube:', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Youtube:', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
 			]
 		);
 
@@ -267,7 +267,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_contact_info_style',
 			[
-				'label' => esc_html__( 'Contact Info Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Contact Info Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'abcbiz_elementor_contact_info_switch' => 'yes',
@@ -279,7 +279,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_info_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -303,7 +303,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_icon_size_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#903cf2',
 				'selectors' => [
@@ -317,7 +317,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_contact_info_text_typography',
-				'label' => esc_html__( 'Text Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-contact-info-area',
 			]
 		);
@@ -326,7 +326,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -339,7 +339,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_info_text_hov_color',
 			[
-				'label' => esc_html__( 'Text Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -352,7 +352,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_info_item_spacing',
 			[
-				'label' => esc_html__( 'Info Bottom Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Info Bottom Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -376,7 +376,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_info_item_inline_spacing',
 			[
-				'label' => esc_html__( 'Info Right Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Info Right Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -405,7 +405,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_contact_social_icons_style',
 			[
-				'label' => esc_html__( 'Social Icons Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Social Icons Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'abcbiz_elementor_contact_social_icon_switch' => 'yes',
@@ -417,7 +417,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_social_icon_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -430,7 +430,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_social_icon_bg_color',
 			[
-				'label' => esc_html__( 'Icon BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon BG Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#f0f0f0',
 				'selectors' => [
@@ -443,7 +443,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_social_icon_hov_color',
 			[
-				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -456,7 +456,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_contact_social_icon_bg_hov_color',
 			[
-				'label' => esc_html__( 'Icon Hover BG Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover BG Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#dddddd',
 				'selectors' => [
@@ -469,7 +469,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_social_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -493,7 +493,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_social_icon_bg_size',
 			[
-				'label' => esc_html__( 'Icon Background Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Background Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -517,7 +517,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_contact_social_icon_gap',
 			[
-				'label' => esc_html__( 'Icon Gap', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Gap', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [

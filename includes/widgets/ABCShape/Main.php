@@ -14,7 +14,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-aminshape';
     protected $title = 'ABC Animated Shape';
-    protected $icon = 'eicon-shape abcbiz-multi-icon';
+    protected $icon = 'eicon-shape abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -33,7 +33,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_shape_settings',
             [
-                'label' => esc_html__('Shape', 'abcbiz-multi'),
+                'label' => esc_html__('Shape', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -42,13 +42,13 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_type',
             [
-                'label' => esc_html__('Shape Type', 'abcbiz-multi'),
+                'label' => esc_html__('Shape Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'circle',
                 'options' => [
-                    'circle' => esc_html__('Circle', 'abcbiz-multi'),
-                    'square' => esc_html__('Square', 'abcbiz-multi'),
-                    'image' => esc_html__('Image', 'abcbiz-multi'),
+                    'circle' => esc_html__('Circle', 'abcbiz-addons'),
+                    'square' => esc_html__('Square', 'abcbiz-addons'),
+                    'image' => esc_html__('Image', 'abcbiz-addons'),
                 ],
             ]
         );
@@ -56,7 +56,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_image',
             [
-                'label' => esc_html__('Choose Image', 'abcbiz-multi'),
+                'label' => esc_html__('Choose Image', 'abcbiz-addons'),
                 'type' => Controls_Manager::MEDIA,
                 'default' => [
                     'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -72,7 +72,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_shape_image_alt',
             [
-                'label' => esc_html__('Image Alt Text', 'abcbiz-multi'),
+                'label' => esc_html__('Image Alt Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'ABCBiz Image',
                 'condition' => [
@@ -85,10 +85,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_animation',
             [
-                'label' => esc_html__('Animation', 'abcbiz-multi'),
+                'label' => esc_html__('Animation', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Show', 'abcbiz-multi'),
-                'label_off' => esc_html__('Hide', 'abcbiz-multi'),
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => '',
             ]
@@ -97,21 +97,21 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_animation_effect',
             [
-                'label' => esc_html__('Animation Type', 'abcbiz-multi'),
+                'label' => esc_html__('Animation Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'ABCSpin',
                 'options' => [
-                    'ABCxAxisMove' => esc_html__('X-Axis Move', 'abcbiz-multi'),
-                    'ABCyAxisMove' => esc_html__('Y-Axis Move', 'abcbiz-multi'),
-                    'ABCtriAngleMove' => esc_html__('Triangle Move', 'abcbiz-multi'),
-                    'ABCSpin' => esc_html__('Spin', 'abcbiz-multi'),
-                    'ABCRotationMove' => esc_html__('Rotation Move', 'abcbiz-multi'),
-                    'ABCTilt' => esc_html__('Tilt', 'abcbiz-multi'),
-                    'ABCTimeLineAnimate' => esc_html__('Timeline Animate', 'abcbiz-multi'),
-                    'ABCSpinMove' => esc_html__('Spin Move', 'abcbiz-multi'),
-                    'ABCclockSpin' => esc_html__('Clockwise Spin', 'abcbiz-multi'),
-                    'ABCAntiClockSpin' => esc_html__('Anti-Clockwise Spin', 'abcbiz-multi'),
-                    'ABCRotating' => esc_html__('Rotating', 'abcbiz-multi'),
+                    'ABCxAxisMove' => esc_html__('X-Axis Move', 'abcbiz-addons'),
+                    'ABCyAxisMove' => esc_html__('Y-Axis Move', 'abcbiz-addons'),
+                    'ABCtriAngleMove' => esc_html__('Triangle Move', 'abcbiz-addons'),
+                    'ABCSpin' => esc_html__('Spin', 'abcbiz-addons'),
+                    'ABCRotationMove' => esc_html__('Rotation Move', 'abcbiz-addons'),
+                    'ABCTilt' => esc_html__('Tilt', 'abcbiz-addons'),
+                    'ABCTimeLineAnimate' => esc_html__('Timeline Animate', 'abcbiz-addons'),
+                    'ABCSpinMove' => esc_html__('Spin Move', 'abcbiz-addons'),
+                    'ABCclockSpin' => esc_html__('Clockwise Spin', 'abcbiz-addons'),
+                    'ABCAntiClockSpin' => esc_html__('Anti-Clockwise Spin', 'abcbiz-addons'),
+                    'ABCRotating' => esc_html__('Rotating', 'abcbiz-addons'),
                 ],
                 'condition' => [
                     'abcbiz_elementor_shape_animation' => 'yes',
@@ -125,7 +125,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_shape_style',
             [
-                'label' => esc_html__('Shape Style', 'abcbiz-multi'),
+                'label' => esc_html__('Shape Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_shape_type!' => 'image',
@@ -137,7 +137,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_shape_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -150,7 +150,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_elementor_shape_size',
             [
-                'label' => esc_html__('Size', 'abcbiz-multi'),
+                'label' => esc_html__('Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -176,7 +176,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abcbiz_elementor_shape_style_normal_tab',
             [
-                'label' => esc_html__('Normal', 'abcbiz-multi'),
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
 
@@ -185,7 +185,7 @@ class Main extends BaseWidget
             Group_Control_Background::get_type(),
             [
                 'name' => 'abcbiz_elementor_shape_background',
-                'label' => esc_html__('Background', 'abcbiz-multi'),
+                'label' => esc_html__('Background', 'abcbiz-addons'),
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .abcbiz-shape-area .abcbiz-ele-shape',
             ]
@@ -206,7 +206,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
             'abcbiz_elementor_shape_style_hover_tab',
             [
-                'label' => esc_html__('Hover', 'abcbiz-multi'),
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
             ]
         );
 
@@ -215,7 +215,7 @@ class Main extends BaseWidget
             Group_Control_Background::get_type(),
             [
                 'name' => 'abcbiz_elementor_shape_hover_background',
-                'label' => esc_html__('Background', 'abcbiz-multi'),
+                'label' => esc_html__('Background', 'abcbiz-addons'),
                 'types' => ['classic', 'gradient'],
                 'selector' => '{{WRAPPER}} .abcbiz-shape-area:hover .abcbiz-ele-shape',
             ]
@@ -225,7 +225,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_border_hover_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-shape-area:hover .abcbiz-ele-shape' => 'border-color: {{VALUE}};',
@@ -243,7 +243,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_shape_image_style',
             [
-                'label' => esc_html__('Image', 'abcbiz-multi'),
+                'label' => esc_html__('Image', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_shape_type' => 'image',
@@ -254,7 +254,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_shape_image_width',
             [
-                'label' => esc_html__('Width', 'abcbiz-multi'),
+                'label' => esc_html__('Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -281,7 +281,7 @@ class Main extends BaseWidget
             Group_Control_Border::get_type(),
             [
                 'name' => 'abcbiz_elementor_image_border',
-                'label' => esc_html__('Border', 'abcbiz-multi'),
+                'label' => esc_html__('Border', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-shape-area .abcbiz-shape-image img',
             ]
         );
@@ -290,7 +290,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_image_border_radius',
             [
-                'label' => __('Border Radius', 'abcbiz-multi'),
+                'label' => __('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [

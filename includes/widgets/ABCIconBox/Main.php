@@ -18,7 +18,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-icon-box';
 		protected $title = 'ABC Icon Box';
-		protected $icon = 'eicon-icon-box abcbiz-multi-icon';
+		protected $icon = 'eicon-icon-box abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -34,7 +34,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz-elementor-icon-box',
 			[
-				'label' => esc_html__( 'Content', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -44,13 +44,13 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_style',
 			[
-				'label' => esc_html__( 'Choose Style', 'abcbiz-multi'),
+				'label' => esc_html__( 'Choose Style', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style-one',
 				'options' => [
-					'style-one'  => esc_html__( 'Style One', 'abcbiz-multi' ),
-					'style-two'  => esc_html__( 'Style Two', 'abcbiz-multi' ),
-					'style-three'  => esc_html__( 'Style Three', 'abcbiz-multi' ),
+					'style-one'  => esc_html__( 'Style One', 'abcbiz-addons' ),
+					'style-two'  => esc_html__( 'Style Two', 'abcbiz-addons' ),
+					'style-three'  => esc_html__( 'Style Three', 'abcbiz-addons' ),
 				],
 			]
 		);
@@ -59,7 +59,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_shape',
 			[
-				'label' => esc_html__( 'Icon Shape', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Shape', 'abcbiz-addons' ),
 				'type' => Controls_Manager::ICONS,
 				'condition' => [
 					'abcbiz_elementor_icon_box_style' => 'style-one',
@@ -71,7 +71,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon',
 			[
-				'label' => esc_html__( 'Icon', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon', 'abcbiz-addons' ),
 				'type' => Controls_Manager::ICONS,
 				
 			]
@@ -79,10 +79,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_title',
 			[
-				'label' => esc_html__( 'Title', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title', 'abcbiz-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Responsive Design', 'abcbiz-multi' ),
-				'placeholder' => esc_html__( 'Type your title here', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Responsive Design', 'abcbiz-addons' ),
+				'placeholder' => esc_html__( 'Type your title here', 'abcbiz-addons' ),
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
@@ -92,11 +92,11 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_desc',
 			[
-				'label' => esc_html__( 'Description', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Description', 'abcbiz-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
 				'rows' => 10,
-				'default' => esc_html__( 'Duis Aute Irure Dolor Reprehenderit In Voluptate Velit Esse Cillum Dolore Fugiat Nulla Pariatur', 'abcbiz-multi' ),
-				'placeholder' => esc_html__( 'Type your description here', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Duis Aute Irure Dolor Reprehenderit In Voluptate Velit Esse Cillum Dolore Fugiat Nulla Pariatur', 'abcbiz-addons' ),
+				'placeholder' => esc_html__( 'Type your description here', 'abcbiz-addons' ),
 				'dynamic' => [
 					'active' => true,
 				],
@@ -106,10 +106,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_text',
 			[
-				'label' => esc_html__( 'Button Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Text', 'abcbiz-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'Read More', 'abcbiz-multi' ),
-				'placeholder' => esc_html__( 'Type your button text here', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Read More', 'abcbiz-addons' ),
+				'placeholder' => esc_html__( 'Type your button text here', 'abcbiz-addons' ),
 				'label_block' => true,
 				'dynamic' => [
 					'active' => true,
@@ -123,7 +123,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_link',
 			[
-				'label' => esc_html__( 'Button Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Link', 'abcbiz-addons' ),
 				'type' => Controls_Manager::URL,
 				'default' => [
 					'url' => '#',
@@ -137,19 +137,19 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_button_align',
 			[
-				'label' => esc_html__( 'Button Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Button Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],
@@ -165,7 +165,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_button_size',
 			[
-				'label' => esc_html__( 'Button Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Size', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%' ],
 				'range' => [
@@ -194,14 +194,14 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_icon_box_area_style_section',
 			[
-				'label' => esc_html__( 'Box', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Box', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_padding',
 			[
-				'label' => esc_html__( 'Padding', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Padding', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -223,7 +223,7 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_area_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 		// box border (style three)
@@ -237,7 +237,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_area_style_normal_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],				
 				'selectors' => [
@@ -262,7 +262,7 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_area_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 		// box border (style three)
@@ -276,7 +276,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_area_style_hover_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],	
 				'default'	=> [
@@ -313,7 +313,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_icon_box_style_section',
 			[
-				'label' => esc_html__( 'Icon', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -321,7 +321,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'default' => [
@@ -349,7 +349,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_icon_bg_shape_size',
 			[
-				'label' => esc_html__( 'Shape Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Shape Size', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'default' => [
@@ -374,7 +374,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_icon_indent',
 			[
-				'label' => esc_html__( 'Icon Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Spacing', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'range' => [
@@ -394,7 +394,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_icon_positing_indent',
 			[
-				'label' => esc_html__( 'Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Position', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'range' => [
@@ -416,7 +416,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_padding',
 			[
-				'label' => esc_html__( 'Icon Padding', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Padding', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -435,13 +435,13 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_stroke_color',
 			[
-				'label' => esc_html__( 'Shape Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Shape Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-ele-icon-box-normal svg path' => 'stroke: {{VALUE}}',
@@ -456,7 +456,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_fill_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-ele-icon-box-hover svg path' => 'fill: {{VALUE}}',
@@ -495,7 +495,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],				
 				'selectors' => [
@@ -512,14 +512,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_stroke_hover_color',
 			[
-				'label' => esc_html__( 'Shape Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Shape Hover Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-ele-icon-box-normal svg path' => 'stroke: {{VALUE}}',
@@ -534,7 +534,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_fill_hover_color',
 			[
-				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-ele-icon-box-hover svg path' => 'fill: {{VALUE}}',
@@ -573,7 +573,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_border_radius_hover',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],				
 				'selectors' => [
@@ -595,14 +595,14 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_icon_box_content_style_section',
 			[
-				'label' => esc_html__( 'Content', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_button_heading_indent',
 			[
-				'label' => esc_html__( 'Heading Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Heading Spacing', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -617,7 +617,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abcbiz_elementor_icon_box_button_content_indent',
 			[
-				'label' => esc_html__( 'Content Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content Spacing', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -634,7 +634,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_icon_box_title_typography',
-				'label' => esc_html__( 'Title Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-title',
 			]
 		);
@@ -644,7 +644,7 @@ class Main extends BaseWidget {
 			[
 				'name' => 'abcbiz_elementor_icon_box_text_typography',
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-desc',
-				'label' => esc_html__( 'Content Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Content Typography', 'abcbiz-addons' ),
 			]
 		);
 
@@ -656,13 +656,13 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_content_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_title_color',
 			[
-				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-title' => 'color: {{VALUE}}',
@@ -672,7 +672,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-desc' => 'color: {{VALUE}}',
@@ -685,13 +685,13 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_content_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_title_hover_color',
 			[
-				'label' => esc_html__( 'Title Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Title Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-elementor-icon-box-title' => 'color: {{VALUE}}',
@@ -703,7 +703,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_icon_text_hover_color',
 			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-elementor-icon-box-desc' => 'color: {{VALUE}}',
@@ -721,7 +721,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_icon_box_button_style_section',
 			[
-				'label' => esc_html__( 'Button', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 				'condition' => [
 					'abcbiz_elementor_icon_box_style' => 'style-one',
@@ -731,7 +731,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_indent',
 			[
-				'label' => esc_html__( 'Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Spacing', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -746,7 +746,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_icon_indent',
 			[
-				'label' => esc_html__( 'Icon Spacing', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Spacing', 'abcbiz-addons' ),
 				'type' => Controls_Manager::SLIDER,
 				'range' => [
 					'px' => [
@@ -763,14 +763,14 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_icon_box_button_typography',
-				'label' => esc_html__( 'Text Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-button a',
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_padding',
 			[
-				'label' => esc_html__( 'Padding', 'textdomain' ),
+				'label' => esc_html__( 'Padding', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],
 				'selectors' => [
@@ -783,13 +783,13 @@ class Main extends BaseWidget {
 			[
 				'name' => 'abcbiz_elementor_icon_box_button_order',
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-button a',
-				'label' => esc_html__( 'Border', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border', 'abcbiz-addons' ),
 			]
 		);
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%', 'em', 'rem', 'custom' ],				
 				'selectors' => [
@@ -805,14 +805,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_button_style_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
 		$this->add_control(
 			'abcbiz_elementor_icon_box_button_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-button a' => 'color: {{VALUE}}',
@@ -825,7 +825,7 @@ class Main extends BaseWidget {
 				'name' => 'abcbiz_elementor_icon_box_button_bg_color',
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-button a',
-				'label' => esc_html__( 'Background', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background', 'abcbiz-addons' ),
 			]
 		);	
 
@@ -834,14 +834,14 @@ class Main extends BaseWidget {
 		$this->start_controls_tab(
 			'abcbiz_elementor_icon_box_button_style_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 	
 		$this->add_control(
 			'abcbiz_elementor_icon_box_btn_hover_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-elementor-icon-box-button a' => 'color: {{VALUE}}',
@@ -854,7 +854,7 @@ class Main extends BaseWidget {
 				'name' => 'abcbiz_elementor_icon_box_btn_bg_hover',
 				'types' => [ 'classic', 'gradient' ],
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-icon-box-area:hover .abcbiz-elementor-icon-box-button a',
-				'label' => esc_html__( 'Background', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Background', 'abcbiz-addons' ),
 			]
 		);	
 

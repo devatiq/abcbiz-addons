@@ -132,9 +132,9 @@ class ABCBizMultiElementorPack
 		}
 
 		$message = sprintf(
-			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
-			'<strong>' . esc_html__('Elementor', 'abcbiz-multi') . '</strong>'
+			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
 		);
 
 		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
@@ -150,9 +150,9 @@ class ABCBizMultiElementorPack
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
-			'<strong>' . esc_html__('Elementor', 'abcbiz-multi') . '</strong>',
+			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
 
@@ -169,9 +169,9 @@ class ABCBizMultiElementorPack
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
-			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-multi'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-multi') . '</strong>',
-			'<strong>' . esc_html__('PHP', 'abcbiz-multi') . '</strong>',
+			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
+			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . esc_html__('PHP', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
 
@@ -232,7 +232,7 @@ class ABCBizMultiElementorPack
 	public function register_widgets($abcbiz_widgets_manager)
 	{
 		require_once AbcBizElementor_Path . '/includes/widgets/BaseWidgets.php';
-		require_once AbcBizElementor_Path . '/includes/abcbiz-multi-widgets.php';
+		require_once AbcBizElementor_Path . '/includes/abcbiz-addons-widgets.php';
 
 	}
 	

@@ -12,7 +12,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-circular-skill';
     protected $title = 'ABC Circular Skill';
-    protected $icon = 'eicon-counter-circle  abcbiz-multi-icon';
+    protected $icon = 'eicon-counter-circle  abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -41,7 +41,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_circl_skill_setting',
             [
-                'label' => esc_html__('Circle Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Circle Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -50,9 +50,9 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_text',
             [
-                'label' => esc_html__('Heading', 'abcbiz-multi'),
+                'label' => esc_html__('Heading', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('Web Design', 'abcbiz-multi'),
+                'default' => esc_html__('Web Design', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -60,7 +60,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_value',
             [
-                'label' => esc_html__('Value', 'abcbiz-multi'),
+                'label' => esc_html__('Value', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 50,
                 'min' => 0,
@@ -76,7 +76,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_circl_skill_style_setting',
             [
-                'label' => esc_html__('Circle Style', 'abcbiz-multi'),
+                'label' => esc_html__('Circle Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -85,7 +85,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_circl_skill_size',
 			[
-				'label' => esc_html__( 'Circle Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Circle Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -107,7 +107,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_circl_skill_heading_typography',
-                'label' => esc_html__('Heading Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Heading Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-skill-circle span',
             ]
         ); 
@@ -115,7 +115,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_heading_color',
             [
-                'label' => esc_html__('Heading Color', 'abcbiz-multi'),
+                'label' => esc_html__('Heading Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000',
                 'selectors' => [
@@ -129,7 +129,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_circl_skill_value_position',
 			[
-				'label' => esc_html__( 'Value Position Adjustment', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Value Position Adjustment', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['%'],
 				'range' => [
@@ -156,7 +156,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_circl_skill_value_typography',
-                'label' => esc_html__('Value Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Value Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-skill-circle strong',
             ]
         );
@@ -164,7 +164,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_value_color',
             [
-                'label' => esc_html__('Value Color', 'abcbiz-multi'),
+                'label' => esc_html__('Value Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#000',
                 'selectors' => [
@@ -177,7 +177,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_empty_fill_color',
             [
-                'label' => esc_html__('Empty Fill Color', 'abcbiz-multi'),
+                'label' => esc_html__('Empty Fill Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => 'rgba(0, 0, 0, .3)',               
             ]
@@ -186,7 +186,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_fill_gradient_color_one',
             [
-                'label' => esc_html__('Gradient Color One', 'abcbiz-multi'),
+                'label' => esc_html__('Gradient Color One', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#e60a0a',               
             ]
@@ -195,7 +195,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_circl_skill_fill_gradient_color_two',
             [
-                'label' => esc_html__('Gradient Color Two', 'abcbiz-multi'),
+                'label' => esc_html__('Gradient Color Two', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#d1de04',               
             ]

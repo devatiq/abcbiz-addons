@@ -14,9 +14,9 @@ function abcbiz_widgets_page() {
     <div class="wrap abcbiz-available-widget-wrap">
         <h2><?php echo esc_html($abcbiz_plugin_data['Name']); ?></h2>
         <div class="abcbiz-tabs">
-            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('ABCBiz Widgets', 'abcbiz-multi');?></button>
+            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('ABCBiz Widgets', 'abcbiz-addons');?></button>
             <?php if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ): ?>
-                <button class="tablink button button-secondary" onclick="openTab(event, 'WooCommerceWidgets')"><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-multi');?></button>
+                <button class="tablink button button-secondary" onclick="openTab(event, 'WooCommerceWidgets')"><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-addons');?></button>
             <?php endif; ?>
         </div>
 
@@ -24,7 +24,7 @@ function abcbiz_widgets_page() {
             <?php settings_fields('abcbiz_widgets_menu'); ?>
 
             <div id="ABCBizWidgets" class="tabcontent">
-                <h3><?php echo esc_html__('ABCBiz Multi Widgets', 'abcbiz-multi');?></h3>
+                <h3><?php echo esc_html__('ABCBiz Multi Widgets', 'abcbiz-addons');?></h3>
                 <div class="abcbiz-widgets-grid">
                 <?php abcbiz_blockquote_widget_field_render(); ?>
                 <?php abcbiz_blog_fancy_widget_field_render(); ?>
@@ -69,7 +69,7 @@ function abcbiz_widgets_page() {
 
             <?php if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ): ?>
                 <div id="WooCommerceWidgets" class="tabcontent">
-                    <h3><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-multi');?></h3>
+                    <h3><?php echo esc_html__('WooCommerce Widgets', 'abcbiz-addons');?></h3>
                     <div class="abcbiz-widgets-grid">
                     <?php abcbiz_wc_add_to_cart_icon_field_render(); ?>
                     <?php abcbiz_wc_product_cart_icon_field_render(); ?>
@@ -101,7 +101,7 @@ require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php';
 
 //callback function
 function abcbiz_available_widgets_section_callback() {
-    echo '<p>' . esc_html__('Manage available widgets here.', 'abcbiz-multi') . '</p>';
+    echo '<p>' . esc_html__('Manage available widgets here.', 'abcbiz-addons') . '</p>';
 }
 
 //Ajax Saving

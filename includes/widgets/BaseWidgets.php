@@ -23,7 +23,7 @@ class BaseWidget extends Widget_base
 
     public function get_title()
     {
-        return __($this->title, 'abcbiz-multi');
+        return __($this->title, 'abcbiz-addons');
     }
 
     public function get_icon()

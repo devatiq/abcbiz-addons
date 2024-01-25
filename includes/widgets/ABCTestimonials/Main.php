@@ -16,7 +16,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-testimonial';
     protected $title = 'ABC Testimonial Carousel';
-    protected $icon = 'eicon-testimonial-carousel abcbiz-multi-icon';
+    protected $icon = 'eicon-testimonial-carousel abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -43,7 +43,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_testimonial_setting',
             [
-                'label' => esc_html__('Testimonial Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Testimonial Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -52,22 +52,22 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_types',
             [
-                'label' => esc_html__('Select Type', 'abcbiz-multi'),
+                'label' => esc_html__('Select Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'grid',
                 'options' => [
-                    'grid' => esc_html__('Grid', 'abcbiz-multi'),
-                    'slider' => esc_html__('Slider', 'abcbiz-multi'),
+                    'grid' => esc_html__('Grid', 'abcbiz-addons'),
+                    'slider' => esc_html__('Slider', 'abcbiz-addons'),
                 ],
             ]
         );
         $this->add_control(
             'abcbiz_ele_testimonial_client_image_switch',
             [
-                'label' => esc_html__('Display Client Image', 'abcbiz-multi'),
+                'label' => esc_html__('Display Client Image', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('On', 'abcbiz-multi'),
-                'label_off' => esc_html__('Off', 'abcbiz-multi'),
+                'label_on' => esc_html__('On', 'abcbiz-addons'),
+                'label_off' => esc_html__('Off', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -77,49 +77,49 @@ class Main extends BaseWidget
         $repeater->add_control(
 			'testimonial_name',
 			[
-				'label' => esc_html__( 'Name', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Name', 'abcbiz-addons' ),
 				'type' => Controls_Manager::TEXT,
-				'default' => esc_html__( 'List Name' , 'abcbiz-multi' ),
+				'default' => esc_html__( 'List Name' , 'abcbiz-addons' ),
 				'label_block' => true,
 			]
 		);       
         $repeater->add_control(
 			'testimonial_feedback',
 			[
-				'label' => esc_html__( 'Description', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Description', 'abcbiz-addons' ),
 				'type' => Controls_Manager::TEXTAREA,
-				'default' => esc_html__( 'Enter feedback message here' , 'abcbiz-multi' ),
+				'default' => esc_html__( 'Enter feedback message here' , 'abcbiz-addons' ),
 				'label_block' => true,
 			]
 		);       
         $repeater->add_control(
 			'testimonial_designation',
 			[                
-                'label' => esc_html__('Designation', 'abcbiz-multi'),
+                'label' => esc_html__('Designation', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
-                'default' => esc_html__('CEO of Company', 'abcbiz-multi'),
+                'default' => esc_html__('CEO of Company', 'abcbiz-addons'),
                 'dynamic' => ['active' => true],
 			]
 		);        
         $repeater->add_control(
 			'testimonial_rating',
 			[  
-                'label' => esc_html__('Rating', 'abcbiz-multi'),
+                'label' => esc_html__('Rating', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => '5',
                 'options' => [
-                    '1' => esc_html__('1 Star', 'abcbiz-multi'),
-                    '2' => esc_html__('2 Stars', 'abcbiz-multi'),
-                    '3' => esc_html__('3 Stars', 'abcbiz-multi'),
-                    '4' => esc_html__('4 Stars', 'abcbiz-multi'),
-                    '5' => esc_html__('5 Stars', 'abcbiz-multi'),
+                    '1' => esc_html__('1 Star', 'abcbiz-addons'),
+                    '2' => esc_html__('2 Stars', 'abcbiz-addons'),
+                    '3' => esc_html__('3 Stars', 'abcbiz-addons'),
+                    '4' => esc_html__('4 Stars', 'abcbiz-addons'),
+                    '5' => esc_html__('5 Stars', 'abcbiz-addons'),
                 ],
 			]
 		);       
         $repeater->add_control(
 			'testimonial_client_image',
 			[                  
-                'label' => esc_html__('Client Image', 'abcbiz-multi'),
+                'label' => esc_html__('Client Image', 'abcbiz-addons'),
                 'type' => Controls_Manager::MEDIA,
                 'dynamic' => ['active' => true],   
 			]
@@ -127,18 +127,18 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_testimonial_repeater',
 			[
-				'label' => esc_html__( 'Testimonial Items', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Testimonial Items', 'abcbiz-addons' ),
 				'type' => Controls_Manager::REPEATER,
 				'fields' => $repeater->get_controls(),
 				'default' => [
 					[
-						'testimonial_name' => esc_html__( 'Name #1', 'abcbiz-multi' ),						
+						'testimonial_name' => esc_html__( 'Name #1', 'abcbiz-addons' ),						
 					],
 					[
-						'testimonial_name' => esc_html__( 'Name #2', 'abcbiz-multi' ),						
+						'testimonial_name' => esc_html__( 'Name #2', 'abcbiz-addons' ),						
 					],
                     [
-						'testimonial_name' => esc_html__( 'Name #3', 'abcbiz-multi' ),						
+						'testimonial_name' => esc_html__( 'Name #3', 'abcbiz-addons' ),						
 					],
 				],
 				'title_field' => '{{{ testimonial_name }}}',
@@ -148,7 +148,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_column_desktop',
             [
-                'label' => esc_html__('Desktop Column', 'abcbiz-multi'),
+                'label' => esc_html__('Desktop Column', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 2,
                 'min' => 1,
@@ -163,7 +163,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_column_tab',
             [
-                'label' => esc_html__('Tab Column', 'abcbiz-multi'),
+                'label' => esc_html__('Tab Column', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 1,                
                 'min' => 1,
@@ -177,7 +177,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_column_mobile',
             [
-                'label' => esc_html__('Mobile Column', 'abcbiz-multi'),
+                'label' => esc_html__('Mobile Column', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 1,
                 'min' => 1,
@@ -192,10 +192,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_autoplay',
             [
-                'label' => esc_html__('Autoplay', 'abcbiz-multi'),
+                'label' => esc_html__('Autoplay', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('On', 'abcbiz-multi'),
-                'label_off' => esc_html__('Off', 'abcbiz-multi'),
+                'label_on' => esc_html__('On', 'abcbiz-addons'),
+                'label_off' => esc_html__('Off', 'abcbiz-addons'),
                 'return_value' => 'true',
                 'default' => 'true',
                 'condition' => [
@@ -207,7 +207,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_autoplay_delay',
             [
-                'label' => esc_html__('Autoplay Delay', 'abcbiz-multi'),
+                'label' => esc_html__('Autoplay Delay', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'default' => 5000,
                 'condition' => [
@@ -221,7 +221,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_item_quote_icon',
             [
-                'label' => esc_html__('Icon', 'abcbiz-multi'),
+                'label' => esc_html__('Icon', 'abcbiz-addons'),
                 'type' => Controls_Manager::ICONS,
             ]
         );
@@ -230,10 +230,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_slider_arrow',
             [
-                'label' => esc_html__('Arrow', 'abcbiz-multi'),
+                'label' => esc_html__('Arrow', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('On', 'abcbiz-multi'),
-                'label_off' => esc_html__('Off', 'abcbiz-multi'),
+                'label_on' => esc_html__('On', 'abcbiz-addons'),
+                'label_off' => esc_html__('Off', 'abcbiz-addons'),
                 'return_value' => 'true',
                 'default' => 'false',
                 'condition' => [
@@ -245,10 +245,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_slider_pagination',
             [
-                'label' => esc_html__('Pagination', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('On', 'abcbiz-multi'),
-                'label_off' => esc_html__('Off', 'abcbiz-multi'),
+                'label_on' => esc_html__('On', 'abcbiz-addons'),
+                'label_off' => esc_html__('Off', 'abcbiz-addons'),
                 'return_value' => 'true',
                 'default' => 'true',
                 'condition' => [
@@ -265,7 +265,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_testimonial_style_setting',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -284,7 +284,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_testimonial_title_typography',
-                'label' => esc_html__('Name Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Name Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-testimonial-client-info h3',
             ]
         );
@@ -292,7 +292,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_title_color',
             [
-                'label' => esc_html__('Name Color', 'abcbiz-multi'),
+                'label' => esc_html__('Name Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -305,7 +305,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_testimonial_designation_typography',
-                'label' => esc_html__('Designation Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-testimonial-client-info p',
             ]
         );
@@ -313,7 +313,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_designation_color',
             [
-                'label' => esc_html__('Designation Color', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -326,7 +326,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_testimonial_content_typography',
-                'label' => esc_html__('Content Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Content Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-testimonial-content p',
             ]
         );
@@ -334,7 +334,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_content_color',
             [
-                'label' => esc_html__('Content Color', 'abcbiz-multi'),
+                'label' => esc_html__('Content Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#555555',
                 'selectors' => [
@@ -346,7 +346,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_rating_size',
             [
-                'label' => esc_html__('Star Size', 'abcbiz-multi'),
+                'label' => esc_html__('Star Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -373,7 +373,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_rating_color',
             [
-                'label' => esc_html__('Star Color', 'abcbiz-multi'),
+                'label' => esc_html__('Star Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#D3A500',
                 'selectors' => [
@@ -385,7 +385,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_quote_icon_size',
             [
-                'label' => esc_html__('Quote Icon Size', 'abcbiz-multi'),
+                'label' => esc_html__('Quote Icon Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -413,7 +413,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_quote_icon_tb_position',
             [
-                'label' => esc_html__('Quote Icon Top Position', 'abcbiz-multi'),
+                'label' => esc_html__('Quote Icon Top Position', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -436,7 +436,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_quote_icon_lr_position',
             [
-                'label' => esc_html__('Quote Icon Right Position', 'abcbiz-multi'),
+                'label' => esc_html__('Quote Icon Right Position', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -458,7 +458,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_quote_icon_color',
             [
-                'label' => esc_html__('Quote Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Quote Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#444444',
                 'selectors' => [
@@ -471,7 +471,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_quote_icon_opacity',
             [
-                'label' => esc_html__('Icon Opacity', 'abcbiz-multi'),
+                'label' => esc_html__('Icon Opacity', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
                 'min' => 0.1,
                 'max' => 1,
@@ -490,7 +490,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_testimonial_pagination_style_setting',
             [
-                'label' => esc_html__('Pagination', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_ele_testimonial_pagination' => 'yes',
@@ -502,7 +502,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_pagination_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-elementor-pagination.abcbiz-blog-list-pagi .page-numbers' => 'color: {{VALUE}}',
@@ -513,7 +513,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_pagination_hover_color',
             [
-                'label' => esc_html__('Hover/Active Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover/Active Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-elementor-pagination.abcbiz-blog-list-pagi .page-numbers.current' => 'color: {{VALUE}}',
@@ -525,7 +525,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_pagination_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-elementor-pagination.abcbiz-blog-list-pagi .page-numbers' => 'background-color: {{VALUE}}',
@@ -536,7 +536,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_pagination_hover_bg_color',
             [
-                'label' => esc_html__('Hover/Active BG Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover/Active BG Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-elementor-pagination.abcbiz-blog-list-pagi .page-numbers.current' => 'background-color: {{VALUE}}',
@@ -549,7 +549,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_ele_testimonial_pagination_typography',
-                'label' => esc_html__('Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-elementor-pagination.abcbiz-blog-list-pagi .page-numbers',
             ]
         );
@@ -557,7 +557,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_pagination_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -569,7 +569,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_pagination_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -581,7 +581,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_pagination_gap',
             [
-                'label' => esc_html__('Gap', 'abcbiz-multi'),
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -603,19 +603,19 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_pagination_alignment',
             [
-                'label' => esc_html__('Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-multi'),
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-center',
                     ],
                     'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-multi'),
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
@@ -632,7 +632,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_testimonial_arrow_style_setting',
             [
-                'label' => esc_html__('Arrows', 'abcbiz-multi'),
+                'label' => esc_html__('Arrows', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_ele_testimonial_slider_arrow' => 'true',
@@ -644,7 +644,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -656,7 +656,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_hover_color',
             [
-                'label' => esc_html__('Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#ffffff',
                 'selectors' => [
@@ -668,7 +668,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_bg_color',
             [
-                'label' => esc_html__('Background Color', 'abcbiz-multi'),
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#6247ed',
                 'selectors' => [
@@ -680,7 +680,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_hover_bg_color',
             [
-                'label' => esc_html__('Hover BG Color', 'abcbiz-multi'),
+                'label' => esc_html__('Hover BG Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#374ae4',
                 'selectors' => [
@@ -692,7 +692,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_arrow_size',
             [
-                'label' => esc_html__('Size', 'abcbiz-multi'),
+                'label' => esc_html__('Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em'],
                 'range' => [
@@ -720,7 +720,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_arrow_border_radius',
             [
-                'label' => esc_html__('Border Radius', 'abcbiz-multi'),
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
@@ -739,7 +739,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_arrow_padding',
             [
-                'label' => esc_html__('Padding', 'abcbiz-multi'),
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'selectors' => [
@@ -751,7 +751,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_normal_device_heading',
             [
-                'label' => esc_html__('Alignment for Normal Device', 'abcbiz-multi'),
+                'label' => esc_html__('Alignment for Normal Device', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -760,20 +760,20 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_nav_bar_alignment',
             [
-                'label' => esc_html__('Navigation Bar Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Navigation Bar Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'default' => 'center',
                 'options' => [
                     'left' => [
-                        'title' => esc_html__('Left', 'abcbiz-multi'),
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-center',
                     ],
                     'right' => [
-                        'title' => esc_html__('Right', 'abcbiz-multi'),
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
                         'icon' => 'fa fa-align-right',
                     ],
                 ],
@@ -787,7 +787,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_arrow_gap',
             [
-                'label' => esc_html__('Gap', 'abcbiz-multi'),
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'range' => [
@@ -806,7 +806,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_arrow_largest_device_heading',
             [
-                'label' => esc_html__('Indent for Largest Device', 'abcbiz-multi'),
+                'label' => esc_html__('Indent for Largest Device', 'abcbiz-addons'),
                 'type' => Controls_Manager::HEADING,
                 'separator' => 'before',
             ]
@@ -815,7 +815,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_left_arrow_top_indent',
             [
-                'label' => esc_html__('Left Arrow Top Indent', 'abcbiz-multi'),
+                'label' => esc_html__('Left Arrow Top Indent', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'range' => [
@@ -834,7 +834,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_left_arrow_left_indent',
             [
-                'label' => esc_html__('Left Arrow Left Indent', 'abcbiz-multi'),
+                'label' => esc_html__('Left Arrow Left Indent', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'range' => [
@@ -852,7 +852,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_right_arrow_top_indent',
             [
-                'label' => esc_html__('Right Arrow Top Indent', 'abcbiz-multi'),
+                'label' => esc_html__('Right Arrow Top Indent', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'range' => [
@@ -870,7 +870,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_right_arrow_right_indent',
             [
-                'label' => esc_html__('Right Arrow Right Indent', 'abcbiz-multi'),
+                'label' => esc_html__('Right Arrow Right Indent', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'range' => [
@@ -891,7 +891,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_ele_testimonial_slider_pagination_style',
             [
-                'label' => esc_html__('Pagination', 'abcbiz-multi'),
+                'label' => esc_html__('Pagination', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_ele_testimonial_slider_pagination' => 'true',
@@ -902,19 +902,19 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_slider_pagination_alignment',
             [
-                'label' => esc_html__('Alignment', 'abcbiz-multi'),
+                'label' => esc_html__('Alignment', 'abcbiz-addons'),
                 'type' => Controls_Manager::CHOOSE,
                 'options' => [
                     'flex-start' => [
-                        'title' => esc_html__('Left', 'abcbiz-multi'),
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-left',
                     ],
                     'center' => [
-                        'title' => esc_html__('Center', 'abcbiz-multi'),
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-center',
                     ],
                     'flex-end' => [
-                        'title' => esc_html__('Right', 'abcbiz-multi'),
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
                         'icon' => 'eicon-text-align-right',
                     ],
                 ],
@@ -929,7 +929,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_slider_pagination_size',
             [
-                'label' => esc_html__('Size', 'abcbiz-multi'),
+                'label' => esc_html__('Size', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%', 'vh', 'vw', 'rem', 'ex', 'ch', 'custom'],
                 'default' => [
@@ -952,7 +952,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_slider_pagination_gap',
             [
-                'label' => esc_html__('Gap', 'abcbiz-multi'),
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'range' => [
@@ -975,7 +975,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
             'abcbiz_ele_testimonial_slider_pagination_indent',
             [
-                'label' => esc_html__('Indent', 'abcbiz-multi'),
+                'label' => esc_html__('Indent', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', 'em', '%'],
                 'default' => [
@@ -998,7 +998,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_slider_pagination_color',
             [
-                'label' => esc_html__('Color', 'abcbiz-multi'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#666666',
                 'selectors' => [
@@ -1010,7 +1010,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_ele_testimonial_slider_pagination_active_color',
             [
-                'label' => esc_html__('Active Color', 'abcbiz-multi'),
+                'label' => esc_html__('Active Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#374ae4',
                 'selectors' => [

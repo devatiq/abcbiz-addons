@@ -19,7 +19,7 @@
              if( !empty( $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] ) ){
                  echo do_shortcode( $shortcode ); 
              }else{
-                 echo '<div class="form_no_select">' .esc_html__('Please Select contact form.', 'abcbiz-multi'). '</div>';
+                 echo '<div class="form_no_select">' .esc_html__('Please Select contact form.', 'abcbiz-addons'). '</div>';
              }
          ?>
      </div>

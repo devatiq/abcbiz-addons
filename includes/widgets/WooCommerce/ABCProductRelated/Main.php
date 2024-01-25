@@ -17,7 +17,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-wc-product-related';
 		protected $title = 'ABC Related Products';
-		protected $icon = 'eicon-product-related abcbiz-multi-icon';
+		protected $icon = 'eicon-product-related abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-wc-category'
 		];		
@@ -33,7 +33,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_related_title_style',
 			[
-				'label' => esc_html__( 'Related Title', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Related Title', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -42,9 +42,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_related_title',
 			[
-				'label' => esc_html__( 'Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Related Products', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Related Products', 'abcbiz-addons' ),
 			]
 		);
 
@@ -53,7 +53,7 @@ class Main extends BaseWidget {
 				Group_Control_Typography::get_type(),
 				[
 					'name' => 'abcbiz_elementor_wc_product_related_title_typography',
-					'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+					'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 					'selector' => '{{WRAPPER}} h2.abcbiz-wc-related-product-title',
 				]
 			);
@@ -62,7 +62,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_related_title_color',
 			[
-				'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
@@ -77,7 +77,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_related_img_style',
 			[
-				'label' => esc_html__( 'Image Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Image Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -93,7 +93,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_wc_product_related_img_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%' ],
 				'default' => [
@@ -116,7 +116,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz_elementor_wc_product_related_product_title_style',
 			[
-				'label' => esc_html__( 'Product Title Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Product Title Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -126,7 +126,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_related_product_title_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-wc-related-products-area h2.woocommerce-loop-product__title',
 			]
 		);
@@ -135,7 +135,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_title_color',
 		[
-			'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#333333',
 			'selectors' => [
@@ -148,7 +148,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_title_hov_color',
 		[
-			'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Hover Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#113481',
 			'selectors' => [
@@ -163,7 +163,7 @@ class Main extends BaseWidget {
 	$this->start_controls_section(
 			'abcbiz_elementor_wc_product_related_product_price_style',
 			[
-				'label' => esc_html__( 'Price Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Price Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -173,7 +173,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_related_product_price_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-wc-related-products-area .amount',
 			]
 		);
@@ -182,7 +182,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_price_color',
 		[
-			'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#113481',
 			'selectors' => [
@@ -197,7 +197,7 @@ class Main extends BaseWidget {
 	$this->start_controls_section(
 			'abcbiz_elementor_wc_product_related_product_btn_style',
 			[
-				'label' => esc_html__( 'Button Style', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Style', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
@@ -207,7 +207,7 @@ class Main extends BaseWidget {
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_wc_product_related_product_btn_typography',
-				'label' => esc_html__( 'Typography', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-wc-related-products-area ul.products li.product .button',
 			]
 		);
@@ -216,7 +216,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_color',
 		[
-			'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#ffffff',
 			'selectors' => [
@@ -229,7 +229,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_bg_color',
 		[
-			'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#873ff0',
 			'selectors' => [
@@ -242,7 +242,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_hov_color',
 		[
-			'label' => esc_html__( 'Hover Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Hover Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#eeeeee',
 			'selectors' => [
@@ -255,7 +255,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_hov_bg_color',
 		[
-			'label' => esc_html__( 'Hover Background Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Hover Background Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#4050e8',
 			'selectors' => [
@@ -268,7 +268,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_spacing',
 		[
-			'label' => esc_html__( 'Spacing', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Spacing', 'abcbiz-addons' ),
 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 			'size_units' => [ 'px' ],
 			'default' => [
@@ -289,7 +289,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_btn_radius',
 		[
-			'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 			'type' => \Elementor\Controls_Manager::DIMENSIONS,
 			'size_units' => [ 'px' ],
 			'default' => [
@@ -312,7 +312,7 @@ class Main extends BaseWidget {
 	$this->start_controls_section(
 		'abcbiz_elementor_wc_product_related_product_flash_style',
 		[
-			'label' => esc_html__( 'Sales Flash Style', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Sales Flash Style', 'abcbiz-addons' ),
 			'tab' => Controls_Manager::TAB_STYLE,
 		]
 	);
@@ -321,7 +321,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_flash_color',
 		[
-			'label' => esc_html__( 'Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#ffffff',
 			'selectors' => [
@@ -333,7 +333,7 @@ class Main extends BaseWidget {
 	$this->add_control(
 		'abcbiz_elementor_wc_product_related_product_flash_bg_color',
 		[
-			'label' => esc_html__( 'Background Color', 'abcbiz-multi' ),
+			'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 			'type'  => Controls_Manager::COLOR,
 			'default' => '#5446e8',
 			'selectors' => [

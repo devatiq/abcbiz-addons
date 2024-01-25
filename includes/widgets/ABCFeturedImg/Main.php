@@ -11,7 +11,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-featured-image';
 		protected $title = 'ABC Featured Image';
-		protected $icon = 'eicon-image abcbiz-multi-icon';
+		protected $icon = 'eicon-image abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -28,7 +28,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
 			'abcbiz-elementor-fearture-img',
 			[
-				'label' => esc_html__( 'Image Alignment', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Image Alignment', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
@@ -37,20 +37,20 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
 			'abc_elementor_feat_img_align',
 			[
-				'label' => esc_html__( 'Alignment', 'abcbiz-multi'),
+				'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
 				'type' => Controls_Manager::CHOOSE,
 				'default' => 'center',
 				'options' => [
 					'left'    => [
-						'title' => esc_html__( 'Left', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Left', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-left',
 					],
 					'center' => [
-						'title' => esc_html__( 'Center', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Center', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-center',
 					],
 					'right' => [
-						'title' => esc_html__( 'Right', 'abcbiz-multi' ),
+						'title' => esc_html__( 'Right', 'abcbiz-addons' ),
 						'icon' => 'eicon-text-align-right',
 					],
 				],				
@@ -66,7 +66,7 @@ class Main extends BaseWidget {
 		$this->start_controls_section(
             'abcbiz-elementor-fearture-img-style',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -75,7 +75,7 @@ class Main extends BaseWidget {
 		$this->add_responsive_control(
             'abcbiz-elementor-fearture-img-size',
             [
-                'label' => esc_html__('Image Width', 'abcbiz-multi'),
+                'label' => esc_html__('Image Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
                 'range' => [
@@ -109,7 +109,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz-elementor-fearture-img-border-radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [

@@ -13,7 +13,7 @@ class Main extends BaseWidget
     // define protected variables...
     protected $name = 'abcbiz-elementor-team-member';
     protected $title = 'ABC Team Member';
-    protected $icon = 'eicon-theme-builder abcbiz-multi-icon';
+    protected $icon = 'eicon-theme-builder abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
     ];
@@ -27,7 +27,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_teammember_setting',
             [
-                'label' => esc_html__('Team Setting', 'abcbiz-multi'),
+                'label' => esc_html__('Team Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
@@ -36,13 +36,13 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_style',
             [
-                'label' => esc_html__('Member Style', 'abcbiz-multi'),
+                'label' => esc_html__('Member Style', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
                 'default' => 'style-one',
                 'options' => [
-                    'style-one' => esc_html__('Style One', 'abcbiz-multi'),
-                    'style-two' => esc_html__('Style Two', 'abcbiz-multi'),
-                    'style-three' => esc_html__('Style Three', 'abcbiz-multi'),
+                    'style-one' => esc_html__('Style One', 'abcbiz-addons'),
+                    'style-two' => esc_html__('Style Two', 'abcbiz-addons'),
+                    'style-three' => esc_html__('Style Three', 'abcbiz-addons'),
                 ],
             ]
         );
@@ -51,7 +51,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_image',
 			[
-				'label' => esc_html__( 'Member Image', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Member Image', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 			]
 		);
@@ -60,9 +60,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_image_dimension',
 			[
-				'label' => esc_html__( 'Image Dimension', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Image Dimension', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::IMAGE_DIMENSIONS,
-				'description' => esc_html__( 'Crop the original image size to any custom size. Set custom width or height to keep the original size ratio.', 'abcbiz-multi' ),
+				'description' => esc_html__( 'Crop the original image size to any custom size. Set custom width or height to keep the original size ratio.', 'abcbiz-addons' ),
 				'default' => [
 					'width' => '800',
 					'height' => '800',
@@ -74,9 +74,9 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_teammember_name',
 			[
-				'label' => esc_html__( 'Member Name', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Member Name', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Member Name', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Member Name', 'abcbiz-addons' ),
 			]
 		);
 
@@ -84,7 +84,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_name_pos',
 			[
-				'label' => esc_html__( 'Name Text Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Name Text Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -111,9 +111,9 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_teammember_designation',
 			[
-				'label' => esc_html__( 'Member Designation', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Member Designation', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'CEO of Company', 'abcbiz-multi' ),
+				'default' => esc_html__( 'CEO of Company', 'abcbiz-addons' ),
 			]
 		);
 
@@ -121,7 +121,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_designation_pos',
 			[
-				'label' => esc_html__( 'Designation Text Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Designation Text Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -148,9 +148,9 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_teammember_link',
 			[
-				'label' => esc_html__( 'Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_style!' => 'style-three',
                 ],
@@ -162,10 +162,10 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_display_social',
             [
-                'label' => esc_html__('Display Social Profile', 'abcbiz-multi'),
+                'label' => esc_html__('Display Social Profile', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'abcbiz-multi'),
-                'label_off' => esc_html__('No', 'abcbiz-multi'),
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
             ]
@@ -175,7 +175,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_teammember_social_icon_pos',
 			[
-				'label' => esc_html__( 'Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -203,9 +203,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_phone_number',
 			[
-				'label' => esc_html__( 'Phone Number', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Phone Number', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '+123 456 7890', 'abcbiz-multi' ),
+				'default' => esc_html__( '+123 456 7890', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
                 ]
@@ -216,9 +216,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_email_address',
 			[
-				'label' => esc_html__( 'Email Address', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Email Address', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'name@siteaddress.com', 'abcbiz-multi' ),
+				'default' => esc_html__( 'name@siteaddress.com', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
                 ]
@@ -229,9 +229,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_btn_text',
 			[
-				'label' => esc_html__( 'Button Text', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Learn More', 'abcbiz-multi' ),
+				'default' => esc_html__( 'Learn More', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
                 ]
@@ -242,9 +242,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_btn_link',
 			[
-				'label' => esc_html__( 'Button Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Button Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
                 ]
@@ -255,9 +255,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_social_fc',
 			[
-				'label' => esc_html__( 'Facebook Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Facebook Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
                 ]
@@ -268,9 +268,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_social_tw',
 			[
-				'label' => esc_html__( 'Twitter/X Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Twitter/X Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
                 ]
@@ -281,9 +281,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_social_lin',
 			[
-				'label' => esc_html__( 'Linkedin Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Linkedin Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
                 ]
@@ -294,9 +294,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_social_ins',
 			[
-				'label' => esc_html__( 'Instagram Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Instagram Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
                 ]
@@ -307,9 +307,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_teammember_social_yt',
 			[
-				'label' => esc_html__( 'Youtube Link', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Youtube Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '#', 'abcbiz-multi' ),
+				'default' => esc_html__( '#', 'abcbiz-addons' ),
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
                 ]
@@ -323,7 +323,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_teammember_style_setting',
             [
-                'label' => esc_html__('Style', 'abcbiz-multi'),
+                'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -332,7 +332,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_border_color',
             [
-                'label' => esc_html__('Border Color', 'abcbiz-multi'),
+                'label' => esc_html__('Border Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -350,7 +350,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_name_one_typography',
-                'label' => esc_html__('Name Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Name Typography', 'abcbiz-addons'),
                 'selector' =>  '{{WRAPPER}} h4.abcbiz-ele-team-name a, {{WRAPPER}} h4.abcbiz-ele-team-name',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-one',
@@ -363,7 +363,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_name_two_typography',
-                'label' => esc_html__('Name Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Name Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} h3.abcbiz-ele-team-name, {{WRAPPER}} h3.abcbiz-ele-team-name a',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-two',
@@ -376,7 +376,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_name_three_typography',
-                'label' => esc_html__('Name Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Name Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} h3.abcbiz-style-three-team-name, {{WRAPPER}} h3.abcbiz-style-three-team-name a',
                     'condition' => [
                         'abcbiz_elementor_teammember_style' => 'style-three',
@@ -389,7 +389,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_name_color',
             [
-                'label' => esc_html__('Name Color', 'abcbiz-multi'),
+                'label' => esc_html__('Name Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#333333',
                 'selectors' => [
@@ -404,7 +404,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_name_hover_color',
             [
-                'label' => esc_html__('Name Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Name Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -421,7 +421,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_designation_one_typography',
-                'label' => esc_html__('Designation Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} p.abcbiz-ele-team-designation',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-one',
@@ -434,7 +434,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_designation_two_typography',
-                'label' => esc_html__('Designation Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-ele-team-style-two-info p.abcbiz-ele-team-designation',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-two',
@@ -447,7 +447,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_designation_three_typography',
-                'label' => esc_html__('Designation Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} h4.abcbiz-style-three-team-designation',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -459,7 +459,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_designation_color',
             [
-                'label' => esc_html__('Designation Color', 'abcbiz-multi'),
+                'label' => esc_html__('Designation Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -474,7 +474,7 @@ class Main extends BaseWidget
          $this->add_control(
             'abcbiz_elementor_teammember_arrow_icon_color',
             [
-                'label' => esc_html__('Arrow Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Arrow Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#1b75cf',
                 'selectors' => [
@@ -491,7 +491,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_contact_typography',
-                'label' => esc_html__('Contact Info Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Contact Info Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-style-three-team-phone, {{WRAPPER}} .abcbiz-style-three-team-email',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -503,7 +503,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_teammember_contact_icon_size',
 			[
-				'label' => esc_html__( 'Contact Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Contact Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -530,7 +530,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_contact_icon_pos',
 			[
-				'label' => esc_html__( 'Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -557,7 +557,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_teammember_contact_text_color',
             [
-                'label' => esc_html__('Contact Text Color', 'abcbiz-multi'),
+                'label' => esc_html__('Contact Text Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#555555',
                 'selectors' => [
@@ -573,7 +573,7 @@ class Main extends BaseWidget
           $this->add_control(
             'abcbiz_elementor_teammember_contact_icon_color',
             [
-                'label' => esc_html__('Contact Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Contact Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#555555',
                 'selectors' => [
@@ -590,7 +590,7 @@ class Main extends BaseWidget
             Group_Control_Typography::get_type(),
             [
                 'name' => 'abcbiz_elementor_teammember_btn_typography',
-                'label' => esc_html__('Learn More Typography', 'abcbiz-multi'),
+                'label' => esc_html__('Learn More Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-style-three-team-button a',
                 'condition' => [
                     'abcbiz_elementor_teammember_style' => 'style-three',
@@ -602,7 +602,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_more_btn_color',
             [
-                'label' => esc_html__('Learn More Color', 'abcbiz-multi'),
+                'label' => esc_html__('Learn More Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#0694bf',
                 'selectors' => [
@@ -619,7 +619,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_more_btn_hover_color',
             [
-                'label' => esc_html__('Learn More Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Learn More Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#04de75',
                 'selectors' => [
@@ -636,7 +636,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_more_icon_size',
 			[
-				'label' => esc_html__( 'Learn More Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Learn More Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -663,7 +663,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_more_icon_pos',
 			[
-				'label' => esc_html__( 'Learn More Icon Position', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Learn More Icon Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -693,7 +693,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_teammember_social_style',
             [
-                'label' => esc_html__('Social Profile', 'abcbiz-multi'),
+                'label' => esc_html__('Social Profile', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'abcbiz_elementor_teammember_display_social' => 'yes',
@@ -705,7 +705,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_teammember_social_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-multi' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px' ],
 				'range' => [
@@ -733,7 +733,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_social_circle_bg_color',
             [
-                'label' => esc_html__('Share Icon Color', 'abcbiz-multi'),
+                'label' => esc_html__('Share Icon Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -749,7 +749,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_social_icons_color',
             [
-                'label' => esc_html__('Social Icons Color', 'abcbiz-multi'),
+                'label' => esc_html__('Social Icons Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#448E08',
                 'selectors' => [
@@ -762,7 +762,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_teammember_social_icons_hover_color',
             [
-                'label' => esc_html__('Social Icon Hover Color', 'abcbiz-multi'),
+                'label' => esc_html__('Social Icon Hover Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'default' => '#1b75cf',
                 'selectors' => [

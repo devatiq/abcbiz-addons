@@ -16,7 +16,7 @@ if ($abcbiz_image_url) {
     </div>
     <?php
 } else {
-    echo esc_html__('No featured image found', 'abcbiz-multi');
+    echo esc_html__('No featured image found', 'abcbiz-addons');
 }
 ?>
 
