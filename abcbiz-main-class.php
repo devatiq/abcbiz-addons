@@ -92,7 +92,8 @@ class ABCBizMultiElementorPack
 	public function setConstants()
 	{
 		define('AbcBizElementor_Version', $this->version);
-		define('AbcBizElementor_Name', 'ABCBiz Multi Addons For Elementor');
+		define('AbcBizElementor_Name', esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-addons'));
+		
 	}
 
 	/**
@@ -133,7 +134,7 @@ class ABCBizMultiElementorPack
 
 		$message = sprintf(
 			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . AbcBizElementor_Name . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
 		);
 
@@ -151,7 +152,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . AbcBizElementor_Name . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -170,7 +171,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-			'<strong>' . esc_html__(AbcBizElementor_Name, 'abcbiz-addons') . '</strong>',
+			'<strong>' . AbcBizElementor_Name . '</strong>',
 			'<strong>' . esc_html__('PHP', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
