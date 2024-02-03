@@ -90,6 +90,12 @@ Yes, our plugin is designed to be compatible with any WordPress theme. Additiona
 1. Stylish Pricing Table. (This screenshot description corresponds to screenshot-1.png. Screenshots are stored in the /assets directory.)
 2. Stylish Icon Box or Service Box. (This screenshot description corresponds to screenshot-2.png. Screenshots are stored in the /assets directory.)
 
+== Third-party Resource ==
+1. Magnify popup
+2. Swipe Slider
+3. youtube.com
+4. google.com
+
 == Changelog ==
 
 = 1.0.0 =
