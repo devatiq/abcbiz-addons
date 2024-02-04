@@ -18,7 +18,7 @@ function abcbiz_home_page() {
                 <!-- Buttons -->
                 <div class="abcbiz-resource-buttons">                
                                         
-                    <a href="https://abcbizaddons.com/abcbiz-addons-addons-for-elementor/" target="_blank" class="button"><?php echo esc_html__("Demos", "abcbiz-addons"); ?></a>
+                    <a href="https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/" target="_blank" class="button"><?php echo esc_html__("Demos", "abcbiz-addons"); ?></a>
                     
                     <a href="https://abcbizaddons.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-addons"); ?></a>
                    
