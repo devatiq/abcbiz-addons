@@ -32,6 +32,41 @@ class Main extends BaseWidget
     {
 
         $this->start_controls_section(
+            'abcbiz_elementor_dual_button_align_setting',
+            [
+                'label' => esc_html__('Alignment', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+        $this->add_responsive_control(
+            'abcbiz_elementor_dual_button_align',
+            [
+                'label' => esc_html__( 'Button Position', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'default' => 'center',
+                'options' => [
+                    'flex-start'    => [
+                        'title' => esc_html__( 'Left', 'abcbiz-addons' ),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__( 'Center', 'abcbiz-addons' ),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => esc_html__( 'Right', 'abcbiz-addons' ),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-dual-button-area' => 'justify-content: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End Alignment section
+
+        $this->start_controls_section(
             'abcbiz_elementor_dual_button_setting',
             [
                 'label' => esc_html__('Contents', 'abcbiz-addons'),
@@ -74,8 +109,8 @@ class Main extends BaseWidget
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
-                    'is_external' => true,
-                    'nofollow' => true,
+                    'is_external' => false,
+                    'nofollow' => false,
                 ],
                 'label_block' => true,
             ]
@@ -205,8 +240,8 @@ class Main extends BaseWidget
                 'show_external' => true,
                 'default' => [
                     'url' => '#',
-                    'is_external' => true,
-                    'nofollow' => true,
+                    'is_external' => false,
+                    'nofollow' => false,
                 ],
                 'label_block' => true,
             ]
