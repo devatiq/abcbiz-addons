@@ -24,11 +24,6 @@ class Main extends BaseWidget {
 			'abc', 'menu', 'nav',
 		];
 
-		public function get_style_depends()
-		{
-			return ['abcbiz-wp-menu'];
-		}
-
 		public function get_script_depends()
     {
         return ['abcbiz-wp-menu-js'];
@@ -525,7 +520,7 @@ class Main extends BaseWidget {
 					'size' => 32,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-responsive-menu svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-responsive-menu svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -546,7 +541,7 @@ class Main extends BaseWidget {
 					'isLinked' => false,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-responsive-menu' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-responsive-menu' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -559,7 +554,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-responsive-menu svg' => 'fill: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-responsive-menu svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);
@@ -572,7 +567,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu' => 'border-top-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-mobilemenu' => 'border-top-color: {{VALUE}}',
 				],
 			]
 		);
@@ -585,7 +580,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-mobilemenu' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -596,7 +591,7 @@ class Main extends BaseWidget {
 			[
 				'name' => 'abcbiz_elementor_wp_menu_mob_typography',
 				'label' => esc_html__( 'Mob Menu Typography', 'abcbiz-addons' ),
-				'selector' => '{{WRAPPER}} #abcbiz-mobilemenu ul li a',
+				'selector' => '{{WRAPPER}} .abcbiz-mobilemenu ul li a',
 			]
 		);
 
@@ -608,7 +603,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#333333',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu ul li a' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-mobilemenu ul li a' => 'color: {{VALUE}}',
 				],
 			]
 		);
@@ -629,7 +624,7 @@ class Main extends BaseWidget {
 					'isLinked' => false,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu ul li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-mobilemenu ul li a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -642,7 +637,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ededed',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu ul li' => 'border-bottom-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-mobilemenu ul li' => 'border-bottom-color: {{VALUE}}',
 				],
 			]
 		);
@@ -655,7 +650,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#6146ec',
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu .sub-toggle' => 'background-color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-mobilemenu .sub-toggle' => 'background-color: {{VALUE}}',
 				],
 			]
 		);
@@ -680,7 +675,7 @@ class Main extends BaseWidget {
 					'size' => 30,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu .sub-toggle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-mobilemenu .sub-toggle' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}; line-height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -705,7 +700,7 @@ class Main extends BaseWidget {
 					'size' => 3,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-mobilemenu .sub-toggle' => 'top: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-mobilemenu .sub-toggle' => 'top: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
