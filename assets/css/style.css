@@ -30,6 +30,18 @@
 }
 
 /* ---------------------------------------------
+ * WP Menu
+ * --------------------------------------------- */
+ #abcbiz-responsive-menu, .abcbiz-mob-menu-icon-wrap {
+    display: none;
+    outline: none;
+}
+
+#abcbiz-mobilemenu {
+    display: none;
+}
+
+/* ---------------------------------------------
  * Icon Box
  * --------------------------------------------- */
 .abcbiz-elementor-icon-box-area {

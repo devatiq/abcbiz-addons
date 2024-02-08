@@ -145,15 +145,6 @@
     display: block;
 }
 
-#abcbiz-responsive-menu, .abcbiz-mob-menu-icon-wrap {
-    display: none;
-    outline: none;
-}
-
-#abcbiz-mobilemenu {
-    display: none;
-}
-
 @media screen and (max-width: 950px) {
 
     .abcbiz-wp-menu-container {
@@ -245,5 +236,3 @@
     }
 
 }
-
-
