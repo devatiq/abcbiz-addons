@@ -63,5 +63,5 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
 <div class="abcbiz-elementor-product-bread-crumb-area">
     <?php 
     // Get the breadcrumb trail
-    echo abcbiz_wc_multi_breadcrumb(); ?>
+    echo wp_kses(abcbiz_wc_multi_breadcrumb(), wp_kses_allowed_html()); ?>
 </div><!-- end breadcrumb area -->

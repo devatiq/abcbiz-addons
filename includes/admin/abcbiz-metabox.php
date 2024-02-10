@@ -75,6 +75,9 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
     add_action('add_meta_boxes', 'abcbiz_add_wc_product_meta_box', 5);
 
     function abcbiz_wc_product_meta_box_html($post) {
+        // Nonce field for security
+        wp_nonce_field('abcbiz_wc_product_description_nonce_action', 'abcbiz_wc_product_description_nonce');
+        
         echo '<p><strong>' . esc_html__('Note:', 'abcbiz-addons') . '</strong> ' . esc_html__('This area is specifically for ABCBiz Elementor Addons Products description tab contents.', 'abcbiz-addons') . '</p>';
         $content = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
         wp_editor(
@@ -87,8 +90,15 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             )
         );
     }
+    
 
     function abcbiz_save_postdata($post_id) {
+        // Check if our nonce is set and verify it.
+        if (!isset($_POST['abcbiz_wc_product_description_nonce']) || !wp_verify_nonce(sanitize_text_field( wp_unslash ($_POST['abcbiz_wc_product_description_nonce'])), 'abcbiz_wc_product_description_nonce_action')) {
+            return $post_id;
+        }
+        
+        // Proceed to save the data
         if (array_key_exists('abcbiz_wc_product_description', $_POST)) {
             update_post_meta(
                 $post_id,
@@ -97,5 +107,5 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             );
         }
     }
-    add_action('save_post', 'abcbiz_save_postdata');
+    
 }
