@@ -138,7 +138,7 @@ add_action('elementor/editor/before_enqueue_scripts', function () {
 });
 
 //Get Plugin Info
-function get_abcbiz_multi_plugin_info() {
+function abcbiz_multi_plugin_info() {
     // Ensure the function is available
     if ( ! function_exists( 'get_plugin_data' ) ) {
         require_once( ABSPATH . 'wp-admin/includes/plugin.php' );

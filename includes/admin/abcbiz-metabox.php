@@ -20,7 +20,7 @@ add_action('save_post', 'abcbiz_multi_save_excerpt_metabox');
 
 function abcbiz_multi_save_excerpt_metabox($post_id) {
     // Nonce check
-    if (!isset($_POST['abcbiz_multi_excerpt_metabox_nonce']) || !wp_verify_nonce($_POST['abcbiz_multi_excerpt_metabox_nonce'], basename(__FILE__))) {
+    if (!isset($_POST['abcbiz_multi_excerpt_metabox_nonce']) || !wp_verify_nonce(sanitize_text_field( wp_unslash ($_POST['abcbiz_multi_excerpt_metabox_nonce'])), basename(__FILE__))) {
         return $post_id;
     }
 

@@ -9,7 +9,7 @@ function abcbiz_widgets_page() {
         require_once ABSPATH . 'wp-admin/includes/plugin.php';
     }
     // Get the plugin data
-    $abcbiz_plugin_data = get_abcbiz_multi_plugin_info();
+    $abcbiz_plugin_data = abcbiz_multi_plugin_info();
     ?>
     <div class="wrap abcbiz-available-widget-wrap">
         <h2><?php echo esc_html($abcbiz_plugin_data['Name']); ?></h2>

@@ -34,32 +34,32 @@ $abcbiz_flip_direction_class = !empty($abcbiz_flip_direction) ? $abcbiz_flip_dir
         </div>
     <?php elseif ($abcbiz_elementor_flip_box_type === 'image' && !empty($abcbiz_flip_front_image)) : ?>
         <div class="abcbiz-flip-box-image">
-            <img src="<?php echo esc_url($abcbiz_flip_front_image['url']); ?>" alt="<?php echo esc_html__($abcbiz_flip_front_title); ?>">
+            <img src="<?php echo esc_url($abcbiz_flip_front_image['url']); ?>" alt="<?php echo esc_html($abcbiz_flip_front_title); ?>">
         </div>
     <?php endif; ?>
 
     <?php if (!empty($abcbiz_flip_front_title)) : ?>
-        <h2><?php echo esc_html__($abcbiz_flip_front_title); ?></h2>
+        <h2><?php echo esc_html($abcbiz_flip_front_title); ?></h2>
     <?php endif; ?>
 
     <?php if (!empty($abcbiz_flip_front_desc)) : ?>
-        <p class="abcbiz-front-description"><?php echo esc_html__($abcbiz_flip_front_desc); ?></p>
+        <p class="abcbiz-front-description"><?php echo esc_html($abcbiz_flip_front_desc); ?></p>
     <?php endif; ?>
 </div><!-- end front -->
 
 		 <div class="abcbiz-flip-box-back">
 			 <?php if (!empty($abcbiz_flip_back_title)) : ?>
-				 <h3><?php echo esc_html__($abcbiz_flip_back_title); ?></h3>
+				 <h3><?php echo esc_html($abcbiz_flip_back_title); ?></h3>
 			 <?php endif; ?>
  
 			 <?php if (!empty($abcbiz_flip_back_desc)) : ?>
-				 <p class="abcbiz-back-description"><?php echo esc_html__($abcbiz_flip_back_desc); ?></p>
+				 <p class="abcbiz-back-description"><?php echo esc_html($abcbiz_flip_back_desc); ?></p>
 			 <?php endif; ?>
  
 			 <?php if (!empty($abcbiz_flip_back_btn_text)) : ?>
 				<div class="abcbiz-flip-back-btn">
                 <a href="<?php echo esc_url($abcbiz_flip_back_btn_link_url); ?>"<?php echo $abcbiz_flip_back_btn_link_is_external; ?><?php echo $abcbiz_flip_back_btn_link_nofollow; ?>>
-               <?php echo esc_html__($abcbiz_flip_back_btn_text); ?>
+               <?php echo esc_html($abcbiz_flip_back_btn_text); ?>
                </a></div>
             <?php endif; ?>
 		 </div><!-- end back -->

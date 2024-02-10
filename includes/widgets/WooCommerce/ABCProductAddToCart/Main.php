@@ -356,13 +356,12 @@ class Main extends BaseWidget {
 		}
 	
 		$text_callback = function() {
-			ob_start();          
-			echo esc_html__('Add to cart', 'abcbiz-addons');          
+			ob_start();
+			echo esc_html__('Add to cart', 'abcbiz-addons');
 			return ob_get_clean();
 		};
 	
 		add_filter( 'woocommerce_product_single_add_to_cart_text', $text_callback );
-		add_filter( 'esc_html', [ $this, 'unescape_html' ], 10, 2 );
 	
 		ob_start();
 		woocommerce_template_single_add_to_cart();
@@ -373,8 +372,43 @@ class Main extends BaseWidget {
 		$replacement = 'single_add_to_cart_button elementor-button abcbiz_add_to_cart button alt" data-product_id="' . esc_attr($product_id) . '"';
 		$form = str_replace( 'single_add_to_cart_button', $replacement, $form );
 	
-		echo $form; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		// Define allowed HTML for wp_kses
+		$allowed_html = array(
+			'a' => array(
+				'href' => array(),
+				'title' => array(),
+				'class' => array(),
+				'id' => array(),
+				'data-product_id' => array(),
+			),
+			'button' => array(
+				'type' => array(),
+				'class' => array(),
+				'id' => array(),
+				'name' => array(),
+				'value' => array(),
+				'data-product_id' => array(), 
+			),
+			'input' => array(
+				'type' => array(),
+				'name' => array(),
+				'value' => array(),
+				'class' => array(),
+				'id' => array(),
+			),
+			'div' => array(
+				'class' => array(),
+				'id' => array(),
+			),
+			'span' => array(
+				'class' => array(),
+				'id' => array(),
+			),			
+		);
+	
+		echo wp_kses($form, $allowed_html);
 	}
+	
 	
 	public function get_product( $product_id = false ) {
 		if ( 'product_variation' === get_post_type() ) {

@@ -27,7 +27,7 @@ if ( ! empty( $categories ) ) {
             $output .= $separator;
         }
     }
-    echo $output;
+    echo wp_kses_post($output);
 }
 ?>
     </div>

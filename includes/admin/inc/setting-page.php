@@ -5,7 +5,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_home_page() {
 
     // Get the plugin data
-    $abcbiz_plugin_data = get_abcbiz_multi_plugin_info();
+    $abcbiz_plugin_data = abcbiz_multi_plugin_info();
 
     ?>
     <div class="wrap">

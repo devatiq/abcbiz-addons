@@ -46,7 +46,7 @@ add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 
 //Add to cart
 function abcbiz_ajax_add_to_cart_handler() {
-    if (!isset($_POST['abcbiz_cart_nonce']) || !wp_verify_nonce($_POST['abcbiz_cart_nonce'], 'abcbiz_add_to_cart_nonce')) {
+    if (!isset($_POST['abcbiz_cart_nonce']) || !wp_verify_nonce(sanitize_text_field( wp_unslash ($_POST['abcbiz_cart_nonce'])), 'abcbiz_add_to_cart_nonce')) {
         wp_send_json_error(['message' => esc_html__('Nonce verification failed.', 'abcbiz-addons')]);
         return;
     }
@@ -57,9 +57,9 @@ function abcbiz_ajax_add_to_cart_handler() {
     }
 
     // Safely escape the product_id
-    $product_id = isset($_POST['product_id']) ? (int) esc_attr($_POST['product_id']) : 0;
+    $product_id = isset($_POST['product_id']) ? (int) sanitize_text_field($_POST['product_id']) : 0;
     // Safely escape the quantity, use sent quantity or default to 1
-    $quantity = isset($_POST['quantity']) ? (int) esc_attr($_POST['quantity']) : 1;
+    $quantity = isset($_POST['quantity']) ? (int) sanitize_text_field($_POST['quantity']) : 1;
 
     if (!wc_get_product($product_id)) {
         wp_send_json_error(['message' => esc_html__('Invalid product.', 'abcbiz-addons')]);
