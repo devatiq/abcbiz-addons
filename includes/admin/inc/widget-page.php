@@ -1,7 +1,6 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
-
 //Available Widget
 function abcbiz_widgets_page() {
     // Include the plugin.php file if it hasn't been already
