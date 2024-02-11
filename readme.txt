@@ -91,10 +91,9 @@ Yes, our plugin is designed to be compatible with any WordPress theme. Additiona
 2. Stylish Icon Box or Service Box. (This screenshot description corresponds to screenshot-2.png. Screenshots are stored in the /assets directory.)
 
 == Third-party Resource ==
-1. Magnify popup
-2. Swipe Slider
-3. youtube.com
-4. google.com
+1. Swipe Slider
+2. youtube.com
+3. google.com
 
 == Changelog ==
 
