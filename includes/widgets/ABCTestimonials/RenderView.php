@@ -12,7 +12,7 @@ $abcbiz_testimonial_type = $abcbiz_settings['abcbiz_ele_testimonial_types'] ? $a
 
 //set templates for testimonial
 if($abcbiz_testimonial_type == 'grid'){
-    include AbcBizElementor_Path . '/includes/widgets/ABCTestimonials/templates/grid.php';
+    include ABCBIZ_Path . '/includes/widgets/ABCTestimonials/templates/grid.php';
 }elseif($abcbiz_testimonial_type == 'slider'){
-    include AbcBizElementor_Path . '/includes/widgets/ABCTestimonials/templates/sliders.php';
+    include ABCBIZ_Path . '/includes/widgets/ABCTestimonials/templates/sliders.php';
 }

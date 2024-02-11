@@ -29,7 +29,7 @@ $abcbiz_imghover_link = $abcbiz_settings['abcbiz_elementor_imghover_link'];
            }
 
             if (empty($abcbiz_imghover_image_url)) {
-            $abcbiz_imghover_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', AbcBizElementor_Path), '/') . '/assets/img/img-hover-placeholder.jpg');
+            $abcbiz_imghover_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', ABCBIZ_Path), '/') . '/assets/img/img-hover-placeholder.jpg');
            }
           ?>
            <img src="<?php echo esc_url($abcbiz_imghover_image_url); ?>" alt="<?php echo esc_html($abcbiz_imghover_title); ?>">

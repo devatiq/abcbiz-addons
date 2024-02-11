@@ -75,7 +75,7 @@ $breakpoints = wp_json_encode([
                                             echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
                                         else :
                                         ?>
-                                            <img src="<?php echo AbcBizElementor_Assets; ?>/img/member-placeholder.jpg" alt="">
+                                            <img src="<?php echo ABCBIZ_Assets; ?>/img/member-placeholder.jpg" alt="">
                                         <?php endif; ?>
                                     </div>
                                 <?php endif; ?><!--/ Client Image-->

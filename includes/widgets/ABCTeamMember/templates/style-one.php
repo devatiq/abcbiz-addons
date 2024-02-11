@@ -49,7 +49,7 @@ $abcbiz_member_image_dimension = $abcbiz_settings['abcbiz_elementor_teammember_i
            }
 
             if (empty($abcbiz_member_image_url)) {
-            $abcbiz_member_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', AbcBizElementor_Path), '/') . '/assets/img/member-placeholder.jpg');
+            $abcbiz_member_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', ABCBIZ_Path), '/') . '/assets/img/member-placeholder.jpg');
            }
           ?>
            <img src="<?php echo esc_url($abcbiz_member_image_url); ?>" alt="<?php echo esc_html($abcbiz_member_name); ?>">

@@ -39,7 +39,7 @@ $abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
                                     echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
                                 else :
                                 ?>
-                                    <img src="<?php echo esc_attr(AbcBizElementor_Assets); ?>/img/member-placeholder.jpg" alt="">
+                                    <img src="<?php echo esc_attr(ABCBIZ_Assets); ?>/img/member-placeholder.jpg" alt="">
                                 <?php endif; ?>
                             </div>
                             <?php endif; ?> <!--/ Client Image-->

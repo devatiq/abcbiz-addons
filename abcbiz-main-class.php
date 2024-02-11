@@ -1,6 +1,6 @@
 <?php
 
-namespace AbcBizElementor;
+namespace ABCBIZ;
 
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -81,8 +81,8 @@ class ABCBizMultiElementorPack
 	// Add extranal file for extra functionality
 	public function include_external_file()
 	{
-		require_once AbcBizElementor_Path . '/includes/admin/abcbiz-metabox.php';
-		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-widgets-functions.php';
+		require_once ABCBIZ_Path . '/includes/admin/abcbiz-metabox.php';
+		require_once ABCBIZ_Path . '/includes/widgets/abcbiz-widgets-functions.php';
 	}
 
 	/**
@@ -91,8 +91,8 @@ class ABCBizMultiElementorPack
 
 	public function setConstants()
 	{
-		define('AbcBizElementor_Version', $this->version);
-		define('AbcBizElementor_Name', esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-addons'));
+		define('ABCBIZ_Version', $this->version);
+		define('ABCBIZ_Name', esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-addons'));
 		
 	}
 
@@ -134,7 +134,7 @@ class ABCBizMultiElementorPack
 
 		$message = sprintf(
 			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
-			'<strong>' . AbcBizElementor_Name . '</strong>',
+			'<strong>' . ABCBIZ_Name . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
 		);
 
@@ -152,7 +152,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-			'<strong>' . AbcBizElementor_Name . '</strong>',
+			'<strong>' . ABCBIZ_Name . '</strong>',
 			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_ELEMENTOR_VERSION
 		);
@@ -171,7 +171,7 @@ class ABCBizMultiElementorPack
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
 			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-			'<strong>' . AbcBizElementor_Name . '</strong>',
+			'<strong>' . ABCBIZ_Name . '</strong>',
 			'<strong>' . esc_html__('PHP', 'abcbiz-addons') . '</strong>',
 			self::MINIMUM_PHP_VERSION
 		);
@@ -195,13 +195,13 @@ class ABCBizMultiElementorPack
 		// flush rewrite rules
 		flush_rewrite_rules();
 
-		$isInstalled = get_option('AbcBizElementor_installed');
+		$isInstalled = get_option('ABCBIZ_installed');
 
 		if (!$isInstalled) {
-			update_option('AbcBizElementor_installed', time());
+			update_option('ABCBIZ_installed', time());
 		}
 
-		update_option('AbcBizElementor_Version', AbcBizElementor_Version);
+		update_option('ABCBIZ_Version', ABCBIZ_Version);
 	}
 
 	/**
@@ -219,7 +219,7 @@ class ABCBizMultiElementorPack
 
         if (strpos($class_name, $base_namespace) === 0) {
         $relative_class_name = substr($class_name, strlen($base_namespace));
-        $file_path = AbcBizElementor_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
+        $file_path = ABCBIZ_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
 
         if (file_exists($file_path)) {
             require $file_path;
@@ -232,8 +232,8 @@ class ABCBizMultiElementorPack
 	 */
 	public function register_widgets($abcbiz_widgets_manager)
 	{
-		require_once AbcBizElementor_Path . '/includes/widgets/BaseWidgets.php';
-		require_once AbcBizElementor_Path . '/includes/abcbiz-addons-widgets.php';
+		require_once ABCBIZ_Path . '/includes/widgets/BaseWidgets.php';
+		require_once ABCBIZ_Path . '/includes/abcbiz-addons-widgets.php';
 
 	}
 	

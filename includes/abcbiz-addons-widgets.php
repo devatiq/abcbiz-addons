@@ -146,7 +146,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
-		require_once AbcBizElementor_Path . '/includes/widgets/abcbiz-addons-wc-widgets.php';
+		require_once ABCBIZ_Path . '/includes/widgets/abcbiz-addons-wc-widgets.php';
 		}
 
 		foreach ($abcbiz_widgets as $widget_class) {

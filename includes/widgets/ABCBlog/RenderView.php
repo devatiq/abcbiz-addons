@@ -53,7 +53,7 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                             } else {
-                                echo '<img src="' . AbcBizElementor_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
+                                echo '<img src="' . ABCBIZ_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
                             }
                             ?>
                         </a>
@@ -129,7 +129,7 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                                 } else {
-                                    echo '<img src="' . AbcBizElementor_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
+                                    echo '<img src="' . ABCBIZ_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
                                 }
                                 ?>
                             </a>

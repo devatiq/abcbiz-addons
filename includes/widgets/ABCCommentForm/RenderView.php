@@ -10,7 +10,7 @@ add_filter('comments_template', 'abcbiz_custom_comments_template', 99);
 
 function abcbiz_custom_comments_template($theme_template) {
     if (is_singular() && (comments_open() || get_comments_number())) {
-        $plugin_template = AbcBizElementor_Path . '/includes/widgets/ABCCommentForm/template/comment-form.php';
+        $plugin_template = ABCBIZ_Path . '/includes/widgets/ABCCommentForm/template/comment-form.php';
         if ( file_exists($plugin_template) ) {
             return $plugin_template;
         }

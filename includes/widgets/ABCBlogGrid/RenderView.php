@@ -27,16 +27,16 @@ $abcbiz_blog_layout = $this->get_settings('abcbiz_elementor_blog_grid_layout');
 
 switch ($abcbiz_blog_layout) {
     case 'two-column':
-        include( AbcBizElementor_Path . '/includes/widgets/ABCBlogGrid/template/two-column.php' );
+        include( ABCBIZ_Path . '/includes/widgets/ABCBlogGrid/template/two-column.php' );
         break;
     case 'three-column':
-        include( AbcBizElementor_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
+        include( ABCBIZ_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
         break;
     case 'four-column':
-        include( AbcBizElementor_Path . '/includes/widgets/ABCBlogGrid/template/four-column.php' );
+        include( ABCBIZ_Path . '/includes/widgets/ABCBlogGrid/template/four-column.php' );
         break;
     default:
-    include( AbcBizElementor_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
+    include( ABCBIZ_Path . '/includes/widgets/ABCBlogGrid/template/three-column.php' );
         break;
 }
 ?>

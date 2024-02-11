@@ -29,7 +29,7 @@ $abcbiz_portfolio_link = $abcbiz_settings['abcbiz_elementor_portfolio_link'];
            }
 
             if (empty($abcbiz_portfolio_image_url)) {
-            $abcbiz_portfolio_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', AbcBizElementor_Path), '/') . '/assets/img/port-placeholder.jpg');
+            $abcbiz_portfolio_image_url = plugins_url(trim(str_replace(WP_PLUGIN_DIR, '', ABCBIZ_Path), '/') . '/assets/img/port-placeholder.jpg');
            }
           ?>
            <img src="<?php echo esc_url($abcbiz_portfolio_image_url); ?>" alt="<?php echo esc_html($abcbiz_portfolio_title); ?>">

@@ -45,7 +45,7 @@
                             <div class="abcbiz-ele-blog-thumb">
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                        <?php echo '<img src="' . AbcBizElementor_Assets . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
+                                        <?php echo '<img src="' . ABCBIZ_Assets . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
                                     </a>
                                 </figure>
                             </div>
