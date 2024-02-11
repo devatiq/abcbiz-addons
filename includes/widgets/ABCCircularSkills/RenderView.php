@@ -16,6 +16,17 @@ $abcbiz_skill_color_one = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gr
 $abcbiz_skill_color_two = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] ? $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] : '#d1de04';
 $abcbiz_skill_cir_size = isset($abcbiz_settings['abcbiz_elementor_circl_skill_size']['size']) ? $abcbiz_settings['abcbiz_elementor_circl_skill_size']['size'] : '180';
 
+
+
+// Add the inline script with dynamic data
+abcbiz_inline_circular_skills_script(
+    $id, 
+    $abcbiz_skills_value, 
+    $abcbiz_skill_cir_size, 
+    $abcbiz_skill_color_one, 
+    $abcbiz_skill_color_two, 
+    $skill_empty_color
+);
 ?>
 
 <div class="abcbiz-ele-skill-area">
@@ -24,33 +35,3 @@ $abcbiz_skill_cir_size = isset($abcbiz_settings['abcbiz_elementor_circl_skill_si
         <span><?php echo esc_attr($abcbiz_skills_text); ?></span>
     </div>
 </div><!-- end skill area -->
-
-<script type="text/javascript">
-    jQuery(function($) {
-        'use strict';
-
-        //Cricle script
-        let abcskillskill<?php echo esc_attr($id) ?> = $('.abcbiz-ele-skill-<?php echo esc_attr($id) ?>');
-        abcskillskill<?php echo esc_attr($id) ?>.appear({
-            force_process: true
-        });
-
-        abcskillskill<?php echo esc_attr($id) ?>.on('appear', function() {
-            let circle = $(this);
-            if (!circle.data('inited')) {
-                circle.circleProgress({
-                    value: <?php echo (esc_attr($abcbiz_skills_value) / 100); ?>,
-                    size: <?php echo (int)$abcbiz_skill_cir_size; ?>,
-                    fill: {
-                        gradient: ["<?php echo esc_attr($abcbiz_skill_color_one); ?>", "<?php echo esc_attr($abcbiz_skill_color_two); ?>"]
-                    },
-                    emptyFill: "<?php echo esc_attr($skill_empty_color); ?>"
-
-                });
-                circle.data('inited', true);
-            }
-        }).on('circle-animation-progress', function(event, progress) {
-            $(this).find('strong').html(parseInt(<?php echo esc_attr($abcbiz_skills_value); ?> * progress) + '<i>%</i>');
-        });
-    });
-</script>

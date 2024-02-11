@@ -23,9 +23,10 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['abcbiz-jquery-appear', 'abcbiz-circular-progress']; 
+        return ['abcbiz-jquery-appear', 'abcbiz-circular-progress', 'abcbiz-circular-skills']; 
     }
-
+   
+    
     /**
      * Register the widget controls.
      *

@@ -97,6 +97,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-skill-bar', AbcBizElementor_Assets . "/js/skill-bar.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-counter-up', AbcBizElementor_Assets . "/js/abcbiz-counterup.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wapoints', AbcBizElementor_Assets . "/js/waypoints.min.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-circular-skills', AbcBizElementor_Assets . "/js/abcbiz-circular-skills.js", array('jquery'), '1.0', true);
         wp_enqueue_script('abcbiz-elementor-custom', AbcBizElementor_Assets . "/js/main.js", array('jquery'), false, true);
     }
 }
@@ -167,4 +168,41 @@ function abcbiz_multi_plugin_info() {
     }
 
     return $plugin_info;
+}
+
+function abcbiz_inline_circular_skills_script($id, $abcbiz_skills_value, $abcbiz_skill_cir_size, $abcbiz_skill_color_one, $abcbiz_skill_color_two, $skill_empty_color) {
+    $dynamic_js = sprintf(
+        "jQuery(function($) {
+            'use strict';
+            let abcskillskill = $('.abcbiz-ele-skill-%s');
+            abcskillskill.appear({
+                force_process: true
+            });
+            abcskillskill.on('appear', function() {
+                let circle = $(this);
+                if (!circle.data('inited')) {
+                    circle.circleProgress({
+                        value: %s,
+                        size: %d,
+                        fill: {
+                            gradient: ['%s', '%s']
+                        },
+                        emptyFill: '%s'
+                    }).on('circle-animation-progress', function(event, progress) {
+                        $(this).find('strong').html(Math.round(%s * progress) + '<i>%%</i>');
+                    });
+                    circle.data('inited', true);
+                }
+            });
+        });",
+        esc_js($id), 
+        esc_js($abcbiz_skills_value / 100), 
+        (int) $abcbiz_skill_cir_size, 
+        esc_js($abcbiz_skill_color_one), 
+        esc_js($abcbiz_skill_color_two), 
+        esc_js($skill_empty_color), 
+        esc_js($abcbiz_skills_value)
+    );
+
+    wp_add_inline_script('abcbiz-circular-skills', $dynamic_js);
 }
