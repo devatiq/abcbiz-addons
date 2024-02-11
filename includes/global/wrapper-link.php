@@ -52,7 +52,7 @@ class ABCbiz_Wrapper_link {
 
             $element->add_render_attribute('_wrapper', [
                 'class' => 'abcbiz-custom-elementor-widget-link',
-                'data-abcbiz-link-settings' => json_encode($link_data)
+                'data-abcbiz-link-settings' => wp_json_encode($link_data)
             ]);
         }
     }
