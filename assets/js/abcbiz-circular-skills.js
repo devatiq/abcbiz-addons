@@ -1,7 +1,7 @@
 (function($) {
     'use strict';
 
-    // Function to initialize a specific skill circle
+    // Function to initialize a specific skill circle with JSON configuration
     function initSkillCircle(circle) {
         const $circle = $(circle);
 
@@ -10,40 +10,36 @@
             return;
         }
 
-        const skillValue = $circle.data('skill-value') / 100;
-        const skillSize = $circle.data('skill-size');
-        const skillColorOne = $circle.data('skill-color-one');
-        const skillColorTwo = $circle.data('skill-color-two');
-        const skillEmptyColor = $circle.data('skill-empty-color');
+        // Parse the JSON configuration
+        const config = JSON.parse($circle.attr('data-circle-config'));
 
-        // Initialize circleProgress
+        // Initialize circleProgress with values from JSON
         $circle.circleProgress({
-            value: skillValue,
-            size: skillSize,
+            value: config.skillValue,
+            size: config.skillSize,
             fill: {
-                gradient: [skillColorOne, skillColorTwo]
+                gradient: [config.skillColorOne, config.skillColorTwo]
             },
-            emptyFill: skillEmptyColor
+            emptyFill: config.skillEmptyColor
         }).on('circle-animation-progress', function(event, progress) {
-            $(this).find('strong').html(parseInt(skillValue * 100 * progress) + '<i>%</i>');
+            $(this).find('strong').html(parseInt(config.skillValue * 100 * progress) + '<i>%</i>');
         });
 
         $circle.data('inited', true);
     }
 
-    // Document ready and Elementor frontend hook
+    // Initialize skill circles
     function initializeSkillCircles() {
         $('.abcbiz-ele-skill-circle').each(function() {
             initSkillCircle(this);
         });
     }
 
-    // Document ready
     $(function() {
         initializeSkillCircles();
     });
 
-    // Listen for Elementor's editor events to re-initialize
+    // Re-initialize in Elementor's editor mode
     $(window).on('elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction('frontend/element_ready/global', function() {
             initializeSkillCircles();

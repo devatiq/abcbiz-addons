@@ -16,15 +16,20 @@ $abcbiz_skill_color_one = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gr
 $abcbiz_skill_color_two = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] ? $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] : '#d1de04';
 $abcbiz_skill_cir_size = isset($abcbiz_settings['abcbiz_elementor_circl_skill_size']['size']) ? $abcbiz_settings['abcbiz_elementor_circl_skill_size']['size'] : '180';
 
+
+// Prepare the configuration data
+$circleConfig = json_encode([
+    'skillValue' => $abcbiz_skills_value / 100, // Convert to a decimal for JS
+    'skillSize' => $abcbiz_skill_cir_size,
+    'skillColorOne' => $abcbiz_skill_color_one,
+    'skillColorTwo' => $abcbiz_skill_color_two,
+    'skillEmptyColor' => $skill_empty_color,
+]);
 ?>
 
 <div class="abcbiz-ele-skill-area">
-<div class="abcbiz-ele-skill-circle abcbiz-ele-skill-<?php echo esc_attr($id); ?>" 
-     data-skill-value="<?php echo esc_attr($abcbiz_skills_value); ?>"
-     data-skill-size="<?php echo esc_attr($abcbiz_skill_cir_size); ?>"
-     data-skill-color-one="<?php echo esc_attr($abcbiz_skill_color_one); ?>"
-     data-skill-color-two="<?php echo esc_attr($abcbiz_skill_color_two); ?>"
-     data-skill-empty-color="<?php echo esc_attr($skill_empty_color); ?>">
+    <div class="abcbiz-ele-skill-circle abcbiz-ele-skill-<?php echo esc_attr($id); ?>" 
+         data-circle-config='<?php echo esc_attr($circleConfig); ?>'>
         <strong></strong>
         <span><?php echo esc_attr($abcbiz_skills_text); ?></span>
     </div>
