@@ -44,7 +44,7 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_business_hours_section_title',
             [
-                'label' => esc_html__('Section Title', 'abcbiz-addons'),
+                'label' => esc_html__('Header Title', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Working Hours', 'abcbiz-addons'),
                 'placeholder' => esc_html__('Your Title Here', 'abcbiz-addons'),
@@ -108,12 +108,12 @@ class Main extends BaseWidget
                 'fields' => $repeater->get_controls(),
                 'default' => [
                     [
-                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #1', 'abcbiz-addons'),
-                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_days' => esc_html__('Monday', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 AM - 06:00 PM', 'abcbiz-addons'),
                     ],
                     [
-                        'abcbiz_elementor_business_hours_days' => esc_html__('Title #2', 'abcbiz-addons'),
-                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 - 19:00', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_days' => esc_html__('Tuesday', 'abcbiz-addons'),
+                        'abcbiz_elementor_business_hours_time' => esc_html__('10:00 AM - 06:00 PM', 'abcbiz-addons'),
                     ],
                 ],
                 'title_field' => '{{{ abcbiz_elementor_business_hours_days }}}',
@@ -127,7 +127,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_box_style',
             [
-                'label' => esc_html__('Box', 'abcbiz-addons'),
+                'label' => esc_html__('Box Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -204,7 +204,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_title_style',
             [
-                'label' => esc_html__('Section Title', 'abcbiz-addons'),
+                'label' => esc_html__('Header Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -297,7 +297,7 @@ class Main extends BaseWidget
         $this->start_controls_section(
             'abcbiz_elementor_business_hours_list_style',
             [
-                'label' => esc_html__('List Items', 'abcbiz-addons'),
+                'label' => esc_html__('Items Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
