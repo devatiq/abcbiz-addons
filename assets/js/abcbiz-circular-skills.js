@@ -2,7 +2,7 @@
     'use strict';
 
     // Function to initialize a specific skill circle with JSON configuration
-    function initSkillCircle(circle) {
+    function ABCBizinitSkillCircle(circle) {
         const $circle = $(circle);
 
         // Avoid re-initialization
@@ -29,20 +29,20 @@
     }
 
     // Initialize skill circles
-    function initializeSkillCircles() {
+    function ABCBizinitializeSkillCircles() {
         $('.abcbiz-ele-skill-circle').each(function() {
-            initSkillCircle(this);
+            ABCBizinitSkillCircle(this);
         });
     }
 
     $(function() {
-        initializeSkillCircles();
+        ABCBizinitializeSkillCircles();
     });
 
     // Re-initialize in Elementor's editor mode
     $(window).on('elementor/frontend/init', function() {
         elementorFrontend.hooks.addAction('frontend/element_ready/global', function() {
-            initializeSkillCircles();
+            ABCBizinitializeSkillCircles();
         });
     });
 })(jQuery);
