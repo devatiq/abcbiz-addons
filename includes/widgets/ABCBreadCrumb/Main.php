@@ -23,11 +23,6 @@ class Main extends BaseWidget {
 
 	/**
 	 * Register list widget controls.
-	 *
-	 * Add input fields to allow the user to customize the widget settings.
-	 *
-	 * @since 1.0.0
-	 * @access protected
 	 */
 	protected function register_controls() {
 		//Template
@@ -85,7 +80,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#bbbcbd',
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area' => 'color: {{VALUE}}',
 				],
@@ -97,7 +92,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Link Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#bbbcbd',
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-bread-crumb-area a' => 'color: {{VALUE}}',
 				],
@@ -132,8 +127,6 @@ class Main extends BaseWidget {
 
     /**
      * Render the widget output on the frontend.
-     * @since 1.0.0
-     * @access protected
      */
     protected function render()
     {

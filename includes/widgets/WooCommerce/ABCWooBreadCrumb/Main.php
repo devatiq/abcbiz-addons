@@ -80,7 +80,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#bbbcbd',
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area' => 'color: {{VALUE}}',
 				],
@@ -92,7 +92,7 @@ class Main extends BaseWidget {
 			[
 				'label' => esc_html__( 'Link Color', 'abcbiz-addons' ),
 				'type'  => Controls_Manager::COLOR,
-				'default' => '#ffffff',
+				'default' => '#bbbcbd',
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-elementor-product-bread-crumb-area a' => 'color: {{VALUE}}',
 				],

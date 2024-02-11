@@ -7,6 +7,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
     function abcbiz_wc_multi_breadcrumb() {
+        // Initialize an output variable
+        $output = '';
+        
         // Define the home text and URL
         $home_text = 'Home';
         $home_url = home_url('/');
@@ -14,47 +17,43 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
         // Define the separator
         $separator = ' &raquo; ';
     
-        // Output the breadcrumbs
-        echo '<div class="breadcrumbs">';
+        // Start building the breadcrumbs
+        $output .= '<div class="breadcrumbs">';
     
         // Home link
-        echo '<a href="' . esc_url($home_url) . '">' . esc_html($home_text) . '</a>';
-        echo '<span class="separator">' . esc_html($separator) . '</span>';
+        $output .= '<a href="' . esc_url($home_url) . '">' . esc_html($home_text) . '</a>';
+        $output .= '<span class="separator">' . esc_html($separator) . '</span>';
     
         // Shop link for single product page
         if (is_product()) {
             $shop_page_url = wc_get_page_permalink('shop');
-            echo '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'abcbiz-addons') . '</a>';
-            echo '<span class="separator">' . esc_html($separator) . '</span>';
+            $output .= '<a href="' . esc_url($shop_page_url) . '">' . esc_html__('Shop', 'abcbiz-addons') . '</a>';
+            $output .= '<span class="separator">' . esc_html($separator) . '</span>';
         }
 
-        // Check if it's a single post
+        // Additional breadcrumb elements based on the page type
         if (is_single()) {
-            // Get the category
             $categories = get_the_category();
             if ($categories) {
                 $category = $categories[0];
-                echo '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
-                echo '<span class="separator">' . esc_html($separator) . '</span>';
+                $output .= '<a href="' . esc_url(get_category_link($category->term_id)) . '">' . esc_html($category->name) . '</a>';
+                $output .= '<span class="separator">' . esc_html($separator) . '</span>';
             }
     
             // Post title
-            echo '<span class="current">' . esc_html(get_the_title()) . '</span>';
+            $output .= '<span class="current">' . esc_html(get_the_title()) . '</span>';
         } elseif (is_category()) {
-            // Category archive
-            echo '<span class="current">' . esc_html(single_cat_title('', false)) . '</span>';
+            $output .= '<span class="current">' . esc_html(single_cat_title('', false)) . '</span>';
         } elseif (is_page()) {
-            // Standard page
-            echo '<span class="current">' . esc_html(get_the_title()) . '</span>';
+            $output .= '<span class="current">' . esc_html(get_the_title()) . '</span>';
         } elseif (is_search()) {
-            // Search results
-            echo '<span class="current">' . esc_html__('Search Results', 'abcbiz-addons') . '</span>';
+            $output .= '<span class="current">' . esc_html__('Search Results', 'abcbiz-addons') . '</span>';
         } elseif (is_404()) {
-            // 404 page
-            echo '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-addons') . '</span>';
+            $output .= '<span class="current">' . esc_html__('404 Not Found', 'abcbiz-addons') . '</span>';
         }
     
-        echo '</div>';
+        $output .= '</div>';
+        return $output;
     } 
 }
 
@@ -62,6 +61,6 @@ if (!function_exists('abcbiz_wc_multi_breadcrumb')) {
 
 <div class="abcbiz-elementor-product-bread-crumb-area">
     <?php 
-    // Get the breadcrumb trail
-    echo wp_kses(abcbiz_wc_multi_breadcrumb(), wp_kses_allowed_html()); ?>
+    echo wp_kses(abcbiz_wc_multi_breadcrumb(), wp_kses_allowed_html('post')); ?>
 </div><!-- end breadcrumb area -->
+
