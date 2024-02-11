@@ -16,22 +16,17 @@ $abcbiz_skill_color_one = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gr
 $abcbiz_skill_color_two = $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] ? $abcbiz_settings['abcbiz_elementor_circl_skill_fill_gradient_color_two'] : '#d1de04';
 $abcbiz_skill_cir_size = isset($abcbiz_settings['abcbiz_elementor_circl_skill_size']['size']) ? $abcbiz_settings['abcbiz_elementor_circl_skill_size']['size'] : '180';
 
-
-
-// Add the inline script with dynamic data
-abcbiz_inline_circular_skills_script(
-    $id, 
-    $abcbiz_skills_value, 
-    $abcbiz_skill_cir_size, 
-    $abcbiz_skill_color_one, 
-    $abcbiz_skill_color_two, 
-    $skill_empty_color
-);
 ?>
 
 <div class="abcbiz-ele-skill-area">
-    <div class="abcbiz-ele-skill-circle abcbiz-ele-skill-<?php echo esc_attr($id) ?>">
+<div class="abcbiz-ele-skill-circle abcbiz-ele-skill-<?php echo esc_attr($id); ?>" 
+     data-skill-value="<?php echo esc_attr($abcbiz_skills_value); ?>"
+     data-skill-size="<?php echo esc_attr($abcbiz_skill_cir_size); ?>"
+     data-skill-color-one="<?php echo esc_attr($abcbiz_skill_color_one); ?>"
+     data-skill-color-two="<?php echo esc_attr($abcbiz_skill_color_two); ?>"
+     data-skill-empty-color="<?php echo esc_attr($skill_empty_color); ?>">
         <strong></strong>
         <span><?php echo esc_attr($abcbiz_skills_text); ?></span>
     </div>
 </div><!-- end skill area -->
+
