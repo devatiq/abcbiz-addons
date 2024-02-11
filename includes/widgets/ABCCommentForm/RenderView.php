@@ -6,9 +6,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $abcbiz_settings = $this->get_settings_for_display();
 
-add_filter('comments_template', 'my_plugin_custom_comments_template', 99);
+add_filter('comments_template', 'abcbiz_custom_comments_template', 99);
 
-function my_plugin_custom_comments_template($theme_template) {
+function abcbiz_custom_comments_template($theme_template) {
     if (is_singular() && (comments_open() || get_comments_number())) {
         $plugin_template = AbcBizElementor_Path . '/includes/widgets/ABCCommentForm/template/comment-form.php';
         if ( file_exists($plugin_template) ) {
