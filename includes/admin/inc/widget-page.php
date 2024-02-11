@@ -43,7 +43,6 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_icon_box_widget_field_render(); ?>
                 <?php abcbiz_img_hover_widget_field_render(); ?>
                 <?php abcbiz_page_title_widget_field_render(); ?>
-                <?php abcbiz_abc_popup_widget_field_render(); ?>
                 <?php abcbiz_portfolio_widget_field_render(); ?>
                 <?php abcbiz_post_meta_widget_field_render(); ?>
                 <?php abcbiz_post_title_widget_field_render(); ?>
