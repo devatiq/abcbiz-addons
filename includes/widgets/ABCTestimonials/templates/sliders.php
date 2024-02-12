@@ -91,12 +91,11 @@ $breakpoints = wp_json_encode([
 
                             <!--Rating Part-->
                             <div class="abcbiz-testimonial-rating">
-                                <?php
-                                for ($i = 1; $i <= 5; $i++) {
-                                    $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
-                                    echo "<i class='{$star_class}'></i>";
-                                }
-                                ?>
+                            <?php
+                          for ($i = 1; $i <= 5; $i++) {
+                          $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
+                         echo '<i class="' . esc_attr($star_class) . '"></i>';
+                         }?>
                             </div><!--/ Rating Part-->
 
                             <?php if(!empty($testimonial_feedback)) : ?>

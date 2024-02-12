@@ -19,11 +19,12 @@ if (isset($settings['abcbiz_elementor_shape_animation']) && 'yes' == $settings['
 ?>
 
 <div class="abcbiz-shape-area">
-    <div class="abcbiz-shape-<?php echo esc_attr($abcbiz_shape_type); if('image' != $abcbiz_shape_type) { echo ' abcbiz-ele-shape'; } ?> <?php echo esc_attr($abcbiz_animation); ?>">
+<div class="abcbiz-shape-<?php echo esc_attr($abcbiz_shape_type); if ('image' != $abcbiz_shape_type) { echo esc_attr(' abcbiz-ele-shape'); } ?> <?php echo esc_attr($abcbiz_animation); ?>">
         <?php 
-            if('image' == $abcbiz_shape_type) {
-                echo '<img src="'.esc_url($abcbiz_image_shape).'" alt="'.esc_attr($abcbiz_shape_alt).'"/>';
+            if ('image' == $abcbiz_shape_type) {
+                echo '<img src="' . esc_url($abcbiz_image_shape) . '" alt="' . esc_attr($abcbiz_shape_alt) . '"/>';
             }
         ?>
     </div>
 </div>
+

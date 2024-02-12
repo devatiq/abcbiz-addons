@@ -34,11 +34,9 @@ $abcbiz_table_type = $abcbiz_settings['abcbiz_elementor_pricingTable_type'] ? $a
         <div class="abcbiz-ele-pricing-table-header-area">
             <?php if ($abcbiz_recom_switch == 'yes') : ?>
                 <!--Recommended-->
-                <div class="abcbiz-ele-pricing-recommended <?php if ($recommended_position != 'top') {
-                                                            echo 'abcbiz-ep-recommended-left';
-                                                        }; ?>"> <!-- abcbiz-ep-recommended-left-->
-                    <span><?php echo esc_html($abcbiz_recom_text); ?></span>
-                </div><!--/ Recommended-->
+<div class="abcbiz-ele-pricing-recommended <?php echo esc_attr($recommended_position != 'top' ? 'abcbiz-ep-recommended-left' : ''); ?>"> <!-- abcbiz-ep-recommended-left-->
+    <span><?php echo esc_html($abcbiz_recom_text); ?></span>
+</div><!--/ Recommended-->
             <?php endif; ?>
             <div class="abcbiz-ele-pricing-table-header">
                 <?php if ($abcbiz_table_type != 'standard') : ?>

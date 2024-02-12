@@ -86,7 +86,7 @@ class Main extends BaseWidget
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
-					'url' => 'https://abcplugin.com/abcbiz-addons-addons-for-elementor/',
+					'url' => 'https://abcbizaddons.com/widgets/portfolio-elementor-widget/',
 					'is_external' => true,
 					'nofollow' => false,
 				],

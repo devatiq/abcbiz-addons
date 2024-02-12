@@ -45,8 +45,7 @@
                                 <figure>
                                     <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 
-                                        <?php echo '<img src="' . ABCBIZ_Assets . '/img/blog/img-placeholder.jpg" alt="the_title_attribute();">'; ?>
-
+                                    <?php echo '<img src="' . esc_url(ABCBIZ_Assets . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
                                     </a>
                                 </figure>
                             </div>

@@ -34,13 +34,12 @@ $abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
                         <div class="abcbiz-testimonial-header">
                             <!--Client Image-->
                             <?php if ('yes' == $abcbiz_settings['abcbiz_ele_testimonial_client_image_switch']) : ?>                           
-                            <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">                                
-                                <?php if (!empty($testimonial_img['url'])) :                                                            
-                                    echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
-                                else :
-                                ?>
-                                    <img src="<?php echo esc_attr(ABCBIZ_Assets); ?>/img/member-placeholder.jpg" alt="">
-                                <?php endif; ?>
+                            <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">                               
+                            <?php if (!empty($testimonial_img['url'])) : ?>
+                            <img src="<?php echo esc_url($testimonial_img['url']); ?>" alt="<?php echo esc_attr($testimonial_name); ?>">
+                            <?php else : ?>
+                            <img src="<?php echo esc_url(ABCBIZ_Assets . '/img/member-placeholder.jpg'); ?>" alt="<?php esc_attr_e('Client Name', 'abcbiz-addons'); ?>">
+                             <?php endif; ?>
                             </div>
                             <?php endif; ?> <!--/ Client Image-->
                             <div class="abcbiz-testimonial-client-info">
@@ -56,12 +55,11 @@ $abcbiz_repeater_testimonial = $abcbiz_settings['abcbiz_testimonial_repeater'];
 
                         <!--Rating Part-->
                         <div class="abcbiz-testimonial-rating">
-                            <?php
-                            for ($i = 1; $i <= 5; $i++) {
-                                $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
-                                echo "<i class='{$star_class}'></i>";
-                            }
-                            ?>
+                        <?php
+                          for ($i = 1; $i <= 5; $i++) {
+                          $star_class = ($i <= $testimonial_rating) ? 'eicon-star' : ' ';
+                         echo '<i class="' . esc_attr($star_class) . '"></i>';
+                         }?>
                         </div><!--/ Rating Part-->
                         
                         <?php if(!empty($testimonial_feedback)) : ?>
