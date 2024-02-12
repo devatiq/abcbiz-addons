@@ -9,7 +9,6 @@ $abcbiz_settings = $this->get_settings_for_display();
 // post info switcher
 $abcbiz_author_show_link = $abcbiz_settings['abcbiz_elementor_author_bio_link_switch'] === 'yes';
 $abcbiz_author_text = $abcbiz_settings['abcbiz_elementor_author_bio_text'] ? $abcbiz_settings['abcbiz_elementor_author_bio_text'] : '';
-
 ?>
 
 <!-- Author Bio Area-->

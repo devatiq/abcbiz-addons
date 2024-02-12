@@ -49,7 +49,7 @@ $breakpoints = wp_json_encode([
         <!-- Testimonial Slider -->
         <div class="abcbiz-testimonial-slider swiper swiper-container"
              id="abcbiz-testimonial-slider-<?php echo esc_attr($abcbiz_unique_id); ?>"
-             data-breakpoints='<?php echo $breakpoints; ?>'
+             data-breakpoints='<?php echo esc_attr($breakpoints); ?>'
              data-next-el="#abcbiz-testi-nav-right<?php echo esc_attr($abcbiz_unique_id); ?>"
              data-autoplay-config='<?php echo esc_attr(wp_json_encode($autoplay_config)); ?>'
              data-prev-el="#abcbiz-testi-nav-left<?php echo esc_attr($abcbiz_unique_id); ?>">
@@ -71,12 +71,10 @@ $breakpoints = wp_json_encode([
                                 <!--Client Image-->
                                 <?php if ('yes' == $abcbiz_settings['abcbiz_ele_testimonial_client_image_switch']) : ?> 
                                     <div class="abcbiz-testimonial-client-img" id="abcbiz-testimonial-client-img">
-                                        <?php if (!empty($testimonial_img['url'])) :                                                            
-                                            echo '<img src="'.$testimonial_img['url'].'" alt="Client Image">';
-                                        else :
-                                        ?>
-                                            <img src="<?php echo esc_attr(ABCBIZ_Assets); ?>/img/member-placeholder.jpg" alt="">
-                                        <?php endif; ?>
+                                    <?php if (!empty($testimonial_img['url'])) : ?>                                                         
+                                   <?php echo '<img src="' . esc_url($testimonial_img['url']) . '" alt="' . esc_attr($testimonial_name) . '">';else : ?>
+                                    <img src="<?php echo esc_url(ABCBIZ_Assets . '/img/member-placeholder.jpg'); ?>" alt="">
+                                    <?php endif; ?>
                                     </div>
                                 <?php endif; ?><!--/ Client Image-->
 

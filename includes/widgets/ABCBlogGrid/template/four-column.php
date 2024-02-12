@@ -96,6 +96,7 @@
                     'total'   => $query->max_num_pages,
                 ));
             ?>
+
         </div><?php endif; ?>
 
         <?php else : ?>

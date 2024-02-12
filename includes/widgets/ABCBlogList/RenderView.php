@@ -59,10 +59,10 @@ $abcbiz_excerpt_length_list = $abcbiz_settings['abcbiz_elementor_blog_list_excer
                             </div>
                         <?php elseif ($abcbiz_img_switch === 'yes') : ?>
                             <div class="abcbiz-ele-blog-list-thumb">
-                                <figure>
-                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
-                                        <?php echo '<img src="' . esc_attr(ABCBIZ_Assets) . '/img/blog/img-placeholder.jpg" alt="' . the_title_attribute(['echo' => false]) . '">'; ?>
-                                    </a>
+                                <figure>          
+                                <a href="<?php echo esc_url(get_permalink()); ?>" title="<?php echo esc_attr(get_the_title()); ?>">
+                                <?php echo '<img src="' . esc_url(ABCBIZ_Assets) . '/img/blog/img-placeholder.jpg" alt="' . esc_attr(get_the_title()) . '">'; ?>
+                                </a>
                                 </figure>
                             </div>
                         <?php endif; ?>
