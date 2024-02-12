@@ -24,11 +24,12 @@ if ( ! empty( $abcbiz_settings['abcbiz_cta_button_link_two']['url'] ) ) {
 ?>
 
 <!-- CTA Area -->
-<div class="abcbiz-cta-area<?php if('yes' == $abcbiz_cta_zoom_effect) :  echo ' abcbiz-cta-zoom-effect-disabled';  endif; ?>">
+<div class="abcbiz-cta-area<?php if ('yes' == $abcbiz_cta_zoom_effect) : echo esc_attr(' abcbiz-cta-zoom-effect-disabled'); endif; ?>">
+
 
     <?php if('yes' == $abcbiz_cta_ribbon) : ?>
         <!-- CTA Ribbon Area -->
-        <div class="abcbiz-cta-ribbon-area <?php if('left' == $abcbiz_cta_ribbon_position) :  echo 'abcbiz-left-rabbon';  endif; ?>">
+        <div class="abcbiz-cta-ribbon-area <?php if ('left' == $abcbiz_cta_ribbon_position) : echo esc_attr('abcbiz-left-rabbon'); endif; ?>">
             <div class="abcbiz-cta-ribbon-text">
                 <p><?php echo esc_html($abcbiz_settings['abcbiz_cta_ribbon_text']); ?></p>
             </div>

@@ -20,7 +20,7 @@ use Elementor\Icons_Manager;
        </div>
 
      <div class="abcbiz-ele-counter">
-        <span class="abcbiz-counter"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_counter_number']);?> </span> <span class="abcbiz-ele-counter-suffix"><?php echo  $abcbiz_settings['abcbiz_elementor_counter_suffix']?></span>
+    <span class="abcbiz-counter"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_counter_number']); ?></span> <span class="abcbiz-ele-counter-suffix"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_counter_suffix']); ?></span>
      </div>
 
      <div class="abcbiz-ele-count-title">
