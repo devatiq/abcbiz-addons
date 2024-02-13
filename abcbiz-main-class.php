@@ -127,38 +127,35 @@ class ABCBizMultiElementorPack
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 */
 	public function admin_notice_missing_main_plugin()
-	{
-		if (isset($_GET['activate'])) {
-			unset($_GET['activate']);
-		}
+{
+    if (isset($_GET['activate'])) {
+        unset($_GET['activate']);
+    }
 
-		$message = sprintf(
-			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
-			'<strong>' . ABCBIZ_Name . '</strong>',
-			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
-		);
+    $message = sprintf(
+        esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
+        '<strong>' . esc_html(ABCBIZ_Name) . '</strong>',
+        '<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
+    );
 
-		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
-	}
+    printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
+}
 
 	/**
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 */
 	public function admin_notice_minimum_elementor_version()
-	{
+{
+    if (isset($_GET['activate'])) unset($_GET['activate']);
 
-		if (isset($_GET['activate'])) unset($_GET['activate']);
-
-		$message = sprintf(
-			/* translators: 1: Plugin name 2: Elementor 3: Required Elementor version */
-			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-			'<strong>' . ABCBIZ_Name . '</strong>',
-			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>',
-			self::MINIMUM_ELEMENTOR_VERSION
-		);
-
-		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
-	}
+    $message = sprintf(
+        esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
+        ABCBIZ_Name, 
+        esc_html__('Elementor', 'abcbiz-addons'),
+        self::MINIMUM_ELEMENTOR_VERSION 
+    );
+    printf('<div class="notice notice-warning is-dismissible"><p>%s</p></div>', wp_kses_post($message));
+}
 
 	/**
 	 * Warning when the site doesn't have a minimum required PHP version.
@@ -176,7 +173,7 @@ class ABCBizMultiElementorPack
 			self::MINIMUM_PHP_VERSION
 		);
 
-		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', $message);
+		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
 	}
 
 	/**

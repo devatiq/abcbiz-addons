@@ -58,7 +58,7 @@ $abcbiz_flip_direction_class = !empty($abcbiz_flip_direction) ? $abcbiz_flip_dir
  
 			 <?php if (!empty($abcbiz_flip_back_btn_text)) : ?>
 				<div class="abcbiz-flip-back-btn">
-                <a href="<?php echo esc_url($abcbiz_flip_back_btn_link_url); ?>"<?php echo $abcbiz_flip_back_btn_link_is_external; ?><?php echo $abcbiz_flip_back_btn_link_nofollow; ?>>
+                <a href="<?php echo esc_url($abcbiz_flip_back_btn_link_url); ?>" <?php echo esc_attr($abcbiz_flip_back_btn_link_is_external); ?> <?php echo esc_attr($abcbiz_flip_back_btn_link_nofollow); ?>>
                <?php echo esc_html($abcbiz_flip_back_btn_text); ?>
                </a></div>
             <?php endif; ?>

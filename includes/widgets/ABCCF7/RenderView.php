@@ -14,7 +14,7 @@
 ?>
 
 <div class="abcbiz-ele-contact-form-7-area">
-     <div <?php echo $this->get_render_attribute_string('abcbiz_ele_contact_form_attr'); ?>>
+     <div t<?php echo $this->get_render_attribute_string('abcbiz_ele_contact_form_attr'); ?>>
          <?php
              if( !empty( $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] ) ){
                  echo do_shortcode( $shortcode ); 
