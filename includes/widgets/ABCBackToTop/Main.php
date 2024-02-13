@@ -112,7 +112,7 @@ class Main extends BaseWidget {
 					'px' => [
 						'min' => 5,
 						'max' => 500,
-						'step' => 5,
+						'step' => 1,
 					],
 					'%' => [
 						'min' => 0,
@@ -143,7 +143,7 @@ class Main extends BaseWidget {
 					'px' => [
 						'min' => 5,
 						'max' => 500,
-						'step' => 5,
+						'step' => 1,
 					],
 					'%' => [
 						'min' => 0,
@@ -286,9 +286,9 @@ class Main extends BaseWidget {
 				'size_units' => [ 'px'],
 				'range' => [
 					'px' => [
-						'min' => 5,
-						'max' => 500,
-						'step' => 5,
+						'min' => 10,
+						'max' => 100,
+						'step' => 1,
 					],
 				],
 				'default' => [
