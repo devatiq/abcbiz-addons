@@ -345,7 +345,7 @@ class Main extends BaseWidget {
 					'top' => 6,
 					'right' => 6,
 					'bottom' => 6,
-					'left' => 6,
+					'left' => 6, 
 					'unit' => 'px',
 					'isLinked' => true,
 				],
