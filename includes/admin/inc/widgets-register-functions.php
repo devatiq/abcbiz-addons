@@ -9,7 +9,8 @@ function abcbiz_widgets_settings_init() {
         'abcbiz_widgets_menu'                             // Page slug where this section will be shown
     );
 
-// Register settings
+// Register settings 
+register_setting('abcbiz_widgets_menu', 'abcbiz_back_top_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_flip_box_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_blockquote_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_blog_fancy_widget_field');
@@ -50,9 +51,8 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_business_hours_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
 
 
-
-
 // Set default values if not already set
+add_option('abcbiz_back_top_widget_field', '1');
 add_option('abcbiz_cta_widget_field', '1');
 add_option('abcbiz_contact_info_widget_field', '1');
 add_option('abcbiz_search_icon_widget_field', '1');
@@ -92,6 +92,24 @@ add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 
+
+//Back To Top 
+add_settings_field(
+    'abcbiz_back_top_widget_field',
+    esc_html__('Back To Top', 'abcbiz-addons'),
+    'abcbiz_back_top_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
+
+// CTA
+add_settings_field(
+    'abcbiz_cta_widget_field',
+    esc_html__('Call To Action', 'abcbiz-addons'),
+    'abcbiz_cta_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
 
 // WordPress Menu
 add_settings_field(

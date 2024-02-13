@@ -9,6 +9,11 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
           if (get_option('abcbiz_blockquote_widget_field') == 1) {
           $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlockquote\Main::class;
         }
+
+          if (get_option('abcbiz_back_top_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBackToTop\Main::class;
+        }
+
 		  if (get_option('abcbiz_blog_fancy_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlog\Main::class;
 		}
