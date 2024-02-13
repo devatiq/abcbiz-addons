@@ -16,7 +16,7 @@ $abcbiz_author_text = $abcbiz_settings['abcbiz_elementor_author_bio_text'] ? $ab
     <div class="abcbiz-ele-author-bio">
     
     <div class="abcbiz-ele-authorleft">
-<?php echo get_avatar( get_the_author_meta( 'user_email' ), 200); ?>
+<?php echo wp_kses_post(get_avatar( get_the_author_meta( 'user_email' ), 200)); ?>
 </div>
 <div class="abcbiz-ele-authorright">
     <?php if(!empty($abcbiz_author_text)) : ?>

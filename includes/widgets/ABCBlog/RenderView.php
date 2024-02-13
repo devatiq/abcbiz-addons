@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View file for ABC Blog.
+ * Render View file for ABC Blog Fancy.
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -53,8 +53,9 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                             } else {
-                                echo '<img src="' . ABCBIZ_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
+                                echo '<img src="' . esc_url(ABCBIZ_Assets) . '/img/blog/image-placeholder.jpg" alt="' . esc_attr__('abcbiz multi addon', 'abcbiz-addons') . '">';
                             }
+                            
                             ?>
                         </a>
                     </div><!--/ Thumbnail -->
@@ -67,7 +68,7 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                                 <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>
                                     <div class="abcbiz-ele-single-blog-date">
                                         <i class="eicon-calendar"></i>
-                                        <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
+                                        <a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date() ); ?></a>
                                     </div>
                                 <?php endif; ?>
                                 <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>
@@ -129,7 +130,7 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                                 if (has_post_thumbnail()) {
                                     the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
                                 } else {
-                                    echo '<img src="' . esc_attr(ABCBIZ_Assets) . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
+                                    echo '<img src="' . esc_url(ABCBIZ_Assets) . '/img/blog/image-placeholder.jpg" alt="' . esc_attr__('abcbiz multi addon', 'abcbiz-addons') . '">';
                                 }
                                 ?>
                             </a>

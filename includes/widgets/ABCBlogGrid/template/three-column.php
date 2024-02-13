@@ -46,8 +46,8 @@
                                 <figure>
                                 <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
 
-<?php echo '<img src="' . esc_url(ABCBIZ_Assets . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
-</a>
+                                <?php echo '<img src="' . esc_url(ABCBIZ_Assets . '/img/blog/img-placeholder.jpg') . '" alt="' . esc_attr(get_the_title()) . '">'; ?>
+                                  </a>
                                 </figure>
                             </div>
                         <?php endif; ?>
@@ -87,15 +87,7 @@
     </div> <!-- end abcbiz-ele-three-column-blog -->
     <?php if ($abcbiz_pagination_switch === 'yes') : ?>
         <div class="abcbiz-ele-pagination-container">
-            <?php
-                $abcbig = 999999999;
-                echo paginate_links(array(
-                    'base'    => str_replace($abcbig, '%#%', esc_url(get_pagenum_link($abcbig))),
-                    'format'  => '?paged=%#%',
-                    'current' => max(1, $paged),
-                    'total'   => $query->max_num_pages,
-                ));
-            ?>
+        
         </div>
     <?php endif; ?>
 

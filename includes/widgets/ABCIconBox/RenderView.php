@@ -39,7 +39,7 @@ if ( ! empty( $abcbiz_settings['abcbiz_elementor_icon_box_button_link']['url'] )
         <?php endif; ?>
         <?php if(!empty($abcbiz_settings['abcbiz_elementor_icon_box_button_text'])) : ?>
             <div class="abcbiz-elementor-icon-box-button">
-                <a <?php echo $this->get_render_attribute_string( 'abcbiz_elementor_icon_box_button_link' ); ?> class="abcbiz-elementor-button-link"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_button_text']); ?> <i class="eicon-arrow-right"></i></a>
+                <a <?php echo wp_kses_post($this->get_render_attribute_string( 'abcbiz_elementor_icon_box_button_link' )); ?> class="abcbiz-elementor-button-link"><?php echo esc_html($abcbiz_settings['abcbiz_elementor_icon_box_button_text']); ?> <i class="eicon-arrow-right"></i></a>
             </div>
         <?php endif; ?>
     </div>

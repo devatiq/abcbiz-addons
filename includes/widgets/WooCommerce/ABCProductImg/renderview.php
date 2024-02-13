@@ -16,7 +16,7 @@ if (!$product) {
 }
 abcbiz_wc_load_assets_dependencies(); ?>
 
-<div class="abcbiz-elementor-wc-product-img-area<?php if ('yes' !== $abcbiz_magnify_icon) { echo ' no-magnify-icon'; } ?>">
+<div class="abcbiz-elementor-wc-product-img-area<?php if ('yes' !== $abcbiz_magnify_icon) { echo esc_attr(' no-magnify-icon'); } ?>">
     <?php
 if ('yes' === $abcbiz_sales_flash) {
     wc_get_template('loop/sale-flash.php');

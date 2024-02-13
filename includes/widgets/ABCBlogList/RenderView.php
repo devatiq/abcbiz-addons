@@ -102,15 +102,7 @@ $abcbiz_excerpt_length_list = $abcbiz_settings['abcbiz_elementor_blog_list_excer
             <?php if ($abcbiz_pagination_switch === 'yes') : ?>
                 <div class="clearfix"></div>
                 <div class="abcbiz-ele-blog-list-pagi-container">
-                    <?php
-                    $abcbig = 999999999;
-                    echo paginate_links(array(
-                        'base'    => str_replace($abcbig, '%#%', esc_url(get_pagenum_link($abcbig))),
-                        'format'  => '?paged=%#%',
-                        'current' => max(1, $paged),
-                        'total'   => $query->max_num_pages,
-                    ));
-                    ?>
+                    
                 </div>
             <?php endif; ?>
 

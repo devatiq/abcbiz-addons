@@ -6,18 +6,15 @@
  if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
  $abcbiz_settings   = $this->get_settings_for_display();
-
- $this->add_render_attribute( 'abcbiz_ele_contact_form_attr', 'id', 'abcbiz-ele-contact-form-wrapper' );
  $this->add_render_attribute( 'shortcode', 'id', $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] );
- $shortcode = sprintf( '[contact-form-7 %s]', $this->get_render_attribute_string( 'shortcode' ) );
 
 ?>
 
 <div class="abcbiz-ele-contact-form-7-area">
-     <div t<?php echo $this->get_render_attribute_string('abcbiz_ele_contact_form_attr'); ?>>
+     <div id="abcbiz-ele-contact-form-wrapper">
          <?php
              if( !empty( $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] ) ){
-                 echo do_shortcode( $shortcode ); 
+                 echo do_shortcode( sprintf( '[contact-form-7 %s]', $this->get_render_attribute_string( 'shortcode' ) ) ); 
              }else{
                  echo '<div class="form_no_select">' .esc_html__('Please Select contact form.', 'abcbiz-addons'). '</div>';
              }

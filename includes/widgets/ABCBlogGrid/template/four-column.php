@@ -86,15 +86,7 @@
     </div> <!-- end abcbiz-ele-four-column-blog -->
     <?php if ($abcbiz_pagination_switch === 'yes') : ?>
         <div class="abcbiz-ele-pagination-container">
-            <?php
-                $abcbig = 999999999;
-                echo paginate_links(array(
-                    'base'    => str_replace($abcbig, '%#%', esc_url(get_pagenum_link($abcbig))),
-                    'format'  => '?paged=%#%',
-                    'current' => max(1, $paged),
-                    'total'   => $query->max_num_pages,
-                ));
-            ?>
+            
 
         </div><?php endif; ?>
 
