@@ -51,7 +51,7 @@ if ( ! empty( $abcbiz_settings['abcbiz_cta_button_link_two']['url'] ) ) {
 
         <?php if(!empty($abcbiz_description)) : ?>
             <div class="abcbiz-cta-description">            
-                <?php echo wpautop(esc_html($abcbiz_description)); ?>         
+                <?php echo esc_html($abcbiz_description); ?>         
             </div>
         <?php endif; ?>
 

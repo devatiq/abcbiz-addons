@@ -143,7 +143,7 @@ $abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_pos
                                     <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>                                      
                                         <div class="abcbiz-ele-single-blog-date">
                                             <i class="eicon-calendar"></i>
-                                            <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
+                                            <a href="<?php the_permalink(); ?>"><?php echo esc_attr(get_the_date()); ?></a>
                                         </div>
                                     <?php endif; ?>
                                     <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>

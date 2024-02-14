@@ -7,6 +7,7 @@
 
  $abcbiz_settings   = $this->get_settings_for_display();
  $this->add_render_attribute( 'shortcode', 'id', $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] );
+ $abcbiz_formcode = sprintf( '[contact-form-7 %s]', $this->get_render_attribute_string( 'shortcode' ) );
 
 ?>
 
@@ -14,7 +15,7 @@
      <div id="abcbiz-ele-contact-form-wrapper">
          <?php
              if( !empty( $abcbiz_settings['abcbiz_ele_contact_form_shortcode'] ) ){
-                 echo do_shortcode( sprintf( '[contact-form-7 %s]', $this->get_render_attribute_string( 'shortcode' ) ) ); 
+                 echo wp_kses_post(do_shortcode($abcbiz_formcode)); 
              }else{
                  echo '<div class="form_no_select">' .esc_html__('Please Select contact form.', 'abcbiz-addons'). '</div>';
              }
