@@ -57,4 +57,3 @@ function abcbiz_wc_load_assets_dependencies() {
     wp_enqueue_style('photoswipe-default-skin');
     wp_enqueue_style('woocommerce_prettyPhoto_css');
 }
-?>
