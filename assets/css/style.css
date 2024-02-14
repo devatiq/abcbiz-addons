@@ -2381,7 +2381,7 @@ width: auto;
 }
 
 .abcbiz-show-always {
-    display: block !important;
+    display: inline-block !important;
 }
 
 /*----------------------------------------------
