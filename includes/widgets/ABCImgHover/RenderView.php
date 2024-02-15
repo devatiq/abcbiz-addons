@@ -35,8 +35,7 @@ $abcbiz_imghover_link = $abcbiz_settings['abcbiz_elementor_imghover_link'];
            <img src="<?php echo esc_url($abcbiz_imghover_image_url); ?>" alt="<?php echo esc_html($abcbiz_imghover_title); ?>">
 
             <?php if (!empty($abcbiz_imghover_link['url'])) : ?>
-
-                <a href="<?php echo esc_url($abcbiz_imghover_link['url']); ?>" <?php if ($abcbiz_imghover_link['is_external']) echo 'target="' . esc_attr('_blank') . '"'; ?> <?php if ($abcbiz_imghover_link['nofollow']) echo 'rel="' . esc_attr('nofollow') . '"'; ?>>
+              <a href="<?php echo esc_url($abcbiz_imghover_link['url']); ?>" <?php echo $abcbiz_imghover_link['is_external'] ? 'target="' . esc_attr('_blank') . '"' : ''; ?> <?php echo $abcbiz_imghover_link['nofollow'] ? 'rel="' . esc_attr('nofollow') . '"' : ''; ?>>
 
               <?php endif; ?>
                  <div class="abcbiz-img-hover-overlay"> 

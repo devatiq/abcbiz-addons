@@ -40,7 +40,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
     <?php if ($abcbiz_show_category && wc_get_product_category_list($product->get_id())) : ?>
         <div class="abcbiz-product-categories">
             <span class="label"><?php esc_html_e('Categories', 'abcbiz-addons'); ?></span>
-            <span class="value">: <?php echo wp_kses_post( wc_get_product_category_list( $product->get_id() ) ); ?></span>
+            <span class="value">: <?php echo wc_get_product_category_list($product->get_id()); ?></span>
         </div>
     <?php endif; ?>
 
@@ -52,7 +52,7 @@ $abcbiz_show_divider = $abcbiz_settings['abcbiz_elementor_wc_product_meta_div_sw
     <?php if ($abcbiz_show_tags && wc_get_product_tag_list($product->get_id())) : ?>
         <div class="abcbiz-product-tags">
             <span class="label"><?php esc_html_e('Tags', 'abcbiz-addons'); ?></span>
-            <span class="value">: <?php echo esc_attr(wc_get_product_tag_list($product->get_id())); ?></span>
+            <span class="value">: <?php echo wc_get_product_tag_list($product->get_id()); ?></span>
         </div>
     <?php endif; ?>
 

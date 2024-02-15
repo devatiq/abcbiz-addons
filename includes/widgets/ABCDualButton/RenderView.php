@@ -30,7 +30,7 @@ if ( ! empty( $abcbiz_settings['abcbiz_elementor_dual_button_url_right']['url'] 
 
     <!--Single Button-->
     <div class="abcbiz-dual-button abcbiz-dual-button-one">
-        <a <?php echo wp_kses_post($this->get_render_attribute_string('abcbiz_elementor_dual_button_url_left')); ?>>
+        <a <?php echo $this->get_render_attribute_string('abcbiz_elementor_dual_button_url_left'); ?>>
         
             <?php 
                 if('right' == $abcbiz_left_icon_position) {
@@ -54,7 +54,7 @@ if ( ! empty( $abcbiz_settings['abcbiz_elementor_dual_button_url_right']['url'] 
 
     <!--Single Button-->
     <div class="abcbiz-dual-button abcbiz-dual-button-two">
-        <a <?php echo wp_kses_post($this->get_render_attribute_string('abcbiz_elementor_dual_button_url_right')); ?>>
+        <a <?php echo $this->get_render_attribute_string('abcbiz_elementor_dual_button_url_right'); ?>>
             
         <?php
             if('right' == $abcbiz_right_icon_position) {

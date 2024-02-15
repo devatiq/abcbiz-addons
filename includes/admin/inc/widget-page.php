@@ -100,10 +100,7 @@ require_once plugin_dir_path(__FILE__) . 'wc-widgets-render-functions.php';
 
 //callback function
 function abcbiz_available_widgets_section_callback() {
-    echo wp_kses_post( sprintf(
-        '<p>%s</p>',
-        esc_html__('Manage available widgets here.', 'abcbiz-addons')
-    ) );    
+    echo '<p>' . esc_html__('Manage available widgets here.', 'abcbiz-addons') . '</p>';
 }
 
 //Ajax Saving
@@ -117,7 +114,7 @@ function abcbiz_save_widget_setting() {
     }
     update_option($widgetName, $value);
 
-    echo esc_html__('Success', 'abcbiz-addons');
+    echo 'Success';
     wp_die();
 }
 add_action('wp_ajax_abcbiz_save_widget_setting', 'abcbiz_save_widget_setting');

@@ -85,7 +85,7 @@ $abcbiz_table_type = $abcbiz_settings['abcbiz_elementor_pricingTable_type'] ? $a
         </div><!--/ Pricing Table Body -->
         <!-- Pricing Table Footer -->
         <div class="abcbiz-ele-pricing-table-footer">
-            <a <?php echo wp_kses_post($this->get_render_attribute_string( 'abcbiz_elementor_pricingTable_button_link' )); ?> class="abcbiz-ele-btn abcbiz-ele-btn-default"><?php echo esc_html($abcbiz_button_text); ?>  <?php \Elementor\Icons_Manager::render_icon($abcbiz_settings['abcbiz_elementor_pricingTable_button_icon'], ['aria-hidden' => 'true']); ?></a>
+            <a <?php echo $this->get_render_attribute_string( 'abcbiz_elementor_pricingTable_button_link' ); ?> class="abcbiz-ele-btn abcbiz-ele-btn-default"><?php echo esc_html($abcbiz_button_text); ?>  <?php \Elementor\Icons_Manager::render_icon($abcbiz_settings['abcbiz_elementor_pricingTable_button_icon'], ['aria-hidden' => 'true']); ?></a>
         </div><!--/ Pricing Table Footer -->
     </div>
 </div><!--/ Pricing Table Area -->

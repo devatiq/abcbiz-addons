@@ -21,28 +21,26 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             // Get the edit post link
             $edit_post_link = get_edit_post_link($post->ID);
     
-            echo sprintf(
-                wp_kses(                    
-                    '<p class="abcbiz-description-notice">' . __('Please add product description content for this tab using the description box in the <a href="%s">page editor</a>.', 'abcbiz-addons') . '</p>',
-                    array(
-                        'a' => array('href' => array()), // Allow 'a' tag with 'href' attribute
-                        'p' => array('class' => array()) // Allow 'p' tag with 'class' attribute
-                    )
+            // Construct the message with the link
+            $message = sprintf(
+                wp_kses(
+                    __('Please add product description content for this tab using the description box in the <a href="%s">page editor</a>.', 'abcbiz-addons'),
+                    array( 'a' => array( 'href' => array() ) ) // Allow only 'a' tag with 'href' attribute
                 ),
-                esc_url($edit_post_link) // Safely escape the URL
+                esc_url($edit_post_link)
             );
-            
+    
+            echo '<p class="abcbiz-description-notice">' . $message . '</p>';
         } else {
             echo wp_kses_post(wpautop($abcbiz_wc_custom_description));
         }
     }
 
-//ajax cart icon count
+    //ajax cart icon count
 function abcbiz_get_cart_count() {
-    echo esc_html( WC()->cart->get_cart_contents_count() );
+    echo WC()->cart->get_cart_contents_count();
     wp_die();
 }
-    
 add_action('wp_ajax_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 add_action('wp_ajax_nopriv_abcbiz_get_cart_count', 'abcbiz_get_cart_count');
 

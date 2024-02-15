@@ -35,9 +35,7 @@ $abcbiz_portfolio_link = $abcbiz_settings['abcbiz_elementor_portfolio_link'];
            <img src="<?php echo esc_url($abcbiz_portfolio_image_url); ?>" alt="<?php echo esc_html($abcbiz_portfolio_title); ?>">
 
             <?php if (!empty($abcbiz_portfolio_link['url'])) : ?>
-
-                <a href="<?php echo esc_url($abcbiz_portfolio_link['url']); ?>" <?php if ($abcbiz_portfolio_link['is_external']) echo 'target="' . esc_attr('_blank') . '"'; ?> <?php if ($abcbiz_portfolio_link['nofollow']) echo 'rel="' . esc_attr('nofollow') . '"'; ?>>
-
+                <a href="<?php echo esc_url($abcbiz_portfolio_link['url']); ?>" <?php echo $abcbiz_portfolio_link['is_external'] ? 'target="' . esc_attr('_blank') . '"' : ''; ?> <?php echo $abcbiz_portfolio_link['nofollow'] ? 'rel="' . esc_attr('nofollow') . '"' : ''; ?>>
               <?php endif; ?>
                  <div class="abcbiz-portfolio-overlay"> 
                     <?php if (!empty($abcbiz_portfolio_title)) : ?>

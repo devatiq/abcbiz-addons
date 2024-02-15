@@ -51,7 +51,7 @@ if ( ! empty( $abcbiz_settings['abcbiz_cta_button_link_two']['url'] ) ) {
 
         <?php if(!empty($abcbiz_description)) : ?>
             <div class="abcbiz-cta-description">            
-                <?php echo esc_html($abcbiz_description); ?>         
+                <?php echo wpautop(esc_html($abcbiz_description)); ?>         
             </div>
         <?php endif; ?>
 
@@ -61,10 +61,10 @@ if ( ! empty( $abcbiz_settings['abcbiz_cta_button_link_two']['url'] ) ) {
         <!-- CTA Button -->
         <div class="abcbiz-cta-button-area">
             <?php if(!empty($abcbiz_btn1_text)) : ?>
-                <a <?php echo wp_kses_post($this->get_render_attribute_string( 'abcbiz_cta_button_link_one' )); ?> class="abcbiz-cta-button"><?php echo esc_html($abcbiz_btn1_text); ?></a>
+                <a <?php echo $this->get_render_attribute_string( 'abcbiz_cta_button_link_one' ); ?> class="abcbiz-cta-button"><?php echo esc_html($abcbiz_btn1_text); ?></a>
             <?php endif; ?>
             <?php if(!empty($abcbiz_btn2_text)) : ?>
-                <a <?php echo wp_kses_post($this->get_render_attribute_string( 'abcbiz_cta_button_link_two' )); ?> class="abcbiz-cta-button"><?php echo esc_html($abcbiz_btn2_text); ?></a>
+                <a <?php echo $this->get_render_attribute_string( 'abcbiz_cta_button_link_two' ); ?> class="abcbiz-cta-button"><?php echo esc_html($abcbiz_btn2_text); ?></a>
             <?php endif; ?>
         </div><!--/ CTA Button -->
     <?php endif; ?>

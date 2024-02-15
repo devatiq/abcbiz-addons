@@ -21,10 +21,7 @@ $abcbiz_selected_menu_slug = !empty($abcbiz_settings['abcbiz_elementor_wp_menu_s
             'walker' => new abcbiz_custom_walker(),
         ));
     } else {
-        echo sprintf(
-            '<li>%s</li>',
-            esc_html__('Menu not selected or found.', 'abcbiz-addons')
-        );     
+        echo '<p>' . esc_html__('Menu not selected or found.', 'abcbiz-addons') . '</p>';
     }
     ?>
 </div><!-- /end abcbiz wp menu area -->
@@ -40,10 +37,7 @@ $abcbiz_selected_menu_slug = !empty($abcbiz_settings['abcbiz_elementor_wp_menu_s
             'container_class' => 'abcbiz-wp-menu-mobile-container',
         ));
     } else {
-        echo sprintf(
-            '<li>%s</li>',
-            esc_html__('Menu not selected or found.', 'abcbiz-addons')
-        );        
+        echo '<p>' . esc_html__('Menu not selected or found.', 'abcbiz-addons') . '</p>';
     }
     ?>
     </div><!-- /end mobile menu -->
