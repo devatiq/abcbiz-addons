@@ -486,6 +486,28 @@ function abcbiz_page_title_widget_field_render() {
 }
 
 
+//Popup
+function abcbiz_abc_popup_widget_field_render() {
+    $option = get_option('abcbiz_abc_popup_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists comment-form-widget">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcbizaddons.com/widgets/popup-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/popup.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Popup", "abcbiz-multi"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_abc_popup_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
 
 //Portfolio
 function abcbiz_portfolio_widget_field_render() {

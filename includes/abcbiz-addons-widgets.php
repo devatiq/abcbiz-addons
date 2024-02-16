@@ -71,7 +71,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if (get_option('abcbiz_page_title_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPageTitle\Main::class;
 		}
-		
+
+		if (get_option('abcbiz_abc_popup_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPopup\Main::class;
+		}
 
 		if (get_option('abcbiz_portfolio_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPortfolio\Main::class;
