@@ -14,7 +14,7 @@ License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
-Welcome to --[ABCBiz Addons](https://abcbizaddons.com/)--, your go-to treasure chest for all things Elementor! Boasting a lineup of more than --50 meticulously designed widgets--, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **50 meticulously designed widgets**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 == Useful Links ==
 
@@ -78,14 +78,14 @@ Welcome to --[ABCBiz Addons](https://abcbizaddons.com/)--, your go-to treasure c
 - Product BreadCrumb
 
 ==Why Choose ABCBiz Addons?==
-With --[ABCBiz Addons](https://abcbizaddons.com/)--, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with --ABCBiz Addons--.
+With **[ABCBiz Addons](https://abcbizaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **ABCBiz Addons**.
 
 == Frequently Asked Questions ==
 
 = Can I manage widgets directly from the backend? =
 Absolutely! You have the flexibility to show or hide any widget from the backend, giving you full control over your site's layout and functionality.
 
-= How many widgets does your widgets include? =
+= How many widgets does your plugin include? =
 As of now, our collection boasts 53 widgets, and we're constantly expanding our selection to offer you even more creative possibilities.
 
 = Is it possible to build a complete website with this plugin? =
