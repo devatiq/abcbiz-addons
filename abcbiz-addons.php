@@ -33,18 +33,16 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         }
 
         //loading css transform
-        if (!class_exists('ABCBiz\Includes\global\CSS_Transform')) {
-            require_once ABCBIZ_Inc . '/global/css-transform.php';
-            \ABCBiz\Includes\global\CSS_Transform::init();
+        if (!class_exists('ABCBiz\Includes\globals\CSS_Transform')) {
+            require_once ABCBIZ_Inc . '/globals/css-transform.php';
+            \ABCBiz\Includes\globals\CSS_Transform::init();
         }
 
-       
        // Loading wrapper link
-        if (!class_exists('ABCBiz\Includes\global\ABCbiz_Wrapper_link')) {
-            require_once ABCBIZ_Inc . '/global/wrapper-link.php';
-            new \ABCBiz\Includes\global\ABCbiz_Wrapper_link(); 
+        if (!class_exists('ABCBiz\Includes\globals\ABCbiz_Wrapper_link')) {
+            require_once ABCBIZ_Inc . '/globals/wrapper-link.php';
+            new \ABCBiz\Includes\globals\ABCbiz_Wrapper_link(); 
         }
-
 
         load_plugin_textdomain('abcbiz-addons', false, dirname(plugin_basename(ABCBIZ_File)) . '/languages/');
         require_once ABCBIZ_Admin . '/abcbiz-settings.php';

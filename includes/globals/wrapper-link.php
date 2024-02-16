@@ -1,5 +1,5 @@
 <?php
-namespace ABCBiz\Includes\global;
+namespace ABCBiz\Includes\globals;
 
 // If this file is called directly, abort!!!
 defined('ABSPATH') or die('This is not the place you deserve!');
