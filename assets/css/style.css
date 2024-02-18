@@ -281,6 +281,95 @@
 }
 
 /* ---------------------------------------------
+ * Card Info
+ * --------------------------------------------- */
+ .abcbiz-card-info-wrap {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+     }
+
+    .abcbiz-card-style-two-area .abcbiz-card-info-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    }
+
+    .abcbiz-card-image {
+    position: relative;
+    width: 100%;
+    }
+
+    .abcbiz-card-image img {
+    width: 100%;
+    height: 100% !important;
+    vertical-align: bottom;
+    object-fit: cover;
+    }
+
+    .abcbiz-card-style-two-area figure.abcbiz-card-image {
+    margin-bottom: 0 !important;
+    }
+
+    .abcbiz-card-icon {
+    position: relative;
+    width: 100%;
+    }
+
+    .abcbiz-card-icon i{
+    font-size: 100px;
+    }
+
+    .abcbiz-card-icon svg{
+    width: 100px;
+    height: 100px;
+    }
+
+    .abcbiz-badge {
+    display: inline-block;
+    position: absolute;
+    bottom: -10px;
+    right: 15px;
+    z-index: 67;
+    font-size: 12px;
+    }
+
+    .abcbiz-card-content {
+    padding: 0 20px 20px 20px;
+    }
+
+    h3.abcbiz-card-title {
+    font-size: 22px;
+        line-height: 1.2;
+    }
+
+    .abcbiz-card-text p {
+        margin: 0;
+    }
+
+    .abcbiz-card-button {
+        display: flex;
+    }
+
+    .abcbiz-card-button a {
+        display: inline-block;
+        border: 1px solid #2f44eb;
+        transition: all 0.4s;
+    }
+
+    .abcbiz-card-button i {
+        font-size: 16px;
+    }
+
+    .abcbiz-card-button svg {
+        width: 16px;
+        height: 16px;
+    }
+
+    span.abcbiz-btn-icon {
+        position: relative;
+    }
+
+
+/* ---------------------------------------------
  * Icon Box
  * --------------------------------------------- */
 .abcbiz-elementor-icon-box-area {

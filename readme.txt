@@ -1,6 +1,6 @@
 === ABCBiz Multi Addons for Elementor ===
 Plugin Name: ABCBiz Multi Addons for Elementor
-Version: 1.0.1
+Version: 1.0.2
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins 
@@ -20,7 +20,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
-== Widget List: Available Widgets ==
+== Widget List: 53 Available Widgets ==
 
 - Advanced Circular Skill
 - Advanced Icon Box
@@ -34,6 +34,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Breadcrumb
 - Business Hours
 - Call To Action - CTA
+- Card Info Box
 - Comment Form
 - Contact & Social Info
 - Contact Form 7 Style
@@ -103,6 +104,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 2. Magnify Popup
 
 == Changelog ==
+
+= 1.0.2 - 18 February 2024 =
+- New widget Card Info Box added
+- Compatibility with PHP 7.4
 
 = 1.0.1 - 16 February 2024 =
 - 2 New widgets added

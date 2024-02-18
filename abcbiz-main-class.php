@@ -10,7 +10,7 @@ class ABCBizMultiElementorPack
 	 * plugin Version
 	 */ 
 
-	public $version = '1.0.1';
+	public $version = '1.0.2';
 
 	/**
 	 * Minimum Elementor Version

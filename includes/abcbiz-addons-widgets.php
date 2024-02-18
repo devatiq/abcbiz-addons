@@ -29,6 +29,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if (get_option('abcbiz_breadcrumb_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBreadCrumb\Main::class;
 		}
+		if (get_option('abcbiz_card_info_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCard\Main::class;
+		}
 		if (get_option('abcbiz_cat_list_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCatInfo\Main::class;
 		}
