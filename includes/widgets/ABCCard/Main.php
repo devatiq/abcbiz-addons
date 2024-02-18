@@ -70,7 +70,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'textdomain' ),
+				'label' => esc_html__( 'Choose Image', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -86,7 +86,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_image_two',
 			[
-				'label' => esc_html__( 'Choose Image', 'textdomain' ),
+				'label' => esc_html__( 'Choose Image', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -128,7 +128,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_icon',
 			[
-				'label' => esc_html__( 'Choose Icon', 'textdomain' ),
+				'label' => esc_html__( 'Choose Icon', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
                 'condition' => [
                     'abcbiz_elementor_card_info_type' => 'icon',
@@ -151,9 +151,9 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_badge_text',
 			[
-				'label' => esc_html__( 'Badge Text', 'textdomain' ),
+				'label' => esc_html__( 'Badge Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( '$120', 'textdomain' ),
+				'default' => esc_html__( '$120', 'abcbiz-addons' ),
 			]
 		);
 
@@ -161,9 +161,9 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_card_info_heading_text',
 			[
-				'label' => esc_html__( 'Heading Text', 'textdomain' ),
+				'label' => esc_html__( 'Heading Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'ABCBiz Elementor Addons', 'textdomain' ),
+				'default' => esc_html__( 'ABCBiz Elementor Addons', 'abcbiz-addons' ),
 			]
 		);
 
@@ -171,10 +171,10 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_desc',
 			[
-				'label' => esc_html__( 'Description', 'textdomain' ),
+				'label' => esc_html__( 'Description', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXTAREA,
 				'rows' => 10,
-				'default' => esc_html__( 'Lorem ipsum dolor sit amet, consect adipiscing elit sed do dolro sit amet consect adipiscing elit sed', 'textdomain' ),
+				'default' => esc_html__( 'Lorem ipsum dolor sit amet, consect adipiscing elit sed do dolro sit amet consect adipiscing elit sed', 'abcbiz-addons' ),
 			]
 		);
 
@@ -182,9 +182,9 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_card_info_btn_text',
 			[
-				'label' => esc_html__( 'Button Text', 'textdomain' ),
+				'label' => esc_html__( 'Button Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Read More', 'textdomain' ),
+				'default' => esc_html__( 'Read More', 'abcbiz-addons' ),
 			]
 		);
 
@@ -192,7 +192,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_btn_url',
 			[
-				'label' => esc_html__( 'Button Link', 'textdomain' ),
+				'label' => esc_html__( 'Button Link', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
@@ -208,10 +208,10 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_btn_icon_switch',
 			[
-				'label' => esc_html__( 'Button Icon?', 'textdomain' ),
+				'label' => esc_html__( 'Button Icon?', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'btn_on' => esc_html__( 'Yes', 'textdomain' ),
-				'btn_off' => esc_html__( 'No', 'textdomain' ),
+				'btn_on' => esc_html__( 'Yes', 'abcbiz-addons' ),
+				'btn_off' => esc_html__( 'No', 'abcbiz-addons' ),
 				'return_value' => 'yes',
 				'default' => 'btn_off',
 			]
@@ -221,7 +221,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_info_btn_icon',
 			[
-				'label' => esc_html__( 'Button Icon', 'textdomain' ),
+				'label' => esc_html__( 'Button Icon', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::ICONS,
                 'condition' => [
                     'abcbiz_elementor_card_info_btn_icon_switch' => 'yes',
@@ -263,7 +263,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [
@@ -285,7 +285,7 @@ class Main extends BaseWidget
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'abcbiz_elementor_card_box_shadow',
-                'label' => esc_html__( 'Box Shadow', 'textdomain' ),
+                'label' => esc_html__( 'Box Shadow', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-card-info-wrap',
 			]
 		);
@@ -335,7 +335,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_img_spacing',
 			[
-				'label' => esc_html__( 'Image Space', 'textdomain' ),
+				'label' => esc_html__( 'Image Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -356,7 +356,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_img_width',
 			[
-				'label' => esc_html__( 'Image Width', 'textdomain' ),
+				'label' => esc_html__( 'Image Width', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -387,7 +387,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_img_height',
 			[
-				'label' => esc_html__( 'Image Height', 'textdomain' ),
+				'label' => esc_html__( 'Image Height', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -424,7 +424,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_img_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -445,7 +445,7 @@ class Main extends BaseWidget
           $this->add_responsive_control(
 			'abcbiz_elementor_card_img_bottom_margin',
 			[
-				'label' => esc_html__( 'Image Bottom Margin', 'textdomain' ),
+				'label' => esc_html__( 'Image Bottom Margin', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -483,7 +483,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'textdomain' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -508,7 +508,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_box_icon_color',
 			[
-				'label' => esc_html__( 'Icon Color', 'textdomain' ),
+				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#333333',
 				'selectors' => [
@@ -549,7 +549,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_box_icon_spacing',
 			[
-				'label' => esc_html__( 'icon Space', 'textdomain' ),
+				'label' => esc_html__( 'icon Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -582,7 +582,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_badge_text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'textdomain' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#ffffff',
 				'selectors' => [
@@ -596,7 +596,7 @@ class Main extends BaseWidget
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_card_badge_text_typography',
-                'label' => esc_html__( 'Badge Typography', 'textdomain' ),
+                'label' => esc_html__( 'Badge Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-badge',
 			]
 		);
@@ -606,7 +606,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_badge_text_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'textdomain' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#2f44eb',
 				'selectors' => [
@@ -619,7 +619,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_badge_padding',
 			[
-				'label' => esc_html__( 'Badge Padding', 'textdomain' ),
+				'label' => esc_html__( 'Badge Padding', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -649,7 +649,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_badg_border_radius',
 			[
-				'label' => esc_html__( 'Badge Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Badge Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -670,7 +670,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_badge_hor_position',
 			[
-				'label' => esc_html__( 'Badge Horizontal Position', 'textdomain' ),
+				'label' => esc_html__( 'Badge Horizontal Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -698,7 +698,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_badge_ver_position',
 			[
-				'label' => esc_html__( 'Badge Vertical Position', 'textdomain' ),
+				'label' => esc_html__( 'Badge Vertical Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -764,7 +764,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_heading_color',
 			[
-				'label' => esc_html__( 'Color', 'textdomain' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#333333',
 				'selectors' => [
@@ -778,7 +778,7 @@ class Main extends BaseWidget
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_card_heading_typography',
-                'label' => esc_html__( 'Heading Typography', 'textdomain' ),
+                'label' => esc_html__( 'Heading Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} h3.abcbiz-card-title',
 			]
 		);
@@ -787,7 +787,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_heading_bottom_space',
 			[
-				'label' => esc_html__( 'Bottom Margin', 'textdomain' ),
+				'label' => esc_html__( 'Bottom Margin', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -849,7 +849,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_desc_color',
 			[
-				'label' => esc_html__( 'Color', 'textdomain' ),
+				'label' => esc_html__( 'Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#555555',
 				'selectors' => [
@@ -863,7 +863,7 @@ class Main extends BaseWidget
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_card_desc_typography',
-                'label' => esc_html__( 'Typography', 'textdomain' ),
+                'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-card-text',
 			]
 		);
@@ -872,7 +872,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_desc_bottom_space',
 			[
-				'label' => esc_html__( 'Bottom Margin', 'textdomain' ),
+				'label' => esc_html__( 'Bottom Margin', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -910,7 +910,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
 			'abcbiz_elementor_card_btn_normal_tab',
 			[
-				'label' => esc_html__( 'Normal', 'textdomain' ),
+				'label' => esc_html__( 'Normal', 'abcbiz-addons' ),
 			]
 		);
 
@@ -918,7 +918,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_btn_color',
 			[
-				'label' => esc_html__( 'Text Color', 'textdomain' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#2f44eb',
 				'selectors' => [
@@ -932,7 +932,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_btn_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'textdomain' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#ffffff',
 				'selectors' => [
@@ -955,7 +955,7 @@ class Main extends BaseWidget
         $this->start_controls_tab(
 			'abcbiz_elementor_card_btn_hover_tab',
 			[
-				'label' => esc_html__( 'Hover', 'textdomain' ),
+				'label' => esc_html__( 'Hover', 'abcbiz-addons' ),
 			]
 		);
 
@@ -963,7 +963,7 @@ class Main extends BaseWidget
          $this->add_control(
 			'abcbiz_elementor_card_hov_btn_color',
 			[
-				'label' => esc_html__( 'Hover Color', 'textdomain' ),
+				'label' => esc_html__( 'Hover Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#ffffff',
 				'selectors' => [
@@ -977,7 +977,7 @@ class Main extends BaseWidget
         $this->add_control(
 			'abcbiz_elementor_card_btn_hov_bg_color',
 			[
-				'label' => esc_html__( 'Hover Background', 'textdomain' ),
+				'label' => esc_html__( 'Hover Background', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
                 'default' => '#2f44eb',
 				'selectors' => [
@@ -1028,7 +1028,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_padding',
 			[
-				'label' => esc_html__( 'Button Padding', 'textdomain' ),
+				'label' => esc_html__( 'Button Padding', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -1049,7 +1049,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [
@@ -1071,7 +1071,7 @@ class Main extends BaseWidget
 			\Elementor\Group_Control_Typography::get_type(),
 			[
 				'name' => 'abcbiz_elementor_card_btn_typography',
-                'label' => esc_html__( 'Typography', 'textdomain' ),
+                'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-card-button a',
 			]
 		);
@@ -1080,7 +1080,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_icon_size',
 			[
-				'label' => esc_html__( 'Icon Size', 'textdomain' ),
+				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -1108,7 +1108,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_icon_hor_space',
 			[
-				'label' => esc_html__( 'Icon Horizontal Space', 'textdomain' ),
+				'label' => esc_html__( 'Icon Horizontal Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -1135,7 +1135,7 @@ class Main extends BaseWidget
          $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_icon_ver_space',
 			[
-				'label' => esc_html__( 'Icon Vertical Space', 'textdomain' ),
+				'label' => esc_html__( 'Icon Vertical Space', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -1162,7 +1162,7 @@ class Main extends BaseWidget
         $this->add_responsive_control(
 			'abcbiz_elementor_card_btn_bottom_space',
 			[
-				'label' => esc_html__( 'Button Bottom Margin', 'textdomain' ),
+				'label' => esc_html__( 'Button Bottom Margin', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
