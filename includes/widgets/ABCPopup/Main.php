@@ -24,13 +24,9 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['abcbiz-magnific-popup'];
+        return ['abcbiz-popup'];
     }
-
-    public function get_style_depends()
-    {
-        return ['abcbiz-popup-style'];
-    }
+ 
     /**
      * Register the widget controls.
      */
@@ -116,9 +112,10 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Popup Type', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT,
-                'default' => 'video',
+                'default' => 'yt-video',
                 'options' => [
-                    'video' => esc_html__('Video', 'abcbiz-addons'),
+                    'yt-video' => esc_html__('Youtube Video', 'abcbiz-addons'),
+                    'vm-video' => esc_html__('Vimeo Video', 'abcbiz-addons'),
                     'gmap' => esc_html__('Google Map', 'abcbiz-addons'),
                 ],
             ]
@@ -127,13 +124,25 @@ class Main extends BaseWidget
         $this->add_control(
             'abcbiz_elementor_popup_video',
             [
-                'label' => esc_html__('Popup Video', 'abcbiz-addons'),
-                'type' => Controls_Manager::URL,
-                'default' => [
-                    'url' => 'https://www.youtube.com/watch?v=qtNnAJOGCcw',
-                ],
+                'label' => esc_html__('Youtube Video', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => 'qtNnAJOGCcw',
+                'description' => esc_html__('Enter Youtube video ID', 'abcbiz-addons'),                
                 'condition' => [
-                    'abcbiz_elementor_popup_type' => 'video',
+                    'abcbiz_elementor_popup_type' => 'yt-video',
+                ],
+            ]
+        );
+        // popup vimeo
+        $this->add_control(
+            'abcbiz_elementor_popup_vimeo_video',
+            [
+                'label' => esc_html__('Vimeo Video', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => '',
+                'description' => esc_html__('Enter Vimeo video ID', 'abcbiz-addons'),
+                'condition' => [
+                    'abcbiz_elementor_popup_type' => 'vm-video',
                 ],
             ]
         );
@@ -153,11 +162,11 @@ class Main extends BaseWidget
         // end of popup
         $this->end_controls_section();
 
-        // popup style
+        // setting style
         $this->start_controls_section(
-            'abcbiz_elementor_popup_style_section',
+            'abcbiz_elementor_popup_setting_style',
             [
-                'label' => esc_html__('Popup Style', 'abcbiz-addons'),
+                'label' => esc_html__('Setting Styles', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -505,21 +514,51 @@ class Main extends BaseWidget
             ]
         );
 
-        // popup style end
-        $this->end_controls_section();
+        $this->end_controls_section();// end setting style
 
+         // popup style
+         $this->start_controls_section(
+            'abcbiz_elementor_popup_window_style_section',
+            [
+                'label' => esc_html__('Popup Styles', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
 
+        $this->add_responsive_control(
+			'abcbiz_elementor_popup_frame_width',
+			[
+				'label' => esc_html__( 'Frame Width', 'textdomain' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 350,
+						'max' => 1280,
+						'step' => 1,
+					],
+					'%' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 900,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-popup-overlay iframe' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+        $this->end_controls_section();// end popup style
+       
 
     }
 
     /**
      * Render the widget output on the frontend.
-     *
-     * Written in PHP and used to generate the final HTML.
-     *
-     * @since 1.0.0
-     *
-     * @access protected
      */
     protected function render()   {
 
