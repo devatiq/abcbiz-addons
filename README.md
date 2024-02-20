@@ -77,19 +77,14 @@ With **[ABCBiz Addons](https://abcbizaddons.com/)**, you’ll access a treasure 
 
 ## Frequently Asked Questions
 
-### Can I manage widgets directly from the backend? =
+### Can I manage widgets directly from the backend?
 Absolutely! You have the flexibility to show or hide any widget from the backend, giving you full control over your site's layout and functionality.
 
-### How many widgets does your plugin include? =
+### How many widgets does your plugin include?
 As of now, our collection boasts 53 widgets, and we're constantly expanding our selection to offer you even more creative possibilities.
 
-### Is it possible to build a complete website with this plugin? =
+### Is it possible to build a complete website with this plugin?
 Yes, for the most part. With our suite of 53 customizable widgets, you're well-equipped to craft various web pages, making it feasible to construct an entire website using just our plugin.
-
-## Screenshots
-
-1. This screenshot description corresponds to screenshot-1.(png|jpg|jpeg|gif). Screenshots are stored in the /assets directory.
-2. This is the second screenshot
 
 ## Credit
 1. Swipe Slider
