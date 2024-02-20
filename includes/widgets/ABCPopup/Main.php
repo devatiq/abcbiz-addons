@@ -1,7 +1,8 @@
 <?php
 namespace ABCBiz\Includes\Widgets\ABCPopup;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
@@ -26,7 +27,7 @@ class Main extends BaseWidget
     {
         return ['abcbiz-popup'];
     }
- 
+
     /**
      * Register the widget controls.
      */
@@ -48,7 +49,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::SELECT,
                 'default' => 'text',
                 'options' => [
-                    'text'  => esc_html__('Text', 'abcbiz-addons'),
+                    'text' => esc_html__('Text', 'abcbiz-addons'),
                     'icon' => esc_html__('Icon', 'abcbiz-addons'),
                     'image' => esc_html__('Image', 'abcbiz-addons'),
                 ],
@@ -71,7 +72,7 @@ class Main extends BaseWidget
             'abcbiz_elementor_popup_icon',
             [
                 'label' => esc_html__('Popup Icon', 'abcbiz-addons'),
-                'type' => Controls_Manager::ICONS,                                             
+                'type' => Controls_Manager::ICONS,
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'icon',
                 ],
@@ -92,8 +93,8 @@ class Main extends BaseWidget
             ]
         );
 
-          // popup image al
-          $this->add_control(
+        // popup image al
+        $this->add_control(
             'abcbiz_elementor_popup_img_alt_text',
             [
                 'label' => esc_html__('Image Alt Text', 'abcbiz-addons'),
@@ -127,7 +128,7 @@ class Main extends BaseWidget
                 'label' => esc_html__('Youtube Video', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => 'qtNnAJOGCcw',
-                'description' => esc_html__('Enter Youtube video ID', 'abcbiz-addons'),                
+                'description' => esc_html__('Enter Youtube video ID', 'abcbiz-addons'),
                 'condition' => [
                     'abcbiz_elementor_popup_type' => 'yt-video',
                 ],
@@ -152,7 +153,7 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Google Map', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXTAREA,
-                'default' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618057.6387792374!2d-86.44980745076629!3d27.678376067544153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4daec28b478b666b%3A0x40d7d670f849f542!2sSupreoX%20Limited%20USA!5e0!3m2!1sen!2sbd!4v1699363617377!5m2!1sen!2sbd',          
+                'default' => 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3618057.6387792374!2d-86.44980745076629!3d27.678376067544153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4daec28b478b666b%3A0x40d7d670f849f542!2sSupreoX%20Limited%20USA!5e0!3m2!1sen!2sbd!4v1699363617377!5m2!1sen!2sbd',
                 'condition' => [
                     'abcbiz_elementor_popup_type' => 'gmap',
                 ],
@@ -162,11 +163,11 @@ class Main extends BaseWidget
         // end of popup
         $this->end_controls_section();
 
-        // setting style
+        // popup style
         $this->start_controls_section(
-            'abcbiz_elementor_popup_setting_style',
+            'abcbiz_elementor_popup_style_section',
             [
-                'label' => esc_html__('Setting Styles', 'abcbiz-addons'),
+                'label' => esc_html__('Popup Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
@@ -224,16 +225,16 @@ class Main extends BaseWidget
 
         // popup text background
         $this->add_group_control(
-			Group_Control_Background::get_type(),
-			[
-				'name' => 'abcbiz-elementor-popup-text-background',
-				'types' => [ 'classic', 'gradient', 'video' ],
-				'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-text',
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'abcbiz-elementor-popup-text-background',
+                'types' => ['classic', 'gradient', 'video'],
+                'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-text',
                 'condition' => [
                     'abcbiz_elementor_popup_content_type' => 'text',
                 ],
-			]
-		);
+            ]
+        );
         // popup text typography
         $this->add_group_control(
             Group_Control_Typography::get_type(),
@@ -305,8 +306,8 @@ class Main extends BaseWidget
                     'abcbiz_elementor_popup_content_type' => 'icon',
                 ],
             ]
-        ); 
-           
+        );
+
         // popup icon background    
         $this->add_control(
             'abcbiz-elementor-popup-icon-background',
@@ -341,7 +342,7 @@ class Main extends BaseWidget
                     'abcbiz_elementor_popup_content_type' => 'icon',
                 ],
             ]
-        ); 
+        );
 
         // popup icon hover background    
         $this->add_control(
@@ -382,12 +383,12 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%'],
                 'default' => [
-                    'top' => 50,   
+                    'top' => 50,
                     'right' => 50,
                     'bottom' => 50,
                     'left' => 50,
                     'unit' => '%',
-                    'isLinked' => true,                    
+                    'isLinked' => true,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-icon i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -458,8 +459,8 @@ class Main extends BaseWidget
             ]
         );
 
-         // popup image width
-         $this->add_responsive_control(
+        // popup image width
+        $this->add_responsive_control(
             'abcbiz_elementor_popup_image_width',
             [
                 'label' => esc_html__('Image Width', 'abcbiz-addons'),
@@ -470,12 +471,12 @@ class Main extends BaseWidget
                     'unit' => 'px',
                 ],
                 'range' => [
-					'px' => [
-						'min' => 20,
-						'max' => 500,
-						'step' => 5,
-					],
-				],
+                    'px' => [
+                        'min' => 20,
+                        'max' => 500,
+                        'step' => 5,
+                    ],
+                ],
 
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup-content-image img' => 'width: {{SIZE}}{{UNIT}}',
@@ -514,56 +515,226 @@ class Main extends BaseWidget
             ]
         );
 
-        $this->end_controls_section();// end setting style
+        // popup style end
+        $this->end_controls_section();
 
-         // popup style
-         $this->start_controls_section(
-            'abcbiz_elementor_popup_window_style_section',
+        // popup content style section
+        $this->start_controls_section(
+            'abcbiz_elementor_popup_content_style_section',
             [
-                'label' => esc_html__('Popup Styles', 'abcbiz-addons'),
+                'label' => esc_html__('Popup Contents', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
 
-        $this->add_responsive_control(
-			'abcbiz_elementor_popup_frame_width',
+        //Notice
+        $this->add_control(
+			'custom_panel_notice',
 			[
-				'label' => esc_html__( 'Frame Width', 'textdomain' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 350,
-						'max' => 1280,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 900,
-				],
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-popup-overlay iframe' => 'width: {{SIZE}}{{UNIT}};',
-				],
+				'type' => \Elementor\Controls_Manager::NOTICE,
+				'notice_type' => 'Notice',
+				'dismissible' => false,
+				'heading' => esc_html__( 'Notice', 'abcbiz-addons' ),
+				'content' => esc_html__( 'For a better frame view try to set width and height based on a 16:9 ratio. ', 'abcbiz-addons' ),
 			]
 		);
 
-        $this->end_controls_section();// end popup style
+        //ifreame width
+        $this->add_responsive_control(
+            'abcbiz_elementor_popup_iframe_width',
+            [
+                'label' => esc_html__('Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 150,
+                        'max' => 1500,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-overlay iframe' => 'width: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .abcbiz-popup' => 'width: calc({{SIZE}}{{UNIT}} + 2px);',
+                ],
+            ]
+        );
+
+        //iframe height
+        $this->add_responsive_control(
+            'abcbiz_elementor_popup_iframe_height',
+            [
+                'label' => esc_html__('Height', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 150,
+                        'max' => 1500,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-overlay iframe' => 'height: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} .abcbiz-popup' => 'height: calc({{SIZE}}{{UNIT}} + 2px);',
+                ],
+            ]
+        );        
+        
+        // Border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'abcbiz_elementor_popup_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup',
+            ]
+        );
+
+        // Border radius
+        $this->add_responsive_control(
+            'abcbiz_elementor_popup_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-area .abcbiz-popup' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //close icon background size
+        $this->add_responsive_control(
+            'abcbiz_elementor_popup_close_icon_background_size',
+            [
+                'label' => esc_html__('Close Icon Background Size', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-close i' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        // Close icon size
+        $this->add_responsive_control(
+            'abcbiz_elementor_popup_close_icon_size',
+            [
+                'label' => esc_html__('Close Icon Size', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-close i' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Icon color
+        $this->add_control(
+            'abcbiz_elementor_popup_close_icon_color',
+            [
+                'label' => esc_html__('Icon Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popup-close i' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+       //close icon background color
+       $this->add_control(
+           'abcbiz_elementor_popup_close_icon_bg_color',
+           [
+               'label' => esc_html__('Close Icon Background Color', 'abcbiz-addons'),
+               'type' => Controls_Manager::COLOR,
+               'selectors' => [
+                   '{{WRAPPER}} .abcbiz-popup-close i' => 'background-color: {{VALUE}};',
+               ],
+           ]
+       ); 
        
+       // Close icon position - horizontal
+       $this->add_responsive_control(
+           'abcbiz_elementor_popup_close_icon_right_position',
+           [
+               'label' => esc_html__('Close Icon Right indent', 'abcbiz-addons'),
+               'type' => Controls_Manager::SLIDER,
+               'label_block' => true,
+               'size_units' => ['%', 'px'],
+               'range' => [
+                   '%' => [
+                       'min' => 0,
+                       'max' => 100,
+                   ],
+                   'px' => [
+                       'min' => -1000,
+                       'max' => 1000,
+                   ],
+               ],
+               'selectors' => [
+                   '{{WRAPPER}} .abcbiz-popup-close' => 'right: {{SIZE}}{{UNIT}};',
+               ],
+           ]
+       );
+
+       // Close icon position - vertical
+       $this->add_responsive_control(
+           'abcbiz_elementor_popup_close_icon_top_position',
+           [
+               'label' => esc_html__('Close Icon Top indent', 'abcbiz-addons'),
+               'type' => Controls_Manager::SLIDER,
+               'size_units' => ['%', 'px'],
+               'range' => [
+                   '%' => [
+                       'min' => 0,
+                       'max' => 100,
+                   ],
+                   'px' => [
+                       'min' => -1000,
+                       'max' => 1000,
+                   ],
+               ],
+               'selectors' => [
+                   '{{WRAPPER}} .abcbiz-popup-close' => 'top: {{SIZE}}{{UNIT}};',
+               ],
+           ]
+       );
+
+       // Close icon border radius
+       $this->add_responsive_control(
+           'abcbiz_elementor_popup_close_icon_border_radius',
+           [
+               'label' => esc_html__('Close Icon Border Radius', 'abcbiz-addons'),
+               'type' => Controls_Manager::DIMENSIONS,
+               'label_block' => true,
+               'size_units' => ['px', '%'],
+               'selectors' => [
+                   '{{WRAPPER}} .abcbiz-popup-close i' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+               ],
+           ]
+       );
+        
+       $this->end_controls_section();
 
     }
 
     /**
      * Render the widget output on the frontend.
      */
-    protected function render()   {
-
-  
-        //load render view to show widget output on frontend/website.
+    protected function render()
+    {
         include 'RenderView.php';
     }
 }

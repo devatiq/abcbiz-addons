@@ -1,41 +1,40 @@
 jQuery(document).ready(function ($) {
-    "use strict";
-    $.fn.ABCBizPopup = function () {
-        this.click(function () {
-            var contentId = $(this).data('popup-content');
-            var popupContent = $(contentId).html();
+    'use strict';
+    function showPopup(contentId) {
+        var overlay = $(contentId);
+        overlay.css('display', 'flex').hide().fadeIn();
+        $('body').css('overflow', 'hidden');
+    }
 
-            var overlay = $('<div class="abcbiz-popup-overlay"></div>');
-            var popup = $('<div class="abcbiz-popup"></div>').append(popupContent);
-            var closeBtn = $('<span class="abcbiz-popup-close"><i class="eicon-editor-close"></i></span>');
-
-            popup.append(closeBtn);
-            overlay.append(popup);
-
-            // Append the overlay to body
-            $('body').append(overlay);
-
-            // Show the popup
-            overlay.fadeIn();
-            popup.show();
-
-            // Close the popup
-            closeBtn.click(function () {
-                overlay.fadeOut(function () {
-                    $(this).remove(); // Remove the overlay from DOM after fading out
-                });
-            });
-
-            // Close on overlay click
-            overlay.click(function (e) {
-                if (e.target == this) { // Ensure the overlay, not child elements, was clicked
-                    $(this).fadeOut(function () {
-                        $(this).remove();
-                    });
-                }
-            });
+    // Function to hide the popup
+    function hidePopup(overlay) {
+        overlay.fadeOut(function() {
+            $(this).css('display', 'none');
+            $('body').css('overflow', ''); // Reset body overflow
         });
-    };
+    }
 
-    $('.abcbiz-popup-trigger').ABCBizPopup();
+    // Open popup on trigger click
+    $('.abcbiz-popup-trigger').click(function (e) {
+        e.preventDefault();
+        var contentId = $(this).data('popup-content');
+        showPopup(contentId);
+    });
+
+    // Close button functionality with event delegation
+    $(document).on('click', '.abcbiz-popup-close', function () {
+        var overlay = $(this).closest('.abcbiz-popup-overlay');
+        hidePopup(overlay);
+    });
+
+    // Optional: Close the popup when clicking outside of it
+    $(document).on('click', '.abcbiz-popup-overlay', function (e) {
+        if (e.target !== this) return;
+        hidePopup($(this));
+    });
+
+    // Prevent closing popup when clicking inside the popup content
+    $(document).on('click', '.abcbiz-popup', function (e) {
+        e.stopPropagation();
+    });
 });

@@ -1678,75 +1678,60 @@ h3.abcbiz-style-three-team-name {
     right: -20px;
 }
 
+
 /* ---------------------------------------------
 * PopUp
 * --------------------------------------------- */
-.abcbiz-popup-area {
-    text-align: center;
-}
 .abcbiz-popup-trigger {
     cursor: pointer;
 }
-.abcbiz-popup-trigger svg {
-    width: 100px;
-    height: 100px;
-}
-
 .abcbiz-popup-overlay {
     display: none;
     position: fixed;
-    z-index: 1000;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0);
-    background-color: rgba(0, 0, 0, 0.4);
-    display: flex;
-    align-items: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
     justify-content: center;
+    align-items: center;
 }
 
-.abcbiz-popup-content {
-    background: #fff;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 600px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-.abcbiz-popup-overlay iframe {
-    width: 900px;
-    height: 600px;
-}
 .abcbiz-popup {
     position: relative;
+    border-radius: 5px;
+    border: 10px solid #fff;    
+    max-width: 90%; 
+    width: 900px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
 }
+
 .abcbiz-popup-close {
-    color: #000;
-    font-size: 17px;
-    font-weight: bold;
-    background-color: #fff;
-    width: 30px;
-    height: 30px;
-    display: flex;
     position: absolute;
     top: -25px;
-    right: -25px;
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-}
-.abcbiz-popup-area .abcbiz-popup-content-text {
-    outline: none;
-}
-.abcbiz-popup-close:hover,
-.abcbiz-popup-close:focus {
-    color: black;
-    text-decoration: none;
+    right: -20px;
     cursor: pointer;
+    font-size: 24px;
+    color: #333;
+}
+
+.abcbiz-popup iframe {
+    width: 900; 
+    height: 506px; 
+}
+.abcbiz-popup-close i {
+    font-size: 24px;
+    color: #333;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*----------------------------------------------

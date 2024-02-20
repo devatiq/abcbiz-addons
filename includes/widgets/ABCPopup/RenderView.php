@@ -50,46 +50,48 @@ $popup_img_alt_text = $settings['abcbiz_elementor_popup_img_alt_text'];
 
     <?php if ('yt-video' == $settings['abcbiz_elementor_popup_type']): ?>
 
-        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-content" style="display:none;">
-
-            <?php if (!empty($settings['abcbiz_elementor_popup_video'])): ?>
-                <iframe width="560" height="315"
-                    src="https://www.youtube.com/embed/<?php echo esc_attr($settings['abcbiz_elementor_popup_video']); ?>"></iframe>
-            <?php else: ?>
-                <p>
-                    <?php echo esc_html__('Not a valid video', 'abcbiz-addons'); ?>
-                </p>
-            <?php endif; ?>
-
+        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-overlay">
+            <div class="abcbiz-popup">
+                <span class="abcbiz-popup-close"><i class="eicon-editor-close"></i></span>
+                <?php if (!empty($settings['abcbiz_elementor_popup_video'])): ?>
+                    <iframe src="https://www.youtube.com/embed/<?php echo esc_attr($settings['abcbiz_elementor_popup_video']); ?>"></iframe>
+                <?php else: ?>
+                    <p>
+                        <?php echo esc_html__('Not a valid video', 'abcbiz-addons'); ?>
+                    </p>
+                <?php endif; ?>
+            </div>
         </div>
 
     <?php elseif ('vm-video' == $settings['abcbiz_elementor_popup_type']): ?>
-        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-content" style="display:none;">
-
-            <?php if (!empty($settings['abcbiz_elementor_popup_vimeo_video'])): ?>
-                <iframe
-                    src="https://player.vimeo.com/video/<?php echo esc_attr($settings['abcbiz_elementor_popup_vimeo_video']); ?>"
-                    width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
-                    allowfullscreen></iframe>
-            <?php else: ?>
-                <p>
-                    <?php echo esc_html__('Not a valid video', 'abcbiz-addons'); ?>
-                </p>
-            <?php endif; ?>
-
+        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-overlay">
+            <div class="abcbiz-popup">
+                <span class="abcbiz-popup-close"><i class="eicon-editor-close"></i></span>
+                <?php if (!empty($settings['abcbiz_elementor_popup_vimeo_video'])): ?>
+                    <iframe
+                        src="https://player.vimeo.com/video/<?php echo esc_attr($settings['abcbiz_elementor_popup_vimeo_video']); ?>"
+                        frameborder="0" allow="autoplay; fullscreen; picture-in-picture"
+                        allowfullscreen></iframe>
+                <?php else: ?>
+                    <p>
+                        <?php echo esc_html__('Not a valid video', 'abcbiz-addons'); ?>
+                    </p>
+                <?php endif; ?>
+            </div>
         </div>
     <?php elseif ('gmap' == $settings['abcbiz_elementor_popup_type']): ?>
-        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-content" style="display:none;">
-
-            <?php if (!empty($settings['abcbiz_elementor_popup_gmap'])): ?>
-                <iframe src="<?php echo esc_attr($settings['abcbiz_elementor_popup_gmap']); ?>" style="border:0;"
-                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-            <?php else: ?>
-                <p>
-                    <?php echo esc_html__('Not a valid google map', 'abcbiz-addons'); ?>
-                </p>
-            <?php endif; ?>
-
+        <div id="abcbiz-popup-content-<?php echo esc_attr($id); ?>" class="abcbiz-popup-overlay">
+            <div class="abcbiz-popup">
+                <span class="abcbiz-popup-close"><i class="eicon-editor-close"></i></span>
+                <?php if (!empty($settings['abcbiz_elementor_popup_gmap'])): ?>
+                    <iframe src="<?php echo esc_attr($settings['abcbiz_elementor_popup_gmap']); ?>"
+                        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <?php else: ?>
+                    <p>
+                        <?php echo esc_html__('Not a valid google map', 'abcbiz-addons'); ?>
+                    </p>
+                <?php endif; ?>
+            </div>
         </div>
 
     <?php endif; ?>
