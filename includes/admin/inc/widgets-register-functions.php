@@ -10,6 +10,7 @@ function abcbiz_widgets_settings_init() {
     );
 
 // Register settings 
+register_setting('abcbiz_widgets_menu', 'abcbiz_before_after_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_back_top_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_card_info_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_flip_box_widget_field');
@@ -53,6 +54,7 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
 
 
 // Set default values if not already set
+add_option('abcbiz_before_after_widget_field', '1');
 add_option('abcbiz_card_info_widget_field', '1');
 add_option('abcbiz_back_top_widget_field', '1');
 add_option('abcbiz_cta_widget_field', '1');
@@ -94,6 +96,15 @@ add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 
+
+//Before After Image
+add_settings_field(
+    'abcbiz_before_after_widget_field',
+    esc_html__('Image After Image', 'abcbiz-addons'),
+    'abcbiz_before_after_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
 
 //Card Info
 add_settings_field(

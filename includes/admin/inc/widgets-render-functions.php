@@ -1,6 +1,28 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//Before After Image
+function abcbiz_before_after_widget_field_render() {
+    $option = get_option('abcbiz_before_after_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcbizaddons.com/widgets/before-after-image-compare-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-before-after-image.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Before After Image", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_before_after_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
 //Card Info Box
 function abcbiz_card_info_widget_field_render() {
     $option = get_option('abcbiz_card_info_widget_field');

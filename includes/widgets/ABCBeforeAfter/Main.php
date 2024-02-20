@@ -20,7 +20,7 @@ class Main extends BaseWidget {
 			'abcbiz-category'
 		];		
 		protected $keywords = [
-			'abc', 'before', 'after', 'image'
+			'abc', 'before', 'after', 'image', 'compare'
 		];
 
 		public function get_style_depends()
