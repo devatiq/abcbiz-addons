@@ -57,7 +57,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Testimonial Carousel
 - WordPress Menu
 
-### WooCommerce Widgets==
+### WooCommerce Widgets
 - Add to Cart
 - Product Image
 - Product Meta
