@@ -1678,6 +1678,13 @@ h3.abcbiz-style-three-team-name {
     right: -20px;
 }
 
+/* ---------------------------------------------
+* Before After Image
+* --------------------------------------------- */
+#abcbiz-before-after-container .twentytwenty-handle:before, #abcbiz-before-after-container .twentytwenty-handle:after {
+    box-shadow: none;
+}
+
 
 /* ---------------------------------------------
 * PopUp

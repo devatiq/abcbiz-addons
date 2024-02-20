@@ -1,5 +1,5 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCBackToTop;
+namespace ABCBiz\Includes\Widgets\ABCBeforeAfter;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -13,19 +13,24 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abcbiz-back-top-top';
-		protected $title = 'ABC Back To Top';
-		protected $icon = 'eicon-arrow-up abcbiz-addons-icon';
+		protected $name = 'abcbiz-before-after-image';
+		protected $title = 'ABC Before After Image';
+		protected $icon = 'eicon-image-before-after abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
 		protected $keywords = [
-			'abc', 'back', 'top', 'button'
+			'abc', 'before', 'after', 'image'
 		];
+
+		public function get_style_depends()
+		{
+			return ['twentytwenty'];
+		}
 
 		public function get_script_depends()
     {
-        return ['abcbiz-back-to-top']; 
+        return ['jquery-event-move', 'jquery-twentytwenty', 'abcbiz-before-after-script']; 
     }
 
 	/**
@@ -34,328 +39,284 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 
 		$this->start_controls_section(
-			'abcbiz_elementor_back_to_top_setting',
+			'abcbiz_elementor_before_after_image',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Before After Image', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
-		//Button type
+		//Before Image
 		$this->add_control(
-			'abcbiz_elementor_back_to_top_type',
+			'abcbiz_elementor_before_img_upload',
 			[
-				'label' => esc_html__( 'Button Type', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'icon',
-				'options' => [
-					'icon' => esc_html__( 'Icon', 'abcbiz-addons' ),
-					'text'  => esc_html__( 'Text', 'abcbiz-addons' ),
-				],
-				'selectors' => [
-					'{{WRAPPER}} .your-class' => 'border-style: {{VALUE}};',
+				'label' => esc_html__( 'Upload Before Image', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
 				],
 			]
 		);
 
-		//Button text
+		//Before Alt Text
 		$this->add_control(
-			'abcbiz_elementor_back_to_top_text',
+			'abcbiz_elementor_before_img_alt',
 			[
-				'label' => esc_html__( 'Button Text', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Before Image Alt Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Top', 'abcbiz-addons' ),
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'text'
-				],
+				'default' => esc_html__( 'Before Image', 'abcbiz-addons' ),
 			]
 		);
 
-		//display switch
+		//Before Image
 		$this->add_control(
-			'abcbiz_elementor_back_to_top_display_switch',
+			'abcbiz_elementor_after_img_upload',
 			[
-				'label' => esc_html__( 'Show Always?', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'always_on' => esc_html__( 'Yes', 'abcbiz-addons' ),
-				'always_off' => esc_html__( 'No', 'abcbiz-addons' ),
-				'return_value' => 'yes',
-				'default' => 'always_off',
+				'label' => esc_html__( 'Upload After Image', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::MEDIA,
+				'default' => [
+					'url' => \Elementor\Utils::get_placeholder_image_src(),
+				],
 			]
 		);
 
-		//Button Position
+		//After Alt Text
 		$this->add_control(
-			'abcbiz_elementor_back_to_top_position',
+			'abcbiz_elementor_after_img_alt',
 			[
-				'label' => esc_html__( 'Position', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::SELECT,
-				'default' => 'fixed',
-				'options' => [
-					'relative' => esc_html__( 'Relative', 'abcbiz-addons' ),
-					'fixed'  => esc_html__( 'Fixed', 'abcbiz-addons' ),
-				],
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'position: {{VALUE}};',
-				],
+				'label' => esc_html__( 'After Image Alt Text', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'After Image', 'abcbiz-addons' ),
 			]
 		);
 
-		//Bottom position
-		$this->add_responsive_control(
-			'abcbiz_elementor_back_to_top_bottom_pos',
-			[
-				'label' => esc_html__( 'Position from bottom', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 5,
-						'max' => 500,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 20,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'bottom: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_position' => 'fixed',
-				],
-			]
-		);
+		$this->end_controls_section();//end image section
 
-		//Right position
-		$this->add_responsive_control(
-			'abcbiz_elementor_back_to_top_right_pos',
-			[
-				'label' => esc_html__( 'Position from right', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::SLIDER,
-				'size_units' => [ 'px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 5,
-						'max' => 500,
-						'step' => 1,
-					],
-					'%' => [
-						'min' => 0,
-						'max' => 100,
-					],
-				],
-				'default' => [
-					'unit' => 'px',
-					'size' => 30,
-				],
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'right: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_position' => 'fixed',
-				],
-			]
-		);
-		
-        $this->end_controls_section();//end setting section
-
-		//Style Section
 		$this->start_controls_section(
-			'abcbiz_elementor_back_to_top_style',
+			'abcbiz_elementor_before_after_setting',
 			[
-				'label' => esc_html__( 'Button Style', 'abcbiz-addons' ),
-				'tab' => Controls_Manager::TAB_STYLE,
+				'label' => esc_html__( 'Widget Setings', 'abcbiz-addons' ),
+				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
 
-		//Background Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_bg_color',
-			[
-				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#0349e7',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-
-		//Background Hover Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_bg_hov_color',
-			[
-				'label' => esc_html__( 'Hover Background Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#a03bf4',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top:hover' => 'background-color: {{VALUE}}',
-				],
-			]
-		);
-
-		//Icon Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_icon_color',
-			[
-				'label' => esc_html__( 'Icon Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#ffffff',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top svg' => 'fill: {{VALUE}}',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'icon'
-				],
-			]
-		);
-
-		//Icon Hover Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_icon_hov_color',
-			[
-				'label' => esc_html__( 'Icon Hover Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#ffffff',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top:hover svg' => 'fill: {{VALUE}}',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'icon'
-				],
-			]
-		);
-
-		//Text Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_text_color',
-			[
-				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#ffffff',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'color: {{VALUE}}',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'text'
-				],
-			]
-		);
-
-		//Text Color
-		$this->add_control(
-			'abcbiz_elementor_back_to_top_text_hov_color',
-			[
-				'label' => esc_html__( 'Text Hover Color', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::COLOR,
-				'default' => '#ffffff',
-				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top:hover' => 'color: {{VALUE}}',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'text'
-				],
-			]
-		);
-
-		//Text Typograghy
-		$this->add_group_control(
-			\Elementor\Group_Control_Typography::get_type(),
-			[
-				'label' => esc_html__( 'Typography', 'abcbiz-addons' ),
-				'name' => 'abcbiz_elementor_back_to_top_text_typography',
-				'selector' => '{{WRAPPER}} #abcbiz-back-to-top',
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'text'
-				],
-			]
-		);
-
-		//Icon Size
+		//orientation
 		$this->add_responsive_control(
-			'abcbiz_elementor_back_to_top_icon_size',
+            'abcbiz_elementor_before_after_orientation',
+            [
+                'label' => esc_html__( 'Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'default' => 'horizontal',
+                'options' => [
+                    'horizontal'    => [
+                        'title' => esc_html__( 'Horizontal', 'abcbiz-addons' ),
+                        'icon' => 'eicon-h-align-stretch',
+                    ],
+                    'vertical' => [
+                        'title' => esc_html__( 'Vertical', 'abcbiz-addons' ),
+                        'icon' => 'eicon-v-align-stretch',
+                    ],
+                ],
+            ]
+        );
+
+		//Before image visibility
+		$this->add_responsive_control(
+			'abcbiz_elementor_before_img_visibility',
 			[
-				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Before Image Visibility', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
 					'px' => [
-						'min' => 10,
-						'max' => 100,
+						'min' => 0.1,
+						'max' => 1,
+						'step' => 0.1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 0.5,
+				],
+			]
+		);
+
+		//Overlay
+		$this->add_control(
+			'abcbiz_elementor_before_after_switch',
+			[
+				'label' => esc_html__( 'Hide Overlay?', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SWITCHER,
+				'overlay_on' => esc_html__( 'Show', 'abcbiz-addons' ),
+				'overlay_off' => esc_html__( 'Hide', 'abcbiz-addons' ),
+				'return_value' => 'true',
+				'default' => 'overlay_off',
+			]
+		);
+
+		//Before Label Text
+		$this->add_control(
+			'abcbiz_elementor_before_label_text',
+			[
+				'label' => esc_html__( 'Before Label Text', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'Before', 'abcbiz-addons' ),
+			]
+		);
+
+		//After Label Text
+		$this->add_control(
+			'abcbiz_elementor_after_label_text',
+			[
+				'label' => esc_html__( 'After Label Text', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::TEXT,
+				'default' => esc_html__( 'After', 'abcbiz-addons' ),
+			]
+		);
+
+		//Move type
+		$this->add_control(
+            'abcbiz_elementor_before_after_handle_move',
+            [
+                'label' => __( 'Handle Move Type', 'abcbiz-addons' ),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'on_swipe',
+                'options' => [
+                    'on_hover' => __( 'On Hover', 'abcbiz-addons' ),
+                    'on_click' => __( 'On Click', 'abcbiz-addons' ),
+                    'on_swipe' => __( 'On Swipe', 'abcbiz-addons' ),
+                ],
+                'description' => __( 'Select handle movement type. Overlay does not work with On Hover.', 'abcbiz-addons' ),
+            ]
+        );
+
+		$this->end_controls_section();//end label section
+
+		//Style Section
+		$this->start_controls_section(
+			'abcbiz_elementor_before_after_style',
+			[
+				'label' => esc_html__( 'Style', 'abcbiz-addons' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		//Handle Height
+		$this->add_responsive_control(
+			'abcbiz_elementor_after_handle_height',
+			[
+				'label' => esc_html__( 'Handle Height', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 20,
+						'max' => 150,
 						'step' => 1,
 					],
 				],
 				'default' => [
 					'unit' => 'px',
-					'size' => 20,
+					'size' => 38,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
-				],
-				'condition' => [
-					'abcbiz_elementor_back_to_top_type' => 'icon',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle' => 'height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
-		//Button Spacing
+		//Handle Height
 		$this->add_responsive_control(
-			'abcbiz_elementor_back_to_top_spacing',
+			'abcbiz_elementor_after_handle_width',
 			[
-				'label' => esc_html__( 'Button Spacing', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px'],
+				'label' => esc_html__( 'Handle width', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => 20,
+						'max' => 150,
+						'step' => 1,
+					],
+				],
 				'default' => [
-					'top' => 10,
-					'right' => 20,
-					'bottom' => 10,
-					'left' => 20,
 					'unit' => 'px',
-					'isLinked' => true,
+					'size' => 38,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 
-		//Button Border
-		$this->add_group_control(
-			\Elementor\Group_Control_Border::get_type(),
-			[
-				'name' => 'abcbiz_elementor_back_to_top_border',
-				'selector' => '{{WRAPPER}} #abcbiz-back-to-top',
-			]
-		);
-
-		//Button Border Radius
+		//Margin top
 		$this->add_responsive_control(
-			'abcbiz_elementor_back_to_top_border_radius',
+			'abcbiz_elementor_after_handle_margin_top',
 			[
-				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
-				'type' => \Elementor\Controls_Manager::DIMENSIONS,
-				'size_units' => ['px', '%'],
+				'label' => esc_html__( 'Top Position', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => -500,
+						'max' => 500,
+						'step' => 1,
+					],
+				],
 				'default' => [
-					'top' => 6,
-					'right' => 6,
-					'bottom' => 6,
-					'left' => 6, 
 					'unit' => 'px',
-					'isLinked' => true,
+					'size' => -22,
 				],
 				'selectors' => [
-					'{{WRAPPER}} #abcbiz-back-to-top' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle' => 'margin-top: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//Margin top
+		$this->add_responsive_control(
+			'abcbiz_elementor_after_handle_margin_left',
+			[
+				'label' => esc_html__( 'Left Position', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SLIDER,
+				'size_units' => [ 'px'],
+				'range' => [
+					'px' => [
+						'min' => -500,
+						'max' => 500,
+						'step' => 1,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => -22,
+				],
+				'selectors' => [
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle' => 'margin-left: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//Border Color
+		$this->add_control(
+			'abcbiz_elementor_after_handle_color',
+			[
+				'label' => esc_html__( 'Handle Color', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle' => 'border-color: {{VALUE}}',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle:before, {{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle:after' => 'background: {{VALUE}}',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle:before, {{WRAPPER}} #abcbiz-before-after-container .twentytwenty-handle:after' => 'background: {{VALUE}}',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-left-arrow' => 'border-right-color: {{VALUE}}',
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-right-arrow' => 'border-left-color: {{VALUE}}',
 				],
 			]
 		);
 
 		$this->end_controls_section();//end style section
+
+
 
     }
 
