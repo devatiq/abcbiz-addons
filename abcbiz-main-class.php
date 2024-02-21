@@ -15,7 +15,7 @@ class ABCBizMultiElementorPack
 	/**
 	 * Minimum Elementor Version
 	 */
-	const MINIMUM_ELEMENTOR_VERSION = '3.17.0';
+	const MINIMUM_ELEMENTOR_VERSION = '3.19.0';
 
 	/**
 	 * Minimum PHP Version
