@@ -334,6 +334,7 @@
 
     .abcbiz-card-content {
     padding: 0 20px 20px 20px;
+    flex: 1;
     }
 
     h3.abcbiz-card-title {
