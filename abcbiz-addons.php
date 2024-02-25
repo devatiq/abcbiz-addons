@@ -97,6 +97,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-circular-progress', ABCBIZ_Assets . "/js/circular-progress.js", array('jquery'), '1.0', true);
         wp_register_script('jquery-event-move', ABCBIZ_Assets . "/js/jquery.event.move.js", array('jquery'), '1.0', true);
         wp_register_script('jquery-twentytwenty', ABCBIZ_Assets . "/js/jquery.twentytwenty.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-count-down', ABCBIZ_Assets . "/js/abcbiz-count-down.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-back-to-top', ABCBIZ_Assets . "/js/abcbiz-back-to-top.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-skill-bar', ABCBIZ_Assets . "/js/skill-bar.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-counter-up', ABCBIZ_Assets . "/js/abcbiz-counterup.js", array('jquery'), '1.0', true);

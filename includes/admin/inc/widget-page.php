@@ -39,6 +39,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_circular_skill_widget_field_render(); ?>
                 <?php abcbiz_comment_form_widget_field_render(); ?>
                 <?php abcbiz_contact_info_widget_field_render(); ?>
+                <?php abcbiz_count_down_widget_field_render(); ?>
                 <?php abcbiz_counter_up_widget_field_render(); ?>
                 <?php abcbiz_cta_widget_field_render(); ?>
                 <?php abcbiz_feat_img_widget_field_render(); ?>

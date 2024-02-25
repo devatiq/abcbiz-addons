@@ -50,7 +50,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCContactInfo\Main::class;
 		}
 
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCountDown\Main::class;
+		if (get_option('abcbiz_count_down_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCountDown\Main::class;
+		}
 
 		if (get_option('abcbiz_counter_up_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCounter\Main::class;

@@ -281,6 +281,43 @@
 }
 
 /* ---------------------------------------------
+ * Count Down
+ * --------------------------------------------- */
+ #abcbizcountdisplay {
+    margin: 20px;
+    text-align: center;
+  }
+  
+  #abcbizcountdisplay #abcbizcounttime {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+  
+  #abcbizcounttime {
+    display: flex;
+    align-items: center;
+  }
+  
+  #abcbizcountexpired {
+      display: none;
+  }
+  
+  .abcbiz-count-down-single {
+      display: flex;
+      flex: 1;
+      background: #f1f1f1;
+      color: #000;
+  }  
+
+  .abcbiz-expired-btn {
+    margin-top: 10px;
+  }
+
+  .abcbiz-expired-btn a{
+    display: inline-block;
+  }
+
+/* ---------------------------------------------
  * Card Info
  * --------------------------------------------- */
  .abcbiz-card-info-wrap {
