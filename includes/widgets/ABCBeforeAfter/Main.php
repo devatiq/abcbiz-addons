@@ -316,8 +316,43 @@ class Main extends BaseWidget {
 
 		$this->end_controls_section();//end style section
 
+		//Label Style Section
+		$this->start_controls_section(
+			'abcbiz_elementor_before_after_label_style',
+			[
+				'label' => esc_html__( 'Label Style', 'abcbiz-addons' ),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
 
 
+		//Label Color
+		$this->add_control(
+			'abcbiz_elementor_before_after_label_color',
+			[
+				'label' => esc_html__( 'Label Text Color', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => '#ffffff',
+				'selectors' => [
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-before-label:before, {{WRAPPER}} #abcbiz-before-after-container .twentytwenty-after-label:before' => 'color: {{VALUE}}',
+				],
+			]
+		);
+
+		//Label Color
+		$this->add_control(
+			'abcbiz_elementor_before_after_label_bg_color',
+			[
+				'label' => esc_html__( 'Label Background Color', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::COLOR,
+				'default' => 'rgba(0,0,0,.2)',
+				'selectors' => [
+					'{{WRAPPER}} #abcbiz-before-after-container .twentytwenty-before-label:before, {{WRAPPER}} #abcbiz-before-after-container .twentytwenty-after-label:before' => 'background-color: {{VALUE}}',
+				],
+			]
+		);
+
+		$this->end_controls_section();//end label style section
     }
 
     /**
