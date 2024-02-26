@@ -59,6 +59,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_style('abcbiz-cta-style', ABCBIZ_Assets . "/css/abcbiz-cta.css");
         wp_enqueue_style('abcbiz-elementor-style', ABCBIZ_Assets . "/css/style.css");
         wp_enqueue_style('abcbiz-elementor-responsive', ABCBIZ_Assets . "/css/responsive.css");
+        wp_register_style('abcbiz-anim-text', ABCBIZ_Assets . "/css/abcbiz-anim-text-style.css");
         if (!wp_style_is('twentytwenty')) {
         wp_register_style('twentytwenty', ABCBIZ_Assets . "/css/twentytwenty.css");
         }
@@ -90,6 +91,8 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         ));
     }
         
+        wp_register_script('abcbiz-modernizr', ABCBIZ_Assets . "/js/modernizr.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-search-icon', ABCBIZ_Assets . "/js/abcbiz-search-icon.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wp-menu-js', ABCBIZ_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-popup', ABCBIZ_Assets . "/js/abcbiz-popup.js", array('jquery'), '1.0', true);
