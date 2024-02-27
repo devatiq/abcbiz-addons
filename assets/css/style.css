@@ -281,6 +281,16 @@
 }
 
 /* ---------------------------------------------
+ * Animated Text
+ * --------------------------------------------- */
+ .abcbiz-elementor-anim-text-area .abcbiz-anim-text-headline {
+    margin: 0;
+    font-size: 30px;
+    line-height: 1.2;
+    color: #333;
+ }
+
+/* ---------------------------------------------
  * Count Down
  * --------------------------------------------- */
  #abcbizcountdisplay {

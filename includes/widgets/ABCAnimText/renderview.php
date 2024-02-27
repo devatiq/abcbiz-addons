@@ -5,110 +5,21 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $abcbiz_settings = $this->get_settings_for_display();
+$abcbiz_anim_text_before = $abcbiz_settings['abcbiz_elementor_anim_text_before'];
+$abcbiz_anim_text_after = $abcbiz_settings['abcbiz_elementor_anim_text_after'];
+$abcbiz_animated_texts = $abcbiz_settings['abcbiz_elementor_anim_text_list']; 
+$abcbiz_animated_text_type = $abcbiz_settings['abcbiz_elementor_anim_text_type']; 
 ?>
 
-
-<div class="abcbiz-elementor-anim-text-area">
-
-<section class="cd-intro">
-		<h1 class="cd-headline rotate-1">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline letters type">
-			<span>My favourite food is</span> 
-			<span class="cd-words-wrapper waiting">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline letters rotate-2">
-			<span>My favourite food is</span> 
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline loading-bar">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline slide">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline clip is-full-width">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline zoom">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline letters rotate-3">
-			<span>My favourite food is</span> 
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline letters scale">
-			<span>My favourite food is</span> 
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-	<section class="cd-intro">
-		<h1 class="cd-headline push">
-			<span>My favourite food is</span>
-			<span class="cd-words-wrapper">
-				<b class="is-visible">pizza</b>
-				<b>sushi</b>
-				<b>steak</b>
-			</span>
-		</h1>
-	</section> <!-- cd-intro -->
-   
+<div class="abcbiz-elementor-anim-text-area <?php if (!empty($abcbiz_anim_text_after)) : ?>abcbiz-anim-has-after-text<?php endif; ?>">
+    <<?php echo esc_html($abcbiz_settings['abcbiz_elementor_anim_text_tag']); ?> class="abcbiz-anim-text-headline cd-headline <?php echo esc_html($abcbiz_animated_text_type);?>">
+	<?php if (!empty($abcbiz_anim_text_before)) : ?><span class="abcbiz-anim-before-text"><?php echo esc_html($abcbiz_anim_text_before); ?></span><?php endif; ?>
+        <span class="abcbiz-anim-texts cd-words-wrapper">
+            <?php if (!empty($abcbiz_animated_texts)) : ?>
+                <?php foreach ($abcbiz_animated_texts as $index => $item) : ?>
+                    <b class="<?php echo $index === 0 ? 'is-visible' : ''; ?>"><?php echo esc_html($item['abcbiz_elementor_anim_text']); ?></b>
+                <?php endforeach; ?>
+            <?php endif; ?>
+        </span>
+		<?php if (!empty($abcbiz_anim_text_after)) : ?> <span class="abcbiz-anim-after-text"><?php echo esc_html($abcbiz_anim_text_after); ?></span><?php endif; ?></<?php echo esc_html($abcbiz_settings['abcbiz_elementor_anim_text_tag']); ?>>
 </div><!-- end animated text area -->

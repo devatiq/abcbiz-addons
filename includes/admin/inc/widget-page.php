@@ -25,6 +25,7 @@ function abcbiz_widgets_page() {
             <div id="ABCBizWidgets" class="tabcontent">
                 <h3><?php echo esc_html__('ABCBiz Multi Widgets', 'abcbiz-addons');?></h3>
                 <div class="abcbiz-widgets-grid">
+                <?php abcbiz_anim_text_widget_field_render(); ?>
                 <?php abcbiz_blockquote_widget_field_render(); ?>
                 <?php abcbiz_blog_fancy_widget_field_render(); ?>
                 <?php abcbiz_author_bio_widget_field_render(); ?>

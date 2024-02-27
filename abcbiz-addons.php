@@ -91,8 +91,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         ));
     }
         
-        wp_register_script('abcbiz-modernizr', ABCBIZ_Assets . "/js/modernizr.js", array('jquery'), '1.0', true);
-        wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery', 'elementor-frontend'), '1.0', true);
         wp_register_script('abcbiz-search-icon', ABCBIZ_Assets . "/js/abcbiz-search-icon.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wp-menu-js', ABCBIZ_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-popup', ABCBIZ_Assets . "/js/abcbiz-popup.js", array('jquery'), '1.0', true);

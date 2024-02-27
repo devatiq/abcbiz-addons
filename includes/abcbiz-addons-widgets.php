@@ -6,7 +6,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
         $abcbiz_widgets = []; 
 
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCAnimText\Main::class;
+          if (get_option('abcbiz_anim_text_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCAnimText\Main::class;
+        }
 
           if (get_option('abcbiz_blockquote_widget_field') == 1) {
           $abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCBlockquote\Main::class;
