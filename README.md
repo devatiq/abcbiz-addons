@@ -90,7 +90,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 ## Changelog
 
-## 1.0.2 - 27 February 2024
+## 1.0.3 - 27 February 2024
 - Tow New Widgets added
 - Count Down Timer Widget Added
 - Animated Text Widget Added
