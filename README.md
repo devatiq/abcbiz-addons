@@ -4,7 +4,7 @@ Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=A
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 6.0   
 Tested up to: 6.4.2   
-Stable tag: 1.0.2   
+Stable tag: 1.0.3   
 Requires PHP: 7.4  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -14,7 +14,8 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
-### Available Widgets: 54
+### Available Widgets: 56
+- Advanced Animated Text (new)
 - Advanced Circular Skill
 - Advanced Icon Box
 - Advanced Pricing Table
@@ -33,6 +34,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Contact & Social Info
 - Contact Form 7 Style
 - Counter Up
+- Count Down Timer (new)
 - Dual Button
 - Fancy Blog Posts
 - Featured Image
@@ -86,10 +88,12 @@ As of now, our collection boasts 53 widgets, and we're constantly expanding our 
 ### Is it possible to build a complete website with this plugin?
 Yes, for the most part. With our suite of 53 customizable widgets, you're well-equipped to craft various web pages, making it feasible to construct an entire website using just our plugin.
 
-## Credit
-1. Swipe Slider
-
 ## Changelog
+
+## 1.0.2 - 27 February 2024
+- Tow New Widgets added
+- Count Down Timer Widget Added
+- Animated Text Widget Added
 
 ## 1.0.2 - 20 February 2024
 - New widget Card Info Box added
