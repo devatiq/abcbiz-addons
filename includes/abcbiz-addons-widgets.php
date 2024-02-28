@@ -81,6 +81,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCImgHover\Main::class;
 		}
 
+		if (get_option('abcbiz_img_text_scroll_widget_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCImgScroll\Main::class;
+		}
+
 		if (get_option('abcbiz_page_title_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPageTitle\Main::class;
 		}

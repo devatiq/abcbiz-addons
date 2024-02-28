@@ -281,6 +281,54 @@
 }
 
 /* ---------------------------------------------
+ * Image & Text Scroll
+ * --------------------------------------------- */
+
+ @keyframes abcbizltrscroll {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+@keyframes abcbizrtlscroll {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+.abcbiz-elementor-img-scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.abcbiz-scroll-contents {
+    display: flex;
+}
+
+.abcbiz-img-scroll-item {
+    display: inline-flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 0;
+    flex-shrink: 0;
+    overflow: hidden;
+    flex-direction: column;
+    border: 1px solid #ccc;
+}
+
+.abcbiz-img-scroll-img img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.abcbiz-img-scroll-title {
+    word-wrap: break-word;
+    font-size: 20px;
+    line-height: 1.01;
+}
+
+/* ---------------------------------------------
  * Animated Text
  * --------------------------------------------- */
  .abcbiz-elementor-anim-text-area .abcbiz-anim-text-headline {
