@@ -21,7 +21,7 @@ function abcbiz_img_text_scroll_widget_field_render() {
         </label>
     </div>
     <?php
-}
+}  
 
 //Animated Text
 function abcbiz_anim_text_widget_field_render() {

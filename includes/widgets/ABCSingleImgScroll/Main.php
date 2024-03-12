@@ -1,5 +1,5 @@
 <?php 
-namespace ABCBiz\Includes\Widgets\ABCImgScroll;
+namespace ABCBiz\Includes\Widgets\ABCSingleImgScroll;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
@@ -13,15 +13,25 @@ use Elementor\Group_Control_Typography;
 class Main extends BaseWidget {
 
 	    // define protected variables...
-		protected $name = 'abcbiz-image-scroll';
-		protected $title = 'ABC Image & Text Scroll';
+		protected $name = 'abcbiz-single-image-scroll';
+		protected $title = 'ABC Single Image Scroll';
 		protected $icon = 'eicon-slider-album abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
 		protected $keywords = [
-			'abc', 'image', 'scroll', 'text'
+			'abc', 'image', 'scroll', 'single'
 		];
+
+		public function get_style_depends()
+    {
+        return [''];
+    }
+
+		public function get_script_depends()
+    {
+        return ['']; 
+    }
 
 	/**
 	 * Register list widget controls.
