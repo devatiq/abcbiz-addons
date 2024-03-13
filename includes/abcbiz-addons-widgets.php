@@ -133,7 +133,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCShape\Main::class;
 		}
 
-		if (get_option('abcbiz_shape_anim_widget_field') == 1) {
+		if (get_option('abcbiz_single_img_scroll_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSingleImgScroll\Main::class;
 		}
 

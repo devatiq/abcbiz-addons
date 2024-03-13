@@ -10,6 +10,7 @@ function abcbiz_widgets_settings_init() {
     );
 
 // Register settings 
+register_setting('abcbiz_widgets_menu', 'abcbiz_single_img_scroll_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_img_text_scroll_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_anim_text_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_count_down_widget_field');
@@ -57,6 +58,7 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
 
 
 // Set default values if not already set
+add_option('abcbiz_single_img_scroll_field', '1');
 add_option('abcbiz_img_text_scroll_widget_field', '1');
 add_option('abcbiz_anim_text_widget_field', '1');
 add_option('abcbiz_count_down_widget_field', '1');
@@ -103,7 +105,16 @@ add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 
 
-//Animated Text
+//Single Image Scroll
+add_settings_field(
+    'abcbiz_single_img_scroll_field',
+    esc_html__('Single Image Scroll', 'abcbiz-addons'),
+    'abcbiz_single_img_scroll_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
+
+//Image & Text Scroll
 add_settings_field(
     'abcbiz_img_text_scroll_widget_field',
     esc_html__('Image & Text Scroll', 'abcbiz-addons'),

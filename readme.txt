@@ -20,7 +20,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
-== Widget List: 56 Available Widgets ==
+== Widget List: 58 Available Widgets ==
 
 - Advanced Animated Text (new)
 - Advanced Circular Skill
@@ -47,6 +47,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Featured Image
 - Flip Box
 - Image Hover
+- Image and Text Scroll (new)
 - Page Title
 - Popup
 - Portfolio
@@ -60,6 +61,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Search Form
 - Search Icon
 - Section Title
+- Single Image Scroll (new)
 - Skill Bar
 - Social Share
 - Team Member
@@ -103,6 +105,11 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 3. Advanced Pricing Table
 
 == Changelog ==
+
+= 1.0.4 - 13 March 2024 =
+- Tow New Widgets added
+- Single Image Scroll Widget Added
+- Image and Text Scroll Widget Added
 
 = 1.0.3 - 27 February 2024 =
 - Tow New Widgets added
