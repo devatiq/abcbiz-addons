@@ -3,7 +3,7 @@
 Plugin Name: ABCBiz Multi Addons For Elementor
 Plugin URI: https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/
 Description: The Elementor Custom Widgets plugin, a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Multi Addons is packed with an array of gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design.
-Version: 1.0.4
+Version: 1.0.5
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 License: GPL2

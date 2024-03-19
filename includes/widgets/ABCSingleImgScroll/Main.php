@@ -40,7 +40,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_image',
 			[
-				'label' => esc_html__( 'Choose Image', 'textdomain' ),
+				'label' => esc_html__( 'Choose Image', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::MEDIA,
 				'default' => [
 					'url' => \Elementor\Utils::get_placeholder_image_src(),
@@ -63,9 +63,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_alt_text',
 			[
-				'label' => esc_html__( 'Image Alt Text', 'textdomain' ),
+				'label' => esc_html__( 'Image Alt Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Abcbiz Addons', 'textdomain' ),
+				'default' => esc_html__( 'Abcbiz Addons', 'abcbiz-addons' ),
 			]
 		);
 
@@ -73,10 +73,10 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_switch',
 			[
-				'label' => esc_html__( 'Badge', 'textdomain' ),
+				'label' => esc_html__( 'Badge', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SWITCHER,
-				'label_on' => esc_html__( 'Show', 'textdomain' ),
-				'label_off' => esc_html__( 'Hide', 'textdomain' ),
+				'label_on' => esc_html__( 'Show', 'abcbiz-addons' ),
+				'label_off' => esc_html__( 'Hide', 'abcbiz-addons' ),
 				'return_value' => 'yes',
 				'default' => 'label_off',
 			]
@@ -86,9 +86,9 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_text',
 			[
-				'label' => esc_html__( 'Badge Text', 'textdomain' ),
+				'label' => esc_html__( 'Badge Text', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::TEXT,
-				'default' => esc_html__( 'Abcbiz Addons', 'textdomain' ),
+				'default' => esc_html__( 'Abcbiz Addons', 'abcbiz-addons' ),
 				'condition' => [
 					'abcbiz_elementor_single_img_scroll_badge_switch' => 'yes'
 				],
@@ -110,7 +110,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_image_height',
 			[
-				'label' => esc_html__( 'Image Height', 'textdomain' ),
+				'label' => esc_html__( 'Image Height', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px'],
 				'range' => [
@@ -134,7 +134,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_time',
 			[
-				'label' => esc_html__( 'Scroll Time (seconds)', 'textdomain' ),
+				'label' => esc_html__( 'Scroll Time (seconds)', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 's'],
 				'range' => [
@@ -178,7 +178,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_border_radius',
 			[
-				'label' => esc_html__( 'Image Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Image Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [
@@ -200,7 +200,7 @@ class Main extends BaseWidget {
 			\Elementor\Group_Control_Box_Shadow::get_type(),
 			[
 				'name' => 'abcbiz_elementor_single_img_scroll_box_shadow',
-				'label' => esc_html__( 'Box Shadow', 'textdomain' ),
+				'label' => esc_html__( 'Box Shadow', 'abcbiz-addons' ),
 				'selector' => '{{WRAPPER}} .abcbiz-elementor-single-img-scroll-wrap',
 			]
 		);
@@ -223,7 +223,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_hor_pos',
 			[
-				'label' => esc_html__( 'Horizontal Position', 'textdomain' ),
+				'label' => esc_html__( 'Horizontal Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -247,7 +247,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_ver_pos',
 			[
-				'label' => esc_html__( 'Vertical Position', 'textdomain' ),
+				'label' => esc_html__( 'Vertical Position', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::SLIDER,
 				'size_units' => [ 'px', '%'],
 				'range' => [
@@ -271,7 +271,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_bg_color',
 			[
-				'label' => esc_html__( 'Background Color', 'textdomain' ),
+				'label' => esc_html__( 'Background Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => 'rgba(0, 0, 0, 0.5)',
 				'selectors' => [
@@ -284,7 +284,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_Text_color',
 			[
-				'label' => esc_html__( 'Text Color', 'textdomain' ),
+				'label' => esc_html__( 'Text Color', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#ffffff',
 				'selectors' => [
@@ -306,7 +306,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge_spacing',
 			[
-				'label' => esc_html__( 'Spacing', 'textdomain' ),
+				'label' => esc_html__( 'Spacing', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px'],
 				'default' => [
@@ -327,7 +327,7 @@ class Main extends BaseWidget {
 		$this->add_control(
 			'abcbiz_elementor_single_img_scroll_badge__border_radius',
 			[
-				'label' => esc_html__( 'Border Radius', 'textdomain' ),
+				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::DIMENSIONS,
 				'size_units' => [ 'px', '%'],
 				'default' => [

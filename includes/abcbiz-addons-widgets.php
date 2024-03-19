@@ -137,6 +137,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSingleImgScroll\Main::class;
 		}
 
+		if (get_option('abcbiz_single_img_scroll_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSiteLogo\Main::class;
+		}
+
 		if (get_option('abcbiz_skill_bar_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSkillBar\Main::class;
 		}
