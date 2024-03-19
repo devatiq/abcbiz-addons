@@ -3,7 +3,7 @@ Contributors: atiqbd4ever
 Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4)  
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 6.0   
-Tested up to: 6.4.2   
+Tested up to: 6.5   
 Stable tag: 1.0.3   
 Requires PHP: 7.4  
 License: GPLv2 or later   
@@ -92,7 +92,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 ## Changelog
 
-## 1.0.4 - 13 March 2024
+## 1.0.4 - 19 March 2024
 - Tow New Widgets added
 - Single Image Scroll Widget Added
 - Image and Text Scroll Widget Added
