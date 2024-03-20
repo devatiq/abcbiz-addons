@@ -8,8 +8,6 @@ if (!defined('ABSPATH')) {
 }
 
 $abcbiz_settings = $this->get_settings_for_display();
-
-// Get the site title for alt text.
 $abcbiz_site_title = get_bloginfo('name');
 
 // Define a default logo URL.
@@ -38,4 +36,4 @@ $abcbiz_logo_link = !empty($abcbiz_settings['abcbiz-elementor-site-logo-link']['
     <?php else: ?>
         <img src="<?php echo esc_url($abcbiz_logo_url); ?>" alt="<?php echo esc_attr($abcbiz_site_title); ?>">
     <?php endif; ?>
-</div>
+</div><!-- end site logo area -->

@@ -1,6 +1,50 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//Site Title & Tagline
+function abcbiz_site_title_tagline_field_render() {
+    $option = get_option('abcbiz_site_title_tagline_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcbizaddons.com/widgets/site-title-and-tagline-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-site-tagline.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Site Title & Tagline", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_site_title_tagline_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}  
+
+//Site Logo
+function abcbiz_site_logo_widget_field_render() {
+    $option = get_option('abcbiz_site_logo_widget_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcbizaddons.com/widgets/site-logo-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-site-logo.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Site Logo", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_site_logo_widget_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}  
+
 //Single Image Scroll
 function abcbiz_single_img_scroll_field_render() {
     $option = get_option('abcbiz_single_img_scroll_field');

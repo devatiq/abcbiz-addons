@@ -61,6 +61,8 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_sec_title_widget_field_render(); ?>
                 <?php abcbiz_shape_anim_widget_field_render(); ?>
                 <?php abcbiz_single_img_scroll_field_render(); ?>
+                <?php abcbiz_site_logo_widget_field_render(); ?>
+                <?php abcbiz_site_title_tagline_field_render(); ?>
                 <?php abcbiz_skill_bar_widget_field_render(); ?>
                 <?php abcbiz_social_share_widget_field_render(); ?>
                 <?php abcbiz_tag_info_widget_field_render(); ?>

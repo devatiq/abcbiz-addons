@@ -10,6 +10,8 @@ function abcbiz_widgets_settings_init() {
     );
 
 // Register settings 
+register_setting('abcbiz_widgets_menu', 'abcbiz_site_title_tagline_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_site_logo_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_single_img_scroll_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_img_text_scroll_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_anim_text_widget_field');
@@ -58,6 +60,8 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
 
 
 // Set default values if not already set
+add_option('abcbiz_site_title_tagline_field', '1');
+add_option('abcbiz_site_logo_widget_field', '1');
 add_option('abcbiz_single_img_scroll_field', '1');
 add_option('abcbiz_img_text_scroll_widget_field', '1');
 add_option('abcbiz_anim_text_widget_field', '1');
@@ -104,6 +108,24 @@ add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 
+
+//Site Title and Tagline
+add_settings_field(
+    'abcbiz_site_title_tagline_field',
+    esc_html__('Site Title & Tagline', 'abcbiz-addons'),
+    'abcbiz_site_title_tagline_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
+
+//Site logo
+add_settings_field(
+    'abcbiz_site_logo_widget_field',
+    esc_html__('Site Logo', 'abcbiz-addons'),
+    'abcbiz_site_logo_widget_field_render',
+    'abcbiz_widgets_menu',
+    'abcbiz_available_widgets_section'
+);
 
 //Single Image Scroll
 add_settings_field(
