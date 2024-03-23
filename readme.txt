@@ -1,6 +1,6 @@
 === ABCBiz Multi Addons for Elementor ===
 Plugin Name: ABCBiz Multi Addons for Elementor
-Version: 1.0.4
+Version: 1.0.5
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins 
@@ -8,7 +8,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library
 Requires at least: 6.0  
 Tested up to: 6.5  
-Stable tag: 1.0.4  
+Stable tag: 1.0.5  
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -20,7 +20,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
-== Widget List: 58 Available Widgets ==
+== Widget List: 60 Available Widgets ==
 
 - Advanced Animated Text (new)
 - Advanced Circular Skill
@@ -62,6 +62,8 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Search Icon
 - Section Title
 - Single Image Scroll (new)
+- Site Logo
+- Site Title & Tagline
 - Skill Bar
 - Social Share
 - Team Member
@@ -105,6 +107,11 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 3. Advanced Pricing Table
 
 == Changelog ==
+
+= 1.0.5 - 23 March 2024 =
+- Tow New Widgets added
+- Site Logo
+- Site Title and Tagline
 
 = 1.0.4 - 19 March 2024 =
 - Tow New Widgets added
