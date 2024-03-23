@@ -55,6 +55,8 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Search Icon
 - Section Title
 - Single Image Scroll (new)
+- Site Logo
+- Site Title & Tagline
 - Skill Bar
 - Social Share
 - Team Member
