@@ -3,15 +3,15 @@
 Plugin Name: ABCBiz Multi Addons For Elementor
 Plugin URI: https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/
 Description: The Elementor Custom Widgets plugin, a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Multi Addons is packed with an array of gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design.
-Version: 1.0.5
+Version: 1.0.6
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: abcbiz-addons
 Domain Path: /languages
-Elementor tested up to: 3.20.2
-Elementor Pro tested up to: 3.20.2
+Elementor tested up to: 3.21.0
+Elementor Pro tested up to: 3.21.0
 */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -95,6 +95,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-search-icon', ABCBIZ_Assets . "/js/abcbiz-search-icon.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wp-menu-js', ABCBIZ_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-popup', ABCBIZ_Assets . "/js/abcbiz-popup.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-sticker-text', ABCBIZ_Assets . "/js/abcbiz-sticker-text.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-jquery-appear', ABCBIZ_Assets . "/js/jquery.appear.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-circular-progress', ABCBIZ_Assets . "/js/circular-progress.js", array('jquery'), '1.0', true);
         wp_register_script('jquery-event-move', ABCBIZ_Assets . "/js/jquery.event.move.js", array('jquery'), '1.0', true);

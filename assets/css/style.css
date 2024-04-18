@@ -281,6 +281,42 @@
 }
 
 /* ---------------------------------------------
+ * Sticker Text
+ * --------------------------------------------- */
+ .abcbiz-elementor-sticker-text-area {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.abcbiz-sticker-contents-area {
+    display: flex;
+    width: 100%;
+    align-items: center; 
+}
+
+.abcbiz-sticker-close-icon {
+    position: absolute;
+    cursor: pointer;
+    padding: 5px;
+    line-height: 1;
+    z-index: 31;
+}
+
+.abcbiz-sticker-text {
+    font-size: 18px;
+}
+
+.abcbiz-sticker-btn {
+    white-space: nowrap;
+    font-size: 18px;
+}
+
+.abcbiz-sticker-btn a{
+    transition: all 0.4s;
+}
+
+/* ---------------------------------------------
  * Image & Text Scroll
  * --------------------------------------------- */
 

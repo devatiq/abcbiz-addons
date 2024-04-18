@@ -1,6 +1,28 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//Sticker Text
+function abcbiz_sticker_text_field_render() {
+    $option = get_option('abcbiz_sticker_text_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://abcbizaddons.com/widgets/sticker-text-elementor-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-sticker-text.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Sticker Text", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_sticker_text_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}  
+
 //Site Title & Tagline
 function abcbiz_site_title_tagline_field_render() {
     $option = get_option('abcbiz_site_title_tagline_field');

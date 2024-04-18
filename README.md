@@ -4,7 +4,7 @@ Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=A
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 6.0   
 Tested up to: 6.5   
-Stable tag: 1.0.5   
+Stable tag: 1.0.6   
 Requires PHP: 7.4  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -59,6 +59,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Site Title & Tagline
 - Skill Bar
 - Social Share
+- Sticker Text
 - Team Member
 - Testimonial Carousel
 - WordPress Menu
@@ -93,6 +94,10 @@ As of now, our collection boasts 53 widgets, and we're constantly expanding our 
 Yes, for the most part. With our suite of 53 customizable widgets, you're well-equipped to craft various web pages, making it feasible to construct an entire website using just our plugin.
 
 ## Changelog
+
+## 1.0.6 - 18 April 2024
+- Sticker Text Widget added
+- Bug Fixes
 
 ## 1.0.5 - 23 March 2024
 - Tow New Widgets added

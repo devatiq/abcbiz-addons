@@ -153,6 +153,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCSocialShare\Main::class;
 		}
 
+		if (get_option('abcbiz_sticker_text_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCStickerText\Main::class;
+		}
+
 		if (get_option('abcbiz_tag_info_widget_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTagInfo\Main::class;
 		}
