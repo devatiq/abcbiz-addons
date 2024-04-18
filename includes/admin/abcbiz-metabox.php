@@ -91,8 +91,7 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
         );
     }
     
-
-    function abcbiz_save_postdata($post_id) {
+    function abcbiz_save_wc_desc_postdata($post_id) {
         // Check if our nonce is set and verify it.
         if (!isset($_POST['abcbiz_wc_product_description_nonce']) || !wp_verify_nonce(sanitize_text_field( wp_unslash ($_POST['abcbiz_wc_product_description_nonce'])), 'abcbiz_wc_product_description_nonce_action')) {
             return $post_id;
@@ -107,5 +106,7 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
             );
         }
     }
+  // Save data
+  add_action('save_post', 'abcbiz_save_wc_desc_postdata');
     
 }
