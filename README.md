@@ -14,7 +14,7 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
-### Available Widgets: 60
+### Available Widgets: 61
 - Advanced Animated Text (new)
 - Advanced Circular Skill
 - Advanced Icon Box
