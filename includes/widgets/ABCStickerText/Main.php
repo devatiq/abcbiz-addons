@@ -143,6 +143,10 @@ class Main extends BaseWidget {
                         'title' => esc_html__( 'Inline', 'abcbiz-addons' ),
                         'icon' => 'eicon-align-start-v',
                     ],
+                    'center'    => [
+                        'title' => esc_html__( 'Center', 'abcbiz-addons' ),
+                        'icon' => 'eicon-align-center-v',
+                    ],
                     'space-between' => [
                         'title' => esc_html__( 'Space Between', 'abcbiz-addons' ),
                         'icon' => 'eicon-justify-space-between-h',
