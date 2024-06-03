@@ -162,7 +162,7 @@ class Main extends BaseWidget {
         );
 
 		//Text Gap
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_button_gap',
 			[
 				'label' => esc_html__( 'Button & Text Gap', 'abcbiz-addons' ),
@@ -227,7 +227,7 @@ class Main extends BaseWidget {
 		);
 
 		//spacing
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_box_spacing',
 			[
 				'label' => esc_html__( 'Spacing', 'abcbiz-addons' ),
@@ -248,7 +248,7 @@ class Main extends BaseWidget {
 		);
 
 		//Border Radius
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_box_radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
@@ -445,7 +445,7 @@ class Main extends BaseWidget {
 		$this->end_controls_tabs();
 
 		//Border radius
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_btn_border_radius',
 			[
 				'label' => esc_html__( 'Border Radius', 'abcbiz-addons' ),
@@ -466,7 +466,7 @@ class Main extends BaseWidget {
 		);
 
 		//Spacing
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_btn_spacing',
 			[
 				'label' => esc_html__( 'Button Spacing', 'abcbiz-addons' ),
@@ -501,7 +501,7 @@ class Main extends BaseWidget {
 		);
 
 		//Icon Size
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_close_icon_size',
 			[
 				'label' => esc_html__( 'Icon Size', 'abcbiz-addons' ),
@@ -538,7 +538,7 @@ class Main extends BaseWidget {
 		);
 
 		//Icon top position
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_close_icon_top_post',
 			[
 				'label' => esc_html__( 'Icon Top Position', 'abcbiz-addons' ),
@@ -562,7 +562,7 @@ class Main extends BaseWidget {
 		);
 
 		//Icon right position
-		$this->add_control(
+		$this->add_responsive_control(
 			'abcbiz_elementor_sticker_close_icon_right_post',
 			[
 				'label' => esc_html__( 'Icon Right Position', 'abcbiz-addons' ),
