@@ -1,6 +1,6 @@
 === ABCBiz Multi Addons for Elementor ===
 Plugin Name: ABCBiz Multi Addons for Elementor
-Version: 1.0.6
+Version: 1.0.7
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins 
@@ -8,13 +8,15 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, Elementor Builder
 Requires at least: 6.0  
 Tested up to: 6.5.2  
-Stable tag: 1.0.6  
+Stable tag: 1.0.7  
 Requires PHP: 7.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
+ABCBiz Addons offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder
+
 == Description ==
-Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **50 meticulously designed widgets**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **60 meticulously designed widgets**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 == Useful Links ==
 
@@ -109,6 +111,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 == Changelog ==
 
+= 1.0.7 - 03 June 2024 =
+- Custom CSS features added for each widget
+- Bug Fixes
+
 = 1.0.6 - 18 April 2024 =
 - Sticker Text Widget added
 - Bug Fixes
@@ -140,3 +146,9 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 = 1.0.0 - 15 February 2024 =
 - Initial release
+
+== Upgrade Notice ==
+
+= 1.0.7 =
+- Custom CSS features added for each widget
+

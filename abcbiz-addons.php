@@ -10,8 +10,8 @@ License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: abcbiz-addons
 Domain Path: /languages
-Elementor tested up to: 3.21.1
-Elementor Pro tested up to: 3.21.1
+Elementor tested up to: 3.21.8
+Elementor Pro tested up to: 3.21.8
 */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -42,6 +42,12 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         if (!class_exists('ABCBiz\Includes\globals\ABCbiz_Wrapper_link')) {
             require_once ABCBIZ_Inc . '/globals/wrapper-link.php';
             new \ABCBiz\Includes\globals\ABCbiz_Wrapper_link(); 
+        }
+
+         // Loading Custom CSS
+         if (!class_exists('ABCBiz\Includes\globals\ABCbiz_CustomCSS')) {
+            require_once ABCBIZ_Inc . '/globals/custom-css.php';
+            new \ABCBiz\Includes\globals\ABCbiz_CustomCSS();
         }
 
         load_plugin_textdomain('abcbiz-addons', false, dirname(plugin_basename(ABCBIZ_File)) . '/languages/');
