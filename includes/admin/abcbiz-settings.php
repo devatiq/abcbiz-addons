@@ -38,6 +38,17 @@ require_once plugin_dir_path(__FILE__) . 'inc/setting-page.php';
 // Require widget page
 require_once plugin_dir_path(__FILE__) . 'inc/widget-page.php';
 
+require_once plugin_dir_path(__FILE__) . 'inc/Templates/settings.php';
+
+// Check if the class has already been defined
+if (!class_exists('\ABCBizAddons\includes\admin\inc\Templates\TemplatesAdminMenu ')) {
+    $admin_menu = new \ABCBizAddons\includes\admin\inc\Templates\TemplatesAdminMenu ();
+} else {
+    // Optionally handle the case where the class is already defined
+    error_log('Templates Menu class has already been defined elsewhere.');
+}
+
+
 function abcbiz_setting_enqueue_admin_styles() {
     wp_enqueue_style('abcbiz-settings-admin-style', plugin_dir_url(__FILE__) . 'css/admin-settings.css');
     $abcbiz_custom_css = "";
