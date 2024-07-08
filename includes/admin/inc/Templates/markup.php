@@ -27,8 +27,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
@@ -49,8 +48,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
@@ -70,8 +68,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
@@ -91,8 +88,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
@@ -112,8 +108,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
@@ -133,8 +128,7 @@ class TemplateMarkup
                                 <img src="https://demo.abcbizaddons.com/wp-content/uploads/2024/04/net-nest.jpg"
                                     alt="abcbiz-addons-templates" />
                             </div>
-                            <div class="abcbiz-single-template-content">
-                                <h2> <?php echo esc_html__('Templates', 'abcbiz-addons'); ?></h2>
+                            <div class="abcbiz-single-template-content">                               
                                 <div class="abcbiz-single-template-content-btn">
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo esc_html__('View Demo', 'abcbiz-addons'); ?></a>
                                     <a href="https://abcbizaddons.com/elementor-templates/" target="_blank"> <?php echo  esc_html__('Download', 'abcbiz-addons'); ?></a>
