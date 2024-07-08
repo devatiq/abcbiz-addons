@@ -91,3 +91,34 @@
     border-radius: 80px;
     color: #FFFFFF;
 }
+
+
+/*-----------------------------------------
+* Responive for Largest Screen
+-----------------------------------------*/
+@media screen and (max-width: 1199px) {
+
+    .abcbiz-templates-list {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+}
+
+
+/*-----------------------------------------
+* Responive for Medium Screen
+-----------------------------------------*/
+@media screen and (max-width: 991px) {
+    .abcbiz-templates-list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/*-----------------------------------------
+* Responive for Small Screen
+-----------------------------------------*/
+@media screen and (max-width: 600px) {
+    .abcbiz-templates-list {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
