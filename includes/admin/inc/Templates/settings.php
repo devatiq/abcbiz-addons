@@ -1,6 +1,10 @@
 <?php
 namespace ABCBizAddons\includes\admin\inc\Templates;
 
+// Exit if accessed directly
+if (!defined('ABSPATH')) {
+    exit;
+}
 class TemplatesAdminMenu  {
     /**
      * Constructor to initialize the hook.
@@ -27,8 +31,8 @@ class TemplatesAdminMenu  {
      * Callback function to display the submenu page content.
      */
     public function templatesPage() {
-        echo '<div class="wrap"><h1>' . esc_html__('Templates', 'abcbiz-addons') . '</h1>';
-        echo '<p>' . esc_html__('Manage your templates here.', 'abcbiz-addons') . '</p>';
-        echo '</div>';
+        require_once plugin_dir_path(__FILE__) . 'markup.php';
+        $markup = new TemplateMarkup();
+        $markup->DisplayMarkup();
     }
 }
