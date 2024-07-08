@@ -25,6 +25,7 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         define('ABCBIZ_Admin', ABCBIZ_Inc . '/admin');
         define('ABCBIZ_URL', plugins_url('', ABCBIZ_File));
         define('ABCBIZ_Assets', ABCBIZ_URL . '/assets');
+        define('ABCBIZ_Admin_CSS', ABCBIZ_URL . '/includes/admin/css');
 
         //loading main file
         if (!class_exists('ABCBizMultiElementorPack')) {

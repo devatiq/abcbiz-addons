@@ -11,6 +11,7 @@ class TemplatesAdminMenu  {
      */
     public function __construct() {
         add_action('admin_menu', array($this, 'addSubMenu'));
+        add_action('admin_enqueue_scripts', array($this, 'enqueueAdminStyles'));
     }
 
     /**
@@ -34,5 +35,19 @@ class TemplatesAdminMenu  {
         require_once plugin_dir_path(__FILE__) . 'markup.php';
         $markup = new TemplateMarkup();
         $markup->DisplayMarkup();
+    }
+
+     /**
+     * Enqueue styles specifically for this page.
+     */
+    public function enqueueAdminStyles($hook) {
+        // Obtain the hook suffix when the submenu is added.
+        $page_hook_suffix = add_submenu_page(null, '', '', 'manage_options', 'abcbiz_templates');
+
+        if ($hook !== $page_hook_suffix) {
+            return;
+        }
+
+        wp_enqueue_style('abcbiz-templates-admin-css', ABCBIZ_Admin_CSS . '/admin-templates.css');
     }
 }
