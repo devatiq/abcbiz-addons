@@ -12,6 +12,7 @@ Text Domain: abcbiz-addons
 Domain Path: /languages
 Elementor tested up to: 3.23.4
 Elementor Pro tested up to: 3.23.4
+Requires Plugins: Elementor
 */
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
