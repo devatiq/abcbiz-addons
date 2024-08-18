@@ -14,7 +14,8 @@ class TemplateMarkup
     {
         ?>
         <div class="wrap">
-            <h1> <?php esc_html__('Templates', 'abcbiz-addons'); ?></h1>
+            <h1><?php echo esc_html__('Templates:', 'abcbiz-addons'); ?></h1>
+            <div class="template-btn"><a class="button" href="https://abcbizaddons.com/docs/how-to-download-and-import-templates/" target="_blank">How to import templates? Click to learn.</a></div>
 
             <!--Templates Wrapper-->
             <div class="abcbiz-templates_list_wrapper">
@@ -35,7 +36,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Net Nest', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Internet Service Provider', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -56,7 +57,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Chef Craft', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Restaurant Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -76,7 +77,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Dream Pixel', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Photography Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -96,7 +97,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Sparkle Cleaners', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Cleaning Service Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -116,7 +117,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Real Estate', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Real Estate Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -136,7 +137,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Unity Aid', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Charity Donation Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -155,7 +156,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Technology', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Technology Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -174,7 +175,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Zenify AI', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('AI Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -193,7 +194,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Crypto Spark', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Crypto Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -212,7 +213,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Crystal Wheels', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Car Wash Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -231,7 +232,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Golf Master', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Golf Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -250,7 +251,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Cyber Shield', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Cyber Security Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -269,7 +270,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Golfa Personal', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Golf Demo 2', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -288,7 +289,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('GO Green', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Organic Food Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -308,7 +309,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Data Field', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Data Science Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -329,7 +330,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Alpha Gaming', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Gaming Demo 1', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -349,7 +350,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Health Coach', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Health Yoga Coach', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -369,7 +370,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Elite Coach', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Business Coach Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -389,7 +390,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('Plumbigo', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Plumber Services Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 
@@ -408,7 +409,7 @@ class TemplateMarkup
                             </div>
                         </div>
                         <div class="abcbiz-single-template-title">
-                            <h2> <?php echo esc_html__('ConneX', 'abcbiz-addons'); ?></h2>
+                            <h2> <?php echo esc_html__('Telecommunication Demo', 'abcbiz-addons'); ?></h2>
                         </div>
                     </div><!--/ Single Template -->
 

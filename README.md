@@ -1,10 +1,10 @@
-# ABCBiz Multi Addons for Elementor
+# ABCBiz Addons and Templates for Elementor
 Contributors: atiqbd4ever   
 Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4)  
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 6.0   
-Tested up to: 6.5   
-Stable tag: 1.0.7   
+Tested up to: 6.6.1   
+Stable tag: 1.0.8   
 Requires PHP: 7.4  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
@@ -12,9 +12,13 @@ License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
 ABCBiz Addons offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder
 
 ## Description
-Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **50 meticulously designed widgets**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **60 meticulously designed widgets**, and **20+ templates**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
+
+### 20+ Free Templates
+
+[View All Templates](https://demo.abcbizaddons.com/addons-template/)
 
 ### Available Widgets: 61
 - Advanced Animated Text (new)
@@ -97,6 +101,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 ## Changelog
 
+## 1.0.8 - 18 August 2024
+- 20+ New Templates Added
+- Bug Fixes
+
 ## 1.0.7 - 03 June 2024
 - Custom CSS features added for each widget
 - Bug Fixes
@@ -134,6 +142,9 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 - Initial release
 
 ## Upgrade Notice
+
+## 1.0.8
+- 20+ ready to import free templates added
 
 ## 1.0.7
 - Custom CSS features added for each widget
