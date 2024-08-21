@@ -5,6 +5,6 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-		foreach ( $settings['gallery'] as $image ) {
+		foreach ( $settings['abcbiz_elementor_gallery'] as $image ) {
 			echo '<img src="' . esc_attr( $image['url'] ) . '">';
 		}

@@ -54,9 +54,9 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_elementor_gallery',
 			[
-				'label' => esc_html__( 'Add Images', 'textdomain' ),
+				'label' => esc_html__( 'Add Images', 'abcbiz-addons' ),
 				'type' => \Elementor\Controls_Manager::GALLERY,
-				'show_label' => false,
+				'show_label' => true,
 				'default' => [],
 			]
 		);
