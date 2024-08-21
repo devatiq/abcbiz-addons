@@ -27,14 +27,15 @@ class Main extends BaseWidget
 		'image'
 	];
 
+
 	public function get_style_depends()
 	{
-		return ['abcbiz-ABCGallery'];
+		return ['abcbiz-magnific-popup'];
 	}
 
 	public function get_script_depends()
 	{
-		return ['abcbiz-ABCGallery-main'];
+		return ['abcbiz-magnific-popup'];
 	}
 
 	/**
