@@ -45,7 +45,7 @@ class Main extends BaseWidget
 	{
 
 		$this->start_controls_section(
-			'abcbiz_elementor_gallery_setting',
+			'abcbiz_elementor_gallery_contents',
 			[
 				'label' => esc_html__('Contents', 'abcbiz-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
@@ -62,9 +62,60 @@ class Main extends BaseWidget
 			]
 		);
 
-
 		$this->end_controls_section();//end after text style
 
+		$this->start_controls_section(
+			'abcbiz_elementor_gallery_setting',
+			[
+				'label' => esc_html__('Options', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+		//column
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_column',
+			[
+				'label' => esc_html__('Column', 'abcbiz-addons'),
+				'type' => Controls_Manager::SELECT,
+				'options' => [
+					'1' => esc_html__('1', 'abcbiz-addons'),
+					'2' => esc_html__('2', 'abcbiz-addons'),
+					'3' => esc_html__('3', 'abcbiz-addons'),
+					'4' => esc_html__('4', 'abcbiz-addons'),
+					'5' => esc_html__('5', 'abcbiz-addons'),
+					'6' => esc_html__('6', 'abcbiz-addons'),
+				],
+				'default' => '3',
+				'tablet_default' => '2',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-photos-gallery' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+				],
+			]
+		);
+
+		//show title select options
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_title',
+			[
+				'label' => esc_html__('Show Title', 'abcbiz-addons'),
+				'type' => Controls_Manager::SELECT,
+				'options' => [
+					'caption' => esc_html__('Caption', 'abcbiz-addons'),
+					'title' => esc_html__('Title', 'abcbiz-addons'),
+					'alt' => esc_html__('Alt', 'abcbiz-addons'),
+					'description' => esc_html__('Description', 'abcbiz-addons'),
+					'none' => esc_html__('None', 'abcbiz-addons'),
+				],
+				'default' => 'caption',
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-photos-gallery' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+				],
+			]
+		);
+	
+
+
+		$this->end_controls_section();
 	}
 
 	/**

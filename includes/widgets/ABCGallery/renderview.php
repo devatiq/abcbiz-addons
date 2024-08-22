@@ -12,10 +12,14 @@ $id = $this->get_id();
 <div class="abcbiz-photos-gallery" id="abcbiz-photos-gallery-<?php echo esc_attr($id); ?>">
 	<?php if ($settings['abcbiz_elementor_gallery']) { ?>
 		<?php foreach ($settings['abcbiz_elementor_gallery'] as $image) {
-			if (!empty(wp_get_attachment_caption($image['id']))) {
+			if (!empty(wp_get_attachment_caption($image['id'])) && $settings['abcbiz_elementor_gallery_title'] == 'caption') {
 				$caption = wp_get_attachment_caption($image['id']);
-			} elseif (!empty(get_post_field('post_title', $image['id']))) {
+			} elseif (!empty(get_post_field('post_title', $image['id'])) && $settings['abcbiz_elementor_gallery_title'] == 'title') {
 				$caption = get_post_field('post_title', $image['id']);
+			} elseif (!empty(get_post_field('post_content', $image['id'])) && $settings['abcbiz_elementor_gallery_title'] == 'description')	 {
+				$caption = get_post_field('post_content', $image['id']);
+			} elseif (!empty(get_post_meta( $image['id'], '_wp_attachment_image_alt', true )) && $settings['abcbiz_elementor_gallery_title'] == 'alt') {
+				$caption = get_post_meta( $image['id'], '_wp_attachment_image_alt', true );
 			} else {
 				$caption = '';
 			}
