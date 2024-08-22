@@ -287,6 +287,31 @@ class Main extends BaseWidget
 			]
 		);
 
+		//close button color
+		$this->add_control(
+			'abcbiz_elementor_gallery_popup_close_button_color',
+			[
+				'label' => esc_html__('Close Button Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup button.mfp-close' => 'color: {{VALUE}};',
+				],
+			]
+		);
+
+		//close button size
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_popup_close_button_size',
+			[
+				'label' => esc_html__('Close Button Size', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup button.mfp-close' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
 		$this->end_controls_section();
 	}
 
