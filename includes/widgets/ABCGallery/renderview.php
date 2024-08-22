@@ -6,10 +6,10 @@ if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-
+$id = $this->get_id();
 ?>
 
-<div class="abcbiz-photos-gallery">
+<div class="abcbiz-photos-gallery" id="abcbiz-photos-gallery-<?php echo esc_attr($id); ?>">
 	<?php if ($settings['abcbiz_elementor_gallery']) { ?>
 		<?php foreach ($settings['abcbiz_elementor_gallery'] as $image) { 
 			  if(!empty(wp_get_attachment_caption($image['id']))) {
@@ -32,7 +32,7 @@ $settings = $this->get_settings_for_display();
 	(function ($) {
 		$(document).ready(function () {
 
-			$('.abcbiz-photos-gallery').magnificPopup({
+			$('#abcbiz-photos-gallery-<?php echo esc_attr($id); ?>').magnificPopup({
 				delegate: 'span',
 				type: 'image',
 				closeOnContentClick: false,
