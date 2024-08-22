@@ -64,7 +64,6 @@ $id = $this->get_id();
 						return element.find('img');
 					}
 				}
-
 			});
 		});
 	})(jQuery);
