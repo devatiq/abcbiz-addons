@@ -41,7 +41,7 @@ $id = $this->get_id();
 				type: 'image',
 				closeOnContentClick: false,
 				closeBtnInside: <?php echo $settings['abcbiz_elementor_gallery_close_button'] == 'true' ? 'true' : 'false'; ?>,
-				mainClass: 'mfp-with-zoom mfp-img-mobile',
+				mainClass: 'mfp-with-zoom mfp-img-mobile abcbiz-photos-gallery-popup',
 				allowHTMLInTemplate: true,
 				image: {
 					verticalFit: true,

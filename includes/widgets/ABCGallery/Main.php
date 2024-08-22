@@ -216,6 +216,7 @@ class Main extends BaseWidget
 		);
 
 		$this->end_controls_section();
+	
 	}
 
 	/**

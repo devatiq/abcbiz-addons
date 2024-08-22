@@ -2726,3 +2726,9 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-photos-gallery span img {
     max-width: 100%;
 }
+.abcbiz-photos-gallery-popup button.mfp-close:hover{
+ background-color: transparent;
+}
+.abcbiz-photos-gallery-popup button.mfp-arrow, .abcbiz-photos-gallery-popup button.mfp-arrow:hover{
+background-color: transparent;
+}
