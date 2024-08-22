@@ -2712,3 +2712,17 @@ h3.abcbiz-style-three-team-name {
                scaleX(var(--abcbiz-tfx-scale-x-hover, 1)) scaleY(var(--abcbiz-tfx-scale-y-hover, 1))
                skewX(var(--abcbiz-tfx-skew-x-hover, 0)) skewY(var(--abcbiz-tfx-skew-y-hover, 0));
 }
+/*----------------------------------------------
+ * ABC Gallery
+ * ---------------------------------------------*/
+ .abcbiz-photos-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+ }
+.abcbiz-photos-gallery span {
+    cursor: pointer;
+}
+.abcbiz-photos-gallery span img {
+    max-width: 100%;
+}
