@@ -11,21 +11,21 @@ $id = $this->get_id();
 
 <div class="abcbiz-photos-gallery" id="abcbiz-photos-gallery-<?php echo esc_attr($id); ?>">
 	<?php if ($settings['abcbiz_elementor_gallery']) { ?>
-		<?php foreach ($settings['abcbiz_elementor_gallery'] as $image) { 
-			  if(!empty(wp_get_attachment_caption($image['id']))) {
-				$caption = wp_get_attachment_caption($image['id']);				
-			  }elseif(!empty(get_post_field( 'post_title', $image['id'] ))) {
-				$caption = get_post_field( 'post_title', $image['id'] );
-			  }else{
+		<?php foreach ($settings['abcbiz_elementor_gallery'] as $image) {
+			if (!empty(wp_get_attachment_caption($image['id']))) {
+				$caption = wp_get_attachment_caption($image['id']);
+			} elseif (!empty(get_post_field('post_title', $image['id']))) {
+				$caption = get_post_field('post_title', $image['id']);
+			} else {
 				$caption = '';
-			  }					
-			?>	
-			<span href="<?php echo esc_attr($image['url']); ?>" title="<?php echo esc_attr($caption); ?>"><img
+			}
+			?>
+			<span abc-data-url="<?php echo esc_attr($image['url']); ?>" title="<?php echo esc_attr($caption); ?>"><img
 					src="<?php echo esc_attr($image['url']); ?>"></span>
 
 		<?php } ?>
 	<?php } ?>
-	
+
 </div>
 
 <script>
@@ -36,7 +36,7 @@ $id = $this->get_id();
 				delegate: 'span',
 				type: 'image',
 				closeOnContentClick: false,
-				closeBtnInside: false,
+				closeBtnInside: true,
 				mainClass: 'mfp-with-zoom mfp-img-mobile',
 				allowHTMLInTemplate: true,
 				image: {
@@ -45,7 +45,11 @@ $id = $this->get_id();
 						return item.el.attr('title');
 					}
 				},
-
+				callbacks: {
+					elementParse: function (item) {
+						item.src = item.el.attr('abc-data-url');
+					}
+				},
 				gallery: {
 					enabled: true
 				},
