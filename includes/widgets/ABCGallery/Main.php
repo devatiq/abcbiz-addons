@@ -216,7 +216,78 @@ class Main extends BaseWidget
 		);
 
 		$this->end_controls_section();
-	
+
+		//add style for popup
+		$this->start_controls_section(
+			'abcbiz_elementor_gallery_popup_style',
+			[
+				'label' => esc_html__('Popup', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		//popup image width
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_popup_image_width',
+			[
+				'label' => esc_html__('Image Width', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 2000,
+					],
+				],
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup .mfp-content img.mfp-img' => 'width: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//popup image height
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_popup_image_height',
+			[
+				'label' => esc_html__('Image Height', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 2000,
+					],
+				],
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup .mfp-content img.mfp-img' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//popup image border radius
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_popup_image_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup .mfp-content img.mfp-img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		//popup image border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz_elementor_gallery_popup_image_border',
+				'label' => esc_html__('Border', 'abcbiz-addons'),
+				'selector' => '.abcbiz-photos-gallery-popup .mfp-content img.mfp-img',
+			]
+		);
+
+		$this->end_controls_section();
 	}
 
 	/**
