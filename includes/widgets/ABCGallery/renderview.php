@@ -40,7 +40,7 @@ $id = $this->get_id();
 				delegate: 'span',
 				type: 'image',
 				closeOnContentClick: false,
-				closeBtnInside: true,
+				closeBtnInside: <?php echo $settings['abcbiz_elementor_gallery_close_button'] == 'true' ? 'true' : 'false'; ?>,
 				mainClass: 'mfp-with-zoom mfp-img-mobile',
 				allowHTMLInTemplate: true,
 				image: {

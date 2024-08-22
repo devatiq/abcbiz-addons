@@ -99,6 +99,7 @@ class Main extends BaseWidget
 			[
 				'label' => esc_html__('Show Title', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT,
+				'description' => esc_html__('Select the title option for the gallery.', 'abcbiz-addons'),
 				'options' => [
 					'caption' => esc_html__('Caption', 'abcbiz-addons'),
 					'title' => esc_html__('Title', 'abcbiz-addons'),
@@ -106,14 +107,113 @@ class Main extends BaseWidget
 					'description' => esc_html__('Description', 'abcbiz-addons'),
 					'none' => esc_html__('None', 'abcbiz-addons'),
 				],
-				'default' => 'caption',
+				'default' => 'none',
+			]
+		);
+
+		//close button
+		$this->add_control(
+			'abcbiz_elementor_gallery_close_button',
+			[
+				'label' => esc_html__('Close Button', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'return_value' => 'true',
+				'default' => 'true',
+			]
+		);
+
+		$this->end_controls_section();
+
+		//style for the gallary
+		$this->start_controls_section(
+			'abcbiz_elementor_gallery_style',
+			[
+				'label' => esc_html__('Style', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+
+		//image width
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_image_width',
+			[
+				'label' => esc_html__('Image Width', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-photos-gallery' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+					'{{WRAPPER}} .abcbiz-photos-gallery span img' => 'width: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
-	
 
+		//image height
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_image_height',
+			[
+				'label' => esc_html__('Image Height', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 1000,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-photos-gallery span img' => 'height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//gap
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_gap',
+			[
+				'label' => esc_html__('Gap', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 200,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-photos-gallery' => 'gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		//image border radius
+		$this->add_responsive_control(
+			'abcbiz_elementor_gallery_image_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-photos-gallery span img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		//image border
+		$this->add_group_control(
+			\Elementor\Group_Control_Border::get_type(),
+			[
+				'name' => 'abcbiz_elementor_gallery_image_border',
+				'label' => esc_html__('Border', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-photos-gallery span img',
+			]
+		);
 
 		$this->end_controls_section();
 	}
