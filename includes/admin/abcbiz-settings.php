@@ -40,9 +40,19 @@ require_once plugin_dir_path(__FILE__) . 'inc/widget-page.php';
 
 require_once plugin_dir_path(__FILE__) . 'inc/Templates/settings.php';
 
+require_once plugin_dir_path(__FILE__) . 'inc/Settings/Settings.php';
+
 // Check if the class has already been defined
 if (!class_exists('\ABCBizAddons\includes\admin\inc\Templates\TemplatesAdminMenu ')) {
     $admin_menu = new \ABCBizAddons\includes\admin\inc\Templates\TemplatesAdminMenu ();
+} else {
+    // Optionally handle the case where the class is already defined
+    error_log('Templates Menu class has already been defined elsewhere.');
+}
+
+// Check if the class has already been defined
+if (!class_exists('\ABCBizAddons\includes\admin\inc\Settings\SettingsPage ')) {
+    $admin_menu = new \ABCBizAddons\includes\admin\inc\Settings\SettingsPage ();
 } else {
     // Optionally handle the case where the class is already defined
     error_log('Templates Menu class has already been defined elsewhere.');
