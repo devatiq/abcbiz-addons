@@ -15,7 +15,7 @@ class Main extends BaseWidget {
 	    // define protected variables...
 		protected $name = 'abcbiz-ABCMailChimp';
 		protected $title = 'ABC MailChimp';
-		protected $icon = 'eicon-animation-text abcbiz-addons-icon';
+		protected $icon = 'eicon-form-horizontal abcbiz-addons-icon';
 		protected $categories = [
 			'abcbiz-category'
 		];		
@@ -37,17 +37,7 @@ class Main extends BaseWidget {
 			]
 		);
 
-		//Notice
-		$this->add_control(
-			'abcbiz_elementor_anim_text_notice',
-			[
-				'type' => \Elementor\Controls_Manager::NOTICE,
-				'notice_type' => 'warning',
-				'dismissible' => false,
-				'heading' => esc_html__( 'Notice:', 'abcbiz-addons' ),
-				'content' => esc_html__( 'To view the full animation, please check in the front end', 'abcbiz-addons' ),
-			]
-		);
+	
 
 	   $this->end_controls_section();//end after text style
 
