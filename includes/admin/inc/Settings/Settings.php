@@ -1,4 +1,5 @@
-<?php 
+<?php
+
 namespace ABCBizAddons\includes\admin\inc\Settings;
 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
@@ -10,6 +11,7 @@ class SettingsPage {
         $this->options = get_option('abcbiz_mailchimp_options');
         add_action('admin_menu', [$this, 'add_settings_submenu_page']);
         add_action('admin_init', [$this, 'register_settings']);
+        add_action('admin_head', [$this, 'add_custom_styles']); // Add custom styles hook
     }
 
     /**
@@ -61,6 +63,19 @@ class SettingsPage {
     }
 
     /**
+     * Add custom styles to the admin header.
+     */
+    public function add_custom_styles() {
+        echo '<style>
+            .abcbiz-full-width-input {
+                width: 100%;
+                max-width: 600px; /* Optional: To prevent input from being too wide */
+                box-sizing: border-box;
+            }
+        </style>';
+    }
+
+    /**
      * Sanitize each setting field as needed.
      *
      * @param array $input Contains all settings fields as array keys
@@ -90,9 +105,10 @@ class SettingsPage {
      */
     public function mailchimp_api_key_callback() {
         printf(
-            '<input type="text" id="mailchimp_api_key" name="abcbiz_mailchimp_options[mailchimp_api_key]" value="%s" />',
+            '<input type="text" class="abcbiz-full-width-input" id="mailchimp_api_key" name="abcbiz_mailchimp_options[mailchimp_api_key]" value="%s" />',
             isset($this->options['mailchimp_api_key']) ? esc_attr($this->options['mailchimp_api_key']) : ''
         );
+        echo '<p class="description">' . sprintf(__('Enter your Mailchimp API Key. You can get it %shere%s.', 'abcbiz-addons'), '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">', '</a>') . '</p>';
     }
 
     /** 
@@ -100,9 +116,10 @@ class SettingsPage {
      */
     public function mailchimp_list_id_callback() {
         printf(
-            '<input type="text" id="mailchimp_list_id" name="abcbiz_mailchimp_options[mailchimp_list_id]" value="%s" />',
+            '<input type="text" class="abcbiz-full-width-input" id="mailchimp_list_id" name="abcbiz_mailchimp_options[mailchimp_list_id]" value="%s" />',
             isset($this->options['mailchimp_list_id']) ? esc_attr($this->options['mailchimp_list_id']) : ''
         );
+        echo '<p class="description">' . sprintf(__('Enter your Mailchimp List ID. You can find it %shere%s.', 'abcbiz-addons'), '<a href="https://mailchimp.com/help/find-audience-id/" target="_blank">', '</a>') . '</p>';
     }
 
     /**
