@@ -48,6 +48,30 @@ class Main extends \Elementor\Widget_Base {
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
+        $this->add_control(
+			'mailchimp_api_sources',
+			[
+				'label' => esc_html__( 'Choose API Source', 'abcbiz-addons' ),
+				'type' => \Elementor\Controls_Manager::SELECT,
+				'default' => 'global',
+				'options' => [
+					'global' => esc_html__( 'Global', 'abcbiz-addons' ),
+					'custom' => esc_html__( 'Custom', 'abcbiz-addons' ),
+				],
+			]
+		);
+
+        // Add Mailchimp API key input
+        $this->add_control(
+            'mailchimp_api_key',
+            [
+                'label' => __('MailChimp API Key', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'label_block' => true,
+                'description' => sprintf(__('Enter your MailChimp API key. You can find it %shere%s.', 'abcbiz-addons'), '<a href="https://admin.mailchimp.com/account/api" target="_blank">', '</a>'),
+                'condition' => ['mailchimp_api_sources' => 'custom'],
+            ]
+        );
 
         $this->add_control(
             'mailchimp_list_id',
