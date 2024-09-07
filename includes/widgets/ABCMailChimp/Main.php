@@ -38,8 +38,10 @@ class Main extends \Elementor\Widget_Base {
     }
 
     protected function register_controls() {
+        $data = $this->get_settings();
+
         // Fetch the Mailchimp audience lists
-        $mailchimp_lists = $this->get_mailchimp_lists();
+       $mailchimp_lists = $this->get_mailchimp_lists($data['mailchimp_api_key']);
 
         $this->start_controls_section(
             'section_mailchimp',
@@ -77,7 +79,7 @@ class Main extends \Elementor\Widget_Base {
             'mailchimp_list_id',
             [
                 'label' => __('Audience List', 'abcbiz-addons'),
-                'type' => Controls_Manager::SELECT,
+                'type' => Controls_Manager::SELECT2,
                 'options' => $mailchimp_lists, // Populate with the fetched Mailchimp lists
                 'description' => sprintf(__('Select your Mailchimp Audience List. You can find more information %shere%s.', 'abcbiz-addons'), '<a href="https://mailchimp.com/help/find-audience-id/" target="_blank">', '</a>'),
                 'dynamic' => ['active' => true],
@@ -87,9 +89,9 @@ class Main extends \Elementor\Widget_Base {
         $this->end_controls_section();
     }
 
-    private function get_mailchimp_lists() {
+    private function get_mailchimp_lists($api_key) {
         // Fetch the API key from the settings
-        $api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
+        //$api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
 
         if (empty($api_key)) {
             return []; // Return an empty array if no API key is set
