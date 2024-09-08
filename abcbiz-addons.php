@@ -116,10 +116,78 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-wapoints', ABCBIZ_Assets . "/js/waypoints.min.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-circular-skills', ABCBIZ_Assets . "/js/abcbiz-circular-skills.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-magnific-popup', ABCBIZ_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-mailchimp-newsletter', ABCBIZ_Assets . "/js/mailchimp-newsletter.js", array('jquery'), '1.0', true);
         wp_enqueue_script('abcbiz-elementor-custom', ABCBIZ_Assets . "/js/main.js", array('jquery'), false, true);
+
+        wp_localize_script('abcbiz-mailchimp-newsletter', 'abcbizMailchimpAjax', [
+            'ajax_url' => admin_url('admin-ajax.php'),
+            'nonce' => wp_create_nonce('abcbiz_mailchimp_nonce'),
+        ]);
     }
 }
 add_action('wp_enqueue_scripts', 'abcbiz_elementor_enqueue');
+
+
+// Hook for AJAX submission
+add_action('wp_ajax_nopriv_abcbiz_mailchimp_subscribe', 'abcbiz_mailchimp_subscribe');
+add_action('wp_ajax_abcbiz_mailchimp_subscribe', 'abcbiz_mailchimp_subscribe');
+
+function abcbiz_mailchimp_subscribe() {
+    // Check nonce for security
+    check_ajax_referer('abcbiz_mailchimp_nonce', 'nonce');
+
+    // Sanitize and validate form inputs
+    $email = sanitize_email($_POST['email']);
+    $fname = sanitize_text_field($_POST['fname'] ?? '');
+    $lname = sanitize_text_field($_POST['lname'] ?? '');
+
+    if (!is_email($email)) {
+        wp_send_json_error(['message' => __('Invalid email address', 'abcbiz-addons')]);
+    }
+
+    // Fetch the Mailchimp API key
+    $settings = get_option('abcbiz_mailchimp_options');
+    $api_key = sanitize_text_field($settings['mailchimp_api_key'] ?? '');
+
+    if (empty($api_key)) {
+        wp_send_json_error(['message' => __('API key not configured', 'abcbiz-addons')]);
+    }
+
+    // Mailchimp API integration for subscription
+    $data_center = substr($api_key, strpos($api_key, '-') + 1);
+    $list_id = sanitize_text_field($_POST['mailchimp_list_id']);
+    $url = 'https://' . $data_center . '.api.mailchimp.com/3.0/lists/' . $list_id . '/members/';
+
+    $body = json_encode([
+        'email_address' => $email,
+        'status' => 'subscribed',
+        'merge_fields' => [
+            'FNAME' => $fname,
+            'LNAME' => $lname,
+        ],
+    ]);
+
+    $response = wp_remote_post($url, [
+        'headers' => [
+            'Authorization' => 'Basic ' . base64_encode('user:' . $api_key),
+            'Content-Type' => 'application/json',
+        ],
+        'body' => $body,
+    ]);
+
+    if (is_wp_error($response)) {
+        wp_send_json_error(['message' => __('Subscription failed. Please try again.', 'abcbiz-addons')]);
+    }
+
+    $response_body = json_decode(wp_remote_retrieve_body($response));
+
+    if (isset($response_body->status) && $response_body->status == 'subscribed') {
+        wp_send_json_success(['message' => __('Subscription successful!', 'abcbiz-addons')]);
+    } else {
+        wp_send_json_error(['message' => __('Failed to subscribe.', 'abcbiz-addons')]);
+    }
+}
+
 
 //add ABCBiz Elementor Category
 if (!function_exists('abcbiz_elementor_add_widget_categories')) {
