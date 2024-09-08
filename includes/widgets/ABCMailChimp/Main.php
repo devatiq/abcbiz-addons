@@ -4,51 +4,61 @@ namespace ABCBiz\Includes\Widgets\ABCMailChimp;
 
 use Elementor\Controls_Manager;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
-class Main extends \Elementor\Widget_Base {
+class Main extends \Elementor\Widget_Base
+{
 
     private $settings;
 
-    public function get_name() {
+    public function get_name()
+    {
         return 'abcbiz-mailchimp';
     }
 
-    public function get_title() {
+    public function get_title()
+    {
         return __('ABC MailChimp', 'abcbiz-addons');
     }
 
-    public function get_icon() {
+    public function get_icon()
+    {
         return 'eicon-mail';
     }
 
-    public function get_categories() {
+    public function get_categories()
+    {
         return ['abcbiz-category'];
     }
 
     // Use this method to register the scripts
-    public function get_script_depends() {
+    public function get_script_depends()
+    {
         return ['abcbiz-mailchimp-newsletter']; // The handle for your script
     }
 
-    public function __construct($data = [], $args = null) {
+    public function __construct($data = [], $args = null)
+    {
         parent::__construct($data, $args);
 
         // Fetch Mailchimp API key from plugin settings
         $this->settings = get_option('abcbiz_mailchimp_options');
 
         // Localize the script for AJAX usage
-      //  add_action('wp_enqueue_scripts', [$this, 'localize_script']);
+        //  add_action('wp_enqueue_scripts', [$this, 'localize_script']);
     }
 
-    public function localize_script() {
+    public function localize_script()
+    {
         wp_localize_script('abcbiz-mailchimp-newsletter', 'abcbizMailchimpAjax', [
             'ajax_url' => admin_url('admin-ajax.php'),
             'nonce' => wp_create_nonce('abcbiz_mailchimp_nonce'),
         ]);
     }
 
-    protected function register_controls() {
+    protected function register_controls()
+    {
         $this->start_controls_section(
             'section_mailchimp',
             [
@@ -68,10 +78,24 @@ class Main extends \Elementor\Widget_Base {
             ]
         );
 
+        // Toggle control to enable or disable name fields
+        $this->add_control(
+            'enable_name_fields',
+            [
+                'label' => __('Enable Name Fields', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', 'abcbiz-addons'),
+                'label_off' => __('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+            ]
+        );
+
         $this->end_controls_section();
     }
 
-    private function get_mailchimp_lists() {
+    private function get_mailchimp_lists()
+    {
         $api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
 
         if (empty($api_key)) {
@@ -107,17 +131,19 @@ class Main extends \Elementor\Widget_Base {
         return $lists;
     }
 
-    protected function render() {
+    protected function render()
+    {
         $settings = $this->get_settings_for_display();
         ?>
         <div class="abcbiz-mailchimp-wrapper">
             <form id="abcbiz-mailchimp-form">
-                
-                    <input id="abcbiz-mailchimp-fname" type="text" name="fname" placeholder="First Name" value="Abdul">
-                    <input id="abcbiz-mailchimp-lname" type="text" name="lname" placeholder="Last Name" value="Bashar">
-                
+                <?php if ('yes' === $settings['enable_name_fields']): ?>
+                    <input id="abcbiz-mailchimp-fname" type="text" name="fname" placeholder="First Name">
+                    <input id="abcbiz-mailchimp-lname" type="text" name="lname" placeholder="Last Name">
+                <?php endif; ?>
                 <input id="abcbiz-mailchimp-email" type="email" name="email" placeholder="Your Email" required>
-                <input id="abcbiz-mailchimp-list" type="hidden" name="list" value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
+                <input id="abcbiz-mailchimp-list" type="hidden" name="list"
+                    value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
                 <button type="submit"><?php esc_html_e('Subscribe', 'abcbiz-addons'); ?></button>
                 <div class="abcbiz-mailchimp-response"></div>
             </form>
