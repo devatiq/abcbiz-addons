@@ -11,7 +11,7 @@ jQuery(document).ready(function($) {
             mailchimp_list_id: $('#abcbiz-mailchimp-list').val()
         };
 
-        console.log(formData);
+        //console.log(formData);
 
         $.ajax({
             url: abcbizMailchimpAjax.ajax_url,
