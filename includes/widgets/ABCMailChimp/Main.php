@@ -405,6 +405,36 @@ class Main extends \Elementor\Widget_Base
         );
         $this->end_controls_section();
 
+        $this->start_controls_section(
+            'abcbiz_elementor_mailchimp_message_style',
+            [
+                'label' => __( 'Message Style', 'abcbiz-addons' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_elementor_mailchimp_message_text_color',
+            [
+                'label' => __( 'Text Color', 'abcbiz-addons' ),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-mailchimp-response' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'abcbiz_elementor_mailchimp_message_typography',
+                'label' => __( 'Typography', 'abcbiz-addons' ),
+                'selector' => '{{WRAPPER}} .abcbiz-mailchimp-response',
+            ]
+        );
+
+        $this->end_controls_section();
+
     }
 
     private function get_mailchimp_lists()
