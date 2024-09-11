@@ -44,9 +44,6 @@ class Main extends \Elementor\Widget_Base
 
         // Fetch Mailchimp API key from plugin settings
         $this->settings = get_option('abcbiz_mailchimp_options');
-
-        // Localize the script for AJAX usage
-        //  add_action('wp_enqueue_scripts', [$this, 'localize_script']);
     }
 
     public function localize_script()
@@ -59,6 +56,36 @@ class Main extends \Elementor\Widget_Base
 
     protected function register_controls()
     {
+        // Check if API key is set
+        $api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
+
+        
+        if (empty($api_key)) {
+            // Add notice control if API key is not set
+            $this->start_controls_section(
+                'section_notice',
+                [
+                    'label' => __('Notice', 'abcbiz-addons'),
+                    'tab' => Controls_Manager::TAB_CONTENT,
+                ]
+            );
+
+
+            $this->add_control(
+                'api_key_notice',
+                [
+                    'type' => Controls_Manager::RAW_HTML,
+                    'raw' => '<div style="color: red;">' . sprintf(
+                        __('Mailchimp API key is not set. Please configure it in the <a href="%s" target="_blank">plugin settings</a>.', 'abcbiz-addons'),
+                        esc_url(admin_url('admin.php?page=abcbiz_settings&tab=mailchimp'))
+                    ) . '</div>',
+                    'content_classes' => 'elementor-panel-alert elementor-panel-alert-danger',
+                ]
+            );
+
+            $this->end_controls_section();
+        }
+
         $this->start_controls_section(
             'section_mailchimp',
             [
