@@ -120,26 +120,37 @@ class Main extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'submit_button_text',
+            [
+                'label' => __('Submit Button Text', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('Subscribe', 'abcbiz-addons'),
+                'placeholder' => __('Enter your placeholder text', 'abcbiz-addons'),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
             'flex_direction',
             [
-                'label' => __( 'Flex Direction', 'elementor' ),
+                'label' => __( 'Flex Direction', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
                 'default' => 'row',
                 'options' => [
                     'row' => [
-                        'title' => __( 'Row', 'elementor' ),
+                        'title' => __( 'Row', 'abcbiz-addons' ),
                         'icon' => 'eicon-arrow-right',
                     ],
                     'row-reverse' => [
-                        'title' => __( 'Row Reverse', 'elementor' ),
+                        'title' => __( 'Row Reverse', 'abcbiz-addons' ),
                         'icon' => 'eicon-arrow-left',
                     ],
                     'column' => [
-                        'title' => __( 'Column', 'elementor' ),
+                        'title' => __( 'Column', 'abcbiz-addons' ),
                         'icon' => 'eicon-arrow-down',
                     ],
                     'column-reverse' => [
-                        'title' => __( 'Column Reverse', 'elementor' ),
+                        'title' => __( 'Column Reverse', 'abcbiz-addons' ),
                         'icon' => 'eicon-arrow-up',
                     ],
                 ],
@@ -151,6 +162,249 @@ class Main extends \Elementor\Widget_Base
         );
 
         $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            'abcbiz_mailchimp_section_style',
+            [
+                'label' => __('Style', 'abcbiz-addons'),
+                'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_first_name_width',
+            [
+                'label' => __( 'First Name Width', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-fname' => 'width: {{SIZE}}{{UNIT}}',
+                ],
+                'condition' => [
+                    'enable_name_fields' => 'yes',
+                ],
+
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_last_name_width',
+            [
+                'label' => __( 'Last Name Width', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'condition' => [
+                    'enable_name_fields' => 'yes',
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-lname' => 'width: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_email_width',
+            [
+                'label' => __( 'Email Width', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-email' => 'width: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
+  
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_gap',
+            [
+                'label' => __( 'Gap', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', 'em', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                        'step' => 0.1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-mailchimp-single-form' => 'gap: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_input_padding',
+            [
+                'label' => __( 'Input Padding', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_input_border_radius',
+            [
+                'label' => __( 'Input Border Radius', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form input' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'abcbiz_mailchimp_input_border',
+                'label' => __( 'Input Border', 'abcbiz-addons' ),
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form input:not(.abcbiz-mailchimp-submit)',
+            ]
+        );
+
+
+        $this->end_controls_section();
+
+
+        $this->start_controls_section(
+            'abcbiz_mailchimp_button_style',
+            [
+                'label' => __( 'Button', 'abcbiz-addons' ),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_button_padding',
+            [
+                'label' => __( 'Padding', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_button_border_radius',
+            [
+                'label' => __( 'Border Radius', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                'size_units' => [ 'px', 'em', '%' ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Border::get_type(),
+            [
+                'name' => 'abcbiz_mailchimp_button_border',
+                'label' => __( 'Border', 'abcbiz-addons' ),
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Typography::get_type(),
+            [
+                'name' => 'abcbiz_mailchimp_button_typography',
+                'label' => __( 'Typography', 'abcbiz-addons' ),
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
+            ]
+        );
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_submit_width',
+            [
+                'label' => __( 'Width', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'width: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            \Elementor\Group_Control_Background::get_type(),
+            [
+                'name' => 'abcbiz_mailchimp_button_background',
+                'label' => __( 'Background', 'abcbiz-addons' ),
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
+                'exclude' => [
+                    'image'
+                ],
+            ]
+        );
+        $this->end_controls_section();
+
     }
 
     private function get_mailchimp_lists()
@@ -203,9 +457,9 @@ class Main extends \Elementor\Widget_Base
                 <input id="abcbiz-mailchimp-email" type="email" name="email" placeholder="Your Email" required>
                 <input id="abcbiz-mailchimp-list" type="hidden" name="list"
                     value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
-                <button type="submit" id="abcbiz-mailchimp-submit"><?php esc_html_e('Subscribe', 'abcbiz-addons'); ?></button>
-                <div class="abcbiz-mailchimp-response"></div>
+                <button type="submit" id="abcbiz-mailchimp-submit"><?php echo esc_html($settings['submit_button_text']); ?></button>                
             </form>
+            <div class="abcbiz-mailchimp-response"></div>
         </div>
         <?php
     }
