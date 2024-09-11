@@ -53,13 +53,7 @@ class SettingsPage {
             'mailchimp_settings_section' // Section           
         );
 
-        add_settings_field(
-            'mailchimp_list_id', 
-            __('List ID', 'abcbiz-addons'), 
-            [$this, 'mailchimp_list_id_callback'], 
-            'abcbiz_mailchimp_settings', 
-            'mailchimp_settings_section'
-        );
+        
     }
 
     /**
@@ -84,12 +78,8 @@ class SettingsPage {
         $new_input = array();
         if (isset($input['mailchimp_api_key'])) {
             $new_input['mailchimp_api_key'] = sanitize_text_field($input['mailchimp_api_key']);
-        }
-
-        if (isset($input['mailchimp_list_id'])) {
-            $new_input['mailchimp_list_id'] = sanitize_text_field($input['mailchimp_list_id']);
-        }
-
+        }    
+        
         return $new_input;
     }
 
@@ -111,16 +101,7 @@ class SettingsPage {
         echo '<p class="description">' . sprintf(__('Enter your Mailchimp API Key. You can get it %shere%s.', 'abcbiz-addons'), '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">', '</a>') . '</p>';
     }
 
-    /** 
-     * Get the settings option array and print one of its values
-     */
-    public function mailchimp_list_id_callback() {
-        printf(
-            '<input type="text" class="abcbiz-full-width-input" id="mailchimp_list_id" name="abcbiz_mailchimp_options[mailchimp_list_id]" value="%s" />',
-            isset($this->options['mailchimp_list_id']) ? esc_attr($this->options['mailchimp_list_id']) : ''
-        );
-        echo '<p class="description">' . sprintf(__('Enter your Mailchimp List ID. You can find it %shere%s.', 'abcbiz-addons'), '<a href="https://mailchimp.com/help/find-audience-id/" target="_blank">', '</a>') . '</p>';
-    }
+    
 
     /**
      * Render the settings page with tabs.
