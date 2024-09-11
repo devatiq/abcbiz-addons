@@ -59,7 +59,7 @@ class Main extends \Elementor\Widget_Base
         // Check if API key is set
         $api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
 
-        
+
         if (empty($api_key)) {
             // Add notice control if API key is not set
             $this->start_controls_section(
@@ -94,6 +94,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+
         $this->add_control(
             'mailchimp_list_id',
             [
@@ -115,6 +116,37 @@ class Main extends \Elementor\Widget_Base
                 'label_off' => __('No', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'no',
+            ]
+        );
+
+        $this->add_control(
+            'flex_direction',
+            [
+                'label' => __( 'Flex Direction', 'elementor' ),
+                'type' => \Elementor\Controls_Manager::CHOOSE,
+                'default' => 'row',
+                'options' => [
+                    'row' => [
+                        'title' => __( 'Row', 'elementor' ),
+                        'icon' => 'eicon-arrow-right',
+                    ],
+                    'row-reverse' => [
+                        'title' => __( 'Row Reverse', 'elementor' ),
+                        'icon' => 'eicon-arrow-left',
+                    ],
+                    'column' => [
+                        'title' => __( 'Column', 'elementor' ),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                    'column-reverse' => [
+                        'title' => __( 'Column Reverse', 'elementor' ),
+                        'icon' => 'eicon-arrow-up',
+                    ],
+                ],
+                'toggle' => true,
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form' => 'flex-direction: {{VALUE}}',
+                ]
             ]
         );
 
