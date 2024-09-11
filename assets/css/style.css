@@ -1,7 +1,7 @@
 /*----------------------------------------------
  * Global
  * ---------------------------------------------*/
- .clearfix::after {
+.clearfix::after {
     content: "";
     display: table;
     clear: both;
@@ -32,7 +32,8 @@
 /* ---------------------------------------------
  * WP Menu
  * --------------------------------------------- */
- .abcbiz-responsive-menu, .abcbiz-mob-menu-icon-wrap {
+.abcbiz-responsive-menu,
+.abcbiz-mob-menu-icon-wrap {
     display: none;
     outline: none;
 }
@@ -120,7 +121,7 @@
 
 }
 
-.abcbiz-wp-menu-container > ul > li > a {
+.abcbiz-wp-menu-container>ul>li>a {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -182,7 +183,7 @@
     display: block;
 }
 
-.abcbiz-wp-menu-container ul ul li .abcbiz-submenu-icon svg{
+.abcbiz-wp-menu-container ul ul li .abcbiz-submenu-icon svg {
     width: 16px !important;
     height: 16px !important;
     display: block;
@@ -200,16 +201,16 @@
     }
 
     .abcbiz-responsive-menu svg {
-        width: 32px; 
+        width: 32px;
         height: 32px;
     }
-    
+
     .abcbiz-responsive-menu {
         display: inline-block;
         cursor: pointer;
         transition: all 0.5s;
     }
-    
+
     .abcbiz-mobilemenu {
         display: none;
         flex-direction: column;
@@ -221,7 +222,7 @@
         background: #fff;
         z-index: 4572;
     }
-    
+
     .abcbiz-mobilemenu ul {
         list-style: none;
         margin: 0;
@@ -229,7 +230,7 @@
         display: flex;
         flex-direction: column;
     }
-    
+
     .abcbiz-mobilemenu ul li {
         border-bottom: 1px solid #ededed;
         margin-left: 0;
@@ -242,38 +243,41 @@
     }
 
     .abcbiz-mobilemenu ul li a {
-        color: #333; 
+        color: #333;
         font-size: 16px;
         padding: 6px 15px;
         text-transform: uppercase;
         width: 100%;
         display: inline-block;
     }
+
     .abcbiz-mobilemenu ul li ul li a {
-        color: #444; 
-        font-size: 14px; 
+        color: #444;
+        font-size: 14px;
         text-transform: none;
     }
+
     .abcbiz-mobilemenu ul.sub-menu {
-        position: static; 
-        opacity: 1; 
-        border: none; 
-        margin: 0; 
-        padding: 0; 
-        display: none; 
+        position: static;
+        opacity: 1;
+        border: none;
+        margin: 0;
+        padding: 0;
+        display: none;
         transition: none;
     }
+
     .abcbiz-mobilemenu .sub-toggle {
-        background: #6146ec; 
-        color: #ffffff; 
-        cursor: pointer; 
-        height: 30px; 
-        line-height: 30px; 
-        position: absolute; 
-        right: 15px; 
-        text-align: center; 
-        top: 3px; 
-        width: 30px; 
+        background: #6146ec;
+        color: #ffffff;
+        cursor: pointer;
+        height: 30px;
+        line-height: 30px;
+        position: absolute;
+        right: 15px;
+        text-align: center;
+        top: 3px;
+        width: 30px;
         display: block;
         font-size: 18px;
     }
@@ -283,7 +287,7 @@
 /* ---------------------------------------------
  * Sticker Text
  * --------------------------------------------- */
- .abcbiz-elementor-sticker-text-area {
+.abcbiz-elementor-sticker-text-area {
     position: relative;
     width: 100%;
     box-sizing: border-box;
@@ -292,7 +296,7 @@
 .abcbiz-sticker-contents-area {
     display: flex;
     width: 100%;
-    align-items: center; 
+    align-items: center;
 }
 
 .abcbiz-sticker-close-icon {
@@ -312,7 +316,7 @@
     font-size: 18px;
 }
 
-.abcbiz-sticker-btn a{
+.abcbiz-sticker-btn a {
     transition: all 0.4s;
 }
 
@@ -320,14 +324,24 @@
  * Image & Text Scroll
  * --------------------------------------------- */
 
- @keyframes abcbizltrscroll {
-    0% { transform: translateX(-100%); }
-    100% { transform: translateX(100%); }
+@keyframes abcbizltrscroll {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
 }
 
 @keyframes abcbizrtlscroll {
-    0% { transform: translateX(100%); }
-    100% { transform: translateX(-100%); }
+    0% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 .abcbiz-elementor-img-scroll-container {
@@ -367,138 +381,138 @@
 /* ---------------------------------------------
  * Animated Text
  * --------------------------------------------- */
- .abcbiz-elementor-anim-text-area .abcbiz-anim-text-headline {
+.abcbiz-elementor-anim-text-area .abcbiz-anim-text-headline {
     margin: 0;
     font-size: 30px;
     line-height: 1.2;
     color: #333;
- }
+}
 
 /* ---------------------------------------------
  * Count Down
  * --------------------------------------------- */
- #abcbizcountdisplay {
+#abcbizcountdisplay {
     margin: 20px;
     text-align: center;
-  }
-  
-  #abcbizcountdisplay #abcbizcounttime {
+}
+
+#abcbizcountdisplay #abcbizcounttime {
     font-size: 24px;
     margin-top: 10px;
-  }
-  
-  #abcbizcounttime {
+}
+
+#abcbizcounttime {
     display: flex;
     align-items: center;
-  }
-  
-  #abcbizcountexpired {
-      display: none;
-  }
-  
-  .abcbiz-count-down-single {
-      display: flex;
-      flex: 1;
-      background: #f1f1f1;
-      color: #000;
-  }  
+}
 
-  .abcbiz-expired-btn {
+#abcbizcountexpired {
+    display: none;
+}
+
+.abcbiz-count-down-single {
+    display: flex;
+    flex: 1;
+    background: #f1f1f1;
+    color: #000;
+}
+
+.abcbiz-expired-btn {
     margin-top: 10px;
-  }
+}
 
-  .abcbiz-expired-btn a{
+.abcbiz-expired-btn a {
     display: inline-block;
-  }
+}
 
 /* ---------------------------------------------
  * Card Info
  * --------------------------------------------- */
- .abcbiz-card-info-wrap {
+.abcbiz-card-info-wrap {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
-     }
+}
 
-    .abcbiz-card-style-two-area .abcbiz-card-info-wrap {
+.abcbiz-card-style-two-area .abcbiz-card-info-wrap {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    }
+}
 
-    .abcbiz-card-image {
+.abcbiz-card-image {
     position: relative;
     width: 100%;
-    }
+}
 
-    .abcbiz-card-image img {
+.abcbiz-card-image img {
     width: 100%;
     height: 100% !important;
     vertical-align: bottom;
     object-fit: cover;
-    }
+}
 
-    .abcbiz-card-style-two-area figure.abcbiz-card-image {
+.abcbiz-card-style-two-area figure.abcbiz-card-image {
     margin-bottom: 0 !important;
-    }
+}
 
-    .abcbiz-card-icon {
+.abcbiz-card-icon {
     position: relative;
     width: 100%;
-    }
+}
 
-    .abcbiz-card-icon i{
+.abcbiz-card-icon i {
     font-size: 100px;
-    }
+}
 
-    .abcbiz-card-icon svg{
+.abcbiz-card-icon svg {
     width: 100px;
     height: 100px;
-    }
+}
 
-    .abcbiz-badge {
+.abcbiz-badge {
     display: inline-block;
     position: absolute;
     bottom: -10px;
     right: 15px;
     z-index: 67;
     font-size: 12px;
-    }
+}
 
-    .abcbiz-card-content {
+.abcbiz-card-content {
     padding: 0 20px 20px 20px;
     flex: 1;
-    }
+}
 
-    h3.abcbiz-card-title {
+h3.abcbiz-card-title {
     font-size: 22px;
-        line-height: 1.2;
-    }
+    line-height: 1.2;
+}
 
-    .abcbiz-card-text p {
-        margin: 0;
-    }
+.abcbiz-card-text p {
+    margin: 0;
+}
 
-    .abcbiz-card-button {
-        display: flex;
-    }
+.abcbiz-card-button {
+    display: flex;
+}
 
-    .abcbiz-card-button a {
-        display: inline-block;
-        border: 1px solid #2f44eb;
-        transition: all 0.4s;
-    }
+.abcbiz-card-button a {
+    display: inline-block;
+    border: 1px solid #2f44eb;
+    transition: all 0.4s;
+}
 
-    .abcbiz-card-button i {
-        font-size: 16px;
-    }
+.abcbiz-card-button i {
+    font-size: 16px;
+}
 
-    .abcbiz-card-button svg {
-        width: 16px;
-        height: 16px;
-    }
+.abcbiz-card-button svg {
+    width: 16px;
+    height: 16px;
+}
 
-    span.abcbiz-btn-icon {
-        position: relative;
-    }
+span.abcbiz-btn-icon {
+    position: relative;
+}
 
 
 /* ---------------------------------------------
@@ -509,17 +523,18 @@
     text-align: center;
     padding: 40px 30px;
     padding-top: 30px;
-    transition: background-color 0.3s ease, border-radius 0.3s ease; 
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
 }
 
 .abcbiz-elementor-icon-box-icon {
-    position: relative;  
+    position: relative;
 }
 
 .abcbiz-elementor-icon-box {
     display: flex;
     flex-direction: column;
 }
+
 .abcbiz-ele-icon-box-hover {
     position: absolute;
     top: 50%;
@@ -558,7 +573,7 @@
     font-size: 15px;
     font-style: normal;
     font-weight: 400;
-    line-height: 26px;  
+    line-height: 26px;
     text-transform: capitalize;
     margin-bottom: 10px;
 }
@@ -599,11 +614,13 @@
     color: #448E08;
     background-color: #fff;
 }
+
 .abcbiz-single-icon-box-three-area {
     display: flex;
     align-items: center;
     gap: 10px;
 }
+
 .abcbiz-single-icon-box-three-area .abcbiz-single-icon-box-icons {
     position: relative;
 }
@@ -835,7 +852,7 @@ h4.abcbiz-ele-team-name a {
 }
 
 .abcbiz-ele-team-social svg {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
 ul.abcbiz-team-member-social-links li svg {
@@ -1079,11 +1096,13 @@ h3.abcbiz-style-three-team-name {
     margin-bottom: 15px;
 }
 
-.abcbiz-style-three-team-phone, .abcbiz-style-three-team-email {
+.abcbiz-style-three-team-phone,
+.abcbiz-style-three-team-email {
     font-size: 16px;
 }
 
-.abcbiz-style-three-team-phone svg, .abcbiz-style-three-team-email svg{
+.abcbiz-style-three-team-phone svg,
+.abcbiz-style-three-team-email svg {
     width: 18px;
     height: 18px;
     margin-right: 5px;
@@ -1096,7 +1115,7 @@ h3.abcbiz-style-three-team-name {
     list-style: none;
 }
 
-.abcbiz-style-three-team-icons ul li{
+.abcbiz-style-three-team-icons ul li {
     display: inline-block;
     margin: 0 7px 7px 0;
 }
@@ -1202,12 +1221,14 @@ h3.abcbiz-style-three-team-name {
     top: 40px;
     right: 65px;
 }
+
 .swiper.abcbiz-testimonial-slider {
     padding-bottom: 65px;
 }
+
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow {
     cursor: pointer;
-    border: 0; 
+    border: 0;
     position: absolute;
     top: 40%;
     z-index: 1;
@@ -1216,10 +1237,12 @@ h3.abcbiz-style-three-team-name {
     align-items: center;
     justify-content: center;
 }
+
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow.abcbiz-testimonial-arrow-right {
     right: -60px;
     outline: none;
 }
+
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow svg {
     width: 40px;
     height: 40px;
@@ -1228,35 +1251,41 @@ h3.abcbiz-style-three-team-name {
     fill: #fff;
     padding: 8px;
 }
+
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow.abcbiz-testimonial-arrow-right svg {
     transform: rotate(180deg);
 }
+
 .abcbiz-testimonial-slider-nav-bar button.abcbiz-testimonial-arrow.abcbiz-testimonial-arrow-left {
     left: -60px;
     outline: none;
 }
+
 .abcbiz-testimonial-slider .abcbiz-testimonial-arrow.slick-disabled,
-.abcbiz-testimonial-slider .abcbiz-testimonial-arrow.slick-disabled
-{
+.abcbiz-testimonial-slider .abcbiz-testimonial-arrow.slick-disabled {
     opacity: .25;
 }
+
 .abcbiz-testimonial-slider-nav-bar .abcbiz-testimonial-arrow:hover svg {
     background-color: #FFAB01;
     color: #fff;
     fill: #fff;
     transition: 0.3s ease;
 }
- .swiper-pagination.abcbiz-testimonial-slider-pagination{    
+
+.swiper-pagination.abcbiz-testimonial-slider-pagination {
     display: flex;
     justify-content: center;
 }
+
 .swiper-pagination.abcbiz-testimonial-slider-pagination .swiper-pagination-bullet {
     width: 10px;
     height: 10px;
     border-radius: 50%;
 }
+
 .swiper-pagination.abcbiz-testimonial-slider-pagination .swiper-pagination-bullet-active {
-    background-color:#448E08;
+    background-color: #448E08;
 }
 
 /*---------------------------
@@ -1404,12 +1433,14 @@ h3.abcbiz-style-three-team-name {
     position: relative;
     top: 4px;
 }
+
 .abcbiz-ele-pricing-table-body ul svg {
     width: 16px;
     height: 16px;
     position: relative;
     top: 4px;
 }
+
 .abcbiz-ele-pricing-table-footer {
     text-align: center;
     margin-left: 15px;
@@ -1435,7 +1466,7 @@ h3.abcbiz-style-three-team-name {
 }
 
 .abcbiz-ele-pricing-table-footer a {
-   gap:10px
+    gap: 10px
 }
 
 .abcbiz-ele-pricing-table-area:hover .abcbiz-ele-pricing-table-footer a {
@@ -1531,45 +1562,50 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-ele-pricing-table-area:hover .abcbiz-ep-recommended-left.abcbiz-ele-pricing-recommended:after {
     border-color: transparent transparent transparent #448E08;
 }
+
 /*-----------------------------
  * Pricing Standard
  * ----------------------------*/
- .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-table-header-area {
+.abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-table-header-area {
     background-color: #448E08;
     border-bottom: 10px solid #FE4D05;
 }
-.abcbiz-ele-pricing-table-type-standard  .abcbiz-ele-pricing-pack-name {
+
+.abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-name {
     position: unset;
 }
+
 .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {
     position: unset;
     padding-top: 30px;
     padding-bottom: 40px;
-    
+
 }
-.abcbiz-ele-pricing-table-type-standard  .abcbiz-ele-pricing-table-body {
+
+.abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-table-body {
     margin-top: 40px;
 }
+
 /*-----------------------------
  * ABC Shape
  * ----------------------------*/
- .abcbiz-shape-area .abcbiz-shape-image img {
+.abcbiz-shape-area .abcbiz-shape-image img {
     height: auto;
- }
+}
 
 
- /*-----------------------------
+/*-----------------------------
  * ABC Comment Form
  * ----------------------------*/
- .abcbiz-ele-comment-form .reply a {
+.abcbiz-ele-comment-form .reply a {
     padding: 7px 12px;
     border-radius: 4px;
- }
+}
 
- .abcbiz-ele-comment-form .form-submit input[type="submit"] {
+.abcbiz-ele-comment-form .form-submit input[type="submit"] {
     padding: 10px 20px;
     border-radius: 4px;
- }
+}
 
 
 /*----------------------------------------------
@@ -1619,6 +1655,7 @@ h3.abcbiz-style-three-team-name {
     height: 176px;
     object-fit: cover;
 }
+
 .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
     height: 176px;
 }
@@ -1772,10 +1809,11 @@ h3.abcbiz-style-three-team-name {
     font-size: 13px;
     letter-spacing: 2px;
     background-color: #2B35FF;
-    color:#fff;
+    color: #fff;
     padding: 5px 7px;
     border-radius: 4px;
 }
+
 .abc_skills_bar_percent_tooltip:after {
     width: 0px;
     height: 0px;
@@ -1789,15 +1827,16 @@ h3.abcbiz-style-three-team-name {
     left: 0;
     right: 0;
     margin: 0 auto;
- }
+}
 
 /* ---------------------------------------------
 * Tabs
 * --------------------------------------------- */
-.abcbiz-var-tabs .e-n-tabs-heading > button[aria-selected="true"] {
+.abcbiz-var-tabs .e-n-tabs-heading>button[aria-selected="true"] {
     position: relative;
 }
-.abcbiz-var-tabs .e-n-tabs-heading > button[aria-selected="true"]:after {
+
+.abcbiz-var-tabs .e-n-tabs-heading>button[aria-selected="true"]:after {
     content: '';
     display: block;
     width: 0px;
@@ -1813,7 +1852,8 @@ h3.abcbiz-style-three-team-name {
 /* ---------------------------------------------
 * Before After Image
 * --------------------------------------------- */
-#abcbiz-before-after-container .twentytwenty-handle:before, #abcbiz-before-after-container .twentytwenty-handle:after {
+#abcbiz-before-after-container .twentytwenty-handle:before,
+#abcbiz-before-after-container .twentytwenty-handle:after {
     box-shadow: none;
 }
 
@@ -1824,6 +1864,7 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-popup-trigger {
     cursor: pointer;
 }
+
 .abcbiz-popup-overlay {
     display: none;
     position: fixed;
@@ -1840,10 +1881,10 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-popup {
     position: relative;
     border-radius: 5px;
-    border: 10px solid #fff;    
-    max-width: 90%; 
-    width: 900px; 
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);    
+    border: 10px solid #fff;
+    max-width: 90%;
+    width: 900px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .abcbiz-popup-close {
@@ -1856,9 +1897,10 @@ h3.abcbiz-style-three-team-name {
 }
 
 .abcbiz-popup iframe {
-    width: 900; 
-    height: 506px; 
+    width: 900;
+    height: 506px;
 }
+
 .abcbiz-popup-close i {
     font-size: 24px;
     color: #333;
@@ -1876,21 +1918,22 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Shape
  * ---------------------------------------------*/
- .abcbiz-ele-shape {
-    width:200px;
-    height:200px; 
-    background-color: #448E08;  
- }
- .abcbiz-shape-circle.abcbiz-ele-shape {
-    border-radius: 100%;    
- }
+.abcbiz-ele-shape {
+    width: 200px;
+    height: 200px;
+    background-color: #448E08;
+}
+
+.abcbiz-shape-circle.abcbiz-ele-shape {
+    border-radius: 100%;
+}
 
 /*----------------------------------------------
  * ABC Section Title 
  * ---------------------------------------------*/
 .abcbiz-elementor-sec-title-divider {
     background: #458f0c;
-    display:  inline-block;
+    display: inline-block;
     position: relative;
     width: 50px;
 }
@@ -1904,24 +1947,25 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Post/page Title 
  * ---------------------------------------------*/
- .abcbiz-post-title-tag {
-  margin-top: 0;
-  margin-bottom: 0;
+.abcbiz-post-title-tag {
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 .abcbiz-page-title-tag {
     margin-top: 0;
     margin-bottom: 0;
-  }
+}
 
-  /*----------------------------------------------
+/*----------------------------------------------
  * ABC Post info Title 
  * ---------------------------------------------*/
- .abcbiz-ele-posted-on, .abcbiz-ele-posted-by {
+.abcbiz-ele-posted-on,
+.abcbiz-ele-posted-by {
     padding-right: 7px;
- }
+}
 
- .abcbiz-ele-post-tag ul {
+.abcbiz-ele-post-tag ul {
     margin: 0;
     padding: 0;
 
@@ -1930,20 +1974,21 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Archive Title 
  * ---------------------------------------------*/
- .abcbiz-archive-title-tag{
+.abcbiz-archive-title-tag {
     margin-top: 0;
     margin-bottom: 0;
 }
- /*----------------------------------------------
+
+/*----------------------------------------------
  * ABC Post Tag Info
  * ---------------------------------------------*/
-.abcbiz-ele-post-tag ul li{
+.abcbiz-ele-post-tag ul li {
     display: inline-block;
     margin-right: 10px;
     margin-bottom: 6px;
 }
 
-.abcbiz-ele-post-tag ul li a{
+.abcbiz-ele-post-tag ul li a {
     padding: 6px 9px;
     border-radius: 4px;
     transition: all .4s;
@@ -1951,11 +1996,11 @@ h3.abcbiz-style-three-team-name {
 
 }
 
- /*----------------------------------------------
+/*----------------------------------------------
  * ABC Author Bio
  * ---------------------------------------------*/
 
- .abcbiz-ele-author-bio {
+.abcbiz-ele-author-bio {
     display: flex;
     padding: 10px;
     column-gap: 20px;
@@ -1974,10 +2019,10 @@ h3.abcbiz-style-three-team-name {
 
 }
 
- /*----------------------------------------------
+/*----------------------------------------------
  * ABC Related Post
  * ---------------------------------------------*/
- .abcbiz-ele-related-post ul {
+.abcbiz-ele-related-post ul {
     list-style: none !important;
     margin: 0 !important;
     padding: 0;
@@ -1991,7 +2036,7 @@ h3.abcbiz-style-three-team-name {
     box-sizing: border-box;
     text-align: left;
     padding-right: 15px;
-    padding-bottom: 15px; 
+    padding-bottom: 15px;
 }
 
 .abcbiz-ele-related-post ul li:last-child {
@@ -2015,12 +2060,14 @@ h3.abcbiz-style-three-team-name {
 }
 
 
- /*----------------------------------------------
+/*----------------------------------------------
  * ABC Blog Grid
  * ---------------------------------------------*/
 
 .abcbiz-ele-four-column-blog,
-.abcbiz-ele-four-column-blog .abcbiz-ele-blog-item, .abcbiz-ele-three-column-blog, .abcbiz-ele-two-column-blog {
+.abcbiz-ele-four-column-blog .abcbiz-ele-blog-item,
+.abcbiz-ele-three-column-blog,
+.abcbiz-ele-two-column-blog {
     box-sizing: border-box;
 }
 
@@ -2034,16 +2081,17 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-ele-four-column-blog .abcbiz-ele-blog-item {
     box-sizing: border-box;
 }
+
 /* Three column blog area */
 .abcbiz-ele-three-column-blog {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap:40px 30px; 
+    gap: 40px 30px;
 }
 
 /* Blog item styling */
 .abcbiz-ele-blog-item {
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .abcbiz-ele-three-column-blog {
@@ -2115,7 +2163,7 @@ h3.abcbiz-style-three-team-name {
     transition: all 0.5s ease;
 }
 
-.abcbiz-ele-blog-more a:hover:after { 
+.abcbiz-ele-blog-more a:hover:after {
     left: 2%;
     margin-left: 0;
     width: 80%;
@@ -2144,7 +2192,8 @@ h3.abcbiz-style-three-team-name {
     transition: all 0.5s ease;
 }
 
-.abcbiz-ele-pagination-container .current, .abcbiz-ele-pagination-container a:hover {
+.abcbiz-ele-pagination-container .current,
+.abcbiz-ele-pagination-container a:hover {
     display: inline-block;
     padding: 6px 10px;
     margin: 0 5px;
@@ -2231,13 +2280,13 @@ h3.abcbiz-style-three-team-name {
     transition: all 0.5s ease;
 }
 
-.abcbiz-ele-blog-list-more a:hover:after { 
+.abcbiz-ele-blog-list-more a:hover:after {
     left: 2%;
     margin-left: 0;
     width: 80%;
 }
 
-.abcbiz-ele-blog-list-pagi-container{
+.abcbiz-ele-blog-list-pagi-container {
     display: block;
     margin-top: 20px;
     font-size: 14px;
@@ -2256,7 +2305,8 @@ h3.abcbiz-style-three-team-name {
     transition: all 0.5s ease;
 }
 
-.abcbiz-ele-blog-list-pagi-container .current, .abcbiz-ele-blog-list-pagi-container a:hover {
+.abcbiz-ele-blog-list-pagi-container .current,
+.abcbiz-ele-blog-list-pagi-container a:hover {
     display: inline-block;
     padding: 6px 10px;
     margin: 0 5px;
@@ -2269,37 +2319,37 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Social Share Icon
  * ---------------------------------------------*/
- .abcbiz-elementor-social-share-area ul {
+.abcbiz-elementor-social-share-area ul {
     margin: 0;
     padding: 0;
- }
+}
 
- .abcbiz-elementor-social-share-area ul li {
+.abcbiz-elementor-social-share-area ul li {
     display: inline-block;
     margin: 0 5px 8px 0;
     text-align: center;
     position: relative;
- }
+}
 
- .abcbiz-elementor-social-share-area ul li svg{
+.abcbiz-elementor-social-share-area ul li svg {
     position: relative;
- }
+}
 
- .abcbiz-elementor-social-share-area ul li a{ 
+.abcbiz-elementor-social-share-area ul li a {
     border-radius: 50%;
     display: inline-block;
- }
+}
 
 /*----------------------------------------------
  * ABC Blockquote
  * ---------------------------------------------*/
- .abcbiz-elementor-block-quote-area {
+.abcbiz-elementor-block-quote-area {
     width: 100%;
     position: relative;
     padding-left: 50px;
- }
+}
 
- .abcbiz-elementor-block-quote-area blockquote {
+.abcbiz-elementor-block-quote-area blockquote {
     width: 90%;
     margin: 0;
     font-size: 21px;
@@ -2308,26 +2358,26 @@ h3.abcbiz-style-three-team-name {
     font-weight: 300;
     position: relative;
     word-wrap: break-word;
- }
+}
 
- .abcbiz-elementor-block-quote-area blockquote:before {
+.abcbiz-elementor-block-quote-area blockquote:before {
     content: '';
     width: 0;
     height: 0;
- }
+}
 
- .abcbiz-elementor-block-quote-area .abcbiz-quote-icon {
+.abcbiz-elementor-block-quote-area .abcbiz-quote-icon {
     position: absolute;
     top: -15px;
     left: 0px;
- }
+}
 
- .abcbiz-elementor-block-quote-area .abcbiz-quote-icon svg { 
+.abcbiz-elementor-block-quote-area .abcbiz-quote-icon svg {
     width: 40px;
     height: 40px;
- }
+}
 
-  /*----------------------------------------------
+/*----------------------------------------------
  * ABC Contact Info & Social Icons
  * ---------------------------------------------*/
 .abcbiz-contact-info-address,
@@ -2380,7 +2430,7 @@ h3.abcbiz-style-three-team-name {
     margin-bottom: 0;
 }
 
-.abcbiz-contact-info-social-icons ul li svg{
+.abcbiz-contact-info-social-icons ul li svg {
     width: 20px;
     height: 20px;
     transition: all 0.4s;
@@ -2418,15 +2468,17 @@ h3.abcbiz-style-three-team-name {
     align-items: center;
 }
 
-.abcbiz-contact-info-inline .abcbiz-contact-info-address, .abcbiz-contact-info-inline .abcbiz-contact-info-mobile, .abcbiz-contact-info-inline .abcbiz-contact-info-email {
+.abcbiz-contact-info-inline .abcbiz-contact-info-address,
+.abcbiz-contact-info-inline .abcbiz-contact-info-mobile,
+.abcbiz-contact-info-inline .abcbiz-contact-info-email {
     display: flex;
     align-items: center;
 }
 
- /*----------------------------------------------
+/*----------------------------------------------
  * ABC Search Icon
  * ---------------------------------------------*/
- .abcbiz-ele-search-icon .abcbiz-search-icon-container {
+.abcbiz-ele-search-icon .abcbiz-search-icon-container {
     display: flex;
     align-items: center;
     position: relative;
@@ -2456,10 +2508,10 @@ h3.abcbiz-style-three-team-name {
 }
 
 .abcbiz-search-icon svg {
-  width: 30px;
-  height: 30px;
+    width: 30px;
+    height: 30px;
 }
- 
+
 /*----------------------------------------------
  * ABC Search Form
  * ---------------------------------------------*/
@@ -2468,12 +2520,12 @@ h3.abcbiz-style-three-team-name {
     box-sizing: border-box;
 }
 
-.abcbiz-ele-search-form form { 
+.abcbiz-ele-search-form form {
     width: 100%;
 }
 
 .abcbiz-ele-search-form input[type="text"] {
-    width: 70%; 
+    width: 70%;
     padding: 0 10px;
     border: 1px solid #053D58;
     box-sizing: border-box;
@@ -2501,9 +2553,9 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Recent Posts
  * ---------------------------------------------*/
- .abcbiz-ele-recent-post-item {
+.abcbiz-ele-recent-post-item {
     margin-bottom: 18px;
- }
+}
 
 .abcbiz-ele-recent-post-title {
     font-size: 18px;
@@ -2529,7 +2581,7 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Counter
  * ---------------------------------------------*/
- .abcbiz-ele-countdown-wrap .abcbiz-ele-counter {
+.abcbiz-ele-countdown-wrap .abcbiz-ele-counter {
     font-size: 40px;
     font-weight: 300;
 }
@@ -2548,7 +2600,7 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Dual Button
  * ---------------------------------------------*/
- .abcbiz-dual-button-area {
+.abcbiz-dual-button-area {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2570,21 +2622,26 @@ h3.abcbiz-style-three-team-name {
     background-color: rgb(98, 71, 237);
     padding: 15px 30px;
 }
-.abcbiz-dual-button-area .abcbiz-dual-button-one a{
+
+.abcbiz-dual-button-area .abcbiz-dual-button-one a {
     background-color: #1e73be;
-    border-radius: 50px 0 0 50px; 
+    border-radius: 50px 0 0 50px;
 }
+
 .abcbiz-dual-button-area .abcbiz-dual-button-one a:hover {
     background-color: #302EFF;
     color: #fff;
 }
-.abcbiz-dual-button-area .abcbiz-dual-button-two a{  
-    border-radius: 0 50px 50px 0;    
+
+.abcbiz-dual-button-area .abcbiz-dual-button-two a {
+    border-radius: 0 50px 50px 0;
 }
+
 .abcbiz-dual-button-area .abcbiz-dual-button-two a:hover {
     background-color: #8224e3;
     color: #fff;
 }
+
 .abcbiz-dual-button-area .abcbiz-dual-button a svg {
     width: 16px;
     height: 16px;
@@ -2618,7 +2675,7 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * Back to Top
  * ---------------------------------------------*/
- #abcbiz-back-to-top {
+#abcbiz-back-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -2655,43 +2712,47 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC Working Hours
  * ---------------------------------------------*/
- .abcbiz-business-hours-area ul {
+.abcbiz-business-hours-area ul {
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: column;
-    -webkit-box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
-    box-shadow: 0 0.2rem 2.8rem rgba(36,36,36,.1);
+    -webkit-box-shadow: 0 0.2rem 2.8rem rgba(36, 36, 36, .1);
+    box-shadow: 0 0.2rem 2.8rem rgba(36, 36, 36, .1);
     list-style: none;
     border-radius: 0 0 10px 10px;
     background: #fff;
 }
+
 .abcbiz-business-hours-area ul .abcbiz-business-hour-title {
     display: flex;
-    align-items: center;    
+    align-items: center;
     border: 0;
     background: #302EFF;
     text-align: center;
     border-radius: 5px 5px 0px 0px;
     padding: 30px;
-    color:#fff;
+    color: #fff;
     font-size: 20px;
 }
+
 .abcbiz-business-hours-area ul li.abcbiz-business-hour-item {
     padding: 30px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 0;    
+    border: 0;
     text-align: center;
     border-bottom: 1px solid #eaeaea;
     margin-left: 15px;
     margin-right: 15px;
 }
+
 .abcbiz-business-hours-area ul li.abcbiz-business-hour-item span {
-    color:#272727;
+    color: #272727;
     font-size: 15px;
 }
+
 .abcbiz-business-hours-area ul li.abcbiz-business-hour-item:last-child {
     border-bottom: 0;
 }
@@ -2699,36 +2760,59 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABC CSS Transform
  * ---------------------------------------------*/
- .abcbiz-css-transform-yes {
-    transform: translateX(var(--abcbiz-tfx-translate-x, 0)) translateY(var(--abcbiz-tfx-translate-y, 0))
-               rotateX(var(--abcbiz-tfx-rotate-x, 0)) rotateY(var(--abcbiz-tfx-rotate-y, 0)) rotateZ(var(--abcbiz-tfx-rotate-z, 0))
-               scaleX(var(--abcbiz-tfx-scale-x, 1)) scaleY(var(--abcbiz-tfx-scale-y, 1))
-               skewX(var(--abcbiz-tfx-skew-x, 0)) skewY(var(--abcbiz-tfx-skew-y, 0));
+.abcbiz-css-transform-yes {
+    transform: translateX(var(--abcbiz-tfx-translate-x, 0)) translateY(var(--abcbiz-tfx-translate-y, 0)) rotateX(var(--abcbiz-tfx-rotate-x, 0)) rotateY(var(--abcbiz-tfx-rotate-y, 0)) rotateZ(var(--abcbiz-tfx-rotate-z, 0)) scaleX(var(--abcbiz-tfx-scale-x, 1)) scaleY(var(--abcbiz-tfx-scale-y, 1)) skewX(var(--abcbiz-tfx-skew-x, 0)) skewY(var(--abcbiz-tfx-skew-y, 0));
 }
 
 .abcbiz-css-transform-yes:hover {
-    transform: translateX(var(--abcbiz-tfx-translate-x-hover, 0)) translateY(var(--abcbiz-tfx-translate-y-hover, 0))
-               rotateX(var(--abcbiz-tfx-rotate-x-hover, 0)) rotateY(var(--abcbiz-tfx-rotate-y-hover, 0)) rotateZ(var(--abcbiz-tfx-rotate-z-hover, 0))
-               scaleX(var(--abcbiz-tfx-scale-x-hover, 1)) scaleY(var(--abcbiz-tfx-scale-y-hover, 1))
-               skewX(var(--abcbiz-tfx-skew-x-hover, 0)) skewY(var(--abcbiz-tfx-skew-y-hover, 0));
+    transform: translateX(var(--abcbiz-tfx-translate-x-hover, 0)) translateY(var(--abcbiz-tfx-translate-y-hover, 0)) rotateX(var(--abcbiz-tfx-rotate-x-hover, 0)) rotateY(var(--abcbiz-tfx-rotate-y-hover, 0)) rotateZ(var(--abcbiz-tfx-rotate-z-hover, 0)) scaleX(var(--abcbiz-tfx-scale-x-hover, 1)) scaleY(var(--abcbiz-tfx-scale-y-hover, 1)) skewX(var(--abcbiz-tfx-skew-x-hover, 0)) skewY(var(--abcbiz-tfx-skew-y-hover, 0));
 }
+
 /*----------------------------------------------
  * ABC Gallery
  * ---------------------------------------------*/
- .abcbiz-photos-gallery {
+.abcbiz-photos-gallery {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 10px;
- }
+}
+
 .abcbiz-photos-gallery span {
     cursor: pointer;
 }
+
 .abcbiz-photos-gallery span img {
     max-width: 100%;
 }
-.abcbiz-photos-gallery-popup button.mfp-close:hover{
- background-color: transparent;
+
+.abcbiz-photos-gallery-popup button.mfp-close:hover {
+    background-color: transparent;
 }
-.abcbiz-photos-gallery-popup button.mfp-arrow, .abcbiz-photos-gallery-popup button.mfp-arrow:hover{
-background-color: transparent;
+
+.abcbiz-photos-gallery-popup button.mfp-arrow,
+.abcbiz-photos-gallery-popup button.mfp-arrow:hover {
+    background-color: transparent;
+}
+
+
+/*----------------------------------------------
+ * ABCBiz Mailchimp
+ * ---------------------------------------------*/
+.abcbiz-mailchimp-single-form {
+    display: flex;
+    gap: 15px;
+}
+
+#abcbiz-mailchimp-form input {
+    padding: 15px;
+}
+
+#abcbiz-mailchimp-form #abcbiz-mailchimp-email {
+    flex-basis: 75%;
+}
+
+#abcbiz-mailchimp-form #abcbiz-mailchimp-submit {
+    flex-basis: 25%;
+    background-color: crimson;
+    color: #fff;
 }
