@@ -187,6 +187,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 	
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGallery\Main::class;
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCMailChimp\Main::class;
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGravityForms\Main::class;
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
