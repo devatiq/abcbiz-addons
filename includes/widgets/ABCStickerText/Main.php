@@ -519,7 +519,7 @@ class Main extends BaseWidget {
 					'size' => 30,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-sticker-close-icon' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-sticker-close-icon svg' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
@@ -532,7 +532,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::COLOR,
 				'default' => '#3544ec',
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-sticker-close-icon' => 'color: {{VALUE}}',
+					'{{WRAPPER}} .abcbiz-sticker-close-icon svg' => 'fill: {{VALUE}}',
 				],
 			]
 		);

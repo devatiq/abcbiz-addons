@@ -320,6 +320,13 @@
     transition: all 0.4s;
 }
 
+.abcbiz-sticker-close-icon svg {
+    fill: #fff;
+    width:15px;
+    height: 15px;
+}
+
+
 /* ---------------------------------------------
  * Image & Text Scroll
  * --------------------------------------------- */
