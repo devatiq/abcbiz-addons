@@ -42,12 +42,12 @@ class Main extends \Elementor\Widget_Base
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
-    
+
         // Check if Gravity Forms is active
         if (class_exists('GFAPI')) {
             $forms = \GFAPI::get_forms();
             $options = [];
-    
+
             // Populate the options array with form id and title
             if (!empty($forms)) {
                 foreach ($forms as $form) {
@@ -77,18 +77,77 @@ class Main extends \Elementor\Widget_Base
                     'content_classes' => 'elementor-panel-alert elementor-panel-alert-danger',
                 ]
             );
-            
+
         }
-    
+        // Display form title
+        $this->add_control(
+            'display_title',
+            [
+                'label' => esc_html__('Display Form Title', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+            ]
+        );
+
+        // Display form description
+        $this->add_control(
+            'display_description',
+            [
+                'label' => esc_html__('Display Form Description', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+            ]
+        );
+
+        // Enable AJAX
+        $this->add_control(
+            'enable_ajax',
+            [
+                'label' => esc_html__('Enable AJAX', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        // Custom field values (optional)
+        $this->add_control(
+            'field_values',
+            [
+                'label' => esc_html__('Field Values (Optional)', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => '',
+                'description' => esc_html__('Pre-populate form fields with specific values (optional).', 'abcbiz-addons'),
+            ]
+        );
+
+        // Tab index (optional)
+        $this->add_control(
+            'tabindex',
+            [
+                'label' => esc_html__('Tab Index', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'default' => 1,
+                'description' => esc_html__('Set a specific tab index for the form fields (optional).', 'abcbiz-addons'),
+            ]
+        );
         $this->end_controls_section();
     }
-    
-    
 
-  
+
+
+
     protected function render()
     {
-        
+
         // Check if Gravity Forms is active
         if (class_exists('GFAPI')) {
             // Render the Gravity Forms output as usual
@@ -99,7 +158,7 @@ class Main extends \Elementor\Widget_Base
             echo '<strong>' . esc_html__('Gravity Forms is missing! Please install and activate Gravity Forms.', 'abcbiz-addons') . '</strong>';
             echo '</div>';
         }
-        
-    }    
-    
+
+    }
+
 }
