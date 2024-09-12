@@ -60,7 +60,7 @@ function abcbiz_multi_excerpt_metabox_content($post) {
 }
 
 //WooCommerce Check
-if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) ) {
+if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) && 1 == get_option('abcbiz_wc_product_tabs_field')) {
     // Product Description Meta Box
     function abcbiz_add_wc_product_meta_box() {
         add_meta_box(

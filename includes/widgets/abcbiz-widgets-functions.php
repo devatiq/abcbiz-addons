@@ -6,7 +6,9 @@ if (!defined('ABSPATH'))
 //WooCommerce Code
 if (class_exists('WooCommerce') && function_exists('wc_get_product')) {
     // Overwrite Description Tabs
-    add_filter('woocommerce_product_tabs', 'abcbiz_override_description_tab', 98);
+    if (get_option('abcbiz_wc_product_tabs_field') == 1) {
+        add_filter('woocommerce_product_tabs', 'abcbiz_override_description_tab', 98);
+    }
     function abcbiz_override_description_tab($tabs)
     {
         if (isset($tabs['description'])) {
