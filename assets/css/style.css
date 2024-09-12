@@ -2820,7 +2820,7 @@ h3.abcbiz-style-three-team-name {
 /*----------------------------------------------
  * ABCBiz Gravity Form
  * ---------------------------------------------*/
- .gravity-forms-missing-notice {
+.gravity-forms-missing-notice {
     margin: 1.5rem 0;
     padding: 1.25rem 1.5rem;
     border-left: 4px solid #d39e00;
@@ -2831,4 +2831,5 @@ h3.abcbiz-style-three-team-name {
     line-height: 1.6;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    font-weight: 400;
 }

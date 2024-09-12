@@ -49,10 +49,13 @@ class Main extends \Elementor\Widget_Base
             $options = [];
     
             // Populate the options array with form id and title
-            foreach ($forms as $form) {
-                $options[$form['id']] = $form['title'];
+            if (!empty($forms)) {
+                foreach ($forms as $form) {
+                    $options[$form['id']] = $form['title'];
+                }
+            } else {
+                $options[0] = esc_html__('No forms available', 'abcbiz-addons');
             }
-    
             // Add control for Gravity Forms selection
             $this->add_control(
                 'abcbiz_gf_form_id',
