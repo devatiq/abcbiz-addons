@@ -3,6 +3,11 @@
 namespace ABCBiz\Includes\Widgets\ABCGravityForms;
 
 use Elementor\Controls_Manager;
+use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
+use Elementor\Group_Control_Background;
+
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
@@ -35,6 +40,8 @@ class Main extends \Elementor\Widget_Base
 
     protected function register_controls()
     {
+
+        // Section for Gravity Forms
         $this->start_controls_section(
             'abcbiz_gravity_form_section',
             [
@@ -115,6 +122,7 @@ class Main extends \Elementor\Widget_Base
                 'label_off' => esc_html__('No', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
+                'description' => esc_html__('Enable AJAX for the form submission.', 'abcbiz-addons'),
             ]
         );
 
@@ -139,7 +147,122 @@ class Main extends \Elementor\Widget_Base
                 'description' => esc_html__('Set a specific tab index for the form fields (optional).', 'abcbiz-addons'),
             ]
         );
-        $this->end_controls_section();
+        $this->end_controls_section(); // End Section for Gravity Forms
+
+        
+        // Style Section for General
+        $this->start_controls_section(
+            'section_general_style',
+            [
+                'label' => esc_html__('General', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+      //wrapper background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'general_container_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper'
+            ]
+        );
+
+        //wrapper padding
+        $this->add_responsive_control(
+            'general_container_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //wrapper border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'general_container_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper'
+            ]
+        );
+
+        //wrapper border radius
+        $this->add_control(
+            'general_container_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //wrapper box shadow      
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'general_container_box_shadow',
+                'label' => esc_html__('Box Shadow', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper',
+            ]
+        );
+
+        //title typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'title_typography',
+                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_title',
+            ]
+        );
+
+        //title color
+        $this->add_control(
+            'title_color',
+            [
+                'label' => esc_html__('Title Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_title' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //description typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'description_typography',
+                'label' => esc_html__('Description Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_description',
+            ]
+        );
+
+        //description color
+        $this->add_control(
+            'description_color',
+            [
+                'label' => esc_html__('Description Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_description' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section();// End Style Section for General
+
+
     }
 
 
