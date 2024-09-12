@@ -147,6 +147,21 @@ class Main extends \Elementor\Widget_Base
                 'description' => esc_html__('Set a specific tab index for the form fields (optional).', 'abcbiz-addons'),
             ]
         );
+
+        // Hide label
+        $this->add_control(
+            'hide_label',
+            [
+                'label' => esc_html__('Hide Form Label', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+                'description' => esc_html__('Hide the form label.', 'abcbiz-addons'),
+            ]
+        );
+
         $this->end_controls_section(); // End Section for Gravity Forms
 
         
@@ -261,6 +276,42 @@ class Main extends \Elementor\Widget_Base
         );
 
         $this->end_controls_section();// End Style Section for General
+
+        // Start Style Section for input fields labels
+        $this->start_controls_section(
+            'section_style_input_labels',
+            [
+                'label' => esc_html__('Input Fields Labels', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'hide_label!' => 'yes',
+                ],
+            ]
+        );
+
+        //label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'label_typography',
+                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_label',
+            ]
+        );
+
+        //label color
+        $this->add_control(
+            'label_color',
+            [
+                'label' => esc_html__('Label Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_label' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End Style Section for input fields labels
 
 
     }

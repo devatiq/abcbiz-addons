@@ -16,9 +16,12 @@ $enable_ajax = isset($settings['enable_ajax']) && $settings['enable_ajax'] === '
 $field_values = isset($settings['field_values']) ? $settings['field_values'] : '';
 $tabindex = isset($settings['tabindex']) ? $settings['tabindex'] : 1;
 
+$label_hide = isset($settings['hide_label']) && $settings['hide_label'] === 'yes' ? 'abcbiz-gravity-form-label-hide' : '';
+
+
 ?>
 
-<div class="abcbiz-gravity-form-wrapper">
+<div class="abcbiz-gravity-form-wrapper <?php echo esc_attr($label_hide); ?>">
     <?php
     if (!empty($form_id)) {
         // Check if the form exists and if it's active
