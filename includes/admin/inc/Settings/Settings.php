@@ -32,29 +32,43 @@ class SettingsPage {
      * Register settings, sections, and fields.
      */
     public function register_settings() {
+        // Register Mailchimp settings as before
         register_setting(
-            'abcbiz_mailchimp_options', // Option group
-            'abcbiz_mailchimp_options', // Option name
-            [$this, 'sanitize'] // Sanitize callback
+            'abcbiz_mailchimp_options', 
+            'abcbiz_mailchimp_options', 
+            [$this, 'sanitize']
         );
-
+    
         add_settings_section(
-            'mailchimp_settings_section', // ID
-            __('Mailchimp API Settings', 'abcbiz-addons'), // Title
-            [$this, 'section_info'], // Callback
-            'abcbiz_mailchimp_settings' // Page
+            'mailchimp_settings_section',
+            __('Mailchimp API Settings', 'abcbiz-addons'), 
+            [$this, 'section_info'], 
+            'abcbiz_mailchimp_settings'
         );
-
+    
         add_settings_field(
-            'mailchimp_api_key', // ID
-            __('API Key', 'abcbiz-addons'), // Title 
-            [$this, 'mailchimp_api_key_callback'], // Callback
-            'abcbiz_mailchimp_settings', // Page
-            'mailchimp_settings_section' // Section           
+            'mailchimp_api_key', 
+            __('API Key', 'abcbiz-addons'), 
+            [$this, 'mailchimp_api_key_callback'], 
+            'abcbiz_mailchimp_settings', 
+            'mailchimp_settings_section'
         );
-
-        
+    
+        // Register General settings
+        register_setting(
+            'abcbiz_general_options', 
+            'abcbiz_general_options', 
+            [$this, 'sanitize_general'] // Sanitize callback for general options
+        );
+    
+        add_settings_section(
+            'general_settings_section', 
+            __('General Settings', 'abcbiz-addons'), 
+            [$this, 'general_section_info'], 
+            'abcbiz_general_settings'
+        );
     }
+    
 
     /**
      * Add custom styles to the admin header.
@@ -101,6 +115,10 @@ class SettingsPage {
         echo '<p class="description">' . sprintf(__('Enter your Mailchimp API Key. You can get it %shere%s.', 'abcbiz-addons'), '<a href="https://us6.admin.mailchimp.com/account/api/" target="_blank">', '</a>') . '</p>';
     }
 
+    // General section 
+    public function general_section_info() {
+        echo __('General settings for the ABC Biz plugin.', 'abcbiz-addons');
+    }
     
 
     /**
