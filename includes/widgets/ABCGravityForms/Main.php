@@ -835,6 +835,204 @@ class Main extends \Elementor\Widget_Base
 
         $this->end_controls_section(); //End Style Section for Section Break
 
+        //Style Section for Page Break
+        $this->start_controls_section(
+            'section_style_page_break',
+            [
+                'label' => esc_html__('Page Break', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //Progressbar Color
+        $this->add_control(
+            'progressbar_color',
+            [
+                'label' => esc_html__('Progressbar Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gf_progressbar' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Active Progressbar Color
+        $this->add_control(
+            'active_progressbar_color',
+            [
+                'label' => esc_html__('Active Progressbar Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gf_progressbar .percentbar_blue' => 'background-color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Step Color
+        $this->add_control(
+            'page_break_step_color',
+            [
+                'label' => esc_html__('Step Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gf_progressbar_title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Step Typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'page_break_step_typography',
+                'label' => esc_html__('Step Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gf_progressbar_title',
+            ]
+        );
+
+        //Button Border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'page_break_button_border',
+                'label' => esc_html__('Button Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button',
+            ]
+        );
+
+        //Button Border Radius
+        $this->add_responsive_control(
+            'page_break_button_border_radius',
+            [
+                'label' => esc_html__('Button Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //Button Width
+        $this->add_responsive_control(
+            'page_break_button_width',
+            [
+                'label' => esc_html__('Button Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        
+        //Button Padding
+        $this->add_responsive_control(
+            'page_break_button_padding',
+            [
+                'label' => esc_html__('Button Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+        
+
+        //Button Typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'page_break_button_typography',
+                'label' => esc_html__('Button Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button',
+            ]
+        );
+
+        //Button Normal and Hover Tabs
+        $this->start_controls_tabs('page_break_button_tabs');
+
+        $this->start_controls_tab(
+            'page_break_button_normal_tab',
+            [
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
+            ]
+        );
+  
+        $this->add_control(
+            'page_break_button_normal_text_color',
+            [
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //Button Background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'page_break_button_background',
+                'label' => esc_html__('Button Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button',
+            ]
+        );        
+
+        $this->end_controls_tab(); //End Normal Tab
+
+
+
+        //Button Hover
+        $this->start_controls_tab(
+            'page_break_button_hover_tab',
+            [
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
+            ]
+        );
+        //Button Hover Text Color
+        $this->add_control(
+            'page_break_button_hover_text_color',
+            [
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //Button Hover Background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'page_break_button_hover_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button:hover',
+            ]
+        );
+
+        $this->end_controls_tab();
+        $this->end_controls_tabs();
+        
+
+        $this->end_controls_section(); //End Style Section for Page Break
 
     }
 
