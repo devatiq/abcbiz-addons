@@ -71,25 +71,24 @@ class SettingsPage
     /**
      * Render the settings page with tabs.
      */
-    public function render_settings_page()
-    {
+    public function render_settings_page() {
         $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'general';
         ?>
         <div class="wrap">
             <h1><?php _e('ABC Biz Settings', 'abcbiz-addons'); ?></h1>
-
+    
             <h2 class="nav-tab-wrapper">
                 <a href="?page=abcbiz_settings&tab=general"
                     class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php _e('General', 'abcbiz-addons'); ?></a>
                 <a href="?page=abcbiz_settings&tab=mailchimp"
                     class="nav-tab <?php echo $active_tab == 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php _e('Mailchimp', 'abcbiz-addons'); ?></a>
             </h2>
-
+    
+            <!-- Display settings errors and success messages -->
+            <?php settings_errors(); ?>
+    
             <form method="post" action="options.php">
                 <?php
-               
-
-                // Check if the active tab is 'general'
                 if ($active_tab == 'general') {
                     // General settings content
                     settings_fields('abcbiz_general_options');
@@ -99,16 +98,15 @@ class SettingsPage
                     settings_fields('abcbiz_mailchimp_options');
                     do_settings_sections('abcbiz_mailchimp_settings');
                 }
-
+    
                 // Add nonce field for security
                 wp_nonce_field('abcbiz_save_settings', 'abcbiz_nonce');
-
-                // Submit button
+                
                 submit_button();
                 ?>
             </form>
-
         </div>
         <?php
     }
+    
 }
