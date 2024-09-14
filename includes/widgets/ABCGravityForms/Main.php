@@ -195,6 +195,7 @@ class Main extends \Elementor\Widget_Base
                 'name' => 'general_container_background',
                 'label' => esc_html__('Background', 'abcbiz-addons'),
                 'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper'
             ]
         );
@@ -367,6 +368,18 @@ class Main extends \Elementor\Widget_Base
                 ],
                 'condition' => [
                     'hide_sub_label!' => 'yes', 
+                ],
+            ]
+        );
+
+        //required sign color
+        $this->add_control(
+            'required_sign_color',
+            [
+                'label' => esc_html__('Required Sign Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_required' => 'color: {{VALUE}};',
                 ],
             ]
         );
