@@ -79,9 +79,9 @@ class SettingsPage
     
             <h2 class="nav-tab-wrapper">
                 <a href="?page=abcbiz_settings&tab=general"
-                    class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php _e('General', 'abcbiz-addons'); ?></a>
+                    class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('General', 'abcbiz-addons'); ?></a>
                 <a href="?page=abcbiz_settings&tab=mailchimp"
-                    class="nav-tab <?php echo $active_tab == 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php _e('Mailchimp', 'abcbiz-addons'); ?></a>
+                    class="nav-tab <?php echo $active_tab == 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Mailchimp', 'abcbiz-addons'); ?></a>
             </h2>
     
             <!-- Display settings errors and success messages -->
