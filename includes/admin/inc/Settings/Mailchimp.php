@@ -43,12 +43,18 @@ class Mailchimp {
 
     // Sanitize Mailchimp settings
     public function sanitize($input) {
+        // Verify nonce before saving settings
+        if (!isset($_POST['abcbiz_nonce']) || !wp_verify_nonce($_POST['abcbiz_nonce'], 'abcbiz_save_settings')) {
+            wp_die(__('Nonce verification failed', 'abcbiz-addons'));
+        }
+    
         $new_input = array();
         if (isset($input['mailchimp_api_key'])) {
             $new_input['mailchimp_api_key'] = sanitize_text_field($input['mailchimp_api_key']);
         }
         return $new_input;
     }
+    
 
     // Mailchimp API key field
     public function mailchimp_api_key_callback() {

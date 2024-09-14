@@ -87,6 +87,9 @@ class SettingsPage
 
             <form method="post" action="options.php">
                 <?php
+               
+
+                // Check if the active tab is 'general'
                 if ($active_tab == 'general') {
                     // General settings content
                     settings_fields('abcbiz_general_options');
@@ -96,9 +99,15 @@ class SettingsPage
                     settings_fields('abcbiz_mailchimp_options');
                     do_settings_sections('abcbiz_mailchimp_settings');
                 }
+
+                // Add nonce field for security
+                wp_nonce_field('abcbiz_save_settings', 'abcbiz_nonce');
+
+                // Submit button
                 submit_button();
                 ?>
             </form>
+
         </div>
         <?php
     }

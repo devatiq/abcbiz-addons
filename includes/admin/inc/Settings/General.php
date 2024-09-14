@@ -32,8 +32,14 @@ class General {
 
     // Sanitize General settings
     public function sanitize($input) {
+        // Verify nonce before saving settings
+        if (!isset($_POST['abcbiz_nonce']) || !wp_verify_nonce($_POST['abcbiz_nonce'], 'abcbiz_save_settings')) {
+            wp_die(__('Nonce verification failed', 'abcbiz-addons'));
+        }
+    
         $new_input = array();
-        // Add sanitization logic for general options here
+        // Add sanitization logic for general options
         return $new_input;
     }
+    
 }
