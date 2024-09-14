@@ -717,6 +717,124 @@ class Main extends \Elementor\Widget_Base
 
         $this->end_controls_section(); // End Style Section for submit button
 
+        //Style Section for Section Break
+        $this->start_controls_section(
+            'section_break_style_section',
+            [
+                'label' => esc_html__('Section Break', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //Section Break Border Color
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'section_break_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section',
+            ]
+        );
+
+        
+        //Section Break Border
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'section_break_box_shadow',
+                'label' => esc_html__('Box Shadow', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section',
+            ]
+        );
+        
+
+        //Section Break Border Radius
+        $this->add_responsive_control(
+            'section_break_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                ],
+            ]
+        );
+        
+        
+        //Section Break Margin
+        $this->add_responsive_control(
+            'section_break_margin',
+            [
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
+                ],
+            ]
+        );
+
+        //Section Break Padding
+        $this->add_control(
+            'section_break_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //Section Break Title Color
+        $this->add_control(
+            'section_break_title_color',
+            [
+                'label' => esc_html__('Title Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gsection_title' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Section Break Title Typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'section_break_title_typography',
+                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gsection_title',
+            ]
+        );
+
+        //Section Break Description Color
+        $this->add_control(
+            'section_break_description_color',
+            [
+                'label' => esc_html__('Description Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gsection_description' => 'color: {{VALUE}}',
+                ],
+            ]
+        );
+
+        //Section Break Description Typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'section_break_description_typography',
+                'label' => esc_html__('Description Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gsection_description',
+            ]
+        );
+  
+
+        $this->end_controls_section(); //End Style Section for Section Break
+
 
     }
 
