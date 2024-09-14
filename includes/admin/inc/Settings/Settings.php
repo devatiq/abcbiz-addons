@@ -75,7 +75,7 @@ class SettingsPage
         $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'general';
         ?>
         <div class="wrap">
-            <h1><?php _e('ABC Biz Settings', 'abcbiz-addons'); ?></h1>
+            <h1><?php _e('ABCBiz Addons Settings', 'abcbiz-addons'); ?></h1>
     
             <h2 class="nav-tab-wrapper">
                 <a href="?page=abcbiz_settings&tab=general"
