@@ -373,6 +373,83 @@ class Main extends \Elementor\Widget_Base
 
         $this->end_controls_section(); // End Style Section for input fields labels
 
+        //start form fields style section
+        $this->start_controls_section(
+            'form_fields_style_section',
+            [
+                'label' => esc_html__('Input Fields', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //input fields width
+        $this->add_responsive_control(
+            'form_fields_width',
+            [
+                'label' => esc_html__('Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //input fields typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'form_fields_typography',
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea',
+            ]
+        );
+
+        //input fields background color
+        $this->add_control(
+            'form_fields_background_color',
+            [
+                'label' => esc_html__('Background Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'form_fields_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'form_fields_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End Style Section for form fields
+
 
     }
 
