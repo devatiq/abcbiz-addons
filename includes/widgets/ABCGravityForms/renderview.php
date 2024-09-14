@@ -18,10 +18,12 @@ $tabindex = isset($settings['tabindex']) ? $settings['tabindex'] : 1;
 
 $label_hide = isset($settings['hide_label']) && $settings['hide_label'] === 'yes' ? 'abcbiz-gravity-form-label-hide' : '';
 
+$hide_sub_label = isset($settings['hide_sub_label']) && $settings['hide_sub_label'] === 'yes' ? 'abcbiz-gravity-form-sub-label-hide' : '';
+
 
 ?>
 
-<div class="abcbiz-gravity-form-wrapper <?php echo esc_attr($label_hide); ?>">
+<div class="abcbiz-gravity-form-wrapper <?php echo esc_attr($label_hide); ?> <?php echo esc_attr($hide_sub_label); ?>">
     <?php
     if (!empty($form_id)) {
         // Check if the form exists and if it's active

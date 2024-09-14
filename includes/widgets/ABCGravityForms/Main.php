@@ -162,6 +162,20 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        //hide sub label
+        $this->add_control(
+            'hide_sub_label',
+            [
+                'label' => esc_html__('Hide Form Sub-Label', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'no',
+                'description' => esc_html__('Hide the form sub-label.', 'abcbiz-addons'),
+            ]
+        );
+
         $this->end_controls_section(); // End Section for Gravity Forms
 
         
@@ -283,8 +297,20 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => esc_html__('Input Fields Labels', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
-                'condition' => [
-                    'hide_label!' => 'yes',
+                'conditions' => [
+                    'relation' => 'or',
+                    'terms' => [
+                        [
+                            'name' => 'hide_label',
+                            'operator' => '!==',
+                            'value' => 'yes',
+                        ],
+                        [
+                            'name' => 'hide_sub_label',
+                            'operator' => '!==',
+                            'value' => 'yes',
+                        ],
+                    ],                  
                 ],
             ]
         );
@@ -294,8 +320,11 @@ class Main extends \Elementor\Widget_Base
             Group_Control_Typography::get_type(),
             [
                 'name' => 'label_typography',
-                'label' => esc_html__('Label Typography', 'abcbiz-addons'),
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
                 'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_label',
+                'condition' => [
+                    'hide_label!' => 'yes',
+                ]
             ]
         );
 
@@ -303,10 +332,41 @@ class Main extends \Elementor\Widget_Base
         $this->add_control(
             'label_color',
             [
-                'label' => esc_html__('Label Color', 'abcbiz-addons'),
+                'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_label' => 'color: {{VALUE}};',
+                ],
+                'condition' => [
+                    'hide_label!' => 'yes',
+                ],
+            ]
+        );
+
+        //sub label typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'sub_label_typography',
+                'label' => esc_html__('Sub Label Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform-field-label:not(.gfield_label)',
+                'condition' => [
+                    'hide_sub_label!' => 'yes', 
+                ],
+            ]
+        );
+
+        //sub label color
+        $this->add_control(
+            'sub_label_color',
+            [
+                'label' => esc_html__('Sub Label Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform-field-label:not(.gfield_label)' => 'color: {{VALUE}};',
+                ],
+                'condition' => [
+                    'hide_sub_label!' => 'yes', 
                 ],
             ]
         );

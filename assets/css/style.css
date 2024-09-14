@@ -2844,3 +2844,6 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-gravity-form-label-hide .gfield_label {
     display: none !important;
 }
+.abcbiz-gravity-form-sub-label-hide .gform-field-label:not(.gfield_label) {
+    display: none !important;
+}
