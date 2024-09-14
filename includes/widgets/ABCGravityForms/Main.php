@@ -386,7 +386,7 @@ class Main extends \Elementor\Widget_Base
         $this->add_responsive_control(
             'form_fields_width',
             [
-                'label' => esc_html__('Width', 'abcbiz-addons'),
+                'label' => esc_html__('Large Field Width', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -400,7 +400,29 @@ class Main extends \Elementor\Widget_Base
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'width: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input.large:not([type="submit"])' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+        //input fields width
+        $this->add_responsive_control(
+            'form_fields_textarea_width',
+            [
+                'label' => esc_html__('Textarea Field Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'width: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -427,6 +449,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        //input fields border
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -436,6 +459,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        //input fields border radius
         $this->add_responsive_control(
             'form_fields_border_radius',
             [
@@ -448,7 +472,250 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        //input fields padding
+        $this->add_responsive_control(
+            'form_fields_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper input:not([type="submit"]), {{WRAPPER}} .abcbiz-gravity-form-wrapper textarea' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //input fields gap
+        $this->add_responsive_control(
+            'form_fields_gap',
+            [
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%', 'em'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_fields' => 'gap: {{SIZE}}{{UNIT}} !important;',
+                ],
+            ]
+        );
         $this->end_controls_section(); // End Style Section for form fields
+
+
+        // Start Style Section for submit button
+        $this->start_controls_section(
+            'abcbiz_gravity_form_submit_button_style',
+            [
+                'label' => esc_html__('Submit Button', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //submit button typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'button_typography',
+                'label' => esc_html__('Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button',
+            ]
+        );
+
+        //submit button width
+        $this->add_responsive_control(
+            'button_width',
+            [
+                'label' => esc_html__('Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'em', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 50,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        //submit button padding
+        $this->add_responsive_control(
+            'button_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        //submit button border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'button_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button',
+            ]
+        );
+
+
+        //submit button border radius
+        $this->add_responsive_control(
+            'button_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //submit button position
+        $this->add_responsive_control(
+            'button_position',
+            [
+                'label' => esc_html__('Button Position', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'left' => [
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'right' => [
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'default' => 'center',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer' => 'justify-content: {{VALUE}};',
+                ],
+            ]
+        );
+
+
+        //submit button margin
+        $this->add_responsive_control(
+            'button_margin',
+            [
+                'label' => esc_html__('Margin', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', 'em', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        //submit button box shadow
+        $this->add_group_control(
+            Group_Control_Box_Shadow::get_type(),
+            [
+                'name' => 'button_box_shadow',
+                'label' => esc_html__('Box Shadow', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button',
+            ]
+        );
+
+        // Start Style tabs
+        $this->start_controls_tabs('button_tabs');
+
+        // Start Normal tab
+        $this->start_controls_tab('button_normal_tab', [
+            'label' => esc_html__('Normal', 'abcbiz-addons'),
+        ]);
+
+        //submit button text color
+        $this->add_control(
+            'button_text_color',
+            [
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //submit button background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'button_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button',
+            ]
+        );
+
+        $this->end_controls_tab();// end:Normal
+
+        // Hover
+        $this->start_controls_tab('button_hover_tab', [
+            'label' => esc_html__('Hover', 'abcbiz-addons'),
+        ]);
+
+        //submit button hover text color
+        $this->add_control(
+            'button_hover_text_color',
+            [
+                'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        //submit button hover background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'button_hover_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gform_footer input.gform_button:hover',
+            ]
+        );
+
+        $this->end_controls_tab();// end:Hover
+
+        $this->end_controls_tabs(); // end tabs
+
+        $this->end_controls_section(); // End Style Section for submit button
 
 
     }
