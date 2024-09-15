@@ -1,15 +1,15 @@
-=== ABCBiz Multi Addons for Elementor ===
+=== ABCBiz Addons and Templates for Elementor ===
 Plugin Name: ABCBiz Addons and Templates for Elementor
-Version: 1.0.8
+Version: 1.0.9
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, Elementor Builder
-Requires at least: 6.0  
+Requires at least: 5.4  
 Tested up to: 6.6.1  
-Stable tag: 1.0.8  
-Requires PHP: 7.4
+Stable tag: 1.0.9  
+Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
