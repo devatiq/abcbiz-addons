@@ -10,7 +10,7 @@ class ABCBizMultiElementorPack
 	 * plugin Version
 	 */ 
 
-	public $version = '1.0.8';
+	public $version = '1.0.9';
 
 	/**
 	 * Minimum Elementor Version
@@ -92,7 +92,7 @@ class ABCBizMultiElementorPack
 	public function setConstants()
 	{
 		define('ABCBIZ_Version', $this->version);
-		define('ABCBIZ_Name', esc_html__('ABCBiz Multi Addons For Elementor', 'abcbiz-addons'));
+		define('ABCBIZ_Name', esc_html__('ABCBiz Addons and Templates for Elementor', 'abcbiz-addons'));
 		
 	}
 
