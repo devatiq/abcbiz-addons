@@ -2,13 +2,14 @@
 
 namespace ABCBIZ;
 
- if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+	exit; // Exit if accessed directly
 
 class ABCBizMultiElementorPack
 {
 	/**
 	 * plugin Version
-	 */ 
+	 */
 
 	public $version = '1.0.9';
 
@@ -38,7 +39,7 @@ class ABCBizMultiElementorPack
 		}
 		return self::$_instance;
 	}
-	
+
 	/**
 	 * Perform some compatibility checks to make sure basic requirements are meet.
 	 */
@@ -93,7 +94,7 @@ class ABCBizMultiElementorPack
 	{
 		define('ABCBIZ_Version', $this->version);
 		define('ABCBIZ_Name', esc_html__('ABCBiz Addons and Templates for Elementor', 'abcbiz-addons'));
-		
+
 	}
 
 	/**
@@ -127,35 +128,36 @@ class ABCBizMultiElementorPack
 	 * Warning when the site doesn't have Elementor installed or activated.
 	 */
 	public function admin_notice_missing_main_plugin()
-{
-    if (isset($_GET['activate'])) {
-        unset($_GET['activate']);
-    }
+	{
+		if (isset($_GET['activate'])) {
+			unset($_GET['activate']);
+		}
 
-    $message = sprintf(
-        esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
-        '<strong>' . esc_html(ABCBIZ_Name) . '</strong>',
-        '<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
-    );
+		$message = sprintf(
+			esc_html__('"%1$s" requires "%2$s" to be installed and activated.', 'abcbiz-addons'),
+			'<strong>' . esc_html(ABCBIZ_Name) . '</strong>',
+			'<strong>' . esc_html__('Elementor', 'abcbiz-addons') . '</strong>'
+		);
 
-    printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
-}
+		printf('<div class="notice notice-warning is-dismissible"><p>%1$s</p></div>', wp_kses_post($message));
+	}
 
 	/**
 	 * Warning when the site doesn't have a minimum required Elementor version.
 	 */
 	public function admin_notice_minimum_elementor_version()
-{
-    if (isset($_GET['activate'])) unset($_GET['activate']);
+	{
+		if (isset($_GET['activate']))
+			unset($_GET['activate']);
 
-    $message = sprintf(
-        esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
-        ABCBIZ_Name, 
-        esc_html__('Elementor', 'abcbiz-addons'),
-        self::MINIMUM_ELEMENTOR_VERSION 
-    );
-    printf('<div class="notice notice-warning is-dismissible"><p>%s</p></div>', wp_kses_post($message));
-}
+		$message = sprintf(
+			esc_html__('"%1$s" requires "%2$s" version %3$s or greater.', 'abcbiz-addons'),
+			ABCBIZ_Name,
+			esc_html__('Elementor', 'abcbiz-addons'),
+			self::MINIMUM_ELEMENTOR_VERSION
+		);
+		printf('<div class="notice notice-warning is-dismissible"><p>%s</p></div>', wp_kses_post($message));
+	}
 
 	/**
 	 * Warning when the site doesn't have a minimum required PHP version.
@@ -163,7 +165,8 @@ class ABCBizMultiElementorPack
 	public function admin_notice_minimum_php_version()
 	{
 
-		if (isset($_GET['activate'])) unset($_GET['activate']);
+		if (isset($_GET['activate']))
+			unset($_GET['activate']);
 
 		$message = sprintf(
 			/* translators: 1: Plugin name 2: PHP 3: Required PHP version */
@@ -211,18 +214,19 @@ class ABCBizMultiElementorPack
 	}
 
 	// autoload files for load classes dynamically
-	public function autoload($class_name) {
-         $base_namespace = 'ABCBiz\\Includes\\Widgets\\';
+	public function autoload($class_name)
+	{
+		$base_namespace = 'ABCBiz\\Includes\\Widgets\\';
 
-        if (strpos($class_name, $base_namespace) === 0) {
-        $relative_class_name = substr($class_name, strlen($base_namespace));
-        $file_path = ABCBIZ_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
+		if (strpos($class_name, $base_namespace) === 0) {
+			$relative_class_name = substr($class_name, strlen($base_namespace));
+			$file_path = ABCBIZ_Path . '/includes/widgets/' . str_replace('\\', '/', $relative_class_name) . '.php';
 
-        if (file_exists($file_path)) {
-            require $file_path;
-        }
-    }
-}
+			if (file_exists($file_path)) {
+				require $file_path;
+			}
+		}
+	}
 
 	/**
 	 * Register Widgets
@@ -233,5 +237,7 @@ class ABCBizMultiElementorPack
 		require_once ABCBIZ_Path . '/includes/abcbiz-addons-widgets.php';
 
 	}
-	
+
+
+
 }

@@ -195,3 +195,21 @@ function abcbiz_multi_plugin_info() {
 
     return $plugin_info;
 }
+
+// Add "Get Pro" and "Settings" link to the plugin action links
+function abcbiz_add_plugin_links($links) {
+    // Add "Settings" link
+    $settings_link = '<a href="' . admin_url('admin.php?page=abcbiz_home') . '">Settings</a>';
+    
+    // Add "Get Pro" link
+    $pro_link = '<a href="https://abcbizaddons.com/get-pro" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
+    
+    // Add the links to the list of existing plugin action links
+    array_unshift($links, $settings_link); // Puts "Settings" as the first link
+    array_push($links, $pro_link); // Puts "Get Pro" at the end of the list
+    
+    return $links;
+}
+
+// Hook the function to modify the plugin action links
+add_filter('plugin_action_links_' . plugin_basename(__FILE__), 'abcbiz_add_plugin_links');

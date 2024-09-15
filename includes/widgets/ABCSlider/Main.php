@@ -1,7 +1,8 @@
 <?php
 namespace ABCBiz\Includes\Widgets\ABCSlider;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
@@ -21,12 +22,14 @@ class Main extends BaseWidget
         'abcbiz-category'
     ];
     protected $keywords = [
-        'abc', 'carousel', 'slider',
+        'abc',
+        'carousel',
+        'slider',
     ];
 
     public function get_script_depends()
     {
-        return ['swiper', 'abcbiz-testimonial'];
+        return ['swiper'];
     }
 
     public function get_style_depends()
@@ -39,7 +42,6 @@ class Main extends BaseWidget
      */
     protected function register_controls()
     {
-
         $this->start_controls_section(
             'abcbiz_slider_setting',
             [
@@ -48,15 +50,47 @@ class Main extends BaseWidget
             ]
         );
 
+        $this->add_control(
+            'slides_per_view',
+            [
+                'label' => esc_html__('Slides Per View', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'default' => 3,
+            ]
+        );
+
+        $this->add_control(
+            'loop',
+            [
+                'label' => esc_html__('Loop', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'autoplay',
+            [
+                'label' => esc_html__('Autoplay', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
         $this->end_controls_section();
-  
     }
+
 
     /**
      * Render the widget output on the frontend.
      */
     protected function render()
-
     {
         include 'RenderView.php';
     }
