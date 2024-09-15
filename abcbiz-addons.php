@@ -202,7 +202,7 @@ function abcbiz_add_plugin_links($links) {
     $settings_link = '<a href="' . admin_url('admin.php?page=abcbiz_home') . '">Settings</a>';
     
     // Add "Get Pro" link
-    $pro_link = '<a href="https://abcbizaddons.com/get-pro" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
+    $pro_link = '<a href="https://abcbizaddons.com/" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
     
     // Add the links to the list of existing plugin action links
     array_unshift($links, $settings_link); // Puts "Settings" as the first link
