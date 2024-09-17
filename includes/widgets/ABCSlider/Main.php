@@ -9,6 +9,7 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 use Elementor\Plugin;
+use Elementor\Repeater;
 
 
 class Main extends BaseWidget
@@ -50,28 +51,6 @@ class Main extends BaseWidget
             ]
         );
 
-        // Fetch Elementor templates
-        $templates = Plugin::instance()->templates_manager->get_source('local')->get_items();
-
-        $template_options = [];
-        if (!empty($templates)) {
-            foreach ($templates as $template) {
-                $template_options[$template['template_id']] = $template['title'];
-            }
-        }
-
-        // Add a select control for Elementor templates
-        $this->add_control(
-            'template_select',
-            [
-                'label' => esc_html__('Choose Elementor Template', 'abcbiz-addons'),
-                'type' => Controls_Manager::SELECT2,
-                'options' => $template_options,
-                'default' => '',
-                'label_block' => true,
-            ]
-        );
-
         $this->add_control(
             'slides_per_view',
             [
@@ -102,6 +81,58 @@ class Main extends BaseWidget
                 'label_off' => esc_html__('No', 'abcbiz-addons'),
                 'return_value' => 'yes',
                 'default' => 'yes',
+            ]
+        );
+
+        // Fetch Elementor templates to populate repeater
+        $templates = Plugin::instance()->templates_manager->get_source('local')->get_items();
+        $template_options = [];
+
+        if (!empty($templates)) {
+            foreach ($templates as $template) {
+                $template_options[$template['template_id']] = $template['title'];
+            }
+        }
+
+        // Define the repeater
+        $repeater = new Repeater();
+
+        // Add the repeater controls
+        $repeater->add_control(
+            'template_select',
+            [
+                'label' => esc_html__('Choose Template', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT2,
+                'options' => $template_options,
+                'description' => esc_html__('Choose a template from Elementor', 'abcbiz-addons'),
+            ]
+        );
+
+        // Add more controls within the repeater if necessary (e.g., text, images, etc.)
+        $repeater->add_control(
+            'slide_title',
+            [
+                'label' => esc_html__('Slide Title', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('Slide Title', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'slides',
+            [
+                'label' => esc_html__('Slides', 'abcbiz-addons'),
+                'type' => Controls_Manager::REPEATER,
+                'fields' => $repeater->get_controls(),
+                'default' => [
+                    [
+                        'slide_title' => esc_html__('Slide 1', 'abcbiz-addons'),
+                    ],
+                    [
+                        'slide_title' => esc_html__('Slide 2', 'abcbiz-addons'),
+                    ],
+                ],
+                'title_field' => '{{{ slide_title }}}',
             ]
         );
 

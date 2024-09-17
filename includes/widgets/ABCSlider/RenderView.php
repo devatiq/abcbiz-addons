@@ -8,16 +8,24 @@ $autoplay = $settings['autoplay'] === 'yes' ? 'true' : 'false';
 ?>
 <div class="swiper-container swiper">
     <div class="swiper-wrapper">
-        <!-- Slides -->
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <!-- Add more slides as needed -->
+        <!-- Dynamically render each slide -->
+        <?php if (!empty($settings['slides'])) : ?>
+            <?php foreach ($settings['slides'] as $slide) : ?>
+                <div class="swiper-slide">
+                    <!-- Slide Title -->
+                    <?php if (!empty($slide['slide_title'])) : ?>
+                        <h3><?php echo esc_html($slide['slide_title']); ?></h3>
+                    <?php endif; ?>
+
+                    <!-- Render the selected Elementor template -->
+                    <?php if (!empty($slide['template_select'])) : ?>
+                        <div class="slide-template-content">
+                            <?php echo \Elementor\Plugin::instance()->frontend->get_builder_content_for_display($slide['template_select']); ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endforeach; ?>
+        <?php endif; ?>
     </div>
     <!-- Add Pagination -->
     <div class="swiper-pagination"></div>
