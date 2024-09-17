@@ -36,23 +36,34 @@ $autoplay = $settings['autoplay'] === 'yes' ? 'true' : 'false';
 
 <script>
     jQuery(document).ready(function ($) {
+        // Check if Elementor is in editor mode
+        var isEditMode = <?php echo \Elementor\Plugin::$instance->editor->is_edit_mode() ? 'true' : 'false'; ?>;
+
         // Ensure the Swiper initializes after the Elementor frontend is ready
-        $(window).on('elementor/frontend/init', function () {
+        if (isEditMode) {
             elementorFrontend.hooks.addAction('frontend/element_ready/abcbiz-ABCSlider.default', function () {
-                var swiper = new Swiper('.swiper-container', {
-                    slidesPerView: <?php echo $slides_per_view; ?>,
-                    loop: <?php echo $loop; ?>,
-                    autoplay: <?php echo $autoplay ? '{ delay: 2500, disableOnInteraction: false }' : 'false'; ?>,
-                    pagination: {
-                        el: '.swiper-pagination',
-                        clickable: true,
-                    },
-                    navigation: {
-                        nextEl: '.swiper-button-next',
-                        prevEl: '.swiper-button-prev',
-                    },
-                });
+                initSwiper();
             });
-        });
+        } else {
+            $(window).on('load', function() {
+                initSwiper();
+            });
+        }
+
+        function initSwiper() {
+            var swiper = new Swiper('.swiper-container', {
+                slidesPerView: <?php echo $slides_per_view; ?>,
+                loop: <?php echo $loop; ?>,
+                autoplay: <?php echo $autoplay ? '{ delay: 2500, disableOnInteraction: false }' : 'false'; ?>,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
     });
 </script>
