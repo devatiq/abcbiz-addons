@@ -30,7 +30,7 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['swiper'];
+        return ['swiper', 'abcbiz-slider'];
     }
 
     public function get_style_depends()
