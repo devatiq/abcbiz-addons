@@ -8,7 +8,7 @@ use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
-use Elementor\Utils;
+use Elementor\Plugin;
 
 
 class Main extends BaseWidget
@@ -47,6 +47,28 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Slider Setting', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        // Fetch Elementor templates
+        $templates = Plugin::instance()->templates_manager->get_source('local')->get_items();
+
+        $template_options = [];
+        if (!empty($templates)) {
+            foreach ($templates as $template) {
+                $template_options[$template['template_id']] = $template['title'];
+            }
+        }
+
+        // Add a select control for Elementor templates
+        $this->add_control(
+            'template_select',
+            [
+                'label' => esc_html__('Choose Elementor Template', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT2,
+                'options' => $template_options,
+                'default' => '',
+                'label_block' => true,
             ]
         );
 
