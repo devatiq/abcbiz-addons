@@ -2,8 +2,15 @@
 // Get settings
 $settings = $this->get_settings_for_display();
 $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
-$loop = $settings['loop'] === 'yes' ? 'true' : 'false';
-$autoplay = $settings['autoplay'] === 'yes' ? json_encode(['delay' => 2500, 'disableOnInteraction' => false]) : 'false';
+$loop = $settings['loop'] === 'yes' ? true : false;
+$autoplay = $settings['autoplay'] === 'yes' ? ['delay' => 2500, 'disableOnInteraction' => false] : false;
+
+// Combine all the settings into a single JSON string
+$slider_settings = json_encode([
+    'slidesPerView' => $slides_per_view,
+    'loop' => $loop,
+    'autoplay' => $autoplay,
+]);
 
 // Create a unique ID for the slider instance
 $unique_id = uniqid('abcbiz-slider-');
@@ -11,9 +18,7 @@ $unique_id = uniqid('abcbiz-slider-');
 
 <div id="<?php echo esc_attr($unique_id); ?>" 
     class="abcbiz-addons-slider-wrapper"
-    data-slides-per-view="<?php echo esc_attr($slides_per_view); ?>"
-    data-loop="<?php echo esc_attr($loop); ?>"
-    data-autoplay="<?php echo esc_attr($autoplay); ?>"
+    data-settings='<?php echo esc_attr($slider_settings); ?>'
 >
     <div class="swiper-container swiper">
         <div class="swiper-wrapper">

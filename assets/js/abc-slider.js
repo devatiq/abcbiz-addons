@@ -2,14 +2,24 @@ function ABCbizSliderInitialize(uniqueId) {
     'use strict';
 
     var slider = document.getElementById(uniqueId);
-    var slidesPerView = slider.getAttribute('data-slides-per-view');
-    var loop = slider.getAttribute('data-loop') === 'true';
-    var autoplayConfig = JSON.parse(slider.getAttribute('data-autoplay'));
 
+    // Retrieve the settings from the data-settings attribute
+    var settings = slider.getAttribute('data-settings');
+    var parsedSettings;
+
+    // Parse the settings JSON string
+    try {
+        parsedSettings = JSON.parse(settings);
+    } catch (e) {
+        console.error('Error parsing Swiper settings:', e);
+        return;
+    }
+
+    // Initialize Swiper using the parsed settings
     new Swiper(slider.querySelector('.swiper-container'), {
-        loop: loop,
-        slidesPerView: parseInt(slidesPerView) || 1,
-        autoplay: autoplayConfig,
+        loop: parsedSettings.loop || false,
+        slidesPerView: parseInt(parsedSettings.slidesPerView) || 1,
+        autoplay: parsedSettings.autoplay || false,
         pagination: {
             el: slider.querySelector('.swiper-pagination'),
             clickable: true,

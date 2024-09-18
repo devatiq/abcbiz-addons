@@ -43,6 +43,8 @@ class Main extends BaseWidget
      */
     protected function register_controls()
     {
+
+        // Start content section
         $this->start_controls_section(
             'abcbiz_slider_setting',
             [
@@ -105,6 +107,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::SELECT2,
                 'options' => $template_options,
                 'description' => esc_html__('Choose a template from Elementor', 'abcbiz-addons'),
+                'label_block' => true,
             ]
         );
 
@@ -115,6 +118,7 @@ class Main extends BaseWidget
                 'label' => esc_html__('Slide Title', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Slide Title', 'abcbiz-addons'),
+                'label_block' => true,
             ]
         );
 
@@ -136,7 +140,20 @@ class Main extends BaseWidget
             ]
         );
 
-        $this->end_controls_section();
+        $this->end_controls_section(); //end content section
+
+        
+        // start style section
+        $this->start_controls_section(
+            'abcbiz_slider_style',
+            [
+                'label' => esc_html__('Style', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+
+        $this->end_controls_section(); //end style section
     }
 
 
