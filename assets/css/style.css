@@ -2847,3 +2847,24 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-gravity-form-sub-label-hide .gform-field-label:not(.gfield_label) {
     display: none !important;
 }
+
+/*----------------------------------------------
+ * ABCBiz Template Slider
+ * ---------------------------------------------*/
+ .abcbiz-addons-slider-wrapper .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    background-color: #072e48;
+    opacity: 1;
+ }
+ .abcbiz-addons-slider-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #0190ef;
+ }
+
+ .abcbiz-addons-slider-wrapper .swiper-button-prev, .abcbiz-addons-slider-wrapper .swiper-button-next {
+    color: #000;
+ }
+
+.abcbiz-addons-slider-wrapper .swiper-button-prev::after, .abcbiz-addons-slider-wrapper .swiper-button-next::after {
+    font-size: 20px;
+}

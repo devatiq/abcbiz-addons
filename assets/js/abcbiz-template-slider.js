@@ -20,7 +20,6 @@ function ABCbizSliderInitialize(uniqueId) {
         loop: parsedSettings.loop || false,
         slidesPerView: parseInt(parsedSettings.slidesPerView) || 1,
         autoplay: parsedSettings.autoplay || false,
-        spaceBetween: parseInt(parsedSettings.gap) || 20,  // Gap between slides
         pagination: parsedSettings.pagination ? {
             el: slider.querySelector('.swiper-pagination'),
             clickable: true,

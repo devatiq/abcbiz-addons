@@ -4,7 +4,6 @@ $settings = $this->get_settings_for_display();
 $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
 $loop = $settings['slider_loop'] === 'yes' ? true : false;
 $autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 2500, 'disableOnInteraction' => false] : false;
-$gap = !empty($settings['slider_gap']) ? $settings['slider_gap'] : 0;
 $arrows = $settings['show_arrows'] === 'yes' ? true : false;
 $pagination = $settings['show_pagination'] === 'yes' ? true : false;
 
@@ -13,7 +12,6 @@ $slider_settings = json_encode([
     'slidesPerView' => $slides_per_view,
     'loop' => $loop,
     'autoplay' => $autoplay,
-    'gap' => $gap,
     'arrows' => $arrows,
     'pagination' => $pagination,
 ]);

@@ -109,7 +109,7 @@ class Main extends BaseWidget
 
         $this->end_controls_section(); //end content section
 
-        
+
         // start slider settings section
         $this->start_controls_section(
             'abcbiz_slider_settings',
@@ -167,7 +167,7 @@ class Main extends BaseWidget
         $this->add_control(
             'show_arrows',
             [
-                'label' => esc_html__('Show Arrows', 'abcbiz-addons'),
+                'label' => esc_html__('Show Navigation', 'abcbiz-addons'),
                 'type' => Controls_Manager::SWITCHER,
                 'label_on' => esc_html__('Yes', 'abcbiz-addons'),
                 'label_off' => esc_html__('No', 'abcbiz-addons'),
@@ -178,7 +178,7 @@ class Main extends BaseWidget
 
         $this->end_controls_section(); //end slider settings section
 
-        
+
         // start style section
         $this->start_controls_section(
             'abcbiz_slider_style',
@@ -186,7 +186,7 @@ class Main extends BaseWidget
                 'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
-        );  
+        );
 
         $this->add_responsive_control(
             'slider_padding',
@@ -216,10 +216,128 @@ class Main extends BaseWidget
                         'max' => 50,
                     ],
                 ],
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-slide' => 'margin-right: {{SIZE}}{{UNIT}};',
+                ],
             ]
         );
 
         $this->end_controls_section(); //end style section
+
+        
+        // start navigation section
+        $this->start_controls_section(
+            'abcbiz_slider_navigation',
+            [
+                'label' => esc_html__('Navigation', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'show_arrows' => 'yes',
+                ],                    
+            ]
+        );
+
+        // nav color
+        $this->add_control(
+            'nav_color',
+            [
+                'label' => esc_html__('Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}}  .abcbiz-addons-slider-wrapper .swiper-button-prev, {{WRAPPER}}  .abcbiz-addons-slider-wrapper .swiper-button-next' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // nav size
+        $this->add_responsive_control(
+            'nav_size',
+            [
+                'label' => esc_html__('Size', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 10,
+                        'max' => 400,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-button-next:after, {{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-button-prev::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // prev nav left indent
+        $this->add_responsive_control(
+            'nav_prev_left_indent',
+            [
+                'label' => esc_html__('Prev Left Indent', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-button-prev' => 'left: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // next nav right indent
+        $this->add_responsive_control(
+            'nav_next_right_indent',
+            [
+                'label' => esc_html__('Next Right Indent', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-button-next' => 'right: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // nav top indent
+        $this->add_responsive_control(
+            'nav_top_indent',
+            [
+                'label' => esc_html__('Top Indent', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .swiper-button-next, {{WRAPPER}} .swiper-button-prev' => 'top: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // end navigation section
     }
 
 
