@@ -196,7 +196,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if(get_option('abcbiz_gravity_form_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGravityForms\Main::class;
 		}
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTemplateSlider\Main::class;
+
+		if(get_option('abcbiz_template_slider_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTemplateSlider\Main::class;
+		}
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {

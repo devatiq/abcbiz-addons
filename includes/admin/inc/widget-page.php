@@ -76,6 +76,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_gravity_form_render(); ?>
                 <?php abcbiz_gallery_render(); ?>
                 <?php abcbiz_mailchimp_render(); ?>
+                <?php abcbiz_template_slider_render(); ?>
                 </div>
             </div>
 
