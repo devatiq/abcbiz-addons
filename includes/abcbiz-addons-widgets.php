@@ -189,7 +189,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGallery\Main::class;
 		}		
 
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCMailChimp\Main::class;
+		if( get_option( 'abcbiz_mailchimp_switch_field' ) == 1 ) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCMailChimp\Main::class;
+		}		
 
 		if(get_option('abcbiz_gravity_form_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGravityForms\Main::class;

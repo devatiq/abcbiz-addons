@@ -111,6 +111,7 @@ add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 add_option('abcbiz_gravity_form_field', '1');
 add_option('abcbiz_gallery_field', '1');
+add_option('abcbiz_mailchimp_switch_field', '1');
 
 
 //Sticker Text
@@ -541,6 +542,14 @@ add_settings_field(
     'abcbiz_gallery_field',
     esc_html__('Gallery', 'abcbiz-addons'),
     'abcbiz_gallery_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+// Add settings field for MailChimp
+add_settings_field(
+    'abcbiz_mailchimp_switch_field',
+    esc_html__('MailChimp', 'abcbiz-addons'),
+    'abcbiz_mailchimp_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );
