@@ -17,8 +17,7 @@ function ABCbizSliderInitialize(uniqueId) {
 
     // Initialize Swiper using the parsed settings
     new Swiper(slider.querySelector('.swiper-container'), {
-        loop: parsedSettings.loop || false,
-        slidesPerView: parseInt(parsedSettings.slidesPerView) || 1,
+        loop: parsedSettings.loop || false,        
         autoplay: parsedSettings.autoplay || false,
         pagination: parsedSettings.pagination ? {
             el: slider.querySelector('.swiper-pagination'),
@@ -28,6 +27,21 @@ function ABCbizSliderInitialize(uniqueId) {
             nextEl: slider.querySelector('.swiper-button-next'),
             prevEl: slider.querySelector('.swiper-button-prev'),
             enabled: parsedSettings.arrows,  // Use the `enabled` property to toggle arrows
+        },
+        // Define responsive breakpoints for different slidesPerView settings
+        breakpoints: {
+            // When window width is >= 1024px
+            1024: {
+                slidesPerView: parseInt(parsedSettings.slidesPerView) || 3,
+            },
+            // When window width is >= 768px (tablet)
+            768: {
+                slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2,
+            },
+            // When window width is >= 320px (mobile)
+            320: {
+                slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1,
+            }
         }
     });
 }
