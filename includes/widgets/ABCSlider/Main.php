@@ -338,6 +338,93 @@ class Main extends BaseWidget
         );
 
         $this->end_controls_section(); // end navigation section
+
+        
+        // pagination section
+        $this->start_controls_section(
+            'pagination_section',
+            [
+                'label' => esc_html__('Pagination', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+                'condition' => [
+                    'show_pagination' => 'yes',
+                ],
+            ]
+        );
+
+        // pagination size
+        $this->add_responsive_control(
+            'pagination_size',
+            [
+                'label' => esc_html__('Size', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 1,
+                        'max' => 200,
+                    ],
+                    '%' => [
+                        'min' => 1,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // pagination color
+        $this->add_control(
+            'pagination_color',
+            [
+                'label' => esc_html__('Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // pagination active color
+        $this->add_control(
+            'pagination_active_color',
+            [
+                'label' => esc_html__('Active Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background-color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // pagination bottom indent
+        $this->add_responsive_control(
+            'pagination_bottom_indent',
+            [
+                'label' => esc_html__('Bottom Indent', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        $this->end_controls_section(); // end pagination section
+        
     }
 
 
