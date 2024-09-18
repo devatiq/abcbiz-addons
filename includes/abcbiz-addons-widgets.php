@@ -187,7 +187,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 	
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGallery\Main::class;
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCMailChimp\Main::class;
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGravityForms\Main::class;
+
+		if(get_option('abcbiz_gravity_form_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGravityForms\Main::class;
+		}
 		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTemplateSlider\Main::class;
 
 		//WooCommerce widgets

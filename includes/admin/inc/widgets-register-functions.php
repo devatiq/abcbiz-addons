@@ -61,7 +61,7 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
 
 
 // Set default values if not already set
-add_option('abcbiz_sticker_text_field', '0');
+add_option('abcbiz_sticker_text_field', '1');
 add_option('abcbiz_site_title_tagline_field', '1');
 add_option('abcbiz_site_logo_widget_field', '1');
 add_option('abcbiz_single_img_scroll_field', '1');
@@ -109,6 +109,7 @@ add_option('abcbiz_team_member_widget_field', '1');
 add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
+add_option('abcbiz_gravity_form_field', '1');
 
 
 //Sticker Text
@@ -521,6 +522,15 @@ add_settings_field(
     'abcbiz_archive_title_field',
     esc_html__('Archive Title', 'abcbiz-addons'),
     'abcbiz_archive_title_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Gravity Form
+add_settings_field(
+    'abcbiz_gravity_form_field',
+    esc_html__('Gravity Form', 'abcbiz-addons'),
+    'abcbiz_gravity_form_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );
