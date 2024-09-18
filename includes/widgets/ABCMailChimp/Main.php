@@ -24,7 +24,7 @@ class Main extends \Elementor\Widget_Base
 
     public function get_icon()
     {
-        return 'eicon-mail';
+        return 'eicon-mail abcbiz-addons-icon';
     }
 
     public function get_categories()
