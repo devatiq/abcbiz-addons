@@ -74,7 +74,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_business_hours_field_render(); ?>
                 <?php abcbiz_archive_title_field_render(); ?>
                 <?php abcbiz_gravity_form_render(); ?>
-                <?php abcbiz_gallery_render(); ?>
+                <?php abcbiz_image_gallery_render(); ?>
                 <?php abcbiz_mailchimp_render(); ?>
                 <?php abcbiz_template_slider_render(); ?>
                 </div>

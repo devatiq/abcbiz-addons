@@ -1,12 +1,11 @@
 <?php
-namespace ABCBiz\Includes\Widgets\ABCGallery;
+namespace ABCBiz\Includes\Widgets\ABCImageGallery;
 
 if (!defined('ABSPATH'))
 	exit; // Exit if accessed directly
 
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
-use Elementor\Group_Control_Typography;
 
 /**
  * Elementor List Widget.
@@ -15,8 +14,8 @@ class Main extends BaseWidget
 {
 
 	// define protected variables...
-	protected $name = 'abcbiz-ABCGallery';
-	protected $title = 'ABC Gallery';
+	protected $name = 'abcbiz-ABCImageGallery';
+	protected $title = 'ABC Image Gallery';
 	protected $icon = 'eicon-animation-text abcbiz-addons-icon';
 	protected $categories = [
 		'abcbiz-category'

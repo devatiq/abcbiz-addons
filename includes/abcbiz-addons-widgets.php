@@ -185,8 +185,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCArchiveTitle\Main::class;
 		}
 	
-		if(get_option( 'abcbiz_gallery_field' ) == 1) {
-			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCGallery\Main::class;
+		if(get_option( 'abcbiz_image_gallery_field' ) == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCImageGallery\Main::class;
 		}		
 
 		if( get_option( 'abcbiz_mailchimp_switch_field' ) == 1 ) {

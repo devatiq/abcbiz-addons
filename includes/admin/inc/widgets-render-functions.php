@@ -1089,9 +1089,9 @@ function abcbiz_gravity_form_render() {
     </div>
     <?php
 }
-// Gallery field
-function abcbiz_gallery_render() {
-    $option = get_option('abcbiz_gallery_field');
+// Image Gallery field
+function abcbiz_image_gallery_render() {
+    $option = get_option('abcbiz_image_gallery_field');
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
@@ -1105,9 +1105,9 @@ function abcbiz_gallery_render() {
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Gallery", "abcbiz-addons"); ?></h3>
+        <h3><?php echo esc_html__("Image Gallery", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
-            <input type="checkbox" name="abcbiz_gallery_field" value="1" <?php checked(1, $option, true); ?>>
+            <input type="checkbox" name="abcbiz_image_gallery_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
         </label>
     </div>

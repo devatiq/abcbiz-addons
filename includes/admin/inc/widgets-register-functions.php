@@ -110,7 +110,7 @@ add_option('abcbiz_dual_button_widget_field', '1');
 add_option('abcbiz_business_hours_field', '1');
 add_option('abcbiz_archive_title_field', '1');
 add_option('abcbiz_gravity_form_field', '1');
-add_option('abcbiz_gallery_field', '1');
+add_option('abcbiz_image_gallery_field', '1');
 add_option('abcbiz_mailchimp_switch_field', '1');
 add_option('abcbiz_template_slider_field', '1');
 
@@ -540,9 +540,9 @@ add_settings_field(
 
 // Add settings field for Gallery
 add_settings_field(
-    'abcbiz_gallery_field',
-    esc_html__('Gallery', 'abcbiz-addons'),
-    'abcbiz_gallery_render',
+    'abcbiz_image_gallery_field',
+    esc_html__('Image Gallery', 'abcbiz-addons'),
+    'abcbiz_image_gallery_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );
@@ -557,7 +557,7 @@ add_settings_field(
 // Add settings field for Template Slider
 add_settings_field(
     'abcbiz_template_slider_field',
-    esc_html__('MailChimp', 'abcbiz-addons'),
+    esc_html__('Template Slider', 'abcbiz-addons'),
     'abcbiz_template_slider_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
