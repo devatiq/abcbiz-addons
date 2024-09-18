@@ -1,13 +1,11 @@
 <?php
-namespace ABCBiz\Includes\Widgets\ABCSlider;
+namespace ABCBiz\Includes\Widgets\ABCTemplateSlider;
 
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
-use Elementor\Group_Control_Typography;
-use Elementor\Group_Control_Background;
 use Elementor\Plugin;
 use Elementor\Repeater;
 
@@ -16,8 +14,8 @@ class Main extends BaseWidget
 {
 
     // define protected variables...
-    protected $name = 'abcbiz-ABCSlider';
-    protected $title = 'Template Slider';
+    protected $name = 'abcbiz-ABCTemplateSlider';
+    protected $title = 'ABC Template Slider';
     protected $icon = 'eicon-testimonial-carousel abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
@@ -227,7 +225,7 @@ class Main extends BaseWidget
 
         $this->end_controls_section(); //end style section
 
-        
+
         // start navigation section
         $this->start_controls_section(
             'abcbiz_slider_navigation',
@@ -236,7 +234,7 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_STYLE,
                 'condition' => [
                     'show_arrows' => 'yes',
-                ],                    
+                ],
             ]
         );
 
@@ -342,7 +340,7 @@ class Main extends BaseWidget
 
         $this->end_controls_section(); // end navigation section
 
-        
+
         // pagination section
         $this->start_controls_section(
             'pagination_section',
@@ -427,7 +425,7 @@ class Main extends BaseWidget
 
 
         $this->end_controls_section(); // end pagination section
-        
+
     }
 
 
