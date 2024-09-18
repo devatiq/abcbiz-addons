@@ -20,14 +20,16 @@ function ABCbizSliderInitialize(uniqueId) {
         loop: parsedSettings.loop || false,
         slidesPerView: parseInt(parsedSettings.slidesPerView) || 1,
         autoplay: parsedSettings.autoplay || false,
-        pagination: {
+        spaceBetween: parseInt(parsedSettings.gap) || 20,  // Gap between slides
+        pagination: parsedSettings.pagination ? {
             el: slider.querySelector('.swiper-pagination'),
             clickable: true,
-        },
+        } : false,
         navigation: {
             nextEl: slider.querySelector('.swiper-button-next'),
             prevEl: slider.querySelector('.swiper-button-prev'),
-        },
+            enabled: parsedSettings.arrows,  // Use the `enabled` property to toggle arrows
+        }
     });
 }
 

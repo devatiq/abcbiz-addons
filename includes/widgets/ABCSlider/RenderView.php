@@ -2,14 +2,20 @@
 // Get settings
 $settings = $this->get_settings_for_display();
 $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
-$loop = $settings['loop'] === 'yes' ? true : false;
-$autoplay = $settings['autoplay'] === 'yes' ? ['delay' => 2500, 'disableOnInteraction' => false] : false;
+$loop = $settings['slider_loop'] === 'yes' ? true : false;
+$autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 2500, 'disableOnInteraction' => false] : false;
+$gap = !empty($settings['slider_gap']) ? $settings['slider_gap'] : 0;
+$arrows = $settings['show_arrows'] === 'yes' ? true : false;
+$pagination = $settings['show_pagination'] === 'yes' ? true : false;
 
 // Combine all the settings into a single JSON string
 $slider_settings = json_encode([
     'slidesPerView' => $slides_per_view,
     'loop' => $loop,
     'autoplay' => $autoplay,
+    'gap' => $gap,
+    'arrows' => $arrows,
+    'pagination' => $pagination,
 ]);
 
 // Create a unique ID for the slider instance
@@ -25,12 +31,7 @@ $unique_id = uniqid('abcbiz-slider-');
             <!-- Dynamically render each slide -->
             <?php if (!empty($settings['slides'])): ?>
                 <?php foreach ($settings['slides'] as $slide): ?>
-                    <div class="swiper-slide">
-                        <!-- Slide Title -->
-                        <?php if (!empty($slide['slide_title'])): ?>
-                            <h3><?php echo esc_html($slide['slide_title']); ?></h3>
-                        <?php endif; ?>
-
+                    <div class="swiper-slide">    
                         <!-- Render the selected Elementor template -->
                         <?php if (!empty($slide['template_select'])): ?>
                             <div class="slide-template-content">

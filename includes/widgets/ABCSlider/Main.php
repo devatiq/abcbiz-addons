@@ -17,7 +17,7 @@ class Main extends BaseWidget
 
     // define protected variables...
     protected $name = 'abcbiz-ABCSlider';
-    protected $title = 'ABC Slider';
+    protected $title = 'Template Slider';
     protected $icon = 'eicon-testimonial-carousel abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
@@ -30,7 +30,7 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['swiper', 'abcbiz-slider'];
+        return ['swiper', 'abcbiz-template-slider'];
     }
 
     public function get_style_depends()
@@ -46,43 +46,10 @@ class Main extends BaseWidget
 
         // Start content section
         $this->start_controls_section(
-            'abcbiz_slider_setting',
+            'abcbiz_slider_contents',
             [
-                'label' => esc_html__('Slider Setting', 'abcbiz-addons'),
+                'label' => esc_html__('Slides', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_CONTENT,
-            ]
-        );
-
-        $this->add_control(
-            'slides_per_view',
-            [
-                'label' => esc_html__('Slides Per View', 'abcbiz-addons'),
-                'type' => Controls_Manager::NUMBER,
-                'default' => 3,
-            ]
-        );
-
-        $this->add_control(
-            'loop',
-            [
-                'label' => esc_html__('Loop', 'abcbiz-addons'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
-                'label_off' => esc_html__('No', 'abcbiz-addons'),
-                'return_value' => 'yes',
-                'default' => 'yes',
-            ]
-        );
-
-        $this->add_control(
-            'autoplay',
-            [
-                'label' => esc_html__('Autoplay', 'abcbiz-addons'),
-                'type' => Controls_Manager::SWITCHER,
-                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
-                'label_off' => esc_html__('No', 'abcbiz-addons'),
-                'return_value' => 'yes',
-                'default' => 'yes',
             ]
         );
 
@@ -143,6 +110,75 @@ class Main extends BaseWidget
         $this->end_controls_section(); //end content section
 
         
+        // start slider settings section
+        $this->start_controls_section(
+            'abcbiz_slider_settings',
+            [
+                'label' => esc_html__('Slider Settings', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_CONTENT,
+            ]
+        );
+
+        $this->add_control(
+            'slides_per_view',
+            [
+                'label' => esc_html__('Slides Per View', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'default' => 3,
+            ]
+        );
+
+        $this->add_control(
+            'slider_loop',
+            [
+                'label' => esc_html__('Loop', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'slider_autoplay',
+            [
+                'label' => esc_html__('Autoplay', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'show_pagination',
+            [
+                'label' => esc_html__('Show Pagination', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->add_control(
+            'show_arrows',
+            [
+                'label' => esc_html__('Show Arrows', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+            ]
+        );
+
+        $this->end_controls_section(); //end slider settings section
+
+        
         // start style section
         $this->start_controls_section(
             'abcbiz_slider_style',
@@ -150,8 +186,38 @@ class Main extends BaseWidget
                 'label' => esc_html__('Style', 'abcbiz-addons'),
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
+        );  
+
+        $this->add_responsive_control(
+            'slider_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
         );
 
+        $this->add_responsive_control(
+            'slider_gap',
+            [
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 50,
+                    ],
+                ],
+            ]
+        );
 
         $this->end_controls_section(); //end style section
     }
