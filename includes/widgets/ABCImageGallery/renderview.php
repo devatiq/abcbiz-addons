@@ -35,7 +35,7 @@ $id = $this->get_id();
 			// If no cropped image is available, use the full image URL as a fallback
 			$img_src = $cropped_image_url ? $cropped_image_url : $full_image_url;
 			?>
-			<span abc-data-url="<?php echo esc_attr($full_image_url); ?>" title="<?php echo esc_attr($caption); ?>"
+			<span abc-data-url="<?php echo esc_attr($image['url']); ?>" title="<?php echo esc_attr($caption); ?>"
 				class="abcbiz-photos-gallery-item">
 				<div class="abcbiz-image-gallery-container">
 					<img src="<?php echo esc_attr($img_src); ?>" alt="<?php echo esc_attr($caption); ?>">
@@ -65,7 +65,7 @@ $id = $this->get_id();
 		$(document).ready(function () {
 
 			$('#abcbiz-photos-gallery-<?php echo esc_attr($id); ?>').magnificPopup({
-				delegate: 'span',
+				delegate: '.abcbiz-photos-gallery-item',
 				type: 'image',
 				closeOnContentClick: false,
 				showCloseBtn: <?php echo $settings['abcbiz_elementor_gallery_close_button'] == 'true' ? 'true' : 'false'; ?>,
