@@ -98,7 +98,7 @@ class Main extends BaseWidget
 			[
 				'label' => esc_html__('Show Title', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT,
-				'description' => esc_html__('Select the title option for the gallery.', 'abcbiz-addons'),
+				'description' => esc_html__('Choose which text to show in the popup.', 'abcbiz-addons'),
 				'options' => [
 					'caption' => esc_html__('Caption', 'abcbiz-addons'),
 					'title' => esc_html__('Title', 'abcbiz-addons'),
@@ -110,16 +110,33 @@ class Main extends BaseWidget
 			]
 		);
 
-		//close button
+		//close Icon
 		$this->add_control(
 			'abcbiz_elementor_gallery_close_button',
 			[
-				'label' => esc_html__('Close Button', 'abcbiz-addons'),
+				'label' => esc_html__('Display Close Icon?', 'abcbiz-addons'),
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
 				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'description' => esc_html__('Enable or disable the close icon for the popup.', 'abcbiz-addons'),
 				'return_value' => 'true',
 				'default' => 'true',
+			]
+		);
+
+		$this->add_control(
+			'abcbiz_elementor_gallery_btn_inside',
+			[
+				'label' => esc_html__('Button Inside', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'description' => esc_html__('Choose whether the button will be inside or outside in the popup. if yes the close button will be inside', 'abcbiz-addons'),
+				'return_value' => 'true',
+				'default' => 'true',
+				'condition' => [
+					'abcbiz_elementor_gallery_close_button' => 'true',
+				],
 			]
 		);
 
@@ -290,7 +307,7 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_elementor_gallery_popup_close_button_color',
 			[
-				'label' => esc_html__('Close Button Color', 'abcbiz-addons'),
+				'label' => esc_html__('Close Icon Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'.abcbiz-photos-gallery-popup button.mfp-close' => 'color: {{VALUE}};',
@@ -302,7 +319,7 @@ class Main extends BaseWidget
 		$this->add_responsive_control(
 			'abcbiz_elementor_gallery_popup_close_button_size',
 			[
-				'label' => esc_html__('Close Button Size', 'abcbiz-addons'),
+				'label' => esc_html__('Close Icon Size', 'abcbiz-addons'),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => ['px', '%'],
 				'selectors' => [
