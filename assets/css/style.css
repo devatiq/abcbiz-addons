@@ -2776,7 +2776,7 @@ h3.abcbiz-style-three-team-name {
 }
 
 /*----------------------------------------------
- * ABC Gallery
+ * ABC Image Gallery
  * ---------------------------------------------*/
 .abcbiz-photos-gallery {
     display: grid;
@@ -2800,7 +2800,9 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-photos-gallery-popup button.mfp-arrow:hover {
     background-color: transparent;
 }
-
+.abcbiz-photos-gallery-caption{
+    
+}
 
 /*----------------------------------------------
  * ABCBiz Mailchimp

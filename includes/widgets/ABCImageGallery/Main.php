@@ -328,7 +328,42 @@ class Main extends BaseWidget
 			]
 		);
 
-		$this->end_controls_section();
+		$this->end_controls_section(); // end: Section
+
+		
+		//add style for navigation
+		$this->start_controls_section(
+			'abcbiz_elementor_gallery_popup_navigation_style',
+			[
+				'label' => esc_html__('Popup Navigation', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+		
+		$this->add_control(
+			'abcbiz_elementor_gallery_popup_navigation_size',
+			[
+				'label' => esc_html__('Size', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup .mfp-arrow svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->add_control(
+			'abcbiz_elementor_gallery_popup_navigation_color',
+			[
+				'label' => esc_html__('Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'.abcbiz-photos-gallery-popup .mfp-arrow svg' => 'fill: {{VALUE}};',
+				],
+			]
+		);
+		
+		$this->end_controls_section(); // end: Section
 	}
 
 	/**

@@ -24,8 +24,12 @@ $id = $this->get_id();
 				$caption = '';
 			}
 			?>
-			<span abc-data-url="<?php echo esc_attr($image['url']); ?>" title="<?php echo esc_attr($caption); ?>"><img
-					src="<?php echo esc_attr($image['url']); ?>"></span>
+			<span abc-data-url="<?php echo esc_attr($image['url']); ?>" title="<?php echo esc_attr($caption); ?>">
+				<img src="<?php echo esc_attr($image['url']); ?>">
+				<?php if (!empty($caption)) { ?>
+					<span class="abcbiz-photos-gallery-caption"><?php echo esc_html($caption); ?></span>
+				<?php } ?>
+			</span>
 
 		<?php } ?>
 	<?php } else { ?>
