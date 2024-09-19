@@ -2828,26 +2828,41 @@ h3.abcbiz-style-three-team-name {
   fill: white;
 }
 .abcbiz-photos-gallery-item {
-  position: relative;
-}
-.abcbiz-photos-gallery-caption {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  color: #fff;
-  opacity: 0;
-  transition: all 0.5s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.abcbiz-photos-gallery-caption:hover {
-  opacity: 1;
-}
-
+    position: relative;
+    display: inline-block;
+  }
+  
+  .abcbiz-image-gallery-container {
+    position: relative;
+    display: inline-block;
+    width: auto; 
+  }
+  
+  .abcbiz-image-gallery-container img {
+    width: 100%;
+    height: auto; 
+    display: block;
+  }
+  
+  .abcbiz-photos-gallery-caption {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s ease;
+  }
+  
+  .abcbiz-image-gallery-container:hover .abcbiz-photos-gallery-caption {
+    opacity: 1;
+  }
+  
 /*----------------------------------------------
  * ABCBiz Mailchimp
  * ---------------------------------------------*/

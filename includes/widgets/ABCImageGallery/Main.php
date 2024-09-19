@@ -95,10 +95,10 @@ class Main extends BaseWidget
 		$this->add_group_control(
 			\Elementor\Group_Control_Image_Size::get_type(),
 			[
-				'name' => 'gallery_image', // Unique name for the control
-				'default' => 'full', // Set a default image size, e.g., 'full'
-				'exclude' => [], // You can exclude some image sizes if needed
-				'include' => [], // You can specify which sizes to include
+				'name' => 'abcbiz_elementor_gallery_dimensions', // Unique name for the control
+				'default' => 'full', // Default image size
+				'exclude' => [], 
+				'include' => [], 
 				'description' => esc_html__('Choose the image size or set custom dimensions.', 'abcbiz-addons'),
 			]
 		);
