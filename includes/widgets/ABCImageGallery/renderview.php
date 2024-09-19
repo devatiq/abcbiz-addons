@@ -10,7 +10,7 @@ $id = $this->get_id();
 ?>
 
 <div class="abcbiz-photos-gallery" id="abcbiz-photos-gallery-<?php echo esc_attr($id); ?>">
-	<?php if ($settings['abcbiz_elementor_gallery']) { ?>
+	<?php if (!empty($settings['abcbiz_elementor_gallery'])) { ?>
 		<?php foreach ($settings['abcbiz_elementor_gallery'] as $image) {
 			if (!empty(wp_get_attachment_caption($image['id'])) && $settings['abcbiz_elementor_gallery_title'] == 'caption') {
 				$caption = wp_get_attachment_caption($image['id']);
@@ -28,6 +28,10 @@ $id = $this->get_id();
 					src="<?php echo esc_attr($image['url']); ?>"></span>
 
 		<?php } ?>
+	<?php } else { ?>
+		<span abc-data-url="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"><img src="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"></span>
+		<span abc-data-url="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"><img src="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"></span>
+		<span abc-data-url="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"><img src="<?php echo ABCBIZ_Assets ; ?>/img/member-placeholder.jpg"></span>
 	<?php } ?>
 
 </div>
