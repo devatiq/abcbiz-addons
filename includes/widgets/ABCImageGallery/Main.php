@@ -54,7 +54,7 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_elementor_gallery',
 			[
-				'label' => esc_html__( 'Add Images', 'abcbiz-addons' ),
+				'label' => esc_html__('Add Images', 'abcbiz-addons'),
 				'type' => \Elementor\Controls_Manager::GALLERY,
 				'show_label' => true,
 				'default' => [],
@@ -92,6 +92,28 @@ class Main extends BaseWidget
 			]
 		);
 
+		$this->add_group_control(
+			\Elementor\Group_Control_Image_Size::get_type(),
+			[
+				'name' => 'gallery_image', // Unique name for the control
+				'default' => 'full', // Set a default image size, e.g., 'full'
+				'exclude' => [], // You can exclude some image sizes if needed
+				'include' => [], // You can specify which sizes to include
+				'description' => esc_html__('Choose the image size or set custom dimensions.', 'abcbiz-addons'),
+			]
+		);
+		
+
+		$this->end_controls_section();//end options setting
+
+
+		$this->start_controls_section(
+			'abcbiz_elementor_gallery_popup_setting',
+			[
+				'label' => esc_html__('Popup Settings', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
 		//show title select options
 		$this->add_responsive_control(
 			'abcbiz_elementor_gallery_title',
@@ -148,44 +170,6 @@ class Main extends BaseWidget
 			[
 				'label' => esc_html__('Style', 'abcbiz-addons'),
 				'tab' => Controls_Manager::TAB_STYLE,
-			]
-		);
-
-		//image width
-		$this->add_responsive_control(
-			'abcbiz_elementor_gallery_image_width',
-			[
-				'label' => esc_html__('Image Width', 'abcbiz-addons'),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => ['px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 1000,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-photos-gallery span img' => 'width: {{SIZE}}{{UNIT}};',
-				],
-			]
-		);
-
-		//image height
-		$this->add_responsive_control(
-			'abcbiz_elementor_gallery_image_height',
-			[
-				'label' => esc_html__('Image Height', 'abcbiz-addons'),
-				'type' => Controls_Manager::SLIDER,
-				'size_units' => ['px', '%'],
-				'range' => [
-					'px' => [
-						'min' => 0,
-						'max' => 1000,
-					],
-				],
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-photos-gallery span img' => 'height: {{SIZE}}{{UNIT}};',
-				],
 			]
 		);
 
@@ -330,7 +314,7 @@ class Main extends BaseWidget
 
 		$this->end_controls_section(); // end: Section
 
-		
+
 		//add style for navigation
 		$this->start_controls_section(
 			'abcbiz_elementor_gallery_popup_navigation_style',
@@ -339,7 +323,7 @@ class Main extends BaseWidget
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
-		
+
 		$this->add_control(
 			'abcbiz_elementor_gallery_popup_navigation_size',
 			[
@@ -362,7 +346,7 @@ class Main extends BaseWidget
 				],
 			]
 		);
-		
+
 		$this->end_controls_section(); // end: Section
 	}
 
