@@ -351,24 +351,6 @@ img.mfp-img {
   cursor: pointer;
 }
 
-.abcbiz-photos-gallery-popup .mfp-arrow-left::before,
-.abcbiz-photos-gallery-popup .mfp-arrow-right::before,
-.abcbiz-photos-gallery-popup .mfp-arrow-left::after,
-.abcbiz-photos-gallery-popup .mfp-arrow-right::after, .abcbiz-photos-gallery-popup .mfp-figure::after {
-  display: none;
-}
-.mfp-close:focus {
-  outline: none;
-  background-color: transparent;
-}
-.mfp-arrow.mfp-arrow-left.mfp-prevent-close svg {
-  transform: rotate(180deg);
-}
-.abcbiz-photos-gallery-popup .mfp-arrow svg {
-  width: 30px;
-  height: 30px;
-  fill: white;
-}
 
 @media screen and (max-width: 800px) and (orientation: landscape),
   screen and (max-height: 300px) {
