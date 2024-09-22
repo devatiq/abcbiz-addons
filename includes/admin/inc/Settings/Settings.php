@@ -21,7 +21,7 @@ class SettingsPage
      */
     public function load_settings_classes()
     {
-        // Include the General and Mailchimp settings files using the defined constants
+        // Load General settings
         if (file_exists(ABCBIZ_Admin . '/inc/Settings/General.php')) {
             require_once ABCBIZ_Admin . '/inc/Settings/General.php';
             // Check if the class General exists before instantiating
@@ -30,11 +30,20 @@ class SettingsPage
             }
         }
 
+        // Load Mailchimp settings
         if (file_exists(ABCBIZ_Admin . '/inc/Settings/Mailchimp.php')) {
             require_once ABCBIZ_Admin . '/inc/Settings/Mailchimp.php';
             // Check if the class Mailchimp exists before instantiating
             if (class_exists('ABCBizAddons\includes\admin\inc\Settings\Mailchimp')) {
                 new \ABCBizAddons\includes\admin\inc\Settings\Mailchimp();
+            }
+        }
+
+        // Load Cost Estimation settings
+        if (file_exists(ABCBIZ_Admin . '/inc/Settings/CostEstimation.php')) {
+            require_once ABCBIZ_Admin . '/inc/Settings/CostEstimation.php';
+            if (class_exists('ABCBizAddons\includes\admin\inc\Settings\CostEstimation')) {
+                new \ABCBizAddons\includes\admin\inc\Settings\CostEstimation();
             }
         }
     }
@@ -71,42 +80,47 @@ class SettingsPage
     /**
      * Render the settings page with tabs.
      */
-    public function render_settings_page() {
+    public function render_settings_page()
+    {
         $active_tab = isset($_GET['tab']) ? $_GET['tab'] : 'general';
         ?>
         <div class="wrap">
+            <!-- Display settings errors and success messages -->
+            <?php settings_errors(); ?>
+
             <h1><?php _e('ABCBiz Addons Settings', 'abcbiz-addons'); ?></h1>
-    
+
             <h2 class="nav-tab-wrapper">
                 <a href="?page=abcbiz_settings&tab=general"
                     class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('General', 'abcbiz-addons'); ?></a>
                 <a href="?page=abcbiz_settings&tab=mailchimp"
                     class="nav-tab <?php echo $active_tab == 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Mailchimp', 'abcbiz-addons'); ?></a>
+                <a href="?page=abcbiz_settings&tab=cost_estimation"
+                    class="nav-tab <?php echo $active_tab == 'cost_estimation' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Cost Estimation', 'abcbiz-addons'); ?></a>
             </h2>
-    
-            <!-- Display settings errors and success messages -->
-            <?php settings_errors(); ?>
-    
+
+
+
             <form method="post" action="options.php">
                 <?php
                 if ($active_tab == 'general') {
-                    // General settings content
                     settings_fields('abcbiz_general_options');
                     do_settings_sections('abcbiz_general_settings');
-                } else {
-                    // Mailchimp settings
+                } elseif ($active_tab == 'mailchimp') {
                     settings_fields('abcbiz_mailchimp_options');
                     do_settings_sections('abcbiz_mailchimp_settings');
+                } elseif ($active_tab == 'cost_estimation') {
+                    settings_fields('abcbiz_cost_estimation_options');
+                    do_settings_sections('abcbiz_cost_estimation_settings');
                 }
-    
-                // Add nonce field for security
+
                 wp_nonce_field('abcbiz_save_settings', 'abcbiz_nonce');
-                
                 submit_button();
                 ?>
             </form>
         </div>
         <?php
     }
-    
+
+
 }
