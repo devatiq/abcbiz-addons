@@ -39,9 +39,9 @@ class Main extends BaseWidget
     {
         // Fetch saved package names from the dashboard settings
         $cost_estimation_options = get_option('abcbiz_cost_estimation_options', []);
-        $package_1 = isset($cost_estimation_options['cost_estimation_package_1']) ? esc_html($cost_estimation_options['cost_estimation_package_1']) : '';
-        $package_2 = isset($cost_estimation_options['cost_estimation_package_2']) ? esc_html($cost_estimation_options['cost_estimation_package_2']) : '';
-        $package_3 = isset($cost_estimation_options['cost_estimation_package_3']) ? esc_html($cost_estimation_options['cost_estimation_package_3']) : '';
+        $package_1 = isset($cost_estimation_options['cost_estimation_package_1']) ? $cost_estimation_options['cost_estimation_package_1'] : '';
+        $package_2 = isset($cost_estimation_options['cost_estimation_package_2']) ? $cost_estimation_options['cost_estimation_package_2'] : '';
+        $package_3 = isset($cost_estimation_options['cost_estimation_package_3']) ? $cost_estimation_options['cost_estimation_package_3'] : '';
 
         // Generate the dynamic URL to the settings page
         $settings_url = admin_url('admin.php?page=abcbiz_settings&tab=cost_estimation');
@@ -108,7 +108,18 @@ class Main extends BaseWidget
                         'abcbiz_c_p_medium' => esc_html($package_2),
                         'abcbiz_c_p_high' => esc_html($package_3),
                     ],
-                    'label_block' => true,
+                ]
+            );
+
+            // Add first package price control for Package 1
+            $repeater->add_control(
+                'abcbiz_cost_calculator_price_1',
+                [
+                    'label' => esc_html__('Package 1 Price', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::NUMBER,
+                    'min' => 0,
+                    'step' => 1,
+                    'default' => 100,
                 ]
             );
 
@@ -124,7 +135,18 @@ class Main extends BaseWidget
                         'abcbiz_c_p_medium' => esc_html($package_2),
                         'abcbiz_c_p_high' => esc_html($package_3),
                     ],
-                    'label_block' => true,
+                ]
+            );
+
+            // Add second package price control for Package 2
+            $repeater->add_control(
+                'abcbiz_cost_calculator_price_2',
+                [
+                    'label' => esc_html__('Package 2 Price', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::NUMBER,
+                    'min' => 0,
+                    'step' => 1,
+                    'default' => 200,
                 ]
             );
 
@@ -140,7 +162,18 @@ class Main extends BaseWidget
                         'abcbiz_c_p_medium' => esc_html($package_2),
                         'abcbiz_c_p_high' => esc_html($package_3),
                     ],
-                    'label_block' => true,
+                ]
+            );
+
+            // Add third package price control for Package 3
+            $repeater->add_control(
+                'abcbiz_cost_calculator_price_3',
+                [
+                    'label' => esc_html__('Package 3 Price', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::NUMBER,
+                    'min' => 0,
+                    'step' => 1,
+                    'default' => 400,
                 ]
             );
 
@@ -155,8 +188,11 @@ class Main extends BaseWidget
                         [
                             'page_list' => esc_html__('Page #1', 'abcbiz-addons'),
                             'abcbiz_cost_calculator_pack_1' => 'abcbiz_c_p_low',
+                            'abcbiz_cost_calculator_price_1' => 100,
                             'abcbiz_cost_calculator_pack_2' => 'abcbiz_c_p_medium',
+                            'abcbiz_cost_calculator_price_2' => 200,
                             'abcbiz_cost_calculator_pack_3' => 'abcbiz_c_p_high',
+                            'abcbiz_cost_calculator_price_3' => 400,
                         ],
                     ],
                     'title_field' => '{{{ page_list }}}', // Dynamically show the title in the repeater list
@@ -166,7 +202,6 @@ class Main extends BaseWidget
             $this->end_controls_section();
         }
     }
-
 
     /**
      * Render the widget output on the frontend.
