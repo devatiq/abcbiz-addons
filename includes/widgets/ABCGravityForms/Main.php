@@ -197,15 +197,16 @@ class Main extends \Elementor\Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
-        // gravity forms preview not visible in editor
+        // gravity forms preview not visible in editor     
         $this->add_control(
-            'gravity_forms_preview_not_visible_in_editor_2',
-            [
-                'type' => Controls_Manager::RAW_HTML,
-                'raw' => __('<strong>Note:</strong> Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'abcbiz-addons'),
-                'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
-            ]
-        );
+			'gravity_forms_preview_not_visible_in_editor_2',
+			[
+				'type' => \Elementor\Controls_Manager::ALERT,
+				'alert_type' => 'warning',
+				'heading' => esc_html__( 'Styling Alert', 'abcbiz-addons' ),
+				'content' => esc_html__( 'Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'abcbiz-addons' ),
+			]
+		);
 
         //wrapper background
         $this->add_group_control(
