@@ -278,11 +278,11 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -1000,
                         'max' => 1000,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -100,
                         'max' => 100,
                     ],
                 ],
@@ -301,11 +301,11 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -1000,
                         'max' => 1000,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -100,
                         'max' => 100,
                     ],
                 ],
@@ -324,11 +324,11 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -1000,
                         'max' => 1000,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -50,
                         'max' => 100,
                     ],
                 ],
@@ -409,11 +409,11 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 0,
+                        'min' => -1000,
                         'max' => 1000,
                     ],
                     '%' => [
-                        'min' => 0,
+                        'min' => -100,
                         'max' => 100,
                     ],
                 ],

@@ -26,16 +26,14 @@ $slider_settings = json_encode([
 $unique_id = uniqid('abcbiz-slider-');
 ?>
 
-<div id="<?php echo esc_attr($unique_id); ?>" 
-    class="abcbiz-addons-slider-wrapper"
-    data-settings='<?php echo esc_attr($slider_settings); ?>'
->
+<div id="<?php echo esc_attr($unique_id); ?>" class="abcbiz-addons-slider-wrapper"
+    data-settings='<?php echo esc_attr($slider_settings); ?>'>
     <div class="swiper-container swiper">
         <div class="swiper-wrapper">
             <!-- Dynamically render each slide -->
             <?php if (!empty($settings['slides'])): ?>
                 <?php foreach ($settings['slides'] as $slide): ?>
-                    <div class="swiper-slide">    
+                    <div class="swiper-slide">
                         <!-- Render the selected Elementor template -->
                         <?php if (!empty($slide['template_select'])): ?>
                             <div class="slide-template-content">
@@ -46,10 +44,10 @@ $unique_id = uniqid('abcbiz-slider-');
                 <?php endforeach; ?>
             <?php endif; ?>
         </div>
-        <!-- Add Pagination -->
-        <div class="swiper-pagination"></div>
-        <!-- Add Navigation -->
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
     </div>
+    <!-- Add Pagination -->
+    <div class="swiper-pagination"></div>
+    <!-- Add Navigation -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
 </div>
