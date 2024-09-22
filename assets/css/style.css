@@ -2932,3 +2932,124 @@ h3.abcbiz-style-three-team-name {
 .abcbiz-addons-slider-wrapper .swiper-button-next::after {
   font-size: 20px;
 }
+
+/*----------------------------------------------
+* ABCbiz Cost Estimation
+* ---------------------------------------------*/
+.abcbiz-pricing-calculator {
+  background-color: #F9F9F9;
+  border-radius: 16px 16px 16px 16px;
+  border-style: solid;
+  border-width: 1px 1px 1px 1px;
+  border-color: #2C7973;
+  box-shadow: 39px 33px 0px 0px rgba(110.99999999999999, 185, 143.00000000000003, 0.13);
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 40px 40px 40px 40px;
+}
+
+.abcbiz-pricing-cal-heading h2 {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+
+.abcbiz-pricing-level label {
+  font-size: 16px;
+  font-weight: 500;
+  color: #666666;
+  font-family: 'Poppins';
+  font-style: normal;
+  cursor: pointer;
+}
+
+.abcbiz-pricing-level label:first-child {
+  margin-left: -5px;
+}
+
+.abcbiz-pricing-cal-pages-top {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 50px;
+}
+
+.abcbiz-pricing-cal-pages-top h2 {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.abcbiz-pricing-cal-pages-top {
+  color: #666666;
+  font-family: 'Poppins';
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.abcbiz-pricing-cal-range-slider input {
+  width: 100%;
+  cursor: pointer;
+}
+
+.abcbiz-pricing-cal-range-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.abcbiz-pricing-cal-range-bottom p {
+  margin-top: 6px;
+}
+
+.abcbiz-pricing-cal-total-price {
+  border-top: 1px solid #6666661A;
+  margin-top: 50px;
+  padding-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.abcbiz-pricing-cal-total-price p {
+  color: #666;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 31px;
+  width: inherit;
+  margin: 0;
+}
+
+.abcbiz-pricing-cal-total-price #cb-total-price {
+  white-space: pre;
+  word-break: break-all;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 120%;
+  color: #021C1E;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+.abcbiz-pricing-cal-submit-button {
+  margin-top: 30px;
+}
+
+.abcbiz-pricing-cal-submit-button a {
+  color: #fff;
+  font-family: "Roboto", Sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 16px;
+  background-color: #6FB98F;
+  border-radius: 4px 4px 4px 4px;
+  padding: 20px 74px 20px 74px;
+  text-decoration: none;
+  display: inline-block;
+}
