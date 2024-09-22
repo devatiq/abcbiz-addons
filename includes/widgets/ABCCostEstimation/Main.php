@@ -27,9 +27,8 @@ class Main extends BaseWidget
         'calculator'
     ];
 
-    public function get_style_depends()
-    {
-        return ['abcbiz-cta-style'];
+    public function get_script_depends() {
+        return ['abcbiz-cost-estimation'];
     }
 
     /**
