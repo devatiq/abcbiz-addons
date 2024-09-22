@@ -113,6 +113,7 @@ add_option('abcbiz_gravity_form_field', '1');
 add_option('abcbiz_image_gallery_field', '1');
 add_option('abcbiz_mailchimp_switch_field', '1');
 add_option('abcbiz_template_slider_field', '1');
+add_option('abcbiz_cost_estimation_field', '1');
 
 
 //Sticker Text
@@ -559,6 +560,15 @@ add_settings_field(
     'abcbiz_template_slider_field',
     esc_html__('Template Slider', 'abcbiz-addons'),
     'abcbiz_template_slider_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Cost Estimation
+add_settings_field(
+    'abcbiz_cost_estimation_field',
+    esc_html__('Cost Estimation', 'abcbiz-addons'),
+    'abcbiz_cost_estimation_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );

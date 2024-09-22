@@ -1163,3 +1163,28 @@ function abcbiz_template_slider_render() {
     </div>
     <?php
 }
+
+// cost estimation
+function abcbiz_cost_estimation_render() {
+    $option = get_option('abcbiz_cost_estimation_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://abcbizaddons.com/widgets/cost-estimation-widget" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/Cost-Estimation.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-archive"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Cost Estimation", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_cost_estimation_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}

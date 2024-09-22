@@ -201,9 +201,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCTemplateSlider\Main::class;
 		}
 
-		//if(get_option('abcbiz_template_slider_field') == 1) {
+		if(get_option('abcbiz_cost_estimation_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCostEstimation\Main::class;
-		//}
+		}
 
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
