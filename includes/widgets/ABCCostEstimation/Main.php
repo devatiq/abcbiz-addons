@@ -39,9 +39,9 @@ class Main extends BaseWidget
     {
         // Fetch saved package names from the dashboard settings
         $cost_estimation_options = get_option('abcbiz_cost_estimation_options', []);
-        $package_1 = isset($cost_estimation_options['cost_estimation_package_1']) ? $cost_estimation_options['cost_estimation_package_1'] : '';
-        $package_2 = isset($cost_estimation_options['cost_estimation_package_2']) ? $cost_estimation_options['cost_estimation_package_2'] : '';
-        $package_3 = isset($cost_estimation_options['cost_estimation_package_3']) ? $cost_estimation_options['cost_estimation_package_3'] : '';
+        $package_1 = isset($cost_estimation_options['cost_estimation_package_1']) ? esc_html($cost_estimation_options['cost_estimation_package_1']) : '';
+        $package_2 = isset($cost_estimation_options['cost_estimation_package_2']) ? esc_html($cost_estimation_options['cost_estimation_package_2']) : '';
+        $package_3 = isset($cost_estimation_options['cost_estimation_package_3']) ? esc_html($cost_estimation_options['cost_estimation_package_3']) : '';
 
         // Generate the dynamic URL to the settings page
         $settings_url = admin_url('admin.php?page=abcbiz_settings&tab=cost_estimation');
@@ -79,6 +79,19 @@ class Main extends BaseWidget
                 [
                     'label' => esc_html__('Cost Estimation Pages', 'abcbiz-addons'),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                ]
+            );
+            $this->add_control(
+                'abcbiz_cost_package_alert',
+                [
+                    'type' => \Elementor\Controls_Manager::ALERT,
+                    'alert_type' => 'info',
+                    'heading' => esc_html__('info', 'abcbiz-addons'),
+                    'content' => sprintf(
+                        esc_html__('Package names can be modified here. Please go to the %ssettings page%s in the dashboard to configure them.', 'abcbiz-addons'),
+                        '<a href="' . esc_url($settings_url) . '" target="_blank">',
+                        '</a>'
+                    ),
                 ]
             );
 
