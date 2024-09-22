@@ -49,6 +49,16 @@ class Main extends \Elementor\Widget_Base
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
+        // gravity forms preview not visible in editor
+        $this->add_control(
+            'gravity_forms_preview_not_visible_in_editor',
+            [
+                'type' => Controls_Manager::RAW_HTML,
+                'raw' => __('<strong>Note:</strong> Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'abcbiz-addons'),
+                'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
+            ]
+        );
+
 
         // Check if Gravity Forms is active
         if (class_exists('GFAPI')) {
@@ -178,7 +188,7 @@ class Main extends \Elementor\Widget_Base
 
         $this->end_controls_section(); // End Section for Gravity Forms
 
-        
+
         // Style Section for General
         $this->start_controls_section(
             'section_general_style',
@@ -187,8 +197,17 @@ class Main extends \Elementor\Widget_Base
                 'tab' => Controls_Manager::TAB_STYLE,
             ]
         );
+        // gravity forms preview not visible in editor
+        $this->add_control(
+            'gravity_forms_preview_not_visible_in_editor_2',
+            [
+                'type' => Controls_Manager::RAW_HTML,
+                'raw' => __('<strong>Note:</strong> Some changes may not be reflected in the editor mode. However, all modifications will be visible on the frontend. Please preview your changes directly on the webpage to see the updates.', 'abcbiz-addons'),
+                'content_classes' => 'elementor-panel-alert elementor-panel-alert-info',
+            ]
+        );
 
-      //wrapper background
+        //wrapper background
         $this->add_group_control(
             Group_Control_Background::get_type(),
             [
@@ -311,7 +330,7 @@ class Main extends \Elementor\Widget_Base
                             'operator' => '!==',
                             'value' => 'yes',
                         ],
-                    ],                  
+                    ],
                 ],
             ]
         );
@@ -350,9 +369,9 @@ class Main extends \Elementor\Widget_Base
             [
                 'name' => 'sub_label_typography',
                 'label' => esc_html__('Sub Label Typography', 'abcbiz-addons'),
-                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform-field-label:not(.gfield_label)',
+                'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform-field-label:not(.gfield_label),{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_description',
                 'condition' => [
-                    'hide_sub_label!' => 'yes', 
+                    'hide_sub_label!' => 'yes',
                 ],
             ]
         );
@@ -365,9 +384,10 @@ class Main extends \Elementor\Widget_Base
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform-field-label:not(.gfield_label)' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gfield_description' => 'color: {{VALUE}};',
                 ],
                 'condition' => [
-                    'hide_sub_label!' => 'yes', 
+                    'hide_sub_label!' => 'yes',
                 ],
             ]
         );
@@ -400,6 +420,7 @@ class Main extends \Elementor\Widget_Base
             'form_fields_width',
             [
                 'label' => esc_html__('Large Field Width', 'abcbiz-addons'),
+                'description' => esc_html__('it\'s only work for large fields', 'abcbiz-addons'),
                 'type' => Controls_Manager::SLIDER,
                 'size_units' => ['px', '%'],
                 'range' => [
@@ -749,7 +770,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        
+
         //Section Break Border
         $this->add_group_control(
             Group_Control_Box_Shadow::get_type(),
@@ -759,7 +780,7 @@ class Main extends \Elementor\Widget_Base
                 'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gfield--type-section',
             ]
         );
-        
+
 
         //Section Break Border Radius
         $this->add_responsive_control(
@@ -773,8 +794,8 @@ class Main extends \Elementor\Widget_Base
                 ],
             ]
         );
-        
-        
+
+
         //Section Break Margin
         $this->add_responsive_control(
             'section_break_margin',
@@ -844,7 +865,7 @@ class Main extends \Elementor\Widget_Base
                 'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_wrapper .gsection_description',
             ]
         );
-  
+
 
         $this->end_controls_section(); //End Style Section for Section Break
 
@@ -948,7 +969,7 @@ class Main extends \Elementor\Widget_Base
                 ],
             ]
         );
-        
+
         //Button Padding
         $this->add_responsive_control(
             'page_break_button_padding',
@@ -961,7 +982,7 @@ class Main extends \Elementor\Widget_Base
                 ],
             ]
         );
-        
+
 
         //Button Typography
         $this->add_group_control(
@@ -982,7 +1003,7 @@ class Main extends \Elementor\Widget_Base
                 'label' => esc_html__('Normal', 'abcbiz-addons'),
             ]
         );
-  
+
         $this->add_control(
             'page_break_button_normal_text_color',
             [
@@ -1004,7 +1025,7 @@ class Main extends \Elementor\Widget_Base
                 'exclude' => ['image'],
                 'selector' => '{{WRAPPER}} .abcbiz-gravity-form-wrapper .gform_page_footer input.gform-theme-button.button',
             ]
-        );        
+        );
 
         $this->end_controls_tab(); //End Normal Tab
 
@@ -1043,7 +1064,7 @@ class Main extends \Elementor\Widget_Base
 
         $this->end_controls_tab();
         $this->end_controls_tabs();
-        
+
 
         $this->end_controls_section(); //End Style Section for Page Break
 
