@@ -39,13 +39,7 @@ class SettingsPage
             }
         }
 
-        // Load Cost Estimation settings
-        if (file_exists(ABCBIZ_Admin . '/inc/Settings/CostEstimation.php')) {
-            require_once ABCBIZ_Admin . '/inc/Settings/CostEstimation.php';
-            if (class_exists('ABCBizAddons\includes\admin\inc\Settings\CostEstimation')) {
-                new \ABCBizAddons\includes\admin\inc\Settings\CostEstimation();
-            }
-        }
+    
     }
 
     /**
@@ -95,8 +89,7 @@ class SettingsPage
                     class="nav-tab <?php echo $active_tab == 'general' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('General', 'abcbiz-addons'); ?></a>
                 <a href="?page=abcbiz_settings&tab=mailchimp"
                     class="nav-tab <?php echo $active_tab == 'mailchimp' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Mailchimp', 'abcbiz-addons'); ?></a>
-                <a href="?page=abcbiz_settings&tab=cost_estimation"
-                    class="nav-tab <?php echo $active_tab == 'cost_estimation' ? 'nav-tab-active' : ''; ?>"><?php echo esc_html__('Cost Estimation', 'abcbiz-addons'); ?></a>
+                
             </h2>
 
 
@@ -109,11 +102,7 @@ class SettingsPage
                 } elseif ($active_tab == 'mailchimp') {
                     settings_fields('abcbiz_mailchimp_options');
                     do_settings_sections('abcbiz_mailchimp_settings');
-                } elseif ($active_tab == 'cost_estimation') {
-                    settings_fields('abcbiz_cost_estimation_options');
-                    do_settings_sections('abcbiz_cost_estimation_settings');
                 }
-
                 wp_nonce_field('abcbiz_save_settings', 'abcbiz_nonce');
                 submit_button();
                 ?>
