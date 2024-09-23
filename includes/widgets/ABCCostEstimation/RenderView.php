@@ -91,23 +91,32 @@ if ($repeater_pages) {
         ?>
     </div>
     <div class="abcbiz-pricing-cal-number-of-pages">
-        <div class="abcbiz-pricing-cal-pages-top">
-            <?php if (!empty($settings['abcbiz_cost_calculator_slider_label'])): ?>
-                <h2><?php echo esc_html($settings['abcbiz_cost_calculator_slider_label']); ?></h2>
-            <?php endif; ?>
-            <p id="abcbiz-pricing-range-selected-page_<?php echo esc_attr($unique_id); ?>"
-                class="abcbiz-slider-selected-page"></p>
-        </div>
-        <div class="abcbiz-pricing-cal-range-slider">
-            <input id="abcbizPricingRangeSlider_<?php echo esc_attr($unique_id); ?>" class="abcbiz-range-slider"
-                type="range" min="1" max="<?php echo esc_attr($totalPages); ?>" step="1" value="3">
-            <div class="abcbiz-pricing-cal-range-bottom">
-                <p id="abcbiz-min-pages" class="abcbiz-slider-min-page"><?php echo esc_html__('1', 'abcbiz-addons'); ?>
-                </p>
-                <p id="abcbiz-max-pages" class="abcbiz-slider-max-page"><?php echo esc_html($totalPages); ?></p>
-            </div>
+    <div class="abcbiz-pricing-cal-pages-top">
+        <?php if (!empty($settings['abcbiz_cost_calculator_slider_label'])): ?>
+            <h2><?php echo esc_html($settings['abcbiz_cost_calculator_slider_label']); ?></h2>
+        <?php endif; ?>
+        <p id="abcbiz-pricing-range-selected-page_<?php echo esc_attr($unique_id); ?>" class="abcbiz-slider-selected-page">3</p>
+    </div>
+    <div class="abcbiz-pricing-cal-range-slider">
+        <input id="abcbizPricingRangeSlider_<?php echo esc_attr($unique_id); ?>" 
+               class="abcbiz-range-slider" 
+               type="range" 
+               min="1"
+               max="<?php echo esc_attr($totalPages); ?>" 
+               step="1" 
+               value="3"
+               data-active-color="<?php echo esc_attr($settings['slider_active_color'] ?? '#0f4fff'); ?>"  
+               data-inactive-color="<?php echo esc_attr($settings['slider_inactive_color'] ?? '#300bff'); ?>" 
+               data-thumb-color="<?php echo esc_attr($settings['slider_thumb_color'] ?? '#ffee00'); ?>"> 
+        <div class="abcbiz-pricing-cal-range-bottom">
+            <p id="abcbiz-min-pages" class="abcbiz-slider-min-page"><?php echo esc_html__('1', 'abcbiz-addons'); ?></p>
+            <p id="abcbiz-max-pages" class="abcbiz-slider-max-page"><?php echo esc_html($totalPages); ?></p>
         </div>
     </div>
+</div>
+
+
+
 
 
     <div class="abcbiz-pricing-cal-total-price">

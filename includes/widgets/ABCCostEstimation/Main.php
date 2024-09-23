@@ -316,7 +316,7 @@ class Main extends BaseWidget
                 [
                     'name' => 'abcbiz_cost_calculator_total_label_typography',
                     'label' => esc_html__('Total Text Typography', 'abcbiz-addons'),
-                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price p:not(#abcbiz-total-price)',                   
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price p:not(#abcbiz-total-price)',
                 ]
             );
 
@@ -325,8 +325,8 @@ class Main extends BaseWidget
                 'abcbiz_cost_calculator_total_label_color',
                 [
                     'label' => esc_html__('Total Text Color', 'abcbiz-addons'),
-                    'type' => Controls_Manager::COLOR,               
-                    'description' => esc_html__('Set the color of the "Total" label that appears before the total price.', 'abcbiz-addons'),     
+                    'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the color of the "Total" label that appears before the total price.', 'abcbiz-addons'),
                     'default' => '#000',
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-cal-total-price p:not(#abcbiz-total-price)' => 'color: {{VALUE}}',
@@ -340,7 +340,7 @@ class Main extends BaseWidget
                 [
                     'name' => 'abcbiz_cost_calculator_total_amount_typography',
                     'label' => esc_html__('Total Amount Typography', 'abcbiz-addons'),
-                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price #abcbiz-total-price',                     
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price #abcbiz-total-price',
                 ]
             );
 
@@ -349,15 +349,15 @@ class Main extends BaseWidget
                 'abcbiz_cost_calculator_total_amount_color',
                 [
                     'label' => esc_html__('Total Amount Color', 'abcbiz-addons'),
-                    'type' => Controls_Manager::COLOR,               
-                    'description' => esc_html__('Set the color of the total amount in the pricing calculator.', 'abcbiz-addons'),     
+                    'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the color of the total amount in the pricing calculator.', 'abcbiz-addons'),
                     'default' => '#000',
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-cal-total-price #abcbiz-total-price' => 'color: {{VALUE}}',
                     ],
                 ]
             );
-            
+
 
             $this->end_controls_section(); // end label style section
 
@@ -520,6 +520,45 @@ class Main extends BaseWidget
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-cal-pages-top p' => 'color: {{VALUE}}',
                         '{{WRAPPER}} .abcbiz-pricing-cal-range-bottom p' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            // Add control for the active (filled) slider color
+            $this->add_control(
+                'slider_active_color',
+                [
+                    'label' => esc_html__('Slider Active Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#0f4fff',  
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-range-slider' => '--active-color: {{VALUE}};',
+                    ],
+                ]
+            );
+
+            // Add control for the inactive (unfilled) slider color
+            $this->add_control(
+                'slider_inactive_color',
+                [
+                    'label' => esc_html__('Slider Inactive Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#ddd',  
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-range-slider' => '--inactive-color: {{VALUE}};',
+                    ],
+                ]
+            );
+
+            // Add control for the thumb color
+            $this->add_control(
+                'slider_thumb_color',
+                [
+                    'label' => esc_html__('Slider Thumb Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#0f4fff',  
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-range-slider' => '--thumb-color: {{VALUE}};',
                     ],
                 ]
             );

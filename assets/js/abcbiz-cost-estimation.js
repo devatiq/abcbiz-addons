@@ -63,18 +63,39 @@ jQuery(window).on('elementor/frontend/init', () => {
     });
 });
 
-document.querySelectorAll('.abcbiz-range-slider').forEach(slider => {
-    // Function to set the slider background based on its value
-    function updateSliderBackground(slider) {
-        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-        slider.style.background = `linear-gradient(to right, #4CAF50 ${value}%, #ddd ${value}%)`;
-    }
 
-    // Initialize the slider background on page load
-    updateSliderBackground(slider);
 
-    // Update the slider background when the value changes
-    slider.addEventListener('input', function() {
-        updateSliderBackground(this);
+(function($) {
+    // Ensure the script works inside the Elementor editor as well as on the frontend
+    $(window).on('elementor/frontend/init', function() {
+        elementorFrontend.hooks.addAction('frontend/element_ready/global', function($scope) {
+            // Select all range sliders in the scope of the current widget
+            $scope.find('.abcbiz-range-slider').each(function() {
+                const slider = this;
+                const uniqueId = slider.id.split('_').pop(); // Extract the unique id
+                const selectedPageElement = document.getElementById(`abcbiz-pricing-range-selected-page_${uniqueId}`);
+
+                // Function to set the slider background and selected page text based on its value
+                function updateSlider(slider) {
+                    const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+                    const activeColor = slider.getAttribute('data-active-color') || '#0f4fff';  // Default blue active color
+                    const inactiveColor = slider.getAttribute('data-inactive-color') || '#300bff';  // Default purple inactive color
+
+                    // Update slider background using the active and inactive colors
+                    slider.style.background = `linear-gradient(to right, ${activeColor} ${value}%, ${inactiveColor} ${value}%)`;
+
+                    // Update the selected page text
+                    selectedPageElement.textContent = slider.value;
+                }
+
+                // Initialize the slider background and selected page text on page load
+                updateSlider(slider);
+
+                // Update the slider background and selected page text when the value changes
+                $(slider).on('input', function() {
+                    updateSlider(slider);
+                });
+            });
+        });
     });
-});
+})(jQuery);

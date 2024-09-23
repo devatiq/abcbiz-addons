@@ -3125,13 +3125,16 @@ label.abcbiz-pricing-option {
   padding: 20px 0;
 }
 
-
 /* Style for the range input slider */
 .abcbiz-range-slider {
+  --active-color: #0f4fff;  /* Default active color */
+  --inactive-color: #300bff;  /* Default inactive color */
+  --thumb-color: #ffee00;  /* Default thumb color */
+
   -webkit-appearance: none;
   width: 100%;
   height: 8px;
-  background: linear-gradient(to right, #4CAF50 0%, #4CAF50 var(--value, 50%), #ddd var(--value, 50%), #ddd 100%); /* Green progress, grey background */
+  background: linear-gradient(to right, var(--active-color) 50%, var(--inactive-color) 50%); /* Initial fill */
   border-radius: 5px;
   outline: none;
   transition: background 0.3s ease;
@@ -3142,7 +3145,7 @@ label.abcbiz-pricing-option {
   appearance: none;
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: var(--thumb-color);  /* Thumb color from variable */
   border-radius: 50%;
   cursor: pointer;
 }
@@ -3150,7 +3153,7 @@ label.abcbiz-pricing-option {
 .abcbiz-range-slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
-  background: #4CAF50;
+  background: var(--thumb-color);  /* Thumb color from variable */
   border-radius: 50%;
   cursor: pointer;
 }
