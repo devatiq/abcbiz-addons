@@ -313,7 +313,7 @@ class Main extends BaseWidget
                 [
                     'name' => 'abcbiz_cost_calculator_package_label_typography',
                     'label' => esc_html__('Package Name Typography', 'abcbiz-addons'),
-                    'selector' => '{{WRAPPER}} .abcbiz-pricing-label label',
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-option .abcbiz-pricing-label-text',
                 ]
             );
 
@@ -325,7 +325,7 @@ class Main extends BaseWidget
                     'type' => Controls_Manager::COLOR,
                     'default' => '#666',
                     'selectors' => [
-                        '{{WRAPPER}} .abcbiz-pricing-label label' => 'color: {{VALUE}}',
+                        '{{WRAPPER}}  .abcbiz-pricing-option .abcbiz-pricing-label-text' => 'color: {{VALUE}}',
                     ],
                 ]
             );
@@ -342,14 +342,14 @@ class Main extends BaseWidget
                             'max' => 100,                               
                     ]],
                     'selectors' => [
-                        '{{WRAPPER}} .abcbiz-pricing-label' => 'gap: {{SIZE}}{{UNIT}}',
+                        '{{WRAPPER}} .abcbiz-pricing-label .abcbiz-pricing-options' => 'gap: {{SIZE}}{{UNIT}}',
                     ],
                 ]
             );
 
 
 
-            $this->end_controls_section(); // end style section
+            $this->end_controls_section(); // end label style section
         }
     }
 
