@@ -272,7 +272,41 @@ class Main extends BaseWidget
                 ]
             );
 
-            $this->end_controls_section(); // end: Section
+            $this->end_controls_section(); // end labels section
+
+            /**
+             * Style Tab
+             */
+            $this->start_controls_section(
+                'style_label',
+                [
+                    'label' => esc_html__('Label Style', 'abcbiz-addons'),
+                    'tab' => Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_label_typography',
+                    'label' => esc_html__('Label Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-label',
+                ]
+            );
+
+            $this->add_control(
+                'abcbiz_cost_calculator_label_color',
+                [
+                    'label' => esc_html__('Label Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#fff',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-label' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            $this->end_controls_section(); // end style section
         }
     }
 
