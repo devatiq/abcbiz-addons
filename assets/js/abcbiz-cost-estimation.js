@@ -53,49 +53,42 @@ function initializeAbcbizCostEstimation(uniqueId) {
     abcbizGetRangeValue(uniqueId);
 }
 
+
 // Ensure the script runs in both Elementor's frontend and editor modes
 jQuery(window).on('elementor/frontend/init', () => {
     elementorFrontend.hooks.addAction('frontend/element_ready/global', ($scope) => {
+        // First script: Initialize cost estimation logic
         $scope.find('.abcbiz-pricing-calculator').each(function () {
             let uniqueId = jQuery(this).data('unique-id');
             initializeAbcbizCostEstimation(uniqueId);
         });
-    });
-});
 
+        // Second script: Initialize range slider logic
+        $scope.find('.abcbiz-range-slider').each(function() {
+            const slider = this;
+            const uniqueId = slider.id.split('_').pop(); // Extract the unique id
+            const selectedPageElement = document.getElementById(`abcbiz-pricing-range-selected-page_${uniqueId}`);
 
+            // Function to set the slider background and selected page text based on its value
+            function updateSlider(slider) {
+                const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+                const activeColor = slider.getAttribute('data-active-color') || '#0f4fff';  // Default blue active color
+                const inactiveColor = slider.getAttribute('data-inactive-color') || '#300bff';  // Default purple inactive color
 
-(function($) {
-    // Ensure the script works inside the Elementor editor as well as on the frontend
-    $(window).on('elementor/frontend/init', function() {
-        elementorFrontend.hooks.addAction('frontend/element_ready/global', function($scope) {
-            // Select all range sliders in the scope of the current widget
-            $scope.find('.abcbiz-range-slider').each(function() {
-                const slider = this;
-                const uniqueId = slider.id.split('_').pop(); // Extract the unique id
-                const selectedPageElement = document.getElementById(`abcbiz-pricing-range-selected-page_${uniqueId}`);
+                // Update slider background using the active and inactive colors
+                slider.style.background = `linear-gradient(to right, ${activeColor} ${value}%, ${inactiveColor} ${value}%)`;
 
-                // Function to set the slider background and selected page text based on its value
-                function updateSlider(slider) {
-                    const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
-                    const activeColor = slider.getAttribute('data-active-color') || '#0f4fff';  // Default blue active color
-                    const inactiveColor = slider.getAttribute('data-inactive-color') || '#300bff';  // Default purple inactive color
+                // Update the selected page text
+                selectedPageElement.textContent = slider.value;
+            }
 
-                    // Update slider background using the active and inactive colors
-                    slider.style.background = `linear-gradient(to right, ${activeColor} ${value}%, ${inactiveColor} ${value}%)`;
+            // Initialize the slider background and selected page text on page load
+            updateSlider(slider);
 
-                    // Update the selected page text
-                    selectedPageElement.textContent = slider.value;
-                }
-
-                // Initialize the slider background and selected page text on page load
+            // Update the slider background and selected page text when the value changes
+            jQuery(slider).on('input', function() {
                 updateSlider(slider);
-
-                // Update the slider background and selected page text when the value changes
-                $(slider).on('input', function() {
-                    updateSlider(slider);
-                });
             });
         });
     });
-})(jQuery);
+});
