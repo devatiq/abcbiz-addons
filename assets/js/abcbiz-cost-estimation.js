@@ -62,3 +62,19 @@ jQuery(window).on('elementor/frontend/init', () => {
         });
     });
 });
+
+document.querySelectorAll('.abcbiz-range-slider').forEach(slider => {
+    // Function to set the slider background based on its value
+    function updateSliderBackground(slider) {
+        const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
+        slider.style.background = `linear-gradient(to right, #4CAF50 ${value}%, #ddd ${value}%)`;
+    }
+
+    // Initialize the slider background on page load
+    updateSliderBackground(slider);
+
+    // Update the slider background when the value changes
+    slider.addEventListener('input', function() {
+        updateSliderBackground(this);
+    });
+});

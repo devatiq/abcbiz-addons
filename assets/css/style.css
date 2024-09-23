@@ -3118,3 +3118,39 @@ label.abcbiz-pricing-option {
 .abcbiz-pricing-option:hover .abcbiz-pricing-label-text {
   color: #45a049;
 }
+
+/* Style for the range slider wrapper */
+.abcbiz-pricing-cal-range-slider {
+  position: relative;
+  padding: 20px 0;
+}
+
+
+/* Style for the range input slider */
+.abcbiz-range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: linear-gradient(to right, #4CAF50 0%, #4CAF50 var(--value, 50%), #ddd var(--value, 50%), #ddd 100%); /* Green progress, grey background */
+  border-radius: 5px;
+  outline: none;
+  transition: background 0.3s ease;
+}
+
+.abcbiz-range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.abcbiz-range-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #4CAF50;
+  border-radius: 50%;
+  cursor: pointer;
+}
