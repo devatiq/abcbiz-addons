@@ -70,7 +70,7 @@ jQuery(window).on('elementor/frontend/init', () => {
             const selectedPageElement = document.getElementById(`abcbiz-pricing-range-selected-page_${uniqueId}`);
 
             // Function to set the slider background and selected page text based on its value
-            function updateSlider(slider) {
+            function abcbiz_cost_range_update_slider(slider) {
                 const value = (slider.value - slider.min) / (slider.max - slider.min) * 100;
                 const activeColor = slider.getAttribute('data-active-color') || '#0f4fff';  // Default blue active color
                 const inactiveColor = slider.getAttribute('data-inactive-color') || '#300bff';  // Default purple inactive color
@@ -83,11 +83,11 @@ jQuery(window).on('elementor/frontend/init', () => {
             }
 
             // Initialize the slider background and selected page text on page load
-            updateSlider(slider);
+            abcbiz_cost_range_update_slider(slider);
 
             // Update the slider background and selected page text when the value changes
             jQuery(slider).on('input', function() {
-                updateSlider(slider);
+                abcbiz_cost_range_update_slider(slider);
             });
         });
     });
