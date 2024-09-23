@@ -42,7 +42,7 @@ if ($repeater_pages) {
             <h2><?php echo esc_html($settings['abcbiz_cost_calculator_heading']); ?></h2>
         </div>
     <?php endif; ?>
-    <div class="abcbiz-pricing-level">
+    <div class="abcbiz-pricing-label">
         <?php // Check if any of the package names are empty
         if (!empty($package_1) && !empty($package_2) && !empty($package_3)) {
             ?>

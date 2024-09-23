@@ -285,26 +285,69 @@ class Main extends BaseWidget
                 ]
             );
 
+            // heading typography
             $this->add_group_control(
                 Group_Control_Typography::get_type(),
                 [
-                    'name' => 'abcbiz_cost_calculator_label_typography',
-                    'label' => esc_html__('Label Typography', 'abcbiz-addons'),
-                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-label',
+                    'name' => 'abcbiz_cost_calculator_heading_label_typography',
+                    'label' => esc_html__('Heading Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-heading h2',
                 ]
             );
 
             $this->add_control(
-                'abcbiz_cost_calculator_label_color',
+                'abcbiz_cost_calculator_heading_label_color',
                 [
-                    'label' => esc_html__('Label Color', 'abcbiz-addons'),
+                    'label' => esc_html__('Heading Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#fff',
+                    'default' => '#000',
                     'selectors' => [
-                        '{{WRAPPER}} .abcbiz-pricing-cal-label' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .abcbiz-pricing-cal-heading h2' => 'color: {{VALUE}}',
                     ],
                 ]
             );
+
+            // package label typography
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_package_label_typography',
+                    'label' => esc_html__('Package Name Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-label label',
+                ]
+            );
+
+            // package label
+            $this->add_control(
+                'abcbiz_cost_calculator_package_label_color',
+                [
+                    'label' => esc_html__('Package Name Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#666',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-label label' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+            //package name gap
+            $this->add_responsive_control(
+                'abcbiz_cost_calculator_package_label_gap',
+                [
+                    'label' => esc_html__('Package Name Gap', 'abcbiz-addons'),
+                    'type' => Controls_Manager::SLIDER,
+                    'size_units' => ['px', '%'],                  
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 100,                               
+                    ]],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-label' => 'gap: {{SIZE}}{{UNIT}}',
+                    ],
+                ]
+            );
+
+
 
             $this->end_controls_section(); // end style section
         }
