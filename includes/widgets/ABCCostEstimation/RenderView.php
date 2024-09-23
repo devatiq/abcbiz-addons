@@ -85,7 +85,6 @@ if ($repeater_pages) {
             );
         }
         ?>
-
     </div>
 
     <div class="abcbiz-pricing-cal-number-of-pages">
