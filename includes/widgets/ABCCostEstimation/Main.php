@@ -211,7 +211,68 @@ class Main extends BaseWidget
                 ]
             );
 
-            $this->end_controls_section();
+            $this->end_controls_section(); // end: Section
+
+
+            // Section: Labels
+            $this->start_controls_section(
+                'labels_section',
+                [
+                    'label' => esc_html__('Labels', 'abcbiz-addons'),
+                    'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
+                ]
+            );
+
+            // Label for the heading
+            $this->add_control(
+                'abcbiz_cost_calculator_heading',
+                [
+                    'label' => esc_html__('Heading', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => esc_html__('COMPLEXITY', 'abcbiz-addons'),
+                ]
+            );
+
+            // Label for the range slider
+            $this->add_control(
+                'abcbiz_cost_calculator_slider_label',
+                [
+                    'label' => esc_html__('Range Slider', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => esc_html__('NUMBER OF PAGES', 'abcbiz-addons'),
+                ]
+            );
+
+            // Label for the total
+            $this->add_control(
+                'abcbiz_cost_calculator_total_label',
+                [
+                    'label' => esc_html__('Total', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => esc_html__('Total', 'abcbiz-addons'),
+                ]
+            );
+
+            //label for the button
+            $this->add_control(
+                'abcbiz_cost_calculator_button_label',
+                [
+                    'label' => esc_html__('Button', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => esc_html__('Send Request', 'abcbiz-addons'),
+                ]
+            );
+            //button url
+            $this->add_control(
+                'abcbiz_cost_calculator_button_url',
+                [
+                    'label' => esc_html__('Button URL', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => esc_html__('#', 'abcbiz-addons'),
+                ]
+            );
+
+            $this->end_controls_section(); // end: Section
         }
     }
 

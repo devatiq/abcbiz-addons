@@ -28,9 +28,11 @@ if ($repeater_pages) {
 ?>
 
 <div class="abcbiz-pricing-calculator" data-unique-id="<?php echo esc_attr($unique_id); ?>" data-pricing="<?php echo $jsonData; ?>">
-    <div class="abcbiz-pricing-cal-heading">
-        <h2>COMPLEXITY</h2>
-    </div>
+    <?php if(!empty($settings['abcbiz_cost_calculator_heading']))  : ?>
+        <div class="abcbiz-pricing-cal-heading">
+            <h2><?php echo esc_html($settings['abcbiz_cost_calculator_heading']); ?></h2>
+        </div>
+    <?php endif; ?>
     <div class="abcbiz-pricing-level">
         <label for="abcbiz_c_p_low_<?php echo esc_attr($unique_id); ?>">
             <input type="radio" class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
@@ -51,7 +53,9 @@ if ($repeater_pages) {
 
     <div class="abcbiz-pricing-cal-number-of-pages">
         <div class="abcbiz-pricing-cal-pages-top">
-            <h2>NUMBER OF PAGES</h2>
+            <?php if(!empty($settings['abcbiz_cost_calculator_slider_label'])) : ?>
+                <h2><?php echo esc_html($settings['abcbiz_cost_calculator_slider_label']); ?></h2>
+            <?php endif; ?>
             <p id="abcbiz-pricing-range-selected-page_<?php echo esc_attr($unique_id); ?>"></p>
         </div>
         <div class="abcbiz-pricing-cal-range-slider">
@@ -64,11 +68,13 @@ if ($repeater_pages) {
     </div>
 
     <div class="abcbiz-pricing-cal-total-price">
-        <p>Total</p>
+        <?php if(!empty($settings['abcbiz_cost_calculator_total_label'])) : ?>
+            <p><?php echo esc_html($settings['abcbiz_cost_calculator_total_label']); ?></p>
+        <?php endif; ?>
         <p id="abcbiz-total-price">$<span id="abcbizTotalPrice_<?php echo esc_attr($unique_id); ?>">0</span></p>
     </div>
 
     <div class="abcbiz-pricing-cal-submit-button">
-        <a href="https://supreox.com/figma-design-to-wordpress/#contact-us-section">Send Request</a>
+        <a href="<?php echo esc_url($settings['abcbiz_cost_calculator_button_url']); ?>"><?php echo esc_html($settings['abcbiz_cost_calculator_button_label']); ?></a>
     </div>
 </div>
