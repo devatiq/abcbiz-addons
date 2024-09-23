@@ -1,5 +1,8 @@
 // Function to handle the range value and price calculations
 function abcbizGetRangeValue(uniqueId) {
+    // Get the pricing data from the attribute and parse it
+    let pricingData = JSON.parse(document.querySelector(`.abcbiz-pricing-calculator[data-unique-id='${uniqueId}']`).getAttribute('data-pricing'));
+
     // Get range slider value
     let abcbizPricingRangeSlider = document.getElementById(`abcbizPricingRangeSlider_${uniqueId}`);
     if (!abcbizPricingRangeSlider) return; // Prevent errors in editor mode
@@ -20,9 +23,6 @@ function abcbizGetRangeValue(uniqueId) {
     if (abcbizNumberOfPagesSelected) {
         abcbizNumberOfPagesSelected.innerText = abcbizGetRangeSliderValue;
     }
-
-    // Access the unique pricingData variable for this instance
-    let pricingData = window[`pricingData_${uniqueId}`];
 
     // Get the total price based on selected step and package
     let abcbizTotalPrice = document.getElementById(`abcbizTotalPrice_${uniqueId}`);

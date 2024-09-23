@@ -22,13 +22,12 @@ if ($repeater_pages) {
         $data["$step"]["abcbiz_c_p_high"] = $page['abcbiz_cost_calculator_price_3'];
     }
 
-    // Create a unique pricing data variable for each widget instance
-    $jsonData = json_encode($data);
-    echo "<script>var pricingData_{$unique_id} = $jsonData;</script>";
+    // Convert pricing data to a JSON string and store it in a data attribute
+    $jsonData = esc_attr(json_encode($data));
 }
 ?>
 
-<div class="abcbiz-pricing-calculator" data-unique-id="<?php echo esc_attr($unique_id); ?>">
+<div class="abcbiz-pricing-calculator" data-unique-id="<?php echo esc_attr($unique_id); ?>" data-pricing="<?php echo $jsonData; ?>">
     <div class="abcbiz-pricing-cal-heading">
         <h2>COMPLEXITY</h2>
     </div>
