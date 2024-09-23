@@ -27,7 +27,8 @@ class Main extends BaseWidget
         'calculator'
     ];
 
-    public function get_script_depends() {
+    public function get_script_depends()
+    {
         return ['abcbiz-cost-estimation'];
     }
 
@@ -295,15 +296,77 @@ class Main extends BaseWidget
                 ]
             );
 
+            //heading color
             $this->add_control(
                 'abcbiz_cost_calculator_heading_label_color',
                 [
                     'label' => esc_html__('Heading Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the color of the main heading text in the pricing calculator section.', 'abcbiz-addons'),
                     'default' => '#000',
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-cal-heading h2' => 'color: {{VALUE}}',
                     ],
+                ]
+            );
+
+            // total typography
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_total_label_typography',
+                    'label' => esc_html__('Total Text Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price p:not(#abcbiz-total-price)',                   
+                ]
+            );
+
+            // total label color
+            $this->add_control(
+                'abcbiz_cost_calculator_total_label_color',
+                [
+                    'label' => esc_html__('Total Text Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,               
+                    'description' => esc_html__('Set the color of the "Total" label that appears before the total price.', 'abcbiz-addons'),     
+                    'default' => '#000',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-total-price p:not(#abcbiz-total-price)' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            // total amount typography
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_total_amount_typography',
+                    'label' => esc_html__('Total Amount Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-total-price #abcbiz-total-price',                     
+                ]
+            );
+
+            // total amount color
+            $this->add_control(
+                'abcbiz_cost_calculator_total_amount_color',
+                [
+                    'label' => esc_html__('Total Amount Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,               
+                    'description' => esc_html__('Set the color of the total amount in the pricing calculator.', 'abcbiz-addons'),     
+                    'default' => '#000',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-total-price #abcbiz-total-price' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+            
+
+            $this->end_controls_section(); // end label style section
+
+            // start package name style section
+            $this->start_controls_section(
+                'abcbiz_cost_calculator_package_name_style',
+                [
+                    'label' => esc_html__('Package Name', 'abcbiz-addons'),
+                    'tab' => Controls_Manager::TAB_STYLE,
                 ]
             );
 
@@ -312,8 +375,9 @@ class Main extends BaseWidget
                 Group_Control_Typography::get_type(),
                 [
                     'name' => 'abcbiz_cost_calculator_package_label_typography',
-                    'label' => esc_html__('Package Name Typography', 'abcbiz-addons'),
+                    'label' => esc_html__('Typography', 'abcbiz-addons'),
                     'selector' => '{{WRAPPER}} .abcbiz-pricing-option .abcbiz-pricing-label-text',
+                    'description' => esc_html__('Customize the typography for the package labels (e.g., Low, Medium, High) displayed next to each pricing option.', 'abcbiz-addons'),
                 ]
             );
 
@@ -321,8 +385,9 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_cost_calculator_package_label_color',
                 [
-                    'label' => esc_html__('Package Name Color', 'abcbiz-addons'),
+                    'label' => esc_html__('Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the color for the package labels (e.g., Low, Medium, High) displayed next to each pricing option.', 'abcbiz-addons'),
                     'default' => '#666',
                     'selectors' => [
                         '{{WRAPPER}}  .abcbiz-pricing-option .abcbiz-pricing-label-text' => 'color: {{VALUE}}',
@@ -333,23 +398,134 @@ class Main extends BaseWidget
             $this->add_responsive_control(
                 'abcbiz_cost_calculator_package_label_gap',
                 [
-                    'label' => esc_html__('Package Name Gap', 'abcbiz-addons'),
+                    'label' => esc_html__('Gap', 'abcbiz-addons'),
                     'type' => Controls_Manager::SLIDER,
-                    'size_units' => ['px', '%'],                  
+                    'description' => esc_html__('Set the space (gap) between the package labels (e.g., Low, Medium, High) in the pricing options.', 'abcbiz-addons'),
+                    'size_units' => ['px', '%'],
                     'range' => [
                         'px' => [
                             'min' => 0,
-                            'max' => 100,                               
-                    ]],
+                            'max' => 200,
+                        ]
+                    ],
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-label .abcbiz-pricing-options' => 'gap: {{SIZE}}{{UNIT}}',
                     ],
                 ]
             );
 
+            // radio bullet size
+            $this->add_responsive_control(
+                'abcbiz_cost_calculator_package_radio_size',
+                [
+                    'label' => esc_html__('Button Size', 'abcbiz-addons'),
+                    'description' => esc_html__('Adjust the size of the radio buttons used for package selection in the pricing options.', 'abcbiz-addons'),
+                    'type' => Controls_Manager::SLIDER,
+                    'size_units' => ['px', '%'],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 200,
+                        ]
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-options .abcbiz-cost-est-pack-radio' => 'height: {{SIZE}}{{UNIT}}; width: {{SIZE}}{{UNIT}}',
+                    ],
+                ]
+            );
+
+            // radio color
+            $this->add_control(
+                'abcbiz_cost_calculator_package_radio_color',
+                [
+                    'label' => esc_html__('Button Color', 'abcbiz-addons'),
+                    'description' => esc_html__('Choose the color for the border of the radio buttons in the pricing options.', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#4CAF50',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-options .abcbiz-cost-est-pack-radio' => 'border-color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            // active radio color
+            $this->add_control(
+                'abcbiz_cost_calculator_package_active_radio_color',
+                [
+                    'label' => esc_html__('Active Button Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the background and border color for the radio button when it is selected (active state).', 'abcbiz-addons'),
+                    'default' => '#4CAF50',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-options .abcbiz-pricing-option input[type="radio"]:checked + .abcbiz-cost-est-pack-radio' => 'background-color: {{VALUE}};border-color:{{VALUE}}',
+                    ],
+                ]
+            );
+
+            $this->end_controls_section(); // end package name style section
 
 
-            $this->end_controls_section(); // end label style section
+            // add style section for slider
+            $this->start_controls_section(
+                'abcbiz_cost_calculator_slider_style',
+                [
+                    'label' => esc_html__('Slider Style', 'abcbiz-addons'),
+                    'tab' => Controls_Manager::TAB_STYLE,
+                ]
+            );
+            // add typography and color
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_slider_heading_typography',
+                    'label' => esc_html__('Heading Typography', 'abcbiz-addons'),
+                    'description' => esc_html__('Customize the typography for the main heading of the range slider section.', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-pages-top h2',
+                ]
+            );
+
+            //range slider heading
+            $this->add_control(
+                'abcbiz_cost_calculator_slider_heading_color',
+                [
+                    'label' => esc_html__('Heading Color', 'abcbiz-addons'),
+                    'description' => esc_html__('Set the color for the main heading in the range slider section.', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'default' => '#666666',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-pages-top h2' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            // Add typography settings for the slider's page number display
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_slider_page_number_typography',
+                    'label' => esc_html__('Page Number Typography', 'abcbiz-addons'),
+                    'description' => esc_html__('Customize the typography for the page numbers displayed in the range slider section.', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-pages-top p,{{WRAPPER}} .abcbiz-pricing-cal-range-bottom p',
+                ]
+            );
+
+            // Add color control for the slider's page number display
+            $this->add_control(
+                'abcbiz_cost_calculator_slider_page_number_color',
+                [
+                    'label' => esc_html__('Page Number Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'description' => esc_html__('Set the color for the page numbers in the range slider, including both the top and bottom sections.', 'abcbiz-addons'),
+                    'default' => '#666666',
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-pages-top p' => 'color: {{VALUE}}',
+                        '{{WRAPPER}} .abcbiz-pricing-cal-range-bottom p' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+
+            $this->end_controls_section(); // end range slider style section
         }
     }
 
