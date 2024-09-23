@@ -3056,3 +3056,68 @@ h3.abcbiz-style-three-team-name {
   text-decoration: none;
   display: inline-block;
 }
+
+/* Hide the default radio button */
+.abcbiz-pricing-option input[type="radio"] {
+  display: none;
+}
+
+/* Style the container */
+.abcbiz-pricing-options {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+/* Create custom radio button */
+.abcbiz-custom-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #4CAF50; /* Customizable color */
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* The checked state for the radio button */
+.abcbiz-pricing-option input[type="radio"]:checked + .abcbiz-custom-radio {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+}
+
+/* The inner circle that appears when the button is checked */
+.abcbiz-pricing-option input[type="radio"]:checked + .abcbiz-custom-radio::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background-color: white;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the label text */
+.abcbiz-pricing-label-text {
+  font-size: 16px;
+  color: #333; /* Customizable color */
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+label.abcbiz-pricing-option {
+  display: flex;
+  gap: 3px;
+  align-items: center;
+}
+/* Hover effects */
+.abcbiz-pricing-option:hover .abcbiz-custom-radio {
+  border-color: #45a049; /* Darker green for hover */
+}
+
+.abcbiz-pricing-option:hover .abcbiz-pricing-label-text {
+  color: #45a049;
+}

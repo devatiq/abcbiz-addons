@@ -43,49 +43,54 @@ if ($repeater_pages) {
         </div>
     <?php endif; ?>
     <div class="abcbiz-pricing-label">
-        <?php // Check if any of the package names are empty
-        if (!empty($package_1) && !empty($package_2) && !empty($package_3)) {
-            ?>
+    <?php // Check if any of the package names are empty
+    if (!empty($package_1) && !empty($package_2) && !empty($package_3)) {
+        ?>
+        <div class="abcbiz-pricing-options">
             <?php if (!empty($package_1)): ?>
-                <label for="abcbiz_c_p_low_<?php echo esc_attr($unique_id); ?>">
+                <label for="abcbiz_c_p_low_<?php echo esc_attr($unique_id); ?>" class="abcbiz-pricing-option">
                     <input type="radio"
-                        class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
-                        id="abcbiz_c_p_low_<?php echo esc_attr($unique_id); ?>"
-                        name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" checked value="abcbiz_c_p_low">
-                    <?php echo esc_html($package_1); ?>
+                           class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
+                           id="abcbiz_c_p_low_<?php echo esc_attr($unique_id); ?>"
+                           name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" checked value="abcbiz_c_p_low">
+                    <span class="abcbiz-custom-radio"></span>
+                    <span class="abcbiz-pricing-label-text"><?php echo esc_html($package_1); ?></span>
                 </label>
             <?php endif; ?>
 
             <?php if (!empty($package_2)): ?>
-                <label for="abcbiz_c_p_medium_<?php echo esc_attr($unique_id); ?>">
+                <label for="abcbiz_c_p_medium_<?php echo esc_attr($unique_id); ?>" class="abcbiz-pricing-option">
                     <input type="radio"
-                        class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
-                        id="abcbiz_c_p_medium_<?php echo esc_attr($unique_id); ?>"
-                        name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" value="abcbiz_c_p_medium">
-                    <?php echo esc_html($package_2); ?>
+                           class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
+                           id="abcbiz_c_p_medium_<?php echo esc_attr($unique_id); ?>"
+                           name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" value="abcbiz_c_p_medium">
+                    <span class="abcbiz-custom-radio"></span>
+                    <span class="abcbiz-pricing-label-text"><?php echo esc_html($package_2); ?></span>
                 </label>
             <?php endif; ?>
 
             <?php if (!empty($package_3)): ?>
-                <label for="abcbiz_c_p_high_<?php echo esc_attr($unique_id); ?>">
+                <label for="abcbiz_c_p_high_<?php echo esc_attr($unique_id); ?>" class="abcbiz-pricing-option">
                     <input type="radio"
-                        class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
-                        id="abcbiz_c_p_high_<?php echo esc_attr($unique_id); ?>"
-                        name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" value="abcbiz_c_p_high">
-                    <?php echo esc_html($package_3); ?>
+                           class='abcbiz_cost_calculator_package abcbiz_cost_calculator_package_<?php echo esc_attr($unique_id); ?>'
+                           id="abcbiz_c_p_high_<?php echo esc_attr($unique_id); ?>"
+                           name="abcbizPricingLevel_<?php echo esc_attr($unique_id); ?>" value="abcbiz_c_p_high">
+                    <span class="abcbiz-custom-radio"></span>
+                    <span class="abcbiz-pricing-label-text"><?php echo esc_html($package_3); ?></span>
                 </label>
             <?php endif; ?>
-            <?php
-        } else {
+        </div>
+        <?php
+    } else {
+        echo sprintf(
+            '<p style="color: red;">' . esc_html__('Package names are not configured yet. Please go to the %ssettings page%s to configure them.', 'abcbiz-addons') . '</p>',
+            '<a href="' . esc_url($settings_url) . '" target="_blank">',
+            '</a>'
+        );
+    }
+    ?>
+</div>
 
-            echo sprintf(
-                '<p style="color: red;">' . esc_html__('Package names are not configured yet. Please go to the %ssettings page%s to configure them.', 'abcbiz-addons') . '</p>',
-                '<a href="' . esc_url($settings_url) . '" target="_blank">',
-                '</a>'
-            );
-        }
-        ?>
-    </div>
 
     <div class="abcbiz-pricing-cal-number-of-pages">
         <div class="abcbiz-pricing-cal-pages-top">
