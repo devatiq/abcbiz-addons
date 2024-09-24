@@ -2942,7 +2942,6 @@ h3.abcbiz-style-three-team-name {
   border-style: solid;
   border-width: 1px 1px 1px 1px;
   border-color: #2C7973;
-  box-shadow: 39px 33px 0px 0px rgba(110.99999999999999, 185, 143.00000000000003, 0.13);
   transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
   padding: 40px 40px 40px 40px;
 }
@@ -3041,6 +3040,7 @@ h3.abcbiz-style-three-team-name {
 
 .abcbiz-pricing-cal-submit-button {
   margin-top: 30px;
+  display: flex;
 }
 
 .abcbiz-pricing-cal-submit-button a {
@@ -3052,9 +3052,10 @@ h3.abcbiz-style-three-team-name {
   line-height: 16px;
   background-color: #6FB98F;
   border-radius: 4px 4px 4px 4px;
-  padding: 20px 74px 20px 74px;
+  padding: 15px 10px;
   text-decoration: none;
   display: inline-block;
+  text-align: center;
 }
 
 .abcbiz-pricing-option input[type="radio"] {

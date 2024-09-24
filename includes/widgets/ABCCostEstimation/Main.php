@@ -9,6 +9,7 @@ use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
 use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Box_Shadow;
 
 class Main extends BaseWidget
 {
@@ -214,7 +215,7 @@ class Main extends BaseWidget
 
             $this->end_controls_section(); // end: Section
 
-
+            
             // Section: Labels
             $this->start_controls_section(
                 'labels_section',
@@ -275,13 +276,94 @@ class Main extends BaseWidget
 
             $this->end_controls_section(); // end labels section
 
+            // Section: Style
+            $this->start_controls_section(
+                'general_style_section',
+                [
+                    'label' => esc_html__('Style', 'abcbiz-addons'),
+                    'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            // Background for the widget
+            $this->add_group_control(
+                Group_Control_Background::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_background',
+                    'label' => esc_html__('Background', 'abcbiz-addons'),
+                    'types' => ['classic', 'gradient'],
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-calculator',
+                ]
+            );
+
+            // Border for the widget
+            $this->add_group_control(
+                Group_Control_Border::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_border',
+                    'label' => esc_html__('Border', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-calculator',
+                ]
+            );
+
+            // Border radius for the widget
+            $this->add_control(
+                'abcbiz_cost_calculator_border_radius',
+                [
+                    'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],                    
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-calculator' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Margin for the widget
+            $this->add_responsive_control(
+                'abcbiz_cost_calculator_margin',
+                [
+                    'label' => esc_html__('Margin', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-calculator' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Padding for the widget
+            $this->add_responsive_control(
+                'abcbiz_cost_calculator_padding',
+                [
+                    'label' => esc_html__('Padding', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-calculator' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            // Box Shadow for the widget
+            $this->add_group_control(
+                Group_Control_Box_Shadow::get_type(),
+                [
+                    'name' => 'abcbiz_cost_calculator_box_shadow',
+                    'label' => esc_html__('Box Shadow', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-calculator',
+                ]
+            );
+
+            $this->end_controls_section(); // end: Style
+
             /**
              * Style Tab
              */
             $this->start_controls_section(
                 'style_label',
                 [
-                    'label' => esc_html__('Label Style', 'abcbiz-addons'),
+                    'label' => esc_html__('Label', 'abcbiz-addons'),
                     'tab' => Controls_Manager::TAB_STYLE,
                 ]
             );
@@ -469,7 +551,7 @@ class Main extends BaseWidget
             $this->start_controls_section(
                 'abcbiz_cost_calculator_slider_style',
                 [
-                    'label' => esc_html__('Slider Style', 'abcbiz-addons'),
+                    'label' => esc_html__('Range Slider', 'abcbiz-addons'),
                     'tab' => Controls_Manager::TAB_STYLE,
                 ]
             );
@@ -565,6 +647,191 @@ class Main extends BaseWidget
 
 
             $this->end_controls_section(); // end range slider style section
+
+            
+            // Style section for the button
+            $this->start_controls_section(
+                'style_button',
+                [
+                    'label' => esc_html__('Button', 'abcbiz-addons'),
+                    'tab' => Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            $this->add_responsive_control(
+                'button_alignment',
+                [
+                    'label' => esc_html__('Alignment', 'abcbiz-addons'),
+                    'type' => Controls_Manager::CHOOSE,
+                    'options' => [
+                        'left' => [
+                            'title' => esc_html__('Left', 'abcbiz-addons'),
+                            'icon' => 'eicon-text-align-left',
+                        ],
+                        'center' => [
+                            'title' => esc_html__('Center', 'abcbiz-addons'),
+                            'icon' => 'eicon-text-align-center',
+                        ],
+                        'right' => [
+                            'title' => esc_html__('Right', 'abcbiz-addons'),
+                            'icon' => 'eicon-text-align-right',
+                        ],
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button' => 'justify-content: {{VALUE}};',
+                    ],
+                ]
+            );
+
+            
+            $this->add_responsive_control(
+                'button_width',
+                [
+                    'label' => esc_html__('Width', 'abcbiz-addons'),
+                    'type' => Controls_Manager::SLIDER,
+                    'size_units' => ['px', 'em', '%'],
+                    'range' => [
+                        'px' => [
+                            'min' => 0,
+                            'max' => 1000,
+                            'step' => 1,
+                        ],
+                    ],
+                    'default' => [
+                        'unit' => 'px',
+                        'size' => 200,
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a' => 'width: {{SIZE}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'button_padding',
+                [
+                    'label' => esc_html__('Padding', 'abcbiz-addons'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', 'em', '%'],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_responsive_control(
+                'button_margin',
+                [
+                    'label' => esc_html__('Margin', 'abcbiz-addons'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', 'em', '%'],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+            $this->add_group_control(
+                Group_Control_Typography::get_type(),
+                [
+                    'name' => 'button_typography',
+                    'label' => esc_html__('Typography', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a',
+                ]
+            );
+
+            $this->add_group_control(
+                Group_Control_Border::get_type(),
+                [
+                    'name' => 'button_border',
+                    'label' => esc_html__('Border', 'abcbiz-addons'),
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a',
+                ]
+            );
+
+            $this->add_responsive_control(
+                'button_border_radius',
+                [
+                    'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                    'type' => Controls_Manager::DIMENSIONS,
+                    'size_units' => ['px', '%', 'em'],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    ],
+                ]
+            );
+
+
+            $this->start_controls_tabs('button_style_tabs');
+
+            $this->start_controls_tab('button_style_normal_tab', [
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
+            ]);
+            $this->add_control(
+                'button_text_color',
+                [
+                    'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            $this->add_group_control(
+                Group_Control_Background::get_type(),
+                [
+                    'name' => 'button_background',
+                    'label' => esc_html__('Background', 'abcbiz-addons'),
+                    'types' => ['classic', 'gradient'],
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a',
+                ]
+            );
+            $this->end_controls_tab();
+
+            $this->start_controls_tab('button_style_hover_tab', [
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
+            ]);
+            
+            $this->add_control(
+                'button_text_color_hover',
+                [
+                    'label' => esc_html__('Text Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a:hover' => 'color: {{VALUE}}',
+                    ],
+                ]
+            );
+
+            $this->add_group_control(
+                Group_Control_Background::get_type(),
+                [
+                    'name' => 'button_background_hover',
+                    'label' => esc_html__('Background', 'abcbiz-addons'),
+                    'types' => ['classic', 'gradient'],
+                    'exclude' => ['image'],
+                    'selector' => '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a:hover',
+                ]
+            );   
+            
+            $this->add_control(
+                'button_border_color_hover',
+                [
+                    'label' => esc_html__('Border Color', 'abcbiz-addons'),
+                    'type' => Controls_Manager::COLOR,
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-cal-submit-button a:hover' => 'border-color: {{VALUE}}',
+                    ],
+                ]
+            );
+            
+
+            $this->end_controls_tab();
+
+            $this->end_controls_tabs(); // end button style tabs
+
+            $this->end_controls_section(); // end button style section
         }
     }
 
