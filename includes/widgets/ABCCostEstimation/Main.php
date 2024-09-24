@@ -208,6 +208,24 @@ class Main extends BaseWidget
                             'abcbiz_cost_calculator_pack_3' => 'abcbiz_c_p_high',
                             'abcbiz_cost_calculator_price_3' => 400,
                         ],
+                        [
+                            'page_list' => esc_html__('Page #2', 'abcbiz-addons'),
+                            'abcbiz_cost_calculator_pack_1' => 'abcbiz_c_p_low',
+                            'abcbiz_cost_calculator_price_1' => 200,
+                            'abcbiz_cost_calculator_pack_2' => 'abcbiz_c_p_medium',
+                            'abcbiz_cost_calculator_price_2' => 300,
+                            'abcbiz_cost_calculator_pack_3' => 'abcbiz_c_p_high',
+                            'abcbiz_cost_calculator_price_3' => 500,
+                        ],
+                        [
+                            'page_list' => esc_html__('Page #3', 'abcbiz-addons'),
+                            'abcbiz_cost_calculator_pack_1' => 'abcbiz_c_p_low',
+                            'abcbiz_cost_calculator_price_1' => 400,
+                            'abcbiz_cost_calculator_pack_2' => 'abcbiz_c_p_medium',
+                            'abcbiz_cost_calculator_price_2' => 600,
+                            'abcbiz_cost_calculator_pack_3' => 'abcbiz_c_p_high',
+                            'abcbiz_cost_calculator_price_3' => 800,
+                        ],
                     ],
                     'title_field' => '{{{ page_list }}}', // Dynamically show the title in the repeater list
                 ]
@@ -220,30 +238,8 @@ class Main extends BaseWidget
             $this->start_controls_section(
                 'labels_section',
                 [
-                    'label' => esc_html__('Labels & URL', 'abcbiz-addons'),
+                    'label' => esc_html__('Options', 'abcbiz-addons'),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
-                ]
-            );
-
-            
-            // Currency field
-            $this->add_control(
-                'abcbiz_cost_calculator_currency',
-                [
-                    'label' => esc_html__('Currency', 'abcbiz-addons'),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => '$',
-                ]
-            );
-
-            
-            // Default value field
-            $this->add_control(
-                'abcbiz_cost_calculator_default_value',
-                [
-                    'label' => esc_html__('Default Value', 'abcbiz-addons'),
-                    'type' => \Elementor\Controls_Manager::TEXT,
-                    'default' => '2',
                 ]
             );
 
@@ -251,9 +247,10 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_cost_calculator_heading',
                 [
-                    'label' => esc_html__('Heading', 'abcbiz-addons'),
+                    'label' => esc_html__('Heading Label', 'abcbiz-addons'),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__('COMPLEXITY', 'abcbiz-addons'),
+                    'description' => esc_html__('Label for the heading.', 'abcbiz-addons'),
                 ]
             );
 
@@ -261,9 +258,10 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_cost_calculator_slider_label',
                 [
-                    'label' => esc_html__('Range Slider', 'abcbiz-addons'),
+                    'label' => esc_html__('Range Slider Label', 'abcbiz-addons'),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__('NUMBER OF PAGES', 'abcbiz-addons'),
+                    'description' => esc_html__('Label for the range slider.', 'abcbiz-addons'),
                 ]
             );
 
@@ -271,9 +269,10 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_cost_calculator_total_label',
                 [
-                    'label' => esc_html__('Total', 'abcbiz-addons'),
+                    'label' => esc_html__('Total Label', 'abcbiz-addons'),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__('Total', 'abcbiz-addons'),
+                    'description' => esc_html__('Label for the total.', 'abcbiz-addons'),
                 ]
             );
 
@@ -281,9 +280,10 @@ class Main extends BaseWidget
             $this->add_control(
                 'abcbiz_cost_calculator_button_label',
                 [
-                    'label' => esc_html__('Button', 'abcbiz-addons'),
+                    'label' => esc_html__('Button Label', 'abcbiz-addons'),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__('Send Request', 'abcbiz-addons'),
+                    'description' => esc_html__('Label for the button.', 'abcbiz-addons'),
                 ]
             );
             //button url
@@ -293,8 +293,33 @@ class Main extends BaseWidget
                     'label' => esc_html__('Button URL', 'abcbiz-addons'),
                     'type' => \Elementor\Controls_Manager::TEXT,
                     'default' => esc_html__('#', 'abcbiz-addons'),
+                    'description' => esc_html__('Enter the URL for the button.', 'abcbiz-addons'),
                 ]
             );
+                        
+            // Currency field
+            $this->add_control(
+                'abcbiz_cost_calculator_currency',
+                [
+                    'label' => esc_html__('Currency', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => '$',
+                    'description' => esc_html__('Enter the currency symbol.', 'abcbiz-addons'),
+                ]
+            );
+
+            
+            // Default value field
+            $this->add_control(
+                'abcbiz_cost_calculator_default_value',
+                [
+                    'label' => esc_html__('Default Slider Value', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => '2',
+                    'description' => esc_html__('Enter the default value for the range slider.', 'abcbiz-addons'),
+                ]
+            );
+
 
             $this->end_controls_section(); // end labels section
 

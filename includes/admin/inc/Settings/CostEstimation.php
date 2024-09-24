@@ -15,9 +15,9 @@ class CostEstimation
         // Set default values if not already set
         if (!$this->options) {
             $this->options = array(
-                'cost_estimation_package_1' => 'low',
-                'cost_estimation_package_2' => 'medium',
-                'cost_estimation_package_3' => 'high',
+                'cost_estimation_package_1' => 'Low',
+                'cost_estimation_package_2' => 'Medium',
+                'cost_estimation_package_3' => 'High',
             );
             update_option('abcbiz_cost_estimation_options', $this->options);
         }
