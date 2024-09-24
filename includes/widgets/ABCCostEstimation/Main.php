@@ -220,7 +220,7 @@ class Main extends BaseWidget
             $this->start_controls_section(
                 'labels_section',
                 [
-                    'label' => esc_html__('Labels', 'abcbiz-addons'),
+                    'label' => esc_html__('Labels & URL', 'abcbiz-addons'),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 ]
             );
