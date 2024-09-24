@@ -225,6 +225,28 @@ class Main extends BaseWidget
                 ]
             );
 
+            
+            // Currency field
+            $this->add_control(
+                'abcbiz_cost_calculator_currency',
+                [
+                    'label' => esc_html__('Currency', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => '$',
+                ]
+            );
+
+            
+            // Default value field
+            $this->add_control(
+                'abcbiz_cost_calculator_default_value',
+                [
+                    'label' => esc_html__('Default Value', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::TEXT,
+                    'default' => '2',
+                ]
+            );
+
             // Label for the heading
             $this->add_control(
                 'abcbiz_cost_calculator_heading',
