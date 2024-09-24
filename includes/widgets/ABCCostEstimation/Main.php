@@ -280,8 +280,31 @@ class Main extends BaseWidget
             $this->start_controls_section(
                 'general_style_section',
                 [
-                    'label' => esc_html__('Style', 'abcbiz-addons'),
+                    'label' => esc_html__('General Style', 'abcbiz-addons'),
                     'tab' => \Elementor\Controls_Manager::TAB_STYLE,
+                ]
+            );
+
+            //width of the widget
+            $this->add_responsive_control(
+                'abcbiz_cost_calculator_width',
+                [
+                    'label' => esc_html__('Width', 'abcbiz-addons'),
+                    'type' => \Elementor\Controls_Manager::SLIDER,
+                    'size_units' => ['px', '%'],
+                    'range' => [
+                        'px' => [
+                            'min' => 300,
+                            'max' => 2000,
+                        ],
+                        '%' => [
+                            'min' => 0,
+                            'max' => 100,
+                        ],
+                    ],
+                    'selectors' => [
+                        '{{WRAPPER}} .abcbiz-pricing-calculator' => 'width: {{SIZE}}{{UNIT}};',
+                    ],
                 ]
             );
 
