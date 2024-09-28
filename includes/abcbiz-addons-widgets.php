@@ -205,6 +205,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCostEstimation\Main::class;
 		}
 
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostGrid\Main::class;
+		
+
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
 		require_once ABCBIZ_Path . '/includes/widgets/abcbiz-addons-wc-widgets.php';
