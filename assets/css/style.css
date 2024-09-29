@@ -3158,3 +3158,86 @@ label.abcbiz-pricing-option {
   border-radius: 50%;
   cursor: pointer;
 }
+
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Grid
+ * ---------------------------------------------*/
+ .abcbiz-modren-posts-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto; 
+  grid-gap: 20px;
+  height: 100%; 
+  align-items: stretch;
+}
+
+.abcbiz-modren-single-post {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+}
+
+/* Style for the first post to span the full height */
+.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3; 
+  height: 100%;
+}
+
+/* Style for the second and third posts */
+.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2),
+.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: auto; 
+  height: 100%;
+}
+
+.abcbiz-modren-single-post-thumbnail img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.abcbiz-modren-single-post-contents {
+  padding: 15px;
+  flex-grow: 1;
+}
+
+.abcbiz-modren-single-post-title h3 {
+  font-size: 1.2rem;
+  margin: 0 0 10px;
+}
+
+.abcbiz-modren-single-post-title h3 a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.abcbiz-modren-single-post-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 10px;
+}
+
+.abcbiz-modren-single-post-info li {
+  font-size: 0.9rem;
+  color: #777;
+}
+
+.abcbiz-modren-single-post-info li a {
+  text-decoration: none;
+  color: #007bff;
+}
+.abcbiz-modren-single-post:not(:first-child) .abcbiz-modren-single-post-thumbanil img {
+  max-height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
