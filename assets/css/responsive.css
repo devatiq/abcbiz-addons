@@ -251,7 +251,7 @@
     line-height: 1.5em;
   }
   .abcbiz-modren-single-post:not(:first-child)
-    .abcbiz-modren-single-post-thumbanil
+    .abcbiz-modren-single-post-thumbnail
     img {
     max-height: fit-content;
   }
