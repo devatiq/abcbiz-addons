@@ -21,7 +21,7 @@ $abcbiz_settings = $this->get_settings_for_display();
             <div class="abcbiz-modren-single-post-contents">
                 <!-- Post Title -->
                 <div class="abcbiz-modren-single-post-title">
-                    <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                    <h3><a href="#">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</a></h3>
                 </div><!--/ Post Title -->
 
                 <!-- Post info -->
@@ -45,7 +45,7 @@ $abcbiz_settings = $this->get_settings_for_display();
             <div class="abcbiz-modren-single-post-contents">
                 <!-- Post Title -->
                 <div class="abcbiz-modren-single-post-title">
-                    <h3><a href="#">Lorem ipsum dolor sit amet</a></h3>
+                    <h3><a href="#">Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet</a></h3>
                 </div><!--/ Post Title -->
 
                 <!-- Post info -->
