@@ -2887,7 +2887,19 @@ h3.abcbiz-style-three-team-name {
 #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover {
   cursor: pointer;
 }
-
+#abcbiz-mailchimp-submit svg {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+}
+#abcbiz-mailchimp-submit svg path {
+  fill: #fff;
+}
+button#abcbiz-mailchimp-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 /*----------------------------------------------
  * ABCBiz Gravity Form
  * ---------------------------------------------*/

@@ -19,7 +19,9 @@ $settings = $this->get_settings_for_display();
         <input id="abcbiz-mailchimp-list" type="hidden" name="list"
             value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
         <button type="submit"
-            id="abcbiz-mailchimp-submit"><?php echo esc_html($settings['submit_button_text']); ?></button>
+            id="abcbiz-mailchimp-submit"><?php echo esc_html($settings['submit_button_text']); ?>
+           
+        </button>
     </form>
     <div class="abcbiz-mailchimp-response"></div>
 </div>
