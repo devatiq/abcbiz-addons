@@ -205,7 +205,7 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCCostEstimation\Main::class;
 		}
 
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostGrid\Main::class;
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCModernPostGrid\Main::class;
 		
 
 		//WooCommerce widgets
