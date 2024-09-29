@@ -152,7 +152,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 ## Upgrade Notice
 
-## 1.0.
+## 1.0.9
 - 5 new widgets added
 
 ## 1.0.8
