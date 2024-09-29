@@ -3264,6 +3264,11 @@ label.abcbiz-pricing-option {
 .abcbiz-modren-single-post-info li span {
   color: #fff;
 }
+.abcbiz-modren-single-post:first-child .abcbiz-modren-single-post-thumbanil img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 .abcbiz-modren-single-post:not(:first-child) .abcbiz-modren-single-post-thumbanil img {
   max-height: 270px;
   width: 100%;
@@ -3272,4 +3277,7 @@ label.abcbiz-pricing-option {
 }
 .abcbiz-modren-single-post-info {
   margin-bottom: 16px;
+}
+.abcbiz-modren-single-post-thumbanil {
+  height: 100%;
 }

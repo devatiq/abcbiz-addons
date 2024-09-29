@@ -2,332 +2,353 @@
     Responsive css for large screen    
 -----------------------------*/
 @media only screen and (max-width: 1500px) {
-
-    /*------------------------
+  /*------------------------
     * Blog
     --------------------------*/
-    .abcbiz-ele-blogs {
-        /* flex-direction: column; */
-        gap: 20px;
-    }
+  .abcbiz-ele-blogs {
+    /* flex-direction: column; */
+    gap: 20px;
+  }
 
-    .abcbiz-ele-single-first {
-        flex-basis: 44%;
-    }
+  .abcbiz-ele-single-first {
+    flex-basis: 44%;
+  }
 
-    .abcbiz-ele-single-blog-rem-posts {
-        gap: 25px;
-    }
+  .abcbiz-ele-single-blog-rem-posts {
+    gap: 25px;
+  }
 
-    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img {
-        width: 100%;
-        height: auto;
-        object-fit: cover;
-        min-height: 133px;
-    }
+  .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-height: 133px;
+  }
 
-    .abcbiz-ele-single-blog-content-area {
-        width: 90%;
-        padding: 10px 15px;
-        position: unset;
-    }
+  .abcbiz-ele-single-blog-content-area {
+    width: 90%;
+    padding: 10px 15px;
+    position: unset;
+  }
 
-    .abcbiz-ele-single-blog-thumbnail {
-        max-width: 140px;
-    }
-    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
-        height: auto;
-    }
+  .abcbiz-ele-single-blog-thumbnail {
+    max-width: 140px;
+  }
+  .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
+    height: auto;
+  }
 
-    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
-        gap: 15px;
-    }
+  .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
+    gap: 15px;
+  }
 }
 
 /*---------------------------
     Responsive css for medium screen
 -----------------------------*/
 @media only screen and (max-width: 1100px) {
-
-    /*------------------------
+  /*------------------------
     * Blog
     --------------------------*/
-    .abcbiz-ele-blogs {
-        flex-direction: column;
-        gap: 40px;
-    }
+  .abcbiz-ele-blogs {
+    flex-direction: column;
+    gap: 40px;
+  }
 
-    .abcbiz-ele-single-blog-thumbnail img {
-        width: 100%;
-    }
+  .abcbiz-ele-single-blog-thumbnail img {
+    width: 100%;
+  }
 
-    .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area {
-        width: 100%;
-        margin-top: 10px;
-        position: static;
-    }
+  .abcbiz-ele-single-first .abcbiz-ele-single-blog-content-area {
+    width: 100%;
+    margin-top: 10px;
+    position: static;
+  }
 
-    .abcbiz-ele-single-blog-rem-posts {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        width: 100%;
-    }
+  .abcbiz-ele-single-blog-rem-posts {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
 
-    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
-        flex-direction: column;
-    }
+  .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
+    flex-direction: column;
+  }
 
-    .abcbiz-ele-single-blog-thumbnail {
-        max-width: 100%;
-       
-    }
-    .abcbiz-ele-single-blog-rem-posts  .abcbiz-ele-single-blog-thumbnail {
-        height: auto;
-    }
+  .abcbiz-ele-single-blog-thumbnail {
+    max-width: 100%;
+  }
+  .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
+    height: auto;
+  }
 
-    .abcbiz-ele-single-blog-content-area {
-        width: 100%;
-        padding: 10px 15px;
-    }
+  .abcbiz-ele-single-blog-content-area {
+    width: 100%;
+    padding: 10px 15px;
+  }
 
-    .abcbiz-ele-blogs-area {
-        width: 90%;
-        margin: 0 auto;
-    }
+  .abcbiz-ele-blogs-area {
+    width: 90%;
+    margin: 0 auto;
+  }
 
-    .abcbiz-ele-related-post ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
+  .abcbiz-ele-related-post ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 /*---------------------------
     Responsive css for tab
 -----------------------------*/
 @media only screen and (max-width: 768px) {
-
-    /*------------------------
+  /*------------------------
     * Pricing table
     --------------------------*/
-    .abcbiz-ele-pricing-pack-name {
-        min-height: 50px;
-        width: 200px;
-    }
+  .abcbiz-ele-pricing-pack-name {
+    min-height: 50px;
+    width: 200px;
+  }
 
-    .abcbiz-ele-pricing-pack-preiod {
-        top: 80px;
-    }
+  .abcbiz-ele-pricing-pack-preiod {
+    top: 80px;
+  }
 
-    .abcbiz-ele-pricing-header-strock {
-        margin-top: -102px;
-    }
+  .abcbiz-ele-pricing-header-strock {
+    margin-top: -102px;
+  }
 
-    .abcbiz-ele-pricing-table-footer a {
-        padding: 15px 29px;
-    }
-    .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {        
-        padding-top: 20px;
-        padding-bottom: 20px;
-        margin-bottom: 20px;
-    }
+  .abcbiz-ele-pricing-table-footer a {
+    padding: 15px 29px;
+  }
+  .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
 
-/* ---------------------------------------------
+  /* ---------------------------------------------
  * Popup
  * --------------------------------------------- */
-    .abcbiz-popup-overlay iframe {
-        width: 100%;
-        height: auto;
-    }
+  .abcbiz-popup-overlay iframe {
+    width: 100%;
+    height: auto;
+  }
 
-/* ---------------------------------------------
+  /* ---------------------------------------------
  * Card Info
  * --------------------------------------------- */
-    .abcbiz-card-style-two-area .abcbiz-card-info-wrap {
+  .abcbiz-card-style-two-area .abcbiz-card-info-wrap {
     flex-direction: column !important;
-    }
+  }
 
-    /*------------------------
+  /*------------------------
     * Blog widget
     --------------------------*/
-    .abcbiz-ele-blogs {
-        flex-direction: column;
-    }
+  .abcbiz-ele-blogs {
+    flex-direction: column;
+  }
 
-    .abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img {
-        width: 100%;
-    }
+  .abcbiz-ele-single-first .abcbiz-ele-single-blog-thumbnail img {
+    width: 100%;
+  }
 
-    .abcbiz-ele-single-blog-content-area {
-        width: 100%;
-    }
+  .abcbiz-ele-single-blog-content-area {
+    width: 100%;
+  }
 
-    .abcbiz-ele-single-blog-rem-posts {
-        grid-template-columns: repeat(1, 1fr);
-    }
+  .abcbiz-ele-single-blog-rem-posts {
+    grid-template-columns: repeat(1, 1fr);
+  }
 
-    /*----------------------------------------------
+  /*----------------------------------------------
     * ABC Blog List
     * ---------------------------------------------*/
 
-    .abcbiz-ele-blog-list-thumb {
-        float: none;
-        width: 100%;
-        margin-right: 0;
-    }
+  .abcbiz-ele-blog-list-thumb {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+  }
 
-    /*------------------------
+  /*------------------------
     * Testimonial
     --------------------------*/
-    .abcbiz-testi-position {
-        position: unset !important;
-    }
+  .abcbiz-testi-position {
+    position: unset !important;
+  }
 
-    /*------------------------
+  /*------------------------
     * Iconbox Three
     --------------------------*/
-    .abctheme-icon-box-three-pos {
-        position: unset !important;
-    }
+  .abctheme-icon-box-three-pos {
+    position: unset !important;
+  }
 
-    /*----------------------------------------------
+  /*----------------------------------------------
  * ABC Author Bio
  * ---------------------------------------------*/
 
-    .abcbiz-ele-author-bio {
-        column-gap: 10px;
-        flex-direction: column;
-    }
+  .abcbiz-ele-author-bio {
+    column-gap: 10px;
+    flex-direction: column;
+  }
 
-    .abcbiz-ele-authorleft {
-        width: 100%;
-    }
+  .abcbiz-ele-authorleft {
+    width: 100%;
+  }
 
-    .abcbiz-ele-authorright {
-        width: 100%;
-    }
+  .abcbiz-ele-authorright {
+    width: 100%;
+  }
 
-    /*----------------------------------------------
+  /*----------------------------------------------
     * ABC Related Post
     * ---------------------------------------------*/
-    .abcbiz-ele-related-post ul li {
-        flex-basis: 48%;
-        margin-bottom: 20px;
-    }
+  .abcbiz-ele-related-post ul li {
+    flex-basis: 48%;
+    margin-bottom: 20px;
+  }
 
-    /*-------------------------
+  /*-------------------------
     * Blog Grid
     ---------------------------*/
 
-    /* Three column blog area */
-    .abcbiz-ele-three-column-blog {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+  /* Three column blog area */
+  .abcbiz-ele-three-column-blog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
-    /* Four column blog area */
-    .abcbiz-ele-four-column-blog {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
+  /* Four column blog area */
+  .abcbiz-ele-four-column-blog {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
 
+  /*----------------------------------------------
+    * ABC Modern Post Grid
+    * ---------------------------------------------*/
+  .abcbiz-modren-posts-grid-wrapper {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post {
+    grid-column: auto;
+    grid-row: auto;
+    height: auto;
+  }
+
+  .abcbiz-modren-single-post {
+    margin-bottom: 20px;
+  }
+  .abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2),
+  .abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
+    grid-column: auto;
+  }
+  .abcbiz-modren-single-post-title h3 a {
+    font-size: 20px;
+    line-height: 1.5em;
+  }
+  .abcbiz-modren-single-post:not(:first-child)
+    .abcbiz-modren-single-post-thumbanil
+    img {
+    max-height: fit-content;
+  }
 }
 
 /*---------------------------
     Responsive css for mobile
 -----------------------------*/
 @media only screen and (max-width: 480px) {
+  /* Global */
+  .hide-on-mobile {
+    display: none !important;
+  }
 
-    /* Global */
-    .hide-on-mobile {
-        display: none !important;
-    }
-
-    /*------------------------
+  /*------------------------
     * Pricing table
     --------------------------*/
-    .abcbiz-ele-pricing-table-footer a {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-    .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {        
-        padding-top: 20px;
-        padding-bottom: 20px;
-    }
-    .abcbiz-ele-pricing-pack-preiod h3 {
-        font-size: 25px;
-    }
+  .abcbiz-ele-pricing-table-footer a {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+  .abcbiz-ele-pricing-table-type-standard .abcbiz-ele-pricing-pack-preiod {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .abcbiz-ele-pricing-pack-preiod h3 {
+    font-size: 25px;
+  }
 
-    /*------------------------
+  /*------------------------
     * Contact Form 7 widget
     --------------------------*/
-    .abcbiz-ele-contact-field-row {
-        gap: 0;
-        flex-direction: column;
-    }
+  .abcbiz-ele-contact-field-row {
+    gap: 0;
+    flex-direction: column;
+  }
 
-    #abcbiz-ele-contact-field.abcbiz-ele-contact-field p {
-        margin-bottom: 0;
-    }
+  #abcbiz-ele-contact-field.abcbiz-ele-contact-field p {
+    margin-bottom: 0;
+  }
 
-    .abcbiz-ele-contact-field {
-        margin-bottom: 10px;
-    }
+  .abcbiz-ele-contact-field {
+    margin-bottom: 10px;
+  }
 
-    #abcbiz-ele-contact-field.abcbiz-ele-contact-form-submit {
-        flex-basis: 0;
-    }
+  #abcbiz-ele-contact-field.abcbiz-ele-contact-form-submit {
+    flex-basis: 0;
+  }
 
-    /*------------------------
+  /*------------------------
     * Blog Fancy widget
     --------------------------*/
-    .abcbiz-ele-single-blog-content-area {
-        width: 100%;
-        position: unset;
-    }
+  .abcbiz-ele-single-blog-content-area {
+    width: 100%;
+    position: unset;
+  }
 
-    .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
-        flex-direction: column;
-    }
+  .abcbiz-ele-single-blog-area:not(.abcbiz-ele-single-first) {
+    flex-direction: column;
+  }
 
-    .abcbiz-ele-single-blog-thumbnail {
-        max-width: 100%;
-       
-    }
-    
+  .abcbiz-ele-single-blog-thumbnail {
+    max-width: 100%;
+  }
 
-    .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img, .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
-        height: auto;
-    }
+  .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail img,
+  .abcbiz-ele-single-blog-rem-posts .abcbiz-ele-single-blog-thumbnail {
+    height: auto;
+  }
 
-    /*-------------------------
+  /*-------------------------
     * Testimonial
     ---------------------------*/
-    .abcbiz-testimonial-grids {
-        grid-template-columns: repeat(1, 1fr);
-    }
-    .abcbiz-testimonial-slider-nav-bar.abcbiz-test-nav-hide-in-mobile {
-        display: none;
-    }
+  .abcbiz-testimonial-grids {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .abcbiz-testimonial-slider-nav-bar.abcbiz-test-nav-hide-in-mobile {
+    display: none;
+  }
 
-    /*-------------------------
+  /*-------------------------
     * Tabs
     ---------------------------*/
-    .abcbiz-var-tabs .e-n-tabs-heading>button[aria-selected="true"]:after {
-        display: none;
-    }
+  .abcbiz-var-tabs .e-n-tabs-heading > button[aria-selected="true"]:after {
+    display: none;
+  }
 
-    .abcbiz-single-icon-box-three-area {
-        align-items: flex-start;
-        gap: 20px;
-        flex-direction: column;
-    }
+  .abcbiz-single-icon-box-three-area {
+    align-items: flex-start;
+    gap: 20px;
+    flex-direction: column;
+  }
 
-     /*-------------------------
+  /*-------------------------
     * Related Post
     ---------------------------*/
-    .abcbiz-ele-related-post ul {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-
+  .abcbiz-ele-related-post ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
