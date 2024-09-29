@@ -69,7 +69,6 @@ $id = $this->get_id();
 				type: 'image',
 				closeOnContentClick: false,
 				showCloseBtn: <?php echo $settings['abcbiz_elementor_gallery_close_button'] == 'true' ? 'true' : 'false'; ?>,
-				closeBtnInside: <?php echo !empty($settings['abcbiz_elementor_gallery_btn_inside']) && $settings['abcbiz_elementor_gallery_btn_inside'] == 'true' ? 'true' : 'false'; ?>,
 				mainClass: 'mfp-with-zoom mfp-img-mobile abcbiz-photos-gallery-popup',
 				allowHTMLInTemplate: true,
 				image: {

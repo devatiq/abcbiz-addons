@@ -122,9 +122,9 @@ class Main extends BaseWidget
             [
                 'label' => esc_html__('Slides Per View', 'abcbiz-addons'),
                 'type' => Controls_Manager::NUMBER,
-                'default' => 3,
-                'desktop_default' => 3,
-                'tablet_default' => 2,
+                'default' => 1,
+                'desktop_default' => 1,
+                'tablet_default' => 1,
                 'mobile_default' => 1,
             ]
         );
