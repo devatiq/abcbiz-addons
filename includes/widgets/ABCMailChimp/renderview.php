@@ -15,7 +15,7 @@ $settings = $this->get_settings_for_display();
             <input id="abcbiz-mailchimp-fname" type="text" name="fname" placeholder="First Name">
             <input id="abcbiz-mailchimp-lname" type="text" name="lname" placeholder="Last Name">
         <?php endif; ?>
-        <input id="abcbiz-mailchimp-email" type="email" name="email" placeholder="Your Email" required>
+        <input id="abcbiz-mailchimp-email" type="email" name="email" placeholder="<?php echo esc_html($settings['email_placeholder_text']); ?>" required>
         <input id="abcbiz-mailchimp-list" type="hidden" name="list"
             value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
         <button type="submit"

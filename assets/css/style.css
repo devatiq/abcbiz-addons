@@ -2884,6 +2884,9 @@ h3.abcbiz-style-three-team-name {
   background-color: crimson;
   color: #fff;
 }
+#abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover {
+  cursor: pointer;
+}
 
 /*----------------------------------------------
  * ABCBiz Gravity Form

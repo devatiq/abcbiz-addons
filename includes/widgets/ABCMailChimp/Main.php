@@ -120,12 +120,23 @@ class Main extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'email_placeholder_text',
+            [
+                'label' => __('Email Placeholder', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('Enter your email', 'abcbiz-addons'),
+                'placeholder' => __('Enter your placeholder text', 'abcbiz-addons'),
+                'label_block' => true,
+            ]
+        );
+
+        $this->add_control(
             'submit_button_text',
             [
                 'label' => __('Submit Button Text', 'abcbiz-addons'),
                 'type' => Controls_Manager::TEXT,
                 'default' => esc_html__('Subscribe', 'abcbiz-addons'),
-                'placeholder' => __('Enter your placeholder text', 'abcbiz-addons'),
+                'placeholder' => __('Enter your submit button text', 'abcbiz-addons'),
                 'label_block' => true,
             ]
         );
@@ -133,7 +144,7 @@ class Main extends \Elementor\Widget_Base
         $this->add_control(
             'flex_direction',
             [
-                'label' => __( 'Flex Direction', 'abcbiz-addons' ),
+                'label' => __( 'Form Alignment', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
                 'default' => 'row',
                 'options' => [
@@ -288,6 +299,13 @@ class Main extends \Elementor\Widget_Base
                 'label' => __( 'Input Padding', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
+                'default' => [
+                    'top' => 15,
+                    'right' => 15,
+                    'bottom' => 15,
+                    'left' => 15,
+                    'unit' => 'px',
+                ],
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form input' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -333,6 +351,13 @@ class Main extends \Elementor\Widget_Base
                 'label' => __( 'Padding', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
                 'size_units' => [ 'px', 'em', '%' ],
+                'default' => [
+                    'top' => 15,
+                    'right' => 15,
+                    'bottom' => 15,
+                    'left' => 15,
+                    'unit' => 'px',
+                ],
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
@@ -374,6 +399,18 @@ class Main extends \Elementor\Widget_Base
                 'label' => __( 'Width', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', '%' ],
+                'desktop_default' => [
+                    'unit' => 'px',
+                    'size' => 200,
+                ],
+                'tablet_default' => [
+					'size' => 170,
+					'unit' => 'px',
+				],
+				'mobile_default' => [
+					'size' => 120,
+					'unit' => 'px',
+				],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -392,17 +429,91 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        $this->start_controls_tabs(
+            'abcbiz_mailchimp_button_tabs'
+        );
+
+        $this->start_controls_tab(
+            'abcbiz_mailchimp_button_normal',
+            [
+                'label' => __( 'Normal', 'abcbiz-addons' ),
+            ]
+        );
+        $this->add_control(
+            'abcbiz_mailchimp_button_text_color',
+            [
+                'label' => __( 'Text Color', 'abcbiz-addons' ),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',               
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
         $this->add_group_control(
             \Elementor\Group_Control_Background::get_type(),
             [
                 'name' => 'abcbiz_mailchimp_button_background',
-                'label' => __( 'Background', 'abcbiz-addons' ),
+                'label' => __( 'Background', 'abcbiz-addons' ),    
+                'types' => [ 'classic', 'gradient' ],
+                'exclude' => [
+                    'image'
+                ],    
+                'fields_options' => [
+                    'background' => [
+                        'default' => 'classic',
+                    ],
+                    'color' => [
+                        'default' => 'crimson',
+                    ],
+                ],     
                 'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
                 'exclude' => [
                     'image'
                 ],
             ]
         );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab(
+            'abcbiz_mailchimp_button_hover',
+            [
+                'label' => __( 'Hover', 'abcbiz-addons' ),
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_mailchimp_button_hover_text_color',
+            [
+                'label' => __( 'Text Color', 'abcbiz-addons' ),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',            
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+        $this->add_group_control(
+            \Elementor\Group_Control_Background::get_type(),
+            [
+                'name' => 'abcbiz_mailchimp_button_background_hover',
+                'label' => __( 'Background', 'abcbiz-addons' ),    
+                'types' => [ 'classic', 'gradient' ],
+                'exclude' => [
+                    'image'
+                ],     
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover',
+                'exclude' => [
+                    'image'
+                ],
+            ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->end_controls_tabs();
+
         $this->end_controls_section();
 
         $this->start_controls_section(
@@ -418,6 +529,7 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Text Color', 'abcbiz-addons' ),
                 'type' => Controls_Manager::COLOR,
+                'default' => '#000',
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-mailchimp-response' => 'color: {{VALUE}}',
                 ],
