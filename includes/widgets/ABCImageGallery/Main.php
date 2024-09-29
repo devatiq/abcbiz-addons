@@ -128,7 +128,7 @@ class Main extends BaseWidget
 					'description' => esc_html__('Description', 'abcbiz-addons'),
 					'none' => esc_html__('None', 'abcbiz-addons'),
 				],
-				'default' => 'none',
+				'default' => 'title',
 			]
 		);
 
@@ -143,22 +143,6 @@ class Main extends BaseWidget
 				'description' => esc_html__('Enable or disable the close icon for the popup.', 'abcbiz-addons'),
 				'return_value' => 'true',
 				'default' => 'true',
-			]
-		);
-
-		$this->add_control(
-			'abcbiz_elementor_gallery_btn_inside',
-			[
-				'label' => esc_html__('Button Inside', 'abcbiz-addons'),
-				'type' => Controls_Manager::SWITCHER,
-				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
-				'label_off' => esc_html__('No', 'abcbiz-addons'),
-				'description' => esc_html__('Choose whether the button will be inside or outside in the popup. if yes the close button will be inside', 'abcbiz-addons'),
-				'return_value' => 'true',
-				'default' => 'true',
-				'condition' => [
-					'abcbiz_elementor_gallery_close_button' => 'true',
-				],
 			]
 		);
 

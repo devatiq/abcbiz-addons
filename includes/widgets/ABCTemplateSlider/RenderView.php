@@ -1,13 +1,13 @@
 <?php
 // Get settings
 $settings = $this->get_settings_for_display();
-$slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
-$slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
-$slides_per_view_tablet = isset($settings['slides_per_view_tablet']) ? $settings['slides_per_view_tablet'] : 2;
+$slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
+$slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
+$slides_per_view_tablet = isset($settings['slides_per_view_tablet']) ? $settings['slides_per_view_tablet'] : 1;
 $slides_per_view_mobile = isset($settings['slides_per_view_mobile']) ? $settings['slides_per_view_mobile'] : 1;
 
 $loop = $settings['slider_loop'] === 'yes' ? true : false;
-$autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 2500, 'disableOnInteraction' => false] : false;
+$autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 6000, 'disableOnInteraction' => false] : false;
 $arrows = $settings['show_arrows'] === 'yes' ? true : false;
 $pagination = $settings['show_pagination'] === 'yes' ? true : false;
 

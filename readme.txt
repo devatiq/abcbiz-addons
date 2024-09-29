@@ -26,9 +26,9 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 
 [View All Templates](https://demo.abcbizaddons.com/addons-template/)
 
-== Widget List: 61 Available Widgets ==
+== Widget List: 66 Available Widgets ==
 
-- Advanced Animated Text (new)
+- Advanced Animated Text
 - Advanced Circular Skill
 - Advanced Icon Box
 - Advanced Pricing Table
@@ -46,14 +46,18 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Comment Form
 - Contact & Social Info
 - Contact Form 7 Style
+- Cost Estimation (New)
 - Counter Up
-- Count Down Timer (New)
+- Count Down Timer
 - Dual Button
 - Fancy Blog Posts
 - Featured Image
 - Flip Box
+- Gravity Form (New)
 - Image Hover
-- Image and Text Scroll (new)
+- Image and Text Scroll
+- Image Gallery (New)
+- Mailchimp (New)
 - Page Title
 - Popup
 - Portfolio
@@ -67,13 +71,14 @@ Welcome to **[ABCBiz Addons](https://abcbizaddons.com/)**, your go-to treasure c
 - Search Form
 - Search Icon
 - Section Title
-- Single Image Scroll (new)
+- Single Image Scroll
 - Site Logo
 - Site Title & Tagline
 - Skill Bar
 - Social Share
 - Sticker Text
 - Team Member
+- Template Slider (New)
 - Testimonial Carousel
 - WordPress Menu
 
@@ -114,6 +119,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 3. Advanced Pricing Table
 
 == Changelog ==
+
+= 1.0.9 - 29 September 2024 =
+- 5 new widgets added
+- Bug Fixes
 
 = 1.0.8 - 18 August 2024 =
 - 20+ Templates Added
@@ -156,6 +165,9 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 - Initial release
 
 == Upgrade Notice ==
+
+= 1.0.9 =
+- 5 new widgets added
 
 = 1.0.8 =
 - 20+ ready to import free templates added

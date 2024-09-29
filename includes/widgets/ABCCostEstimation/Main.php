@@ -15,7 +15,7 @@ class Main extends BaseWidget
 {
     // define protected variables...
     protected $name = 'abcbiz-cost-estimation';
-    protected $title = 'Cost Estimation';
+    protected $title = 'ABC Cost Estimation';
     protected $icon = 'eicon-call-to-action abcbiz-addons-icon';
     protected $categories = [
         'abcbiz-category'
@@ -78,7 +78,7 @@ class Main extends BaseWidget
             $this->start_controls_section(
                 'abcbiz_cost_calculator_content_section',
                 [
-                    'label' => esc_html__('Cost Estimation Pages', 'abcbiz-addons'),
+                    'label' => esc_html__('Cost Estimation Items', 'abcbiz-addons'),
                     'tab' => \Elementor\Controls_Manager::TAB_CONTENT,
                 ]
             );
@@ -593,7 +593,7 @@ class Main extends BaseWidget
                     'label' => esc_html__('Button Color', 'abcbiz-addons'),
                     'description' => esc_html__('Choose the color for the border of the radio buttons in the pricing options.', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#4CAF50',
+                    'default' => '#c634f7',
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-options .abcbiz-cost-est-pack-radio' => 'border-color: {{VALUE}}',
                     ],
@@ -607,7 +607,7 @@ class Main extends BaseWidget
                     'label' => esc_html__('Active Button Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
                     'description' => esc_html__('Set the background and border color for the radio button when it is selected (active state).', 'abcbiz-addons'),
-                    'default' => '#4CAF50',
+                    'default' => '#c634f7',
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-pricing-options .abcbiz-pricing-option input[type="radio"]:checked + .abcbiz-cost-est-pack-radio' => 'background-color: {{VALUE}};border-color:{{VALUE}}',
                     ],
@@ -682,7 +682,7 @@ class Main extends BaseWidget
                 [
                     'label' => esc_html__('Slider Active Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#0f4fff',  
+                    'default' => '#c634f7',  
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-range-slider' => '--active-color: {{VALUE}};',
                     ],
@@ -706,9 +706,9 @@ class Main extends BaseWidget
             $this->add_control(
                 'slider_thumb_color',
                 [
-                    'label' => esc_html__('Slider Thumb Color', 'abcbiz-addons'),
+                    'label' => esc_html__('Slider Pointer Color', 'abcbiz-addons'),
                     'type' => Controls_Manager::COLOR,
-                    'default' => '#0f4fff',  
+                    'default' => '#c634f7',  
                     'selectors' => [
                         '{{WRAPPER}} .abcbiz-range-slider' => '--thumb-color: {{VALUE}};',
                     ],

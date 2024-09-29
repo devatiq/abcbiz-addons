@@ -3050,12 +3050,18 @@ h3.abcbiz-style-three-team-name {
   font-weight: 600;
   text-transform: uppercase;
   line-height: 16px;
-  background-color: #6FB98F;
+  background-color: #c634f7;
   border-radius: 4px 4px 4px 4px;
   padding: 15px 10px;
   text-decoration: none;
   display: inline-block;
   text-align: center;
+  transition: all 0.4s;
+}
+
+.abcbiz-pricing-cal-submit-button a:hover {
+  background-color: #0649e7;
+  color: #fff;
 }
 
 .abcbiz-pricing-option input[type="radio"] {
