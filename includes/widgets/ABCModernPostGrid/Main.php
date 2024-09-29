@@ -29,10 +29,23 @@ class Main extends BaseWidget {
 	protected function register_controls() {
 
 		$this->start_controls_section(
-			'abcbiz_elementor_anim_text_setting',
+			'abcbiz_modern_post_grid_setting',
 			[
-				'label' => esc_html__( 'Contents', 'abcbiz-addons' ),
+				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
 				'tab' => Controls_Manager::TAB_CONTENT,
+			]
+		);
+		$this->add_control(
+			'abcbiz_modern_post_grid_style',
+			[
+				'label' => esc_html__( 'Grid Style', 'abcbiz-addons' ),
+				'type' => Controls_Manager::SELECT,
+				'default' => 'style1',
+				'options' => [
+					'style1' => esc_html__( 'Style 1', 'abcbiz-addons' ),
+					'style2' => esc_html__( 'Style 2', 'abcbiz-addons' ),
+					'style3' => esc_html__( 'Style 3', 'abcbiz-addons' ),
+				],
 			]
 		);
 		
