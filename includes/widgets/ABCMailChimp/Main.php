@@ -70,7 +70,7 @@ class Main extends \Elementor\Widget_Base
                 ]
             );
 
-
+            // Add notice control if API key is not set
             $this->add_control(
                 'api_key_notice',
                 [
@@ -86,6 +86,7 @@ class Main extends \Elementor\Widget_Base
             $this->end_controls_section();
         }
 
+        // Add section for MailChimp settings
         $this->start_controls_section(
             'section_mailchimp',
             [
@@ -94,6 +95,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for form style
         $this->add_control(
             'mailchimp_form_style',
             [
@@ -107,7 +109,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-
+        // Add control for MailChimp Audience List
         $this->add_control(
             'mailchimp_list_id',
             [
@@ -132,6 +134,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for email placeholder
         $this->add_control(
             'email_placeholder_text',
             [
@@ -143,6 +146,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button type
         $this->add_control(
             'button_type',
             [
@@ -159,6 +163,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for submit button text
         $this->add_control(
             'submit_button_text',
             [
@@ -174,6 +179,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for submit button text
         $this->add_control(
             'submit_button_inline_text',
             [
@@ -190,8 +196,9 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for form alignment
         $this->add_control(
-            'flex_direction',
+            'form_alignment',
             [
                 'label' => __( 'Form Alignment', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::CHOOSE,
@@ -221,9 +228,10 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_section();
+        $this->end_controls_section(); // End Controls Section
 
 
+        // Start Controls Section for MailChimp Form Style
         $this->start_controls_section(
             'abcbiz_mailchimp_section_style',
             [
@@ -232,6 +240,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for first name width
         $this->add_responsive_control(
             'abcbiz_mailchimp_first_name_width',
             [
@@ -260,6 +269,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for last name width
         $this->add_responsive_control(
             'abcbiz_mailchimp_last_name_width',
             [
@@ -287,6 +297,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for email width
         $this->add_responsive_control(
             'abcbiz_mailchimp_email_width',
             [
@@ -313,6 +324,7 @@ class Main extends \Elementor\Widget_Base
 
   
 
+        // Add control for gap
         $this->add_responsive_control(
             'abcbiz_mailchimp_gap',
             [
@@ -345,6 +357,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for input padding
         $this->add_responsive_control(
             'abcbiz_mailchimp_input_padding',
             [
@@ -364,6 +377,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for input border
         $this->add_responsive_control(
             'abcbiz_mailchimp_input_border_radius',
             [
@@ -376,6 +390,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for input border
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
@@ -386,9 +401,10 @@ class Main extends \Elementor\Widget_Base
         );
 
 
-        $this->end_controls_section();
+        $this->end_controls_section(); // end: Section
 
 
+        // Start: Button Style
         $this->start_controls_section(
             'abcbiz_mailchimp_button_style',
             [
@@ -397,6 +413,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button padding
         $this->add_responsive_control(
             'abcbiz_mailchimp_button_padding',
             [
@@ -413,6 +430,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button border
         $this->add_responsive_control(
             'abcbiz_mailchimp_button_border_radius',
             [
@@ -427,6 +445,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button border
         $this->add_group_control(
             \Elementor\Group_Control_Border::get_type(),
             [
@@ -436,6 +455,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button typography
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -447,6 +467,8 @@ class Main extends \Elementor\Widget_Base
                 'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',
             ]
         );
+
+        // Add control for button width
         $this->add_responsive_control(
             'abcbiz_mailchimp_submit_width',
             [
@@ -475,6 +497,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button size
         $this->add_responsive_control(
             'abcbiz_mailchimp_submit_btn_size',
             [
@@ -502,7 +525,8 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->add_control(
+        // Add control for button right indent
+        $this->add_responsive_control(
             'abcbiz_mailchimp_submit_btn_right_indent',
             [
                 'label' => __( 'Button Right Indent', 'abcbiz-addons' ),
@@ -529,7 +553,8 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->add_control(
+        // Add control for button top indent
+        $this->add_responsive_control(
             'abcbiz_mailchimp_submit_btn_top_indent',
             [
                 'label' => __( 'Button Top Indent', 'abcbiz-addons' ),
@@ -556,16 +581,20 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button color
         $this->start_controls_tabs(
             'abcbiz_mailchimp_button_tabs'
         );
 
+        // Normal tab
         $this->start_controls_tab(
             'abcbiz_mailchimp_button_normal',
             [
                 'label' => __( 'Normal', 'abcbiz-addons' ),
             ]
         );
+
+        // Add control for button text color
         $this->add_control(
             'abcbiz_mailchimp_button_text_color',
             [
@@ -582,6 +611,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button icon color
         $this->add_control(
             'abcbiz_mailchimp_button_icon_color',
             [
@@ -596,6 +626,8 @@ class Main extends \Elementor\Widget_Base
                 ],
             ]
         );
+
+        // Add control for button background
         $this->add_group_control(
             \Elementor\Group_Control_Background::get_type(),
             [
@@ -617,8 +649,10 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // Normal tab
 
+
+        // Hover tab
         $this->start_controls_tab(
             'abcbiz_mailchimp_button_hover',
             [
@@ -626,6 +660,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button hover text color
         $this->add_control(
             'abcbiz_mailchimp_button_hover_text_color',
             [
@@ -642,6 +677,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for button hover icon color
         $this->add_control(
             'abcbiz_mailchimp_button_hover_icon_color',
             [
@@ -656,6 +692,8 @@ class Main extends \Elementor\Widget_Base
                 ],
             ]
         );
+
+        // Add control for button hover background
         $this->add_group_control(
             \Elementor\Group_Control_Background::get_type(),
             [
@@ -669,12 +707,13 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_tab();
+        $this->end_controls_tab(); // Hover tab
 
-        $this->end_controls_tabs();
+        $this->end_controls_tabs(); // Button tab
 
-        $this->end_controls_section();
+        $this->end_controls_section(); // Button Style
 
+        // Message Style
         $this->start_controls_section(
             'abcbiz_elementor_mailchimp_message_style',
             [
@@ -683,6 +722,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for message text color
         $this->add_control(
             'abcbiz_elementor_mailchimp_message_text_color',
             [
@@ -695,6 +735,7 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        // Add control for message typography
         $this->add_group_control(
             \Elementor\Group_Control_Typography::get_type(),
             [
@@ -704,10 +745,11 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
-        $this->end_controls_section();
+        $this->end_controls_section(); // End Message Style Section
 
     }
 
+    // Get mailchimp lists
     private function get_mailchimp_lists()
     {
         $api_key = isset($this->settings['mailchimp_api_key']) ? sanitize_text_field($this->settings['mailchimp_api_key']) : '';
