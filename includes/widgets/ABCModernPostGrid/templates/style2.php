@@ -74,7 +74,9 @@ $posts = new WP_Query([
                             </div><!--/ Post Info -->
                         </div><!--/ Post Contents -->
                     </div><!--/ Single Post -->
-                <?php else: ?>
+                <?php else:  if ($counter === 2) {
+                    echo '<div class="abcbiz-modren-last-three-posts-wrapper">';
+                } ?>
                     <div class="abcbiz-modren-style2-single-post">
                         <!-- Post Thumbnail -->
                         <div class="abcbiz-modren-style2-post-thumbnail">
@@ -119,6 +121,8 @@ $posts = new WP_Query([
                         </div><!--/ Post Contents -->
                     </div><!--/ Single Post -->
                     <?php
+                    if ($posts->current_post + 1 === $posts->post_count) :  echo '</div> <!--/ Last Three Posts Wrapper -->';
+                    endif;
                 endif;
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
