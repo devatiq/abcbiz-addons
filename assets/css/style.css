@@ -2886,19 +2886,61 @@ h3.abcbiz-style-three-team-name {
 }
 #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover {
   cursor: pointer;
+  background-color: #a03bf4;
 }
-#abcbiz-mailchimp-submit svg {
-  width: 30px;
-  height: 30px;
+#abcbiz-mailchimp-inline-submit svg {
+  width: 45px;
+  height: 45px;
   fill: #fff;
+  background-color: #c36;
+  padding: 10px;
+  border-radius: 100%;
 }
-#abcbiz-mailchimp-submit svg path {
+#abcbiz-mailchimp-inline-submit svg:hover {
+  cursor: pointer;
+  background-color: #a03bf4;
+}
+#abcbiz-mailchimp-inline-submit svg path {
   fill: #fff;
 }
 button#abcbiz-mailchimp-submit {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+button#abcbiz-mailchimp-inline-submit {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  padding: 0;
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+}
+button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text {
+  right: 6px;
+}
+button#abcbiz-mailchimp-inline-submit:hover {
+  background-color: transparent;
+}
+#abcbiz-mailchimp-form.abcbiz-mailchimp-single-form.abcbiz-mailchimp-inline-form {
+  position: relative;
+}
+#abcbiz-mailchimp-form.abcbiz-mailchimp-single-form.abcbiz-mailchimp-inline-form #abcbiz-mailchimp-email {
+  width: 100%;
+  border-radius: 50px;
+}
+button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text {
+  background-color: #c36;
+  color: #fff;
+  border-radius: 50px;
+  padding: 11px;
+  width: 110px;
+}
+button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover {
+  background-color: #a03bf4;
+  color: #fff;
+  cursor: pointer;
 }
 /*----------------------------------------------
  * ABCBiz Gravity Form
