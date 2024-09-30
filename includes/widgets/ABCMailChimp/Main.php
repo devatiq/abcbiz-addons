@@ -94,6 +94,19 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_control(
+            'mailchimp_form_style',
+            [
+                'label' => __('Form Style', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'default' => __('Default', 'abcbiz-addons'),
+                    'inline' => __('Inline', 'abcbiz-addons'),
+                ],
+                'default' => 'default',
+            ]
+        );
+
 
         $this->add_control(
             'mailchimp_list_id',
@@ -131,6 +144,19 @@ class Main extends \Elementor\Widget_Base
         );
 
         $this->add_control(
+            'button_type',
+            [
+                'label' => __('Button Type', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT,
+                'options' => [
+                    'text' => __('Text', 'abcbiz-addons'),
+                    'icon' => __('Icon', 'abcbiz-addons'),
+                ],
+                'default' => 'text',
+            ]
+        );
+
+        $this->add_control(
             'submit_button_text',
             [
                 'label' => __('Submit Button Text', 'abcbiz-addons'),
@@ -138,6 +164,9 @@ class Main extends \Elementor\Widget_Base
                 'default' => esc_html__('Subscribe', 'abcbiz-addons'),
                 'placeholder' => __('Enter your submit button text', 'abcbiz-addons'),
                 'label_block' => true,
+                'condition' => [
+                    'button_type' => 'text',
+                ],
             ]
         );
 
