@@ -9,25 +9,35 @@ $settings = $this->get_settings_for_display();
 $style = $settings['mailchimp_form_style'];
 ?>
 
+<!-- MailChimp Form Area-->
 <div class="abcbiz-mailchimp-wrapper">
+    <!-- MailChimp Form -->
     <form id="abcbiz-mailchimp-form"
         class="abcbiz-mailchimp-single-form <?php if ('inline' === $style): ?> abcbiz-mailchimp-inline-form <?php endif; ?>">
+            <!-- Name Fields -->
         <?php if ('yes' === $settings['enable_name_fields']): ?>
             <input id="abcbiz-mailchimp-fname" type="text" name="fname" placeholder="First Name">
             <input id="abcbiz-mailchimp-lname" type="text" name="lname" placeholder="Last Name">
-        <?php endif; ?>
+        <?php endif; ?> <!--/ Name Fields -->
+
+        <!-- Email Fields -->
         <input id="abcbiz-mailchimp-email" type="email" name="email"
-            placeholder="<?php echo esc_html($settings['email_placeholder_text']); ?>" required>
+            placeholder="<?php echo esc_html($settings['email_placeholder_text']); ?>" required>  <!--/ Email Fields -->
         <input id="abcbiz-mailchimp-list" type="hidden" name="list"
-            value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">
+            value="<?php echo esc_attr($settings['mailchimp_list_id']); ?>">        
+        
         <?php if ('default' === $style): ?>
+            <!-- Submit Button for default style -->
             <button type="submit" id="abcbiz-mailchimp-submit"><?php echo esc_html($settings['submit_button_text']); ?>
-            </button>
+            </button><!--/ Submit Button for default style -->
         <?php elseif ('inline' === $style): ?>
+            <!-- Submit Button for inline style -->
             <button type="submit" id="abcbiz-mailchimp-inline-submit" class="<?php if('text' == $settings['button_type']) : ?>abcbiz-mailchimp-inline-submit-text <?php endif; ?>">
                 <?php if ('text' == $settings['button_type']): ?>
-                    <?php echo esc_html($settings['submit_button_inline_text']); ?>
+                    <!-- Text Button for inline style -->
+                    <?php echo esc_html($settings['submit_button_inline_text']); ?> <!--/ Text Button for inline style -->
                 <?php elseif ('icon' == $settings['button_type']): ?>
+                    <!-- Icon Button for inline style -->
                     <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
                         id="fi_12604076">
                         <g clip-rule="evenodd" fill="rgb(0,0,0)" fill-rule="evenodd">
@@ -38,10 +48,11 @@ $style = $settings['mailchimp_form_style'];
                                 d="m4.64645 19.3536c.19526.1952.51184.1952.7071 0l14.00005-14.00005c.1952-.19526.1952-.51184 0-.7071-.1953-.19527-.5119-.19527-.7072 0l-13.99995 13.99995c-.19527.1953-.19527.5119 0 .7072z">
                             </path>
                         </g>
-                    </svg>
+                    </svg> <!--/ Icon Button for inline style -->
                 <?php endif; ?>
-            </button>
+            </button><!--/ Submit Button for inline style -->
         <?php endif; ?>
-    </form>
-    <div class="abcbiz-mailchimp-response"></div>
-</div>
+    </form> <!--/ MailChimp Form -->
+    <!-- MailChimp Response -->
+    <div class="abcbiz-mailchimp-response"></div><!--/ MailChimp Response -->
+</div><!--/ MailChimp Form Area -->
