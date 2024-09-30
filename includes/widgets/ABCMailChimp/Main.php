@@ -147,6 +147,9 @@ class Main extends \Elementor\Widget_Base
             'button_type',
             [
                 'label' => __('Button Type', 'abcbiz-addons'),
+                'condition' => [
+                    'mailchimp_form_style' => 'inline',
+                ],
                 'type' => Controls_Manager::SELECT,
                 'options' => [
                     'text' => __('Text', 'abcbiz-addons'),
@@ -165,8 +168,25 @@ class Main extends \Elementor\Widget_Base
                 'placeholder' => __('Enter your submit button text', 'abcbiz-addons'),
                 'label_block' => true,
                 'condition' => [
+                    'mailchimp_form_style' => 'default',
+                ]
+               
+            ]
+        );
+
+        $this->add_control(
+            'submit_button_inline_text',
+            [
+                'label' => __('Submit Button Text', 'abcbiz-addons'),
+                'type' => Controls_Manager::TEXT,
+                'default' => esc_html__('Subscribe', 'abcbiz-addons'),
+                'placeholder' => __('Enter your submit button text', 'abcbiz-addons'),
+                'label_block' => true,
+                'condition' => [
+                    'mailchimp_form_style' => 'inline',
                     'button_type' => 'text',
-                ],
+                ]
+               
             ]
         );
 
@@ -382,7 +402,10 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Padding', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', 'em', '%' ],              
+                'size_units' => [ 'px', 'em', '%' ],        
+                'condition' => [
+                    'button_type!' => 'icon',
+                ],  
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
@@ -399,6 +422,7 @@ class Main extends \Elementor\Widget_Base
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                     '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} #abcbiz-mailchimp-inline-submit svg' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -408,7 +432,7 @@ class Main extends \Elementor\Widget_Base
             [
                 'name' => 'abcbiz_mailchimp_button_border',
                 'label' => __( 'Border', 'abcbiz-addons' ),
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text, {{WRAPPER}} #abcbiz-mailchimp-inline-submit svg',
             ]
         );
 
@@ -417,6 +441,9 @@ class Main extends \Elementor\Widget_Base
             [
                 'name' => 'abcbiz_mailchimp_button_typography',
                 'label' => __( 'Typography', 'abcbiz-addons' ),
+                'condition' => [
+                    'button_type' => 'text',
+                ],
                 'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',
             ]
         );
@@ -425,7 +452,10 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Width', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => [ 'px', '%' ],             
+                'size_units' => [ 'px', '%' ], 
+                'condition' => [
+                    'button_type' => 'text',
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -445,6 +475,87 @@ class Main extends \Elementor\Widget_Base
             ]
         );
 
+        $this->add_responsive_control(
+            'abcbiz_mailchimp_submit_btn_size',
+            [
+                'label' => __( 'Button Size', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ], 
+                'condition' => [
+                    'button_type' => 'icon',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 1000,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-inline-submit svg' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_mailchimp_submit_btn_right_indent',
+            [
+                'label' => __( 'Button Right Indent', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'size_units' => [ 'px', '%' ],
+                'condition' => [
+                    'button_type' => 'icon',
+                ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit' => 'right: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_mailchimp_submit_btn_top_indent',
+            [
+                'label' => __( 'Button Top Indent', 'abcbiz-addons' ),
+                'type' => \Elementor\Controls_Manager::SLIDER,
+                'condition' => [
+                    'button_type' => 'icon',
+                ],
+                'size_units' => [ 'px', '%' ],
+                'range' => [
+                    'px' => [
+                        'min' => -200,
+                        'max' => 200,
+                        'step' => 1,
+                    ],
+                    '%' => [
+                        'min' => -50,
+                        'max' => 100,
+                        'step' => 1,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit' => 'top: {{SIZE}}{{UNIT}}',
+                ],
+            ]
+        );
+
         $this->start_controls_tabs(
             'abcbiz_mailchimp_button_tabs'
         );
@@ -460,10 +571,28 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Text Color', 'abcbiz-addons' ),
                 'type' => Controls_Manager::COLOR,
+                'condition' => [
+                    'button_type' => 'text',
+                ],
                 'default' => '#ffffff',               
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'color: {{VALUE}};',
                     '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_mailchimp_button_icon_color',
+            [
+                'label' => __( 'Icon Color', 'abcbiz-addons' ),
+                'condition' => [
+                    'button_type' => 'icon',
+                ],
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',               
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-inline-submit svg path' => 'fill: {{VALUE}};',
                 ],
             ]
         );
@@ -484,7 +613,7 @@ class Main extends \Elementor\Widget_Base
                         'default' => 'crimson',
                     ],
                 ],     
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',               
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text, {{WRAPPER}} #abcbiz-mailchimp-inline-submit svg',               
             ]
         );
 
@@ -502,10 +631,28 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Text Color', 'abcbiz-addons' ),
                 'type' => Controls_Manager::COLOR,
+                'condition' => [
+                    'button_type' => 'text',
+                ],
                 'default' => '#ffffff',            
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover' => 'color: {{VALUE}};',
                     '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'abcbiz_mailchimp_button_hover_icon_color',
+            [
+                'label' => __( 'Icon Color', 'abcbiz-addons' ),
+                'type' => Controls_Manager::COLOR,
+                'condition' => [
+                    'button_type' => 'icon',
+                ],
+                'default' => '#ffffff',            
+                'selectors' => [
+                    '{{WRAPPER}} #abcbiz-mailchimp-inline-submit:hover svg path' => 'fill: {{VALUE}};',
                 ],
             ]
         );
@@ -518,7 +665,7 @@ class Main extends \Elementor\Widget_Base
                 'exclude' => [
                     'image'
                 ],     
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover',                
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover, {{WRAPPER}} #abcbiz-mailchimp-inline-submit:hover svg',                
             ]
         );
 

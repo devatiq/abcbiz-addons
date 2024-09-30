@@ -26,7 +26,7 @@ $style = $settings['mailchimp_form_style'];
         <?php elseif ('inline' === $style): ?>
             <button type="submit" id="abcbiz-mailchimp-inline-submit" class="<?php if('text' == $settings['button_type']) : ?>abcbiz-mailchimp-inline-submit-text <?php endif; ?>">
                 <?php if ('text' == $settings['button_type']): ?>
-                    <?php echo esc_html($settings['submit_button_text']); ?>
+                    <?php echo esc_html($settings['submit_button_inline_text']); ?>
                 <?php elseif ('icon' == $settings['button_type']): ?>
                     <svg fill="none" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"
                         id="fi_12604076">
