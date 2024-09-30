@@ -299,6 +299,9 @@ class Main extends \Elementor\Widget_Base
                 'label' => __( 'Gap', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
                 'size_units' => [ 'px', 'em', '%' ],
+                'condition' => [
+                    'mailchimp_form_style!' => 'inline',
+                ],
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -379,16 +382,10 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Padding', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::DIMENSIONS,
-                'size_units' => [ 'px', 'em', '%' ],
-                'default' => [
-                    'top' => 15,
-                    'right' => 15,
-                    'bottom' => 15,
-                    'left' => 15,
-                    'unit' => 'px',
-                ],
+                'size_units' => [ 'px', 'em', '%' ],              
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -401,6 +398,7 @@ class Main extends \Elementor\Widget_Base
                 'size_units' => [ 'px', 'em', '%' ],
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -410,7 +408,7 @@ class Main extends \Elementor\Widget_Base
             [
                 'name' => 'abcbiz_mailchimp_button_border',
                 'label' => __( 'Border', 'abcbiz-addons' ),
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',
             ]
         );
 
@@ -419,7 +417,7 @@ class Main extends \Elementor\Widget_Base
             [
                 'name' => 'abcbiz_mailchimp_button_typography',
                 'label' => __( 'Typography', 'abcbiz-addons' ),
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',
             ]
         );
         $this->add_responsive_control(
@@ -427,19 +425,7 @@ class Main extends \Elementor\Widget_Base
             [
                 'label' => __( 'Width', 'abcbiz-addons' ),
                 'type' => \Elementor\Controls_Manager::SLIDER,
-                'size_units' => [ 'px', '%' ],
-                'desktop_default' => [
-                    'unit' => 'px',
-                    'size' => 200,
-                ],
-                'tablet_default' => [
-					'size' => 170,
-					'unit' => 'px',
-				],
-				'mobile_default' => [
-					'size' => 120,
-					'unit' => 'px',
-				],
+                'size_units' => [ 'px', '%' ],             
                 'range' => [
                     'px' => [
                         'min' => 0,
@@ -454,6 +440,7 @@ class Main extends \Elementor\Widget_Base
                 ],
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'width: {{SIZE}}{{UNIT}}',
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'width: {{SIZE}}{{UNIT}}',
                 ],
             ]
         );
@@ -476,6 +463,7 @@ class Main extends \Elementor\Widget_Base
                 'default' => '#ffffff',               
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -496,10 +484,7 @@ class Main extends \Elementor\Widget_Base
                         'default' => 'crimson',
                     ],
                 ],     
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit',
-                'exclude' => [
-                    'image'
-                ],
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text',               
             ]
         );
 
@@ -520,6 +505,7 @@ class Main extends \Elementor\Widget_Base
                 'default' => '#ffffff',            
                 'selectors' => [
                     '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover' => 'color: {{VALUE}};',
                 ],
             ]
         );
@@ -532,10 +518,7 @@ class Main extends \Elementor\Widget_Base
                 'exclude' => [
                     'image'
                 ],     
-                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover',
-                'exclude' => [
-                    'image'
-                ],
+                'selector' => '{{WRAPPER}} #abcbiz-mailchimp-form #abcbiz-mailchimp-submit:hover, {{WRAPPER}} button#abcbiz-mailchimp-inline-submit.abcbiz-mailchimp-inline-submit-text:hover',                
             ]
         );
 
