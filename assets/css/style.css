@@ -3361,6 +3361,13 @@ label.abcbiz-pricing-option {
   display: flex;
   gap: 15px;
 }
+.abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-single-post-content {
+  flex-basis: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
 
 .abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-post-thumbnail {
   flex-basis: 25%;
@@ -3368,9 +3375,9 @@ label.abcbiz-pricing-option {
 
 .abcbiz-modren-style2-post-thumbnail img {
   width: 100%;
-  height: 100% !important;!i;!;
+  height: 100% !important;
   object-fit: cover;
-  border-radius: 6px !important;!i;!;
+  border-radius: 6px !important;
 }
 
 .abcbiz-modren-style2-post-info ul {
@@ -3395,8 +3402,8 @@ label.abcbiz-pricing-option {
   right: 0;
   width: 100%;
   padding: 20px;
-  background: linear-gradient(360deg, #010218 -2.91%, rgba(1, 2, 24, 0) 100%);
-  min-height: 230px;
+  background: linear-gradient(3600deg, #010218 30.91%, rgba(1, 2, 24, 0) 100%);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -3418,14 +3425,20 @@ label.abcbiz-pricing-option {
 
 .abcbiz-modren-style2-post-title h3 {
   margin: 0;
+  line-height: 1;
 }
 
 .abcbiz-modren-style2-post-title a {
   font-size: 22px;
-  line-height: 1.5em;
+  line-height: 1.3em;
   color: #fff;
 }
-.abcbiz-modren-style2-post-info a {
+.abcbiz-modren-style2-post-info a, .abcbiz-modren-style2-post-info span {
+  color: #fff;
+  font-size: 13px;
+}
+
+.abcbiz-modren-style2-post-info a:hover {
   color: #fff;
 }
 
@@ -3436,6 +3449,10 @@ label.abcbiz-pricing-option {
   border-radius: 5px;
   text-transform: uppercase;
   font-size: 11px;
+  font-weight: 600;
+}
+.abcbiz-modren-style2-post-cat a:hover {
+  color: #fff;
 }
 
 .abcbiz-modren-style2-post-cat {

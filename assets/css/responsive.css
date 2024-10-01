@@ -96,6 +96,17 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+/*---------------------------
+    Responsive css for small desktop screen
+-----------------------------*/
+@media only screen and (max-width: 1000px) {
+  /*------------------------
+    * Modren Blog
+    --------------------------*/
+  .abcbiz-modren-posts-styl2-wrapper {
+    flex-direction: column;
+  }
+}
 
 /*---------------------------
     Responsive css for tab
@@ -350,5 +361,13 @@
     ---------------------------*/
   .abcbiz-ele-related-post ul {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  /*------------------------
+  * Morden Blog style
+  -------------------------*/
+  .abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-single-post {
+    gap: 30px;
+    flex-direction: column;
   }
 }
