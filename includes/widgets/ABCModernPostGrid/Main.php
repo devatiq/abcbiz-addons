@@ -33,50 +33,53 @@ class Main extends BaseWidget
 	/**
 	 * Get all available post types.
 	 */
-    protected function get_post_types() {
-        $post_types = get_post_types(
-            [
-                'public' => true,
-            ], 
-            'objects'
-        );
-        $exclude = ['attachment']; // Post types to exclude
+	protected function get_post_types()
+	{
+		$post_types = get_post_types(
+			[
+				'public' => true,
+			],
+			'objects'
+		);
+		$exclude = ['attachment']; // Post types to exclude
 
-        $options = [];
-        foreach ($post_types as $post_type) {
-            if (!in_array($post_type->name, $exclude)) {
-                $options[$post_type->name] = $post_type->label;
-            }
-        }
-        return $options;
-    }
-	
-    /**
-     * Get all available categories.
-     */
-    protected function get_categories_list() {
-        $categories = get_categories();
-        $options = [];
-        foreach ($categories as $category) {
-            $options[$category->term_id] = $category->name;
-        }
-        return $options;
-    }
+		$options = [];
+		foreach ($post_types as $post_type) {
+			if (!in_array($post_type->name, $exclude)) {
+				$options[$post_type->name] = $post_type->label;
+			}
+		}
+		return $options;
+	}
 
-    /**
-     * Get all available posts.
-     */
-    protected function get_posts() {
-        $posts = get_posts([
-            'post_type' => 'post',
-            'posts_per_page' => -1
-        ]);
-        $options = [];
-        foreach ($posts as $post) {
-            $options[$post->ID] = $post->post_title;
-        }
-        return $options;
-    }	
+	/**
+	 * Get all available categories.
+	 */
+	protected function get_categories_list()
+	{
+		$categories = get_categories();
+		$options = [];
+		foreach ($categories as $category) {
+			$options[$category->term_id] = $category->name;
+		}
+		return $options;
+	}
+
+	/**
+	 * Get all available posts.
+	 */
+	protected function get_posts()
+	{
+		$posts = get_posts([
+			'post_type' => 'post',
+			'posts_per_page' => -1
+		]);
+		$options = [];
+		foreach ($posts as $post) {
+			$options[$post->ID] = $post->post_title;
+		}
+		return $options;
+	}
 	/**
 	 * Register list widget controls.
 	 */
@@ -111,25 +114,45 @@ class Main extends BaseWidget
 			'post_types',
 			[
 				'label' => esc_html__('Post Types', 'abcbiz-addons'),
-				'type' => Controls_Manager::SELECT,				
+				'type' => Controls_Manager::SELECT,
 				'options' => $this->get_post_types(),
 				'default' => ['post'], // Default to 'post' type
 				'description' => esc_html__('Select specific post types to display', 'abcbiz-addons'),
 				//'label_block' => true,				
 			]
 		);
+
+		// Add control for customizing the post display based on categories or specific posts
+		$this->add_control(
+			'customized_posts_selection',
+			[
+				'label' => esc_html__('Customize Post Display', 'abcbiz-addons'),
+				'description' => esc_html__('Choose how to customize the posts displayed on your grid. You can select to display posts by categories or specific posts.', 'abcbiz-addons'),
+				'type' => Controls_Manager::SELECT,
+				'multiple' => false,
+				'options' => [
+					'' => esc_html__('None', 'abcbiz-addons'), // Default to no selection
+					'categories' => esc_html__('Display by Categories', 'abcbiz-addons'),
+					'specific_posts' => esc_html__('Display Specific Posts', 'abcbiz-addons'),
+				],
+				'condition' => [
+					'post_types' => 'post',
+				],
+			]
+		);
+
 		// Add control for selecting categories
 		$this->add_control(
 			'get_categories',
 			[
-				'label' => esc_html__( 'Categories', 'abcbiz-addons' ),
+				'label' => esc_html__('Categories', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT2,
-				'description' => esc_html__( 'Select specific categories to display', 'abcbiz-addons' ),
+				'description' => esc_html__('Select specific categories to display', 'abcbiz-addons'),
 				'multiple' => true,
 				'options' => $this->get_categories_list(),
 				'label_block' => true,
 				'condition' => [
-					'post_types' => 'post',
+					'customized_posts_selection' => 'categories',
 				],
 			]
 		);
@@ -138,18 +161,31 @@ class Main extends BaseWidget
 		$this->add_control(
 			'get_posts_list',
 			[
-				'label' => esc_html__( 'Display Specific Posts', 'abcbiz-addons' ),
-				'description' => esc_html__( 'Select specific posts to display', 'abcbiz-addons' ),
+				'label' => esc_html__('Display Specific Posts', 'abcbiz-addons'),
+				'description' => esc_html__('Select specific posts to display', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT2,
 				'multiple' => true,
 				'options' => $this->get_posts(),
 				'label_block' => true,
 				'condition' => [
-					'post_types' => 'post',
+					'customized_posts_selection' => 'specific_posts',
 				],
 			]
 		);
 
+		// Add control for ignoring sticky posts
+		$this->add_control(
+			'ignore_sticky_posts',
+			[
+				'label' => esc_html__('Ignore Sticky Posts', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'return_value' => 'true',
+				'default' => 'true',
+				'description' => esc_html__('Enable this option to ignore sticky posts in the post query.', 'abcbiz-addons'),
+			]
+		);
 		$this->end_controls_section();//end after text style
 
 	}

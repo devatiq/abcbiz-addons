@@ -5,7 +5,29 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-$post_type = isset($settings['post_types']) ? $settings['post_types'] : 'post';
+
+// Get the values from Elementor controls
+$post_type = $settings['post_types']; // Get selected post types
+$customized_posts_selection = $settings['customized_posts_selection']; // Get the customization option
+$selected_categories = $settings['get_categories']; // Get selected categories
+$selected_posts = $settings['get_posts_list']; // Get selected posts
+$ignore_sticky_posts = $settings['ignore_sticky_posts'] === 'true'; // Get ignore sticky posts
+
+// Initialize WP_Query arguments based on the user selection
+$args = [
+    'post_type' => $post_type,
+    'posts_per_page' => 4,
+    'ignore_sticky_posts' => $ignore_sticky_posts,
+];
+
+// Modify WP_Query based on the user selection
+if ($customized_posts_selection === 'categories' && !empty($selected_categories)) {
+    // If the user selected to display posts by categories
+    $args['category__in'] = $selected_categories;
+} elseif ($customized_posts_selection === 'specific_posts' && !empty($selected_posts)) {
+    // If the user selected to display specific posts
+    $args['post__in'] = $selected_posts;
+}
 
 
 if('style1' == $settings['abcbiz_modern_post_grid_style']) {

@@ -8,11 +8,7 @@ if (!defined('ABSPATH'))
 $fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
 
 $counter = 0;
-$posts = new WP_Query([
-    'post_type' => $post_type,
-    'posts_per_page' => 4,
-    'ignore_sticky_posts' => 1
-]);
+$posts = new WP_Query($args);
 
 ?>
 
