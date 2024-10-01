@@ -1,7 +1,8 @@
-<?php 
+<?php
 namespace ABCBiz\Includes\Widgets\ABCModernPostGrid;
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+	exit; // Exit if accessed directly
 
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
@@ -10,62 +11,154 @@ use Elementor\Group_Control_Typography;
 /**
  * Elementor List Widget.
  */
-class Main extends BaseWidget {
+class Main extends BaseWidget
+{
 
-	    // define protected variables...
-		protected $name = 'abcbiz-modern-post-grid';
-		protected $title = 'Modern Post Grid';		
-		protected $icon = 'eicon-posts-grid abcbiz-addons-icon';
-		protected $categories = [
-			'abcbiz-category'
-		];		
-		protected $keywords = [
-			'abc', 'post', 'grid', 'modern', 'post grid', 'modern post grid'
-		];
+	// define protected variables...
+	protected $name = 'abcbiz-modern-post-grid';
+	protected $title = 'Modern Post Grid';
+	protected $icon = 'eicon-posts-grid abcbiz-addons-icon';
+	protected $categories = [
+		'abcbiz-category'
+	];
+	protected $keywords = [
+		'abc',
+		'post',
+		'grid',
+		'modern',
+		'post grid',
+		'modern post grid'
+	];
 
+	/**
+	 * Get all available post types.
+	 */
+    protected function get_post_types() {
+        $post_types = get_post_types(
+            [
+                'public' => true,
+            ], 
+            'objects'
+        );
+        $exclude = ['attachment']; // Post types to exclude
+
+        $options = [];
+        foreach ($post_types as $post_type) {
+            if (!in_array($post_type->name, $exclude)) {
+                $options[$post_type->name] = $post_type->label;
+            }
+        }
+        return $options;
+    }
+	
+    /**
+     * Get all available categories.
+     */
+    protected function get_categories_list() {
+        $categories = get_categories();
+        $options = [];
+        foreach ($categories as $category) {
+            $options[$category->term_id] = $category->name;
+        }
+        return $options;
+    }
+
+    /**
+     * Get all available posts.
+     */
+    protected function get_posts() {
+        $posts = get_posts([
+            'post_type' => 'post',
+            'posts_per_page' => -1
+        ]);
+        $options = [];
+        foreach ($posts as $post) {
+            $options[$post->ID] = $post->post_title;
+        }
+        return $options;
+    }	
 	/**
 	 * Register list widget controls.
 	 */
-	protected function register_controls() {
+	protected function register_controls()
+	{
 
 		$this->start_controls_section(
 			'abcbiz_modern_post_grid_setting',
 			[
-				'label' => esc_html__( 'Settings', 'abcbiz-addons' ),
+				'label' => esc_html__('Settings', 'abcbiz-addons'),
 				'tab' => Controls_Manager::TAB_CONTENT,
 			]
 		);
+
+		// Add control for selecting grid style
 		$this->add_control(
 			'abcbiz_modern_post_grid_style',
 			[
-				'label' => esc_html__( 'Grid Style', 'abcbiz-addons' ),
+				'label' => esc_html__('Grid Style', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => esc_html__( 'Style 1', 'abcbiz-addons' ),
-					'style2' => esc_html__( 'Style 2', 'abcbiz-addons' ),
-					'style3' => esc_html__( 'Style 3', 'abcbiz-addons' ),
-					'style4' => esc_html__( 'Style 4', 'abcbiz-addons' ),
-					'style5' => esc_html__( 'Style 5', 'abcbiz-addons' ),
-					'style6' => esc_html__( 'Style 6', 'abcbiz-addons' ),
-					'style7' => esc_html__( 'Style 7', 'abcbiz-addons' ),
-					'style8' => esc_html__( 'Style 8', 'abcbiz-addons' ),
-					'style9' => esc_html__( 'Style 9', 'abcbiz-addons' ),
-					'style10' => esc_html__( 'Style 10', 'abcbiz-addons' ),
+					'style1' => esc_html__('Style 1', 'abcbiz-addons'),
+					'style2' => esc_html__('Style 2', 'abcbiz-addons'),
+					'style3' => esc_html__('Style 3', 'abcbiz-addons'),
 				],
 			]
 		);
-		
 
-	   $this->end_controls_section();//end after text style
+		// Add control for selecting post types
+		$this->add_control(
+			'post_types',
+			[
+				'label' => esc_html__('Post Types', 'abcbiz-addons'),
+				'type' => Controls_Manager::SELECT,				
+				'options' => $this->get_post_types(),
+				'default' => ['post'], // Default to 'post' type
+				'description' => esc_html__('Select specific post types to display', 'abcbiz-addons'),
+				//'label_block' => true,				
+			]
+		);
+		// Add control for selecting categories
+		$this->add_control(
+			'get_categories',
+			[
+				'label' => esc_html__( 'Categories', 'abcbiz-addons' ),
+				'type' => Controls_Manager::SELECT2,
+				'description' => esc_html__( 'Select specific categories to display', 'abcbiz-addons' ),
+				'multiple' => true,
+				'options' => $this->get_categories_list(),
+				'label_block' => true,
+				'condition' => [
+					'post_types' => 'post',
+				],
+			]
+		);
 
-    }
+		// Add control for selecting specific posts
+		$this->add_control(
+			'get_posts_list',
+			[
+				'label' => esc_html__( 'Display Specific Posts', 'abcbiz-addons' ),
+				'description' => esc_html__( 'Select specific posts to display', 'abcbiz-addons' ),
+				'type' => Controls_Manager::SELECT2,
+				'multiple' => true,
+				'options' => $this->get_posts(),
+				'label_block' => true,
+				'condition' => [
+					'post_types' => 'post',
+				],
+			]
+		);
 
-    /**
-     * Render the widget output on the frontend.
-     */
-    protected function render()
-    {
-        include 'renderview.php';
-    }
+		$this->end_controls_section();//end after text style
+
+	}
+
+	/**
+	 * Render the widget output on the frontend.
+	 */
+	protected function render()
+	{
+		include 'renderview.php';
+	}
 }

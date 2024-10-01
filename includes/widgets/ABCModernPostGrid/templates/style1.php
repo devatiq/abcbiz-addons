@@ -13,7 +13,7 @@ $fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
         <?php
         
         $args = array(
-            'post_type' => 'post', 
+            'post_type' => $post_type,
             'posts_per_page' => 3, 
         );
         

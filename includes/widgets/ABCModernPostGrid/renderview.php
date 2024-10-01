@@ -5,7 +5,7 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-
+$post_type = isset($settings['post_types']) ? $settings['post_types'] : 'post';
 
 
 if('style1' == $settings['abcbiz_modern_post_grid_style']) {
