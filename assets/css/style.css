@@ -3345,6 +3345,7 @@ label.abcbiz-pricing-option {
  .abcbiz-modren-posts-styl2-wrapper {
   display: flex;
   gap: 20px;
+  max-height: 390px;
 }
 
 .abcbiz-modren-last-three-posts-wrapper {
@@ -3355,6 +3356,7 @@ label.abcbiz-pricing-option {
   background-color: #010218;
   padding: 20px;
   border-radius: 10px;
+  justify-content: center;
 }
 
 .abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-single-post {

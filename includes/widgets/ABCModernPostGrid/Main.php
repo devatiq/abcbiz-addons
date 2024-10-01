@@ -186,6 +186,35 @@ class Main extends BaseWidget
 				'description' => esc_html__('Enable this option to ignore sticky posts in the post query.', 'abcbiz-addons'),
 			]
 		);
+		// Add control for limiting the number of posts (max 4)
+		$this->add_control(
+			'post_limit_for_style2',
+			[
+				'label' => esc_html__('Number of Posts to Display', 'abcbiz-addons'),
+				'type' => Controls_Manager::NUMBER,
+				'default' => 4,
+				'min' => 2,
+				'max' => 4,
+				'description' => esc_html__('Set the number of posts to display, maximum is 4.', 'abcbiz-addons'),
+				'condition' => [
+					'abcbiz_modern_post_grid_style' => 'style2',
+				],
+			]
+		);
+		// Add control for limiting the number of posts (max 4)
+		$this->add_control(
+			'post_limit',
+			[
+				'label' => esc_html__('Number of Posts to Display', 'abcbiz-addons'),
+				'type' => Controls_Manager::NUMBER,
+				'default' => 4,
+				'min' => 2,
+				'description' => esc_html__('Set the number of posts to display', 'abcbiz-addons'),
+				'condition' => [
+					'abcbiz_modern_post_grid_style!' => 'style2',
+				]
+			]
+		);
 		$this->end_controls_section();//end after text style
 
 	}

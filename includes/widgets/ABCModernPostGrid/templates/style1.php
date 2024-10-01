@@ -10,13 +10,7 @@ $fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
 <!-- Modern Post Grid Area-->
 <div class="abcbiz-modren-posts-grid-area">
     <div class="abcbiz-modren-posts-grid-wrapper">
-        <?php
-        
-        $args = array(
-            'post_type' => $post_type,
-            'posts_per_page' => 3, 
-        );
-        
+        <?php    
         $query = new WP_Query($args);
         
         if ($query->have_posts()) :

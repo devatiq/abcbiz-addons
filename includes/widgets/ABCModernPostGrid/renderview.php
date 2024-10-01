@@ -13,10 +13,17 @@ $selected_categories = $settings['get_categories']; // Get selected categories
 $selected_posts = $settings['get_posts_list']; // Get selected posts
 $ignore_sticky_posts = $settings['ignore_sticky_posts'] === 'true'; // Get ignore sticky posts
 
+// Get post limit
+if('style2' == $settings['abcbiz_modern_post_grid_style']) {
+    $post_limit = $settings['post_limit_for_style2']; // Get the post limit for style 2
+}else{
+    $post_limit = $settings['post_limit']; // Get the post limit
+}
+
 // Initialize WP_Query arguments based on the user selection
 $args = [
     'post_type' => $post_type,
-    'posts_per_page' => 4,
+    'posts_per_page' => $post_limit,
     'ignore_sticky_posts' => $ignore_sticky_posts,
 ];
 
