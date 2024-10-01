@@ -3342,3 +3342,114 @@ label.abcbiz-pricing-option {
 /*----------------------------------------------
  * ABCbiz Modren Post Style 2
  * ---------------------------------------------*/
+ .abcbiz-modren-posts-styl2-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.abcbiz-modren-last-three-posts-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-basis: 50%;
+  background-color: #010218;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-single-post {
+  display: flex;
+  gap: 15px;
+}
+
+.abcbiz-modren-last-three-posts-wrapper .abcbiz-modren-style2-post-thumbnail {
+  flex-basis: 25%;
+}
+
+.abcbiz-modren-style2-post-thumbnail img {
+  width: 100%;
+  height: 100% !important;!i;!;
+  object-fit: cover;
+  border-radius: 6px !important;!i;!;
+}
+
+.abcbiz-modren-style2-post-info ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: flex-start;
+  padding: 0;
+}
+
+.abcbiz-modren-style2-post-info ul li {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  color: #fff;
+}
+
+.abcbiz-modren-posts-styl2-wrapper > .abcbiz-modren-style2-single-post .abcbiz-modren-style2-single-post-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  padding: 20px;
+  background: linear-gradient(360deg, #010218 -2.91%, rgba(1, 2, 24, 0) 100%);
+  min-height: 230px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 8px !important;
+}
+
+.abcbiz-modren-posts-styl2-wrapper > .abcbiz-modren-style2-single-post {
+  flex-basis: 50%;
+  position: relative;
+}
+
+.abcbiz-modren-style2-single-post {
+  overflow: hidden;
+}
+
+.abcbiz-modren-last-three-posts-wrapper * {
+  color: #fff;
+}
+
+.abcbiz-modren-style2-post-title h3 {
+  margin: 0;
+}
+
+.abcbiz-modren-style2-post-title a {
+  font-size: 22px;
+  line-height: 1.5em;
+  color: #fff;
+}
+.abcbiz-modren-style2-post-info a {
+  color: #fff;
+}
+
+.abcbiz-modren-style2-post-cat a {
+  color: #fff;
+  background-color: blue;
+  padding: 7px 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.abcbiz-modren-style2-post-cat {
+  margin-bottom: 10px;
+}
+
+.abcbiz-modren-style2-post-title {
+  margin-bottom: 10px;
+}
+
+.abcbiz-modren-posts-styl2-wrapper > .abcbiz-modren-style2-single-post .abcbiz-modren-style2-post-thumbnail {
+  height: 100%;
+}
+
+.abcbiz-modren-style2-post-title a:hover {
+  color: #fff;
+}
