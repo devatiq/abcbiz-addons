@@ -2,54 +2,72 @@
 /**
  * Render View for ABC Modern Post Grid style 1
  */
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 
 ?>
 
 <!-- Modern Post Grid Area-->
-<div class="abcbiz-modren-posts-style4-area">
+<div class="abcbiz-modern-posts-style4-area">
     <!-- Modern Posts Wrapper -->
-    <div class="abcbiz-modren-post-style4-wrapper">
-    <?php    
+    <div class="abcbiz-modern-post-style4-wrapper">
+        <?php
         $query = new WP_Query($args);
-        
-        if ($query->have_posts()) :
-            while ($query->have_posts()) : $query->the_post();                
-                ?>                
+
+        if ($query->have_posts()):
+            while ($query->have_posts()):
+                $query->the_post();
+                ?>
                 <!-- Single Post -->
-                <div class="abcbiz-modren-single-post">
-                    <!-- Post Thumbnail -->
-                    <div class="abcbiz-modren-single-post-thumbnail">
-                        <?php if(has_post_thumbnail( get_the_ID() )) : ?>
-                            <?php the_post_thumbnail( 'full' ); ?>
-                        <?php else : ?>
+                <div class="abcbiz-modern-single-post-style4">
+                    <!-- Thumbnail -->
+                    <div class="abcbiz-modren-sps4-thumbnail">
+                        <?php if (has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('full'); ?>
+                        <?php else: ?>
                             <img src="<?php echo esc_url($fallback_image); ?>" alt="<?php the_title(); ?>">
                         <?php endif; ?>
-                    </div><!--/ Post Thumbnail -->
-                    
-                    <!-- Post Contents -->
-                    <div class="abcbiz-modren-single-post-contents">
+                    </div><!--/ Thumbnail -->
+
+                    <!-- Post Content -->
+                    <div class="abcbiz-modern-sps4-content">
+                        <!--Post Category-->
+                        <div class="abcbiz-modern-sps4-category">
+                            <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>">
+                                <?php echo esc_html(get_the_category()[0]->name); ?>
+                            </a>
+                        </div><!--/ Post Category-->
                         <!-- Post Title -->
-                        <div class="abcbiz-modren-single-post-title">
-                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                        <div class="abcbiz-modern-sps4-title abcbiz-modren-single-post-title">
+                            <h3>
+                                <a href="<?php the_permalink(); ?>">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h3>
                         </div><!--/ Post Title -->
 
                         <!-- Post info -->
                         <div class="abcbiz-modren-single-post-info">
                             <ul>
-                                <li><span class="fa fa-calendar"></span><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo get_the_date('d/m/y'); ?></a></li>
-                                <li><span class="fa fa-user"></span><a href="<?php echo esc_attr(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a></li>
-                                <li><span class="fa fa-comments"></span><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></li>
+                                <li><span class="fa fa-calendar"></span><a
+                                        href="<?php echo esc_url(get_permalink()); ?>"><?php echo get_the_date('d/m/y'); ?></a>
+                                </li>
+                                <li><span class="fa fa-user"></span><a
+                                        href="<?php echo esc_attr(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a>
+                                </li>
+                                <li><span class="fa fa-comments"></span><a
+                                        href="<?php comments_link(); ?>"><?php comments_number(); ?></a></li>
                             </ul>
                         </div><!--/ Post info -->
-                    </div><!-- Post Contents -->
+                    </div> <!--/ Post Content -->
+
                 </div><!--/ Single Post -->
 
-            <?php
+                <?php
             endwhile;
             wp_reset_postdata(); // Reset after the custom query loop
-        else :
+        else:
             echo '<p>No posts found.</p>';
         endif;
         ?>

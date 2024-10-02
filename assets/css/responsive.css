@@ -377,4 +377,11 @@
   .abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post {
     margin-bottom: 0;
   }
+  .abcbiz-modern-post-style4-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+   }
+   .abcbiz-modern-post-style4-wrapper .abcbiz-modern-single-post-style4:first-child {
+    grid-column: inherit;
+   }
 }
