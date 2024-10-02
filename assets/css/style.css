@@ -3345,7 +3345,6 @@ label.abcbiz-pricing-option {
  .abcbiz-modren-posts-styl2-wrapper {
   display: flex;
   gap: 20px;
-  max-height: 390px;
 }
 
 .abcbiz-modren-last-three-posts-wrapper {
@@ -3471,4 +3470,18 @@ label.abcbiz-pricing-option {
 
 .abcbiz-modren-style2-post-title a:hover {
   color: #fff;
+}
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Style 3
+ * ---------------------------------------------*/
+.abcbiz-modren-posts-grid-style3 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
+  grid-column: span 2;
+}
+
+.abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2), .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
+  grid-column: inherit;
 }
