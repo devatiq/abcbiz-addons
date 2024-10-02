@@ -370,4 +370,11 @@
     gap: 30px;
     flex-direction: column;
   }
+
+  .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper  {
+    grid-column-gap: 0;
+  }
+  .abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post {
+    margin-bottom: 0;
+  }
 }

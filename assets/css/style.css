@@ -3476,7 +3476,7 @@ label.abcbiz-pricing-option {
  * ABCbiz Modren Post Style 3
  * ---------------------------------------------*/
 .abcbiz-modren-posts-grid-style3 {
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
 }
 .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
   grid-column: span 2;
