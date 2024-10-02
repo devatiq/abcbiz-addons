@@ -3485,3 +3485,7 @@ label.abcbiz-pricing-option {
 .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2), .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
   grid-column: inherit;
 }
+.abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post-title h3 a {
+  font-size: 22px;
+  line-height: 1.2em;
+}

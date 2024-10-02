@@ -5,7 +5,8 @@
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 $settings = $this->get_settings_for_display();
-
+// Placeholder image as fallback
+$fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
 // Get the values from Elementor controls
 $post_type = $settings['post_types']; // Get selected post types
 $customized_posts_selection = $settings['customized_posts_selection']; // Get the customization option
@@ -43,6 +44,9 @@ if('style1' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style2.php';
 }elseif('style3' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style3.php';
-}else{
+}elseif('style4' == $settings['abcbiz_modern_post_grid_style']) {
+    include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style4.php';
+}
+else{
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style1.php';
 }

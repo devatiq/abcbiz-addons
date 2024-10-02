@@ -3,8 +3,6 @@
  * Render View for ABC Modern Post Grid style 1
  */
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
-// Placeholder image as fallback
-$fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
 
 ?>
 <!-- Modern Post Grid Area-->

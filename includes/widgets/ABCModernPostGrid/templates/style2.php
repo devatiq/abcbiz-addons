@@ -4,8 +4,6 @@
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
-// Placeholder image as fallback
-$fallback_image = ABCBIZ_Assets . '/img/img-hover-placeholder.jpg';
 
 $counter = 0;
 $posts = new WP_Query($args);

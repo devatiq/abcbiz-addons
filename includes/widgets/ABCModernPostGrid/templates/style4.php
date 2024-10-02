@@ -6,16 +6,17 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
 
 ?>
+
 <!-- Modern Post Grid Area-->
-<div class="abcbiz-modren-posts-grid-area">
-    <div class="abcbiz-modren-posts-grid-wrapper abcbiz-modren-posts-grid-style3">
-        <?php    
+<div class="abcbiz-modren-posts-style4-area">
+    <!-- Modern Posts Wrapper -->
+    <div class="abcbiz-modren-post-style4-wrapper">
+    <?php    
         $query = new WP_Query($args);
         
         if ($query->have_posts()) :
             while ($query->have_posts()) : $query->the_post();                
-                ?>
-                
+                ?>                
                 <!-- Single Post -->
                 <div class="abcbiz-modren-single-post">
                     <!-- Post Thumbnail -->
@@ -52,5 +53,5 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
             echo '<p>No posts found.</p>';
         endif;
         ?>
-    </div>
-</div><!--/ Modern Post Grid Area-->
+    </div><!--/ Modern Posts Wrapper -->
+</div><!-- Modern Post Grid Area-->
