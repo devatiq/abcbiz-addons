@@ -3425,11 +3425,11 @@ label.abcbiz-pricing-option {
 .abcbiz-modren-style2-post-title h3 {
   margin: 0;
   line-height: 1;
+  font-size: 22px;
+  line-height: 1.3em;
 }
 
 .abcbiz-modren-style2-post-title a {
-  font-size: 22px;
-  line-height: 1.3em;
   color: #fff;
 }
 .abcbiz-modren-style2-post-info a, .abcbiz-modren-style2-post-info span {

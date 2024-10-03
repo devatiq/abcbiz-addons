@@ -8,6 +8,7 @@ use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Border;
+use Elementor\Group_Control_Background;
 
 /**
  * Elementor List Widget.
@@ -289,7 +290,7 @@ class Main extends BaseWidget
 			[
 				'name' => 'title_typography',
 				'label' => esc_html__('Title Typography', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-title h3',
+				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-title h3, {{WRAPPER}} .abcbiz-modren-style2-post-title h3',
 			]
 		);
 		// Color control for title
@@ -300,6 +301,7 @@ class Main extends BaseWidget
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-title h3 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-style2-post-title a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -322,6 +324,7 @@ class Main extends BaseWidget
 				],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modren-style2-post-info span' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 				'condition' => [
 					'post_meta_switch' => 'true',
@@ -336,6 +339,7 @@ class Main extends BaseWidget
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-style2-post-info span' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'post_meta_switch' => 'true',
@@ -350,6 +354,7 @@ class Main extends BaseWidget
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-style2-post-info a' => 'color: {{VALUE}};',
 				],
 				'condition' => [
 					'post_meta_switch' => 'true',
@@ -362,7 +367,7 @@ class Main extends BaseWidget
 			[
 				'name' => 'meta_typography',
 				'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-info li a',
+				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-info li a, {{WRAPPER}} .abcbiz-modren-style2-post-info a',
 				'condition' => [
 					'post_meta_switch' => 'true',
 				],
@@ -384,37 +389,17 @@ class Main extends BaseWidget
 				],
 			]
 		);
-		// Text color control
-		$this->add_control(
-			'category_text_color',
-			[
-				'label' => esc_html__('Text Color', 'abcbiz-addons'),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'color: {{VALUE}};',
-				],
-			]
-		);
+
 		// Typography control for info text
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
 				'name' => 'category_typography',
 				'label' => esc_html__('Typography', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a',
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a, {{WRAPPER}} .abcbiz-modern-sps4-category a',
 			]
 		);
-		// Background color control
-		$this->add_control(
-			'category_background_color',
-			[
-				'label' => esc_html__('Background Color', 'abcbiz-addons'),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'background-color: {{VALUE}};',
-				],
-			]
-		);
+
 		$this->add_control(
 			'category_padding',
 			[
@@ -423,6 +408,7 @@ class Main extends BaseWidget
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
@@ -431,7 +417,7 @@ class Main extends BaseWidget
 			[
 				'name' => 'category_border',
 				'label' => esc_html__('Border', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a',
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a, {{WRAPPER}} .abcbiz-modern-sps4-category a',
 			]
 		);
 
@@ -443,9 +429,97 @@ class Main extends BaseWidget
 				'size_units' => ['px', '%', 'em'],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
 				],
 			]
 		);
+
+		// Margin control
+		$this->add_responsive_control(
+			'category_margin',
+			[
+				'label' => esc_html__('Margin', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-category' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		// Start category style tabs
+		$this->start_controls_tabs('style_tabs');
+
+		// Start normal tab
+		$this->start_controls_tab(
+			'style_normal_tab',
+			[
+				'label' => esc_html__('Normal', 'abcbiz-addons'),
+			]
+		);
+
+		// Text color control
+		$this->add_control(
+			'category_text_color',
+			[
+				'label' => esc_html__('Text Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		// Background color control
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name' => 'category_background',
+				'label' => esc_html__('Background', 'abcbiz-addons'),
+				'types' => ['classic', 'gradient'],
+				'exclude' => ['image'],
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a, {{WRAPPER}} .abcbiz-modern-sps4-category a',
+			]
+		);
+
+
+		$this->end_controls_tab(); //end normal tab
+
+		// Start hover tab
+		$this->start_controls_tab(
+			'style_hover_tab',
+			[
+				'label' => esc_html__('Hover', 'abcbiz-addons'),
+			]
+		);
+
+		// Text color control
+		$this->add_control(
+			'category_text_color_hover',
+			[
+				'label' => esc_html__('Text Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a:hover' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a:hover' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		// Background color control
+		$this->add_group_control(
+			Group_Control_Background::get_type(),
+			[
+				'name' => 'category_background_hover',
+				'label' => esc_html__('Background', 'abcbiz-addons'),
+				'types' => ['classic', 'gradient'],
+				'exclude' => ['image'],
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a:hover, {{WRAPPER}} .abcbiz-modern-sps4-category a:hover',
+			]
+		);
+		$this->end_controls_tab(); //end hover tab
+
+		$this->end_controls_tabs(); //end tabs
 
 		$this->end_controls_section();//end style section
 
