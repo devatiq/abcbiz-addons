@@ -3286,16 +3286,14 @@ label.abcbiz-pricing-option {
 }
 
 .abcbiz-modren-single-post-title h3 {
-  font-size: 1.2rem;
   margin: 0 0 10px;
+  font-size: 27px;
 }
 
 .abcbiz-modren-single-post-title h3 a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
-  font-size: 27px;
-  line-height: 1.5rem;
 }
 
 .abcbiz-modren-single-post-info ul {
@@ -3485,7 +3483,7 @@ label.abcbiz-pricing-option {
 .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2), .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
   grid-column: inherit;
 }
-.abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post-title h3 a {
+.abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post-title h3 {
   font-size: 22px;
   line-height: 1.2em;
 }

@@ -14,8 +14,9 @@ $selected_categories = $settings['get_categories']; // Get selected categories
 $selected_posts = $settings['get_posts_list']; // Get selected posts
 $ignore_sticky_posts = $settings['ignore_sticky_posts'] === 'true'; // Get ignore sticky posts
 
-$post_info_switch = !empty($settings['post_info_switch']) ? $settings['post_info_switch'] : 'false';
-$post_info_display = !empty($settings['post_info_display']) ? $settings['post_info_display'] : [];
+$post_info_switch = !empty($settings['post_meta_switch']) ? $settings['post_meta_switch'] : 'false';
+$post_info_display = !empty($settings['post_meta_display']) ? $settings['post_meta_display'] : [];
+$categories_switch = isset($settings['display_category']) ? $settings['display_category'] : 'true';
 
 // Get post limit
 if('style2' == $settings['abcbiz_modern_post_grid_style']) {

@@ -219,24 +219,27 @@ class Main extends BaseWidget
 		);
 		// Add control for displaying post info
 		$this->add_control(
-			'post_info_switch',
+			'post_meta_switch',
 			[
-				'label' => esc_html__('Display Post Info', 'abcbiz-addons'),
+				'label' => esc_html__('Display Post Meta', 'abcbiz-addons'),
 				'type' => Controls_Manager::SWITCHER,
 				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
-				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),				
 				'return_value' => 'true',
 				'default' => 'true',
-				'description' => esc_html__('Enable this option to display post info such as date, author, category and comments.', 'abcbiz-addons'),
+				'description' => esc_html__('Enable this option to display post meta such as date, author, category and comments.', 'abcbiz-addons'),
+				'condition' => [
+					'post_types' => 'post',
+				],
 			]
 		);
 		// Add control for selecting post info to display
 		$this->add_control(
-			'post_info_display',
+			'post_meta_display',
 			[
-				'label' => esc_html__('Select Post Info to Display', 'abcbiz-addons'),
+				'label' => esc_html__('Select meta to Display', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT2,
-				'description' => esc_html__('Select which post info (date, author, comments) should be displayed in the post card.', 'abcbiz-addons'),
+				'description' => esc_html__('Select which post meta (date, author, comments) should be displayed in the post card.', 'abcbiz-addons'),
 				'multiple' => true,
 				'options' => [
 					'date' => esc_html__('Date', 'abcbiz-addons'),
@@ -246,8 +249,26 @@ class Main extends BaseWidget
 				'default' => ['date', 'author'],
 				'label_block' => true,
 				'condition' => [
-					'post_info_switch' => 'true',
+					'post_meta_switch' => 'true',
+					'post_types' => 'post',
 				],
+			]
+		);
+
+		// Add control for displaying category
+		$this->add_control(
+			'display_category',
+			[
+				'label' => esc_html__('Display Category', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'condition' => [
+					'post_types' => 'post',
+				],
+				'return_value' => 'true',
+				'default' => 'true',
+				'description' => esc_html__('Enable this option to display the category in the post card.', 'abcbiz-addons'),
 			]
 		);
 
@@ -268,9 +289,6 @@ class Main extends BaseWidget
 				'name' => 'title_typography',
 				'label' => esc_html__('Title Typography', 'abcbiz-addons'),
 				'selector' => '{{WRAPPER}} .abcbiz-modern-sps4-title h3',
-				'condition' => [
-					'abcbiz_modern_post_grid_style!' => 'style2',
-				]
 			]
 		);
 		// Color control for title
@@ -280,18 +298,15 @@ class Main extends BaseWidget
 				'label' => esc_html__('Title Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-title h3' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modern-sps4-title h3 a' => 'color: {{VALUE}};',
 				],
-				'condition' => [
-					'abcbiz_modern_post_grid_style!' => 'style2',
-				]
 			]
 		);
 		// Control for icon size
 		$this->add_control(
-			'icon_size',
+			'meta_icon_size',
 			[
-				'label' => esc_html__('Icon Size', 'abcbiz-addons'),
+				'label' => esc_html__('Meta Icon Size', 'abcbiz-addons'),
 				'type' => Controls_Manager::SLIDER,
 				'size_units' => ['px'],
 				'range' => [
@@ -305,29 +320,29 @@ class Main extends BaseWidget
 					'size' => 20,
 				],
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'font-size: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'font-size: {{SIZE}}{{UNIT}};',
 				],
 			]
 		);
 		// Color control for icon
 		$this->add_control(
-			'icon_color',
+			'meta_icon_color',
 			[
-				'label' => esc_html__('Icon Color', 'abcbiz-addons'),
+				'label' => esc_html__('Meta Icon Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'color: {{VALUE}};',
 				],
 			]
 		);
 		// Color control for info text
 		$this->add_control(
-			'info_text_color',
+			'meta_text_color',
 			[
-				'label' => esc_html__('Info Text Color', 'abcbiz-addons'),
+				'label' => esc_html__('Meta Text Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-info' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-single-post-info li a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -335,20 +350,9 @@ class Main extends BaseWidget
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
 			[
-				'name' => 'info_typography',
-				'label' => esc_html__('Info Typography', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modern-sps4-info',
-			]
-		);
-		// Color control for info background
-		$this->add_control(
-			'info_background_color',
-			[
-				'label' => esc_html__('Info Background Color', 'abcbiz-addons'),
-				'type' => Controls_Manager::COLOR,
-				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-info' => 'background-color: {{VALUE}};',
-				],
+				'name' => 'meta_typography',
+				'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-info li a',
 			]
 		);
 

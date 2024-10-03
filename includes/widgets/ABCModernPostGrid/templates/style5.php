@@ -31,12 +31,14 @@ if (!defined('ABSPATH'))
 
                     <!-- Post Content -->
                     <div class="abcbiz-modern-sps4-content">
-                        <!--Post Category-->
-                        <div class="abcbiz-modern-sps4-category">
-                            <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>">
-                                <?php echo esc_html(get_the_category()[0]->name); ?>
-                            </a>
-                        </div><!--/ Post Category-->
+                        <?php if($categories_switch === 'true' && !empty($categories_switch)): ?>
+                            <!--Post Category-->
+                            <div class="abcbiz-modern-sps4-category">
+                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>">
+                                    <?php echo esc_html(get_the_category()[0]->name); ?>
+                                </a>
+                            </div><!--/ Post Category-->
+                        <?php endif; ?>
                         <!-- Post Title -->
                         <div class="abcbiz-modern-sps4-title abcbiz-modren-single-post-title">
                             <h3>

@@ -37,21 +37,23 @@ $posts = new WP_Query($args);
 
                         <!-- Post Contents -->
                         <div class="abcbiz-modren-style2-single-post-content">
-                            <!-- Category -->
-                            <div class="abcbiz-modren-style2-post-cat">
-                                <?php
-                                $categories = get_the_category();
-                                if (!empty($categories)) {
-                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
-                                }
-                                ?>
-                            </div><!--/ Category -->
+                            <?php if ($categories_switch === 'true' && !empty($categories_switch)): ?>
+                                <!-- Category -->
+                                <div class="abcbiz-modren-style2-post-cat">
+                                    <?php
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
+                                    }
+                                    ?>
+                                </div><!--/ Category -->
+                            <?php endif; ?>
 
                             <!-- Post Title -->
                             <div class="abcbiz-modren-style2-post-title">
                                 <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                             </div><!--/ Post Title -->
-                            
+
                             <?php if ($post_info_switch === 'true' && !empty($post_info_display)): ?>
                                 <!-- Post info -->
                                 <div class="abcbiz-modren-single-post-info">
@@ -93,15 +95,18 @@ $posts = new WP_Query($args);
 
                         <!-- Post Contents -->
                         <div class="abcbiz-modren-style2-single-post-content">
-                            <!-- Category -->
-                            <div class="abcbiz-modren-style2-post-cat">
-                                <?php
-                                $categories = get_the_category();
-                                if (!empty($categories)) {
-                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
-                                }
-                                ?>
-                            </div><!--/ Category -->
+
+                            <?php if ($categories_switch === 'true' && !empty($categories_switch)): ?>
+                                <!-- Category -->
+                                <div class="abcbiz-modren-style2-post-cat">
+                                    <?php
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
+                                    }
+                                    ?>
+                                </div><!--/ Category -->
+                            <?php endif; ?>
 
                             <!-- Post Title -->
                             <div class="abcbiz-modren-style2-post-title">
