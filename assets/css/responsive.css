@@ -384,4 +384,7 @@
    .abcbiz-modern-post-style4-wrapper .abcbiz-modern-single-post-style4:first-child {
     grid-column: inherit;
    }
+   .abcbiz-modern-post-style5-wrapper .abcbiz-modern-single-post-style4 {
+    flex-direction: column;
+   }
 }

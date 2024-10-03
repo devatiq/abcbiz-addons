@@ -8,9 +8,9 @@ if (!defined('ABSPATH'))
 ?>
 
 <!-- Modern Post Grid Area-->
-<div class="abcbiz-modern-posts-style4-area">
+<div class="abcbiz-modern-posts-style5-area">
     <!-- Modern Posts Wrapper -->
-    <div class="abcbiz-modern-post-style4-wrapper">
+    <div class="abcbiz-modern-post-style5-wrapper">
         <?php
         $query = new WP_Query($args);
 

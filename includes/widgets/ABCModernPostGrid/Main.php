@@ -105,7 +105,8 @@ class Main extends BaseWidget
 					'style1' => esc_html__('Style 1', 'abcbiz-addons'),
 					'style2' => esc_html__('Style 2', 'abcbiz-addons'),
 					'style3' => esc_html__('Style 3', 'abcbiz-addons'),
-					'style4' => esc_html__('Style 4', 'abcbiz-addons'),
+					'style4' => esc_html__('Style 4', 'abcbiz-addons'),					
+					'style5' => esc_html__('Style 5', 'abcbiz-addons'),					
 				],
 			]
 		);

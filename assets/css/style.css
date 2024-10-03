@@ -3561,3 +3561,45 @@ label.abcbiz-pricing-option {
  .abcbiz-modern-post-style4-wrapper .abcbiz-modren-single-post-info a:hover {
   color: #434343;
  }
+ .abcbiz-modern-post-style4-wrapper .abcbiz-modren-single-post-info {
+  margin-bottom: 0;
+}
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Style 5
+ * ---------------------------------------------*/
+ .abcbiz-modern-post-style5-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
+ .abcbiz-modern-post-style5-wrapper .abcbiz-modern-single-post-style4 {
+  display: flex;
+  gap: 20px;
+  padding: 15px;
+}
+.abcbiz-modern-post-style5-wrapper .abcbiz-modren-sps4-thumbnail {
+  flex-basis: 30%;
+}
+.abcbiz-modern-post-style5-wrapper .abcbiz-modern-sps4-content {
+  flex-basis: 70%;
+}
+.abcbiz-modern-post-style5-wrapper  .abcbiz-modren-sps4-thumbnail img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 230px;
+  border-radius: 10px;
+  height: 100%;
+}
+.abcbiz-modern-post-style5-wrapper .abcbiz-modren-single-post-info span {
+  color: #155DFF;
+  font-size: 13px;
+}
+.abcbiz-modern-post-style5-wrapper .abcbiz-modren-single-post-info a {
+  color: #111111;
+  font-size: 13px;
+  font-weight: 400;
+}
+.abcbiz-modern-post-style5-wrapper .abcbiz-modren-single-post-info {
+  margin-bottom: 0;
+}
