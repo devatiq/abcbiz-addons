@@ -17,7 +17,8 @@ if (!defined('ABSPATH'))
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
-                ?>
+                $random_color = $this->generate_random_color(); // get random color
+                ?>               
                 <!-- Single Post -->
                 <div class="abcbiz-modern-single-post-style4">
                     <!-- Thumbnail -->
@@ -34,7 +35,7 @@ if (!defined('ABSPATH'))
                         <?php if($categories_switch === 'true' && !empty($categories_switch)): ?>
                             <!--Post Category-->
                             <div class="abcbiz-modern-sps4-category">
-                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>">
+                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>" style="background-color: <?php echo $random_color; ?>;">
                                     <?php echo esc_html(get_the_category()[0]->name); ?>
                                 </a>
                             </div><!--/ Post Category-->

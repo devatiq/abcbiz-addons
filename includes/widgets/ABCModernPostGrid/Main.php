@@ -524,6 +524,9 @@ class Main extends BaseWidget
 		$this->end_controls_section();//end style section
 
 	}
+	private function generate_random_color() {
+		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+	}
 
 	/**
 	 * Render the widget output on the frontend.

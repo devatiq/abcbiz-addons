@@ -15,6 +15,7 @@ if (!defined('ABSPATH'))
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
+                $random_color = $this->generate_random_color(); // get random color
                 ?>
 
                 <!-- Single Post -->
@@ -36,7 +37,7 @@ if (!defined('ABSPATH'))
                                 <?php
                                 $categories = get_the_category();
                                 if (!empty($categories)) {
-                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
+                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" style="background-color: ' . $random_color . '">' . esc_html($categories[0]->name) . '</a>';
                                 }
                                 ?>
                             </div><!--/ Category -->
