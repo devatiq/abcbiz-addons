@@ -33,14 +33,29 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         </div><!--/ Post Title -->
 
+                        <?php if ($post_info_switch === 'true' && !empty($post_info_display)) : ?>
                         <!-- Post info -->
                         <div class="abcbiz-modren-single-post-info">
                             <ul>
-                                <li><span class="fa fa-calendar"></span><a href="<?php echo esc_url(get_permalink()); ?>"><?php echo get_the_date(); ?></a></li>
-                                <li><span class="fa fa-user"></span><a href="<?php echo esc_attr(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a></li>
-                                <li><span class="fa fa-comments"></span><a href="<?php comments_link(); ?>"><?php comments_number(); ?></a></li>
+                                <?php if (in_array('date', $post_info_display)) : ?>
+                                <li><span class="fa fa-calendar"></span><a
+                                        href="<?php echo esc_url(get_permalink()); ?>"><?php echo get_the_date('d/m/y'); ?></a>
+                                </li>
+                                <?php endif; ?>
+
+                                <?php if (in_array('author', $post_info_display)) : ?>
+                                <li><span class="fa fa-user"></span><a
+                                        href="<?php echo esc_attr(get_author_posts_url(get_the_author_meta('ID'))); ?>"><?php the_author(); ?></a>
+                                </li>
+                                <?php endif; ?>
+
+                                <?php if (in_array('comments', $post_info_display)) : ?>
+                                <li><span class="fa fa-comments"></span><a
+                                        href="<?php comments_link(); ?>"><?php comments_number(); ?></a></li>
+                                <?php endif; ?>
                             </ul>
                         </div><!--/ Post info -->
+                        <?php endif; ?>
                     </div><!-- Post Contents -->
                 </div><!--/ Single Post -->
 

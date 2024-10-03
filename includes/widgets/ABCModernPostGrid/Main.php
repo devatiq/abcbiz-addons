@@ -105,8 +105,8 @@ class Main extends BaseWidget
 					'style1' => esc_html__('Style 1', 'abcbiz-addons'),
 					'style2' => esc_html__('Style 2', 'abcbiz-addons'),
 					'style3' => esc_html__('Style 3', 'abcbiz-addons'),
-					'style4' => esc_html__('Style 4', 'abcbiz-addons'),					
-					'style5' => esc_html__('Style 5', 'abcbiz-addons'),					
+					'style4' => esc_html__('Style 4', 'abcbiz-addons'),
+					'style5' => esc_html__('Style 5', 'abcbiz-addons'),
 				],
 			]
 		);
@@ -217,7 +217,142 @@ class Main extends BaseWidget
 				]
 			]
 		);
+		// Add control for displaying post info
+		$this->add_control(
+			'post_info_switch',
+			[
+				'label' => esc_html__('Display Post Info', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'return_value' => 'true',
+				'default' => 'true',
+				'description' => esc_html__('Enable this option to display post info such as date, author, category and comments.', 'abcbiz-addons'),
+			]
+		);
+		// Add control for selecting post info to display
+		$this->add_control(
+			'post_info_display',
+			[
+				'label' => esc_html__('Select Post Info to Display', 'abcbiz-addons'),
+				'type' => Controls_Manager::SELECT2,
+				'description' => esc_html__('Select which post info (date, author, comments) should be displayed in the post card.', 'abcbiz-addons'),
+				'multiple' => true,
+				'options' => [
+					'date' => esc_html__('Date', 'abcbiz-addons'),
+					'author' => esc_html__('Author', 'abcbiz-addons'),
+					'comments' => esc_html__('Comments', 'abcbiz-addons'),
+				],
+				'default' => ['date', 'author'],
+				'label_block' => true,
+				'condition' => [
+					'post_info_switch' => 'true',
+				],
+			]
+		);
+
 		$this->end_controls_section();//end after text style
+
+		// Start style section
+		$this->start_controls_section(
+			'style_section',
+			[
+				'label' => esc_html__('Style', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);
+		// Typography control for title
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'title_typography',
+				'label' => esc_html__('Title Typography', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modern-sps4-title h3',
+				'condition' => [
+					'abcbiz_modern_post_grid_style!' => 'style2',
+				]
+			]
+		);
+		// Color control for title
+		$this->add_control(
+			'title_color',
+			[
+				'label' => esc_html__('Title Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-sps4-title h3' => 'color: {{VALUE}};',
+				],
+				'condition' => [
+					'abcbiz_modern_post_grid_style!' => 'style2',
+				]
+			]
+		);
+		// Control for icon size
+		$this->add_control(
+			'icon_size',
+			[
+				'label' => esc_html__('Icon Size', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 10,
+						'max' => 50,
+					],
+				],
+				'default' => [
+					'unit' => 'px',
+					'size' => 20,
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		// Color control for icon
+		$this->add_control(
+			'icon_color',
+			[
+				'label' => esc_html__('Icon Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-sps4-category a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		// Color control for info text
+		$this->add_control(
+			'info_text_color',
+			[
+				'label' => esc_html__('Info Text Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-sps4-info' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		// Typography control for info text
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'info_typography',
+				'label' => esc_html__('Info Typography', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modern-sps4-info',
+			]
+		);
+		// Color control for info background
+		$this->add_control(
+			'info_background_color',
+			[
+				'label' => esc_html__('Info Background Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-sps4-info' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();//end  style section
 
 	}
 
