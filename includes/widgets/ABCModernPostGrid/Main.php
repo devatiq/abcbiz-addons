@@ -7,6 +7,7 @@ if (!defined('ABSPATH'))
 use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
+use Elementor\Group_Control_Border;
 
 /**
  * Elementor List Widget.
@@ -288,7 +289,7 @@ class Main extends BaseWidget
 			[
 				'name' => 'title_typography',
 				'label' => esc_html__('Title Typography', 'abcbiz-addons'),
-				'selector' => '{{WRAPPER}} .abcbiz-modern-sps4-title h3',
+				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-title h3',
 			]
 		);
 		// Color control for title
@@ -298,7 +299,7 @@ class Main extends BaseWidget
 				'label' => esc_html__('Title Color', 'abcbiz-addons'),
 				'type' => Controls_Manager::COLOR,
 				'selectors' => [
-					'{{WRAPPER}} .abcbiz-modern-sps4-title h3 a' => 'color: {{VALUE}};',
+					'{{WRAPPER}} .abcbiz-modren-single-post-title h3 a' => 'color: {{VALUE}};',
 				],
 			]
 		);
@@ -312,15 +313,18 @@ class Main extends BaseWidget
 				'range' => [
 					'px' => [
 						'min' => 10,
-						'max' => 50,
+						'max' => 100,
 					],
 				],
 				'default' => [
 					'unit' => 'px',
-					'size' => 20,
+					'size' => 15,
 				],
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'font-size: {{SIZE}}{{UNIT}};',
+				],
+				'condition' => [
+					'post_meta_switch' => 'true',
 				],
 			]
 		);
@@ -333,6 +337,9 @@ class Main extends BaseWidget
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li span' => 'color: {{VALUE}};',
 				],
+				'condition' => [
+					'post_meta_switch' => 'true',
+				],
 			]
 		);
 		// Color control for info text
@@ -344,6 +351,9 @@ class Main extends BaseWidget
 				'selectors' => [
 					'{{WRAPPER}} .abcbiz-modren-single-post-info li a' => 'color: {{VALUE}};',
 				],
+				'condition' => [
+					'post_meta_switch' => 'true',
+				],
 			]
 		);
 		// Typography control for info text
@@ -353,10 +363,91 @@ class Main extends BaseWidget
 				'name' => 'meta_typography',
 				'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
 				'selector' => '{{WRAPPER}} .abcbiz-modren-single-post-info li a',
+				'condition' => [
+					'post_meta_switch' => 'true',
+				],
 			]
 		);
 
 		$this->end_controls_section();//end  style section
+
+
+		// Start category style
+		$this->start_controls_section(
+			'category_style_section',
+			[
+				'label' => esc_html__('Category', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+				'condition' => [
+					'display_category' => 'true',
+					'post_types' => 'post',
+				],
+			]
+		);
+		// Text color control
+		$this->add_control(
+			'category_text_color',
+			[
+				'label' => esc_html__('Text Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'color: {{VALUE}};',
+				],
+			]
+		);
+		// Typography control for info text
+		$this->add_group_control(
+			Group_Control_Typography::get_type(),
+			[
+				'name' => 'category_typography',
+				'label' => esc_html__('Typography', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a',
+			]
+		);
+		// Background color control
+		$this->add_control(
+			'category_background_color',
+			[
+				'label' => esc_html__('Background Color', 'abcbiz-addons'),
+				'type' => Controls_Manager::COLOR,
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'background-color: {{VALUE}};',
+				],
+			]
+		);
+		$this->add_control(
+			'category_padding',
+			[
+				'label' => esc_html__('Padding', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			[
+				'name' => 'category_border',
+				'label' => esc_html__('Border', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a',
+			]
+		);
+
+		$this->add_control(
+			'category_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-style2-post-cat a' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section();//end style section
 
 	}
 
