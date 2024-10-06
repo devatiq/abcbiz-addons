@@ -17,6 +17,7 @@ $ignore_sticky_posts = $settings['ignore_sticky_posts'] === 'true'; // Get ignor
 $post_info_switch = !empty($settings['post_meta_switch']) ? $settings['post_meta_switch'] : 'false';
 $post_info_display = !empty($settings['post_meta_display']) ? $settings['post_meta_display'] : [];
 $categories_switch = isset($settings['display_category']) ? $settings['display_category'] : 'true';
+$random_color_switch = isset($settings['category_random_color_switch']) ? $settings['category_random_color_switch'] : 'false';
 
 // Get post limit
 if('style2' == $settings['abcbiz_modern_post_grid_style']) {

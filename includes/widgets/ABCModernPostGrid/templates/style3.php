@@ -16,6 +16,7 @@ if (!defined('ABSPATH'))
         if ($query->have_posts()):
             while ($query->have_posts()):
                 $query->the_post();
+                $random_color = $this->generate_random_color(); // get random color
                 ?>
 
                 <!-- Single Post -->
@@ -35,10 +36,14 @@ if (!defined('ABSPATH'))
                             <!-- Category -->
                             <div class="abcbiz-modren-style2-post-cat">
                                 <?php
-                                $categories = get_the_category();
-                                if (!empty($categories)) {
-                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '">' . esc_html($categories[0]->name) . '</a>';
-                                }
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
+                                        if ('true' === $random_color_switch) {
+                                            echo ' style="background-color: ' . $random_color . '"';
+                                        }
+                                        echo '>' . esc_html($categories[0]->name) . '</a>';
+                                    }
                                 ?>
                             </div><!--/ Category -->
                         <?php endif; ?>

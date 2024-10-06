@@ -35,11 +35,16 @@ if (!defined('ABSPATH'))
                             <!-- Category -->
                             <div class="abcbiz-modren-style2-post-cat">
                                 <?php
-                                $categories = get_the_category();
-                                if (!empty($categories)) {
-                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '" style="background-color: ' . $random_color . '">' . esc_html($categories[0]->name) . '</a>';
-                                }
+                                    $categories = get_the_category();
+                                    if (!empty($categories)) {
+                                        echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
+                                        if ('true' === $random_color_switch) {
+                                            echo ' style="background-color: ' . $random_color . '"';
+                                        }
+                                        echo '>' . esc_html($categories[0]->name) . '</a>';
+                                    }
                                 ?>
+
                             </div><!--/ Category -->
                         <?php endif; ?>
 

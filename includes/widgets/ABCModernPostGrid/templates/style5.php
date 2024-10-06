@@ -35,7 +35,7 @@ if (!defined('ABSPATH'))
                         <?php if($categories_switch === 'true' && !empty($categories_switch)): ?>
                             <!--Post Category-->
                             <div class="abcbiz-modern-sps4-category">
-                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>" style="background-color: <?php echo $random_color; ?>;">
+                                <a href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>" <?php if('true' === $random_color_switch): ?>style="background-color: <?php echo $random_color; ?>"<?php endif; ?>>
                                     <?php echo esc_html(get_the_category()[0]->name); ?>
                                 </a>
                             </div><!--/ Post Category-->

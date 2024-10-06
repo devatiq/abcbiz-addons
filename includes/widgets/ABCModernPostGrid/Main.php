@@ -390,6 +390,19 @@ class Main extends BaseWidget
 			]
 		);
 
+		$this->add_control(
+			'category_random_color_switch',
+			[
+				'label' => esc_html__('Use Random Color?', 'abcbiz-addons'),
+				'description' => esc_html__('Use Random Color for Category Background color', 'abcbiz-addons'),
+				'type' => Controls_Manager::SWITCHER,
+				'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+				'label_off' => esc_html__('No', 'abcbiz-addons'),
+				'return_value' => 'true',
+				'default' => 'false',
+			]
+		);
+
 		// Typography control for info text
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),
@@ -480,6 +493,9 @@ class Main extends BaseWidget
 				'types' => ['classic', 'gradient'],
 				'exclude' => ['image'],
 				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a, {{WRAPPER}} .abcbiz-modern-sps4-category a',
+				'condition' => [
+					'category_random_color_switch!' => 'true',
+				],
 			]
 		);
 
@@ -515,6 +531,9 @@ class Main extends BaseWidget
 				'types' => ['classic', 'gradient'],
 				'exclude' => ['image'],
 				'selector' => '{{WRAPPER}} .abcbiz-modren-style2-post-cat a:hover, {{WRAPPER}} .abcbiz-modern-sps4-category a:hover',
+				'condition' => [
+					'category_random_color_switch!' => 'true',
+				],
 			]
 		);
 		$this->end_controls_tab(); //end hover tab
