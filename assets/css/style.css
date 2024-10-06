@@ -3601,3 +3601,10 @@ label.abcbiz-pricing-option {
 .abcbiz-modern-post-style5-wrapper .abcbiz-modren-single-post-info {
   margin-bottom: 0;
 }
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Style 6
+ * ---------------------------------------------*/
+ .abcbiz-modren-posts-grid-style6.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
+  grid-row: 1 / 4;
+ }

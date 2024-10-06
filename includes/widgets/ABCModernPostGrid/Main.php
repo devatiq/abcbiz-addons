@@ -109,6 +109,7 @@ class Main extends BaseWidget
 					'style3' => esc_html__('Style 3', 'abcbiz-addons'),
 					'style4' => esc_html__('Style 4', 'abcbiz-addons'),
 					'style5' => esc_html__('Style 5', 'abcbiz-addons'),
+					'style6' => esc_html__('Style 6', 'abcbiz-addons'),
 				],
 			]
 		);
@@ -284,6 +285,70 @@ class Main extends BaseWidget
 				'tab' => Controls_Manager::TAB_STYLE,
 			]
 		);
+		// Add control for item gap
+		$this->add_responsive_control(
+			'item_gap',
+			[
+				'label' => esc_html__('Item Gap', 'abcbiz-addons'),
+				'type' => Controls_Manager::SLIDER,
+				'size_units' => ['px'],
+				'range' => [
+					'px' => [
+						'min' => 0,
+						'max' => 100,
+					],
+				],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-posts-grid-wrapper' => 'grid-gap: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modren-posts-styl2-wrapper' => 'grid-gap: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modern-post-style4-wrapper' => 'grid-gap: {{SIZE}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modern-post-style5-wrapper' => 'grid-gap: {{SIZE}}{{UNIT}};',
+				],
+			]
+		);
+		// Border control for item
+		$this->add_group_control(
+			Group_Control_Border::get_type(),
+			[
+				'name' => 'item_border',
+				'label' => esc_html__('Item Border', 'abcbiz-addons'),
+				'selector' => '{{WRAPPER}} .abcbiz-modern-single-post-style4',
+				'condition' => [
+					'abcbiz_modern_post_grid_style' => ['style4', 'style5'],
+				],
+			]
+		);
+		// Border radius control for item
+		$this->add_control(
+			'item_border_radius',
+			[
+				'label' => esc_html__('Item Border Radius', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-single-post-style4' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+				'condition' => [
+					'abcbiz_modern_post_grid_style' => ['style4', 'style5'],
+				],
+			]
+		);
+		// Padding control for item
+		$this->add_control(
+			'item_padding',
+			[
+				'label' => esc_html__('Item Padding', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modern-single-post-style4' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+				'condition' => [
+					'abcbiz_modern_post_grid_style' => ['style4', 'style5'],
+				],
+			]
+		);
+		
 		// Typography control for title
 		$this->add_group_control(
 			Group_Control_Typography::get_type(),

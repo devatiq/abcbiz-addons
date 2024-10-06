@@ -53,6 +53,8 @@ if('style1' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style4.php';
 }elseif('style5' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style5.php';
+}elseif('style6' == $settings['abcbiz_modern_post_grid_style']) {
+    include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style6.php';
 }
 else{
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style1.php';

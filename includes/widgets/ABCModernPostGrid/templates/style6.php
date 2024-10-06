@@ -1,6 +1,6 @@
 <?php
 /**
- * Render View for ABC Modern Post Grid style 3
+ * Render View for ABC Modern Post Grid style 7
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
@@ -9,7 +9,7 @@ if (!defined('ABSPATH'))
 ?>
 <!-- Modern Post Grid Area-->
 <div class="abcbiz-modren-posts-grid-area">
-    <div class="abcbiz-modren-posts-grid-wrapper abcbiz-modren-posts-grid-style3">
+    <div class="abcbiz-modren-posts-grid-wrapper abcbiz-modren-posts-grid-style3 abcbiz-modren-posts-grid-style6">
         <?php
         $query = new WP_Query($args);
 
