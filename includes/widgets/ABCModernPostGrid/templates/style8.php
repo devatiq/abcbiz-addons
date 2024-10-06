@@ -1,16 +1,14 @@
 <?php
 /**
- * Render View for ABC Modern Post Grid style 4
+ * Render View for ABC Modern Post Grid style 7
  */
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
 ?>
-
 <!-- Modern Post Grid Area-->
-<div class="abcbiz-modern-posts-style4-area">
-    <!-- Modern Posts Wrapper -->
-    <div class="abcbiz-modern-post-style4-wrapper">
+<div class="abcbiz-modren-posts-grid-area">
+    <div class="abcbiz-modren-posts-grid-wrapper abcbiz-modren-posts-grid-style8">
         <?php
         $query = new WP_Query($args);
 
@@ -19,22 +17,23 @@ if (!defined('ABSPATH'))
                 $query->the_post();
                 $random_color = $this->generate_random_color(); // get random color
                 ?>
+
                 <!-- Single Post -->
-                <div class="abcbiz-modern-single-post-style4">
-                    <!-- Thumbnail -->
-                    <div class="abcbiz-modren-sps4-thumbnail">
-                        <?php if (has_post_thumbnail()): ?>
+                <div class="abcbiz-modren-single-post">
+                    <!-- Post Thumbnail -->
+                    <div class="abcbiz-modren-single-post-thumbnail">
+                        <?php if (has_post_thumbnail(get_the_ID())): ?>
                             <?php the_post_thumbnail('full'); ?>
                         <?php else: ?>
                             <img src="<?php echo esc_url($fallback_image); ?>" alt="<?php the_title(); ?>">
                         <?php endif; ?>
-                    </div><!--/ Thumbnail -->
+                    </div><!--/ Post Thumbnail -->
 
-                    <!-- Post Content -->
-                    <div class="abcbiz-modern-sps4-content">
+                    <!-- Post Contents -->
+                    <div class="abcbiz-modren-single-post-contents">
                         <?php if ($categories_switch === 'true' && !empty($categories_switch)): ?>
-                            <!--Post Category-->
-                            <div class="abcbiz-modern-sps4-category">
+                            <!-- Category -->
+                            <div class="abcbiz-modren-style2-post-cat">
                                 <?php
                                     $categories = get_the_category();
                                     if (!empty($categories)) {
@@ -45,16 +44,13 @@ if (!defined('ABSPATH'))
                                         echo '>' . esc_html($categories[0]->name) . '</a>';
                                     }
                                 ?>
-                                </a>
-                            </div><!--/ Post Category-->
+
+                            </div><!--/ Category -->
                         <?php endif; ?>
+
                         <!-- Post Title -->
-                        <div class="abcbiz-modern-sps4-title abcbiz-modren-single-post-title">
-                            <h3>
-                                <a href="<?php the_permalink(); ?>">
-                                    <?php the_title(); ?>
-                                </a>
-                            </h3>
+                        <div class="abcbiz-modren-single-post-title">
+                            <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                         </div><!--/ Post Title -->
 
                         <?php if ($post_info_switch === 'true' && !empty($post_info_display)): ?>
@@ -80,9 +76,7 @@ if (!defined('ABSPATH'))
                                 </ul>
                             </div><!--/ Post info -->
                         <?php endif; ?>
-
-                    </div> <!--/ Post Content -->
-
+                    </div><!-- Post Contents -->
                 </div><!--/ Single Post -->
 
                 <?php
@@ -92,5 +86,5 @@ if (!defined('ABSPATH'))
             echo '<p>No posts found.</p>';
         endif;
         ?>
-    </div><!--/ Modern Posts Wrapper -->
-</div><!-- Modern Post Grid Area-->
+    </div>
+</div><!--/ Modern Post Grid Area-->

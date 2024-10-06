@@ -3608,3 +3608,38 @@ label.abcbiz-pricing-option {
  .abcbiz-modren-posts-grid-style6.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
   grid-row: 1 / 4;
  }
+
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Style 7
+ * ---------------------------------------------*/
+
+.abcbiz-modren-posts-grid-style7.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
+  grid-column: 1 / 2;
+  grid-row: 2 / 4; 
+  height: 100%;
+}
+
+.abcbiz-modren-posts-grid-style7.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2),
+.abcbiz-modren-posts-grid-style7.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2; 
+  height: 100%;
+}
+
+/*----------------------------------------------
+ * ABCbiz Modren Post Style 8
+ * ---------------------------------------------*/
+
+.abcbiz-modren-posts-grid-style8.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:first-child {
+  grid-column: 2 / 3; 
+  grid-row: 1 / 3; 
+  height: 100%;
+}
+
+.abcbiz-modren-posts-grid-style8.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(2),
+.abcbiz-modren-posts-grid-style8.abcbiz-modren-posts-grid-wrapper > .abcbiz-modren-single-post:nth-child(3) {
+  grid-column: 1 / 2; 
+  grid-row: auto; 
+  height: 100%;
+}

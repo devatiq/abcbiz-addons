@@ -371,7 +371,7 @@
     flex-direction: column;
   }
 
-  .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper  {
+  .abcbiz-modren-posts-grid-style3.abcbiz-modren-posts-grid-wrapper {
     grid-column-gap: 0;
   }
   .abcbiz-modren-posts-grid-style3 .abcbiz-modren-single-post {
@@ -380,11 +380,18 @@
   .abcbiz-modern-post-style4-wrapper {
     grid-template-columns: repeat(1, 1fr);
     gap: 10px;
-   }
-   .abcbiz-modern-post-style4-wrapper .abcbiz-modern-single-post-style4:first-child {
+  }
+  .abcbiz-modern-post-style4-wrapper
+    .abcbiz-modern-single-post-style4:first-child {
     grid-column: inherit;
-   }
-   .abcbiz-modern-post-style5-wrapper .abcbiz-modern-single-post-style4 {
+  }
+  .abcbiz-modern-post-style5-wrapper .abcbiz-modern-single-post-style4 {
     flex-direction: column;
-   }
+  }
+  .abcbiz-modren-posts-grid-wrapper {
+    column-gap: 0;
+  }
+  .abcbiz-modren-single-post {
+    margin-bottom: 0;
+  }
 }

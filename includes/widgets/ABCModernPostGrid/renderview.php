@@ -55,6 +55,10 @@ if('style1' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style5.php';
 }elseif('style6' == $settings['abcbiz_modern_post_grid_style']) {
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style6.php';
+}elseif('style7' == $settings['abcbiz_modern_post_grid_style']) {
+    include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style7.php';
+}elseif('style8' == $settings['abcbiz_modern_post_grid_style']) {
+    include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style8.php';
 }
 else{
     include ABCBIZ_Inc . '/widgets/ABCModernPostGrid/templates/style1.php';
