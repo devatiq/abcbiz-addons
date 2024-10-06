@@ -542,6 +542,32 @@ class Main extends BaseWidget
 
 		$this->end_controls_section();//end style section
 
+		
+		// Start thumbnail style
+		$this->start_controls_section(
+			'thumbnail_style_section',
+			[
+				'label' => esc_html__('Thumbnail', 'abcbiz-addons'),
+				'tab' => Controls_Manager::TAB_STYLE,
+			]
+		);	
+		// Thumbnail border radius
+		$this->add_responsive_control(
+			'thumbnail_border_radius',
+			[
+				'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+				'type' => Controls_Manager::DIMENSIONS,
+				'size_units' => ['px', '%', 'em'],
+				'selectors' => [
+					'{{WRAPPER}} .abcbiz-modren-single-post .abcbiz-modren-single-post-thumbnail img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} 0 0;',
+					'{{WRAPPER}} .abcbiz-modren-single-post-contents' => 'border-radius: 0 0 {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+					'{{WRAPPER}} .abcbiz-modren-single-post' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+				],
+			]
+		);
+
+		$this->end_controls_section(); //end thumbnail style section
+
 	}
 	private function generate_random_color() {
 		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
