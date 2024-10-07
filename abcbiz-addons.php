@@ -52,6 +52,13 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
             new \ABCBiz\Includes\globals\ABCbiz_CustomCSS();
         }
 
+        //load post view tracker
+        if (!class_exists('ABCBiz\Includes\lib\PostViewTracker')) {
+            require_once ABCBIZ_Inc . '/lib/post-view-tracker.php';
+            new \ABCBiz\Includes\lib\PostViewTracker();
+        }
+
+
         load_plugin_textdomain('abcbiz-addons', false, dirname(plugin_basename(ABCBIZ_File)) . '/languages/');
         require_once ABCBIZ_Admin . '/abcbiz-settings.php';
     }

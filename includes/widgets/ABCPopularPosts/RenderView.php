@@ -5,15 +5,20 @@
 if (!defined('ABSPATH'))
     exit; // Exit if accessed directly
 
+use ABCBiz\Includes\Lib\PostViewTracker; // Import the PostViewTracker class
+
 $settings = $this->get_settings_for_display();
 
 $fallback_image = ABCBIZ_Assets . '/img/blog/image-placeholder.jpg';
+$random_color_switch = isset($settings['category_random_color_switch']) ? $settings['category_random_color_switch'] : 'false';
 
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => $settings['abcbiz_popular_posts_limit'],
     'ignore_sticky_posts' => true,
-    'orderby' => 'comment_count', // Order by comment count
+    //'orderby' => 'comment_count', // Order by comment count
+    'meta_key' => 'abcbiz_post_views', // Order by views
+    'orderby' => 'meta_value_num', // Order by meta value (number of views)
     'order' => 'DESC', // Display highest comments first
 );
 
@@ -29,7 +34,7 @@ $args = array(
         if ($popular_posts->have_posts()):
             while ($popular_posts->have_posts()):
                 $popular_posts->the_post();
-
+                $random_color = $this->generate_random_color(); // get random color
                 ?>
                 <!--Single Post -->
                 <div class="abcbiz-popular-posts-single-post">
@@ -45,8 +50,16 @@ $args = array(
                     <div class="abcbiz-popular-post-contents">
                         <!--Category -->
                         <div class="abcbiz-popular-post-cat">
-                            <a
-                                href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>"><?php echo esc_html(get_the_category()[0]->name); ?></a>
+                            <?php
+                            $categories = get_the_category();
+                            if (!empty($categories)) {
+                                echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
+                                if ('true' === $random_color_switch) {
+                                    echo ' style="background-color: ' . $random_color . '"';
+                                }
+                                echo '>' . esc_html($categories[0]->name) . '</a>';
+                            }
+                            ?>
                         </div><!--/ Category -->
                         <!-- Post Title -->
                         <h3 class="abcbiz-popular-post-title">
@@ -56,12 +69,22 @@ $args = array(
                         <div class="abcbiz-popular-post-meta">
                             <span class="abcbiz-popular-post-comment">
                                 <i class="fa fa-comments"></i>
-                                <?php echo get_comments_number(); ?>
+                                <?php $comments_number = get_comments_number();
+                                printf(
+                                    esc_html(_n('%s Comment', '%s Comments', $comments_number, 'abcbiz-addons')),
+                                    esc_html($comments_number)
+                                );
+                                ?>
                             </span>
                             <span class="abcbiz-popular-post-date">
-                                <i class="fa fa-calendar"></i>
-                                <?php echo get_the_date(); ?>
-                                </span">
+                                <span class="abcbiz-popular-post-views">
+                                    <i class="fa fa-eye"></i>
+                                    <?php
+                                    // Get the post views using the PostViewTracker class
+                                    $views = PostViewTracker::get_views(get_the_ID());
+                                    echo esc_html($views) . ' ' . esc_html__('Views', 'abcbiz-addons');
+                                    ?>
+                                </span>
                         </div><!--/ Post Meta -->
                     </div><!--/ Post Contents -->
                 </div><!--/ Single Post -->

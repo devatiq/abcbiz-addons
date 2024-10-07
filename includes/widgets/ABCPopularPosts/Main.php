@@ -33,6 +33,7 @@ class Main extends BaseWidget
             ]
         );
 
+        // Add control for selecting popular based on
         $this->add_control(
             'abcbiz_popular_posts_views',
             [
@@ -47,6 +48,7 @@ class Main extends BaseWidget
             ]
         );
 
+        // Add control for selecting post limit
         $this->add_control(
             'abcbiz_popular_posts_limit',
             [
@@ -59,8 +61,20 @@ class Main extends BaseWidget
                 'description' => esc_html__('Select the number of posts to show', 'abcbiz-addons'),
             ]
         );
-
-   
+        
+        // Add control for selecting random color switch
+        $this->add_control(
+            'category_random_color_switch',
+            [
+                'label' => esc_html__('Random Color?', 'abcbiz-addons'),
+                'description' => esc_html__('display random background color for category?', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Yes', 'abcbiz-addons'),
+                'label_off' => esc_html__('No', 'abcbiz-addons'),
+                'return_value' => 'true',
+                'default' => 'false',
+            ]
+        );
 
         // End section
         $this->end_controls_section();
@@ -80,6 +94,9 @@ class Main extends BaseWidget
 
         return $options;
     }
+	private function generate_random_color() {
+		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+	}
 
     /**
      * Render the widget output on the frontend.
