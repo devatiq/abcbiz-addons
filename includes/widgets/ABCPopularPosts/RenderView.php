@@ -52,44 +52,54 @@ $args = array(
                     </div><!--/ Post Thumbnail -->
                     <!-- Post Contents -->
                     <div class="abcbiz-popular-post-contents">
-                        <!--Category -->
-                        <div class="abcbiz-popular-post-cat">
-                            <?php
-                            $categories = get_the_category();
-                            if (!empty($categories)) {
-                                echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
-                                if ('true' === $random_color_switch) {
-                                    echo ' style="background-color: ' . $random_color . '"';
+                        <?php if ('true' === $settings['category_display_switch']): ?>
+                            <!--Category -->
+                            <div class="abcbiz-popular-post-cat">
+                                <?php
+                                $categories = get_the_category();
+                                if (!empty($categories)) {
+                                    echo '<a href="' . esc_url(get_category_link($categories[0]->term_id)) . '"';
+                                    if ('true' === $random_color_switch) {
+                                        echo ' style="background-color: ' . $random_color . '"';
+                                    }
+                                    echo '>' . esc_html($categories[0]->name) . '</a>';
                                 }
-                                echo '>' . esc_html($categories[0]->name) . '</a>';
-                            }
-                            ?>
-                        </div><!--/ Category -->
+                                ?>
+                            </div><!--/ Category -->
+                        <?php endif; ?>
                         <!-- Post Title -->
                         <h3 class="abcbiz-popular-post-title">
                             <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
                         </h3><!--/ Post Title -->
-                        <!-- Post Meta -->
-                        <div class="abcbiz-popular-post-meta">
-                            <span class="abcbiz-popular-post-comment">
-                                <i class="fa fa-comments"></i>
-                                <?php $comments_number = get_comments_number();
-                                printf(
-                                    esc_html(_n('%s Comment', '%s Comments', $comments_number, 'abcbiz-addons')),
-                                    esc_html($comments_number)
-                                );
-                                ?>
-                            </span>
-                            <span class="abcbiz-popular-post-date">
-                                <span class="abcbiz-popular-post-views">
-                                    <i class="fa fa-eye"></i>
-                                    <?php
-                                    // Get the post views using the PostViewTracker class
-                                    $views = PostViewTracker::get_views(get_the_ID());
-                                    echo esc_html($views) . ' ' . esc_html__('Views', 'abcbiz-addons');
-                                    ?>
-                                </span>
-                        </div><!--/ Post Meta -->
+
+                        <?php if (!empty($settings['display_fields'])): ?>
+                            <!-- Post Meta -->
+                            <div class="abcbiz-popular-post-meta">
+                                <!-- Display Views if selected -->
+                                <?php if (in_array('comments', $settings['display_fields'])): ?>
+                                    <span class="abcbiz-popular-post-comment">
+                                        <i class="fa fa-comments"></i>
+                                        <?php $comments_number = get_comments_number();
+                                        printf(
+                                            esc_html(_n('%s Comment', '%s Comments', $comments_number, 'abcbiz-addons')),
+                                            esc_html($comments_number)
+                                        );
+                                        ?>
+                                    </span>
+                                <?php endif; ?>
+
+                                <?php if (in_array('views', $settings['display_fields'])): ?>
+                                    <span class="abcbiz-popular-post-views">
+                                        <i class="fa fa-eye"></i>
+                                        <?php
+                                        // Get the post views using the PostViewTracker class
+                                        $views = PostViewTracker::get_views(get_the_ID());
+                                        echo esc_html($views) . ' ' . esc_html__('Views', 'abcbiz-addons');
+                                        ?>
+                                    </span>
+                                <?php endif; ?>
+                            </div><!--/ Post Meta -->
+                        <?php endif; ?>
                     </div><!--/ Post Contents -->
                 </div><!--/ Single Post -->
                 <?php
