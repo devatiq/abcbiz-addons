@@ -12,14 +12,18 @@ $settings = $this->get_settings_for_display();
 $fallback_image = ABCBIZ_Assets . '/img/blog/image-placeholder.jpg';
 $random_color_switch = isset($settings['category_random_color_switch']) ? $settings['category_random_color_switch'] : 'false';
 
+
+// Determine if popular posts should be based on comments or views
+$orderby = $settings['abcbiz_popular_posts_views'] === 'views' ? 'meta_value_num' : 'comment_count';
+$meta_key = $settings['abcbiz_popular_posts_views'] === 'views' ? 'abcbiz_post_views' : '';
+
 $args = array(
     'post_type' => 'post',
     'posts_per_page' => $settings['abcbiz_popular_posts_limit'],
     'ignore_sticky_posts' => true,
-    //'orderby' => 'comment_count', // Order by comment count
-    'meta_key' => 'abcbiz_post_views', // Order by views
-    'orderby' => 'meta_value_num', // Order by meta value (number of views)
-    'order' => 'DESC', // Display highest comments first
+    'orderby' => $orderby,
+    'meta_key' => $meta_key,
+    'order' => 'DESC',
 );
 
 ?>

@@ -32,8 +32,7 @@ class Main extends BaseWidget
                 'tab' => Controls_Manager::TAB_CONTENT,
             ]
         );
-
-        // Add control for selecting popular based on
+        // Add control for selecting popular based on (Comments or Views)
         $this->add_control(
             'abcbiz_popular_posts_views',
             [
@@ -48,6 +47,7 @@ class Main extends BaseWidget
             ]
         );
 
+
         // Add control for selecting post limit
         $this->add_control(
             'abcbiz_popular_posts_limit',
@@ -61,7 +61,21 @@ class Main extends BaseWidget
                 'description' => esc_html__('Select the number of posts to show', 'abcbiz-addons'),
             ]
         );
-        
+
+        // Add control for category display switch
+        $this->add_control(
+            'category_display_switch',
+            [
+                'label' => esc_html__('Display Category', 'abcbiz-addons'),
+                'description' => esc_html__('Choose to display or hide category labels.', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => esc_html__('Show', 'abcbiz-addons'),
+                'label_off' => esc_html__('Hide', 'abcbiz-addons'),
+                'return_value' => 'true',
+                'default' => 'true',
+            ]
+        );
+
         // Add control for selecting random color switch
         $this->add_control(
             'category_random_color_switch',
@@ -73,6 +87,24 @@ class Main extends BaseWidget
                 'label_off' => esc_html__('No', 'abcbiz-addons'),
                 'return_value' => 'true',
                 'default' => 'false',
+                'condition' => [
+                    'category_display_switch' => 'true',
+                ],
+            ]
+        );
+        // Add control for selecting comments or views to display
+        $this->add_control(
+            'display_fields',
+            [
+                'label' => esc_html__('Display Fields', 'abcbiz-addons'),
+                'description' => esc_html__('Select whether to display comments or views.', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT2,
+                'multiple' => true,
+                'options' => [
+                    'comments' => esc_html__('Comments', 'abcbiz-addons'),
+                    'views' => esc_html__('Views', 'abcbiz-addons'),
+                ],
+                'default' => ['comments', 'views'],
             ]
         );
 
@@ -94,9 +126,10 @@ class Main extends BaseWidget
 
         return $options;
     }
-	private function generate_random_color() {
-		return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
-	}
+    private function generate_random_color()
+    {
+        return sprintf('#%06X', mt_rand(0, 0xFFFFFF));
+    }
 
     /**
      * Render the widget output on the frontend.
