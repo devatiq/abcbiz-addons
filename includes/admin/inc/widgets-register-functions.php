@@ -64,6 +64,7 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_mailchimp_switch_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_template_slider_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_cost_estimation_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_modern_post_grid_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_popular_posts_field');
 
 
 // Set default values if not already set
@@ -121,6 +122,7 @@ add_option('abcbiz_mailchimp_switch_field', '1');
 add_option('abcbiz_template_slider_field', '1');
 add_option('abcbiz_cost_estimation_field', '1');
 add_option('abcbiz_modern_post_grid_field', '1');
+add_option('abcbiz_popular_posts_field', '1');
 
 
 //Sticker Text
@@ -580,11 +582,20 @@ add_settings_field(
     'abcbiz_available_widgets_section'
 );
 
-// Add settings field for Cost Estimation
+// Add settings field for Modern Post
 add_settings_field(
     'abcbiz_modern_post_grid_field',
     esc_html__('Modern Post Grid', 'abcbiz-addons'),
     'abcbiz_modern_post_grid_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Popular Posts
+add_settings_field(
+    'abcbiz_popular_posts_field',
+    esc_html__('Popular Posts', 'abcbiz-addons'),
+    'abcbiz_popular_posts_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );

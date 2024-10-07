@@ -1050,7 +1050,7 @@ function abcbiz_archive_title_field_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-archive-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1075,7 +1075,7 @@ function abcbiz_gravity_form_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-gravity-form.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1099,7 +1099,7 @@ function abcbiz_image_gallery_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-gallery.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1124,7 +1124,7 @@ function abcbiz_mailchimp_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-mailchimp.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1149,7 +1149,7 @@ function abcbiz_template_slider_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-template-slider.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1174,7 +1174,7 @@ function abcbiz_cost_estimation_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/Cost-Estimation.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1199,7 +1199,7 @@ function abcbiz_modern_post_grid_render() {
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/Modern-Post-Grid.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
-                        <span class="dashicons dashicons-archive"></span>
+                        <span class="dashicons dashicons-admin-links"></span>
                         <?php echo esc_html__("Preview", "abcbiz-addons");?>
                     </span>
                 </div>
@@ -1208,6 +1208,31 @@ function abcbiz_modern_post_grid_render() {
         <h3><?php echo esc_html__("Modern Post Grid", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_modern_post_grid_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Popular Posts
+function abcbiz_popular_posts_render() {
+    $option = get_option('abcbiz_popular_posts_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://abcbizaddons.com/widgets/popular-posts" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/popular-posts.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Popular Posts", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_popular_posts_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
         </label>
     </div>
