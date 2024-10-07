@@ -2,177 +2,75 @@
 /**
  * Render View file for ABC Blog.
  */
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
-$abcbiz_settings = $this->get_settings_for_display();
+$settings = $this->get_settings_for_display();
 
-// blog info switcher
-$abcbiz_blog_date_switch = $abcbiz_settings['abcbiz_elementor_blog_date_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_date_switch'] : '';
-$abcbiz_blog_comment_switch = $abcbiz_settings['abcbiz_elementor_blog_comment_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_comment_switch'] : '';
+$fallback_image = ABCBIZ_Assets . '/img/blog/image-placeholder.jpg';
 
-// blog readmore switcher
-$abcbiz_blog_readmore_switch = $abcbiz_settings['abcbiz_elementor_blog_read_more_switch'] ? $abcbiz_settings['abcbiz_elementor_blog_read_more_switch'] : '';
-
-// "Read More Text" control
-$abcbiz_read_more_text = $this->get_settings('abcbiz_elementor_blog_read_more_text');
-$abcbiz_selected_category_fancy = $abcbiz_settings['abcbiz_elementor_blog_category_fancy'];
-
-//post list count
-$abcbiz_blog_list_count = $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_post_count'] ? $abcbiz_settings['abcbiz_elementor_fancy_blog_blog_post_count'] : '3';
+$args = array(
+    'post_type' => 'post',
+    'posts_per_page' => $settings['abcbiz_popular_posts_limit'],
+    'ignore_sticky_posts' => true,
+    'orderby' => 'comment_count', // Order by comment count
+    'order' => 'DESC', // Display highest comments first
+);
 
 ?>
-<!-- Blog Area-->
-<div class="abcbiz-ele-blogs-area">
-    <div class="abcbiz-ele-blogs">
 
+<!-- Popular Posts Area-->
+<div class="abcbiz-popular-posts-area">
+    <div class="abcbiz-popular-posts-wrapper">
         <?php
-        // Query the first post of post type 'post'
-        $first_post_args = array(
-            'post_type' => 'post',
-            'posts_per_page' => 1, // Number of posts to display
-            'ignore_sticky_posts' => 1 // skip the sticky post
-        );
 
-         // specific category query
-         if ($abcbiz_selected_category_fancy && $abcbiz_selected_category_fancy !== 'all') {
-            $first_post_args['cat'] = $abcbiz_selected_category_fancy;
-        }
+        $popular_posts = new WP_Query($args);
 
-        $first_post_query = new WP_Query($first_post_args);
+        if ($popular_posts->have_posts()):
+            while ($popular_posts->have_posts()):
+                $popular_posts->the_post();
 
-        if ($first_post_query->have_posts()) :
-            while ($first_post_query->have_posts()) : $first_post_query->the_post();
-        ?>
-
-                <!-- Single Blog Area for the first post -->
-                <div class="abcbiz-ele-single-blog-area abcbiz-ele-single-first">
-                    <!-- Thumbnail -->
-                    <div class="abcbiz-ele-single-blog-thumbnail">
-                        <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                            <?php
-                            if (has_post_thumbnail()) {
-                                the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
-                            } else {
-                                echo '<img src="' . ABCBIZ_Assets . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addon">';
-                            }
-                            ?>
-                        </a>
-                    </div><!--/ Thumbnail -->
-                    <!-- Content Area -->
-                    <div class="abcbiz-ele-single-blog-content-area">
-
-                        <!-- Blog info -->     
-                        <?php if ($abcbiz_blog_date_switch == 'yes' || $abcbiz_blog_comment_switch == 'yes') : ?>
-                            <div class="abcbiz-ele-single-blog-info">
-                                <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>
-                                    <div class="abcbiz-ele-single-blog-date">
-                                        <i class="eicon-calendar"></i>
-                                        <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
-                                    </div>
-                                <?php endif; ?>
-                                <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>
-                                    <div class="abcbiz-ele-single-blog-author">
-                                        <i class="eicon-instagram-comments"></i>
-                                        <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-                                    </div>
-                                <?php endif; ?>
-                            </div><!--/ Blog info -->
-                        <?php endif; ?> 
-                        <!-- Blog Title -->
-                        <div class="abcbiz-ele-single-blog-title">
-                            <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html(wp_trim_words(get_the_title(), 10, NULL)); ?></a></h2>
-                        </div><!--/ Blog Title -->
-                        <!-- Blog Button -->
-                        <div class="abcbiz-ele-single-blog-button">
-                            <?php if ($abcbiz_blog_readmore_switch == 'yes') : ?>
-                                <a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_read_more_text);?> <i class="eicon-arrow-right"></i></a>
-                            <?php endif; ?>
-                        </div><!--/ Blog Button -->
-                    </div><!--/ Content Area -->
-                </div><!--/ Single Blog Area -->
-
-        <?php
+                ?>
+                <!--Single Post -->
+                <div class="abcbiz-popular-posts-single-post">
+                    <!-- Post Thumbnail -->
+                    <div class="abcbiz-popular-post-thumbanil">
+                        <?php if (has_post_thumbnail()): ?>
+                            <?php the_post_thumbnail('full'); ?>
+                        <?php else: ?>
+                            <img src="<?php echo esc_url($fallback_image); ?>" alt="<?php the_title(); ?>">
+                        <?php endif; ?>
+                    </div><!--/ Post Thumbnail -->
+                    <!-- Post Contents -->
+                    <div class="abcbiz-popular-post-contents">
+                        <!--Category -->
+                        <div class="abcbiz-popular-post-cat">
+                            <a
+                                href="<?php echo esc_url(get_category_link(get_the_category()[0]->term_id)); ?>"><?php echo esc_html(get_the_category()[0]->name); ?></a>
+                        </div><!--/ Category -->
+                        <!-- Post Title -->
+                        <h3 class="abcbiz-popular-post-title">
+                            <a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                        </h3><!--/ Post Title -->
+                        <!-- Post Meta -->
+                        <div class="abcbiz-popular-post-meta">
+                            <span class="abcbiz-popular-post-comment">
+                                <i class="fa fa-comments"></i>
+                                <?php echo get_comments_number(); ?>
+                            </span>
+                            <span class="abcbiz-popular-post-date">
+                                <i class="fa fa-calendar"></i>
+                                <?php echo get_the_date(); ?>
+                                </span">
+                        </div><!--/ Post Meta -->
+                    </div><!--/ Post Contents -->
+                </div><!--/ Single Post -->
+                <?php
             endwhile;
-            wp_reset_postdata(); // Reset the post data
+        else:
+            echo esc_html__('No posts found', 'abcbiz-addons');
         endif;
+        wp_reset_postdata();
         ?>
-
-        <!-- Single 3 posts Blog Area -->
-        <div class="abcbiz-ele-single-blog-rem-posts">
-
-            <?php
-            // Query the next three posts of post type 'post'
-            $remaining_posts_args = array(
-                'post_type' => 'post',
-                'posts_per_page' => $abcbiz_blog_list_count, // Number of posts to display
-                'offset' => 1, // Skip the first post
-                'ignore_sticky_posts' => 1 // skip the sticky post
-            );
-
-             // specific category query
-           if ($abcbiz_selected_category_fancy && $abcbiz_selected_category_fancy !== 'all') {
-            $remaining_posts_args['cat'] = $abcbiz_selected_category_fancy;
-        }
-
-            $remaining_posts_query = new WP_Query($remaining_posts_args);
-
-            if ($remaining_posts_query->have_posts()) :
-                while ($remaining_posts_query->have_posts()) : $remaining_posts_query->the_post();
-            ?>
-
-                    <!-- Single Blog Area for the remaining posts -->
-                    <div class="abcbiz-ele-single-blog-area">
-                        <!-- Thumbnail -->
-                        <div class="abcbiz-ele-single-blog-thumbnail">
-                            <a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('abc-elementor-post'); // Use the custom thumbnail size
-                                } else {
-                                    echo '<img src="' . esc_attr(ABCBIZ_Assets) . '/img/blog/image-placeholder.jpg" alt="abcbiz multi addons">';
-                                }
-                                ?>
-                            </a>
-                        </div><!--/ Thumbnail -->
-                        <!-- Content Area -->
-                        <div class="abcbiz-ele-single-blog-content-area">
-                            <!-- Blog info -->
-                            <?php if ($abcbiz_blog_date_switch == 'yes' || $abcbiz_blog_comment_switch == 'yes') : ?>
-                                <div class="abcbiz-ele-single-blog-info">
-                                    <?php if($abcbiz_blog_date_switch == 'yes' ) : ?>                                      
-                                        <div class="abcbiz-ele-single-blog-date">
-                                            <i class="eicon-calendar"></i>
-                                            <a href="<?php the_permalink(); ?>"><?php echo get_the_date(); ?></a>
-                                        </div>
-                                    <?php endif; ?>
-                                    <?php if($abcbiz_blog_comment_switch == 'yes' ) : ?>
-                                        <div class="abcbiz-ele-single-blog-author">
-                                            <i class="eicon-instagram-comments"></i>
-                                            <a href="<?php comments_link(); ?>"><?php comments_number(); ?></a>
-                                        </div>
-                                    <?php endif; ?>
-                                </div><!--/ Blog info -->
-                            <?php endif; ?>                            
-                            <!-- Blog Title -->
-                            <div class="abcbiz-ele-single-blog-title">
-                                <h2><a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php echo esc_html(wp_trim_words(get_the_title(), 5, NULL)); ?></a></h2>
-                            </div><!--/ Blog Title -->
-                            <!-- Blog Button -->
-                            <div class="abcbiz-ele-single-blog-button">
-                                <?php if ($abcbiz_blog_readmore_switch == 'yes') : ?>
-                                    <a href="<?php the_permalink(); ?>"><?php echo esc_html($abcbiz_read_more_text);?> <i class="eicon-arrow-right"></i></a>
-                                <?php endif; ?>
-                            </div><!--/ Blog Button -->
-                        </div><!--/ Content Area -->
-                    </div><!--/ Single Blog Area -->
-
-            <?php
-                endwhile;
-                wp_reset_postdata(); // Reset the post data
-            endif;
-            ?>
-
-        </div><!--/ Single 3 posts Blog Area-->
-
     </div>
-</div><!--/ Blog Area-->
+</div><!--/ Popular Posts Area-->
