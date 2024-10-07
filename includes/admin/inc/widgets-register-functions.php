@@ -58,6 +58,12 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_cta_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_dual_button_widget_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_business_hours_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_archive_title_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_gravity_form_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_image_gallery_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_mailchimp_switch_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_template_slider_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_cost_estimation_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_modern_post_grid_field');
 
 
 // Set default values if not already set
@@ -114,6 +120,7 @@ add_option('abcbiz_image_gallery_field', '1');
 add_option('abcbiz_mailchimp_switch_field', '1');
 add_option('abcbiz_template_slider_field', '1');
 add_option('abcbiz_cost_estimation_field', '1');
+add_option('abcbiz_modern_post_grid_field', '1');
 
 
 //Sticker Text
@@ -569,6 +576,15 @@ add_settings_field(
     'abcbiz_cost_estimation_field',
     esc_html__('Cost Estimation', 'abcbiz-addons'),
     'abcbiz_cost_estimation_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Cost Estimation
+add_settings_field(
+    'abcbiz_modern_post_grid_field',
+    esc_html__('Modern Post Grid', 'abcbiz-addons'),
+    'abcbiz_modern_post_grid_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );

@@ -78,6 +78,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_mailchimp_render(); ?>
                 <?php abcbiz_template_slider_render(); ?>
                 <?php abcbiz_cost_estimation_render(); ?>
+                <?php abcbiz_modern_post_grid_render(); ?>
                 </div>
             </div>
 

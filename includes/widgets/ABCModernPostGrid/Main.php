@@ -100,18 +100,19 @@ class Main extends BaseWidget
 		$this->add_control(
 			'abcbiz_modern_post_grid_style',
 			[
-				'label' => esc_html__('Grid Style', 'abcbiz-addons'),
+				'label' => esc_html__('Grid Layout', 'abcbiz-addons'),
+				'description' => esc_html__('Select grid layout', 'abcbiz-addons'),
 				'type' => Controls_Manager::SELECT,
 				'default' => 'style1',
 				'options' => [
-					'style1' => esc_html__('Style 1', 'abcbiz-addons'),
-					'style2' => esc_html__('Style 2', 'abcbiz-addons'),
-					'style3' => esc_html__('Style 3', 'abcbiz-addons'),
-					'style4' => esc_html__('Style 4', 'abcbiz-addons'),
-					'style5' => esc_html__('Style 5', 'abcbiz-addons'),
-					'style6' => esc_html__('Style 6', 'abcbiz-addons'),
-					'style7' => esc_html__('Style 7', 'abcbiz-addons'),
-					'style8' => esc_html__('Style 8', 'abcbiz-addons'),
+					'style1' => esc_html__('Layout 1', 'abcbiz-addons'),
+					'style2' => esc_html__('Layout 2', 'abcbiz-addons'),
+					'style3' => esc_html__('Layout 3', 'abcbiz-addons'),
+					'style4' => esc_html__('Layout 4', 'abcbiz-addons'),
+					'style5' => esc_html__('Layout 5', 'abcbiz-addons'),
+					'style6' => esc_html__('Layout 6', 'abcbiz-addons'),
+					'style7' => esc_html__('Layout 7', 'abcbiz-addons'),
+					'style8' => esc_html__('Layout 8', 'abcbiz-addons'),
 				],
 			]
 		);
