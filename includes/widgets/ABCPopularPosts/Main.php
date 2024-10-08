@@ -111,6 +111,164 @@ class Main extends BaseWidget
         // End section
         $this->end_controls_section();
 
+        //start style section
+        $this->start_controls_section(
+            'section_style',
+            [
+                'label' => esc_html__('Style', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+        // Add control for alignment
+        $this->add_responsive_control(
+            'popular_posts_alignment',
+            [
+                'label' => esc_html__('Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'default' => 'column',
+                'options' => [
+                    'column' => [
+                        'title' => esc_html__('Column', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                    'row' => [
+                        'title' => esc_html__('Row', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-right',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // Add control for gap
+        $this->add_responsive_control(
+            'popular_posts_gap',
+            [
+                'label' => esc_html__('Gap', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', 'em', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                    'em' => [
+                        'min' => 0,
+                        'max' => 10,
+                    ],
+                    '%' => [
+                        'min' => 0,
+                        'max' => 100,
+                    ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 15,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}}  .abcbiz-popular-posts-wrapper' => 'gap: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Add control for thumbnail alignment
+        $this->add_responsive_control(
+            'popular_posts_thumbnail_alignment',
+            [
+                'label' => esc_html__('Thumbnail Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => false,
+                'options' => [
+                    'row' => [
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-left',
+                    ],
+                    'row-reverse' => [
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-right',
+                    ],
+                    'column' => [
+                        'title' => esc_html__('Top', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-up',
+                    ],
+                    'column-reverse' => [
+                        'title' => esc_html__('Bottom', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                ],
+                'default' => 'row',
+                'selectors' => [
+                    '{{WRAPPER}}  .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // Add control for contents alignment
+        $this->add_responsive_control(
+            'popular_posts_contents_alignment',
+            [
+                'label' => esc_html__('Contents Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => false,
+                'options' => [
+                    'flex-start' => [
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'condition' => [
+                    'popular_posts_thumbnail_alignment' => ['column', 'column-reverse'],
+                ],
+                'default' => 'flex-start',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post' => 'align-items: {{VALUE}};',
+                ],
+            ]
+        );
+
+        // Add control for text alignment
+        $this->add_responsive_control(
+            'popular_posts_text_alignment',
+            [
+                'label' => esc_html__('Text Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'label_block' => false,
+                'options' => [
+                    'flex-start' => [
+                        'title' => esc_html__('Left', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-left',
+                    ],
+                    'center' => [
+                        'title' => esc_html__('Center', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-center',
+                    ],
+                    'flex-end' => [
+                        'title' => esc_html__('Right', 'abcbiz-addons'),
+                        'icon' => 'eicon-text-align-right',
+                    ],
+                ],
+                'default' => 'flex-start',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents' => 'align-items: {{VALUE}};',
+                ],
+                'condition' => [
+                    'popular_posts_thumbnail_alignment' => ['column', 'column-reverse'],
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End style section
+
 
     }
 
