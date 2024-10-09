@@ -3336,7 +3336,9 @@ label.abcbiz-pricing-option {
 .abcbiz-modren-single-post-thumbnail {
   height: 100%;
 }
-
+.abcbiz-modern-one-post {
+  flex-basis: 100% !important;
+}
 /*----------------------------------------------
  * ABCbiz Modren Post Style 2
  * ---------------------------------------------*/

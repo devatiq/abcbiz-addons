@@ -201,7 +201,7 @@ class Main extends BaseWidget
 				'label' => esc_html__('Number of Posts to Display', 'abcbiz-addons'),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 4,
-				'min' => 2,
+				'min' => 1,
 				'max' => 4,
 				'description' => esc_html__('Set the number of posts to display, maximum is 4.', 'abcbiz-addons'),
 				'condition' => [
@@ -216,7 +216,7 @@ class Main extends BaseWidget
 				'label' => esc_html__('Number of Posts to Display', 'abcbiz-addons'),
 				'type' => Controls_Manager::NUMBER,
 				'default' => 4,
-				'min' => 2,
+				'min' => 1,
 				'description' => esc_html__('Set the number of posts to display', 'abcbiz-addons'),
 				'condition' => [
 					'abcbiz_modern_post_grid_style!' => 'style2',

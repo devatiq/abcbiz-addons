@@ -25,7 +25,7 @@ $posts = new WP_Query($args);
 
                 if ($counter === 1):
                     ?>
-                    <div class="abcbiz-modren-style2-single-post">
+                    <div class="abcbiz-modren-style2-single-post <?php echo esc_attr($fullWidth_class); ?>">
                         <!-- Post Thumbnail -->
                         <div class="abcbiz-modren-style2-post-thumbnail">
                             <?php if (has_post_thumbnail()): ?>

@@ -26,6 +26,10 @@ if('style2' == $settings['abcbiz_modern_post_grid_style']) {
     $post_limit = $settings['post_limit']; // Get the post limit
 }
 
+
+// Determine if a single post should be displayed as a full-width container
+$fullWidth_class = (1 === $post_limit) ? ' abcbiz-modern-one-post' : '';
+
 // Initialize WP_Query arguments based on the user selection
 $args = [
     'post_type' => $post_type,
