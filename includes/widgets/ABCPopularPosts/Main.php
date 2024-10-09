@@ -8,6 +8,7 @@ use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Group_Control_Typography;
 use Elementor\Group_Control_Background;
+use Elementor\Group_Control_Border;
 
 class Main extends BaseWidget
 {
@@ -96,8 +97,8 @@ class Main extends BaseWidget
         $this->add_control(
             'display_fields',
             [
-                'label' => esc_html__('Display Fields', 'abcbiz-addons'),
-                'description' => esc_html__('Select whether to display comments or views.', 'abcbiz-addons'),
+                'label' => esc_html__('Display Meta', 'abcbiz-addons'),
+                'description' => esc_html__('Select whether to display comments, views.', 'abcbiz-addons'),
                 'type' => Controls_Manager::SELECT2,
                 'multiple' => true,
                 'options' => [
@@ -267,8 +268,244 @@ class Main extends BaseWidget
             ]
         );
 
+        // Add control for padding
+        $this->add_responsive_control(
+            'popular_posts_padding',
+            [
+                'label' => esc_html__('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Add control for border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'popular_posts_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post',
+            ]
+        );
+
+        // Add control for border radius
+        $this->add_control(
+            'popular_posts_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+
+        //start style section for hover
+        $this->start_controls_tabs('popular_posts_style_tabs');
+
+        // Normal tab
+        $this->start_controls_tab(
+            'popular_posts_style_normal_tab',
+            [
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
+            ]
+        );
+
+        //add control for background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'popular_posts_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post',
+            ]
+        );
+
+        $this->end_controls_tab(); // End normal tab
+
+        // Hover tab
+        $this->start_controls_tab(
+            'popular_posts_style_hover_tab',
+            [
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
+            ]
+        );
+
+        //add control for hover background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'popular_posts_hover_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-posts-single-post:hover',
+            ]
+        );
+
         $this->end_controls_section(); // End style section
 
+        //start style section for contents
+        $this->start_controls_section(
+            'style_popular_posts_contents',
+            [
+                'label' => esc_html__('Contents', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        //add control for category color
+        $this->add_control(
+            'category_color',
+            [
+                'label' => esc_html__('Category Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-cat a' => 'color: {{VALUE}};',
+                ],
+                'condition' => [
+                    'category_display_switch' => 'true',
+                ],
+                'default' => '#ffffff',
+            ]
+        );
+
+        //add control for category typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'category_typography',
+                'label' => esc_html__('Category Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-cat a',
+                'condition' => [
+                    'category_display_switch' => 'true',
+                ],
+            ]
+        );
+
+        //add control for category background
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'category_background',
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-cat a',
+                'condition' => [
+                    'category_display_switch' => 'true',
+                    'category_random_color_switch!' => 'true',
+                ],
+                'fields_options' => [
+                    'background' => [
+                        'label' => esc_html__('Category Background', 'abcbiz-addons'),
+                        'default' => 'classic',
+                    ],
+                    'color' => [
+                        'label' => esc_html__('Background Color', 'abcbiz-addons'),
+                        'default' => '#5A49F8',
+                    ],
+                ],
+            ]
+        );
+
+
+        //add control for title color
+        $this->add_control(
+            'title_color',
+            [
+                'label' => esc_html__('Title Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-title a' => 'color: {{VALUE}};',
+                ],
+                'separator' => 'before',
+                'default' => '#010218',
+            ]
+        );
+
+        //add control for title typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'title_typography',
+                'label' => esc_html__('Title Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-title',
+            ]
+        );
+
+        //add control for meta color
+        $this->add_control(
+            'meta_color',
+            [
+                'label' => esc_html__('Meta Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-meta span' => 'color: {{VALUE}};',
+                ],
+                'separator' => 'before',
+                'default' => '#686868',
+            ]
+        );
+
+        //add control for meta typography
+        $this->add_group_control(
+            Group_Control_Typography::get_type(),
+            [
+                'name' => 'meta_typography',
+                'label' => esc_html__('Meta Typography', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popular-posts-wrapper .abcbiz-popular-post-contents .abcbiz-popular-post-meta span',
+            ]
+        );
+
+        $this->end_controls_section(); // End style section
+
+        //start style section for thumbnail
+        $this->start_controls_section(
+            'section_thumbnail_style',
+            [
+                'label' => esc_html__('Thumbnail', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );   
+
+        //add control for thumbnail border radius
+        $this->add_responsive_control(
+            'thumbnail_boder_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-popular-post-thumbanil img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'top' => 5,
+                    'right' => 5,
+                    'bottom' => 5,
+                    'left' => 5,
+                ],
+            ]
+        );
+
+        //add control for thumbnail border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'thumbnail_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-popular-post-thumbanil img',              
+            ]
+        );
+
+        $this->end_controls_section(); // End style section
 
     }
 
