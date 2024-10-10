@@ -23,17 +23,17 @@ $slider_settings = json_encode([
 ]);
 
 // Create a unique ID for the slider instance
-$unique_id = uniqid('abcbiz-slider-');
+$unique_id = $this->get_id();
 ?>
 
-<div id="<?php echo esc_attr($unique_id); ?>" class="abcbiz-addons-slider-wrapper"
+<div id="abcbiz-slider-<?php echo esc_attr($unique_id); ?>" class="abcbiz-addons-slider-wrapper"
     data-settings='<?php echo esc_attr($slider_settings); ?>'>
-    <div class="swiper-container swiper">
-        <div class="swiper-wrapper">
+    <div class="abcbiz-template-swiper-container">
+        <div class="abcbiz-template-swiper-wrapper">
             <!-- Dynamically render each slide -->
             <?php if (!empty($settings['slides'])): ?>
                 <?php foreach ($settings['slides'] as $slide): ?>
-                    <div class="swiper-slide">
+                    <div class="abcbiz-template-swiper-slide">
                         <!-- Render the selected Elementor template -->
                         <?php if (!empty($slide['template_select'])): ?>
                             <div class="slide-template-content">

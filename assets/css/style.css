@@ -3719,3 +3719,21 @@ h3.abcbiz-popular-post-title a {
   font-size: 14px;
   font-weight: 300;
 }
+
+
+.abcbiz-template-swiper-container {
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+}
+
+.abcbiz-template-swiper-wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.abcbiz-template-swiper-slide {
+  display: block;
+  flex-shrink: 0;
+  width: 100%; /* Adjust depending on your slider settings */
+}
