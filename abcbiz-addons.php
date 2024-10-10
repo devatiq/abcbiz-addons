@@ -15,10 +15,12 @@ Elementor Pro tested up to: 3.24.4
 Requires Plugins: elementor
 */
 
-if (!defined('ABSPATH')) exit; // Exit if accessed directly
+if (!defined('ABSPATH'))
+    exit; // Exit if accessed directly
 
 if (!function_exists('abcbiz_elementor_plugin_general_init')) {
-    function abcbiz_elementor_plugin_general_init() {
+    function abcbiz_elementor_plugin_general_init()
+    {
         // Define constants
         define('ABCBIZ_File', __FILE__);
         define('ABCBIZ_Path', dirname(ABCBIZ_File));
@@ -40,14 +42,14 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
             \ABCBiz\Includes\globals\CSS_Transform::init();
         }
 
-       // Loading wrapper link
+        // Loading wrapper link
         if (!class_exists('ABCBiz\Includes\globals\ABCbiz_Wrapper_link')) {
             require_once ABCBIZ_Inc . '/globals/wrapper-link.php';
-            new \ABCBiz\Includes\globals\ABCbiz_Wrapper_link(); 
+            new \ABCBiz\Includes\globals\ABCbiz_Wrapper_link();
         }
 
-         // Loading Custom CSS
-         if (!class_exists('ABCBiz\Includes\globals\ABCbiz_CustomCSS')) {
+        // Loading Custom CSS
+        if (!class_exists('ABCBiz\Includes\globals\ABCbiz_CustomCSS')) {
             require_once ABCBIZ_Inc . '/globals/custom-css.php';
             new \ABCBiz\Includes\globals\ABCbiz_CustomCSS();
         }
@@ -67,7 +69,8 @@ add_action('plugins_loaded', 'abcbiz_elementor_plugin_general_init');
 
 //Load style and scripts
 if (!function_exists('abcbiz_elementor_enqueue')) {
-    function abcbiz_elementor_enqueue() {
+    function abcbiz_elementor_enqueue()
+    {
         wp_register_style('abcbiz-animation', ABCBIZ_Assets . "/css/shape-animation.css");
         wp_register_style('abcbiz-magnific-popup', ABCBIZ_Assets . "/css/magnific-popup.css");
         wp_register_style('abcbiz-flip-box', ABCBIZ_Assets . "/css/abcbiz-flip-box.css");
@@ -77,36 +80,36 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_enqueue_style('abcbiz-elementor-responsive', ABCBIZ_Assets . "/css/responsive.css");
         wp_register_style('abcbiz-anim-text', ABCBIZ_Assets . "/css/abcbiz-anim-text-style.css");
         if (!wp_style_is('twentytwenty')) {
-        wp_register_style('twentytwenty', ABCBIZ_Assets . "/css/twentytwenty.css");
-        }
-        
-        //register style for swiper slider
-        if (!wp_style_is('swiper')) {
-        wp_register_style('swiper',  ABCBIZ_Assets . "/css/swiper-bundle.min.css");
+            wp_register_style('twentytwenty', ABCBIZ_Assets . "/css/twentytwenty.css");
         }
 
-     //register swiper slider 
+        //register style for swiper slider
+        if (!wp_style_is('swiper')) {
+            wp_register_style('swiper', ABCBIZ_Assets . "/css/swiper-bundle.min.css");
+        }
+
+        //register swiper slider 
         if (!wp_script_is('swiper')) {
-        wp_register_script('swiper', ABCBIZ_Assets . "/js/swiper-bundle.min.js", array('jquery', 'elementor-frontend'), 1.0, true);
+            wp_register_script('swiper', ABCBIZ_Assets . "/js/swiper-bundle.min.js", array('jquery', 'elementor-frontend'), 1.0, true);
         }
         wp_register_script('abcbiz-testimonial', ABCBIZ_Assets . "/js/abcbiz-testimonial.js", array('jquery'), false, true);
 
         // Check if WooCommerce plugin is active
-        include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    if ( is_plugin_active( 'woocommerce/woocommerce.php' ) ) {
-        wp_enqueue_style('abcbiz-elementor-wc-style', ABCBIZ_Assets . "/css/wc-style.css");
-        //cart icon counter
-        wp_register_script('abcbiz-cart-count-update', ABCBIZ_Assets . "/js/abcbiz-cart-update.js", array('jquery'), '1.0', true);
-        wp_localize_script('abcbiz-cart-count-update', 'abcbizCartAjax', array('url' => admin_url('admin-ajax.php')));
-        //Add to cart
-        wp_register_script('abcbiz-add-to-cart', ABCBIZ_Assets . "/js/abcbiz-add-to-cart.js", array('jquery'), 1.0, true);
-        $abcbiz_add_to_cart_nonce = wp_create_nonce('abcbiz_add_to_cart_nonce');
-        wp_localize_script('abcbiz-add-to-cart', 'acbbiz_add_to_cart', array(
-            'ajax_url' => admin_url('admin-ajax.php'),
-            'abcbiz_add_to_cart_nonce' => $abcbiz_add_to_cart_nonce
-        ));
-    }
-        
+        include_once(ABSPATH . 'wp-admin/includes/plugin.php');
+        if (is_plugin_active('woocommerce/woocommerce.php')) {
+            wp_enqueue_style('abcbiz-elementor-wc-style', ABCBIZ_Assets . "/css/wc-style.css");
+            //cart icon counter
+            wp_register_script('abcbiz-cart-count-update', ABCBIZ_Assets . "/js/abcbiz-cart-update.js", array('jquery'), '1.0', true);
+            wp_localize_script('abcbiz-cart-count-update', 'abcbizCartAjax', array('url' => admin_url('admin-ajax.php')));
+            //Add to cart
+            wp_register_script('abcbiz-add-to-cart', ABCBIZ_Assets . "/js/abcbiz-add-to-cart.js", array('jquery'), 1.0, true);
+            $abcbiz_add_to_cart_nonce = wp_create_nonce('abcbiz_add_to_cart_nonce');
+            wp_localize_script('abcbiz-add-to-cart', 'acbbiz_add_to_cart', array(
+                'ajax_url' => admin_url('admin-ajax.php'),
+                'abcbiz_add_to_cart_nonce' => $abcbiz_add_to_cart_nonce
+            ));
+        }
+
         wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery', 'elementor-frontend'), '1.0', true);
         wp_register_script('abcbiz-search-icon', ABCBIZ_Assets . "/js/abcbiz-search-icon.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wp-menu-js', ABCBIZ_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
@@ -124,8 +127,8 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-circular-skills', ABCBIZ_Assets . "/js/abcbiz-circular-skills.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-magnific-popup', ABCBIZ_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-mailchimp-newsletter', ABCBIZ_Assets . "/js/mailchimp-newsletter.js", array('jquery'), '1.0', true);
-        wp_register_script('abcbiz-template-slider', ABCBIZ_Assets . "/js/abcbiz-template-slider.js",  array('jquery', 'elementor-frontend'), '1.0', true);
-        wp_register_script('abcbiz-cost-estimation', ABCBIZ_Assets . "/js/abcbiz-cost-estimation.js",  array('jquery', 'elementor-frontend'), '1.0', true);
+        wp_register_script('abcbiz-template-slider', ABCBIZ_Assets . "/js/abcbiz-template-slider.js", array('jquery', 'elementor-frontend'), '1.0', true);
+        wp_register_script('abcbiz-cost-estimation', ABCBIZ_Assets . "/js/abcbiz-cost-estimation.js", array('jquery', 'elementor-frontend'), '1.0', true);
         wp_enqueue_script('abcbiz-elementor-custom', ABCBIZ_Assets . "/js/main.js", array('jquery'), false, true);
 
         wp_localize_script('abcbiz-mailchimp-newsletter', 'abcbizMailchimpAjax', [
@@ -140,7 +143,8 @@ add_action('wp_enqueue_scripts', 'abcbiz_elementor_enqueue');
 
 //add ABCBiz Elementor Category
 if (!function_exists('abcbiz_elementor_add_widget_categories')) {
-    function abcbiz_elementor_add_widget_categories($elements_manager) {
+    function abcbiz_elementor_add_widget_categories($elements_manager)
+    {
         $elements_manager->add_category(
             'abcbiz-category',
             [
@@ -154,7 +158,8 @@ add_action('elementor/elements/categories_registered', 'abcbiz_elementor_add_wid
 
 //add ABCBiz Elementor WooCommerce Category
 if (!function_exists('abcbiz_elementor_add_widget_wc_categories')) {
-    function abcbiz_elementor_add_widget_wc_categories($elements_manager) {
+    function abcbiz_elementor_add_widget_wc_categories($elements_manager)
+    {
         if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
             $elements_manager->add_category(
                 'abcbiz-wc-category',
@@ -174,22 +179,23 @@ add_action('elementor/editor/before_enqueue_scripts', function () {
 });
 
 //Get Plugin Info
-function abcbiz_multi_plugin_info() {
+function abcbiz_multi_plugin_info()
+{
     // Ensure the function is available
-    if ( ! function_exists( 'get_plugin_data' ) ) {
-        require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
-    }   
+    if (!function_exists('get_plugin_data')) {
+        require_once(ABSPATH . 'wp-admin/includes/plugin.php');
+    }
 
-    $plugin_file_path = ABCBIZ_Path . '/abcbiz-addons.php';   
-    if ( file_exists( $plugin_file_path ) ) {
-        $plugin_data = get_plugin_data( $plugin_file_path );
+    $plugin_file_path = ABCBIZ_Path . '/abcbiz-addons.php';
+    if (file_exists($plugin_file_path)) {
+        $plugin_data = get_plugin_data($plugin_file_path);
         $plugin_info = [
             'Name' => $plugin_data['Name'],
             'Version' => $plugin_data['Version'],
-            'Author' => $plugin_data['Author'], 
-            'PluginURI' => $plugin_data['PluginURI'], 
-            'AuthorURI' => $plugin_data['AuthorURI'], 
-            'Description' => $plugin_data['Description'] 
+            'Author' => $plugin_data['Author'],
+            'PluginURI' => $plugin_data['PluginURI'],
+            'AuthorURI' => $plugin_data['AuthorURI'],
+            'Description' => $plugin_data['Description']
         ];
     } else {
         $plugin_info = [
@@ -206,17 +212,18 @@ function abcbiz_multi_plugin_info() {
 }
 
 // Add "Get Pro" and "Settings" link to the plugin action links
-function abcbiz_add_plugin_links($links) {
+function abcbiz_add_plugin_links($links)
+{
     // Add "Settings" link
     $settings_link = '<a href="' . admin_url('admin.php?page=abcbiz_home') . '">Settings</a>';
-    
+
     // Add "Get Pro" link
     $pro_link = '<a href="https://abcbizaddons.com/" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
-    
+
     // Add the links to the list of existing plugin action links
     array_unshift($links, $settings_link); // Puts "Settings" as the first link
     array_push($links, $pro_link); // Puts "Get Pro" at the end of the list
-    
+
     return $links;
 }
 
