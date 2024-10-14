@@ -1,3 +1,11 @@
+/**
+ * Initialize a Swiper instance for the given template slider.
+ *
+ * Retrieves the settings from the data-settings attribute of the container element,
+ * parses the JSON string, and passes the settings to Swiper.
+ *
+ * @param {String} uniqueId - The unique ID of the template slider element.
+ */
 function ABCbizSliderInitialize(uniqueId) {
     'use strict';
 
@@ -15,6 +23,7 @@ function ABCbizSliderInitialize(uniqueId) {
         return;
     }
 
+console.log('arrow', parsedSettings.arrows);
     // Initialize Swiper using the parsed settings and custom class names
     new Swiper(slider.querySelector('.abcbiz-template-swiper-container'), {
         loop: parsedSettings.loop || false,
@@ -50,7 +59,7 @@ function ABCbizSliderInitialize(uniqueId) {
 
 jQuery(window).on('elementor/frontend/init', () => {
     elementorFrontend.hooks.addAction('frontend/element_ready/global', ($scope) => {
-        var sliderElement = $scope.find('.abcbiz-addons-slider-wrapper');
+        var sliderElement = $scope.find('.abcbiz-addons-template-slider-wrapper');
         if (sliderElement.length > 0 && sliderElement.attr('id')) {
             var uniqueId = sliderElement.attr('id');  // Get the unique ID           
             ABCbizSliderInitialize(uniqueId);  // Initialize the Swiper with the unique ID

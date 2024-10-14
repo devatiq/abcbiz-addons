@@ -26,7 +26,7 @@ $slider_settings = json_encode([
 $unique_id = $this->get_id();
 ?>
 
-<div id="abcbiz-slider-<?php echo esc_attr($unique_id); ?>" class="abcbiz-addons-slider-wrapper"
+<div id="abcbiz-slider-<?php echo esc_attr($unique_id); ?>" class="abcbiz-addons-template-slider-wrapper"
     data-settings='<?php echo esc_attr($slider_settings); ?>'>
     <div class="abcbiz-template-swiper-container">
         <div class="abcbiz-template-swiper-wrapper">
@@ -45,9 +45,20 @@ $unique_id = $this->get_id();
             <?php endif; ?>
         </div>
     </div>
+    <?php 
+        if('yes' === $settings['show_pagination']) :
+    ?>
     <!-- Add Pagination -->
-    <div class="swiper-pagination"></div>
-    <!-- Add Navigation -->
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
+        <div class="abcbiz-template-slider-pagination">
+            <div class="swiper-pagination"></div>
+        </div>
+    <?php endif; ?>
+
+    <?php if('yes' === $settings['show_arrows']) : ?>
+        <!-- Add Navigation -->
+        <div class="abcbiz-template-slider-nav">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    <?php endif; ?>
 </div>

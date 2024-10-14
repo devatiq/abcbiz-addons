@@ -8,6 +8,7 @@ use ABCBiz\Includes\Widgets\BaseWidget;
 use Elementor\Controls_Manager;
 use Elementor\Plugin;
 use Elementor\Repeater;
+use Elementor\Group_Control_Background;
 
 
 class Main extends BaseWidget
@@ -179,7 +180,6 @@ class Main extends BaseWidget
 
         $this->end_controls_section(); //end slider settings section
 
-
         // start style section
         $this->start_controls_section(
             'abcbiz_slider_style',
@@ -196,7 +196,7 @@ class Main extends BaseWidget
                 'type' => Controls_Manager::DIMENSIONS,
                 'size_units' => ['px', '%', 'em'],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
@@ -238,18 +238,6 @@ class Main extends BaseWidget
             ]
         );
 
-        // nav color
-        $this->add_control(
-            'nav_color',
-            [
-                'label' => esc_html__('Color', 'abcbiz-addons'),
-                'type' => Controls_Manager::COLOR,
-                'selectors' => [
-                    '{{WRAPPER}}  .abcbiz-addons-slider-wrapper .swiper-button-prev, {{WRAPPER}}  .abcbiz-addons-slider-wrapper .swiper-button-next' => 'color: {{VALUE}};',
-                ],
-            ]
-        );
-
         // nav size
         $this->add_responsive_control(
             'nav_size',
@@ -259,12 +247,31 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 10,
+                        'min' => 30,
                         'max' => 400,
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-button-next:after, {{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-button-prev::after' => 'font-size: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-template-slider-nav > div' => 'width: {{SIZE}}{{UNIT}};height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // nav font size
+        $this->add_responsive_control(
+            'nav_font_size',
+            [
+                'label' => esc_html__('Font Size', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 10,
+                        'max' => 200,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper .swiper-button-next:after, {{WRAPPER}} .abcbiz-addons-template-slider-wrapper .swiper-button-prev::after' => 'font-size: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -336,7 +343,77 @@ class Main extends BaseWidget
                     '{{WRAPPER}} .swiper-button-next, {{WRAPPER}} .swiper-button-prev' => 'top: {{SIZE}}{{UNIT}};',
                 ],
             ]
+        );        
+
+
+        $this->start_controls_tabs('nav_tabs');
+
+        $this->start_controls_tab(
+            'nav_normal_tab',
+            [
+                'label' => esc_html__('Normal', 'abcbiz-addons'),
+            ]
         );
+
+        $this->add_control(
+            'nav_color',
+            [
+                'label' => esc_html__('Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'default' => '#ffffff',
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-next' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-prev' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'nav_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-next, {{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-prev',
+            ]
+        );
+
+        $this->end_controls_tab();
+
+        $this->start_controls_tab(
+            'nav_hover_tab',
+            [
+                'label' => esc_html__('Hover', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'nav_hover_color',
+            [
+                'label' => esc_html__('Color', 'abcbiz-addons'),
+                'type' => Controls_Manager::COLOR,
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-next:hover' => 'color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-prev:hover' => 'color: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_group_control(
+            Group_Control_Background::get_type(),
+            [
+                'name' => 'nav_hover_background',
+                'label' => esc_html__('Background', 'abcbiz-addons'),
+                'types' => ['classic', 'gradient'],
+                'exclude' => ['image'],
+                'selector' => '{{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-next:hover, {{WRAPPER}} .abcbiz-template-slider-nav .swiper-button-prev:hover',
+            ]
+        );
+
+        $this->end_controls_tab(); // end hover tab
+
+        $this->end_controls_tabs(); // end tabs
 
         $this->end_controls_section(); // end navigation section
 
@@ -371,7 +448,7 @@ class Main extends BaseWidget
                     ],
                 ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
@@ -383,7 +460,7 @@ class Main extends BaseWidget
                 'label' => esc_html__('Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper .swiper-pagination-bullet' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -395,7 +472,7 @@ class Main extends BaseWidget
                 'label' => esc_html__('Active Color', 'abcbiz-addons'),
                 'type' => Controls_Manager::COLOR,
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background-color: {{VALUE}};',
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper .swiper-pagination-bullet.swiper-pagination-bullet-active' => 'background-color: {{VALUE}};',
                 ],
             ]
         );
@@ -417,8 +494,12 @@ class Main extends BaseWidget
                         'max' => 100,
                     ],
                 ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 0,
+                ],
                 'selectors' => [
-                    '{{WRAPPER}} .abcbiz-addons-slider-wrapper .swiper-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
+                    '{{WRAPPER}} .abcbiz-addons-template-slider-wrapper .abcbiz-template-slider-pagination .swiper-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
                 ],
             ]
         );
