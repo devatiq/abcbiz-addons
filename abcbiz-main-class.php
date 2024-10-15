@@ -93,7 +93,7 @@ class ABCBizMultiElementorPack
 	public function setConstants()
 	{
 		define('ABCBIZ_Version', $this->version);
-		define('ABCBIZ_Name', esc_html__('ABCBiz Addons and Templates for Elementor', 'abcbiz-addons'));
+		define('ABCBIZ_Name', esc_html__('PrimeKit Addons and Templates for Elementor by ABCPlugin', 'abcbiz-addons'));
 
 	}
 

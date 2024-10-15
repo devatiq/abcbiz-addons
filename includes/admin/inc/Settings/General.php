@@ -27,7 +27,7 @@ class General {
 
     // General settings section description
     public function section_info() {
-        echo __('General settings for the ABC Biz plugin.', 'abcbiz-addons');
+        echo __('General settings for the PrimeKit Addons.', 'abcbiz-addons');
     }
 
     // Sanitize General settings

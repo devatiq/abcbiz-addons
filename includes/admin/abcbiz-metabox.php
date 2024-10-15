@@ -78,7 +78,7 @@ if ( class_exists( 'WooCommerce' ) && function_exists( 'wc_get_product' ) && 1 =
         // Nonce field for security
         wp_nonce_field('abcbiz_wc_product_description_nonce_action', 'abcbiz_wc_product_description_nonce');
         
-        echo '<p><strong>' . esc_html__('Note:', 'abcbiz-addons') . '</strong> ' . esc_html__('This area is specifically for ABCBiz Elementor Addons Products description tab contents.', 'abcbiz-addons') . '</p>';
+        echo '<p><strong>' . esc_html__('Note:', 'abcbiz-addons') . '</strong> ' . esc_html__('This area is specifically for PrimeKit Addons and Templates for Elementor by ABCPlugin Products description tab contents.', 'abcbiz-addons') . '</p>';
         $content = get_post_meta($post->ID, '_abcbiz_wc_product_description', true);
         wp_editor(
             htmlspecialchars_decode($content),

@@ -1,5 +1,5 @@
-=== ABCBiz Addons and Templates for Elementor ===
-Plugin Name: ABCBiz Addons and Templates for Elementor
+=== PrimeKit Addons and Templates for Elementor by ABCPlugin ===
+Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
 Version: 1.0.9
 Author: SupreoX Limited
 Author URI: http://www.supreox.com/
