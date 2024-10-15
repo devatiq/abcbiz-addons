@@ -80,6 +80,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_cost_estimation_render(); ?>
                 <?php abcbiz_modern_post_grid_render(); ?>
                 <?php abcbiz_popular_posts_render(); ?>
+                <?php abcbiz_fetch_posts_render(); ?>
                 </div>
             </div>
 

@@ -123,6 +123,7 @@ add_option('abcbiz_template_slider_field', '1');
 add_option('abcbiz_cost_estimation_field', '1');
 add_option('abcbiz_modern_post_grid_field', '1');
 add_option('abcbiz_popular_posts_field', '1');
+add_option('abcbiz_fetch_posts_field', '1');
 
 
 //Sticker Text
@@ -596,6 +597,14 @@ add_settings_field(
     'abcbiz_popular_posts_field',
     esc_html__('Popular Posts', 'abcbiz-addons'),
     'abcbiz_popular_posts_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+// Add settings field for fetch posts
+add_settings_field(
+    'abcbiz_fetch_posts_field',
+    esc_html__('Fetch Posts', 'abcbiz-addons'),
+    'abcbiz_fetch_posts_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );
