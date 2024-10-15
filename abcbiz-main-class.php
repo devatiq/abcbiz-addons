@@ -21,7 +21,7 @@ class ABCBizMultiElementorPack
 	/**
 	 * Minimum PHP Version
 	 */
-	const MINIMUM_PHP_VERSION = '7.4';
+	const MINIMUM_PHP_VERSION = '8.0';
 
 	/**
 	 * Instance

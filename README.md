@@ -3,8 +3,8 @@ Contributors: atiqbd4ever
 Donate link: [Buy Me A Coffee](https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4)  
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, WordPress, Page Builder, Customization, Responsive Design, Drag and Drop, Frontend Editing, Widget Library  
 Requires at least: 5.4   
-Tested up to: 6.6.1   
-Stable tag: 1.0.9   
+Tested up to: 6.6.2   
+Stable tag: 1.10  
 Requires PHP: 8.0  
 License: GPLv2 or later   
 License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
