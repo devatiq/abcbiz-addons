@@ -3836,14 +3836,16 @@ h3.abcbiz-popular-post-title a {
   font-weight: 300;
 }
 
-.abcbiz-fetch-single-post-title h2 {
-  color: #333;
+.abcbiz-fetch-single-post-title h2 { 
   font-weight: 600;
   font-size: 24px;
   line-height: 1.3em;
   margin: 0;
   margin-top: 10px;
   margin-bottom: 10px;
+}
+.abcbiz-fetch-single-post-title h2 a {
+  color: #333;
 }
 .abcbiz-fetch-single-post-cat {
   display: flex;
@@ -3855,6 +3857,9 @@ h3.abcbiz-popular-post-title a {
   gap: 5px;
   align-items: center;
   margin-bottom: 0;
+}
+.abcbiz-fetch-single-post-info span {
+  line-height: 1;
 }
 .abcbiz-fetch-single-post-info span svg {
   width: 17px;

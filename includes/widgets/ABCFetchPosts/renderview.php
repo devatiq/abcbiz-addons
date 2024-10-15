@@ -36,17 +36,17 @@ if (!empty($posts) && is_array($posts)) {
         $post_date = date('M j, Y', strtotime($post->date));
         $category_names = $this->get_category_names($post->categories, $post->_embedded);
         // Get the featured image URL if available
-        $thumbnail_url = isset( $post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url )
-        ? $post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url
-        : '';
+        $thumbnail_url = isset($post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url)
+            ? $post->_embedded->{'wp:featuredmedia'}[0]->media_details->sizes->medium->source_url
+            : '';
         ?>
         <!--Single Post-->
         <div class="abcbiz-fetch-single-post">
             <!--Thumbnail-->
             <div class="abcbiz-fetch-single-post-thumb">
-                <?php if ( ! empty( $thumbnail_url ) ) : ?>
-                    <img src="<?php echo esc_url( $thumbnail_url ); ?>" alt="<?php echo esc_attr( $post->title->rendered ); ?>">
-                <?php else : ?>
+                <?php if (!empty($thumbnail_url)): ?>
+                    <img src="<?php echo esc_url($thumbnail_url); ?>" alt="<?php echo esc_attr($post->title->rendered); ?>">
+                <?php else: ?>
                     <img src="<?php echo esc_attr($fallback_image); ?>" alt="<?php echo esc_url($post->link); ?>">
                 <?php endif; ?>
             </div><!--/ Thumbnail-->
@@ -54,11 +54,11 @@ if (!empty($posts) && is_array($posts)) {
                 <div class="abcbiz-fetch-single-post-cat">
                     <p>
                         <?php
-                            if (!empty($category_names)) {
-                                echo esc_html(implode(', ', $category_names));
-                            } else {
-                                echo __('No categories', 'custom-elementor-widgets');
-                            }
+                        if (!empty($category_names)) {
+                            echo esc_html(implode(', ', $category_names));
+                        } else {
+                            echo __('No categories', 'custom-elementor-widgets');
+                        }
                         ?>
                     </p>
                     <div class="abcbiz-fetch-single-post-info">
@@ -78,9 +78,10 @@ if (!empty($posts) && is_array($posts)) {
                     </div>
                 </div>
                 <div class="abcbiz-fetch-single-post-title">
-                    <a href="<?php echo esc_url($post->link); ?>" target="_blank">
-                        <h2><?php echo esc_html($post->title->rendered); ?></h2>
-                    </a>
+                    <h2>
+                        <a href="<?php echo esc_url($post->link); ?>"
+                            target="_blank"><?php echo esc_html($post->title->rendered); ?></a>
+                    </h2>
                 </div>
                 <div class="abcbiz-fetch-single-post-content">
                     <?php echo wp_kses_post($post->excerpt->rendered); ?>
