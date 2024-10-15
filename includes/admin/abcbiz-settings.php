@@ -4,8 +4,8 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 function abcbiz_add_admin_menu() {
     // Add a new top-level menu
     add_menu_page(
-        esc_html__('ABCBiz Home', 'abcbiz-addons'),  // Page title
-        esc_html__('ABCBiz Home', 'abcbiz-addons'),  // Menu title
+        esc_html__('PrimeKit Settings', 'abcbiz-addons'),  // Page title
+        esc_html__('PrimeKit', 'abcbiz-addons'),  // Menu title
         'manage_options',                               // Capability
         'abcbiz_home',                         // Menu slug
         'abcbiz_home_page',                         // Function to display the page
@@ -16,7 +16,7 @@ function abcbiz_add_admin_menu() {
     // Add a submenu page
     add_submenu_page(
         'abcbiz_home', 
-        esc_html__('ABCBiz Available Widgets', 'abcbiz-addons'), // Page title
+        esc_html__('PrimeKit Available Widgets', 'abcbiz-addons'), // Page title
         esc_html__('Available Widgets', 'abcbiz-addons'), // Menu title
         'manage_options',                                // Capability
         'abcbiz_widgets_menu',                                // Menu slug

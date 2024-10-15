@@ -12,7 +12,7 @@ License URI: [GPL-2.0](https://www.gnu.org/licenses/gpl-2.0.html)
 PrimeKit Addons and Templates for Elementor by ABCPlugin offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder
 
 ## Description
-Welcome to **[PrimeKit Addons and Templates for Elementor](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **60 meticulously designed widgets**, and **20+ templates**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At ABCBiz Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[PrimeKit Addons and Templates for Elementor](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **60 meticulously designed widgets**, and **20+ templates**, we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 [Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
 
@@ -90,8 +90,8 @@ Welcome to **[PrimeKit Addons and Templates for Elementor](https://abcbizaddons.
 - My Account
 - Product BreadCrumb
 
-### Why Choose ABCBiz Addons?
-With **[ABCBiz Addons](https://abcbizaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **ABCBiz Addons**.
+### Why Choose PrimeKit Addons?
+With **[PrimeKit Addons](https://abcbizaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
 
 ## Frequently Asked Questions
 

@@ -88,7 +88,7 @@ class SettingsPage
             <!-- Display settings errors and success messages -->
             <?php settings_errors(); ?>
 
-            <h1><?php _e('ABCBiz Addons Settings', 'abcbiz-addons'); ?></h1>
+            <h1><?php _e('PrimeKit Addons Settings', 'abcbiz-addons'); ?></h1>
 
             <h2 class="nav-tab-wrapper">
                 <a href="?page=abcbiz_settings&tab=general"

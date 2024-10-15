@@ -148,7 +148,7 @@ if (!function_exists('abcbiz_elementor_add_widget_categories')) {
         $elements_manager->add_category(
             'abcbiz-category',
             [
-                'title' => esc_html__('ABCBiz Multi Elements', 'abcbiz-addons'),
+                'title' => esc_html__('PrimeKit Elements', 'abcbiz-addons'),
                 'icon' => 'eicon-kit-plugins',
             ]
         );
@@ -164,7 +164,7 @@ if (!function_exists('abcbiz_elementor_add_widget_wc_categories')) {
             $elements_manager->add_category(
                 'abcbiz-wc-category',
                 [
-                    'title' => esc_html__('ABCBiz WooCommerce', 'abcbiz-addons'),
+                    'title' => esc_html__('PrimeKit WooCommerce', 'abcbiz-addons'),
                     'icon' => 'eicon-woocommerce',
                 ]
             );
