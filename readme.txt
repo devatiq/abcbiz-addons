@@ -13,7 +13,7 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-PrimeKit Addons offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder.
+PrimeKit Addons offers seamless integration, intuitive design & unparalleled customization to bring your vision to life using Elementor page builder.
 
 == Description ==
 Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
