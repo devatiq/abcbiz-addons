@@ -210,9 +210,9 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		}
 
 		if(get_option('abcbiz_popular_posts_field') == 1) {
-			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPopularPosts\Main::class;
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPopularPosts\Main::class;			
 		}
-
+		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFetchPosts\Main::class;
 		
 		
 
