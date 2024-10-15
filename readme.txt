@@ -1,7 +1,7 @@
 === PrimeKit Addons and Templates for Elementor by ABCPlugin ===
 Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
 Version: 1.10
-Author: ABCPlugin
+Author: abcplugins
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
@@ -13,10 +13,10 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-PrimeKit Addons offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder
+PrimeKit Addons offers seamless integration, intuitive design, and unparalleled customization to bring your vision to life using Elementor page builder.
 
 == Description ==
-Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **60 meticulously designed widgets**, and **20+ ready to import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 == Useful Links ==
 
@@ -26,7 +26,7 @@ Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure
 
 [View All Templates](https://demo.abcbizaddons.com/addons-template/)
 
-== Widget List: 66 Available Widgets ==
+== Widget List: 70+ Available Widgets ==
 
 - Advanced Animated Text
 - Advanced Circular Skill
@@ -52,12 +52,14 @@ Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure
 - Dual Button
 - Fancy Blog Posts
 - Featured Image
+- Fetch Posts (New)
 - Flip Box
 - Gravity Form (New)
 - Image Hover
 - Image and Text Scroll
 - Image Gallery (New)
 - Mailchimp (New)
+- Modern Post Grid (New, with 8 layouts)
 - Page Title
 - Popup
 - Portfolio
@@ -66,6 +68,7 @@ Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure
 - Post Meta Info
 - Post Tag Info
 - Post Title
+- Popular Posts (New)
 - Recent Posts List
 - Related Posts
 - Search Form
@@ -120,6 +123,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 == Changelog ==
 
+= 1.10 - 16 October 2024 =
+- 3 new widgets added with multiple layouts
+- Plugin re-branded to PrimeKit
+
 = 1.0.9 - 29 September 2024 =
 - 5 new widgets added
 - Bug Fixes
@@ -153,7 +160,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 = 1.0.2 - 20 February 2024 =
 - New widget Card Info Box added
-- New widget Before After Image Compare added
+- New widget Before After Image Compare Added
 - Compatibility with PHP 7.4
 
 = 1.0.1 - 16 February 2024 =
@@ -165,12 +172,15 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 - Initial release
 
 == Upgrade Notice ==
+= 1.10 =
+- 3 new widgets added
+- Plugin Re-named to PrimeKit
 
 = 1.0.9 =
 - 5 new widgets added
 
 = 1.0.8 =
-- 20+ ready to import free templates added
+- 20+ ready-to-import free templates added
 
 = 1.0.7 =
 - Custom CSS features added for each widget
