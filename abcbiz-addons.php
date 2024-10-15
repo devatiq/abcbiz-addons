@@ -4,8 +4,8 @@ Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
 Plugin URI: https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/
 Description: The Elementor Custom Widgets plugin is a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Addons and Templates are packed with gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design. 
 Version: 1.0.9
-Author: SupreoX Limited
-Author URI: http://www.supreox.com/
+Author: ABCPlugin
+Author URI: https://abcplugin.com/
 License: GPL2
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: abcbiz-addons

@@ -1,8 +1,8 @@
 === PrimeKit Addons and Templates for Elementor by ABCPlugin ===
 Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
 Version: 1.0.9
-Author: SupreoX Limited
-Author URI: http://www.supreox.com/
+Author: ABCPlugin
+Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, Elementor Builder
