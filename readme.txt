@@ -16,7 +16,7 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 PrimeKit Addons offers seamless integration, intuitive design & unparalleled customization to bring your vision to life using Elementor page builder.
 
 == Description ==
-Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)**, your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)** (formerly ABCBiz Addons), your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 == Useful Links ==
 
@@ -125,7 +125,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 
 = 1.10 - 16 October 2024 =
 - 3 new widgets added with multiple layouts
-- Plugin re-branded to PrimeKit
+- Plugin re-branded from ABCBiz to PrimeKit
 
 = 1.0.9 - 29 September 2024 =
 - 5 new widgets added
@@ -174,7 +174,7 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 == Upgrade Notice ==
 = 1.10 =
 - 3 new widgets added
-- Plugin Re-named to PrimeKit
+- Plugin re-branded from ABCBiz to PrimeKit
 
 = 1.0.9 =
 - 5 new widgets added
