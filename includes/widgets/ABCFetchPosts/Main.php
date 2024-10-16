@@ -718,7 +718,8 @@ class Main extends BaseWidget
             'pagination_hover_text_color',
             [
                 'label' => __('Text Color', 'abcbiz-addons'),
-                'type' => Controls_Manager::COLOR,                
+                'type' => Controls_Manager::COLOR,       
+                'default' => '#fff',         
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-fetch-posts-pagination a:hover' => 'color: {{VALUE}};',
                 ],
@@ -761,7 +762,8 @@ class Main extends BaseWidget
             'pagination_active_text_color',
             [
                 'label' => __('Text Color', 'abcbiz-addons'),
-                'type' => Controls_Manager::COLOR,                
+                'type' => Controls_Manager::COLOR,     
+                'default' => '#fff',           
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-fetch-posts-pagination .fetch-posts-current-page' => 'color: {{VALUE}};',
                 ],
