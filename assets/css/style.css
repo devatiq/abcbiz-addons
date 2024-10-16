@@ -3900,6 +3900,8 @@ background-color: #2811f3;
 .abcbiz-fetch-posts-pagination {
   margin: 20px 0;
   text-align: center;
+  display: flex;
+  justify-content: center;
 }
 
 .abcbiz-fetch-posts-pagination a,

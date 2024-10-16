@@ -102,8 +102,10 @@ if (!empty($posts) && is_array($posts)) {
         }
         echo '</div><!--/ Post Wrapper-->';
 
-       $this->abcbiz_get_blog_pagination($total_pages, $current_page);
-        
+        // display pagination
+        if('yes' == $settings['pagination_switch']) {
+            $this->abcbiz_get_blog_pagination($total_pages, $current_page);
+        }             
        
 } else {
     echo '<p>' . __('No posts available from the external website.', 'abcbiz-addons') . '</p>';
