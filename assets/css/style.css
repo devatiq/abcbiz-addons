@@ -3896,3 +3896,40 @@ background-color: #2811f3;
   margin-bottom: 5px;
   margin-top: 8px;
 }
+
+.abcbiz-fetch-posts-pagination {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.abcbiz-fetch-posts-pagination a,
+.abcbiz-fetch-posts-pagination .fetch-posts-current-page,
+.abcbiz-fetch-posts-pagination .fetch-posts-dots {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 0 5px;
+  border: 1px solid #777;
+  color: #333;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.abcbiz-fetch-posts-pagination .fetch-posts-current-page {
+  font-weight: bold;
+  color: #fff;
+  background-color: #5A49F8;
+  border-color: #5A49F8;
+}
+
+.abcbiz-fetch-posts-pagination a:hover {
+  background-color: #5A49F8;
+  color: #fff;
+  border-color: #5A49F8;
+}
+
+.abcbiz-fetch-posts-pagination .fetch-posts-dots {
+  padding: 10px 15px;
+  background-color: transparent;
+  border: none;
+  color: #999;
+}

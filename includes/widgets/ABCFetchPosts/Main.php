@@ -592,7 +592,78 @@ class Main extends BaseWidget
     
         return $category_names;
     }
-      
+     
+    private function abcbiz_get_blog_pagination($total_pages, $current_page) {
+        if ($total_pages > 1) {
+            // Ensure the global $wp variable is available
+            global $wp;
+        
+            // Base URL for pagination (current page URL without the page parameter)
+            $pagination_base_url = add_query_arg('primekit_page', false, home_url($wp->request));
+        
+            echo '<div class="abcbiz-fetch-posts-pagination">';
+        
+            // Define how many numbers to show at the beginning, end, and around the current page
+            $range = 2; // Number of pages to show on each side of the current page
+            $first_pages_count = 3; // Always show the first 3 pages
+            $last_pages_count = 3; // Always show the last 3 pages
+        
+            // Show first few pages and last few pages
+            if ($total_pages <= $first_pages_count + $last_pages_count + (2 * $range) + 1) {
+                // If total pages are small, show all page numbers
+                for ($i = 1; $i <= $total_pages; $i++) {
+                    if ($i == $current_page) {
+                        echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
+                    } else {
+                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                    }
+                }
+            } else {
+                // Always show the first few pages
+                for ($i = 1; $i <= $first_pages_count; $i++) {
+                    if ($i == $current_page) {
+                        echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
+                    } else {
+                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                    }
+                }
+        
+                // Add an ellipsis after the first few pages, if necessary
+                if ($current_page > $first_pages_count + $range + 1) {
+                    echo '<span class="fetch-posts-dots">...</span>';
+                }
+        
+                // Show pages around the current page
+                $start = max($first_pages_count + 1, $current_page - $range);
+                $end = min($total_pages - $last_pages_count, $current_page + $range);
+        
+                for ($i = $start; $i <= $end; $i++) {
+                    if ($i == $current_page) {
+                        echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
+                    } else {
+                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                    }
+                }
+        
+                // Add an ellipsis before the last few pages, if necessary
+                if ($current_page < $total_pages - $last_pages_count - $range) {
+                    echo '<span class="fetch-posts-dots">...</span>';
+                }
+        
+                // Always show the last few pages
+                for ($i = $total_pages - $last_pages_count + 1; $i <= $total_pages; $i++) {
+                    if ($i == $current_page) {
+                        echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
+                    } else {
+                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                    }
+                }
+            }
+        
+            echo '</div>';
+        }
+        
+    }
     /**
      * Render the widget output on the frontend.
      */
