@@ -29,8 +29,9 @@ if (is_wp_error($response)) {
 $posts = json_decode(wp_remote_retrieve_body($response));
 
 if (!empty($posts) && is_array($posts)) {
-    echo '<div class="abcbiz-fetch-posts-list">';
-
+    ?>
+    <div class="abcbiz-fetch-posts-list <?php if('grid' === $settings['layout_type']) { echo esc_attr('abcbiz-fetch-posts-grid'); } ?>">
+<?php 
     foreach ($posts as $post) {
         // Get the post date and format it
         $post_date = date('M j, Y', strtotime($post->date));
@@ -57,7 +58,7 @@ if (!empty($posts) && is_array($posts)) {
                         if (!empty($category_names)) {
                             echo esc_html(implode(', ', $category_names));
                         } else {
-                            echo __('No categories', 'custom-elementor-widgets');
+                            echo esc_html__('No categories', 'custom-elementor-widgets');
                         }
                         ?>
                     </p>

@@ -3796,7 +3796,11 @@ h3.abcbiz-popular-post-title a {
   flex-direction: column;
   gap: 20px;
 }
-
+.abcbiz-fetch-posts-grid.abcbiz-fetch-posts-list {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 20px;
+}
 .abcbiz-fetch-single-post {
   display: flex;
   gap: 15px;
@@ -3808,7 +3812,9 @@ h3.abcbiz-popular-post-title a {
 .abcbiz-fetch-single-post-thumb {
   flex-basis: 30%;
 }
-
+.abcbiz-fetch-posts-grid.abcbiz-fetch-posts-list .abcbiz-fetch-single-post{
+  flex-direction: column;
+}
 .abcbiz-fetch-single-post-contents {
   flex-basis: 70%;
   display: flex;
@@ -3818,13 +3824,16 @@ h3.abcbiz-popular-post-title a {
 
 .abcbiz-fetch-single-post .abcbiz-fetch-single-post-thumb > img {
   border-radius: 8px;
-  box-shadow: 0 0 1px #666666d6;
-  max-height: 300px;
+  /* box-shadow: 0 0 1px #666666d6; */
+  max-height: 100%;
   max-width: 100%;
   object-fit: cover;
   /* aspect-ratio: 1.5; */
 }
-
+.abcbiz-fetch-posts-grid.abcbiz-fetch-posts-list .abcbiz-fetch-single-post .abcbiz-fetch-single-post-thumb > img {
+  width: 100%;
+  height: auto;
+}
 .abcbiz-fetch-single-post-cat > p {
   margin: 0;
   background-color: #5A49F8;

@@ -47,6 +47,45 @@ class Main extends BaseWidget
             ]
         );
 
+        // Add control for selecting layout type (list or grid)
+        $this->add_control(
+            'layout_type',
+            [
+                'label' => __('Layout Type', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT,
+                'default' => 'list',
+                'options' => [
+                    'list' => __('List', 'abcbiz-addons'),
+                    'grid' => __('Grid', 'abcbiz-addons'),
+                ],
+            ]
+        );
+
+        // Add control for selecting number of columns
+        $this->add_responsive_control(
+            'grid_columns',
+            [
+                'label' => __('Columns', 'abcbiz-addons'),
+                'type' => Controls_Manager::SELECT,
+                'desktop_default' => 3,
+                'tablet_default' => 2,
+                'mobile_default' => 1,
+                'options' => [
+                    1 => __('1 Column', 'abcbiz-addons'),
+                    2 => __('2 Columns', 'abcbiz-addons'),
+                    3 => __('3 Columns', 'abcbiz-addons'),
+                    4 => __('4 Columns', 'abcbiz-addons'),
+                    5 => __('5 Columns', 'abcbiz-addons'),
+                ],
+                'condition' => [
+                    'layout_type' => 'grid',
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-posts-grid.abcbiz-fetch-posts-list' => 'grid-template-columns: repeat({{VALUE}}, 1fr);',
+                ],
+            ]
+        );
+
         $this->add_control(
             'fetch_posts_count',
             [
@@ -71,6 +110,7 @@ class Main extends BaseWidget
         $this->end_controls_section(); // End content section
 
         
+
         // General Style Section
         $this->start_controls_section(
             'general_style_section',
@@ -143,6 +183,133 @@ class Main extends BaseWidget
         );
 
         $this->end_controls_section(); // End general style section
+
+        
+        // Thumbnail Style Section
+        $this->start_controls_section(
+            'thumbnail_style_section',
+            [
+                'label' => __('Thumbnail', 'abcbiz-addons'),
+                'tab' => Controls_Manager::TAB_STYLE,
+            ]
+        );
+
+        $this->add_responsive_control(
+            'thumbnail_alignment',
+            [
+                'label' => __('Image Alignment', 'abcbiz-addons'),
+                'type' => Controls_Manager::CHOOSE,
+                'options' => [
+                    'row-reverse' => [
+                        'title' => __('Right', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-right',
+                    ],
+                    'row' => [
+                        'title' => __('Left', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-left',
+                    ],
+                    'column' => [
+                        'title' => __('Top', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-up',
+                    ],
+                    'column-reverse' => [
+                        'title' => __('Bottom', 'abcbiz-addons'),
+                        'icon' => 'eicon-arrow-down',
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post' => 'flex-direction: {{VALUE}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'thumbnail_width',
+            [
+                'label' => __('Width', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 2000,
+                    ],
+                ],
+                'default' => [
+                    'unit' => '%',
+                    'size' => 100,
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post-thumb img' => 'width: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'thumbnail_height',
+            [
+                'label' => __('Height', 'abcbiz-addons'),
+                'type' => Controls_Manager::SLIDER,
+                'size_units' => ['px', '%'],
+                'range' => [
+                    'px' => [
+                        'min' => 100,
+                        'max' => 1000,
+                    ],
+                ],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post-thumb img' => 'height: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'thumbnail_border',
+                'label' => __('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-fetch-single-post-thumb img',
+            ]
+        );
+
+        $this->add_responsive_control(
+            'thumbnail_margin',
+            [
+                'label' => __('Margin', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post-thumb' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_responsive_control(
+            'thumbnail_padding',
+            [
+                'label' => __('Padding', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post-thumb img' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->add_control(
+            'thumbnail_border_radius',
+            [
+                'label' => __('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%', 'em'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-fetch-single-post-thumb img' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        $this->end_controls_section(); // End thumbnail style section
 
         // Style Section
         $this->start_controls_section(
