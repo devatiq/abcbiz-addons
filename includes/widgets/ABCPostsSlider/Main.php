@@ -25,6 +25,18 @@ class Main extends BaseWidget
         'posts',
     ];
 
+    //dependency scripts
+    public function get_script_depends()
+    {
+        return ['swiper','abcbiz-posts-sliders'];
+    }
+
+
+    public function get_style_depends()
+    {
+        return ['swiper'];
+    }
+
 
     /**
      * Register the widget controls.
@@ -45,59 +57,7 @@ class Main extends BaseWidget
             ]
         );
 
-        $this->add_control(
-            'style_section',
-            [
-                'label' => __('Button Style', 'abcbiz-addons'),
-                'type' => Controls_Manager::HEADING,
-                'separator' => 'before',
-            ]
-        );
-
-        $this->add_control(
-            'button_text_color',
-            [
-                'label' => __('Text Color', 'abcbiz-addons'),
-                'type' => Controls_Manager::COLOR,
-                'default' => '#000000',
-                'selectors' => [
-                    '{{WRAPPER}} .abcbiz-posts-slider .post-nav a' => 'color: {{VALUE}}'
-                ]
-            ]
-        );
-
-        $this->add_group_control(
-            Group_Control_Typography::get_type(),
-            [
-                'name' => 'typography',
-                'label' => __('Typography', 'abcbiz-addons'),
-                'selector' => '{{WRAPPER}} .abcbiz-posts-slider .post-nav a',
-            ]
-        );
-
-        $this->add_control(
-            'button_padding',
-            [
-                'label' => __('Padding', 'abcbiz-addons'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .abcbiz-posts-slider .post-nav a' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-                ]
-            ]
-        );
-
-        $this->add_control(
-            'button_margin',
-            [
-                'label' => __('Margin', 'abcbiz-addons'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', 'em', '%'],
-                'selectors' => [
-                    '{{WRAPPER}} .abcbiz-posts-slider .post-nav a' => 'margin: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}}',
-                ]
-            ]
-        );
+      
 
         $this->end_controls_section();
 
