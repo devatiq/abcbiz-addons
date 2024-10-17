@@ -48,7 +48,7 @@ class Main extends BaseWidget
      */
     protected function register_controls()
     {
-        // Add a control for the number of posts to fetch
+        
         $this->start_controls_section(
             'content_section',
             [
@@ -57,6 +57,97 @@ class Main extends BaseWidget
             ]
         );
 
+        $this->add_control(
+            'slides_per_view',
+            [
+                'label' => __('Slides Per View', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'min' => 2,
+                'max' => 15,
+                'step' => 1,
+                'default' => 3,
+                'description' => __('Set how many slides will be visible at a time.', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'slides_per_view_tablet',
+            [
+                'label' => __('Slides Per View in Tablet', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'min' => 2,
+                'max' => 15,
+                'step' => 1,
+                'default' => 2,
+                'description' => __('Set how many slides will be visible at a time on tablet.', 'abcbiz-addons'),
+              
+            ]
+        );
+
+        $this->add_control(
+            'slides_per_view_mobile',
+            [
+                'label' => __('Slides Per View in Mobile', 'abcbiz-addons'),
+                'type' => Controls_Manager::NUMBER,
+                'min' => 1,
+                'max' => 10,
+                'step' => 1,
+                'default' => 1,
+                'description' => __('Set how many slides will be visible at a time on mobile.', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'slider_loop',
+            [
+                'label' => __('Loop', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', 'abcbiz-addons'),
+                'label_off' => __('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'description' => __('Enables endless loop mode.', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'slider_autoplay',
+            [
+                'label' => __('Autoplay', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', 'abcbiz-addons'),
+                'label_off' => __('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'description' => __('Enables autoplay mode.', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'show_pagination',
+            [
+                'label' => __('Show Pagination', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', 'abcbiz-addons'),
+                'label_off' => __('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'description' => __('Show pagination bullets.', 'abcbiz-addons'),
+            ]
+        );
+
+        $this->add_control(
+            'show_navigation',
+            [
+                'label' => __('Show Navigation', 'abcbiz-addons'),
+                'type' => Controls_Manager::SWITCHER,
+                'label_on' => __('Yes', 'abcbiz-addons'),
+                'label_off' => __('No', 'abcbiz-addons'),
+                'return_value' => 'yes',
+                'default' => 'yes',
+                'description' => __('Show navigation arrows.', 'abcbiz-addons'),
+            ]
+        );
 
 
         $this->end_controls_section();

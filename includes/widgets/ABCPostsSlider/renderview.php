@@ -9,37 +9,36 @@ if (!defined('ABSPATH'))
 $settings = $this->get_settings_for_display();
 $fallback_image = ABCBIZ_Assets . '/img/blog/image-placeholder.jpg';
 
-// $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
-// $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
-// $slides_per_view_tablet = isset($settings['slides_per_view_tablet']) ? $settings['slides_per_view_tablet'] : 1;
-// $slides_per_view_mobile = isset($settings['slides_per_view_mobile']) ? $settings['slides_per_view_mobile'] : 1;
+ $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 3;
+$slides_per_view_tablet = isset($settings['slides_per_view_tablet']) ? $settings['slides_per_view_tablet'] : 1;
+$slides_per_view_mobile = isset($settings['slides_per_view_mobile']) ? $settings['slides_per_view_mobile'] : 1;
 
-// $loop = $settings['slider_loop'] === 'yes' ? true : false;
-// $autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 6000, 'disableOnInteraction' => false] : false;
-// $arrows = $settings['show_arrows'] === 'yes' ? true : false;
-// $pagination = $settings['show_pagination'] === 'yes' ? true : false;
+ $loop = $settings['slider_loop'] === 'yes' ? true : false;
+ $autoplay = $settings['slider_autoplay'] === 'yes' ? ['delay' => 6000, 'disableOnInteraction' => false] : false;
+ $arrows = $settings['show_navigation'] === 'yes' ? true : false;
+ $pagination = $settings['show_pagination'] === 'yes' ? true : false;
 
 // Combine all the settings into a single JSON string
 $slider_settings = json_encode([
-    'slidesPerView' => 3,
-    // 'slidesPerViewTablet' => $slides_per_view_tablet,
-    // 'slidesPerViewMobile' => $slides_per_view_mobile,
-    'loop' => false,
-    'autoplay' => false,
-    // 'arrows' => $arrows,
-    // 'pagination' => $pagination,
+    'slidesPerView' => $slides_per_view,
+     'slidesPerViewTablet' => $slides_per_view_tablet,
+     'slidesPerViewMobile' => $slides_per_view_mobile,
+    'loop' => $loop,
+    'autoplay' => $autoplay,
+     'arrows' => $arrows,
+     'pagination' => $pagination,
 ]);
 
 // Create a unique ID for the slider instance
 $unique_id = $this->get_id();
 
-$arg = array(
+$arge = array(
     'post_type' => 'post',
     'posts_per_page' => 10,
     'ignore_sticky_posts' => true
 );
 
-$posts = new WP_Query($arg);
+$posts = new WP_Query($arge);
 ?>
 
 <!-- Posts Slider Area-->
@@ -85,13 +84,18 @@ $posts = new WP_Query($arg);
             ?>
         </div><!--/ Slider Wrapper -->
     </div><!--/ Posts Slider Container -->
-    <!-- Add Pagination -->
-    <div class="abcbiz-posts-slider-pagination">
-        <div class="swiper-pagination"></div>
-    </div><!--/ Add Pagination -->
 
+    <?php if('yes' === $settings['show_pagination']) : ?>
+        <!-- Add Pagination -->
+        <div class="abcbiz-posts-slider-pagination">
+            <div class="swiper-pagination"></div>
+        </div><!--/ Add Pagination -->
+    <?php endif; ?>
+
+    <?php if('yes' === $settings['show_navigation']) : ?>
     <!-- Add Navigation -->
     <div class="abcbiz-posts-slider-navigation">
+        <!-- Prev Button -->
         <div class="swiper-button-next">
             <svg version="1.1" id="fi_664866" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.009 512.009"
@@ -102,7 +106,9 @@ $posts = new WP_Query($arg);
                     </path>
                 </g>
             </svg>
-        </div>
+        </div><!--/ Prev Button -->
+
+        <!-- Next Button -->
         <div class="swiper-button-prev">
             <svg version="1.1" id="fi_545680" xmlns="http://www.w3.org/2000/svg"
                 xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512"
@@ -114,7 +120,8 @@ $posts = new WP_Query($arg);
                 </g>
             </svg>
 
-        </div>
+        </div><!--/ Next Button -->
     </div><!--/ Add Navigation -->
+    <?php endif; ?>
 
 </div><!-- Posts Slider Area-->

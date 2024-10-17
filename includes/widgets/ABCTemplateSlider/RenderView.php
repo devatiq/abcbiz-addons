@@ -2,7 +2,6 @@
 // Get settings
 $settings = $this->get_settings_for_display();
 $slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
-$slides_per_view = !empty($settings['slides_per_view']) ? $settings['slides_per_view'] : 1;
 $slides_per_view_tablet = isset($settings['slides_per_view_tablet']) ? $settings['slides_per_view_tablet'] : 1;
 $slides_per_view_mobile = isset($settings['slides_per_view_mobile']) ? $settings['slides_per_view_mobile'] : 1;
 
