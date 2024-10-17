@@ -46,10 +46,10 @@ function ABCbizPostsSliderInitialize(uniqueId) {
                 slidesPerView: parseInt(parsedSettings.slidesPerView) || 3,
             },
             768: {
-                slidesPerView: 2,
+                slidesPerView: parseInt(parsedSettings.slidesPerViewTablet) || 2,
             },
-            320: {
-                slidesPerView: 1,
+            480: {
+                slidesPerView: parseInt(parsedSettings.slidesPerViewMobile) || 1,
             }
         }
     });
