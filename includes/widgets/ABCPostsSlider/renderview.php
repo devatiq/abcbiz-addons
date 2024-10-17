@@ -24,8 +24,8 @@ $slider_settings = json_encode([
     'slidesPerView' => 3,
     // 'slidesPerViewTablet' => $slides_per_view_tablet,
     // 'slidesPerViewMobile' => $slides_per_view_mobile,
-    'loop' => true,
-    'autoplay' => true,
+    'loop' => false,
+    'autoplay' => false,
     // 'arrows' => $arrows,
     // 'pagination' => $pagination,
 ]);
@@ -43,8 +43,10 @@ $posts = new WP_Query($arg);
 ?>
 
 <!-- Posts Slider Area-->
-<div class="abcbiz-posts-slider-area"  data-settings='<?php echo esc_attr($slider_settings); ?>' id="abcbiz-posts-sliders-<?php echo esc_attr($unique_id); ?>" >
+<div class="abcbiz-posts-slider-area" data-settings='<?php echo esc_attr($slider_settings); ?>'
+    id="abcbiz-posts-sliders-<?php echo esc_attr($unique_id); ?>">
 
+    <!-- Posts Slider Container -->
     <div class="abcbiz-posts-slider-container">
         <!--Slider Wrapper -->
         <div class="abcbiz-posts-slider-wrapper">
@@ -62,14 +64,16 @@ $posts = new WP_Query($arg);
                             <?php else: ?>
                                 <img src="<?php echo esc_url($fallback_image); ?>" alt="<?php the_title(); ?>">
                             <?php endif; ?>
+                            <!-- Slider Contents -->
+                            <div class="abcbiz-posts-slider-contents">
+                                <!-- Post Date -->
+                                <span class="abcbiz-posts-slider-date"><?php echo esc_html(get_the_date('d M Y')); ?></span>
+                                <!-- Post Title -->
+                                <h3 class="abcbiz-posts-slider-title"><a
+                                        href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
+                            </div><!--/ Slider Contents -->
                         </div><!--/ Slider Thumbnail -->
-                        <!-- Slider Contents -->
-                        <div class="abcbiz-posts-slider-contents">
-                            <!-- Post Date -->
-                            <span class="abcbiz-posts-slider-date"><?php echo get_the_date(); ?></span>
-                            <!-- Post Title -->
-                            <h3 class="abcbiz-posts-slider-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                        </div><!--/ Slider Contents -->
+
                     </div><!--/ Slider Single Item -->
 
                     <?php
@@ -78,18 +82,16 @@ $posts = new WP_Query($arg);
             wp_reset_postdata();
             ?>
         </div><!--/ Slider Wrapper -->
+    </div><!--/ Posts Slider Container -->
+    <!-- Add Pagination -->
+    <div class="abcbiz-posts-slider-pagination">
+        <div class="swiper-pagination"></div>
+    </div><!--/ Add Pagination -->
 
-        <!-- Add Pagination -->
-        <div class="abcbiz-posts-slider-pagination">
-            <div class="swiper-pagination"></div>
-        </div><!--/ Add Pagination -->
-
-        <!-- Add Navigation -->
-        <div class="abcbiz-posts-slider-navigation">
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
-        </div><!--/ Add Navigation -->
-
-    </div>
+    <!-- Add Navigation -->
+    <div class="abcbiz-posts-slider-navigation">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div><!--/ Add Navigation -->
 
 </div><!-- Posts Slider Area-->

@@ -3942,11 +3942,12 @@ background-color: #2811f3;
 
  .abcbiz-posts-slider-area {
   width: 100%;
-  overflow: hidden;
+
 }
 
 .abcbiz-posts-slider-container {
   width: 100%;
+  overflow: hidden;
 }
 
 .abcbiz-posts-slider-wrapper {
@@ -3957,7 +3958,7 @@ background-color: #2811f3;
 .abcbiz-posts-slider-single-item {
   display: block;
   flex-shrink: 0;
-  width: 100%; /* Can adjust based on the number of slides per view */
+  width: 100%; 
   padding: 20px;
   box-sizing: border-box;
 }
@@ -3968,15 +3969,38 @@ background-color: #2811f3;
   height: auto;
   object-fit: cover;
 }
-
+.abcbiz-posts-slider-thumbnail {
+position: relative;
+}
+.abcbiz-posts-slider-thumbnail::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
 .abcbiz-posts-slider-contents {
   padding: 15px 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  flex-direction: column;
+  height: 100%;
 }
 
 .abcbiz-posts-slider-date {
   display: block;
-  color: #686868;
+  color: #fff;
   font-size: 14px;
   font-weight: 300;
   margin-bottom: 10px;
@@ -3985,13 +4009,13 @@ background-color: #2811f3;
 .abcbiz-posts-slider-title {
   font-size: 18px;
   font-weight: 600;
-  color: #010218;
+  color: #fff;
   margin-bottom: 15px;
   line-height: 1.3em;
 }
 
 .abcbiz-posts-slider-title a {
-  color: #010218;
+  color: #fff;
   text-decoration: none;
 }
 
