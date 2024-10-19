@@ -15,7 +15,7 @@ if (empty($website_url)) {
     return;
 }
 // Get the current page from the query parameters or default to 1
-$current_page = !empty($_GET['primekit_page']) ? intval($_GET['primekit_page']) : 1;
+$current_page = !empty($_GET['abcbiz_page']) ? intval($_GET['abcbiz_page']) : 1;
 
 // Build the API endpoint based on the user's input URL
 $api_url = trailingslashit($website_url) . 'wp-json/wp/v2/posts?per_page=' . $posts_count . '&page=' . $current_page . '&_embed';
@@ -108,5 +108,5 @@ if (!empty($posts) && is_array($posts)) {
         }             
        
 } else {
-    echo '<p>' . __('No posts available from the external website.', 'abcbiz-addons') . '</p>';
+    echo '<p>' . esc_html__('No posts available from the external website.', 'abcbiz-addons') . '</p>';
 }

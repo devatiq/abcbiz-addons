@@ -847,7 +847,7 @@ class Main extends BaseWidget
             global $wp;
 
             // Base URL for pagination (current page URL without the page parameter)
-            $pagination_base_url = add_query_arg('primekit_page', false, home_url($wp->request));
+            $pagination_base_url = add_query_arg('abcbiz_page', false, home_url($wp->request));
 
             echo '<div class="abcbiz-fetch-posts-pagination">';
 
@@ -863,7 +863,7 @@ class Main extends BaseWidget
                     if ($i == $current_page) {
                         echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
                     } else {
-                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                        echo '<a href="' . esc_url(add_query_arg('abcbiz_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
                     }
                 }
             } else {
@@ -872,7 +872,7 @@ class Main extends BaseWidget
                     if ($i == $current_page) {
                         echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
                     } else {
-                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                        echo '<a href="' . esc_url(add_query_arg('abcbiz_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
                     }
                 }
 
@@ -889,7 +889,7 @@ class Main extends BaseWidget
                     if ($i == $current_page) {
                         echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
                     } else {
-                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                        echo '<a href="' . esc_url(add_query_arg('abcbiz_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
                     }
                 }
 
@@ -903,7 +903,7 @@ class Main extends BaseWidget
                     if ($i == $current_page) {
                         echo '<span class="fetch-posts-current-page">' . esc_html($i) . '</span>';
                     } else {
-                        echo '<a href="' . esc_url(add_query_arg('primekit_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
+                        echo '<a href="' . esc_url(add_query_arg('abcbiz_page', $i, $pagination_base_url)) . '">' . esc_html($i) . '</a>';
                     }
                 }
             }
