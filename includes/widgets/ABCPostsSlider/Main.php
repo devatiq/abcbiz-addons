@@ -160,18 +160,6 @@ class Main extends BaseWidget
             ]
         );
 
-        $this->add_responsive_control(
-            'item_padding',
-            [
-                'label' => __('Padding', 'abcbiz-addons'),
-                'type' => Controls_Manager::DIMENSIONS,
-                'size_units' => ['px', '%', 'em'],
-                'selectors' => [
-                    '{{WRAPPER}} .abcbiz-posts-slider-single-item' => 'padding: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
-                ],
-            ]
-        );
-
         $this->add_group_control(
             Group_Control_Border::get_type(),
             [
@@ -501,9 +489,13 @@ class Main extends BaseWidget
                 'size_units' => ['px', '%'],
                 'range' => [
                     'px' => [
-                        'min' => 5,
+                        'min' => 15,
                         'max' => 50,
                     ],
+                ],
+                'default' => [
+                    'unit' => 'px',
+                    'size' => 15,
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-posts-slider-pagination .swiper-pagination-bullet' => 'width: {{SIZE}}{{UNIT}}; height: {{SIZE}}{{UNIT}};',
@@ -556,6 +548,29 @@ class Main extends BaseWidget
                 ],
                 'selectors' => [
                     '{{WRAPPER}} .abcbiz-posts-slider-pagination .swiper-pagination' => 'bottom: {{SIZE}}{{UNIT}};',
+                ],
+            ]
+        );
+
+        // Border
+        $this->add_group_control(
+            Group_Control_Border::get_type(),
+            [
+                'name' => 'posts_pagination_border',
+                'label' => esc_html__('Border', 'abcbiz-addons'),
+                'selector' => '{{WRAPPER}} .abcbiz-posts-slider-pagination .swiper-pagination-bullet',
+            ]
+        );
+
+        // Border Radius
+        $this->add_control(
+            'posts_pagination_border_radius',
+            [
+                'label' => esc_html__('Border Radius', 'abcbiz-addons'),
+                'type' => Controls_Manager::DIMENSIONS,
+                'size_units' => ['px', '%'],
+                'selectors' => [
+                    '{{WRAPPER}} .abcbiz-posts-slider-pagination .swiper-pagination-bullet' => 'border-radius: {{TOP}}{{UNIT}} {{RIGHT}}{{UNIT}} {{BOTTOM}}{{UNIT}} {{LEFT}}{{UNIT}};',
                 ],
             ]
         );
