@@ -1,0 +1,48 @@
+
+.abcbiz-search-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.abcbiz-search-result-item {
+    margin-bottom: 40px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
+}
+
+.abcbiz-search-result-title a {
+    font-size: 24px;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.abcbiz-search-result-title a:hover {
+    color: #005f8d;
+}
+
+.abcbiz-search-result-excerpt {
+    font-size: 16px;
+    color: #555;
+}
+
+.abcbiz-no-results-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.abcbiz-no-results-message {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #555;
+}
+
+.abcbiz-search-form-container {
+    margin-top: 20px;
+}
+
+.abcbiz-search-pagination {
+    text-align: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,409 @@
+.abcbiz-addons-menu-item {
+  position: relative;
+}
+
+.abcbiz-addons-menu-item .abcbiz-addons-icon:after {
+  top: 11px;
+  right: unset;
+  width: 18px;
+  height: 18px;
+  left: 19px;
+  filter: grayscale(1);
+}
+.abcbiz-addons-menu-item .elementor-title {
+  padding-left: 15px;
+}
+
+/**************************\
+  Basic Modal Styles
+\**************************/
+
+.modal {
+  font-family: -apple-system, BlinkMacSystemFont, avenir next, avenir,
+    helvetica neue, helvetica, ubuntu, roboto, noto, segoe ui, arial, sans-serif;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal__container {
+  background-color: #fff;
+  max-height: 100vh;
+  border-radius: 4px;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modal__close {
+  background: transparent;
+  border: 0;
+}
+
+.modal__header .modal__close:before {
+  content: "\2715";
+}
+
+.modal__content {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.modal__btn {
+  font-size: 0.875rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  background-color: #e6e6e6;
+  color: rgba(0, 0, 0, 0.8);
+  border-radius: 0.25rem;
+  border-style: none;
+  border-width: 0;
+  cursor: pointer;
+  -webkit-appearance: button;
+  text-transform: none;
+  overflow: visible;
+  line-height: 1.15;
+  margin: 0;
+  will-change: transform;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.modal__btn:focus,
+.modal__btn:hover {
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+.modal__btn-primary {
+  background-color: #00449e;
+  color: #fff;
+}
+
+/**************************\
+  Demo Animation Style
+\**************************/
+@keyframes mmfadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes mmfadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes mmslideIn {
+  from {
+    transform: translateY(15%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes mmslideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10%);
+  }
+}
+
+.micromodal-slide {
+  display: none;
+}
+
+.micromodal-slide.is-open {
+  display: block;
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__overlay {
+  animation: mmfadeIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="false"] .modal__container {
+  animation: mmslideIn 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__overlay {
+  animation: mmfadeOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide[aria-hidden="true"] .modal__container {
+  animation: mmslideOut 0.3s cubic-bezier(0, 0, 0.2, 1);
+}
+
+.micromodal-slide .modal__container,
+.micromodal-slide .modal__overlay {
+  will-change: transform;
+}
+.abcbiz-modal-heading {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #00449e;
+  box-sizing: border-box;
+}
+.abcbiz-modal-heading img {
+  width: 30px;
+}
+.abcbiz-modal-header {
+  border-bottom: 1px solid #e6e8ea;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.abcbiz-theme-builder-modal-area .modal__close {
+  background: transparent;
+  border: 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: #000;
+}
+.abcbiz-theme-builder-modal-content {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.abcbiz-theme-builder-modal-area .modal__footer {
+  padding: 20px;
+}
+.abcbiz-tb-modal-content-area {
+  display: flex;
+  gap: 50px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+.abcbiz-tb-modal-content-left {
+  width: 35%;
+}
+
+.abcbiz-tb-modal-content-left h2 {
+  font-size: 30px;
+  color: #3c434a;
+  margin: 0;
+}
+.abcbiz-tb-modal-content-left p {
+  width: 70%;
+  font-size: 16px;
+  color: #3c434a;
+  margin: 0;
+  padding: 30px 0;
+}
+
+.abcbiz-tb-modal-content-right {
+  border: 1px solid #e6e8ea;
+  padding: 50px;
+  border-radius: 4px;
+  flex-basis: 30%;
+}
+.abcbiz-tb-modal-content-form-fields form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.abcbiz-tb-modal-content-form-heading h2 {
+  margin: 0;
+  font-size: 25px;
+  color: #3c434a;
+  margin-bottom: 20px;
+}
+.abcbiz-tb-modal-content-form-heading p {
+  margin: 0;
+}
+.abcbiz-tb-modal-single-field {
+  display: flex;
+  flex-direction: column;
+}
+.abcbiz-tb-modal-single-field select,
+.abcbiz-tb-modal-single-field input {
+  min-height: 45px;
+  padding: 12px;
+}
+.abcbiz-tb-modal-single-field select option {
+  padding: 12px;
+}
+.abcbiz-tb-modal-content-form-submit {
+  background-color: #448e08;
+  color: #fff;
+  border: 0;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.abcbiz-tb-modal-content-form-submit:hover {
+  background-color: #fe4d05;
+}
+.abcbiz-tb-modal-content-form-submit:disabled {
+  background-color: #dadfe3;
+  cursor: not-allowed;
+}
+.abcbiz-tb-modal-content-area {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px 0;
+  padding-top: 30px;
+}
+.abcbiz-tb-modal-content-heading h2 {
+  margin: 0 0 15px;
+  color: #060611;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 30px;
+  font-family: sans-serif;
+  line-height: 1.5em;
+}
+.abcbiz-tb-modal-content-heading {
+  text-align: center;
+}
+.abcbiz-tb-modal-content-heading p {
+  width: 70%;
+  margin: 0 auto;
+  font-size: 14px;
+  line-height: 1.5em;
+}
+.abcbiz-tb-modal-condition-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.abcbiz-tb-modal-condition-repeater-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  border: 1px dashed #666;
+  width: 96%;
+  flex-direction: column;
+  background-color: transparent;
+  min-height: 50px;
+  font-size: 16px;
+  color: #000;
+  padding: 20px;
+  border-radius: 3px;
+}
+.abcbiz-tb-modal-condition-field {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.abcbiz-tb-modal-condition-field select, .abcbiz-tb-modal-additional-input {
+  min-height: 50px;
+  padding: 12px;
+  background: transparent;
+  border: 1px solid #ddd;
+  min-width: 100px;
+  color: #000;
+}
+.abcbiz-tb-modal-condition-field span.select2-selection.select2-selection--single {
+  height: 45px;
+  display: flex;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0;
+  line-height: 1;
+  background-color: transparent !important;
+}
+.abcbiz-tb-modal-condition-field .select2-selection__arrow {
+  top:23% !important;
+}
+.abcbiz-tb-modal-condition-field .select2-selection__rendered {
+  display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    flex-direction: row-reverse;
+    width: 100%;
+    gap: 14px;
+    padding: 15px;
+}
+.abcbiz-tb-modal-delete-condition {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
+.abcbiz-tb-modal-delete-condition i {
+  font-size: 20px;
+  cursor: pointer;
+  color: red;
+}
+.abcbiz-tb-modal-condition-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 20px;
+  width: 100%;
+}
+.abcbiz-tb-modal-content-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  gap: 20px;
+}
+.abcbiz-tb-modal-content-footer .modal__btn {
+  border: 0;
+  padding: 15px 25px;
+  border-radius: 5px;
+  font-size: 14px;
+  cursor: pointer;
+}
+.abcbiz-tb-modal-content-footer .modal__btn-primary {
+  background-color: #448e08;
+  color: #fff;
+}
+
+.abcbiz-tb-modal-content-footer .modal__btn:not(.modal__btn-primary) {
+  background-color: #fe4d05;
+  color: #fff;
+}

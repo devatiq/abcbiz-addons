@@ -29,6 +29,8 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         define('ABCBIZ_URL', plugins_url('', ABCBIZ_File));
         define('ABCBIZ_Assets', ABCBIZ_URL . '/assets');
         define('ABCBIZ_Admin_CSS', ABCBIZ_URL . '/includes/admin/css');
+        define('ABCBIZ_TB_Assets', ABCBIZ_URL . '/theme-builder/assets');
+        define('ABCBIZ_TB_Path', ABCBIZ_Path . '/theme-builder');
 
         //loading main file
         if (!class_exists('ABCBizMultiElementorPack')) {
@@ -58,6 +60,12 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         if (!class_exists('ABCBiz\Includes\lib\PostViewTracker')) {
             require_once ABCBIZ_Inc . '/lib/post-view-tracker.php';
             new \ABCBiz\Includes\lib\PostViewTracker();
+        }
+
+        // Loading theme builder
+        if (!class_exists('ABCBIZ\ThemeBuilder\ABCBizThemeBuilder')) {
+            require_once ABCBIZ_Path . '/theme-builder/theme-builder.php';
+            new \ABCBIZ\ThemeBuilder\ABCBizThemeBuilder();
         }
 
 
