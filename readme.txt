@@ -20,7 +20,7 @@ Welcome to **[PrimeKit Addons](https://primekitaddons.com/)** (formerly ABCBiz A
 
 == Useful Links ==
 
-[Demo](https://demo.primekitaddons.com/addons-widger/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
+[Demo](https://demo.primekitaddons.com/addons-widgets/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
 == 20+ Free Templates ==
 

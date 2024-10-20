@@ -18,7 +18,7 @@ function abcbiz_home_page() {
                 <!-- Buttons -->
                 <div class="abcbiz-resource-buttons">                
                                         
-                    <a href="https://demo.primekitaddons.com/addons-widger/" target="_blank" class="button"><?php echo esc_html__("Demos", "abcbiz-addons"); ?></a>
+                    <a href="https://demo.primekitaddons.com/addons-widgets/" target="_blank" class="button"><?php echo esc_html__("Demos", "abcbiz-addons"); ?></a>
                     
                     <a href="https://primekitaddons.com/documentation/" class="button" target="_blank"><?php echo esc_html__("Documentation", "abcbiz-addons"); ?></a>
                    
