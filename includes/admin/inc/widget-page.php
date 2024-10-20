@@ -81,6 +81,7 @@ function abcbiz_widgets_page() {
                 <?php abcbiz_modern_post_grid_render(); ?>
                 <?php abcbiz_popular_posts_render(); ?>
                 <?php abcbiz_fetch_posts_render(); ?>
+                <?php abcbiz_posts_slider_field_render(); ?>
                 </div>
             </div>
 

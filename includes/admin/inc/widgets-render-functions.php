@@ -1,13 +1,35 @@
 <?php 
 if (!defined('ABSPATH')) exit; // Exit if accessed directly
 
+//Posts Slider
+function abcbiz_posts_slider_field_render() {
+    $option = get_option('abcbiz_posts_slider_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">
+            <a href="https://demo.primekitaddons.com/widgets/posts-slider-widget/" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-slider.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
+                </div>
+            </a>
+        </div> 
+        <h3><?php echo esc_html__("Posts Slider", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcbiz_posts_slider_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}  
+
 //Sticker Text
 function abcbiz_sticker_text_field_render() {
     $option = get_option('abcbiz_sticker_text_field');
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/sticker-text-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/sticker-text-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-sticker-text.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -29,7 +51,7 @@ function abcbiz_site_title_tagline_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/site-title-and-tagline-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/site-title-and-tagline-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-site-tagline.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -51,7 +73,7 @@ function abcbiz_site_logo_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/site-logo-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/site-logo-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-site-logo.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -73,7 +95,7 @@ function abcbiz_single_img_scroll_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/single-image-scroll-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/single-image-scroll-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-single-img-scroll.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -95,7 +117,7 @@ function abcbiz_img_text_scroll_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/image-and-text-scroll-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/image-and-text-scroll-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-img-text-scroll.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -117,7 +139,7 @@ function abcbiz_anim_text_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/advanced-animated-text-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/advanced-animated-text-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-animated-text.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -139,7 +161,7 @@ function abcbiz_count_down_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/count-down-timer-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/count-down-timer-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-count-down.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -161,7 +183,7 @@ function abcbiz_before_after_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/before-after-image-compare-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/before-after-image-compare-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-before-after-image.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -183,7 +205,7 @@ function abcbiz_card_info_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/card-info-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/card-info-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-card-box.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -205,7 +227,7 @@ function abcbiz_back_top_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/back-to-top-button-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/back-to-top-button-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abcbiz-back-to-top.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -227,7 +249,7 @@ function abcbiz_cta_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/call-to-action-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/call-to-action-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-cta.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -249,7 +271,7 @@ function abcbiz_contact_info_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/contact-and-social-info-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/contact-and-social-info-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-contact-info.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -271,7 +293,7 @@ function abcbiz_search_icon_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/search-icon-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/search-icon-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-search-icon.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -293,7 +315,7 @@ function abcbiz_wp_menu_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/wordpress-menu-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/wordpress-menu-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-wp-menu.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -315,7 +337,7 @@ function abcbiz_testi_caro_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/testimonial-carousel-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/testimonial-carousel-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-testimonial-slider.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -337,7 +359,7 @@ function abcbiz_flip_box_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/flip-box-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/flip-box-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-flip-box.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -359,7 +381,7 @@ function abcbiz_blockquote_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists blockquote-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/blockquote-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/blockquote-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-blockquoute.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -381,7 +403,7 @@ function abcbiz_blog_fancy_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists blog-fancy-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/fancy-blog-posts-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/fancy-blog-posts-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-blog-post-fancy.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -403,7 +425,7 @@ function abcbiz_author_bio_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists author-bio-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/post-author-bio-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/post-author-bio-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-author-bio.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -425,7 +447,7 @@ function abcbiz_blog_grid_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists blog-grid-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/blog-posts-grid-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/blog-posts-grid-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-grid.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -447,7 +469,7 @@ function abcbiz_blog_list_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists blog-list-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/simple-blog-posts-list-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/simple-blog-posts-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-list.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -469,7 +491,7 @@ function abcbiz_breadcrumb_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists abcbiz-breadcrumb-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/custom-breadcrumb-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/custom-breadcrumb-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-breadcrumb.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -491,7 +513,7 @@ function abcbiz_cat_list_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists cat-list-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/post-category-list-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/post-category-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/post-categories.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -513,7 +535,7 @@ function abcbiz_contact_form7_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists contact-form7-style-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/contact-form-7-style-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/contact-form-7-style-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-contact-form-7-style.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -535,7 +557,7 @@ function abcbiz_circular_skill_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists circular-skill-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/advanced-circular-skill-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/advanced-circular-skill-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/circular-skill.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -557,7 +579,7 @@ function abcbiz_comment_form_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/comment-form-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/comment-form-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-comments.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -579,7 +601,7 @@ function abcbiz_counter_up_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/counter-up-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/counter-up-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/counter-up.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -601,7 +623,7 @@ function abcbiz_feat_img_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/featured-image-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/featured-image-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/featured-image.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -623,7 +645,7 @@ function abcbiz_icon_box_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/advanced-icon-box-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/advanced-icon-box-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/icon-box.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -645,7 +667,7 @@ function abcbiz_img_hover_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/image-hover-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/image-hover-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-image-hover.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -667,7 +689,7 @@ function abcbiz_page_title_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/page-title-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/page-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/page-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -690,7 +712,7 @@ function abcbiz_abc_popup_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/popup-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/popup-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/popup.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-multi");?></span>
@@ -713,7 +735,7 @@ function abcbiz_portfolio_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/portfolio-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/portfolio-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-portfolio.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -735,7 +757,7 @@ function abcbiz_post_meta_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/post-meta-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/post-meta-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/meta-info.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -757,7 +779,7 @@ function abcbiz_post_title_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/post-title-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/post-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/post-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -779,7 +801,7 @@ function abcbiz_pricing_table_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/advanced-pricing-table-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/advanced-pricing-table-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-pricing-table.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -801,7 +823,7 @@ function abcbiz_recent_post_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/recent-posts-list-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/recent-posts-list-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-recent-posts.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -823,7 +845,7 @@ function abcbiz_related_post_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/related-posts-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/related-posts-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-related-post.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -845,7 +867,7 @@ function abcbiz_search_form_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/search-form-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/search-form-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-search-form.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -867,7 +889,7 @@ function abcbiz_sec_title_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/section-title-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/section-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-section-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -889,7 +911,7 @@ function abcbiz_shape_anim_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/animated-shape-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/animated-shape-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/animated-shape.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -911,7 +933,7 @@ function abcbiz_skill_bar_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/skill-bar-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/skill-bar-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-skill-bar.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -933,7 +955,7 @@ function abcbiz_social_share_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/social-share-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/social-share-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-social-share.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -955,7 +977,7 @@ function abcbiz_tag_info_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/post-tag-info-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/post-tag-info-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-post-tags.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -977,7 +999,7 @@ function abcbiz_team_member_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists comment-form-widget">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/team-member-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/team-member-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-team-member.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -999,7 +1021,7 @@ function abcbiz_dual_button_widget_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">
-            <a href="https://abcbizaddons.com/widgets/dual-button-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/dual-button-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-dual-button.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text"><span class="dashicons dashicons-admin-links"></span> <?php echo esc_html__("Preview", "abcbiz-addons");?></span>
@@ -1021,7 +1043,7 @@ function abcbiz_business_hours_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">           
-            <a href="https://abcbizaddons.com/widgets/business-hours-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/business-hours-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-business-hours.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1046,7 +1068,7 @@ function abcbiz_archive_title_field_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/archive-title-elementor-widget/" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/archive-title-elementor-widget/" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-archive-title.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1071,7 +1093,7 @@ function abcbiz_gravity_form_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/gravity-form-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/gravity-form-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-gravity-form.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1095,7 +1117,7 @@ function abcbiz_image_gallery_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/gallery-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/gallery-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-gallery.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1120,7 +1142,7 @@ function abcbiz_mailchimp_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/mailchimp-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/mailchimp-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-mailchimp.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1145,7 +1167,7 @@ function abcbiz_template_slider_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/template-slider-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/template-slider-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/abc-template-slider.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1170,7 +1192,7 @@ function abcbiz_cost_estimation_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/cost-estimation-widget" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/cost-estimation-widget" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/Cost-Estimation.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1195,7 +1217,7 @@ function abcbiz_modern_post_grid_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/modern-post-grid" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/modern-post-grid" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/Modern-Post-Grid.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1220,7 +1242,7 @@ function abcbiz_popular_posts_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/popular-posts" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/popular-posts" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/popular-posts.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">
@@ -1245,7 +1267,7 @@ function abcbiz_fetch_posts_render() {
     ?>
     <div class="abcbiz-widget-lists">
         <div class="abcbiz-widget-image-overlay">            
-            <a href="https://abcbizaddons.com/widgets/fetch-posts" target="_blank">
+            <a href="https://demo.primekitaddons.com/widgets/fetch-posts" target="_blank">
                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/fetch-posts.jpg'); ?>">
                 <div class="abcbiz-overlay">
                     <span class="abcbiz-overlay-text">

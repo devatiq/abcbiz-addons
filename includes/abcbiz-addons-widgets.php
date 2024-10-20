@@ -216,12 +216,10 @@ if (!defined('ABSPATH')) exit; // Exit if accessed directly
 		if(get_option('abcbiz_fetch_posts_field') == 1) {
 			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCFetchPosts\Main::class;		
 		}
-
-		$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostsSlider\Main::class;		
+		if(get_option('abcbiz_posts_slider_field') == 1) {
+			$abcbiz_widgets[] = \ABCBiz\Includes\Widgets\ABCPostsSlider\Main::class;		
+		}		
 		
-		
-		
-
 		//WooCommerce widgets
 		if (function_exists('is_plugin_active') && is_plugin_active('woocommerce/woocommerce.php')) {
 		require_once ABCBIZ_Path . '/includes/widgets/abcbiz-addons-wc-widgets.php';

@@ -65,6 +65,8 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_template_slider_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_cost_estimation_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_modern_post_grid_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_popular_posts_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_fetch_posts_field');
+register_setting('abcbiz_widgets_menu', 'abcbiz_posts_slider_field');
 
 
 // Set default values if not already set
@@ -124,6 +126,8 @@ add_option('abcbiz_cost_estimation_field', '1');
 add_option('abcbiz_modern_post_grid_field', '1');
 add_option('abcbiz_popular_posts_field', '1');
 add_option('abcbiz_fetch_posts_field', '1');
+add_option('abcbiz_posts_slider_field', '1');
+
 
 
 //Sticker Text
@@ -605,6 +609,14 @@ add_settings_field(
     'abcbiz_fetch_posts_field',
     esc_html__('Fetch Posts', 'abcbiz-addons'),
     'abcbiz_fetch_posts_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+// Add settings field for posts slider
+add_settings_field(
+    'abcbiz_posts_slider_field',
+    esc_html__('Posts Slider', 'abcbiz-addons'),
+    'abcbiz_posts_slider_field_render',
     'abcbiz_widgets_menu', 
     'abcbiz_available_widgets_section'
 );
