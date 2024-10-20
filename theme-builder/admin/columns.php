@@ -7,20 +7,20 @@ class ABCBiz_Admin_Columns
 {
     public function __construct()
     {
-        // Add custom columns to the 'abcbiz_library' post type
-        add_filter('manage_abcbiz_library_posts_columns', array($this, 'add_custom_columns'));
+        // Add custom columns to the 'primekitlibrary' post type
+        add_filter('manage_primekitlibrary_posts_columns', array($this, 'add_custom_columns'));
 
         // Populate the custom columns with data
-        add_action('manage_abcbiz_library_posts_custom_column', array($this, 'populate_custom_columns'), 10, 2);
+        add_action('manage_primekitlibrary_posts_custom_column', array($this, 'populate_custom_columns'), 10, 2);
 
         // Make the 'Type' column sortable
-        add_filter('manage_edit-abcbiz_library_sortable_columns', array($this, 'make_columns_sortable'));
+        add_filter('manage_edit-primekitlibrary_sortable_columns', array($this, 'make_columns_sortable'));
 
         // Handle sorting by the 'Type' column
         add_action('pre_get_posts', array($this, 'sort_by_type_column'));
     }
 
-    // Add custom columns to the 'abcbiz_library' post type
+    // Add custom columns to the 'primekitlibrary' post type
     public function add_custom_columns($columns)
     {
       

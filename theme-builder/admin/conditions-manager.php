@@ -26,8 +26,8 @@ class ABCBiz_Conditions_Manager
             $post_id = $_GET['post'];
             $post_type = get_post_type($post_id);
 
-            // Enqueue scripts and styles only for 'abcbiz_library' post type
-            if ($post_type === 'abcbiz_library') {
+            // Enqueue scripts and styles only for 'primekitlibrary' post type
+            if ($post_type === 'primekitlibrary') {
                 wp_enqueue_style('select2', plugins_url('../assets/css/select2.min.css', __FILE__), array(), '4.1.0', 'all');
 
                 wp_enqueue_style('abcbiz-tb-editor-modal', plugins_url('../assets/css/editor.css', __FILE__), array(), '1.0.0', 'all');

@@ -81,7 +81,7 @@ class TemplateOverride
     {
         // Ensure this only affects the 404 page
         if (is_404()) {
-            // Check if there's a custom template in `abcbiz_library` for '404_page'
+            // Check if there's a custom template in `primekitlibrary` for '404_page'
             $template_id = ABCBizThemeBuilder::get_template_id('404_page'); 
 
             if ($template_id) {
@@ -106,7 +106,7 @@ class TemplateOverride
     {
         // Ensure this only affects the search results page
         if (is_search()) {
-            // Check if there's a custom template in `abcbiz_library` for 'search_page'
+            // Check if there's a custom template in `primekitlibrary` for 'search_page'
             $template_id = ABCBizThemeBuilder::get_template_id('search_page'); 
 
             if ($template_id) {

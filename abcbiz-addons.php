@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
-Plugin URI: https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/
+Plugin URI: https://primekitaddons.com/
 Description: The Elementor Custom Widgets plugin is a powerhouse tool designed to elevate your website's aesthetic and functionality. ABCBiz Addons and Templates are packed with gorgeous custom elements, each meticulously crafted to integrate seamlessly with your site's design. 
-Version: 1.10
+Version: 2.0
 Author: ABCPlugin
 Author URI: https://abcplugin.com/
 License: GPL2
@@ -227,7 +227,7 @@ function abcbiz_add_plugin_links($links)
     $settings_link = '<a href="' . admin_url('admin.php?page=abcbiz_home') . '">Settings</a>';
 
     // Add "Get Pro" link
-    $pro_link = '<a href="https://abcbizaddons.com/" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
+    $pro_link = '<a href="https://primekitaddons.com/pro/" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
 
     // Add the links to the list of existing plugin action links
     array_unshift($links, $settings_link); // Puts "Settings" as the first link

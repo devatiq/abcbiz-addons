@@ -19,7 +19,7 @@ class ABCBizThemeBuilder
 
         $this->ExtranalClasses();
 
-        add_action('wp_ajax_abcbiz_library_new_post', array($this, 'handle_new_template_submission'));
+        add_action('wp_ajax_primekitlibrary_new_post', array($this, 'handle_new_template_submission'));
         add_action('single_template', array($this, 'load_canvas_template'));
 
         add_action('get_header', array($this, 'abcbiz_override_header'));
@@ -101,7 +101,7 @@ class ABCBizThemeBuilder
     {
 
         $args = [
-            'post_type' => 'abcbiz_library',
+            'post_type' => 'primekitlibrary',
             'posts_per_page' => -1,
             'post_status' => 'publish',
         ];
@@ -299,7 +299,7 @@ class ABCBizThemeBuilder
 
         if (in_array($hook, array('edit.php', 'post-new.php'))) {
             $post_type = isset($_GET['post_type']) ? $_GET['post_type'] : '';
-            if ('abcbiz_library' === $post_type || ('post-new.php' === $hook && empty($post_type))) {
+            if ('primekitlibrary' === $post_type || ('post-new.php' === $hook && empty($post_type))) {
 
                 wp_enqueue_style('abcbiz-theme-builder-modal', plugins_url('assets/css/modal.css', __FILE__), array(), '1.0.0', 'all');
 
@@ -324,7 +324,7 @@ class ABCBizThemeBuilder
      * Expects the following $_POST variables:
      * - postTitle: The title of the new post.
      * - templateType: The type of template to create (e.g. 'header', 'footer', etc.).
-     * - postType: The post type to create (defaults to 'abcbiz_library' if not provided).
+     * - postType: The post type to create (defaults to 'primekitlibrary' if not provided).
      *
      * Creates a new post with the given title and type, and updates the custom field
      * with the template type. If Elementor is installed and active, sets the Elementor
@@ -339,7 +339,7 @@ class ABCBizThemeBuilder
 
         $post_title = sanitize_text_field($_POST['postTitle']);
         $template_type = sanitize_text_field($_POST['templateType']);
-        $post_type = isset($_POST['postType']) ? sanitize_text_field($_POST['postType']) : 'abcbiz_library';
+        $post_type = isset($_POST['postType']) ? sanitize_text_field($_POST['postType']) : 'primekitlibrary';
 
         $post_id = wp_insert_post([
             'post_title' => $post_title,
@@ -373,7 +373,7 @@ class ABCBizThemeBuilder
     }
 
     /**
-     * Override the page template for the abcbiz_library post type.
+     * Override the page template for the primekitlibrary post type.
      *
      * We want to use Elementor's canvas template for the Theme Builder templates.
      *
@@ -384,7 +384,7 @@ class ABCBizThemeBuilder
     {
         global $post;
 
-        if ('abcbiz_library' == $post->post_type) {
+        if ('primekitlibrary' == $post->post_type) {
             $elementor_2_0_canvas = ELEMENTOR_PATH . '/modules/page-templates/templates/canvas.php';
 
             if (file_exists($elementor_2_0_canvas)) {
@@ -417,7 +417,7 @@ class ABCBizThemeBuilder
             return false;
         }
 
-        // Get the template type selected in `abcbiz_library`
+        // Get the template type selected in `primekitlibrary`
         $selected_template = get_post_meta($template_id, 'abcbiz_themebuilder_select', true);
 
         if ($selected_template === $template_type) {

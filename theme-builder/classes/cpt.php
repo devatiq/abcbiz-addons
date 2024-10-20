@@ -59,6 +59,6 @@ class CPT {
             'capability_type' => 'page',
             'menu_icon' => 'dashicons-layout', // Set an icon for your CPT
         );
-        register_post_type('abcbiz_library', $args);
+        register_post_type('primekitlibrary', $args);
     }
 }

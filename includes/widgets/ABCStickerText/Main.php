@@ -86,7 +86,7 @@ class Main extends BaseWidget {
 				'type' => \Elementor\Controls_Manager::URL,
 				'options' => [ 'url', 'is_external', 'nofollow' ],
 				'default' => [
-					'url' => 'https://abcbizaddons.com/',
+					'url' => 'https://primekitaddons.com/',
 					'is_external' => true,
 					'nofollow' => false,
 				],

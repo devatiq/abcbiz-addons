@@ -18,7 +18,7 @@ class MetaBox
             'abcbiz_themebuilder_select',            // ID of the meta box
             __('Choose Template Type', 'abcbiz-addons'), // Title of the meta box
             array($this, 'meta_box_callback'),       // Callback function
-            'abcbiz_library',                       // Post type
+            'primekitlibrary',                       // Post type
             'advanced',                                 // Context
             'default'                               // Priority
         );
@@ -82,7 +82,7 @@ class MetaBox
         }
 
         // Check the user's permissions.
-        if ('abcbiz_library' == $_POST['post_type']) {
+        if ('primekitlibrary' == $_POST['post_type']) {
             if (!current_user_can('edit_page', $post_id)) {
                 return $post_id;
             }

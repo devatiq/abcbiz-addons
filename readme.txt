@@ -1,6 +1,6 @@
 === PrimeKit Addons and Templates for Elementor by ABCPlugin ===
 Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
-Version: 1.10
+Version: 2.0
 Author: abcplugins
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
@@ -8,7 +8,7 @@ Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
 Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.6.2  
-Stable tag: 1.10
+Stable tag: 2.0
 Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -16,15 +16,19 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 PrimeKit Addons offers seamless integration, intuitive design & unparalleled customization to bring your vision to life using Elementor page builder.
 
 == Description ==
-Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)** (formerly ABCBiz Addons), your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
+Welcome to **[PrimeKit Addons](https://primekitaddons.com/)** (formerly ABCBiz Addons), your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
 
 == Useful Links ==
 
-[Demo](https://abcbizaddons.com/abcbiz-multi-addons-for-elementor/) | [Documentation](https://abcbizaddons.com/documentation/) | [Support](https://abcbizaddons.com/contact-us/)
+[Demo](https://demo.primekitaddons.com/addons-widger/) | [Documentation](https://primekitaddons.com/documentation/) | [Support](https://primekitaddons.com/contact-us/)
 
 == 20+ Free Templates ==
 
-[View All Templates](https://demo.abcbizaddons.com/addons-template/)
+[View All Templates](https://demo.primekitaddons.com/addons-template/)
+
+== Theme Builder ==
+**Design Your Website's Theme Easily with PrimeKit**
+PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!
 
 == Widget List: 70+ Available Widgets ==
 
@@ -68,6 +72,7 @@ Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)** (formerly ABCBiz Add
 - Post Meta Info
 - Post Tag Info
 - Post Title
+- Post Slider (New)
 - Popular Posts (New)
 - Recent Posts List
 - Related Posts
@@ -101,7 +106,7 @@ Welcome to **[PrimeKit Addons](https://abcbizaddons.com/)** (formerly ABCBiz Add
 - Product BreadCrumb
 
 ==Why Choose PrimeKit Addons?==
-With **[PrimeKit Addons](https://abcbizaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
+With **[PrimeKit Addons](https://primekitaddons.com/)**, you’ll access a treasure trove of design options, enhancing your creativity and saving time. Our widgets are feature-rich, user-friendly, and regularly updated to ensure compatibility with the latest WordPress and Elementor versions. Plus, our dedicated support team is always ready to assist you with any queries or issues. Elevate your web design experience and unlock boundless possibilities with **PrimeKit Addons**.
 
 == Frequently Asked Questions ==
 
@@ -122,6 +127,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 3. Advanced Pricing Table
 
 == Changelog ==
+
+= 2.0 - 20 October 2024 =
+- Theme Builder Integrated
+- Post Slider Widget Added
 
 = 1.10 - 16 October 2024 =
 - 3 new widgets added with multiple layouts
@@ -172,6 +181,10 @@ Yes, for the most part. With our suite of 53 customizable widgets, you're well-e
 - Initial release
 
 == Upgrade Notice ==
+= 2.0 =
+- Theme Builder Integrated
+- Post Slider Widget Added
+
 = 1.10 =
 - 3 new widgets added
 - Plugin re-branded from ABCBiz to PrimeKit

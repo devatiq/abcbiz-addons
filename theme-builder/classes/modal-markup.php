@@ -19,7 +19,7 @@ class ModalMarkup
     public function print_modal_markup()
     {
         $screen = get_current_screen();
-        if ('edit-abcbiz_library' === $screen->id) {
+        if ('edit-primekitlibrary' === $screen->id) {
             ?>
             <div class="modal micromodal-slide abcbiz-theme-builder-modal-area" id="abcbiz-tb-modal" aria-hidden="true">
                 <div class="modal__overlay" tabindex="-1">
@@ -30,7 +30,7 @@ class ModalMarkup
                             <h2 class="modal__title abcbiz-modal-heading" id="abcbiz-tb-modal-title">
                                 <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../assets/img/addons-icon.svg'); ?>"
                                     alt="">
-                                <?php esc_html_e('New Template', 'abcbiz-addons'); ?>
+                                <?php esc_html_e('PrimeKit Theme Builder', 'abcbiz-addons'); ?>
                             </h2>
                             <button class="modal__close" aria-label="Close modal" data-micromodal-close></button>
                         </header><!--/ Header-->
@@ -40,10 +40,8 @@ class ModalMarkup
                             <div class="abcbiz-tb-modal-content-area">
                                 <!--Template Left Area-->
                                 <div class="abcbiz-tb-modal-content-left">
-                                    <h2><?php esc_html_e('Templates Help you', 'abcbiz-addons'); ?></h2>
-                                    <h2><strong><?php esc_html_e('Work Efficiently', 'abcbiz-addons'); ?></strong></h2>
-                                    <p><?php esc_html_e('Utilize templates to construct various components of your website, and effortlessly replicate
-                                        them with a single click as required.', 'abcbiz-addons'); ?></p>
+                                    <h2><?php esc_html_e("Design Your Website's Theme Easily with PrimeKit"); ?></h2>
+                                    <p><?php esc_html_e("PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!", 'abcbiz-addons'); ?></p>
                                 </div><!--/ Template Left Area-->
 
                                 <!--Template Form Area-->
@@ -65,7 +63,7 @@ class ModalMarkup
                                     <div class="abcbiz-tb-modal-content-form-fields">
                                         <form id="abcbiz-tb-modal-template-form" method="post"
                                             action="<?php echo esc_url(admin_url('admin-post.php')); ?>">
-                                            <input type="hidden" id="abcbiz-tb-post-type" name="post_type" value="abcbiz_library">
+                                            <input type="hidden" id="abcbiz-tb-post-type" name="post_type" value="primekitlibrary">
                                             <input type="hidden" name="action" value="abcbiz_save_template">
                                             <input type="hidden" name="post_id" value="<?php echo esc_attr(get_the_ID()); ?>">
                                             <?php wp_nonce_field('abcbiz_tb_modal_action', 'abcbiz_tb_modal_nonce'); ?>
