@@ -5,7 +5,7 @@ Author: abcplugins
 Author URI: https://abcplugin.com/
 Contributors: atiqbd4ever, supreoxltd, abcplugins, axisconsulting  
 Donate link: https://www.paypal.com/donate/?hosted_button_id=AFMAVLDRP26K4
-Tags: Elementor Addons, Elementor Widgets, Elementor, Widgets, Elementor Builder
+Tags: Elementor Addons, Elementor Widgets, Elementor, Theme Builder, Elementor Builder
 Requires at least: 5.4  
 Tested up to: 6.6.2  
 Stable tag: 2.0
@@ -13,7 +13,7 @@ Requires PHP: 8.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-PrimeKit Addons offers seamless integration, intuitive design & unparalleled customization to bring your vision to life using Elementor page builder.
+The Elementor Custom Widgets plugin by PrimeKit offers a Theme Builder, Pop-Ups, Forms, and WooCommerce tools to enhance your website’s look and feel.
 
 == Description ==
 Welcome to **[PrimeKit Addons](https://primekitaddons.com/)** (formerly ABCBiz Addons), your go-to treasure chest for all things Elementor! Boasting a lineup of more than **70 meticulously designed widgets**, and **20+ ready-to-import templates** we're here to take your web designing experience to the next level. Our toolkit is perfect for anyone looking to create anything from a professional business website to an artistic portfolio. At PrimeKit Addons, we prioritize ease of use, smooth integration, and the flexibility to customize every detail to match your unique vision. Get ready to transform your ideas into reality with the ultimate tools at your fingertips!
@@ -27,8 +27,8 @@ Welcome to **[PrimeKit Addons](https://primekitaddons.com/)** (formerly ABCBiz A
 [View All Templates](https://demo.primekitaddons.com/addons-template/)
 
 == Theme Builder ==
-**Design Your Website's Theme Easily with PrimeKit**
-PrimeKit's Theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!
+**Design Your Website's Theme Easily with PrimeKit**  
+Our theme Builder makes it simple to design your website’s header, footer, single pages, posts, archives, and WooCommerce product pages. Enjoy a smooth and user-friendly experience to build your site exactly the way you want, right within Elementor!
 
 == Widget List: 70+ Available Widgets ==
 
