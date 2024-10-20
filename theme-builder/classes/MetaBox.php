@@ -19,7 +19,7 @@ class MetaBox
             __('Choose Template Type', 'abcbiz-addons'), // Title of the meta box
             array($this, 'meta_box_callback'),       // Callback function
             'abcbiz_library',                       // Post type
-            //'side',                                 // Context
+            'advanced',                                 // Context
             'default'                               // Priority
         );
     }
