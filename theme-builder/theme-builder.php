@@ -216,10 +216,10 @@ class ABCBizThemeBuilder
      */
     public function enqueue_elementor_styles_scripts()
     {
-        if (did_action('elementor/loaded')) {
-            \Elementor\Plugin::instance()->frontend->enqueue_styles();
-            \Elementor\Plugin::instance()->frontend->enqueue_scripts();
-        }
+        // if (did_action('elementor/loaded')) {
+        //     \Elementor\Plugin::instance()->frontend->enqueue_styles();
+        //     \Elementor\Plugin::instance()->frontend->enqueue_scripts();
+        // }
 
         wp_enqueue_style('abcbiz-theme-builder-style', ABCBIZ_TB_Assets . '/css/style.css');
     }
