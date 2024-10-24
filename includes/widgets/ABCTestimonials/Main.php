@@ -26,12 +26,12 @@ class Main extends BaseWidget
 
     public function get_script_depends()
     {
-        return ['swiper', 'abcbiz-testimonial'];
+        return ['abcbiz-swiper', 'abcbiz-testimonial'];
     }
 
     public function get_style_depends()
     {
-        return ['swiper'];
+        return ['abcbiz-swiper'];
     }
 
     /**

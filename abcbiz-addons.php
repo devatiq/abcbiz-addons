@@ -91,15 +91,13 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
             wp_register_style('twentytwenty', ABCBIZ_Assets . "/css/twentytwenty.css");
         }
 
-        //register style for swiper slider
-        if (!wp_style_is('swiper')) {
-            wp_register_style('swiper', ABCBIZ_Assets . "/css/swiper-bundle.min.css");
-        }
+        //register style for swiper slider       
+        wp_register_style('abcbiz-swiper', ABCBIZ_Assets . "/css/swiper-bundle.min.css");
+       
 
         //register swiper slider 
-        if (!wp_script_is('swiper')) {
-            wp_register_script('swiper', ABCBIZ_Assets . "/js/swiper-bundle.min.js", array('jquery', 'elementor-frontend'), 1.0, true);
-        }
+        wp_register_script('abcbiz-swiper', ABCBIZ_Assets . "/js/swiper-bundle.min.js", array('jquery'), 1.0, true);
+        
         wp_register_script('abcbiz-testimonial', ABCBIZ_Assets . "/js/abcbiz-testimonial.js", array('jquery'), false, true);
 
         // Check if WooCommerce plugin is active
@@ -118,7 +116,7 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
             ));
         }
 
-        wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery', 'elementor-frontend'), '1.0', true);
+        wp_register_script('abcbiz-anim-text-main', ABCBIZ_Assets . "/js/anim-text-main.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-search-icon', ABCBIZ_Assets . "/js/abcbiz-search-icon.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-wp-menu-js', ABCBIZ_Assets . "/js/abcbiz-wp-menu.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-popup', ABCBIZ_Assets . "/js/abcbiz-popup.js", array('jquery'), '1.0', true);
@@ -135,9 +133,9 @@ if (!function_exists('abcbiz_elementor_enqueue')) {
         wp_register_script('abcbiz-circular-skills', ABCBIZ_Assets . "/js/abcbiz-circular-skills.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-magnific-popup', ABCBIZ_Assets . "/js/magnific-popup.min.js", array('jquery'), '1.0', true);
         wp_register_script('abcbiz-mailchimp-newsletter', ABCBIZ_Assets . "/js/mailchimp-newsletter.js", array('jquery'), '1.0', true);
-        wp_register_script('abcbiz-template-slider', ABCBIZ_Assets . "/js/abcbiz-template-slider.js", array('jquery', 'elementor-frontend'), '1.0', true);
-        wp_register_script('abcbiz-posts-sliders', ABCBIZ_Assets . "/js/posts-sliders.js", array('jquery', 'elementor-frontend'), '1.0', true);
-        wp_register_script('abcbiz-cost-estimation', ABCBIZ_Assets . "/js/abcbiz-cost-estimation.js", array('jquery', 'elementor-frontend'), '1.0', true);
+        wp_register_script('abcbiz-template-slider', ABCBIZ_Assets . "/js/abcbiz-template-slider.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-posts-sliders', ABCBIZ_Assets . "/js/posts-sliders.js", array('jquery'), '1.0', true);
+        wp_register_script('abcbiz-cost-estimation', ABCBIZ_Assets . "/js/abcbiz-cost-estimation.js", array('jquery'), '1.0', true);
         wp_enqueue_script('abcbiz-elementor-custom', ABCBIZ_Assets . "/js/main.js", array('jquery'), false, true);
 
         wp_localize_script('abcbiz-mailchimp-newsletter', 'abcbizMailchimpAjax', [

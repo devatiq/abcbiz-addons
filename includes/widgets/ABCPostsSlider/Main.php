@@ -28,13 +28,13 @@ class Main extends BaseWidget
     //dependency scripts
     public function get_script_depends()
     {
-        return ['swiper', 'abcbiz-posts-sliders'];
+        return ['abcbiz-swiper', 'abcbiz-posts-sliders'];
     }
 
 
     public function get_style_depends()
     {
-        return ['swiper'];
+        return ['abcbiz-swiper'];
     }
 
 
