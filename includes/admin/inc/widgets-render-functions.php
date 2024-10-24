@@ -1306,7 +1306,7 @@ function abcelebiz_progress_track_field_render() {
                 </div>
             </a>
         </div>
-        <h3><?php echo esc_html__("Progress Track", "abcbiz-addons"); ?></h3>
+        <h3><?php echo esc_html__("Project Progress Track", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcelebiz_progress_track_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
