@@ -68,6 +68,21 @@ register_setting('abcbiz_widgets_menu', 'abcbiz_popular_posts_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_fetch_posts_field');
 register_setting('abcbiz_widgets_menu', 'abcbiz_posts_slider_field');
 
+/**
+ * Business Pack Widgets
+ */
+register_setting('abcbiz_widgets_menu', 'abcelebiz_progress_track_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_email_signature_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_teammember_carousel_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_jobs_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_video_testimonials_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_revenue_growth_graphs_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_resource_form_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_resources_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_timeline_milestone_field');
+register_setting('abcbiz_widgets_menu', 'abcelebiz_animated_timelinech_field');
+
+
 
 // Set default values if not already set
 add_option('abcbiz_sticker_text_field', '1');
@@ -128,6 +143,21 @@ add_option('abcbiz_popular_posts_field', '1');
 add_option('abcbiz_fetch_posts_field', '1');
 add_option('abcbiz_posts_slider_field', '1');
 
+
+/**
+ * Business Package Widgets
+ */
+
+ add_option('abcelebiz_progress_track_field', '1');
+ add_option('abcelebiz_email_signature_field', '1');
+ add_option('abcelebiz_teammember_carousel_field', '1');
+ add_option('abcelebiz_jobs_field', '1');
+ add_option('abcelebiz_video_testimonials_field', '1');
+ add_option('abcelebiz_revenue_growth_graphs_field', '1');
+ add_option('abcelebiz_resource_form_field', '1');
+ add_option('abcelebiz_resources_field', '1');
+ add_option('abcelebiz_timeline_milestone_field', '1');
+ add_option('abcelebiz_animated_timelinech_field', '1');
 
 
 //Sticker Text
@@ -621,5 +651,102 @@ add_settings_field(
     'abcbiz_available_widgets_section'
 );
 
+
+/**
+ * Business Pack Widgets Settings
+ */
+
+// Add settings field for Progress Track
+add_settings_field(
+    'abcelebiz_progress_track_field',
+    esc_html__('Progress Track', 'abcbiz-addons'),
+    'abcelebiz_progress_track_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Email Signature
+add_settings_field(
+    'abcelebiz_email_signature_field',
+    esc_html__('Email Signature', 'abcbiz-addons'),
+    'abcelebiz_email_signature_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Team Member Carousel
+add_settings_field(
+    'abcelebiz_teammember_carousel_field',
+    esc_html__('Team Member Carousel', 'abcbiz-addons'),
+    'abcelebiz_teammember_carousel_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Jobs
+add_settings_field(
+    'abcelebiz_jobs_field',
+    esc_html__('Jobs', 'abcbiz-addons'),
+    'abcelebiz_jobs_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Video Testimonials
+add_settings_field(
+    'abcelebiz_video_testimonials_field',
+    esc_html__('Video Testimonials', 'abcbiz-addons'),
+    'abcelebiz_video_testimonials_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Revenue Growth Graphs
+add_settings_field(
+    'abcelebiz_revenue_growth_graphs_field',
+    esc_html__('Revenue Growth Graphs', 'abcbiz-addons'),
+    'abcelebiz_revenue_growth_graphs_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Resource Form
+add_settings_field(
+    'abcelebiz_resource_form_field',
+    esc_html__('Resource Form', 'abcbiz-addons'),
+    'abcelebiz_resource_form_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+// Add settings field for Resources
+add_settings_field(
+    'abcelebiz_resources_field',
+    esc_html__('Resources', 'abcbiz-addons'),
+    'abcelebiz_resources_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+// Add settings field for Timeline Milestone
+add_settings_field(
+    'abcelebiz_timeline_milestone_field',
+    esc_html__('Timeline Milestone', 'abcbiz-addons'),
+    'abcelebiz_timeline_milestone_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+// Add settings field for Animated Timeline
+add_settings_field(
+    'abcelebiz_animated_timelinech_field',
+    esc_html__('Animated Timeline', 'abcbiz-addons'),
+    'abcelebiz_animated_timelinech_field_render',
+    'abcbiz_widgets_menu', 
+    'abcbiz_available_widgets_section'
+);
+
+
 }
 add_action('admin_init', 'abcbiz_widgets_settings_init');
+
+
+

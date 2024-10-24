@@ -1261,7 +1261,7 @@ function abcbiz_popular_posts_render() {
     <?php
 }
 
-// Popular Posts
+// Fetch Posts
 function abcbiz_fetch_posts_render() {
     $option = get_option('abcbiz_fetch_posts_field');
     ?>
@@ -1280,6 +1280,261 @@ function abcbiz_fetch_posts_render() {
         <h3><?php echo esc_html__("Fetch Posts", "abcbiz-addons"); ?></h3>
         <label class="abcbiz-switch">
             <input type="checkbox" name="abcbiz_fetch_posts_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+/**
+ * Bussiness Pack Widgets
+ */
+
+// Progress Track
+function abcelebiz_progress_track_field_render() {
+    $option = get_option('abcelebiz_progress_track_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/progress-track" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/project-progress-tracker.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Progress Track", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_progress_track_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+
+// Email Signature
+function abcelebiz_email_signature_field_render() {
+    $option = get_option('abcelebiz_email_signature_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/email-signature" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/email-signature.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Email Signature", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_email_signature_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Team Member Carousel
+function abcelebiz_teammember_carousel_field_render() {
+    $option = get_option('abcelebiz_teammember_carousel_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/team-member-carousel" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/teammember-carousel.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Team Member Carousel", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_teammember_carousel_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Jobs
+function abcelebiz_jobs_field_render() {
+    $option = get_option('abcelebiz_jobs_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/jobs" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/jobs.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Jobs", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_jobs_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Video Testimonials
+function abcelebiz_video_testimonials_field_render() {
+    $option = get_option('abcelebiz_video_testimonials_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/video-testimonials" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/video-testimonial.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Video Testimonials", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_video_testimonials_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Revenue Growth Graphs
+function abcelebiz_revenue_growth_graphs_field_render() {
+    $option = get_option('abcelebiz_revenue_growth_graphs_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/revenue-growth-graph" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/revenue-growth-graph.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Revenue Growth Graphs", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_revenue_growth_graphs_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Resource Form
+function abcelebiz_resource_form_field_render() {
+    $option = get_option('abcelebiz_resource_form_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/resource-form" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/resource-form.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Resource Form", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_resource_form_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Resource
+function abcelebiz_resources_field_render() {
+    $option = get_option('abcelebiz_resources_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/resources" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/resources.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Resources", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_resources_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Timeline Milestone
+function abcelebiz_timeline_milestone_field_render() {
+    $option = get_option('abcelebiz_timeline_milestone_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/timeline-milestone" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/timeline-milestone.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Timeline Milestone", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_timeline_milestone_field" value="1" <?php checked(1, $option, true); ?>>
+            <span class="abcbiz-slider abcbiz-round"></span>
+        </label>
+    </div>
+    <?php
+}
+
+// Animated Timeline CH
+function abcelebiz_animated_timelinech_field_render() {
+    $option = get_option('abcelebiz_animated_timelinech_field');
+    ?>
+    <div class="abcbiz-widget-lists">
+        <div class="abcbiz-widget-image-overlay">            
+            <a href="https://demo.primekitaddons.com/widgets/animated-timeline-ch" target="_blank">
+                <img src="<?php echo esc_url(plugin_dir_url(__FILE__) . '../img/animated-timelinech.jpg'); ?>">
+                <div class="abcbiz-overlay">
+                    <span class="abcbiz-overlay-text">
+                        <span class="dashicons dashicons-admin-links"></span>
+                        <?php echo esc_html__("Preview", "abcbiz-addons");?>
+                    </span>
+                </div>
+            </a>
+        </div>
+        <h3><?php echo esc_html__("Timeline Milestone", "abcbiz-addons"); ?></h3>
+        <label class="abcbiz-switch">
+            <input type="checkbox" name="abcelebiz_animated_timelinech_field" value="1" <?php checked(1, $option, true); ?>>
             <span class="abcbiz-slider abcbiz-round"></span>
         </label>
     </div>
