@@ -15,7 +15,7 @@ function abcbiz_widgets_page()
     <div class="wrap abcbiz-available-widget-wrap">
         <h2><?php echo esc_html($abcbiz_plugin_data['Name']); ?></h2>
         <div class="abcbiz-tabs">
-            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('PrimeKit Widgets', 'abcbiz-addons'); ?></button>
+            <button class="tablink button button-secondary" onclick="openTab(event, 'ABCBizWidgets')"><?php echo esc_html__('ABCBiz Widgets', 'abcbiz-addons'); ?></button>
 
             <?php
                 if (class_exists('AbcEleBiz\inc\widgets\ABCBizBusinessConfiguration')):
@@ -33,7 +33,7 @@ function abcbiz_widgets_page()
             <?php settings_fields('abcbiz_widgets_menu'); ?>
 
             <div id="ABCBizWidgets" class="tabcontent">
-                <h3><?php echo esc_html__('PrimeKit Addons Widgets', 'abcbiz-addons'); ?></h3>
+                <h3><?php echo esc_html__('ABCBiz Addons Widgets', 'abcbiz-addons'); ?></h3>
                 <div class="abcbiz-widgets-grid">
                     <?php abcbiz_anim_text_widget_field_render(); ?>
                     <?php abcbiz_blockquote_widget_field_render(); ?>

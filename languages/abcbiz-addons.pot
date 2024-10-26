@@ -1,7 +1,7 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: PrimeKit Addons and Templates for Elementor by "
+"Project-Id-Version: ABCBiz Addons and Templates for Elementor by "
 "ABCPlugin\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2024-10-20 12:41+0000\n"
@@ -2739,7 +2739,7 @@ msgid "General Settings"
 msgstr ""
 
 #: includes/admin/inc/Settings/General.php:30
-msgid "General settings for the PrimeKit Addons."
+msgid "General settings for the ABCBiz Addons."
 msgstr ""
 
 #: includes/widgets/ABCCostEstimation/Main.php:330
@@ -3188,7 +3188,7 @@ msgid "https://example.com"
 msgstr ""
 
 #. URI of the plugin
-msgid "https://primekitaddons.com/"
+msgid "https://ABCBizaddons.com/"
 msgstr ""
 
 #: includes/globals/wrapper-link.php:35
@@ -5113,49 +5113,49 @@ msgstr ""
 
 #. Page title
 #: includes/admin/abcbiz-settings.php:8
-msgid "PrimeKit"
+msgid "ABCBiz"
 msgstr ""
 
 #. Name of the plugin
 #: abcbiz-main-class.php:96
-msgid "PrimeKit Addons and Templates for Elementor by ABCPlugin"
+msgid "ABCBiz Addons and Templates for Elementor by ABCPlugin"
 msgstr ""
 
 #: includes/admin/inc/Settings/Settings.php:91
-msgid "PrimeKit Addons Settings"
+msgid "ABCBiz Addons Settings"
 msgstr ""
 
 #: includes/admin/inc/widget-page.php:26
-msgid "PrimeKit Addons Widgets"
+msgid "ABCBiz Addons Widgets"
 msgstr ""
 
 #: includes/admin/abcbiz-settings.php:19
-msgid "PrimeKit Available Widgets"
+msgid "ABCBiz Available Widgets"
 msgstr ""
 
 #: abcbiz-addons.php:160
-msgid "PrimeKit Elements"
+msgid "ABCBiz Elements"
 msgstr ""
 
 #: includes/admin/abcbiz-settings.php:7
-msgid "PrimeKit Settings"
+msgid "ABCBiz Settings"
 msgstr ""
 
 #: theme-builder/classes/modal-markup.php:33
-msgid "PrimeKit Theme Builder"
+msgid "ABCBiz Theme Builder"
 msgstr ""
 
 #: includes/admin/inc/widget-page.php:16
-msgid "PrimeKit Widgets"
+msgid "ABCBiz Widgets"
 msgstr ""
 
 #: abcbiz-addons.php:176
-msgid "PrimeKit WooCommerce"
+msgid "ABCBiz WooCommerce"
 msgstr ""
 
 #: theme-builder/classes/modal-markup.php:44
 msgid ""
-"PrimeKit's Theme Builder makes it simple to design your website’s header, "
+"ABCBiz's Theme Builder makes it simple to design your website’s header, "
 "footer, single pages, posts, archives, and WooCommerce product pages. Enjoy "
 "a smooth and user-friendly experience to build your site exactly the way you "
 "want, right within Elementor!"
@@ -6777,7 +6777,7 @@ msgstr ""
 
 #: includes/admin/abcbiz-metabox.php:81
 msgid ""
-"This area is specifically for PrimeKit Addons and Templates for Elementor by "
+"This area is specifically for ABCBiz Addons and Templates for Elementor by "
 "ABCPlugin Products description tab contents."
 msgstr ""
 

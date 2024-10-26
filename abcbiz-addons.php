@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name: PrimeKit Addons and Templates for Elementor by ABCPlugin
-Plugin URI: https://primekitaddons.com/
-Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance. With PrimeKit Addons and Templates, you’ll get access to a Theme Builder, Pop-Ups, Cost estimation, Pricing table, Forms, and WooCommerce building features, along with stunning custom elements that blend seamlessly with your site’s design.
-Version: 2.0.1
+Plugin Name: ABCBiz Addons for Elementor
+Plugin URI: https://abcbizaddons.com/
+Description: The Elementor Custom Widgets plugin is built to enhance your website’s look and performance.
+Version: 2.0.2
 Author: ABCPlugin
 Author URI: https://abcplugin.com/
 License: GPL2
@@ -29,8 +29,7 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         define('ABCBIZ_URL', plugins_url('', ABCBIZ_File));
         define('ABCBIZ_Assets', ABCBIZ_URL . '/assets');
         define('ABCBIZ_Admin_CSS', ABCBIZ_URL . '/includes/admin/css');
-        define('ABCBIZ_TB_Assets', ABCBIZ_URL . '/theme-builder/assets');
-        define('ABCBIZ_TB_Path', ABCBIZ_Path . '/theme-builder');
+
 
         //loading main file
         if (!class_exists('ABCBizMultiElementorPack')) {
@@ -60,12 +59,6 @@ if (!function_exists('abcbiz_elementor_plugin_general_init')) {
         if (!class_exists('ABCBiz\Includes\lib\PostViewTracker')) {
             require_once ABCBIZ_Inc . '/lib/post-view-tracker.php';
             new \ABCBiz\Includes\lib\PostViewTracker();
-        }
-
-        // Loading theme builder
-        if (!class_exists('ABCBIZ\ThemeBuilder\ABCBizThemeBuilder')) {
-            require_once ABCBIZ_Path . '/theme-builder/theme-builder.php';
-            new \ABCBIZ\ThemeBuilder\ABCBizThemeBuilder();
         }
 
 
@@ -155,7 +148,7 @@ if (!function_exists('abcbiz_elementor_add_widget_categories')) {
         $elements_manager->add_category(
             'abcbiz-category',
             [
-                'title' => esc_html__('PrimeKit Elements', 'abcbiz-addons'),
+                'title' => esc_html__('ABCBiz Elements', 'abcbiz-addons'),
                 'icon' => 'eicon-kit-plugins',
             ]
         );
@@ -171,7 +164,7 @@ if (!function_exists('abcbiz_elementor_add_widget_wc_categories')) {
             $elements_manager->add_category(
                 'abcbiz-wc-category',
                 [
-                    'title' => esc_html__('PrimeKit WooCommerce', 'abcbiz-addons'),
+                    'title' => esc_html__('ABCBiz WooCommerce', 'abcbiz-addons'),
                     'icon' => 'eicon-woocommerce',
                 ]
             );
@@ -225,11 +218,11 @@ function abcbiz_add_plugin_links($links)
     $settings_link = '<a href="' . admin_url('admin.php?page=abcbiz_home') . '">Settings</a>';
 
     // Add "Get Pro" link
-    $pro_link = '<a href="https://primekitaddons.com/pro/" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
+    $pro_link = '<a href="https://abcbizaddons.com" target="_blank" style="font-weight: bold; color: #ff4500;">Get Pro</a>';
 
     // Add the links to the list of existing plugin action links
     array_unshift($links, $settings_link); // Puts "Settings" as the first link
-    array_push($links, $pro_link); // Puts "Get Pro" at the end of the list
+    //array_push($links, $pro_link); // Puts "Get Pro" at the end of the list
 
     return $links;
 }
